@@ -11,6 +11,6 @@ const Button: React.FC = () => {
       </a>
     </div>
   );
-}
+};
 
 export default Button;

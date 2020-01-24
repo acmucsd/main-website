@@ -1,8 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./styles/style.less";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './styles/style.less';
 
-import Page1 from "./pages/page1/";
+import Page1 from './pages/page1/';
 
 const App: React.FC = () => {
   return (
@@ -14,4 +14,4 @@ const App: React.FC = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));

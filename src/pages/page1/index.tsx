@@ -8,9 +8,9 @@ import logo from '../../assets/logo.svg';
 const Page1: React.FC = () => {
   return (
     <div className="page1">
-      <img alt="acmucsd" src={acmucsd} height="500"/>
+      <img alt="acmucsd" className="acmucsd" src={acmucsd} />
       <div className="text">
-        <img alt="acmucsd" className="logo" src={logo} />
+        <img alt="logo" className="logo" src={logo} />
         <h1>Welcome to</h1>
         <h1>ACM UC San Diego</h1>
         <p>

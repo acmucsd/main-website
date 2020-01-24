@@ -8,7 +8,9 @@ import Button from '../../components/button';
 const Page1: React.FC = () => {
   return (
     <div className="page page1">
-      <img src={acmucsdLogo} alt="ACM UCSD Logo" className="acmucsdLogo"></img>
+      <div>
+        <img src={acmucsdLogo} alt="ACM UCSD Logo" className="acmucsdLogo"></img>
+      </div>
       <div>
         <img src={acmLogo} alt="ACM Logo" className="acmLogo"></img>
         <h1>Welcome to ACM UC San Diego!</h1>

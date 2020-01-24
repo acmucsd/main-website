@@ -3,9 +3,13 @@ import './style.less';
 
 const Button: React.FC = () => {
   return (
-    <a className="link" href="https://members.acmucsd.com/">
-      <div className="button">Student Portal</div>
-    </a>
+    <div className="buttonContainer">
+      <a href="https://main.acmucsd.com/">
+        <div className="button">
+          Student Portal
+        </div>
+      </a>
+    </div>
   );
 };
 

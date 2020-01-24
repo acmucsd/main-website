@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/style.less';
 
-import Page1 from './pages/page1/';
+import Home from './pages/home/';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <div className="pages">
-        <Page1 />
+        <Home />
       </div>
     </div>
   );

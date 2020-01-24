@@ -6,7 +6,7 @@ const Button: React.FC = () => {
     <div className="buttonContainer">
       <a href="https://main.acmucsd.com/">
         <div className="button">
-        Login
+          Student Portal
         </div>
       </a>
     </div>

@@ -1,4 +1,4 @@
-.page1 {
+.home {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 2em;
@@ -10,8 +10,8 @@
 
 .acmucsdLogo {
   display: block;
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
 h1 {
@@ -25,17 +25,30 @@ h3 {
   margin-bottom: 1em;
 }
 
-.page1 > div {
+.home > div {
   display: table;
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 870px) {
-  .page1 {
-    grid-template-columns: 1fr;
-  }
+@media only screen and (max-width: 768px) {
+
   .acmucsdLogo {
     visibility: hidden;
     height: 0;
+  }
+
+  .home {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h3 {
+    font-size: 1.2em;
   }
 }

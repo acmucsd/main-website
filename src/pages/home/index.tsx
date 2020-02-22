@@ -1,11 +1,12 @@
 import React from 'react';
+import NavBar from '../navbar';
 
 import "./style.less";
 
 const Home: React.FC = () => {
   return (
-    <div className="home">
-      <h1>Home Page</h1>
+    <div>
+      <NavBar />
     </div>
   );
 };

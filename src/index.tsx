@@ -8,12 +8,14 @@ import Home from './pages/home/';
 import AboutUs from './pages/about-us/';
 import Contact from './pages/contact/'
 import Sponsorship from './pages/sponsorship/'
+import NavBar from './pages/navbar';
 
 
 const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
+        <NavBar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about-us" component={AboutUs} />

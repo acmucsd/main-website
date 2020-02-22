@@ -34,3 +34,52 @@
 .fixed-nav {
   position: fixed;
 }
+
+.navbar-mobile-div {
+  display: none;
+}
+
+.mobile-links {
+  display: none;
+}
+
+@media only screen and (min-width: 650px) {
+  .mobile-links {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .navbar-div {
+    display: none;
+  }
+
+  .navbar-mobile-div {
+    display: block;
+    padding: 1em;
+  }
+
+  .navbar-mobile > a {
+    padding: 1em;
+    float: right;
+  }
+
+  .navbar-mobile > a:first-of-type {
+    float: left;
+  }
+
+  .menuicon {
+    height: 1em;
+  }
+
+  .mobile-links > a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 1em;
+    text-align: center;
+    background-color: #333333;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+}

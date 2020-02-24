@@ -1,5 +1,5 @@
 .homeGrid {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -9,6 +9,9 @@
   font-family: 'DM Sans', sans-serif;
   font-weight: bolder; 
   font-size: 3.5em;
+}
+
+.descriptionBlock {
   margin: 1em;
 }
 
@@ -43,5 +46,8 @@
   .homeGrid {
     flex-direction: column;
     padding-top: 4em;
+  }
+  .homeDescription {
+    width: 100vw;
   }
 }

@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 import './styles/style.less';
 
 import Home from './pages/home/';
-import AboutUs from './pages/about-us/';
-import Contact from './pages/contact/'
-import Sponsorship from './pages/sponsorship/'
 import NavBar from './pages/navbar';
+import Contact from './pages/contact';
 
 
 const App: React.FC = () => {
@@ -16,12 +14,8 @@ const App: React.FC = () => {
     <Router>
       <div className="App">
         <NavBar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about-us" component={AboutUs} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/sponsorship" component={Sponsorship} />
-        </Switch>
+        <Home />
+        <Contact />
       </div>
     </Router>
   );

@@ -12,6 +12,7 @@ const Home: React.FC = () => {
         <img src={CoolLogo} alt="Cool Logo" />
       </div>
       <div className="homeDescription">
+        <div className="descriptionBlock">
         <Typist className="join" avgTypingDelay={40}>
           <span>Join UCSD's largest</span>
           <br />
@@ -24,6 +25,7 @@ const Home: React.FC = () => {
           <span>and counting.</span>
         </Typist>
         <button type="button" className="learnMore"><span>Learn More</span></button>
+        </div>
       </div>
     </div>
   );

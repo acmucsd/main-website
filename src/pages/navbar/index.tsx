@@ -25,7 +25,7 @@ const NavBar: React.FC = () => {
     <div className="fixed-nav">
       <div className="navbar-div">
         <ul className="navbar">
-          <li><a href="/"><img src={ACMLogo} alt="ACM Logo" /></a></li>
+          <li><a href=""><img src={ACMLogo} alt="ACM Logo" /></a></li>
           <li><a href="" className="login-button">Login</a></li>
           <li><a href="">Contact</a></li>
           <li><a href="">Events</a></li>

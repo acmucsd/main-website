@@ -42,14 +42,20 @@ const NavBar: React.FC = () => {
           </a>
         </div>
       </div>
-      <img draggable="false" src={Wainbow} className="wainbow" alt="wainbow" />
-        <div className="mobile-links">
-          <a href="">Login</a>
-          <a href="">Contact</a>
-          <a href="">Events</a>
-          <a href="">Sponsorship</a>
-          <a href="">About Us</a>
-        </div>
+      <div className="wainbow">
+        <span className="pinkFill" />
+        <span className="greenFill" />
+        <span className="cyanFill" />
+        <span className="purpleFill" />
+        <span className="orangeFill" />
+      </div>
+      <div className="mobile-links">
+        <a href="">Login</a>
+        <a href="">Contact</a>
+        <a href="">Events</a>
+        <a href="">Sponsorship</a>
+        <a href="">About Us</a>
+      </div>
     </div>
   );
 }

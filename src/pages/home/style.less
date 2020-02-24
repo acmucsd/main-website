@@ -1,2 +1,47 @@
-.home {
+.homeGrid {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.homeDescription {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bolder; 
+  font-size: 3.5em;
+  margin: 1em;
+}
+
+.learnMore {
+  font-size: 0.5em;
+  border-style: none;
+  border-radius: 0.5em;
+  margin-top: 1em;
+  background-color: #333333;
+  color: white;
+  padding: 0.5em 1.5em;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.coolImg {
+  margin: 3.5em;
+}
+
+.codeSpan {
+  color: #2CB3D7;
+}
+
+.designSpan {
+  color: #FC3B7D;
+}
+
+.innovateSpan {
+  color: #684AFA;
+}
+
+@media only screen and (max-width: 1000px) {
+  .homeGrid {
+    flex-direction: column;
+    padding-top: 4em;
+  }
 }

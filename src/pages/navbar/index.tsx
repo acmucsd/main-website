@@ -1,7 +1,6 @@
 import React from 'react';
 
 import ACMLogo from '../../assets/acm.svg';
-import Wainbow from '../../assets/wainbow.svg';
 import MenuButtonIcon from '../../assets/menubutton.svg'
 import CloseMenuButton from '../../assets/closemenubutton.svg';
 

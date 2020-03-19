@@ -24,9 +24,19 @@ const Events: React.FC = () => {
   }
 
   return (
-    <div className="events-header">
-      <h1>Events</h1>
-      <p>ACM hosts a wide range of events to provide for the unique array of talent and interests of student members.</p>
+    <div className="events-page">
+      <div className="events-header">
+        <h1>Events</h1>
+        <p>ACM hosts a wide range of events to provide for the unique array of talent and interests of student members.</p>
+      </div>
+      <div className="scrollmenu">
+        <div className="event">
+          <h2><b className="month">Sept</b> 30</h2>
+          <h1>ACM x Career Center Resume Workshop</h1>
+          <h3>Fung Auditorium</h3>
+          <h3>10:00am - 11am</h3>
+        </div>
+      </div>
     </div>
   );
 }

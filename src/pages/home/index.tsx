@@ -7,24 +7,24 @@ import "./style.less";
 
 const Home: React.FC = () => {
   return (
-    <div className="homeGrid">
-      <div className="coolImg">
+    <div className="home-grid">
+      <div className="cool-img">
         <img src={CoolLogo} alt="Cool Logo" />
       </div>
-      <div className="homeDescription">
-        <div className="descriptionBlock">
+      <div className="home-description">
+        <div className="description-block">
         <Typist className="join" avgTypingDelay={40}>
           <span>Join UCSD's largest</span>
           <br />
-          <span className="codeSpan">code + </span>
-          <span className="designSpan">design + </span>
-          <span className="innovateSpan">innovate</span>
+          <span className="code-span">code + </span>
+          <span className="design-span">design + </span>
+          <span className="innovate-span">innovate</span>
           <br />
           <span>community: 1000+ members</span>
           <br />
           <span>and counting.</span>
         </Typist>
-        <button type="button" className="learnMore"><span>Learn More</span></button>
+        <a href="/" className="learn-more">Learn More</a>
         </div>
       </div>
     </div>

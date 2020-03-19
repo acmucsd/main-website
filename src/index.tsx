@@ -7,6 +7,7 @@ import './styles/style.less';
 import Home from './pages/home/';
 import NavBar from './pages/navbar';
 import Contact from './pages/contact';
+import Events from './pages/events';
 
 
 const App: React.FC = () => {
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <div className="App">
         <NavBar />
         <Home />
+        <Events />
         <Contact />
       </div>
     </Router>

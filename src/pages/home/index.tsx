@@ -1,25 +1,31 @@
 import React from 'react';
+import Typist from 'react-typist';
 
-import 'typeface-nunito';
+import CoolLogo from '../../assets/cool_logo.png';
+
 import "./style.less";
-import acmucsdLogo from '../../assets/acmucsd.svg';
-import acmLogo from '../../assets/acm.svg';
-import Button from '../../components/button';
 
 const Home: React.FC = () => {
   return (
-    <div className="page home">
-      <div>
-        <img src={acmucsdLogo} alt="ACM UCSD Logo" className="acmucsdLogo"></img>
+    <div className="homeGrid">
+      <div className="coolImg">
+        <img src={CoolLogo} alt="Cool Logo" />
       </div>
-      <div>
-        <img src={acmLogo} alt="ACM Logo" className="acmLogo"></img>
-        <h1>Welcome to ACM UC San Diego!</h1>
-        <h3>
-          The largest computing organization on campus.
-          Focused on design, coding, and boba.
-        </h3>
-        <Button />
+      <div className="homeDescription">
+        <div className="descriptionBlock">
+        <Typist className="join" avgTypingDelay={40}>
+          <span>Join UCSD's largest</span>
+          <br />
+          <span className="codeSpan">code + </span>
+          <span className="designSpan">design + </span>
+          <span className="innovateSpan">innovate</span>
+          <br />
+          <span>community: 1000+ members</span>
+          <br />
+          <span>and counting.</span>
+        </Typist>
+        <button type="button" className="learnMore"><span>Learn More</span></button>
+        </div>
       </div>
     </div>
   );

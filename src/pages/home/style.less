@@ -1,54 +1,53 @@
-.home {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 2em;
+.homeGrid {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.acmLogo {
-  max-width: 10em;
+.homeDescription {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bolder; 
+  font-size: 3.5em;
 }
 
-.acmucsdLogo {
-  display: block;
-  height: auto;
-  max-width: 100%;
+.descriptionBlock {
+  margin: 1em;
 }
 
-h1 {
-  font-size: 5em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+.learnMore {
+  font-size: 0.5em;
+  border-style: none;
+  border-radius: 0.5em;
+  margin-top: 1em;
+  background-color: #333333;
+  color: white;
+  padding: 0.5em 1.5em;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-h3 {
-  font-size: 2em;
-  margin-bottom: 1em;
+.coolImg {
+  margin: 3.5em;
 }
 
-.home > div {
-  display: table;
-  margin: 0 auto;
+.codeSpan {
+  color: #2CB3D7;
 }
 
-@media only screen and (max-width: 768px) {
+.designSpan {
+  color: #FC3B7D;
+}
 
-  .acmucsdLogo {
-    visibility: hidden;
-    height: 0;
+.innovateSpan {
+  color: #684AFA;
+}
+
+@media only screen and (max-width: 1000px) {
+  .homeGrid {
+    flex-direction: column;
+    padding-top: 4em;
   }
-
-  .home {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-
-  h1 {
-    font-size: 3em;
-  }
-
-  h3 {
-    font-size: 1.2em;
+  .homeDescription {
+    width: 100vw;
   }
 }

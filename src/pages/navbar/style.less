@@ -1,0 +1,113 @@
+.navbar {
+  list-style-type: none;
+}
+
+.navbar > li {
+  padding: 1em;
+  float: right;
+}
+
+.navbar > li:first-of-type {
+  float: left;
+}
+
+.login-button {
+  background-color: black;
+  color: white !important;
+  border-radius: 0.5em;
+  padding: 0.3em 1em !important;
+}
+
+.navbar > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-div {
+  padding: 1em;
+}
+
+.wainbow {
+  width: 100vw;
+  height: 0.4em;
+  display: table;
+}
+
+.wainbow > .pinkFill {
+  background-color: #FC3B7D;
+  display: table-cell;
+}
+
+.wainbow > .greenFill {
+  background-color: #3ADF9C;
+  display: table-cell;
+}
+
+.wainbow > .cyanFill {
+  background-color: #2CB3D7;
+  display: table-cell;
+}
+
+.wainbow > .purpleFill {
+  background-color: #684AFA;
+  display: table-cell;
+}
+
+.wainbow > .orangeFill {
+  background-color: #FDA44E;
+  display: table-cell;
+}
+
+.fixed-nav {
+  position: fixed;
+  font-weight: bold;
+  background-color: white;
+}
+
+.navbar-mobile-div {
+  display: none;
+}
+
+@media only screen and (min-width: 650px) {
+  .mobile-links {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .navbar-div {
+    display: none;
+  }
+
+  .navbar-mobile-div {
+    display: block;
+    padding: 1em;
+  }
+
+  .navbar-mobile > a {
+    padding: 1em;
+    float: right;
+  }
+
+  .navbar-mobile > a:first-of-type {
+    float: left;
+  }
+
+  .menuicon {
+    height: 1em;
+  }
+
+  .mobile-links {
+    display: none;
+  }
+
+  .mobile-links > a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 1em;
+    text-align: center;
+    background-color: #333333;
+    font-size: 1.3em;
+  }
+}

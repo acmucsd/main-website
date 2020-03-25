@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import './styles/style.less';
 
@@ -16,7 +16,11 @@ const App: React.FC = () => {
       <div className="App">
         <NavBar />
         <Home />
-        <Sponsorship/>
+        <Switch>
+          <Route path="/sponsorship">
+            <Sponsorship/>
+          </Route>
+        </Switch>
         <Contact />
       </div>
     </Router>

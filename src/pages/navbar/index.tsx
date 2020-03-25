@@ -3,7 +3,7 @@ import React from 'react';
 import ACMLogo from '../../assets/acm.svg';
 import MenuButtonIcon from '../../assets/menubutton.svg'
 import CloseMenuButton from '../../assets/closemenubutton.svg';
-
+import { Link } from 'react-router-dom';
 import './style.less';
 
 const NavBar: React.FC = () => {
@@ -25,17 +25,17 @@ const NavBar: React.FC = () => {
     <div className="fixed-nav">
       <div className="navbar-div">
         <ul className="navbar">
-          <li><a href=""><img src={ACMLogo} alt="ACM Logo" /></a></li>
-          <li><a href="" className="login-button">Login</a></li>
-          <li><a href="">Contact</a></li>
-          <li><a href="">Events</a></li>
-          <li><a href="">Sponsorship</a></li>
-          <li><a href="">About Us</a></li>
+          <li><Link to="/"><img src={ACMLogo} alt="ACM Logo" /></Link></li>
+          <li><Link to="/" className="login-button">Login</Link></li>
+          <li><Link to="/">Contact</Link></li>
+          <li><Link to="/">Events</Link></li>
+          <li><Link to="/sponsorship">Sponsorship</Link></li>
+          <li><Link to="/">About Us</Link></li>
         </ul>
       </div>
       <div className="navbar-mobile-div">
         <div className="navbar-mobile">
-          <a href="/"><img src={ACMLogo} alt="ACM Logo" /></a>
+          <Link to="/"><img src={ACMLogo} alt="ACM Logo" /></Link>
           <a href="javascript:void(0);" className="icon" onClick={toggleMenu} >
             <img className="menuicon" src={MenuButtonIcon} alt="Menu Icon" />
           </a>
@@ -49,11 +49,11 @@ const NavBar: React.FC = () => {
         <span className="orangeFill" />
       </div>
       <div className="mobile-links">
-        <a href="">Login</a>
-        <a href="">Contact</a>
-        <a href="">Events</a>
-        <a href="">Sponsorship</a>
-        <a href="">About Us</a>
+        <Link to="/">Login</Link>
+        <Link to="/">Contact</Link>
+        <Link to="/">Events</Link>
+        <Link to="/sponsorship">Sponsorship</Link>
+        <Link to="/">About Us</Link>
       </div>
     </div>
   );

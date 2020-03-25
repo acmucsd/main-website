@@ -8,15 +8,11 @@ import JsoeLogo from '../../assets/jsoe_logo.png';
 import CseLogo from '../../assets/cse_logo.png';
 
 import "./style.less";
-const renderSponsors: React.FC = () => {
-  return (
-    <div>test</div>
-  )
-}
 
 const Sponsorship: React.FC = () => {
   const imageUrls = [GoogleLogo, IntuitLogo, MapboxLogo, TescLogo, JsoeLogo, CseLogo];
-  const images = imageUrls.map((image) => <img src={image}/>);
+  const imageAlts = ['google', 'intuit', 'mapbox', 'tesc', 'jsoe', 'cse']
+  const images = imageUrls.map((image, i) => <img src={image} alt={imageAlts[i]} key={i}/>);
   return (
     <div id="sponsor-info" className="sponsorship">
       <h1>Impact a community of 1000+ aspiring developers, designers, and innovators</h1>
@@ -37,7 +33,6 @@ const Sponsorship: React.FC = () => {
       <h1>Thank you sponsors and collaborators!</h1>
       <div id="sponsors">
         {images}
-
       </div>
     </div>
   );

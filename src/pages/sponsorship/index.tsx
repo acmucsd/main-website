@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CoolGraph from '../../assets/pie_chart_2.svg';
+import Button from '../../components/button';
 
 import GoogleLogo from '../../assets/google_logo.png';
 import IntuitLogo from '../../assets/intuit_logo.png';
@@ -29,8 +30,8 @@ const Sponsorship: React.FC = () => {
             <li>Inspire the next generation of computing</li>
           </ul>
           <div className="buttonRow">
-            <a href="#sponsors"><button type="button">Our Sponsors</button></a>
-            <a href="#contact"><button type="button">Contact</button></a>
+            <Button link="#sponsors" title="Our Sponsors"/>
+            <Button link="#contact" title="Contact"/>
           </div>
         </div>
         <div className="sponsor-impact sponsor-impact-img-container">

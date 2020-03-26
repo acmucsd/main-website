@@ -29,7 +29,7 @@ const NavBar: React.FC = () => {
           <li><Link to="/" className="login-button">Login</Link></li>
           <li><Link to="/">Contact</Link></li>
           <li><Link to="/">Events</Link></li>
-          <li><Link to="/sponsorship">Sponsorship</Link></li>
+          <li><Link to="/sponsor">Sponsorship</Link></li>
           <li><Link to="/">About Us</Link></li>
         </ul>
       </div>

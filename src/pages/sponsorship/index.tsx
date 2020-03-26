@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CoolGraph from '../../assets/pie_chart_2.svg';
+
 import GoogleLogo from '../../assets/google_logo.png';
 import IntuitLogo from '../../assets/intuit_logo.png';
 import MapboxLogo from '../../assets/mapbox_logo.png';
@@ -16,8 +18,9 @@ const Sponsorship: React.FC = () => {
   return (
     <div id="sponsor-info" className="sponsorship">
       <h1>Impact a community of 1000+ aspiring developers, designers, and innovators</h1>
-      <div className="sponsor-impact">
-        <h3>With your support we are empowered to...</h3>
+      <div className="sponsor-impact-container">
+        <div className="sponsor-impact sponsor-impact-text">
+          <h3><b>With your support we are empowered to...</b></h3>
           <ul>
             <li>Host 125+ events for 2000+ students </li>
             <li>Connect students with professionals</li> 
@@ -25,10 +28,14 @@ const Sponsorship: React.FC = () => {
             <li>Send student researchers to conferences</li>
             <li>Inspire the next generation of computing</li>
           </ul>
-      </div>
-      <div className="buttonRow">
-        <a href="#sponsors"><button type="button">Our Sponsors</button></a>
-        <a href="#contact"><button type="button">Contact</button></a>
+          <div className="buttonRow">
+            <a href="#sponsors"><button type="button">Our Sponsors</button></a>
+            <a href="#contact"><button type="button">Contact</button></a>
+          </div>
+        </div>
+        <div className="sponsor-impact sponsor-impact-img-container">
+          <img src={CoolGraph}/>
+        </div>
       </div>
       <h1>Thank you sponsors and collaborators!</h1>
       <div id="sponsors">

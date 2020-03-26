@@ -13,12 +13,14 @@ import Sponsorship from './pages/sponsorship';
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="App">
+      <div className='App'>
         <NavBar />
-        <Home />
         <Switch>
-          <Route path="/sponsorship">
-            <Sponsorship/>
+          <Route path='/sponsor'>
+            <Sponsorship />
+          </Route>
+          <Route path='/'>
+            <Home />
           </Route>
         </Switch>
         <Contact />

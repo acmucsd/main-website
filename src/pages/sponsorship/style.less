@@ -1,54 +1,71 @@
+@sidemargin: 5vw;
+
 .sponsorship {
   font-family: 'DM Sans', sans-serif;
   font-weight: bolder;
-  width: 80%;
-  margin: 0 auto;
+  margin: 0 1em;
+  padding-top: 5em;
+
+  img {
+      height:80px;
+      margin: 10px 50px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin: 20px @sidemargin;
+  }
+
+  h3 {
+    text-decoration: underline;
+    margin: 10px 0px;
+  }
+
+  button {
+      font-size: 1em;
+      border-style: none;
+      border-radius: 0.5em;
+      margin: 0 0.25em;
+      margin-top: 1em;
+      background-color: #333333;
+      color: white;
+      padding: 0.5em 1.5em;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+  }
+    
 } 
 
-h1 {
-  font-size: 3.5em;
-  margin: 30px 0px;
-}
-
-.sponsor-impact {
-  font-size: 2em;
-  margin: 30px;
+.sponsor-impact-container {
+  font-size: 1.5em;
+  margin: 0px @sidemargin;
+  line-height: 1.2em;
+  vertical-align: middle;
   ul {
       list-style-type: initial;
       list-style-position: inside;
   }
 }
 
-.buttonContainer {
+.sponsor-impact-img-container img {
+    height: 50%;
+    max-height: 40vh;
+    margin: 0px;
+}
+
+.sponsor-impact {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.buttonRow {
     display: inline-block;
     a {
         text-decoration: none;
     }
-    margin: 10px;
-}
-
-button {
-    font-size: 1.2em;
-    border-style: none;
-    border-radius: 0.5em;
-    margin-top: 1em;
-    background-color: #333333;
-    color: white;
-    padding: 0.5em 1.5em;
-    margin: 10px 5px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-  
-.buttonContainer {
-    width: 10em;
-}
-
-img {
-    height:80px;
-    margin: 10px 50px;
+    margin: 5px @sidemargin;
 }
 
 #sponsors {
-    margin-bottom: 50px;
+    margin: 50px 0px;
 }

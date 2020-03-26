@@ -1,15 +1,15 @@
 import React from 'react';
 import Typist from 'react-typist';
 
-import CoolLogo from '../../assets/cool_logo.png';
-
+import CoolLogo from '../../assets/cool_logo_1000x1000.png';
+import CoolLogoMobile from '../../assets/cool_logo.png';
 import "./style.less";
 
 const Home: React.FC = () => {
   return (
     <div className="homeGrid">
       <div className="coolImg">
-        <img src={CoolLogo} alt="Cool Logo" />
+        <img src={CoolLogoMobile} srcSet={`${CoolLogoMobile} 500w, ${CoolLogo} 1000w`} alt="Cool Logo" />
       </div>
       <div className="homeDescription">
         <div className="descriptionBlock">

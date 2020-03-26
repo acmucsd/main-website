@@ -35,7 +35,7 @@ const Sponsorship: React.FC = () => {
           </div>
         </div>
         <div className="sponsor-impact sponsor-impact-img-container">
-          <img src={CoolGraph}/>
+          <img src={CoolGraph} alt="pie chart of ACM members' majors"/>
         </div>
       </div>
       <h1>Thank you sponsors and collaborators!</h1>

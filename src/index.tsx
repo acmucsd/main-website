@@ -1,21 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import './styles/style.less';
 
 import Home from './pages/home';
 import NavBar from './pages/navbar';
 import Contact from './pages/contact';
-import Events from './pages/events';
+import Sponsorship from './pages/sponsorship';
+
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <NavBar />
-      <Home />
-      <Events />
-      <Contact />
-    </div>
+    <Router>
+      <div className='App'>
+        <NavBar />
+        <Switch>
+          <Route path='/sponsor'>
+            <Sponsorship />
+          </Route>
+          <Route path='/'>
+            <Home />
+          </Route>
+        </Switch>
+        <Contact />
+      </div>
+    </Router>
   );
 };
 

@@ -9,7 +9,7 @@ import "./style.less";
 
 const Contact: React.FC = () => {
   return (
-    <div className="contact">
+    <div id="contact" className="contact">
       <span className="contactLabel">Contact Us</span>
       <span className="emailContact"><a href="mailto:acmucsd@gmail.com">acmucsd@gmail.com</a></span>
       <div className="contactIcons">

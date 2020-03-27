@@ -9,6 +9,7 @@ import NavBar from './pages/navbar';
 import Events from './pages/events';
 import Contact from './pages/contact';
 import Sponsorship from './pages/sponsorship';
+import AboutUs from './pages/about-us';
 
 
 const App: React.FC = () => {
@@ -17,6 +18,9 @@ const App: React.FC = () => {
       <div className='App'>
         <NavBar />
         <Switch>
+          <Route path="/aboutus">
+            <AboutUs />
+          </Route>
           <Route path='/sponsorship'>
             <Sponsorship />
           </Route>

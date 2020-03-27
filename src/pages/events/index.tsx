@@ -37,7 +37,6 @@ const Events: React.FC = () => {
     const hoursInHalfDay = 12;
     let startDate = new Date(value.start);
     let endDate = new Date(value.end);
-    let event: EventTime;
     let days: JSX.Element;
     if (startDate.getDay() !== endDate.getDay()) {
       days = (

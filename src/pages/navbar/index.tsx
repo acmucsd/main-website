@@ -26,10 +26,10 @@ const NavBar: React.FC = () => {
       <div className="navbar-div">
         <ul className="navbar">
           <li><Link to="/"><img src={ACMLogo} alt="ACM Logo" /></Link></li>
-          <li><Link to="members.acmucsd.com/login" className="login-button">Login</Link></li>
+          <li><a href="https://members.acmucsd.com/login" className="login-button">Login</a></li>
           <li><Link to="/">Contact</Link></li>
           <li><Link to="/sponsorship">Sponsorship</Link></li>
-          <li><Link to="/">About Us</Link></li>
+          <li><Link to="/aboutus">About Us</Link></li>
         </ul>
       </div>
       <div className="navbar-mobile-div">
@@ -48,10 +48,10 @@ const NavBar: React.FC = () => {
         <span className="orangeFill" />
       </div>
       <div className="mobile-links">
-        <Link to="members.acmucsd.com/login">Login</Link>
-        <Link to="/">Contact</Link>
+        <Link to="/aboutus">About Us</Link>
         <Link to="/sponsorship">Sponsorship</Link>
-        <Link to="/">About Us</Link>
+        <Link to="/">Contact</Link>
+        <a href="https://members.acmucsd.com/login">Login</a>
       </div>
     </div>
   );

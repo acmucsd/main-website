@@ -4,6 +4,7 @@ import Typist from 'react-typist';
 import CoolLogo from '../../assets/cool_logo_1000x1000.png';
 import CoolLogoMobile from '../../assets/cool_logo.png';
 import "./style.less";
+import Button from '../../components/button';
 
 const Home: React.FC = () => {
   return (
@@ -24,7 +25,8 @@ const Home: React.FC = () => {
           <br />
           <span>and counting.</span>
         </Typist>
-        <a href="/" className="learn-more">Learn More</a>
+        <Button title="About ACM" link="/"/>
+        <Button title="Student Portal" link="members.acmucsd.com"/>
         </div>
       </div>
     </div>

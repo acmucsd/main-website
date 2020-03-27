@@ -6,28 +6,25 @@ export type EventsResponse = {
 export type EventsArray = EventObject[]
 
 export type EventObject = {
-  uuid: String
-  organization: String
-  committee: String
-  cover: String
-  title: String
-  description: String
-  location: String
-  eventLink: String
-  start: String
-  end: String
-  pointValue: Number
-  requiresStaff: Boolean
-  staffPointBonus: Number
+  uuid: string
+  organization: string
+  committee: string
+  cover: string
+  title: string
+  description: string
+  location: string
+  eventLink: string
+  start: string
+  end: string
+  pointValue: number
+  requiresStaff: boolean
+  staffPointBonus: number
 }
 
 const getAllEvents = async (): Promise<EventsArray | undefined> => {
   try {
     const response: Response = await fetch('https://acmucsd-membership-portal-api.herokuapp.com/api/v1/event');
     const result: EventsResponse = await handleErrors(response);
-    if (result.error === null) {
-      throw new Error();
-    }
     return result.events.reverse();
   } catch (error) {
     return undefined;

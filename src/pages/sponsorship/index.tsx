@@ -29,10 +29,8 @@ const Sponsorship: React.FC = () => {
             <li>Send student researchers to conferences</li>
             <li>Inspire the next generation of computing</li>
           </ul>
-          <div className="button-row">
-            <Button link="#sponsors" title="Our Sponsors"/>
-            <Button link="#contact" title="Contact"/>
-          </div>
+          <Button link="#sponsors" title="Our Sponsors"/>
+          <Button link="#contact" title="Contact"/>
         </div>
         <div className="sponsor-impact sponsor-impact-img-container">
           <img src={CoolGraph} alt="pie chart of ACM members' majors"/>

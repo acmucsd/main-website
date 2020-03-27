@@ -26,10 +26,9 @@ const NavBar: React.FC = () => {
       <div className="navbar-div">
         <ul className="navbar">
           <li><Link to="/"><img src={ACMLogo} alt="ACM Logo" /></Link></li>
-          <li><Link to="/" className="login-button">Login</Link></li>
+          <li><Link to="members.acmucsd.com/login" className="login-button">Login</Link></li>
           <li><Link to="/">Contact</Link></li>
-          <li><Link to="/">Events</Link></li>
-          <li><Link to="/sponsor">Sponsorship</Link></li>
+          <li><Link to="/sponsorship">Sponsorship</Link></li>
           <li><Link to="/">About Us</Link></li>
         </ul>
       </div>
@@ -49,9 +48,8 @@ const NavBar: React.FC = () => {
         <span className="orangeFill" />
       </div>
       <div className="mobile-links">
-        <Link to="/">Login</Link>
+        <Link to="members.acmucsd.com/login">Login</Link>
         <Link to="/">Contact</Link>
-        <Link to="/">Events</Link>
         <Link to="/sponsorship">Sponsorship</Link>
         <Link to="/">About Us</Link>
       </div>

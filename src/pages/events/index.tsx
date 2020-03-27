@@ -4,9 +4,13 @@ import {EventsArray, EventObject, getAllEvents} from '../../api/EventsAPI';
 
 import './style.less';
 
+export type EventTime = {
+  days: JSX.Element,
+  times: string
+}
+
 const Events: React.FC = () => {
-  const [events, setEvents] = React.useState<EventsArray | undefined>();
-  const [fetchFailed, setFetchFailed] = React.useState<Boolean>(false);
+  const [events, setEvents] = React.useState<EventsArray>();
 
   React.useEffect(() => {
     if (!events) {
@@ -17,10 +21,46 @@ const Events: React.FC = () => {
   const updateEvents = async () => {
     const eventsArray: EventsArray | undefined = await getAllEvents();
     if (eventsArray === undefined) {
-      setFetchFailed(true);
       setEvents(new Array<EventObject>());
     }
-    setEvents(eventsArray);
+    setEvents(eventsArray?.slice(0,5));
+    console.log(eventsArray?.slice(0,5));
+  }
+
+  const parseDate = (value: EventObject) : EventTime => {
+    const minutes = (n: number): string => {
+      return n > 9 ? "" + n: "0" + n;
+    }
+    const months = [ "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December" ];
+    const aMpM = ["am", "pm"];
+    const hoursInHalfDay = 12;
+    let startDate = new Date(value.start);
+    let endDate = new Date(value.end);
+    let event: EventTime;
+    let days: JSX.Element;
+    if (startDate.getDay() !== endDate.getDay()) {
+      days = (
+        <h2>
+          <b className="month">{months[startDate.getMonth()] + ' '}</b>
+          {startDate.getDate() + ' - '}
+          <b className="month">{months[endDate.getMonth()] + ' '}</b>
+          {endDate.getDate()}
+        </h2>
+      )
+    } else {
+      days = (
+        <h2>
+          <b className="month">{months[startDate.getMonth()] + ' '}</b>
+          {startDate.getDate()}
+        </h2>
+      )
+    }
+    let times = (startDate.getHours() % hoursInHalfDay) + ':' +
+      minutes(startDate.getMinutes()) + aMpM[Math.floor(startDate.getHours() / hoursInHalfDay)]
+      + ' - ' + (endDate.getHours() % hoursInHalfDay) + ':' +
+      minutes(endDate.getMinutes()) + aMpM[Math.floor(endDate.getHours() / hoursInHalfDay)];
+    return { days, times };
   }
 
   return (
@@ -29,13 +69,17 @@ const Events: React.FC = () => {
         <h1>Events</h1>
         <p>ACM hosts a wide range of events to provide for the unique array of talent and interests of student members.</p>
       </div>
-      <div className="scrollmenu">
-        <div className="event">
-          <h2><b className="month">Sept</b> 30</h2>
-          <h1>ACM x Career Center Resume Workshop</h1>
-          <h3>Fung Auditorium</h3>
-          <h3>10:00am - 11am</h3>
-        </div>
+      <div className="events">
+        {events && events.map((value, index) => {
+          const date = parseDate(value);
+          return (<div className="event" key={index}>
+            {date.days}
+            <h1 className={"index" + (index % 5)}>{value.title}</h1>
+            <h3>{value.location}</h3>
+            <h3>{date.times}</h3>
+          </div>
+          )}
+        )}
       </div>
     </div>
   );

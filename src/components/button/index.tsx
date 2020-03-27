@@ -9,9 +9,11 @@ interface ButtonProps extends React.Props<any> {
 
 const Button: React.FC<ButtonProps> = ({title, link}) => {
   return (
-    <div className="button">
-      <Link to={link}>{title}</Link>
-    </div>
+      <Link to={link} className="button">
+        <div>
+          {title}
+        </div>
+      </Link>
   );
 }
 

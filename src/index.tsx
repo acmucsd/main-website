@@ -6,6 +6,7 @@ import './styles/style.less';
 
 import Home from './pages/home';
 import NavBar from './pages/navbar';
+import Events from './pages/events';
 import Contact from './pages/contact';
 import Sponsorship from './pages/sponsorship';
 
@@ -16,11 +17,12 @@ const App: React.FC = () => {
       <div className='App'>
         <NavBar />
         <Switch>
-          <Route path='/sponsor'>
+          <Route path='/sponsorship'>
             <Sponsorship />
           </Route>
           <Route path='/'>
             <Home />
+            <Events />
           </Route>
         </Switch>
         <Contact />

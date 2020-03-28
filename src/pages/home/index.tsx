@@ -25,8 +25,8 @@ const Home: React.FC = () => {
           <br />
           <span>and counting.</span>
         </Typist>
-        <Button title="About ACM" link="/"/>
-        <Button title="Student Portal" link="members.acmucsd.com"/>
+        <Button title="About ACM" link="/aboutus"/>
+        <Button title="Student Portal" link="https://members.acmucsd.com"/>
         </div>
       </div>
     </div>

@@ -3,12 +3,12 @@ import React from 'react';
 import CoolGraph from '../../assets/pie_chart_2.svg';
 import Button from '../../components/button';
 
-import GoogleLogo from '../../assets/google_logo.png';
-import IntuitLogo from '../../assets/intuit_logo.png';
-import MapboxLogo from '../../assets/mapbox_logo.png';
-import TescLogo from '../../assets/tesc_logo.png';
-import JsoeLogo from '../../assets/jsoe_logo.png';
-import CseLogo from '../../assets/cse_logo.png';
+import GoogleLogo from '../../assets/google_logo.svg';
+import IntuitLogo from '../../assets/intuit_logo.svg';
+import MapboxLogo from '../../assets/mapbox_logo.svg';
+import TescLogo from '../../assets/tesc_logo.svg';
+import JsoeLogo from '../../assets/jsoe_logo.svg';
+import CseLogo from '../../assets/cse_logo.svg';
 
 import "./style.less";
 
@@ -29,7 +29,7 @@ const Sponsorship: React.FC = () => {
             <li>Send student researchers to conferences</li>
             <li>Inspire the next generation of computing</li>
           </ul>
-          <div className="buttonRow">
+          <div className="buttons">
             <Button link="#sponsors" title="Our Sponsors"/>
             <Button link="#contact" title="Contact"/>
           </div>

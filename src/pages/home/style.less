@@ -1,4 +1,4 @@
-.homeGrid {
+.home-grid {
   min-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -6,58 +6,44 @@
   padding-top: 3.5em;
 }
 
-.homeDescription {
-  font-family: 'DM Sans', sans-serif;
+.home-description {
   font-weight: bolder; 
   font-size: 3.5em;
 }
 
-.descriptionBlock {
+.description-block {
   margin: 1em;
 }
 
-.learnMore {
-  font-size: 0.5em;
-  border-style: none;
-  border-radius: 0.5em;
-  margin-top: 1em;
-  background-color: #333333;
-  color: white;
-  padding: 0.5em 1.5em;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-}
-
-.coolImg {
+.cool-img {
   margin: 3.5em;
-
-  img {
-    width: 500px;
+  img{
+    max-width: 500px;
   }
 }
 
-.codeSpan {
+.code-span {
   color: #2CB3D7;
 }
 
-.designSpan {
+.design-span {
   color: #FC3B7D;
 }
 
-.innovateSpan {
+.innovate-span {
   color: #684AFA;
 }
 
+.buttons > a {
+  margin-right: 1em;
+}
+
 @media only screen and (max-width: 1000px) {
-  .homeGrid {
+  .home-grid {
     flex-direction: column;
     padding-top: 4em;
   }
-
-  .homeDescription {
+  .home-description {
     width: 100vw;
-  }
-
-  .coolImg img {
-    max-width: 100%;
   }
 }

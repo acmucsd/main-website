@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './style.less';
 
 interface ButtonProps extends React.Props<any> {
@@ -9,9 +8,11 @@ interface ButtonProps extends React.Props<any> {
 
 const Button: React.FC<ButtonProps> = ({title, link}) => {
   return (
-    <div className="button">
-      <Link to={link}>{title}</Link>
-    </div>
+      <a href={link} className="button">
+        <div>
+          {title}
+        </div>
+      </a>
   );
 }
 

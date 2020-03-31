@@ -21,7 +21,7 @@ const App: React.FC = () => {
           <Route path="/aboutus">
             <AboutUs />
           </Route>
-          <Route path='/sponsorship'>
+          <Route path='/sponsor'>
             <Sponsorship />
           </Route>
           <Route path='/'>

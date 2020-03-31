@@ -21,14 +21,17 @@ const NavBar: React.FC = () => {
       setMenuState(true);
     }
   }
+  const scrollToContacts = () => {
+    document.getElementById('contact')?.scrollIntoView({behavior: "smooth"});
+  }
   return (
     <div className="fixed-nav">
       <div className="navbar-div">
         <ul className="navbar">
           <li><Link to="/"><img src={ACMLogo} alt="ACM Logo" /></Link></li>
           <li><a href="https://members.acmucsd.com/login" className="login-button">Login</a></li>
-          <li><Link to="/">Contact</Link></li>
-          <li><Link to="/sponsorship">Sponsorship</Link></li>
+          <li><Link to="#contact" onClick={scrollToContacts}>Contact</Link></li>
+          <li><Link to="/sponsor">Sponsorship</Link></li>
           <li><Link to="/aboutus">About Us</Link></li>
         </ul>
       </div>
@@ -49,8 +52,8 @@ const NavBar: React.FC = () => {
       </div>
       <div className="mobile-links">
         <Link to="/aboutus">About Us</Link>
-        <Link to="/sponsorship">Sponsorship</Link>
-        <Link to="/">Contact</Link>
+        <Link to="/sponsor">Sponsorship</Link>
+        <Link to="#contact" onClick={scrollToContacts}>Contact</Link>
         <a href="https://members.acmucsd.com/login">Login</a>
       </div>
     </div>

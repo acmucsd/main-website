@@ -30,7 +30,7 @@ const NavBar: React.FC = () => {
           <li><Link to="/">Contact</Link></li>
           <li><Link to="/">Events</Link></li>
           <li><Link to="/sponsor">Sponsorship</Link></li>
-          <li><Link to="/">About Us</Link></li>
+          <li><Link to="/about">About Us</Link></li>
         </ul>
       </div>
       <div className="navbar-mobile-div">

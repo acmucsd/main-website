@@ -21,16 +21,18 @@ const NavBar: React.FC = () => {
       setMenuState(true);
     }
   }
+  const scrollToContacts = () => {
+    document.getElementById('contact')?.scrollIntoView({behavior: "smooth"});
+  }
   return (
     <div className="fixed-nav">
       <div className="navbar-div">
         <ul className="navbar">
           <li><Link to="/"><img src={ACMLogo} alt="ACM Logo" /></Link></li>
-          <li><Link to="/" className="login-button">Login</Link></li>
-          <li><Link to="/">Contact</Link></li>
-          <li><Link to="/">Events</Link></li>
+          <li><a href="https://members.acmucsd.com/login" className="login-button">Login</a></li>
+          <li><Link to="#contact" onClick={scrollToContacts}>Contact</Link></li>
           <li><Link to="/sponsor">Sponsorship</Link></li>
-          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/aboutus">About Us</Link></li>
         </ul>
       </div>
       <div className="navbar-mobile-div">
@@ -49,11 +51,10 @@ const NavBar: React.FC = () => {
         <span className="orangeFill" />
       </div>
       <div className="mobile-links">
-        <Link to="/">Login</Link>
-        <Link to="/">Contact</Link>
-        <Link to="/">Events</Link>
-        <Link to="/sponsorship">Sponsorship</Link>
-        <Link to="/">About Us</Link>
+        <Link to="/aboutus">About Us</Link>
+        <Link to="/sponsor">Sponsorship</Link>
+        <Link to="#contact" onClick={scrollToContacts}>Contact</Link>
+        <a href="https://members.acmucsd.com/login">Login</a>
       </div>
     </div>
   );

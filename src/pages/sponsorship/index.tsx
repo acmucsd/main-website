@@ -29,7 +29,7 @@ const Sponsorship: React.FC = () => {
             <li>Send student researchers to conferences</li>
             <li>Inspire the next generation of computing</li>
           </ul>
-          <div className="buttonRow">
+          <div className="buttons">
             <Button link="#sponsors" title="Our Sponsors"/>
             <Button link="#contact" title="Contact"/>
           </div>

@@ -1,13 +1,22 @@
 .button {
   background-color: #333333;
   text-align: center;
-  font-size: 18pt;
+  font-size: 18px;
   padding: 0.5em 1em;
   display: inline-block;
   border-radius: 10px;
-  text-decoration: none;
+  color: white;
 }
 
-.button > div {
-  color: white;
+.button > a {
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: inherit;
+}
+
+.button:hover {
+  background-color:white;
+  color: black;
+  transition: 200ms;
 }

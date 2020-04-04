@@ -1,15 +1,10 @@
 @sidemargin: 5vw;
 
 .sponsorship {
+  font-family: 'DM Sans', sans-serif;
   font-weight: bolder;
   margin: 0 1em;
   padding-top: 5em;
-
-  img {
-      height: 80px;
-      margin: 10px 50px;
-      max-width: 67vw;
-  }
 
   h1 {
     font-size: 2.5em;
@@ -26,13 +21,16 @@
 .sponsor-impact-container {
   font-size: 1.5em;
   margin: 0px @sidemargin;
-  padding-bottom: 1em;
   line-height: 1.2em;
   vertical-align: middle;
   ul {
       list-style-type: initial;
       list-style-position: inside;
-      padding-bottom: 1em;
+  }
+
+  img {
+      height: 80px;
+      margin: 10px 50px;
   }
 }
 
@@ -47,6 +45,67 @@
     vertical-align: middle;
 }
 
+.sponsor-impact-text {
+    min-width: 50%;
+    font-weight: 500;
+}
+
+.buttons {
+    display: inline-block;
+    a {
+        text-decoration: none;
+    }
+    margin: 3vh 0px;
+}
+
 #sponsors {
-    margin: 50px @sidemargin;
+    margin: 50px 0px;
+
+    img {
+        height: 10vh;
+        margin: 10px 50px;
+        max-width: 33vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .sponsorship {
+    margin: 0;
+    h1 {
+      font-size: 1.75em;
+      font-weight: 700;
+      line-height:1.25em;
+      margin: 2vh 5vw;
+    }
+  }
+
+  #sponsors { 
+      margin: 0px @sidemargin;
+      img {
+          max-width: 67vw;
+      }    
+  }
+
+  .sponsor-impact-text {
+    width: initial;
+    font-weight: 500;
+  }
+
+  .sponsor-impact-container {
+    font-size: 1em;
+  }
+
+  .sponsor-impact-img-container {
+    img {
+      height: 50%;
+      max-height: 40vh;
+      max-width: 85vw;
+      margin: 0px;
+    }
+  }
+
+  .buttons {
+    margin-bottom: 0px;
+  }
 }

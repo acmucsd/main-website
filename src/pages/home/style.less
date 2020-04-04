@@ -36,14 +36,30 @@
 
 .buttons > a {
   margin-right: 1em;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 1000px) {
+
+  .cool-img {
+    margin: 0px;
+    margin-top: 2em;
+    img {
+      max-width: 60vw;
+    }
+  }
+
   .home-grid {
     flex-direction: column;
     padding-top: 4em;
   }
+
+  .description-block {
+    margin-top: 0.5em;
+  }
+
   .home-description {
     width: 100vw;
+    font-size: 2em;
   }
 }

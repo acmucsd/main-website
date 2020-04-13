@@ -11,7 +11,6 @@ import Contact from './pages/contact';
 import Sponsorship from './pages/sponsorship';
 import AboutUs from './pages/about-us';
 
-
 const App: React.FC = () => {
   return (
     <Router>

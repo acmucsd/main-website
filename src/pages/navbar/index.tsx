@@ -38,9 +38,9 @@ const NavBar: React.FC = () => {
       <div className="navbar-mobile-div">
         <div className="navbar-mobile">
           <Link to="/"><img src={ACMLogo} alt="ACM Logo" /></Link>
-          <a href="javascript:void(0);" className="icon" onClick={toggleMenu} >
+          <button className="icon" onClick={toggleMenu} >
             <img className="menuicon" src={MenuButtonIcon} alt="Menu Icon" />
-          </a>
+          </button>
         </div>
       </div>
       <div className="wainbow">

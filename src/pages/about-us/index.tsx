@@ -1,5 +1,4 @@
 import React from 'react';
-import members from './members.json';
 import "./style.less";
 import AboutImg from '../../assets/about-us.png';
 import Button from '../../components/button';
@@ -28,7 +27,7 @@ const AboutUs: React.FC = () => {
           </div>
         </div>
         <div className="about-image">
-          <img src={AboutImg} alt="About us image" />
+          <img src={AboutImg} alt="ACM's peeps" />
         </div>
       </div>
     </div>

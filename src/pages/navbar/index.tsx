@@ -51,10 +51,10 @@ const NavBar: React.FC = () => {
         <span className="orangeFill" />
       </div>
       <div className="mobile-links">
-        <Link to="/aboutus">About Us</Link>
-        <Link to="/sponsor">Sponsorship</Link>
-        <Link to="#contact" onClick={scrollToContacts}>Contact</Link>
-        <a href="https://members.acmucsd.com/login">Login</a>
+        <Link to="/aboutus" onClick={toggleMenu}>About Us</Link>
+        <Link to="/sponsor" onClick={toggleMenu}>Sponsorship</Link>
+        <Link to="#contact" onClick={() => {toggleMenu(); scrollToContacts();}}>Contact</Link>
+        <a href="https://members.acmucsd.com/login" onClick={toggleMenu}>Login</a>
       </div>
     </div>
   );

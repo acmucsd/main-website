@@ -16,6 +16,7 @@ const Events: React.FC = () => {
     if (!events) {
       updateEvents();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const updateEvents = async () => {

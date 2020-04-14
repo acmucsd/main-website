@@ -38,9 +38,9 @@ const NavBar: React.FC = () => {
       <div className="navbar-mobile-div">
         <div className="navbar-mobile">
           <Link to="/"><img src={ACMLogo} alt="ACM Logo" /></Link>
-          <a href="javascript:void(0);" className="icon" onClick={toggleMenu} >
+          <button className="icon" onClick={toggleMenu} >
             <img className="menuicon" src={MenuButtonIcon} alt="Menu Icon" />
-          </a>
+          </button>
         </div>
       </div>
       <div className="wainbow">
@@ -51,10 +51,10 @@ const NavBar: React.FC = () => {
         <span className="orangeFill" />
       </div>
       <div className="mobile-links">
-        <Link to="/aboutus">About Us</Link>
-        <Link to="/sponsor">Sponsorship</Link>
-        <Link to="#contact" onClick={scrollToContacts}>Contact</Link>
-        <a href="https://members.acmucsd.com/login">Login</a>
+        <Link to="/aboutus" onClick={toggleMenu}>About Us</Link>
+        <Link to="/sponsor" onClick={toggleMenu}>Sponsorship</Link>
+        <Link to="#contact" onClick={() => {toggleMenu(); scrollToContacts();}}>Contact</Link>
+        <a href="https://members.acmucsd.com/login" onClick={toggleMenu}>Login</a>
       </div>
     </div>
   );

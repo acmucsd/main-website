@@ -20,10 +20,13 @@ const AboutUs: React.FC = () => (
         <span>, and </span>
         <b>graphics</b>
         <span> to name a few. We welcome you to drop by our events! </span>
+        <br />
+        <br />
         <span>
           Interested in getting more involved? Join the Diamond Staff program to volunteer for fun
           socials or mentor technical workshops for 2000+ students per quarter.
         </span>
+        <br />
         <div className="buttons">
           <Button link="https://members.acmucsd.com/" title="Student Portal" />
           <Button link="#" title="Diamond Staff" />

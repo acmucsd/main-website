@@ -10,38 +10,38 @@ import TescLogo from '../../assets/tesc_logo.svg';
 import JsoeLogo from '../../assets/jsoe_logo.svg';
 import CseLogo from '../../assets/cse_logo.svg';
 
-import "./style.less";
+import './style.less';
 
 const Sponsorship: React.FC = () => {
   const imageUrls = [GoogleLogo, IntuitLogo, MapboxLogo, TescLogo, JsoeLogo, CseLogo];
-  const imageAlts = ['google', 'intuit', 'mapbox', 'tesc', 'jsoe', 'cse']
-  const images = imageUrls.map((image, i) => <img src={image} alt={imageAlts[i]} key={i}/>);
+  const imageAlts = ['google', 'intuit', 'mapbox', 'tesc', 'jsoe', 'cse'];
+  const images = imageUrls.map((image, i) => <img src={image} alt={imageAlts[i]} key={i} />);
   return (
     <div id="sponsor-info" className="sponsorship">
       <h1>Impact a community of 1000+ aspiring developers, designers, and innovators</h1>
       <div className="sponsor-impact-container">
         <div className="sponsor-impact sponsor-impact-text">
-          <h3><b>With your support we are empowered to...</b></h3>
+          <h3>
+            <b>With your support we are empowered to...</b>
+          </h3>
           <ul>
             <li>Host 125+ events for 2000+ students </li>
-            <li>Connect students with professionals</li> 
+            <li>Connect students with professionals</li>
             <li>Mentor students in software projects </li>
             <li>Send student researchers to conferences</li>
             <li>Inspire the next generation of computing</li>
           </ul>
           <div className="buttons">
-            <Button link="#sponsors" title="Our Sponsors"/>
-            <Button link="#contact" title="Contact"/>
+            <Button link="#sponsors" title="Our Sponsors" />
+            <Button link="#contact" title="Contact" />
           </div>
         </div>
         <div className="sponsor-impact sponsor-impact-img-container">
-          <img src={CoolGraph} alt="pie chart of ACM members' majors"/>
+          <img src={CoolGraph} alt="pie chart of ACM members' majors" />
         </div>
       </div>
       <h1>Thank you sponsors and collaborators!</h1>
-      <div id="sponsors">
-        {images}
-      </div>
+      <div id="sponsors">{images}</div>
     </div>
   );
 };

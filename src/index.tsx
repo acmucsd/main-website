@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import './styles/style.less';
 
@@ -11,27 +11,25 @@ import Contact from './pages/contact';
 import Sponsorship from './pages/sponsorship';
 import AboutUs from './pages/about-us';
 
-const App: React.FC = () => {
-  return (
-    <Router>
-      <div className='App'>
-        <NavBar />
-        <Switch>
-          <Route path="/aboutus">
-            <AboutUs />
-          </Route>
-          <Route path='/sponsor'>
-            <Sponsorship />
-          </Route>
-          <Route path='/'>
-            <Home />
-            <Events />
-          </Route>
-        </Switch>
-        <Contact />
-      </div>
-    </Router>
-  );
-};
+const App: React.FC = () => (
+  <Router>
+    <div className="App">
+      <NavBar />
+      <Switch>
+        <Route path="/aboutus">
+          <AboutUs />
+        </Route>
+        <Route path="/sponsor">
+          <Sponsorship />
+        </Route>
+        <Route path="/">
+          <Home />
+          <Events />
+        </Route>
+      </Switch>
+      <Contact />
+    </div>
+  </Router>
+);
 
 ReactDOM.render(<App />, document.getElementById('root'));

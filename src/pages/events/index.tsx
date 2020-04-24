@@ -24,6 +24,7 @@ const Events: React.FC = () => {
     if (!events) {
       updateEvents();
     }
+    // eslint-disable-next-line
   }, []);
 
   const parseDate = (value: EventObject): EventTime => {

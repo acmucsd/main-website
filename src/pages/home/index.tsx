@@ -18,7 +18,7 @@ const Home: React.FC = () => (
     <div className="home-description">
       <div className="description-block">
         <Typist className="join" avgTypingDelay={40}>
-          <span>Join UCSD&#39s largest</span>
+          <span>Join UCSD&#39;s largest</span>
           <br />
           <span className="code-span">code + </span>
           <span className="design-span">design + </span>

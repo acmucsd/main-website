@@ -1,0 +1,36 @@
+@card-width: 120px;
+
+.board-member-card {
+    display: inline-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    background-color: #F0F0F0;
+    padding: 10px 0px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.board-member-photo {
+    width: @card-width;
+    height: @card-width;
+    border-radius: 50%;
+    background-size: 100%;
+    margin: 0px 10px;
+}
+
+.temp-photo {
+    background-color: pink;
+}
+
+.board-member-info {
+    width: @card-width;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    min-height: 4em;
+}
+
+.board-member-name {
+    font-weight: bold;
+}

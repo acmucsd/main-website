@@ -34,7 +34,7 @@ const getAllEvents = async (): Promise<EventsArray | undefined> => {
       'https://acmucsd-membership-portal-api.herokuapp.com/api/v1/event',
     );
     const result: EventsResponse = await handleErrors(response);
-    return result.events.reverse();
+    return result.events;
   } catch (error) {
     return undefined;
   }

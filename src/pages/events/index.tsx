@@ -17,7 +17,7 @@ const Events: React.FC = () => {
     if (eventsArray === undefined) {
       setEvents(new Array<EventObject>());
     }
-    setEvents(eventsArray?.slice(0, 5));
+    setEvents(eventsArray?.slice(0, 6));
   };
 
   React.useEffect(() => {
@@ -89,7 +89,7 @@ const Events: React.FC = () => {
             return (
               <div className="event" key={index}>
                 {date.days}
-                <h1 className={`index${index % 5}`}>{value.title}</h1>
+                <h1 className={`index${index % 4}`}>{value.title}</h1>
                 <h3>{value.location}</h3>
                 <h3>{date.times}</h3>
               </div>

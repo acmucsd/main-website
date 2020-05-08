@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { EventsArray, EventObject, getAllEvents } from '../../api/EventsAPI';
+import { isURL, getAbsoluteURL } from '../../utils';
 
 import './style.less';
 
@@ -90,7 +91,13 @@ const Events: React.FC = () => {
               <div className="event" key={index}>
                 {date.days}
                 <h1 className={`index${index % 5}`}>{value.title}</h1>
-                <h3>{value.location}</h3>
+                {isURL(value.location) ? (
+                  <a className="link" href={getAbsoluteURL(value.location)}>
+                    <h3>{value.location}</h3>
+                  </a>
+                ) : (
+                  <h3>{value.location}</h3>
+                )}
                 <h3>{date.times}</h3>
               </div>
             );

@@ -29,10 +29,13 @@ const handleErrors = (response: Response): Promise<EventsResponse> => {
 };
 
 const getAllEvents = async (): Promise<EventsArray | undefined> => {
+  let apiurl = 'https://acmucsd-membership-portal-api.herokuapp.com/api/v1/event';
+  if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+    apiurl = 'https://acmucsd-portal-testing.herokuapp.com/api/v1/event';
+  }
+
   try {
-    const response: Response = await fetch(
-      'https://acmucsd-membership-portal-api.herokuapp.com/api/v1/event',
-    );
+    const response: Response = await fetch(apiurl);
     const result: EventsResponse = await handleErrors(response);
     return result.events.reverse();
   } catch (error) {

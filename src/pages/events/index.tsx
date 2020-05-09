@@ -38,7 +38,7 @@ const Events: React.FC = () => {
             return (
               <div className="event" key={index}>
                 <h2>{timing.date}</h2>
-                <h1 className={`index${index % 4}`}>{value.title}</h1>
+                <h1 className={`index${index % 5}`}>{value.title}</h1>
                 {isURL(value.location) ? (
                   <a className="link" href={getAbsoluteURL(value.location)}>
                     <h3>{value.location}</h3>

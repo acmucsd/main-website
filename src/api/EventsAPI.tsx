@@ -37,7 +37,7 @@ const getAllEvents = async (): Promise<EventsArray | undefined> => {
   try {
     const response: Response = await fetch(apiurl);
     const result: EventsResponse = await handleErrors(response);
-    return result.events.reverse();
+    return result.events;
   } catch (error) {
     return undefined;
   }

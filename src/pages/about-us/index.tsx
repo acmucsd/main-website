@@ -17,7 +17,7 @@ const AboutUs: React.FC = () => (
           <span>, </span>
           <b>hacking</b>
           <span>, </span>
-          <b>cybersecruity</b>
+          <b>cybersecurity</b>
           <span>, and </span>
           <b>graphics</b>
           <span> to name a few. We welcome you to drop by our events! </span>

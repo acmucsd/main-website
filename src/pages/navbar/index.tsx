@@ -61,13 +61,7 @@ const NavBar: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="wainbow">
-        <span className="pinkFill" />
-        <span className="greenFill" />
-        <span className="cyanFill" />
-        <span className="purpleFill" />
-        <span className="orangeFill" />
-      </div>
+      <div className="wainbow" />
       <div className="mobile-links">
         <Link to="/aboutus" onClick={toggleMenu}>
           About Us

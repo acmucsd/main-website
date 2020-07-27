@@ -10,13 +10,15 @@
   .home-description {
     font-weight: bolder; 
     font-size: 3.5em;
-  }
+    width: 100%;
 
-  .description-block {
-    margin: 1em;
-    .Typist {
-      width: fit-content;
-      margin: auto;
+    .description-block {
+      margin: 1em;
+      .Typist {
+        width: fit-content;
+        min-height: 6em;
+        margin: auto;
+      }
     }
   }
 
@@ -41,7 +43,7 @@
 
   .buttons {
     width: fit-content;
-    margin: auto;
+    margin: 10px 0px;
   }
 
   .buttons > a {
@@ -81,11 +83,20 @@
 
 @media only screen and (max-width: 500px) {
   .home-grid {
+
+    .cool-img {
+      margin-top: 0px;
+      img {
+        max-width: none;
+        width: 80vw;
+      }
+    }
     .buttons {
       flex-direction: column;
       margin: 3vh 0px;
       .button {
         width: fit-content;
+        margin: 5px 0px;
       }
     }
   }

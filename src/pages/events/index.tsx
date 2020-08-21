@@ -20,7 +20,7 @@ const Events: React.FC = () => {
     if (!events) {
       updateEvents();
     }
-  }, []);
+  }, [events]);
 
   return (
     <div className="events-page">

@@ -1,3 +1,5 @@
+import { EventObject } from './api/EventsAPI';
+
 /**
  * Determines if given string is a valid website link.
  * @param {string} str The string containing a potential URL.
@@ -36,4 +38,44 @@ export const getAbsoluteURL = (str: string): string | undefined => {
   }
 
   return str;
+};
+
+/**
+ * Contains timing information for an event.
+ * @param {string} date The date description.
+ * * @param {string} time The time description.
+ */
+export type EventTime = {
+  date: string;
+  time: string;
+};
+
+/**
+ * Converts an event's date information into human readable descriptions.
+ * @param {EventObject} event The event to be processed.
+ * @return {EventTime} English strings describing date and time.
+ */
+export const getDateTime = (event: EventObject): EventTime => {
+  const startDate = new Date(event.start);
+  const endDate = new Date(event.end);
+  const result: EventTime = { date: '', time: '' };
+
+  if (startDate.getDate() !== endDate.getDate()) {
+    result.date = `${startDate.toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+    })} - ${endDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}`;
+  } else {
+    result.date = startDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+  }
+
+  result.time = `${startDate.toLocaleTimeString('en-US', {
+    hour: 'numeric',
+    minute: '2-digit',
+  })} - ${endDate.toLocaleTimeString('en-US', {
+    hour: 'numeric',
+    minute: '2-digit',
+  })}`;
+
+  return result;
 };

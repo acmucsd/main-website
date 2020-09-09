@@ -17,7 +17,6 @@
       .Typist {
         width: fit-content;
         min-height: 6em;
-        margin: auto;
       }
     }
   }
@@ -52,7 +51,8 @@
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1050px) {
+// for tablets and mobile
 
   .home-grid {
     flex-direction: column;
@@ -67,6 +67,9 @@
     }
     .description-block {
       margin-top: 0.5em;
+      .Typist {
+        margin: auto;
+      }
     }
   
     .home-description {

@@ -16,7 +16,7 @@
       margin: 1em;
       .Typist {
         width: fit-content;
-        min-height: 6em;
+        min-height: 4em;
       }
     }
   }
@@ -52,8 +52,7 @@
 }
 
 @media only screen and (max-width: 1050px) {
-// for tablets and mobile
-
+  // for tablets and mobile
   .home-grid {
     flex-direction: column;
     padding-top: 4em;
@@ -65,16 +64,16 @@
         max-width: 60vw;
       }
     }
-    .description-block {
-      margin-top: 0.5em;
-      .Typist {
-        margin: auto;
-      }
-    }
   
     .home-description {
       width: 100vw;
       font-size: 2em;
+      .description-block {
+        margin: 0.5em 20vw;
+        .Typist {
+          min-width: 60vw;
+        }
+      }
     }
 
     .buttons {
@@ -86,7 +85,6 @@
 
 @media only screen and (max-width: 500px) {
   .home-grid {
-
     .cool-img {
       margin-top: 0px;
       img {
@@ -94,6 +92,15 @@
         width: 80vw;
       }
     }
+
+    .home-description {
+      .description-block {
+        .Typist {
+          min-height: 6em;
+        }
+      }
+    }
+
     .buttons {
       flex-direction: column;
       margin: 3vh 0px;

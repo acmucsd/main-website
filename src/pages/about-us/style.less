@@ -16,11 +16,16 @@
       padding-right: 10vw;
       .about-text {
         font-size: 1.5em;
+        line-height: 1.25em;
         padding-bottom: 1em;
         b {
           font-weight: bolder;
           text-decoration: underline;
         }
+      }
+      .buttons a {
+        text-decoration: none;
+        margin-right: 25px;
       }
     }
     .about-image {
@@ -42,21 +47,35 @@
     }
     .about-image {
       padding: 0 !important;
+      margin: 26px 0;
       img {
         max-width: 80% !important;
       }
     }
   }
 }
+
 @media only screen and (max-width: 600px) {
-  .about-description {
-    p {
-      font-size: 1em;
-    }
-  }
   .about-us {
     h1 {
       font-size: 1.75em;
+    }
+    .about-info {
+      .about-description {
+        p {
+          font-size: 1em;
+        }
+        .buttons a {
+          font-size: 1.25rem;
+          margin-right: 10px;
+          padding: 7px 9px;
+        }
+      }
+      .about-image {
+        img {
+          max-width: 100% !important;
+        }
+      }
     }
   }
 }

@@ -9,18 +9,17 @@ const AboutUs: React.FC = () => (
     <div className="about-info">
       <div className="about-description">
         <div className="about-text">
-          <span>
+          <p>
             ACM was founded because we saw a need for a more together student community among
             individuals interested in technology - computing, &nbsp;
-          </span>
           <b>design</b>
-          <span>, </span>
+          ,
           <b>hacking</b>
-          <span>, </span>
+          ,
           <b>cybersecurity</b>
-          <span>, and </span>
+          , and
           <b>graphics</b>
-          <span> to name a few. We welcome you to drop by our events! </span>
+          to name a few. We welcome you to drop by our events! </p>
           <br />
           <br />
           <span>

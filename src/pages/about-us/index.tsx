@@ -12,14 +12,18 @@ const AboutUs: React.FC = () => (
           <p>
             ACM was founded because we saw a need for a more together student community among
             individuals interested in technology - computing, &nbsp;
-          <b>design</b>
-          ,
-          <b>hacking</b>
-          ,
-          <b>cybersecurity</b>
-          , and
-          <b>graphics</b>
-          to name a few. We welcome you to drop by our events! </p>
+            <b>design</b>
+            {', '}
+            <b>hacking</b>
+            {', '}
+            <b>cybersecurity</b>
+            {', '}
+            and
+            <span> </span>
+            <b>graphics</b>
+            <span> </span>
+            to name a few. We welcome you to drop by our events!
+          </p>
           <br />
           <br />
           <span>

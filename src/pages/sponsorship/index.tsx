@@ -15,7 +15,12 @@ import './style.less';
 const Sponsorship: React.FC = () => {
   const imageUrls = [GoogleLogo, IntuitLogo, MapboxLogo, TescLogo, JsoeLogo, CseLogo];
   const imageAlts = ['google', 'intuit', 'mapbox', 'tesc', 'jsoe', 'cse'];
-  const images = imageUrls.map((image, i) => <div className="sponsor-img"><img src={image} alt={imageAlts[i]} key={i} /></div>);
+  const images = imageUrls.map((image, i) => (
+    <div className="sponsor-img">
+      <img src={image} alt={imageAlts[i]} key={i} />
+    </div>
+  ));
+
   return (
     <div id="sponsor-info" className="sponsorship">
       <h1>Impact a community of 1000+ aspiring developers, designers, and innovators</h1>

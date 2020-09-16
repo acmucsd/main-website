@@ -4,59 +4,59 @@
         {
             "name": "Emily Nguyen",
             "title": "President",
-            "url": "emilynguyen.png"
+            "url": "boardmembers/emilynguyen.png"
         },
         {
             "name": "Casey Price",
             "title": "Vice-President Internal",
-            "url": "caseyprice.png"
+            "url": "boardmembers/caseyprice.png"
         },
         {
             "name": "Kendall Nakai",
             "title": "Vice-President Membership",
-            "url": "kendallnakai.png"
+            "url": "boardmembers/kendallnakai.png"
         },
         {
             "name": "Ronak Shah",
             "title": "Vice-President External",
-            "url": "ronakshah.png"
+            "url": "boardmembers/ronakshah.png"
         },
         {
             "name": "Sumeet Bansal",
             "title": "Vice-President Development",
-            "url": "sumeetbansal.png"
+            "url": "boardmembers/sumeetbansal.png"
         }
     ],
     "development": [
         {
             "name": "Sumeet Bansal",
             "title": "Vice-President Development",
-            "url": "sumeetbansal.png"
+            "url": "boardmembers/sumeetbansal.png"
         },
         {
             "name": "Stanley Lee",
             "title": "Program Manager",
-            "url": "stanleylee.png"
+            "url": "boardmembers/stanleylee.png"
         },
         {
             "name": "Paul Pan",
             "title": "Front-End Developer",
-            "url": "paulpan.png"
+            "url": "boardmembers/paulpan.png"
         },
         {
             "name": "Andrea Sudharta",
             "title": "Front-End Developer",
-            "url": "andreasudharta.png"
+            "url": "boardmembers/andreasudharta.png"
         },
         {
             "name": "Stone Tao",
             "title": "Back-End Developer",
-            "url": "stonetao.png"
+            "url": "boardmembers/stonetao.png"
         },
         {
             "name": "Jaden Padua",
             "title": "Back-End Developer",
-            "url": "jadenpadua.png"
+            "url": "boardmembers/jadenpadua.png"
         }
         
     ]

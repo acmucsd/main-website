@@ -1,9 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.less';
 import AboutImg from '../../assets/about-us.png';
 import Button from '../../components/button';
+import BoardMemberCard from '../../components/boardmember';
+import Members from './members.json';
 
-const AboutUs: React.FC = () => (
+const AboutUs: React.FC = () => {
+
+  const [currTeam, setCurrTeam] = useState('board')
+  const [team, setTeam] = useState(Members.board)
+
+  const displayTeam = (event:React.FormEvent<HTMLSelectElement>) => {
+    setCurrTeam(event.currentTarget.value);
+    if(event.currentTarget.value === 'board') {
+      setTeam(Members.board);
+    } else if (event.currentTarget.value === 'development') {
+      setTeam(Members.development);
+    }
+  }
+
+  return(
   <div className="about-us">
     <h1>Join our member-driven computing community</h1>
     <div className="about-info">
@@ -40,7 +56,30 @@ const AboutUs: React.FC = () => (
         <img src={AboutImg} alt="ACM's peeps" />
       </div>
     </div>
+    <div className="board-members">
+    <div className="board-members-header">
+    <label htmlFor="teams">Our team:</label>
+      <select id="teams" onChange={displayTeam}>
+        {
+          Members.teams.map(team => (
+          <option value={team.toLowerCase()}>{team}</option>
+          ))
+        }
+      </select>
+    </div>
+        {
+          team != null ?
+          team.map((d, i) => (
+            <BoardMemberCard 
+              name={d.name}
+              title={d.title}
+              photo={d.url}
+              key={currTeam+i}
+            />
+          )) : <div></div>
+        }
+      </div>
   </div>
-);
-
+  );
+}
 export default AboutUs;

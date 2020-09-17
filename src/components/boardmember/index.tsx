@@ -9,7 +9,7 @@ interface BoardMemberProps {
 
 const BoardMember: React.FC<BoardMemberProps> = ({ name, title, photo, }) => (
   <div className="board-member-card">
-      <div className="board-member-photo" style={{backgroundImage: 'url('+photo+')'}} />
+      <div className="board-member-photo" style={{backgroundImage: `url(${photo})`}} />
       <div className="board-member-info">
           <h2 className="board-member-name">
             {name}

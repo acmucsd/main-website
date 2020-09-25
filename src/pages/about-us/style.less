@@ -1,3 +1,5 @@
+@import '../../styles/style.less';
+
 @sidemargin: 5vw;
 
 .about-us {
@@ -36,6 +38,82 @@
       }
     }
   }
+
+  .board-members {
+    margin: 2rem 0;
+    
+    h1 {
+      display: inline-block;
+    }
+  }
+
+  .dropdown-selection {
+    border: 1px solid @green;
+    border-radius: 12px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
+    cursor: default;
+    display: inline-block;
+    margin: 0 1.5rem;
+    padding: 0.5rem 2rem;
+    padding-right: 3rem;
+    position: relative;
+    text-transform: capitalize;
+
+    p {
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    svg {
+      height: 1rem;
+      position: absolute;
+      right: 10px;
+      top: calc(50% - 5px);
+      width: 1.25rem;
+    }
+  }
+  
+  .dropdown {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 12px;
+    cursor: default;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: none;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    top: 3.25rem;
+    width: -webkit-fill-available;
+    z-index: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+  }
+
+  .dropdown-item {
+    border-bottom: 1px solid gray;
+    overflow: hidden;
+    padding: 0.5rem 2rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .dropdown-item:last-child {
+    border: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .board-members-info {
+    margin-left: -10px;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -55,7 +133,7 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 625px) {
   .about-us {
     h1 {
       font-size: 1.75em;
@@ -76,6 +154,20 @@
           max-width: 100% !important;
         }
       }
+    }
+    .dropdown-selection {
+      padding: 0.25rem 1.5rem;
+      padding-right: 2.25rem;
+      p {
+        font-size: 1.75rem;
+      }
+      svg {
+        width: 1rem;
+        height: 0.75rem;
+      }
+    }
+    .dropdown-item {
+      font-size: 1rem;
     }
   }
 }

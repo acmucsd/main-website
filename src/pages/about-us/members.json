@@ -1,63 +1,70 @@
 {
-    "teams": ["Board", "Development"],
-    "board": [
+    "teams": ["board", "development"],
+    "data": [
         {
-            "name": "Emily Nguyen",
-            "title": "President",
-            "url": "boardmembers/emilynguyen.png"
+            "team": "board",
+            "members": [
+                {
+                    "name": "Emily Nguyen",
+                    "title": "President",
+                    "url": "boardmembers/emilynguyen.png"
+                },
+                {
+                    "name": "Casey Price",
+                    "title": "Vice-President Internal",
+                    "url": "boardmembers/caseyprice.png"
+                },
+                {
+                    "name": "Kendall Nakai",
+                    "title": "Vice-President Membership",
+                    "url": "boardmembers/kendallnakai.png"
+                },
+                {
+                    "name": "Ronak Shah",
+                    "title": "Vice-President External",
+                    "url": "boardmembers/ronakshah.png"
+                },
+                {
+                    "name": "Sumeet Bansal",
+                    "title": "Vice-President Development",
+                    "url": "boardmembers/sumeetbansal.png"
+                }
+            ]
         },
         {
-            "name": "Casey Price",
-            "title": "Vice-President Internal",
-            "url": "boardmembers/caseyprice.png"
-        },
-        {
-            "name": "Kendall Nakai",
-            "title": "Vice-President Membership",
-            "url": "boardmembers/kendallnakai.png"
-        },
-        {
-            "name": "Ronak Shah",
-            "title": "Vice-President External",
-            "url": "boardmembers/ronakshah.png"
-        },
-        {
-            "name": "Sumeet Bansal",
-            "title": "Vice-President Development",
-            "url": "boardmembers/sumeetbansal.png"
+            "team": "development",
+            "members": [
+                {
+                    "name": "Sumeet Bansal",
+                    "title": "Vice-President Development",
+                    "url": "boardmembers/sumeetbansal.png"
+                },
+                {
+                    "name": "Stanley Lee",
+                    "title": "Program Manager",
+                    "url": "boardmembers/stanleylee.png"
+                },
+                {
+                    "name": "Paul Pan",
+                    "title": "Front-End Developer",
+                    "url": "boardmembers/paulpan.png"
+                },
+                {
+                    "name": "Andrea Sudharta",
+                    "title": "Front-End Developer",
+                    "url": "boardmembers/andreasudharta.png"
+                },
+                {
+                    "name": "Stone Tao",
+                    "title": "Back-End Developer",
+                    "url": "boardmembers/stonetao.png"
+                },
+                {
+                    "name": "Jaden Padua",
+                    "title": "Back-End Developer",
+                    "url": "boardmembers/jadenpadua.png"
+                }
+            ]
         }
-    ],
-    "development": [
-        {
-            "name": "Sumeet Bansal",
-            "title": "Vice-President Development",
-            "url": "boardmembers/sumeetbansal.png"
-        },
-        {
-            "name": "Stanley Lee",
-            "title": "Program Manager",
-            "url": "boardmembers/stanleylee.png"
-        },
-        {
-            "name": "Paul Pan",
-            "title": "Front-End Developer",
-            "url": "boardmembers/paulpan.png"
-        },
-        {
-            "name": "Andrea Sudharta",
-            "title": "Front-End Developer",
-            "url": "boardmembers/andreasudharta.png"
-        },
-        {
-            "name": "Stone Tao",
-            "title": "Back-End Developer",
-            "url": "boardmembers/stonetao.png"
-        },
-        {
-            "name": "Jaden Padua",
-            "title": "Back-End Developer",
-            "url": "boardmembers/jadenpadua.png"
-        }
-        
     ]
 }

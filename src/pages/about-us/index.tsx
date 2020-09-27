@@ -90,6 +90,7 @@ const AboutUs: React.FC = () => {
                   role="option"
                   tabIndex={0}
                   aria-selected={teamName === currTeam}
+                  key={teamName}
                 >
                   {teamName}
                 </div>

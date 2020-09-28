@@ -20,7 +20,7 @@ const Events: React.FC = () => {
     if (!events) {
       updateEvents();
     }
-  }, [events]);
+  }, []);
 
   return (
     <div className="events-page">
@@ -31,25 +31,28 @@ const Events: React.FC = () => {
           of student members.
         </p>
       </div>
-      <div className="events">
-        {events &&
-          events.map((value, index) => {
-            const timing = getDateTime(value);
-            return (
-              <div className="event" key={index}>
-                <h2>{timing.date}</h2>
-                <h1 className={`index${index % 5}`}>{value.title}</h1>
-                {isURL(value.location) ? (
-                  <a className="link" href={getAbsoluteURL(value.location)}>
+      <div className="events-container">
+        <div className="events">
+          {events &&
+            events.map((value, index) => {
+              const timing = getDateTime(value);
+              return (
+                <div className="event" key={index}>
+                  <h2>{timing.date}</h2>
+                  <h1 className={`index${index % 5}`}>{value.title}</h1>
+                  {isURL(value.location) ? (
+                    <a className="link" href={getAbsoluteURL(value.location)}>
+                      <h3>{value.location}</h3>
+                    </a>
+                  ) : (
                     <h3>{value.location}</h3>
-                  </a>
-                ) : (
-                  <h3>{value.location}</h3>
-                )}
-                <h3>{timing.time}</h3>
-              </div>
-            );
-          })}
+                  )}
+                  <h3>{timing.time}</h3>
+                </div>
+              );
+            })}
+          <div aria-hidden="true" className="event end" />
+        </div>
       </div>
     </div>
   );

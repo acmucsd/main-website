@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import { EventsArray, EventObject, getAllEvents } from '../../api/EventsAPI';
 import { isURL, getAbsoluteURL, getDateTime } from '../../utils';
@@ -6,7 +6,9 @@ import { isURL, getAbsoluteURL, getDateTime } from '../../utils';
 import './style.less';
 
 const Events: React.FC = () => {
-  const [events, setEvents] = React.useState<EventsArray>();
+  const [events, setEvents] = useState<EventsArray>();
+  const [dragging, toggleDragging] = useState(false);
+  let em = 16;
 
   const updateEvents = async (): Promise<void> => {
     const eventsArray: EventsArray | undefined = await getAllEvents();
@@ -20,7 +22,33 @@ const Events: React.FC = () => {
     if (!events) {
       updateEvents();
     }
+    em = parseFloat(window.getComputedStyle(document.getElementsByClassName('events-container')[0]).fontSize);
   }, []);
+
+  const handleMove = (e:any) => {
+    console.log('fired');
+    e.preventDefault();
+    if (!dragging) {
+      return;
+    }
+    let deltaX = e.movementX;
+    let firstEvent = document.getElementsByClassName('event')[0] as HTMLElement;
+    const cardWidth = em*20;
+    const minMargin = events ? em-(events.length*20*em) : cardWidth;
+    const oldmargin = parseFloat(window.getComputedStyle(firstEvent).marginLeft);
+    const newmargin = oldmargin - deltaX;
+    if (newmargin >= minMargin && newmargin <= em) {
+      firstEvent.style.marginLeft = `${oldmargin - deltaX}px`;
+    }
+  }
+
+  const handleMoveStart = (e:any) => {
+    toggleDragging(true);
+  }
+
+  const handleMoveEnd = (e:any) => {
+    toggleDragging(false);
+  }
 
   return (
     <div className="events-page">
@@ -32,7 +60,14 @@ const Events: React.FC = () => {
         </p>
       </div>
       <div className="events-container">
-        <div className="events">
+        <div 
+          className="events" 
+          onMouseDown={handleMoveStart}
+          onMouseMove={handleMove}
+          onMouseUp={handleMoveEnd}
+          onMouseLeave={handleMoveEnd}
+          onDragStart={() => {return false}}
+        >
           {events &&
             events.map((value, index) => {
               const timing = getDateTime(value);

@@ -20,7 +20,7 @@ const Events: React.FC = () => {
     if (!events) {
       updateEvents();
     }
-  }, []);
+  }, events);
 
   const handleMove = (e: any) => {
     e.preventDefault();

@@ -13,7 +13,7 @@ const Events: React.FC = () => {
     if (eventsArray === undefined) {
       setEvents(new Array<EventObject>());
     }
-    setEvents(eventsArray?.slice(0, 6));
+    setEvents(eventsArray);
   };
 
   React.useEffect(() => {

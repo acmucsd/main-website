@@ -10,6 +10,7 @@ import Events from './pages/events';
 import Contact from './pages/contact';
 import Sponsorship from './pages/sponsorship';
 import AboutUs from './pages/about-us';
+import About from './pages/about';
 
 const App: React.FC = () => (
   <Router>
@@ -24,6 +25,7 @@ const App: React.FC = () => (
         </Route>
         <Route path="/">
           <Home />
+          <About />
           <Events />
         </Route>
       </Switch>

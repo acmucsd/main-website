@@ -23,14 +23,21 @@ const Events: React.FC = () => {
   }, [events]);
 
   const handleMove = (e: any) => {
-    e.preventDefault();
     if (!dragging) {
       return;
     }
     const em = parseFloat(
       window.getComputedStyle(document.getElementsByClassName('events-container')[0]).fontSize,
     );
-    const deltaX = e.movementX;
+    const isTouch = e.movementX === "";
+    let deltaX = 0;
+    if (isTouch) {
+      deltaX = e.touches[0].clientX 
+    } else {
+      e.preventDefault();
+      deltaX = -1*e.movementX;
+    }
+    console.log(deltaX);
     const firstEvent = document.getElementsByClassName('event')[0] as HTMLElement;
     const cardWidth = em * 20;
     const minMargin = events ? em - events.length * 20 * em : cardWidth;
@@ -65,6 +72,10 @@ const Events: React.FC = () => {
           onMouseMove={handleMove}
           onMouseUp={handleMoveEnd}
           onMouseLeave={handleMoveEnd}
+          onTouchStart={handleMoveStart}
+          onTouchMove={handleMove}
+          onTouchCancel={handleMoveEnd}
+          onTouchEnd={handleMoveEnd}
           onDragStart={() => false}
           role="menuitem"
           tabIndex={0}

@@ -29,15 +29,14 @@ const Events: React.FC = () => {
     const em = parseFloat(
       window.getComputedStyle(document.getElementsByClassName('events-container')[0]).fontSize,
     );
-    const isTouch = e.movementX === "";
+    const isTouch = e.movementX === '';
     let deltaX = 0;
     if (isTouch) {
-      deltaX = e.touches[0].clientX 
+      deltaX = e.touches[0].clientX;
     } else {
       e.preventDefault();
-      deltaX = -1*e.movementX;
+      deltaX = -1 * e.movementX;
     }
-    console.log(deltaX);
     const firstEvent = document.getElementsByClassName('event')[0] as HTMLElement;
     const cardWidth = em * 20;
     const minMargin = events ? em - events.length * 20 * em : cardWidth;

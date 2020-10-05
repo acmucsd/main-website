@@ -7,7 +7,6 @@ import './style.less';
 const Events: React.FC = () => {
   const [events, setEvents] = useState<EventsArray>();
   const [dragging, toggleDragging] = useState(false);
-  let em = 16;
 
   const updateEvents = async (): Promise<void> => {
     const eventsArray: EventsArray | undefined = await getAllEvents();
@@ -21,9 +20,6 @@ const Events: React.FC = () => {
     if (!events) {
       updateEvents();
     }
-    em = parseFloat(
-      window.getComputedStyle(document.getElementsByClassName('events-container')[0]).fontSize,
-    );
   }, []);
 
   const handleMove = (e: any) => {
@@ -31,6 +27,9 @@ const Events: React.FC = () => {
     if (!dragging) {
       return;
     }
+    const em = parseFloat(
+      window.getComputedStyle(document.getElementsByClassName('events-container')[0]).fontSize,
+    );
     const deltaX = e.movementX;
     const firstEvent = document.getElementsByClassName('event')[0] as HTMLElement;
     const cardWidth = em * 20;

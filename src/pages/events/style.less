@@ -12,15 +12,31 @@
     max-width: 20em;
   }
 }
+.events-container {
+  height: 27em;
+  overflow: hidden;
+}
+.events:focus {
+  outline: none;
+}
+.events::-webkit-scrollbar {
+  display: none;
+}
 .events {
-  padding: 1em 2rem;
+  display: inline-flex;
+  height: fit-content;
+  overflow-y: hidden;
+  margin: 1em 0;
+  padding-left: 2em;
+  width: 100vw;
   .event {
     display: inline-block;
+    flex-shrink: 0;
     padding: 1.5em;
-    margin: 1em;
+    margin: 0.5em 1em;
     box-shadow: 0em 0em 0.3em black;
     border-radius: 1em;
-    width: 15em;
+    width: 15em; /* changes to width should also apply to handleWheel in index.tsx */
     height: 20em;
     white-space: normal;
     overflow: hidden;
@@ -58,6 +74,9 @@
     .link {
       color: #0659BC;
     }
+  }
+  .end {
+    box-shadow: none;
   }
 }
 

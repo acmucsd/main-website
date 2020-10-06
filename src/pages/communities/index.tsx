@@ -43,7 +43,7 @@ const Communities: React.FC = () => {
           <img src={HackLogo} alt="Hack Logo" />
           <div className="info">
             <h1 className="logo-name hack">ACM Hack</h1>
-            <h2>dsadasdsa</h2>
+            <h2>Software Engineering</h2>
           </div>
         </a>
 

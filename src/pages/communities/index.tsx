@@ -51,7 +51,7 @@ const Communities: React.FC = () => {
           <img src={InnovateLogo} alt="Innovate Logo" />
           <div className="info">
             <h1 className="logo-name innovate">ACM Innovate</h1>
-            <h2>dasjdasdsal</h2>
+            <h2>Entrepreneurship</h2>
           </div>
         </a>
       </div>

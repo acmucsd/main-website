@@ -26,7 +26,7 @@ const GetInvolved: React.FC = () => (
         </div>
       </div>
       <div className="card">
-        <a href="htttps://acmurl.com/fallsp">
+        <a href="https://acmurl.com/fallsp">
           <img src={SideProjects} alt="Side Projects" className="image clickable" />
         </a>
         <div className="card-content">

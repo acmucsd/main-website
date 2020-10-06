@@ -7,7 +7,6 @@ import './styles/style.less';
 import Home from './pages/home';
 import NavBar from './pages/navbar';
 import Events from './pages/events';
-import Communities from './pages/communities';
 import Contact from './pages/contact';
 import Sponsorship from './pages/sponsorship';
 import AboutUs from './pages/about-us';
@@ -26,7 +25,6 @@ const App: React.FC = () => (
         <Route path="/">
           <Home />
           <Events />
-          <Communities />
         </Route>
       </Switch>
       <Contact />

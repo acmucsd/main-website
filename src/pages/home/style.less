@@ -13,7 +13,7 @@
     width: 100%;
 
     .description-block {
-      margin: 1em 0em 1em 3em;
+      margin: 1em;
       .Typist {
         width: fit-content;
         min-height: 6em;
@@ -22,23 +22,22 @@
   }
 
   .cool-img {
-    font-size: 3.5em;
-    margin-right: 3em;
+    margin: 3.5em;
     img{
       max-width: 500px;
     }
   }
 
   .code-span {
-    color: #62B0FF;
+    color: #2CB3D7;
   }
 
   .design-span {
-    color: #E981A0;
+    color: #FC3B7D;
   }
 
   .innovate-span {
-    color: #816DFF;
+    color: #684AFA;
   }
 
   .buttons {
@@ -55,7 +54,7 @@
 @media only screen and (min-width: 1400px) {
   // for long screens
   .home-grid .home-description .description-block .Typist {
-    min-height: 3em;
+    min-height: 4em;
   }
 }
 
@@ -80,17 +79,14 @@
         .Typist {
           min-width: 40vw;
           margin: auto;
-          min-height: 3em;
+          min-height: 4em;
         }
       }
     }
 
     .buttons {
-      align-items: center;
       display: flex;
-      justify-content: center;
-      margin-top: 1em;
-      width: 100%;
+      margin: 3vh auto;
     }
   }
 }
@@ -110,8 +106,18 @@
         margin: 0.5em 10vw;
         .Typist {
           min-width: 80vw;
-          min-height: 3em;
+          min-height: 6em;
         }
+      }
+    }
+
+    .buttons {
+      margin: 3vh 0px;
+      .button {
+        width: fit-content;
+        margin: 5px;
+        font-size: 1.25rem;
+        padding: 8px;
       }
     }
   }

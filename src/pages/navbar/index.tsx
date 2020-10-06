@@ -46,9 +46,9 @@ const NavBar: React.FC = () => {
           <li>
             <Link to="/sponsor">Sponsorship</Link>
           </li>
-          {/* <li>
+          <li>
             <Link to="/aboutus">About Us</Link>
-          </li> */}
+          </li>
         </ul>
       </div>
       <div className="navbar-mobile-div">
@@ -63,9 +63,9 @@ const NavBar: React.FC = () => {
       </div>
       <div className="wainbow" />
       <div className="mobile-links">
-        {/* <Link to="/aboutus" onClick={toggleMenu}>
+        <Link to="/aboutus" onClick={toggleMenu}>
           About Us
-        </Link> */}
+        </Link>
         <Link to="/sponsor" onClick={toggleMenu}>
           Sponsorship
         </Link>

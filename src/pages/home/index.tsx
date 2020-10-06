@@ -1,6 +1,6 @@
 import React from 'react';
 import Typist from 'react-typist';
-import 'react-typist/dist/Typist.css'
+import 'react-typist/dist/Typist.css';
 
 import CoolLogo from '../../assets/cool_logo_1000x1000.png';
 import CoolLogoMobile from '../../assets/cool_logo.png';
@@ -18,7 +18,11 @@ const Home: React.FC = () => (
     </div>
     <div className="home-description">
       <div className="description-block">
-        <Typist className="join" avgTypingDelay={40} cursor={{hideWhenDone: true, hideWhenDoneDelay: 1400}}>
+        <Typist
+          className="join"
+          avgTypingDelay={40}
+          cursor={{ hideWhenDone: true, hideWhenDoneDelay: 1400 }}
+        >
           <span>We are UCSD&#39;s largest</span>
           <br />
           <span className="code-span">code + </span>

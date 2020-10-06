@@ -11,6 +11,8 @@ import Communities from './pages/communities';
 import Contact from './pages/contact';
 import Sponsorship from './pages/sponsorship';
 import AboutUs from './pages/about-us';
+import About from './pages/about';
+import GetInvolved from './pages/get-involved';
 
 const App: React.FC = () => (
   <Router>
@@ -25,8 +27,10 @@ const App: React.FC = () => (
         </Route>
         <Route path="/">
           <Home />
+          <About />
           <Events />
           <Communities />
+          <GetInvolved />
         </Route>
       </Switch>
       <Contact />

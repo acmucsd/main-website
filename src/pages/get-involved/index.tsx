@@ -15,7 +15,9 @@ const GetInvolved: React.FC = () => (
     </p>
     <div className="container">
       <div className="card">
-        <img src={BitByte} alt="Bit-Byte" className="image" />
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScGIH0lEVkAMreKarFF5KBfehjJXtzp0NB3t6NergXzYTPw9A/viewform">
+          <img src={BitByte} alt="Bit-Byte" className="image clickable" />
+        </a>
         <div className="card-content">
           <h3 className="card-title pink">Bit-Byte</h3>
           <p className="card-text">
@@ -24,7 +26,7 @@ const GetInvolved: React.FC = () => (
         </div>
       </div>
       <div className="card">
-        <a href="acmurl.com/fallsp">
+        <a href="htttps://acmurl.com/fallsp">
           <img src={SideProjects} alt="Side Projects" className="image clickable" />
         </a>
         <div className="card-content">
@@ -42,7 +44,7 @@ const GetInvolved: React.FC = () => (
         </div>
       </div>
       <div className="card">
-        <a href="acmurl.com/acm-hackathon-interest">
+        <a href="https://acmurl.com/acm-hackathon-interest">
           <img src={Hackathon} alt="Hackathon" className="image clickable" />
         </a>
         <div className="card-content">

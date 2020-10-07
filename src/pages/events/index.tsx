@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { EventsArray, EventObject, getAllEvents } from '../../api/EventsAPI';
 import { isURL, getAbsoluteURL, getDateTime } from '../../utils';
 
@@ -23,13 +23,9 @@ const scrollLeft = (ref : React.MutableRefObject<HTMLDivElement|null>) => {
 }
 
 const Events: React.FC = () => {
-  const sliderRef = useRef(null);
-  const [events, setEvents] = useState<EventsArray>();
-  const [dragging, toggleDragging] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-  },[]);
+  const sliderRef = React.useRef(null);
+  const [events, setEvents] = React.useState<EventsArray>();
+  const [dragging, toggleDragging] = React.useState(false);
 
   const handleScroll = () => {
     scrollLeft(sliderRef);
@@ -42,6 +38,10 @@ const Events: React.FC = () => {
     }
     setEvents(eventsArray);
   };
+
+  React.useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+  },[]);
 
   React.useEffect(() => {
     if (!events) {

@@ -11,9 +11,7 @@ interface NumberProps {
   number: number;
 }
 
-const Number: React.FC<NumberProps> = ({
-  color, description, extension, number,
-}) => {
+const Number: React.FC<NumberProps> = ({ color, description, extension, number }) => {
   const [hasBeenVisible, setHasBeenVisible] = useState(false);
 
   return (
@@ -42,10 +40,7 @@ const Number: React.FC<NumberProps> = ({
               redraw
             />
           ) : (
-            <span className="count">
-              0
-              {extension}
-            </span>
+            <span className="count">0{extension}</span>
           )}
         </VisibilitySensor>
       </span>

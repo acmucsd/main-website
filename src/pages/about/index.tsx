@@ -1,58 +1,18 @@
 import React from 'react';
-import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
+import Number from '../../components/statistic';
 
 import './style.less';
 
 const About: React.FC = () => (
   <div className="about">
-    <div className="numbers">
-      <div className="number">
-        <span className="count member">
-          <CountUp start={0} end={1000} redraw>
-            {({ countUpRef, start }) => (
-              <VisibilitySensor onChange={start} delayedCall>
-                <span ref={countUpRef} />
-              </VisibilitySensor>
-            )}
-          </CountUp>
-          {' +'}
-        </span>
-        <span className="description">members</span>
-      </div>
-      <div className="number">
-        <span className="count event">
-          <CountUp start={0} end={120} redraw>
-            {({ countUpRef, start }) => (
-              <VisibilitySensor onChange={start} delayedCall>
-                <span ref={countUpRef} />
-              </VisibilitySensor>
-            )}
-          </CountUp>
-          {' +'}
-        </span>
-        <span className="description">events</span>
-      </div>
-      <div className="number">
-        <span className="count global">
-          <CountUp start={0} end={100} redraw>
-            {({ countUpRef, start }) => (
-              <VisibilitySensor onChange={start} delayedCall>
-                <span ref={countUpRef} />
-              </VisibilitySensor>
-            )}
-          </CountUp>
-          {' k'}
-        </span>
-        <span className="description">members globally</span>
-      </div>
-    </div>
-    <div className="summary">
+    <div className="about-header">
       <h1>Join the club.</h1>
-      <p>
-        ACM UCSD is an inclusive community of students passionate about technology. We welcome all
-        majors, backgrounds, and skill-levels.
-      </p>
+      <p>ACM is inclusive community passionate about technology.</p>
+    </div>
+    <div className="numbers">
+      <Number color="#FF6F6F" description="ucsd members" extension="+" number={1000} />
+      <Number color="#F9A857" description="annual events" extension="+" number={120} />
+      <Number color="#51C0C0" description="global members" extension="k" number={100} />
     </div>
   </div>
 );

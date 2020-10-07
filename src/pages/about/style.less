@@ -1,75 +1,15 @@
 .about {
-  display: flex;
-
-  .numbers {
-    align-items: center;
-    justify-content: center;;
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-
-    .number {
-      flex-basis: 100%;
-      font-size: 3.5em;
-      margin: 0 0 .8em 3em;
-      text-align: center;
-      width: fit-content;
-
-      .count {
-          font-size: 1em;
-          &.global {
-              color: #51C0C0;
-          }
-          &.event {
-              color: #F9A857;
-          }
-          &.member {
-              color: #FF6F6F;
-          }
-      }
-      .description {
-        display: block;
-        font-size: .5em;
-      }
-    }
-  }
-
-  .summary {
-    width: 30vw;
-    margin-right: 20vw;
-
+  margin: 0 10vw 80px 10vw;
+  .about-header {
     h1 {
       font-size: 3em;
       font-weight: bolder;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     p {
-      font-size: 2em;
-      font-weight: lighter;
-    }
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .about {
-    flex-wrap: wrap;
-    margin-bottom: 3em;
-
-    .numbers {
-      flex-basis: 100%;
-      margin: 3em 10vw;
-      width: 100vw;
-
-      .number {
-        flex-basis: 33%;
-        margin: 10px;
-      }
-    }
-
-    .summary {
-      width: 100vw;
-      margin: 0 10vw;
+      font-size: 1.5em;
+      margin-bottom: 30px;
     }
   }
 }

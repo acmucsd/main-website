@@ -6,21 +6,22 @@ import './style.less';
 
 let lastScrollTop = 0;
 
-const scrollLeft = (ref : React.MutableRefObject<HTMLDivElement|null>) => {
+const scrollLeft = (ref: React.MutableRefObject<HTMLDivElement | null>) => {
   if (!ref.current) {
     return;
   }
 
+  const currentRef = ref.current;
   const st = window.pageYOffset || document.documentElement.scrollTop;
-  const boundingRect = ref.current.getBoundingClientRect();
-  const startPosition = (boundingRect.top - window.innerHeight);
+  const boundingRect = currentRef.getBoundingClientRect();
+  const startPosition = boundingRect.top - window.innerHeight;
 
   if (startPosition < 0 && startPosition >= -window.innerHeight * 2) {
-    ref.current.scrollLeft += (st - lastScrollTop);
+    currentRef.scrollLeft += st - lastScrollTop;
   }
 
   lastScrollTop = st <= 0 ? 0 : st;
-}
+};
 
 const Events: React.FC = () => {
   const sliderRef = React.useRef(null);
@@ -29,7 +30,7 @@ const Events: React.FC = () => {
 
   const handleScroll = () => {
     scrollLeft(sliderRef);
-  }
+  };
 
   const updateEvents = async (): Promise<void> => {
     const eventsArray: EventsArray | undefined = await getAllEvents();
@@ -41,7 +42,7 @@ const Events: React.FC = () => {
 
   React.useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-  },[]);
+  }, []);
 
   React.useEffect(() => {
     if (!events) {

@@ -1,12 +1,39 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { EventsArray, EventObject, getAllEvents } from '../../api/EventsAPI';
 import { isURL, getAbsoluteURL, getDateTime } from '../../utils';
 
 import './style.less';
 
+let lastScrollTop = 0;
+
+const scrollLeft = (ref : React.MutableRefObject<HTMLDivElement|null>) => {
+  if (!ref.current) {
+    return;
+  }
+
+  const st = window.pageYOffset || document.documentElement.scrollTop;
+  const boundingRect = ref.current.getBoundingClientRect();
+  const startPosition = (boundingRect.top - window.innerHeight);
+
+  if (startPosition < 0 && startPosition >= -window.innerHeight * 2) {
+    ref.current.scrollLeft += (st - lastScrollTop);
+  }
+
+  lastScrollTop = st <= 0 ? 0 : st;
+}
+
 const Events: React.FC = () => {
+  const sliderRef = useRef(null);
   const [events, setEvents] = useState<EventsArray>();
   const [dragging, toggleDragging] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+  },[]);
+
+  const handleScroll = () => {
+    scrollLeft(sliderRef);
+  }
 
   const updateEvents = async (): Promise<void> => {
     const eventsArray: EventsArray | undefined = await getAllEvents();
@@ -23,6 +50,8 @@ const Events: React.FC = () => {
   }, [events]);
 
   const handleMove = (e: any) => {
+    scrollLeft(sliderRef);
+
     if (!dragging) {
       return;
     }
@@ -76,6 +105,7 @@ const Events: React.FC = () => {
           onTouchCancel={handleMoveEnd}
           onTouchEnd={handleMoveEnd}
           onDragStart={() => false}
+          ref={sliderRef}
           role="menuitem"
           tabIndex={0}
         >

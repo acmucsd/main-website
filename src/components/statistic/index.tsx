@@ -12,47 +12,46 @@ interface NumberProps {
 }
 
 const Number: React.FC<NumberProps> = ({
-  color,
-  description,
-  extension,
-  number
+  color, description, extension, number,
 }) => {
-
   const [hasBeenVisible, setHasBeenVisible] = useState(false);
 
   return (
     <div
       className="number"
       style={{
-        borderColor: color
+        borderColor: color,
       }}
     >
       <span
         style={{
-          color: color
+          color,
         }}
       >
-        <VisibilitySensor onChange={(isVisible) => {
-          if (isVisible) setHasBeenVisible(true)
-        }}>
-          {
-            hasBeenVisible
-              ? <CountUp
-                  className={`count ${color}`}
-                  start={0}
-                  end={number}
-                  suffix={extension}
-                  redraw={true}
-                />
-              : <span className="count">0{extension}</span>
-          }
+        <VisibilitySensor
+          onChange={(isVisible) => {
+            if (isVisible) setHasBeenVisible(true);
+          }}
+        >
+          {hasBeenVisible ? (
+            <CountUp
+              className={`count ${color}`}
+              start={0}
+              end={number}
+              suffix={extension}
+              redraw
+            />
+          ) : (
+            <span className="count">
+              0
+              {extension}
+            </span>
+          )}
         </VisibilitySensor>
       </span>
-      <span className="description">
-        {description}
-      </span>
+      <span className="description">{description}</span>
     </div>
-  )
+  );
 };
 
 export default Number;

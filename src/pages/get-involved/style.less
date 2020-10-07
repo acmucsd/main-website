@@ -1,0 +1,82 @@
+@import "../../styles/colors.less";
+
+.get-involved {
+  padding: 48px;
+  margin-top: 48px;
+
+  .title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .card {
+      padding: 16px;
+      width: 550px;
+      height: 250px;
+
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+
+      .image {
+        width: 180px;
+        height: 180px;
+        margin-right: 16px;
+
+        transform: scale(1);
+        transition-duration: 200ms;
+
+        &.clickable {
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.1);
+            transition-duration: 200ms;
+          }
+        }
+      }
+
+      .card-content {
+        .card-title {
+          font-family: 'DM Sans', sans-serif;
+          font-weight: bold;
+          font-size: 36px;
+          padding-bottom: 16px;
+
+          &.pink {
+            color: @pink;
+          }
+
+          &.blue {
+            color: @blue;
+          }
+
+          &.purple {
+            color: @purple;
+          }
+
+          &.orange {
+            color: @orange;
+          }
+        }
+
+        .card-text {
+          font-family: 'DM Sans', sans-serif;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}

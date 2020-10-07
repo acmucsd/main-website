@@ -1,3 +1,5 @@
+@import "../../styles/colors.less";
+
 .events-header {
   display: flex;
   align-items: center;
@@ -34,7 +36,7 @@
     flex-shrink: 0;
     padding: 1.5em;
     margin: 0.5em 1em;
-    box-shadow: 0em 0em 0.3em black;
+    box-shadow: 0em 0em 0.3em @black;
     border-radius: 1em;
     width: 15em; /* changes to width should also apply to handleWheel in index.tsx */
     height: 20em;
@@ -42,19 +44,19 @@
     overflow: hidden;
     vertical-align: top;
     .index0 {
-      color: #FC3A7E;
+      color: @red;
     }
     .index1 {
-      color: #6D73FF;
+      color: @purple;
     }
     .index2 {
-      color: #2CB3D7;
+      color: @blue;
     }
     .index3 {
-      color: #3ADF9C;
+      color: @green;
     }
     .index4 {
-      color: #2CB3D7;
+      color: @blue;
     }
     h1 {
       font-size: 2.25em;
@@ -72,7 +74,7 @@
       word-wrap: break-word;
     }
     .link {
-      color: #0659BC;
+      color: @link-blue;
     }
   }
   .end {

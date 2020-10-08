@@ -7,7 +7,7 @@ const About: React.FC = () => (
   <div className="about">
     <div className="about-header">
       <h1>Join the club.</h1>
-      <p>ACM is inclusive community passionate about technology.</p>
+      <p>We welcome everyone to explore their interests in technology!</p>
     </div>
     <div className="numbers">
       <Number color="#FF6F6F" description="ucsd members" extension="+" number={1000} />

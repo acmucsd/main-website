@@ -9,10 +9,10 @@ import './style.less';
 
 const GetInvolved: React.FC = () => (
   <div className="get-involved">
-    <h2 className="title">Get Involved</h2>
-    <p className="subtitle">
-      ACM provides many opportunities to grow, learn, and give back to the community.
-    </p>
+    <div className="get-involved-header">
+      <h1>Get Involved</h1>
+      <p>Be a part of our programs to learn, network, or just hang out.</p>
+    </div>
     <div className="container">
       <div className="card">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScGIH0lEVkAMreKarFF5KBfehjJXtzp0NB3t6NergXzYTPw9A/viewform">

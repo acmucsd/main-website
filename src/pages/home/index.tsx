@@ -16,11 +16,13 @@ const Home: React.FC = () => {
       const handleScroll = () => {
         setScrolled(true);
         window.removeEventListener('scroll', handleScroll);
+        return null;
       };
-  
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
+
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
     }
+    return null;
   }, [scrolled]);
 
   return (

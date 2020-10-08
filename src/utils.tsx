@@ -10,6 +10,7 @@ export const isURL = (str: string | undefined): boolean => {
     return false;
   }
 
+  /* eslint-disable */
   const pattern = new RegExp(
     '^(https?:\\/\\/)?' + // protocol
       '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
@@ -19,6 +20,7 @@ export const isURL = (str: string | undefined): boolean => {
       '(\\#[-a-z\\d_]*)?$', // fragment locator
     'i',
   );
+  /* eslint-disable */
 
   return !!pattern.test(str);
 };

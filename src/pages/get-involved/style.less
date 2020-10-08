@@ -1,78 +1,88 @@
+@import '../../styles/colors.less';
+@import '../../styles/mixins.less';
+
 .get-involved {
-  padding: 48px;
-  margin-top: 48px;
-
-  .title {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 16px;
-  }
-
-  .subtitle {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 20px;
-  }
+  .section();
 
   .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    margin: auto;
+    max-width: 1200px;
+    text-align: center;
+    width: 100%;
 
     .card {
-      padding: 16px;
-      width: 550px;
+      display: inline-block;
       height: 250px;
+      margin: 16px;
+      position: relative;
+      transition: .2s;
+      width: 500px;
 
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
+      cursor: pointer;
 
-      .image {
-        width: 180px;
-        height: 180px;
-        margin-right: 16px;
+      &:hover {
+        transform: scale(1.05);
+      }
+      a {
+        color: @black;
+        text-decoration: none;
 
-        transform: scale(1);
-        transition-duration: 200ms;
+        .card-container {
+          align-items: center;
+          display: flex;
+          min-height: 100%;
+        }
+        .image {
+          height: 180px;
+          margin-right: 20px;
+        }
+        .card-content {
+          align-items: center;
+          text-align: left;
+          width: 300px;
 
-        &.clickable {
-          cursor: pointer;
-
-          &:hover {
-            transform: scale(1.1);
-            transition-duration: 200ms;
+          .card-title {
+            font-weight: bold;
+            font-size: 2em;
+            margin-bottom: 16px;
+  
+            &.blue {color: @blue;}
+            &.orange {color: @orange;}
+            &.pink {color: @pink;}
+            &.purple {color: @purple;}
+          }
+  
+          .card-text {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.6em;
           }
         }
       }
+    }
+  }
+}
 
-      .card-content {
-        .card-title {
-          font-family: 'DM Sans', sans-serif;
-          font-weight: bold;
-          font-size: 36px;
-          padding-bottom: 16px;
-
-          &.pink {
-            color: #e981a0;
+@media only screen and (max-width: 600px) {
+  .get-involved {
+    .container {
+      .card {
+        width: 250px;
+        height: 125px;
+        a {
+          .image {
+            height: 90px;
           }
+          .card-content {
+            width: 150px;
 
-          &.blue {
-            color: #62b0ff;
+            .card-title {
+              font-size: 1.4em;
+            }
+
+            .card-text {
+              font-size: 1em;
+            }
           }
-
-          &.purple {
-            color: #816dff;
-          }
-
-          &.orange {
-            color: #fda44e;
-          }
-        }
-
-        .card-text {
-          font-family: 'DM Sans', sans-serif;
-          font-size: 25px;
         }
       }
     }

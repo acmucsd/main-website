@@ -11,14 +11,17 @@ import Button from '../../components/button';
 const Home: React.FC = () => {
   const [scrolled, setScrolled] = React.useState(false);
 
-  const handleScroll = () => {
-    setScrolled(true);
-    window.removeEventListener('scroll', handleScroll);
-  };
-
   React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-  }, []);
+    if (!scrolled) {
+      const handleScroll = () => {
+        setScrolled(true);
+        window.removeEventListener('scroll', handleScroll);
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, [scrolled]);
 
   return (
     <div className="home-grid">

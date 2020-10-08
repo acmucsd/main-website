@@ -7,8 +7,8 @@ import HackLogo from '../../assets/hack_logo.svg';
 import InnovateLogo from '../../assets/innovate_logo.svg';
 
 const Communities: React.FC = () => (
-  <div className="communities-page">
-    <div className="communities-header">
+  <div className="communities">
+    <div className="header">
       <h1>Communities</h1>
       <p>Looking for a more specialized focus? Check out our communities!</p>
     </div>

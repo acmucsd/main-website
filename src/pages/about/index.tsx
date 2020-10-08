@@ -5,7 +5,7 @@ import './style.less';
 
 const About: React.FC = () => (
   <div className="about">
-    <div className="about-header">
+    <div className="header">
       <h1>Join the club.</h1>
       <p>We welcome everyone to explore their interests in technology!</p>
     </div>

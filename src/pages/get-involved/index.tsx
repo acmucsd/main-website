@@ -9,7 +9,7 @@ import './style.less';
 
 const GetInvolved: React.FC = () => (
   <div className="get-involved">
-    <div className="get-involved-header">
+    <div className="header">
       <h1>Get Involved</h1>
       <p>Be a part of our programs to learn, network, or just hang out.</p>
     </div>

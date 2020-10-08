@@ -11,6 +11,7 @@ interface NumberProps {
   number: number;
 }
 
+// eslint-disable-next-line object-curly-newline
 const Number: React.FC<NumberProps> = ({ color, description, extension, number }) => {
   const [hasBeenVisible, setHasBeenVisible] = useState(false);
 
@@ -40,6 +41,7 @@ const Number: React.FC<NumberProps> = ({ color, description, extension, number }
               redraw
             />
           ) : (
+            // eslint-disable-next-line react/jsx-one-expression-per-line
             <span className="count">0{extension}</span>
           )}
         </VisibilitySensor>

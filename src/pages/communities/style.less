@@ -1,68 +1,94 @@
-.communities-header {
-  margin-top: 48px;
-  
-  align-items: center;
-  margin-bottom: 20px;
-  margin-left: 3em;
-  h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-  }
-  p {
-    font-size: 1.5em;
-    font-weight: lighter;
-    max-width: 20em;
+@import '../../styles/colors.less';
+@import '../../styles/mixins.less';
+
+.communities {
+  .section();
+  padding: 80px 0;
+
+  .communities-container {
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+
+    a {
+      color: @black;
+      text-decoration: none;
+    }
+
+    .community {
+      display: inline-block;
+      margin: 10px;
+      height: 100px;
+      position: relative;
+      text-align: left;
+      transition: 0.2s;
+      width: 350px;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      img {
+        height: 100%;
+      }
+
+      .info {
+        position: absolute;
+        left: 120px;
+        top: 0;
+        align-items: center;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+        width: 230px;
+        vertical-align: top;
+
+        h1 {
+          width: 100%;
+          font-size: 2em;
+          font-weight: bolder;
+          margin-bottom: 5px;
+          &.ai {
+            color: @red;
+          }
+          &.cyber {
+            color: @turquoise;
+          }
+          &.design {
+            color: @pink;
+          }
+          &.hack {
+            color: @orange;
+          }
+          &.innovate {
+            color: @purple;
+          }
+        }
+      }
+    }
   }
 }
 
-.communities-container {
-  text-align: center;
-  width: 100vw;
+@media only screen and (max-width: 600px) {
+  .communities {
+    .communities-container {
+      .community {
+        width: 280px;
+        height: 80px;
 
-  a {
-    color: #000000;
-  }
+        .info {
+          left: 90px;
+          width: 190px;
 
-  .community {
-    display: inline-block;
-    height: 5em;
-    margin: 20px;
-    text-align: left;
-    transition: .2s;
+          h1 {
+            font-size: 1.6em;
+          }
 
-    &:hover {
-      transform: scale(1.05);
-    }
-
-    img {
-      height: 100%;
-      margin-right: 10px;
-    }
-  
-    .info {
-      display: inline-block;
-      text-align: left;
-      height: 100%;
-      vertical-align: top;
-
-      h1 {
-        font-size: 2.5em;
-        font-weight: bolder;
-        margin-bottom: 5px;
-        &.ai {
-          color: #FF6D6D;
-        }
-        &.cyber  {
-          color: #51C0C0;
-        }
-        &.design  {
-          color: #E981A0;
-        }
-        &.hack  {
-          color: #F9A857;
-        }
-        &.innovate  {
-          color: #816DFF;
+          h2 {
+            font-size: 0.8em;
+          }
         }
       }
     }

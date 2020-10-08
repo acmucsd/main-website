@@ -86,14 +86,12 @@ const Events: React.FC = () => {
   };
 
   return (
-    <div className="events-page">
-      <div className="events-header">
+    <div className="events">
+      <div className="header">
         <h1>Events</h1>
-        <p>
-          ACM hosts a wide range of events to provide for the unique array of talent and interests
-          of student members.
-        </p>
+        <p>We host 140+ workshops and socials for our members every year.</p>
       </div>
+
       <div className="events-container">
         <div
           className="events"

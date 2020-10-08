@@ -11,7 +11,7 @@ const GetInvolved: React.FC = () => (
   <div className="get-involved">
     <div className="get-involved-header">
       <h1>Get Involved</h1>
-      <p>Come out to any of our events to learn, network, or just hang out!</p>
+      <p>Be a part of our programs to learn, network, or just hang out.</p>
     </div>
     <div className="container">
       <div className="card">

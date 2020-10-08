@@ -89,7 +89,7 @@ const Events: React.FC = () => {
     <div className="events-page">
       <div className="events-header">
         <h1>Events</h1>
-        <p>We host 120+ for our members every year!</p>
+        <p>We host 140+ workshops and socials for our members every year.</p>
       </div>
       <div className="events-container">
         <div

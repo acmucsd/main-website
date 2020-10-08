@@ -1,18 +1,8 @@
 @import "../../styles/colors.less";
+@import "../../styles/mixins.less";
 
 .events-header {
-  display: flex;
-  align-items: center;
-  h1 {
-    font-size: 3em;
-    font-weight: bold;
-    padding: 1em;
-  }
-  p {
-    font-size: 1.5em;
-    font-weight: lighter;
-    max-width: 20em;
-  }
+  .header();
 }
 .events-container {
   height: 27em;

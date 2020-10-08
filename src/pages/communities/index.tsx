@@ -10,7 +10,7 @@ const Communities: React.FC = () => (
   <div className="communities-page">
     <div className="communities-header">
       <h1>Communities</h1>
-      <p>ACM consists of 5 orgs that each focus on a specific area of tech.</p>
+      <p>Looking for a more specialized focus? Check out our communities!</p>
     </div>
 
     <div className="communities-container">

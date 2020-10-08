@@ -11,15 +11,14 @@ import Button from '../../components/button';
 const Home: React.FC = () => {
   const [scrolled, setScrolled] = React.useState(false);
 
-  React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-  }, []);
-
   const handleScroll = () => {
     setScrolled(true);
     window.removeEventListener('scroll', handleScroll);
   };
 
+  React.useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="home-grid">
@@ -50,9 +49,9 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      { scrolled ? null : <img className="arrow" src={Arrow}/> }
+      {scrolled ? null : <img className="arrow" alt="" src={Arrow} />}
     </div>
   );
-}
+};
 
 export default Home;

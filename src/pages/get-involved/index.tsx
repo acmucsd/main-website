@@ -34,7 +34,8 @@ const GetInvolved: React.FC = () => (
             <div className="card-content">
               <h3 className="card-title blue">Projects</h3>
               <div className="card-text">
-                Sign up for a side project to grow your skills in coding, design, or project management!
+                Sign up for a side project to grow your skills in coding, design, or project
+                management!
               </div>
             </div>
           </div>
@@ -46,7 +47,9 @@ const GetInvolved: React.FC = () => (
             <img src={Board} alt="Staff" className="image" />
             <div className="card-content">
               <h3 className="card-title purple">Staff</h3>
-              <div className="card-text">Be a part of ACM Staff to help make everything we do happen!</div>
+              <div className="card-text">
+                Be a part of ACM Staff to help make everything we do happen!
+              </div>
             </div>
           </div>
         </a>

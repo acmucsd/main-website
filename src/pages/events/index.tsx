@@ -1,4 +1,5 @@
 import React from 'react';
+import FadeIn from '../../components/fadein';
 import { EventsArray, EventObject, getAllEvents } from '../../api/EventsAPI';
 import { isURL, getAbsoluteURL, getDateTime } from '../../utils';
 
@@ -17,7 +18,7 @@ const scrollLeft = (ref: React.MutableRefObject<HTMLDivElement | null>) => {
   const startPosition = boundingRect.top - window.innerHeight;
 
   if (startPosition < 0 && startPosition >= -window.innerHeight * 2) {
-    currentRef.scrollLeft += st - lastScrollTop;
+    currentRef.scrollLeft += (st - lastScrollTop) * 0.75;
   }
 
   lastScrollTop = st <= 0 ? 0 : st;
@@ -86,50 +87,52 @@ const Events: React.FC = () => {
   };
 
   return (
-    <div className="events">
-      <div className="header">
-        <h1>Events</h1>
-        <p>We host 140+ workshops and socials for our members every year.</p>
-      </div>
+    <FadeIn>
+      <div className="events">
+        <div className="header">
+          <h1>Events</h1>
+          <p>We host 140+ workshops and socials for our members every year.</p>
+        </div>
 
-      <div className="events-container">
-        <div
-          className="events"
-          onMouseDown={handleMoveStart}
-          onMouseMove={handleMove}
-          onMouseUp={handleMoveEnd}
-          onMouseLeave={handleMoveEnd}
-          onTouchStart={handleMoveStart}
-          onTouchMove={handleMove}
-          onTouchCancel={handleMoveEnd}
-          onTouchEnd={handleMoveEnd}
-          onDragStart={() => false}
-          ref={sliderRef}
-          role="menuitem"
-          tabIndex={0}
-        >
-          {events &&
-            events.map((value, index) => {
-              const timing = getDateTime(value);
-              return (
-                <div className="event" key={index}>
-                  <h2>{timing.date}</h2>
-                  <h1 className={`index${index % 5}`}>{value.title}</h1>
-                  {isURL(value.location) ? (
-                    <a className="link" href={getAbsoluteURL(value.location)}>
+        <div className="events-container">
+          <div
+            className="events"
+            onMouseDown={handleMoveStart}
+            onMouseMove={handleMove}
+            onMouseUp={handleMoveEnd}
+            onMouseLeave={handleMoveEnd}
+            onTouchStart={handleMoveStart}
+            onTouchMove={handleMove}
+            onTouchCancel={handleMoveEnd}
+            onTouchEnd={handleMoveEnd}
+            onDragStart={() => false}
+            ref={sliderRef}
+            role="menuitem"
+            tabIndex={0}
+          >
+            {events &&
+              events.map((value, index) => {
+                const timing = getDateTime(value);
+                return (
+                  <div className="event" key={index}>
+                    <h2>{timing.date}</h2>
+                    <h1 className={`index${index % 5}`}>{value.title}</h1>
+                    {isURL(value.location) ? (
+                      <a className="link" href={getAbsoluteURL(value.location)}>
+                        <h3>{value.location}</h3>
+                      </a>
+                    ) : (
                       <h3>{value.location}</h3>
-                    </a>
-                  ) : (
-                    <h3>{value.location}</h3>
-                  )}
-                  <h3>{timing.time}</h3>
-                </div>
-              );
-            })}
-          <div aria-hidden="true" className="event end" />
+                    )}
+                    <h3>{timing.time}</h3>
+                  </div>
+                );
+              })}
+            <div aria-hidden="true" className="event end" />
+          </div>
         </div>
       </div>
-    </div>
+    </FadeIn>
   );
 };
 

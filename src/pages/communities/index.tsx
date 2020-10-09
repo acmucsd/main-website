@@ -72,7 +72,7 @@ const Communities: React.FC = () => {
           </div>
         </a>
 
-        <a className="community" href="https://acmurl.com/joinhack">
+        <a className="community" href="https://acmurl.com/hack-discord">
           <div className={`anim hack ${isVisible ? 'is-visible' : ''}`}>
             <img src={HackLogo} alt="Hack Logo" />
             <div className="info">

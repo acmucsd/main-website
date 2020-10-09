@@ -4,6 +4,14 @@
   background-color: @black;
   padding: 1.5em;
   color: @white;
+
+  img {
+    transition: 0.2s;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 }
 
 .contact > span {
@@ -27,13 +35,5 @@
 .contactLabel {
   font-weight: bold;
   font-size: 1.5em;
-}
-
-img {
-  transition: 0.2s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
 }
 

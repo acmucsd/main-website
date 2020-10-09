@@ -22,7 +22,7 @@ const NavBar: React.FC = () => {
     }
   };
   const scrollToContacts = (): void => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
   };
   return (
     <div className="fixed-nav">

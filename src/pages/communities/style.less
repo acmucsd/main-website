@@ -29,41 +29,76 @@
         transform: scale(1.05);
       }
 
-      img {
+      .anim {
         height: 100%;
-      }
+        opacity: 0;
+        transform: translateY(15vh);
+        visibility: hidden;
+        transition: opacity .6s ease-out, transform 1.2s ease-out;
+        will-change: opacity, visibility;
 
-      .info {
-        position: absolute;
-        left: 120px;
-        top: 0;
-        align-items: center;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        text-align: left;
-        width: 230px;
-        vertical-align: top;
+        &.ai {
+          transition-delay: .3s;
+        }
 
-        h1 {
-          width: 100%;
-          font-size: 2em;
-          font-weight: bolder;
-          margin-bottom: 5px;
-          &.ai {
-            color: @red;
-          }
-          &.cyber {
-            color: @turquoise;
-          }
-          &.design {
-            color: @pink;
-          }
-          &.hack {
-            color: @orange;
-          }
-          &.innovate {
-            color: @purple;
+        &.cyber {
+          transition-delay: .6s;
+        }
+
+        &.design {
+          transition-delay: .9s;
+        }
+
+        &.hack {
+          transition-delay: 1.2s;
+        }
+
+        &.innovate {
+          transition-delay: 1.5s;
+        }
+  
+        &.is-visible {
+          opacity: 1;
+          transform: none;
+          visibility: visible;
+        }
+
+        img {
+          height: 100%;
+        }
+
+        .info {
+          position: absolute;
+          left: 120px;
+          top: 0;
+          align-items: center;
+          height: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          text-align: left;
+          width: 230px;
+          vertical-align: top;
+
+          h1 {
+            width: 100%;
+            font-size: 2em;
+            font-weight: bolder;
+            margin-bottom: 5px;
+            &.ai {
+              color: @red;
+            }
+            &.cyber {
+              color: @turquoise;
+            }
+            &.design {
+              color: @pink;
+            }
+            &.hack {
+              color: @orange;
+            }
+            &.innovate {
+              color: @purple;
+            }
           }
         }
       }
@@ -78,16 +113,18 @@
         width: 280px;
         height: 80px;
 
-        .info {
-          left: 90px;
-          width: 190px;
+        .anim {
+          .info {
+            left: 90px;
+            width: 190px;
 
-          h1 {
-            font-size: 1.6em;
-          }
+            h1 {
+              font-size: 1.6em;
+            }
 
-          h2 {
-            font-size: 0.8em;
+            h2 {
+              font-size: 0.8em;
+            }
           }
         }
       }

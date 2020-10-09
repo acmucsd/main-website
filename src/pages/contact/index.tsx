@@ -12,7 +12,7 @@ const Contact: React.FC = () => (
   <div id="contact" className="contact">
     <span className="contactLabel">Connect with Us!</span>
     <span className="emailContact">
-      <a href="mailto:acmucsd@gmail.com">contact@acmucsd.org</a>
+      <a href="mailto:contact@acmucsd.org">contact@acmucsd.org</a>
     </span>
     <div className="contactIcons">
       <a href="https://www.facebook.com/acmucsd/">

@@ -47,10 +47,6 @@ const Events: React.FC = () => {
   }, []); */
 
   React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-  }, []);
-
-  React.useEffect(() => {
     if (!events) {
       updateEvents();
     }

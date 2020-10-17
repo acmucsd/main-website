@@ -5,7 +5,8 @@ import { isURL, getAbsoluteURL, getDateTime } from '../../utils';
 
 import './style.less';
 
-/* let lastScrollTop = 0;
+/*
+let lastScrollTop = 0;
 
 const scrollLeft = (ref: React.MutableRefObject<HTMLDivElement | null>) => {
   if (!ref.current) {
@@ -44,6 +45,10 @@ const Events: React.FC = () => {
   /* React.useEffect(() => {
     window.addEventListener('scroll', handleScroll);
   }, []); */
+
+  React.useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+  }, []);
 
   React.useEffect(() => {
     if (!events) {

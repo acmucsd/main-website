@@ -7,7 +7,7 @@ import './style.less';
 
 /*
 
-NOTE: In case we want to implement a horizontal scroll through events 
+NOTE: In case we want to implement a horizontal scroll through events
 while the cursor is over the events container, this code (and related
 code can be added and fine tuned (currently buggy! ).
 

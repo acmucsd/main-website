@@ -5,6 +5,12 @@ import { isURL, getAbsoluteURL, getDateTime } from '../../utils';
 
 import './style.less';
 
+/*
+
+NOTE: In case we want to implement a horizontal scroll through events
+while the cursor is over the events container, this code (and related
+code can be added and fine tuned (currently buggy! ).
+
 let lastScrollTop = 0;
 
 const scrollLeft = (ref: React.MutableRefObject<HTMLDivElement | null>) => {
@@ -22,16 +28,16 @@ const scrollLeft = (ref: React.MutableRefObject<HTMLDivElement | null>) => {
   }
 
   lastScrollTop = st <= 0 ? 0 : st;
-};
+}; */
 
 const Events: React.FC = () => {
   const sliderRef = React.useRef(null);
   const [events, setEvents] = React.useState<EventsArray>();
   const [dragging, toggleDragging] = React.useState(false);
 
-  const handleScroll = () => {
+  /* const handleScroll = () => {
     scrollLeft(sliderRef);
-  };
+  }; */
 
   const updateEvents = async (): Promise<void> => {
     const eventsArray: EventsArray | undefined = await getAllEvents();
@@ -41,9 +47,9 @@ const Events: React.FC = () => {
     setEvents(eventsArray);
   };
 
-  React.useEffect(() => {
+  /* React.useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-  }, []);
+  }, []); */
 
   React.useEffect(() => {
     if (!events) {
@@ -52,7 +58,7 @@ const Events: React.FC = () => {
   }, [events]);
 
   const handleMove = (e: any) => {
-    scrollLeft(sliderRef);
+    // scrollLeft(sliderRef);
 
     if (!dragging) {
       return;

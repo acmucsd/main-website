@@ -86,7 +86,7 @@ const Communities: React.FC = () => {
 
         <a
           className={`community fade-in-section ${isVisible ? 'is-visible' : ''}`}
-          href="https://docs.google.com/forms/d/1gdwiqO3SLw_OXqM2ZWHuFjXHXEL4xBXtNLgvrhfB1pk/edit"
+          href="http://acmurl.com/innovate-disc"
         >
           <div className={`anim innovate ${isVisible ? 'is-visible' : ''}`}>
             <img src={InnovateLogo} alt="Innovate Logo" />

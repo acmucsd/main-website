@@ -2,7 +2,6 @@ import React from 'react';
 import './style.less';
 import AiLogo from '../../assets/ai_logo.svg';
 import CyberLogo from '../../assets/cyber_logo.svg';
-import DesignLogo from '../../assets/design_logo.svg';
 import HackLogo from '../../assets/hack_logo.svg';
 import InnovateLogo from '../../assets/innovate_logo.svg';
 import FadeIn from '../../components/fadein';
@@ -55,18 +54,6 @@ const Communities: React.FC = () => {
               <div className="info-container">
                 <h1 className="logo-name cyber">ACM Cyber</h1>
                 <h2>Computer Security</h2>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <a className="community" href="https://acmurl.com/design">
-          <div className={`anim design ${isVisible ? 'is-visible' : ''}`}>
-            <img src={DesignLogo} alt="Design Logo" />
-            <div className="info">
-              <div className="info-container">
-                <h1 className="logo-name design">ACM Design</h1>
-                <h2>Human Computer Interaction</h2>
               </div>
             </div>
           </div>

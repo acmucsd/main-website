@@ -3,7 +3,6 @@ import React from 'react';
 import BitByte from '../../assets/bit-byte.png';
 import SideProjects from '../../assets/projects.png';
 import Board from '../../assets/board.png';
-import Hackathon from '../../assets/hackathon.png';
 import FadeIn from '../../components/fadein';
 
 import './style.less';
@@ -51,19 +50,6 @@ const GetInvolved: React.FC = () => (
                 <h3 className="card-title purple">Staff</h3>
                 <div className="card-text">
                   Be a part of ACM Staff to help make everything we do happen!
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="card">
-          <a href="https://acmurl.com/acm-hackathon-interest">
-            <div className="card-container">
-              <img src={Hackathon} alt="Hackathon" className="image" />
-              <div className="card-content">
-                <h3 className="card-title orange">Hackathon</h3>
-                <div className="card-text">
-                  Join our hackathon committee to plan ACM’s largest event of the year!
                 </div>
               </div>
             </div>

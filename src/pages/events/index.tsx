@@ -123,8 +123,8 @@ const Events: React.FC = () => {
                   <div className="event" key={index}>
                     <h2>{timing.date}</h2>
                     <h1 className={`index${index % 5}`}>{value.title}</h1>
-                    {isURL(value.location) ? (
-                      <a className="link" href={getAbsoluteURL(value.location)}>
+                    {isURL(value.location.trim()) ? (
+                      <a className="link" href={getAbsoluteURL(value.location.trim())}>
                         <h3>{value.location}</h3>
                       </a>
                     ) : (

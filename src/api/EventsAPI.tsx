@@ -29,9 +29,9 @@ const handleErrors = (response: Response): Promise<EventsResponse> => {
 };
 
 const getAllEvents = async (): Promise<EventsArray | undefined> => {
-  let apiurl = 'https://acmucsd-membership-portal-api.herokuapp.com/api/v2/event/future';
+  let apiurl = 'https://api.acmucsd.com/api/v2/event/future';
   if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    apiurl = 'https://acmucsd-portal-testing.herokuapp.com/api/v2/event/future';
+    apiurl = 'https://testing.api.acmucsd.com/api/v2/event/future';
   }
 
   try {

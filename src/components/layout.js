@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import NavigationBar from "./NavigationBar/index.tsx"
+
 import "./layout.less"
 
 const Layout = ({ children }) => {
@@ -25,6 +27,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <NavigationBar />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{

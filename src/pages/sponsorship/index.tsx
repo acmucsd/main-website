@@ -3,9 +3,6 @@ import React from 'react';
 import CoolGraph from '../../assets/pie_chart_2.svg';
 import Button from '../../components/button';
 
-import GoogleLogo from '../../assets/google_logo.svg';
-import IntuitLogo from '../../assets/intuit_logo.png';
-import MapboxLogo from '../../assets/mapbox_logo.svg';
 import TescLogo from '../../assets/tesc_logo.png';
 import JsoeLogo from '../../assets/jsoe_logo.png';
 import CseLogo from '../../assets/cse_logo.png';
@@ -13,8 +10,8 @@ import CseLogo from '../../assets/cse_logo.png';
 import './style.less';
 
 const Sponsorship: React.FC = () => {
-  const imageUrls = [GoogleLogo, IntuitLogo, MapboxLogo, TescLogo, JsoeLogo, CseLogo];
-  const imageAlts = ['google', 'intuit', 'mapbox', 'tesc', 'jsoe', 'cse'];
+  const imageUrls = [TescLogo, JsoeLogo, CseLogo];
+  const imageAlts = ['tesc', 'jsoe', 'cse'];
   const images = imageUrls.map((image, i) => (
     <div className="sponsor-img">
       <img src={image} alt={imageAlts[i]} key={i} />

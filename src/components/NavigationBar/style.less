@@ -72,3 +72,84 @@
     @purple 100%
   );
 }
+.navbar-mobile-div {
+  display: none;
+}
+// Styling for menu based nav bar
+
+@media only screen and (min-width: 671px) {
+  .mobile-links {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .navigation-bar {
+    display: none;
+  }
+  .navbar-mobile {
+    margin: 0px !important;
+    a:first-of-type {
+      img {
+        margin-bottom: 0px !important;
+      }
+    }
+  }
+  .navbar-mobile-div {
+    font-size: 16px;
+    display: block;
+    padding: 1em;
+  }
+
+  .navbar-mobile > button {
+    padding: 1em 1em;
+    float: right;
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+
+  .navbar-mobile > a:first-of-type {
+    float: left;
+    padding: 1em;
+  }
+
+  .menuicon {
+    height: 1em;
+    margin: 0px !important;
+  }
+
+  .mobile-links {
+    z-index: 2;
+    background-color: @black;
+    padding-top: 0.5em;
+    a {
+      font-size: 30px !important;
+      font-weight: bold;
+      text-decoration: none;
+      color: @white;
+      padding: 0.5em;
+      display: block;
+      text-align: center;
+      background-color: @black;
+      font-size: 1.3em;
+    }
+    a:first-of-type {
+      margin-top: 0.5em;
+    }
+    button {
+      position: absolute;
+      right: 1em;
+      top: 1em;
+      color: @white;
+      background-color: @black;
+      cursor: pointer;
+      border: none;
+      outline: 0;
+      font-size: 1.3em;
+      img {
+        float: right;
+      }
+    }
+  }
+}

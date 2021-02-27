@@ -1,0 +1,77 @@
+@import "../../styles/colors.less";
+
+.footerContainer {
+  display: inline-block;
+  width: 100%;
+  background-color: @black;
+  color: @white;
+  padding: 2em;
+  margin-bottom: -7px !important;
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400l;
+  }
+  * {
+    margin: 0px !important;
+  }
+  &--left {
+    display: block;
+    float: left;
+  }
+
+  &--right {
+    @media only screen and (min-width: 671px) {
+      display: block;
+    }
+    @media only screen and (max-width: 670px) {
+      display: none;
+    }
+    * {
+      margin: 0px !important;
+    }
+    padding-right: 1.5em;
+    float: right;
+  }
+}
+.community-links {
+  display: flex;
+  flex-direction: row;
+  padding-top: 4px;
+  button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 0px;
+    margin-right: 10px !important;
+  }
+}
+.newsLetterContainer {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  * {
+    border-radius: 8px;
+    color: rgba(0, 0, 0, 0.5);
+    border-color: @black;
+    border-style: none;
+    font-weight: bold;
+  }
+  input {
+    color: rgba(0, 0, 0, 0.5);
+    padding: 2px 2px 2px 1em;
+    width: 272px;
+  }
+  button {
+    color: @white;
+    background-color: @dark-grey;
+    width: 2em;
+    height: 2em;
+    margin-left: 10px !important;
+  }
+}

@@ -1,0 +1,157 @@
+@import "../../styles/colors.less";
+
+.navigation-bar {
+  padding: 1em;
+  height: 100%;
+  font-weight: bold;
+  font-size: 16px;
+
+  ul {
+    text-decoration: none;
+    margin: 0 !important;
+    padding: 0;
+    list-style-type: none;
+  }
+  li {
+    margin-bottom: 0 !important;
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+  &__logo {
+    padding: 1em;
+    float: left;
+  }
+
+  &__nav-button {
+    float: right;
+    padding: 1em;
+    a {
+      text-decoration: none;
+      padding: 1em 0em;
+      color: @black;
+    }
+
+    &--login {
+      background-color: @black !important;
+      margin: 1em;
+      border-radius: 0.5em;
+      &:hover {
+        opacity: 0.85;
+        transition: 200ms;
+      }
+      a {
+        color: @white !important;
+        text-decoration: none;
+        padding: 0.3em 1em !important;
+      }
+    }
+  }
+
+  &__nav-button--login {
+    float: right;
+  }
+}
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-weight: bold;
+  background-color: @white;
+  z-index: 1;
+}
+.rainbow {
+  width: 100vw;
+  height: 0.4em;
+  display: table;
+  background: linear-gradient(
+    270deg,
+    @red 0%,
+    @orange 18.75%,
+    @green 36.98%,
+    @turquoise 55.73%,
+    @blue 75%,
+    @purple 100%
+  );
+}
+.navbar-mobile-div {
+  display: none;
+}
+// Styling for menu based nav bar
+
+@media only screen and (min-width: 671px) {
+  .mobile-links {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .navigation-bar {
+    display: none;
+  }
+  .navbar-mobile {
+    margin: 0px !important;
+    a:first-of-type {
+      img {
+        margin-bottom: 0px !important;
+      }
+    }
+  }
+  .navbar-mobile-div {
+    font-size: 16px;
+    display: block;
+    padding: 1em;
+  }
+
+  .navbar-mobile > button {
+    padding: 1em 1em;
+    float: right;
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+
+  .navbar-mobile > a:first-of-type {
+    float: left;
+    padding: 1em;
+  }
+
+  .menuicon {
+    height: 1em;
+    margin: 0px !important;
+  }
+
+  .mobile-links {
+    z-index: 2;
+    background-color: @black;
+    padding-top: 0.5em;
+    a {
+      font-size: 30px !important;
+      font-weight: bold;
+      text-decoration: none;
+      color: @white;
+      padding: 0.5em;
+      display: block;
+      text-align: center;
+      background-color: @black;
+      font-size: 1.3em;
+    }
+    a:first-of-type {
+      margin-top: 0.5em;
+    }
+    button {
+      position: absolute;
+      right: 1em;
+      top: 1em;
+      color: @white;
+      background-color: @black;
+      cursor: pointer;
+      border: none;
+      outline: 0;
+      font-size: 1.3em;
+      img {
+        float: right;
+      }
+    }
+  }
+}

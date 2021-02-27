@@ -1,10 +1,11 @@
 import React from 'react'
+import './styles.less'
 
 const AboutCommunities: React.FC  = () => {
     return (
-        <div>
+        <section className="about__communities">
             
-        </div>
+        </section>
     )
 }
 

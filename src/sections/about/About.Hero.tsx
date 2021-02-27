@@ -1,10 +1,12 @@
 import React from 'react'
+import './styles.less'
+
 
 const AboutHero: React.FC  = () => {
     return (
-        <div>
-            <h1>Here's the about page</h1>
-        </div>
+        <section className="about__hero">
+            Here is the about page
+        </section>
     )
 }
 

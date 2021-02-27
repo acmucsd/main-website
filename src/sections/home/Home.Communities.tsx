@@ -1,10 +1,11 @@
 import React from 'react'
+import './styles.less'
 
 const HomeCommunities: React.FC  = () => {
     return (
-        <div>
+        <section className="home__communities">
             
-        </div>
+        </section>
     )
 }
 

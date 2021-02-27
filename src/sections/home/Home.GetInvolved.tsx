@@ -1,10 +1,11 @@
 import React from 'react'
+import './styles.less'
 
 const HomeGetInvolved: React.FC  = () => {
     return (
-        <div>
+        <section className="home__get-involved">
             
-        </div>
+        </section>
     )
 }
 

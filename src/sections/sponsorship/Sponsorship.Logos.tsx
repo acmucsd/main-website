@@ -2,9 +2,9 @@ import React from 'react'
 
 const SponsorshipLogos: React.FC  = () => {
     return (
-        <div>
-            <h1>Here's the sponsors page</h1>
-        </div>
+        <section className="sponsorship__logos">
+            Here is the sponsorship page
+        </section>
     )
 }
 

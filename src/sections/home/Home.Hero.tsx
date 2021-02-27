@@ -1,10 +1,11 @@
 import React from 'react'
+import './styles.less'
 
 const HomeHero: React.FC  = () => {
     return (
-        <div>
-            
-        </div>
+        <section className="home__hero">
+            This is the home page
+        </section>
     )
 }
 

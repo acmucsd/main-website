@@ -1,10 +1,11 @@
 import React from 'react'
+import './styles.less'
 
 const AboutMembership: React.FC  = () => {
     return (
-        <div>
+        <section className="about__membership">
             
-        </div>
+        </section>
     )
 }
 

@@ -9,7 +9,7 @@ const navLinks = [
   { to: "/contact", text: "Contact" },
   { to: "/sponsor", text: "Sponsorship" },
   { to: "/about", text: "About Us" },
-  { to: "/events", text: "Events" },
+  { to: "/community", text: "Community" },
 ]
 
 const NavigationBar: React.FC = () => {

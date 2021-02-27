@@ -12,10 +12,12 @@ import AboutBoard from "../sections/about/About.Board"
 
 const AboutPage: React.FC = () => (
   <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <SEO title="About" />
+    <AboutHero />
+    <AboutGetInvolved />
+    <AboutCommunities />
+    <AboutMembership />
+    <AboutBoard />
   </Layout>
 )
 

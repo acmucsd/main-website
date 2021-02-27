@@ -18,7 +18,7 @@ const NavigationBar: React.FC = () => {
     setMenuState(!menuState)
   }
   return (
-    <div className="fixedNav">
+    <div className="fixed-nav">
       <div className="navigation-bar">
         <ul>
           <li className="navigation-bar__logo">

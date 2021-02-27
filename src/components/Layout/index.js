@@ -9,9 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import NavigationBar from "./NavigationBar/index.tsx"
-import Footer from "./Footer/index.tsx"
+import Header from "../header"
+import NavigationBar from "../NavigationBar"
+import Footer from "../Footer"
 
 import "./layout.less"
 

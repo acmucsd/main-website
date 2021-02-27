@@ -6,7 +6,6 @@ import MenuButtonIcon from "../../assets/menubutton.svg"
 import CloseMenuButton from "../../assets/closemenubutton.svg"
 
 const navLinks = [
-  { to: "/contact", text: "Contact" },
   { to: "/sponsor", text: "Sponsorship" },
   { to: "/about", text: "About Us" },
   { to: "/community", text: "Community" },
@@ -17,6 +16,9 @@ const NavigationBar: React.FC = () => {
   const toggleMenu = () => {
     setMenuState(!menuState)
   }
+  const scrollToContacts = (): void => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  };
   return (
     <div className="fixed-nav">
       <div className="navigation-bar">
@@ -28,6 +30,9 @@ const NavigationBar: React.FC = () => {
           </li>
           <li className="navigation-bar__nav-button--login">
             <Link to={"/login"}>Login</Link>
+          </li>
+          <li className="navigation-bar__nav-button">
+            <Link to="#contact" onClick={scrollToContacts}>Contact</Link>
           </li>
           {navLinks.map(link => (
             <li className="navigation-bar__nav-button">

@@ -1,50 +1,68 @@
 @import "../../styles/colors.less";
 
 .navigation-bar {
-  padding: 1em;
-  height: 100%;
+  height: 78px;
+  font-size: 18px;
   font-weight: bold;
-  font-size: 16px;
 
   ul {
     text-decoration: none;
     margin: 0 !important;
-    padding: 0;
+    padding: 0 !important;
     list-style-type: none;
+    height: 100%;
   }
   li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 0 !important;
     text-decoration: none;
     list-style-type: none;
+    height: 100%;
+    margin-right: 32px;
   }
 
   &__logo {
-    padding: 1em;
     float: left;
+    height: 78px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-left: 32px;
+    a > img {
+      height: 60px;
+    }
   }
 
   &__nav-button {
     float: right;
-    padding: 1em;
+    display: flex;
+    align-items: center;
     a {
       text-decoration: none;
-      padding: 1em 0em;
       color: @black;
     }
+  }
+  &__login {
+    float: right;
+    height: 100%;
+    align-self: center;
+    &:hover {
+      opacity: 0.85;
+      transition: 200ms;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
 
-    &--login {
+      height: 35px !important;
+      width: 150px;
+
+      color: @white !important;
       background-color: @black !important;
-      margin: 1em;
       border-radius: 0.5em;
-      &:hover {
-        opacity: 0.85;
-        transition: 200ms;
-      }
-      a {
-        color: @white !important;
-        text-decoration: none;
-        padding: 0.3em 1em !important;
-      }
     }
   }
 
@@ -59,6 +77,8 @@
   font-weight: bold;
   background-color: @white;
   z-index: 1;
+  font-size: 18px;
+  height: 78px;
 }
 .rainbow {
   width: 100vw;
@@ -79,18 +99,19 @@
 }
 // Styling for menu based nav bar
 
-@media only screen and (min-width: 671px) {
+@media only screen and (min-width: 800px) {
   .mobile-links {
     display: none !important;
   }
 }
 
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 802px) {
   .navigation-bar {
     display: none;
   }
   .navbar-mobile {
     margin: 0px !important;
+    height: 78px;
     a:first-of-type {
       img {
         margin-bottom: 0px !important;
@@ -100,7 +121,6 @@
   .navbar-mobile-div {
     font-size: 16px;
     display: block;
-    padding: 1em;
   }
 
   .navbar-mobile > button {
@@ -113,20 +133,27 @@
 
   .navbar-mobile > a:first-of-type {
     float: left;
-    padding: 1em;
+    height: 60px;
+    margin: 9px 32px;
+    img {
+      height: 60px;
+    }
   }
-
+  .icon {
+    height: 100%;
+  }
   .menuicon {
     height: 1em;
-    margin: 0px !important;
+    margin: 0px 32px;
   }
 
   .mobile-links {
     z-index: 2;
     background-color: @black;
     padding-top: 0.5em;
+    padding-bottom: 0.5em;
     a {
-      font-size: 30px !important;
+      font-size: 24px !important;
       font-weight: bold;
       text-decoration: none;
       color: @white;
@@ -134,15 +161,16 @@
       display: block;
       text-align: center;
       background-color: @black;
-      font-size: 1.3em;
     }
     a:first-of-type {
       margin-top: 0.5em;
     }
     button {
       position: absolute;
-      right: 1em;
-      top: 1em;
+      right: 48px;
+      top: 28px;
+      height: 38px !important;
+      width: 38px !important;
       color: @white;
       background-color: @black;
       cursor: pointer;

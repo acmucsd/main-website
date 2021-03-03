@@ -35,7 +35,7 @@ const Sponsorship: React.FC = () => {
           </ul>
           <div className="buttons">
             <Button link="#sponsors" title="Our Sponsors" />
-            <Button link="#contact" title="Contact" />
+            <Button link="mailto:sponsor@acmucsd.org" title="Contact" />
           </div>
         </div>
         <div className="sponsor-impact sponsor-impact-img-container">

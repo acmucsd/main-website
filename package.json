@@ -22,6 +22,7 @@
     "react-dom": "^16.12.0",
     "react-error-overlay": "^6.0.9",
     "react-helmet": "^6.1.0",
+    "react-typist": "^2.0.5",
     "tslint-config-airbnb": "^5.11.2"
   },
   "devDependencies": {

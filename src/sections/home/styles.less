@@ -59,26 +59,27 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
         margin: 37px 0px;
       }
 
       .buttons > a {
-        width: 100%;
+        width: 225px;
         text-decoration: none;
       }
     }
     @media only screen and (min-width: 1400px) {
       // for long screens
-      &__grid &__grid--description .description-block .Typist {
+      &--grid &--grid--description .description-block .Typist {
         min-height: 3em;
       }
     }
 
     @media only screen and (max-width: 1050px) {
       // for tablets and mobile
-      &__grid {
+      &--grid {
         flex-direction: column;
-        padding-top: 4em;
+        padding-top: 2em !important;
 
         // .arrow {
         //   bottom: 0;
@@ -88,52 +89,71 @@
 
         &--cool-img {
           margin: 0px;
+          min-width: 325px;
+          max-width: 50vw;
+
           img {
             max-width: 50vw;
+            min-width: 325px;
           }
         }
 
         &--description {
           width: 100vw;
-          font-size: 2em;
+          font-size: 32px;
+          line-height: 32px;
+
           margin-left: 0;
 
           .description-block {
             margin: 0.5em 20vw;
             .Typist {
               margin: auto;
-              min-height: 3em;
+              line-height: 32px;
               width: fit-content;
+              min-height: 96px;
             }
           }
         }
 
-        &--buttons {
-          align-items: center;
+        .buttons {
           display: flex;
+          align-items: center;
           justify-content: center;
-          margin-top: 1em;
           width: 100%;
+          margin: 1em 0 0 0 !important;
+          font-size: 32px !important;
         }
       }
     }
 
     @media only screen and (max-width: 500px) {
-      &__grid {
+      &--grid {
+        padding-top: 1em !important;
+
         &--cool-img {
           img {
             max-width: none;
-            width: 70vw;
+            width: 65vw;
           }
         }
 
         &--description {
+          font-size: 28px;
           .description-block {
-            margin: 0.5em 10vw;
+            margin: 0.5em;
             .Typist {
               min-height: 3em;
             }
           }
+        }
+        .buttons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          margin-top: 1em !important;
+          font-size: 32px !important;
         }
       }
     }

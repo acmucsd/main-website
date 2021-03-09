@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
           margin: `0 auto`,
           maxWidth: 960,
           minHeight: 960,
-          padding: `100px 1.0875rem 1.45rem`,
+          padding: `81px 0`,
         }}
       >
         <main>{children}</main>

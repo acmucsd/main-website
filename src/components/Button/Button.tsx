@@ -4,12 +4,29 @@ import "./style.less"
 interface ButtonProps {
   title: string
   link: string
+  type: string
 }
 
-const Button: React.FC<ButtonProps> = ({ link, title }) => (
-  <a href={link} className="button">
-    <div>{title}</div>
-  </a>
-)
+const defaultProps: Props = {
+  title: "button",
+  link: "acmucsd.com",
+  type: "primary",
+}
 
+const Button: React.FC<ButtonProps> = ({ link, title, type }) => {
+  if (type === "primary" || type === "secondary") {
+    return (
+      <a href={link} className={"button " + type}>
+        <div>{title}</div>
+      </a>
+    )
+  } else {
+    return (
+      <a href={link} className="button priamry">
+        <div>{title}</div>
+      </a>
+    )
+  }
+}
+Button.defaultProps = defaultProps
 export default Button

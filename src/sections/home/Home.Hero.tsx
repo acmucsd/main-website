@@ -34,8 +34,16 @@ const HomeHero: React.FC = () => {
               <span>community.&nbsp;</span>
             </Typist>
             <div className="buttons">
-              <Button title="Join Us Now!" link="https://members.acmucsd.com" />
-              <Button title="Learn More" link="https://members.acmucsd.com/" />
+              <Button
+                title="Learn More!"
+                link="https://members.acmucsd.com/"
+                type="secondary"
+              />
+              <Button
+                title="Join Us Now!"
+                link="https://members.acmucsd.com"
+                type="primary"
+              />
             </div>
           </div>
         </div>

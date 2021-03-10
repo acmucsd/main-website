@@ -1,0 +1,51 @@
+@import "../../styles/colors.less";
+@import "../../styles/mixins.less";
+
+.communitiesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  &__community {
+    text-decoration: none;
+    color: @black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__label {
+      h3 {
+        margin: 0 !important;
+        font-size: 1.5rem;
+        font-weight: 500;
+        &.ai {
+          color: @red;
+        }
+        &.cyber {
+          color: @turquoise;
+        }
+        &.design {
+          color: @pink;
+        }
+        &.hack {
+          color: @orange;
+        }
+        &.innovate {
+          color: @purple;
+        }
+        span {
+          font-weight: 700;
+        }
+      }
+      p {
+        margin: 0;
+        font-size: 1rem;
+        position: absolute;
+      }
+    }
+
+    img {
+      width: 60px;
+      margin: 0;
+      margin-right: 10px;
+    }
+  }
+}

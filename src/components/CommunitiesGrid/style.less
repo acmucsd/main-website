@@ -2,19 +2,27 @@
 @import "../../styles/mixins.less";
 
 .communitiesGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   &__community {
+    padding: 20px 20px;
     text-decoration: none;
     color: @black;
     display: flex;
     flex-direction: row;
     align-items: center;
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.2s ease-out;
+    }
+
     &__label {
+      width: 200px;
       h3 {
         margin: 0 !important;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         font-weight: 500;
         &.ai {
           color: @red;
@@ -46,6 +54,24 @@
       width: 60px;
       margin: 0;
       margin-right: 10px;
+    }
+  }
+  @media only screen and (max-width: 1400px) {
+    padding: 0em !important;
+  }
+  @media only screen and (max-width: 500px) {
+    .communitiesGrid__community {
+      &__label {
+        h3 {
+          margin: 0 !important;
+          font-size: 1.7rem;
+        }
+      }
+      img {
+        width: 80px;
+        margin: 0;
+        margin-right: 10px;
+      }
     }
   }
 }

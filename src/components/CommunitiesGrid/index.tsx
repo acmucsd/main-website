@@ -8,74 +8,58 @@ import HackLogo from '../../assets/logos/acm-hack.svg'
 import InnovateLogo from '../../assets/logos/acm-innovate.svg'
 
 const CommunitiesGrid = () => {
+    const [isVisible, setVisible] = React.useState(false);
+    // const domRef = React.useRef(null);
+    // React.useEffect(() => {
+    //   const currentDom = domRef.current;
+    //   if (!currentDom) {
+    //     return undefined;
+    //   }
+    //   const observer = new IntersectionObserver((entries) => {
+    //     entries.forEach((entry) => {
+    //       if (entry.isIntersecting) {
+    //         setVisible(true);
+    //       }
+    //     });
+    //   });
+    //   observer.observe(currentDom);
+    //   return undefined;
+    // }, []);
+  
+
     return (
         <div className="communitiesGrid">
-                <a href="#" className="communitiesGrid__community">
-                    <img src={AILogo} alt="ACM AI"/>
-                    <div className="communitiesGrid__community__label">
-                        <h3 className="ai"><span>ACM</span> AI</h3>
-                    </div>
-                </a>
-                <a href="#" className="communitiesGrid__community">
-                    <img src={CyberLogo} alt="ACM Cyber"/>
-                    <div className="communitiesGrid__community__label">
-                        <h3 className="cyber"><span>ACM</span> Cyber</h3>
-                    </div>
-                </a>
-                <a href="#" className="communitiesGrid__community">
-                    <img src={DesignLogo} alt="ACM Design"/>
-                    <div className="communitiesGrid__community__label">
-                        <h3 className="design"><span>ACM</span> Design</h3>
-                        <p>Coming Soon</p>
-                    </div>
-                </a>
-                <a href="#" className="communitiesGrid__community">
-                    <img src={HackLogo} alt="ACM Hack"/>
-                    <div className="communitiesGrid__community__label">
-                        <h3 className="hack"><span>ACM</span> Hack</h3>
-                    </div>
-                </a>
-                <a href="#" className="communitiesGrid__community">
-                    <img src={InnovateLogo} alt="ACM Innovate"/>
-                    <div className="communitiesGrid__community__label">
-                        <h3 className="innovate"><span>ACM</span> Innovate</h3>
-                    </div>
-                </a>
-            {/* <div className="communitiesGrid__row">
-                <a href="#" className="communitiesGrid__row__community">
-                    <img src={AILogo} alt="ACM AI"/>
-                    <div className="communitiesGrid__row__community__label">
-                        <h3 className="ai"><span>ACM</span> AI</h3>
-                    </div>
-                </a>
-                <a href="#" className="communitiesGrid__row__community">
-                    <img src={CyberLogo} alt="ACM Cyber"/>
-                    <div className="communitiesGrid__row__community__label">
-                        <h3 className="cyber"><span>ACM</span> Cyber</h3>
-                    </div>
-                </a>
-                <a href="#" className="communitiesGrid__row__community">
-                    <img src={DesignLogo} alt="ACM Design"/>
-                    <div className="communitiesGrid__row__community__label">
-                        <h3 className="design"><span>ACM</span> Design</h3>
-                        <p>Coming Soon</p>
-                    </div>
-                </a>
-            </div>
-            <div className="communitiesGrid__row">
-                <a href="#" className="communitiesGrid__row__community">
-                    <img src={HackLogo} alt="ACM Hack"/>
-                    <div className="communitiesGrid__row__community__label">
-                        <h3 className="hack"><span>ACM</span> Hack</h3>
-                    </div>
-                </a>
-                <a href="#" className="communitiesGrid__row__community">
-                    <img src={InnovateLogo} alt="ACM Innovate"/>
-                    <div className="communitiesGrid__row__community__label">
-                        <h3 className="innovate"><span>ACM</span> Innovate</h3>
-                    </div>
-                </a>
-            </div> */}
+            <a href="#" className={`communitiesGrid__community ai visible`}>
+                <img src={AILogo} alt="ACM AI"/>
+                <div className="communitiesGrid__community__label">
+                    <h3><span>ACM</span> AI</h3>
+                </div>
+            </a>
+            <a href="#" className={`communitiesGrid__community cyber visible`}>
+                <img src={CyberLogo} alt="ACM Cyber"/>
+                <div className="communitiesGrid__community__label">
+                    <h3><span>ACM</span> Cyber</h3>
+                </div>
+            </a>
+            <a href="#" className={`communitiesGrid__community design visible`}>
+                <img src={DesignLogo} alt="ACM Design"/>
+                <div className="communitiesGrid__community__label">
+                    <h3><span>ACM</span> Design</h3>
+                    <p>Coming Soon</p>
+                </div>
+            </a>
+            <a href="#" className={`communitiesGrid__community hack visible`}>
+                <img src={HackLogo} alt="ACM Hack"/>
+                <div className="communitiesGrid__community__label">
+                    <h3><span>ACM</span> Hack</h3>
+                </div>
+            </a>
+            <a href="#" className={`communitiesGrid__community innovate visible`}>
+                <img src={InnovateLogo} alt="ACM Innovate"/>
+                <div className="communitiesGrid__community__label">
+                    <h3><span>ACM</span> Innovate</h3>
+                </div>
+            </a>
         </div>
     )
 }

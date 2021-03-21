@@ -19,7 +19,7 @@
     font-weight: 700;
     width: 100%;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 56px;
   }
 
   &__contact {
@@ -49,10 +49,11 @@
           font-weight: 500;
           margin: 0px;
         }
-        p {
+        a {
           font-size: 15px;
           font-weight: 500;
           margin: 0px;
+          color: white;
         }
       }
     }
@@ -115,38 +116,99 @@
   right: 0px;
   z-index: 0;
 }
+
 .mobileFooterContainer {
-  display: none;
-  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: -7px !important;
-  p {
-    font-size: 16px;
-    font-weight: 400l;
+  h2 {
+    padding-top: 56px;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 2px;
   }
-  * {
-    margin: 0px !important;
+  a {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 35px;
+    color: @white;
+    text-decoration: underline;
   }
-  &--left {
-    display: block;
-    float: left;
+  &__newsletter {
+    width: 272px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 0px !important;
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      text-align: left;
+      padding-top: 6px;
+      margin: 0px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 11px;
+      text-align: left;
+    }
+    input {
+      color: rgba(0, 0, 0, 0.5);
+      padding: 2px 2px 2px 1em;
+      width: 100%;
+      margin-top: 11px !important;
+      margin-bottom: 23px !important;
+      border-radius: 8px;
+
+      border-color: @black;
+      border-style: none;
+      font-weight: bold;
+      font-size: 16px;
+      outline: none;
+    }
+    button {
+      color: @white;
+      background-color: @dark-grey;
+      height: 2em;
+      width: 165px;
+      height: 35px;
+      border-radius: 8px;
+      border-color: @black;
+      border-style: none;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 36px;
+      outline: none;
+    }
   }
 }
 .community-links {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
   padding-top: 4px;
-  button {
+  width: 272px;
+
+  a {
     border: none;
     background-color: transparent;
     outline: none;
     padding: 0px;
-    margin-right: 10px !important;
+    img {
+      width: 41px;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
   }
 }
 @media only screen and (min-width: 800px) {
-  .mobileFooterContainer {
-    display: block;
-  }
   .acmBlueFade {
     display: block;
   }
@@ -163,6 +225,6 @@
     display: none;
   }
   .mobileFooterContainer {
-    display: block;
+    display: flex;
   }
 }

@@ -158,7 +158,8 @@
     a {
       font-size: 24px !important;
       font-weight: bold;
-      text-decoration: none;
+      text-decoration: underline solid transparent;
+      transition: text-decoration 0.2s ease;
       color: @white;
       padding: 0.5em;
       display: block;
@@ -167,6 +168,9 @@
     }
     a:first-of-type {
       margin-top: 0.5em;
+    }
+    a:hover {
+      text-decoration: underline solid Currentcolor;
     }
     button {
       position: absolute;

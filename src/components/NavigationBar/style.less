@@ -79,7 +79,7 @@
   width: 100%;
   font-weight: bold;
   background-color: @white;
-  z-index: 1;
+  z-index: 2;
   font-size: 18px;
   height: 78px;
 }
@@ -87,6 +87,7 @@
   width: 100vw;
   height: 0.4em;
   display: table;
+  z-index: 3;
   background: linear-gradient(
     270deg,
     @red 0%,
@@ -102,13 +103,13 @@
 }
 // Styling for menu based nav bar
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 810px) {
   .mobile-links {
     display: none !important;
   }
 }
 
-@media only screen and (max-width: 802px) {
+@media only screen and (max-width: 812px) {
   .navigation-bar {
     display: none;
   }

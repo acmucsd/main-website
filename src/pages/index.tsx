@@ -6,16 +6,15 @@ import SEO from "../components/SEO"
 
 import HomeHero from "../sections/home/Home.Hero"
 import HomeCommunities from "../sections/home/Home.Communities"
-import HomeGetInvolved from "../sections/home/Home.GetInvolved"
+import HomeJoinTheClub from "../sections/home/Home.JoinTheClub"
 import HomeEvents from "../sections/home/Home.Events"
-
 
 const IndexPage: React.FC = () => (
   <Layout>
     <SEO title="Home" />
     <HomeHero />
+    <HomeJoinTheClub />
     <HomeCommunities />
-    <HomeGetInvolved />
     <HomeEvents />
   </Layout>
 )

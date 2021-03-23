@@ -1,5 +1,6 @@
 import React from "react"
 import "./styles.less"
+import CommunitiesGrid from "../../components/CommunitiesGrid"
 
 const CommunityHero: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const CommunityHero: React.FC = () => {
         communities focused on specific areas of technology.
       </p>
       <div className="community__hero__communities">
-        insert communities grid
+        <CommunitiesGrid />
       </div>
     </section>
   )

@@ -262,73 +262,85 @@
       }
       &__container {
         margin-bottom: 80px;
-        height: 27em;
-        overflow: hidden;
-        // .events:focus {
-        //   outline: none;
-        // }
-        // .events::-webkit-scrollbar {
-        //   display: none;
-        // }
-        .events {
-          // display: inline-flex;
-          // height: fit-content;
-          // overflow-y: hidden;
-          // margin: 1em 0;
-          // margin-left: 10vw;
-          // width: 100vw;
-          .event {
-            display: inline-block;
-            flex-shrink: 0;
-            padding: 1.5em;
-            margin: 0.5em 1em;
-            box-shadow: 0em 0em 0.3em @black;
-            border-radius: 1em;
-            width: 15em; /* changes to width should also apply to handleWheel in index.tsx */
-            height: 18em;
-            white-space: normal;
-            overflow: hidden;
-            vertical-align: top;
-            .index0 {
-              color: @red;
-            }
-            .index1 {
-              color: @purple;
-            }
-            .index2 {
-              color: @blue;
-            }
-            .index3 {
-              color: @turquoise;
-            }
-            .index4 {
-              color: @blue;
-            }
-            h1 {
-              font-size: 2em;
+        overflow-y: hidden;
+        display: inline-flex;
+        height: fit-content;
+        width: 100%;
+
+        &:focus {
+          outline: none;
+        }
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        &__event {
+          display: inline-block;
+          flex-shrink: 0;
+          margin: 0.5em 1em;
+          box-shadow: 0em 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 1em;
+          width: 360px; /* changes to width should also apply to handleWheel in index.tsx */
+          height: 300px;
+          white-space: normal;
+          overflow: hidden;
+          //vertical-align: top;
+          // .index0 {
+          //   color: @red;
+          // }
+          // .index1 {
+          //   color: @purple;
+          // }
+          // .index2 {
+          //   color: @blue;
+          // }
+          // .index3 {
+          //   color: @turquoise;
+          // }
+          // .index4 {
+          //   color: @blue;
+          // }
+          // h1 {
+          //   font-size: 2em;
+          //   font-weight: bold;
+          //   margin-bottom: 0.5em;
+          // }
+          h2,
+          h3 {
+            padding: 0 1.5em;
+            margin-bottom: 0.5em;
+          }
+          h2 {
+            font-size: 1em;
+            font-weight: normal;
+            > span {
+              margin-right: 0.5em;
               font-weight: bold;
-              margin-bottom: 0.5em;
-            }
-            h2 {
-              font-size: 1.5em;
-              font-weight: bold;
-              margin-bottom: 1.5em;
-            }
-            h3 {
-              font-size: 1.2em;
-              font-weight: 400;
-              margin-bottom: 0.25em;
-              word-wrap: break-word;
-            }
-            .link {
-              color: @link-blue;
             }
           }
-          .end {
-            box-shadow: none;
+          h3 {
+            font-size: 1em;
+            font-weight: 400;
+            word-wrap: break-word;
+          }
+          .link {
+            color: @link-blue;
+          }
+          img {
+            padding: 0;
+            margin-bottom: 0.5em;
+            height: 202.5px;
+            width: 100%;
           }
         }
+        .end {
+          box-shadow: none;
+        }
       }
-    } 
+    }
+    @media only screen and (max-width: 1050px) {
+      padding: 3em !important;
+    }
+    @media only screen and (max-width: 500px) {
+    }
   }
 }

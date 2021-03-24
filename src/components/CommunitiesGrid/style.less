@@ -20,12 +20,12 @@
     }
 
     &__label {
-      width: 200px;
+      width: 210px;
       h3 {
         margin: 0 !important;
         font-size: 1.7rem;
         font-weight: 500;
-        
+
         span {
           font-weight: 700;
         }
@@ -62,16 +62,17 @@
     &.innovate {
       color: @purple;
       .fade-up(1.5s);
-
     }
     .fade-up(@waitTime) {
-      animation:
-        hide @waitTime,
-        fade-up 0.6s @waitTime ease-in-out
+      animation: hide @waitTime, fade-up 0.6s @waitTime ease-in-out;
     }
     @keyframes hide {
-      from { opacity: 0; }
-      to { opacity: 0; }
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 0;
+      }
     }
     @keyframes fade-up {
       from {

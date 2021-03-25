@@ -276,7 +276,7 @@
         &__event {
           display: inline-block;
           flex-shrink: 0;
-          margin: 0.5em 1em;
+          margin: 0.5em 0.75em;
           box-shadow: 0em 4px 4px rgba(0, 0, 0, 0.25);
           border-radius: 1em;
           width: 360px; /* changes to width should also apply to handleWheel in index.tsx */
@@ -330,6 +330,11 @@
             margin-bottom: 0.5em;
             height: 202.5px;
             width: 100%;
+          }
+          &:hover {
+            //cursor: pointer;
+            transform: translateY(-0.2em);
+            transition: transform 0.2s;
           }
         }
         .end {

@@ -83,7 +83,6 @@ const HomeEvents: React.FC  = () => {
                     return (
                         <div className="home__events__grid__container__event" key={index}>
                             <img src={value.cover} alt={value.title}/>
-                            <h2><span>{timing.date}</span>{timing.time}</h2>
                             {isURL(value.location.trim()) ? (
                                 <a className="link" href={getAbsoluteURL(value.location.trim())}>
                                 <h3>{value.location}</h3>
@@ -91,6 +90,7 @@ const HomeEvents: React.FC  = () => {
                             ) : (
                                 <h3>{value.location}</h3>
                             )}
+                            <h2><span>{timing.date}</span>{timing.time}</h2>
                         </div>
                     );
                 })}

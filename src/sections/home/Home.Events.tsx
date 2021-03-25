@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { EventsArray, EventObject, getAllEvents } from '../../api/EventsAPI'
 import { isURL, getAbsoluteURL, getDateTime } from '../../utils'
 import './styles.less'
 
 const HomeEvents: React.FC  = () => {
-    const [events, setEvents] = React.useState<EventsArray>();
-    const [dragging, toggleDragging] = React.useState(false);
+    const [events, setEvents] = useState<EventsArray>();
+    const [dragging, toggleDragging] = useState(false);
 
     const updateEvents = async (): Promise<void> => {
         const eventsArray: EventsArray | undefined = await getAllEvents();
@@ -15,7 +15,7 @@ const HomeEvents: React.FC  = () => {
         setEvents(eventsArray);
     };
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (!events) {
             updateEvents();
         }
@@ -33,7 +33,7 @@ const HomeEvents: React.FC  = () => {
         if (isTouch) {
             deltaX = e.touches[0].clientX;
         } else {
-            e.preventDefault();
+            //e.preventDefault();
             deltaX = -1 * e.movementX;
         }
         const firstEvent = document.getElementsByClassName('event')[0] as HTMLElement;
@@ -83,6 +83,7 @@ const HomeEvents: React.FC  = () => {
                     return (
                         <div className="home__events__grid__container__event" key={index}>
                             <img src={value.cover} alt={value.title}/>
+                            <h2><span>{timing.date}</span>{timing.time}</h2>
                             {isURL(value.location.trim()) ? (
                                 <a className="link" href={getAbsoluteURL(value.location.trim())}>
                                 <h3>{value.location}</h3>
@@ -90,7 +91,6 @@ const HomeEvents: React.FC  = () => {
                             ) : (
                                 <h3>{value.location}</h3>
                             )}
-                            <h2><span>{timing.date}</span>{timing.time}</h2>
                         </div>
                     );
                 })}

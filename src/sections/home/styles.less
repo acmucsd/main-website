@@ -266,7 +266,6 @@
         display: inline-flex;
         height: fit-content;
         width: 100%;
-
         &:focus {
           outline: none;
         }
@@ -276,18 +275,18 @@
         &__event {
           display: inline-block;
           flex-shrink: 0;
-          margin: 0.5em 0.75em;
+          margin: 0.5em 0.7em;
           box-shadow: 0em 4px 4px rgba(0, 0, 0, 0.25);
           border-radius: 1em;
-          width: 360px; /* changes to width should also apply to handleWheel in index.tsx */
-          height: 300px;
+          width: 312px;
+          height: 260px;
           white-space: normal;
           overflow: hidden;
           h2,
           h3 {
-            padding: 0 1.5em;
+            padding: 0 18px;
             font-size: 1em;
-            margin-bottom: 0.5em;
+            margin-bottom: 0.3em;
           }
           h2 {
             font-weight: normal;
@@ -307,14 +306,15 @@
             padding: 0;
             margin-bottom: 0.5em;
             max-height: 202.5px;
+            max-height: 170px;
             width: 100%;
             object-fit: cover;
           }
-          &:hover {
-            //cursor: pointer;
-            transform: translateY(-0.2em);
-            transition: transform 0.2s;
-          }
+          // &:hover {
+          //cursor: pointer;
+          //transform: translateY(-0.2em);
+          //transition: transform 0.2s;
+          // }
         }
         .end {
           box-shadow: none;
@@ -322,28 +322,27 @@
       }
     }
     @media only screen and (max-width: 1050px) {
-      padding: 3em !important;
-    }
-    @media only screen and (max-width: 500px) {
       padding: 0em !important;
       .home__events__grid {
         padding: 0;
         &__header {
           padding: 3em 3em 0 3em !important;
-          p {
-            display: none;
+        }
+        &__container__event {
+          &:first-of-type {
+            margin-left: 2.2em;
           }
+        }
+      }
+    }
+    @media only screen and (max-width: 500px) {
+      .home__events__grid {
+        &__header p {
+          display: none;
         }
         &__container__event {
           width: 300px;
           height: 250px;
-          &:first-of-type {
-            margin-left: 2.2em;
-          }
-          h2,
-          h3 {
-            font-size: 1em;
-          }
           img {
             max-height: 168px;
           }

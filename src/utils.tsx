@@ -64,11 +64,11 @@ export const getDateTime = (event: EventObject): EventTime => {
 
   if (startDate.getDate() !== endDate.getDate()) {
     result.date = `${startDate.toLocaleDateString('en-US', {
-      month: 'long',
+      month: 'short',
       day: 'numeric',
-    })} - ${endDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}`;
+    })} - ${endDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`;
   } else {
-    result.date = startDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+    result.date = startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
   }
 
   result.time = `${startDate.toLocaleTimeString('en-US', {

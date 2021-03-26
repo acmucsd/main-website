@@ -179,7 +179,7 @@
       }
     }
     @media only screen and (max-width: 1400px) {
-      width: 100vw;
+      width: 100%;
       padding-right: 3em !important;
 
       h1 {
@@ -216,6 +216,34 @@
     }
   }
   &__communities {
+    padding: 0 !important;
+    &__grid {
+      padding-top: 100px;
+      width: 100% !important;
+      &__header {
+        h1 {
+          font-size: 36px;
+          font-weight: 700;
+        }
+        p {
+          font-size: 25px;
+          font-weight: 400;
+        }
+      }
+    }
+    @media only screen and (max-width: 1050px) {
+      padding: 3em !important;
+    }
+    @media only screen and (max-width: 500px) {
+      .home__communities__grid {
+        padding: 0;
+        &__header {
+          p {
+            display: none;
+          }
+        }
+      }
+    }
   }
   &__events {
   }

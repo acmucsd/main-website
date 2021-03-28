@@ -7,8 +7,9 @@ import DesignLogo from "../../assets/logos/acm-design.svg"
 import HackLogo from "../../assets/logos/acm-hack.svg"
 import InnovateLogo from "../../assets/logos/acm-innovate.svg"
 
-const CommunitiesGrid = () => {
+const CommunitiesGrid = props => {
   const [isVisible, setVisible] = React.useState(false)
+
   // const domRef = React.useRef(null);
   // React.useEffect(() => {
   //   const currentDom = domRef.current;
@@ -28,7 +29,10 @@ const CommunitiesGrid = () => {
 
   return (
     <div className="communitiesGrid">
-      <a href="#AI" className={`communitiesGrid__community ai visible`}>
+      <a
+        href={props.AILink}
+        className={`communitiesGrid__community ai visible`}
+      >
         <img src={AILogo} alt="ACM AI" />
         <div className="communitiesGrid__community__label">
           <h3>
@@ -36,7 +40,10 @@ const CommunitiesGrid = () => {
           </h3>
         </div>
       </a>
-      <a href="#Cyber" className={`communitiesGrid__community cyber visible`}>
+      <a
+        href={props.CyberLink}
+        className={`communitiesGrid__community cyber visible`}
+      >
         <img src={CyberLogo} alt="ACM Cyber" />
         <div className="communitiesGrid__community__label">
           <h3>
@@ -44,7 +51,10 @@ const CommunitiesGrid = () => {
           </h3>
         </div>
       </a>
-      <a href="#" className={`communitiesGrid__community design visible`}>
+      <a
+        href={props.DesignLink}
+        className={`communitiesGrid__community design visible`}
+      >
         <img src={DesignLogo} alt="ACM Design" />
         <div className="communitiesGrid__community__label">
           <h3>
@@ -53,7 +63,10 @@ const CommunitiesGrid = () => {
           <p>Coming Soon</p>
         </div>
       </a>
-      <a href="#Hack" className={`communitiesGrid__community hack visible`}>
+      <a
+        href={props.HackLink}
+        className={`communitiesGrid__community hack visible`}
+      >
         <img src={HackLogo} alt="ACM Hack" />
         <div className="communitiesGrid__community__label">
           <h3>
@@ -62,7 +75,7 @@ const CommunitiesGrid = () => {
         </div>
       </a>
       <a
-        href="#Innovate"
+        href={props.InnovateLink}
         className={`communitiesGrid__community innovate visible`}
       >
         <img src={InnovateLogo} alt="ACM Innovate" />

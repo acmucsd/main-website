@@ -11,13 +11,7 @@ const CommunityHero: React.FC = () => {
         communities focused on specific areas of technology.
       </p>
       <div className="community__hero__communities">
-        <CommunitiesGrid
-          AILink="#AI"
-          CyberLink="#Cyber"
-          DesignLink="#"
-          HackLink="#Hack"
-          InnovateLink="#Innovate"
-        />
+        <CommunitiesGrid />
       </div>
     </section>
   )

@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState } from "react"
+import VisibilitySensor from "react-visibility-sensor"
 import "./style.less"
 
 import AILogo from "../../assets/logos/acm-ai.svg"
@@ -7,86 +8,84 @@ import DesignLogo from "../../assets/logos/acm-design.svg"
 import HackLogo from "../../assets/logos/acm-hack.svg"
 import InnovateLogo from "../../assets/logos/acm-innovate.svg"
 
-const CommunitiesGrid = props => {
-  const [isVisible, setVisible] = React.useState(false)
-
-  // const domRef = React.useRef(null);
-  // React.useEffect(() => {
-  //   const currentDom = domRef.current;
-  //   if (!currentDom) {
-  //     return undefined;
-  //   }
-  //   const observer = new IntersectionObserver((entries) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         setVisible(true);
-  //       }
-  //     });
-  //   });
-  //   observer.observe(currentDom);
-  //   return undefined;
-  // }, []);
+const CommunitiesGrid = () => {
+  const [hasBeenVisible, setHasBeenVisible] = useState(false)
 
   return (
-    <div className="communitiesGrid">
-      <a
-        href={props.AILink}
-        className={`communitiesGrid__community ai visible`}
-      >
-        <img src={AILogo} alt="ACM AI" />
-        <div className="communitiesGrid__community__label">
-          <h3>
-            <span>ACM</span> AI
-          </h3>
-        </div>
-      </a>
-      <a
-        href={props.CyberLink}
-        className={`communitiesGrid__community cyber visible`}
-      >
-        <img src={CyberLogo} alt="ACM Cyber" />
-        <div className="communitiesGrid__community__label">
-          <h3>
-            <span>ACM</span> Cyber
-          </h3>
-        </div>
-      </a>
-      <a
-        href={props.DesignLink}
-        className={`communitiesGrid__community design visible`}
-      >
-        <img src={DesignLogo} alt="ACM Design" />
-        <div className="communitiesGrid__community__label">
-          <h3>
-            <span>ACM</span> Design
-          </h3>
-          <p>Coming Soon</p>
-        </div>
-      </a>
-      <a
-        href={props.HackLink}
-        className={`communitiesGrid__community hack visible`}
-      >
-        <img src={HackLogo} alt="ACM Hack" />
-        <div className="communitiesGrid__community__label">
-          <h3>
-            <span>ACM</span> Hack
-          </h3>
-        </div>
-      </a>
-      <a
-        href={props.InnovateLink}
-        className={`communitiesGrid__community innovate visible`}
-      >
-        <img src={InnovateLogo} alt="ACM Innovate" />
-        <div className="communitiesGrid__community__label">
-          <h3>
-            <span>ACM</span> Innovate
-          </h3>
-        </div>
-      </a>
-    </div>
+    <VisibilitySensor
+      onChange={isVisible => {
+        if (isVisible) setHasBeenVisible(true)
+      }}
+    >
+      <div className="communitiesGrid">
+        <a
+          href="#"
+          className={`communitiesGrid__community ${
+            hasBeenVisible ? "ai--visible" : " "
+          }`}
+        >
+          <img src={AILogo} alt="ACM AI" />
+          <div className="communitiesGrid__community__label">
+            <h3>
+              <span>ACM</span> AI
+            </h3>
+          </div>
+        </a>
+        <a
+          href="#"
+          className={`communitiesGrid__community ${
+            hasBeenVisible ? "cyber--visible" : " "
+          }`}
+        >
+          <img src={CyberLogo} alt="ACM Cyber" />
+          <div className="communitiesGrid__community__label">
+            <h3>
+              <span>ACM</span> Cyber
+            </h3>
+          </div>
+        </a>
+        <a
+          href="#"
+          className={`communitiesGrid__community ${
+            hasBeenVisible ? "design--visible" : " "
+          }`}
+        >
+          <img src={DesignLogo} alt="ACM Design" />
+          <div className="communitiesGrid__community__label">
+            <h3>
+              <span>ACM</span> Design
+            </h3>
+            <p>Coming Soon</p>
+          </div>
+        </a>
+        <a
+          href="#"
+          className={`communitiesGrid__community ${
+            hasBeenVisible ? "hack--visible" : " "
+          }`}
+        >
+          <img src={HackLogo} alt="ACM Hack" />
+          <div className="communitiesGrid__community__label">
+            <h3>
+              <span>ACM</span> Hack
+            </h3>
+          </div>
+        </a>
+        <a
+          href="#"
+          className={`communitiesGrid__community ${
+            hasBeenVisible ? "innovate--visible" : " "
+          }`}
+        >
+          <img src={InnovateLogo} alt="ACM Innovate" />
+          <div className="communitiesGrid__community__label">
+            <h3>
+              <span>ACM</span> Innovate
+            </h3>
+          </div>
+        </a>
+      </div>
+    </VisibilitySensor>
   )
 }
-
 export default CommunitiesGrid

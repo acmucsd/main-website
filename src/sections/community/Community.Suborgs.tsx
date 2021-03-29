@@ -1,5 +1,6 @@
 import React from "react"
 import "./styles.less"
+
 import AILogo from "../../assets/logos/acm-ai.svg"
 import AIDiscord from "../../assets/communities-links/ai-discord.svg"
 import AIHome from "../../assets/communities-links/ai-home.svg"
@@ -23,7 +24,6 @@ import InnovateHome from "../../assets/communities-links/innovate-home.svg"
 import InnovateYoutube from "../../assets/communities-links/innovate-youtube.svg"
 
 import DesignLogo from "../../assets/logos/acm-design.svg"
-
 const AICommunity = () => {
   return (
     <div className="community__sub-orgs__community-card" id="AI">
@@ -52,10 +52,10 @@ const AICommunity = () => {
             access to all the perks and be up to date on AI and the community!
           </p>
           <div className="community-links">
-            <a href="">
+            <a href="https://acmurl.com/ai-disc">
               <img src={AIDiscord} alt="AI Discord" />
             </a>
-            <a href="">
+            <a href="https://ai.acmucsd.com/">
               <img src={AIHome} alt="AI Home" />
             </a>
           </div>
@@ -92,25 +92,25 @@ const CyberCommunity = () => {
             and connect that community to the broader AI network.
           </p>
           <div className="community-links">
-            <a href="">
+            <a href="https://acmurl.com/cyberdiscord">
               <img src={CyberDiscord} alt="Cyber Discord" />
             </a>
-            <a href="">
+            <a href="https://sdc.tf/">
               <img src={CyberHome} alt="Cyber Home" />
             </a>
-            <a href="">
+            <a href="https://www.facebook.com/cyberucsd">
               <img src={CyberFacebook} alt="Cyber Facebook" />
             </a>
-            <a href="">
+            <a href="https://twitter.com/cyberucsd,">
               <img src={CyberTwitter} alt="Cyber Twitter" />
             </a>
-            <a href="">
+            <a href="https://www.youtube.com/playlist?list=PLpmCTDt8lemWaQ_ZruBe3Dt6ddtVdX-yR">
               <img src={CyberYoutube} alt="Cyber Youtube" />
             </a>
-            <a href="">
+            <a href="https://www.linkedin.com/company/cyber-ucsd/">
               <img src={CyberLinkedin} alt="Cyber LinkedIn" />
             </a>
-            <a href="">
+            <a href="https://acmurl.com/joincyber">
               <img src={CyberMail} alt="Cyber Mail" />
             </a>
           </div>
@@ -149,10 +149,10 @@ const HackCommunity = () => {
             skills to help the UCSD community thrive.
           </p>
           <div className="community-links">
-            <a href="">
+            <a href="http://acmurl.com/hack-disc">
               <img src={HackDiscord} alt="Hack Discord" />
             </a>
-            <a href="">
+            <a href="https://hack.acmucsd.com/">
               <img src={HackHome} alt="Hack Home" />
             </a>
           </div>
@@ -192,13 +192,13 @@ const InnovateCommunity = () => {
             All skill levels welcome!
           </p>
           <div className="community-links">
-            <a href="">
+            <a href="https://acmurl.com/innovate-discord">
               <img src={InnovateDiscord} alt="Innovate Discord" />
             </a>
-            <a href="">
+            <a href="https://innovate.acmucsd.com/">
               <img src={InnovateHome} alt="Innovate Home" />
             </a>
-            <a href="">
+            <a href="https://acmurl.com/innovate-youtube">
               <img src={InnovateYoutube} alt="Innovate Youtube" />
             </a>
           </div>

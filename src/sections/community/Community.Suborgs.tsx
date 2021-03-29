@@ -22,6 +22,8 @@ import InnovateDiscord from "../../assets/communities-links/innovate-discord.svg
 import InnovateHome from "../../assets/communities-links/innovate-home.svg"
 import InnovateYoutube from "../../assets/communities-links/innovate-youtube.svg"
 
+import DesignLogo from "../../assets/logos/acm-design.svg"
+
 const AICommunity = () => {
   return (
     <div className="community__sub-orgs__community-card" id="AI">
@@ -205,6 +207,43 @@ const InnovateCommunity = () => {
     </div>
   )
 }
+
+const DesignCommunity = () => {
+  return (
+    <div className="community__sub-orgs__community-card" id="Design">
+      <div className="color_slide pinkbg" />
+
+      <div className="community__sub-orgs__community-card__content">
+        <img
+          src={DesignLogo}
+          alt="ACM Design"
+          className="community__sub-orgs__community-card__logo"
+        />
+        <div>
+          <h1 className="pink">ACM Design</h1>
+          <p>
+            We explore the intersection between computing and design. We want to
+            demonstrate that design can be accessible and highly valuable to
+            students in a wide range of disciplines.
+            <br />
+            <br />
+            Members learn and apply design skills through working on projects in
+            a supportive, collaborative, and open environment.
+            <br />
+            <br />
+            We will officially launch ACM Design in Fall 2021. We will be
+            running seminars, workshops, designathons, and our collaborative
+            studio called Co|Lab. Keep an eye out for our workshops and
+            opportunities to get involved.
+            <br />
+            <br />
+          </p>
+          <div className="community-links"></div>
+        </div>
+      </div>
+    </div>
+  )
+}
 const CommunitySubOrgs: React.FC = () => {
   return (
     <section className="community__sub-orgs">
@@ -212,6 +251,7 @@ const CommunitySubOrgs: React.FC = () => {
       <CyberCommunity />
       <HackCommunity />
       <InnovateCommunity />
+      <DesignCommunity />
     </section>
   )
 }

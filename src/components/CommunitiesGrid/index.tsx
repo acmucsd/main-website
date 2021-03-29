@@ -19,7 +19,7 @@ const CommunitiesGrid = () => {
     >
       <div className="communitiesGrid">
         <a
-          href="#"
+          href="/communities#AI"
           className={`communitiesGrid__community ${
             hasBeenVisible ? "ai--visible" : " "
           }`}
@@ -32,7 +32,7 @@ const CommunitiesGrid = () => {
           </div>
         </a>
         <a
-          href="#"
+          href="/communities#Cyber"
           className={`communitiesGrid__community ${
             hasBeenVisible ? "cyber--visible" : " "
           }`}
@@ -45,7 +45,7 @@ const CommunitiesGrid = () => {
           </div>
         </a>
         <a
-          href="#"
+          href="/communities#Design"
           className={`communitiesGrid__community ${
             hasBeenVisible ? "design--visible" : " "
           }`}
@@ -59,7 +59,7 @@ const CommunitiesGrid = () => {
           </div>
         </a>
         <a
-          href="#"
+          href="/communities#Hack"
           className={`communitiesGrid__community ${
             hasBeenVisible ? "hack--visible" : " "
           }`}
@@ -72,7 +72,7 @@ const CommunitiesGrid = () => {
           </div>
         </a>
         <a
-          href="#"
+          href="/communities#Innovate"
           className={`communitiesGrid__community ${
             hasBeenVisible ? "innovate--visible" : " "
           }`}

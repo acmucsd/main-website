@@ -1,5 +1,15 @@
 import React from "react"
 import "./styles.less"
+import * as Scroll from "react-scroll"
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll"
 
 import AILogo from "../../assets/logos/acm-ai.svg"
 import AIDiscord from "../../assets/communities-links/ai-discord.svg"
@@ -24,9 +34,10 @@ import InnovateHome from "../../assets/communities-links/innovate-home.svg"
 import InnovateYoutube from "../../assets/communities-links/innovate-youtube.svg"
 
 import DesignLogo from "../../assets/logos/acm-design.svg"
+
 const AICommunity = () => {
   return (
-    <div className="community__sub-orgs__community-card" id="AI">
+    <div className="community__sub-orgs__community-card">
       <div className="color_slide redbg" />
 
       <div className="community__sub-orgs__community-card__content">
@@ -51,7 +62,7 @@ const AICommunity = () => {
             Join our discord and signup for an account on our website to get
             access to all the perks and be up to date on AI and the community!
           </p>
-          <div className="community-links">
+          <div className="community-links" id="Cyber">
             <a href="https://acmurl.com/ai-disc">
               <img src={AIDiscord} alt="AI Discord" />
             </a>
@@ -66,7 +77,7 @@ const AICommunity = () => {
 }
 const CyberCommunity = () => {
   return (
-    <div className="community__sub-orgs__community-card" id="Cyber">
+    <div className="community__sub-orgs__community-card">
       <div className="color_slide turquoisebg" />
 
       <div className="community__sub-orgs__community-card__content">
@@ -110,7 +121,7 @@ const CyberCommunity = () => {
             <a href="https://www.linkedin.com/company/cyber-ucsd/">
               <img src={CyberLinkedin} alt="Cyber LinkedIn" />
             </a>
-            <a href="https://acmurl.com/joincyber">
+            <a href="https://acmurl.com/joincyber" id="Hack">
               <img src={CyberMail} alt="Cyber Mail" />
             </a>
           </div>
@@ -148,7 +159,7 @@ const HackCommunity = () => {
             opportunities to learn, teach, and practice critical cybersecurity
             skills to help the UCSD community thrive.
           </p>
-          <div className="community-links">
+          <div className="community-links" id="Innovate">
             <a href="http://acmurl.com/hack-disc">
               <img src={HackDiscord} alt="Hack Discord" />
             </a>
@@ -191,7 +202,7 @@ const InnovateCommunity = () => {
             <br />
             All skill levels welcome!
           </p>
-          <div className="community-links">
+          <div className="community-links" id="Design">
             <a href="https://acmurl.com/innovate-discord">
               <img src={InnovateDiscord} alt="Innovate Discord" />
             </a>
@@ -210,7 +221,7 @@ const InnovateCommunity = () => {
 
 const DesignCommunity = () => {
   return (
-    <div className="community__sub-orgs__community-card" id="Design">
+    <div className="community__sub-orgs__community-card">
       <div className="color_slide pinkbg" />
 
       <div className="community__sub-orgs__community-card__content">
@@ -247,6 +258,7 @@ const DesignCommunity = () => {
 const CommunitySubOrgs: React.FC = () => {
   return (
     <section className="community__sub-orgs">
+      <div className="spacer80px" id="AI"></div>
       <AICommunity />
       <CyberCommunity />
       <HackCommunity />

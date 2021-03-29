@@ -1,6 +1,16 @@
 import React, { useState } from "react"
 import VisibilitySensor from "react-visibility-sensor"
 import "./style.less"
+import * as Scroll from "react-scroll"
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll"
 
 import AILogo from "../../assets/logos/acm-ai.svg"
 import CyberLogo from "../../assets/logos/acm-cyber.svg"

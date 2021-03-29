@@ -27,11 +27,6 @@
   }
   &__sub-orgs {
     &__community-card {
-      // :before {
-      //   height: 80px;
-      //   display: absolute;
-      //   content: "";
-      // }
       display: inline-flex;
       height: auto;
       width: 100vw;
@@ -39,6 +34,7 @@
       margin-left: 0px !important;
       padding-right: 96px;
       margin-bottom: 10px;
+      padding-top: -80px;
       @media (min-width: 960px) {
         margin-left: calc(-1 * ((100vw - 960px) / 2)) !important;
       }
@@ -79,6 +75,7 @@
             flex-direction: row;
             justify-content: flex-start;
             align-items: start;
+            flex-wrap: wrap;
             padding-top: 4px;
             width: 100%;
 
@@ -132,4 +129,7 @@
 }
 .pinkbg {
   background-color: @light-pink;
+}
+.spacer80px {
+  height: 80px;
 }

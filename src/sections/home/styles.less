@@ -179,7 +179,7 @@
       }
     }
     @media only screen and (max-width: 1400px) {
-      width: 100vw;
+      width: 100%;
       padding-right: 3em !important;
 
       h1 {
@@ -234,7 +234,111 @@
     @media only screen and (max-width: 1050px) {
       padding: 3em !important;
     }
+    @media only screen and (max-width: 500px) {
+      .home__communities__grid {
+        padding: 0;
+      }
+    }
   }
   &__events {
+    padding: 0 !important;
+    &__grid {
+      padding-top: 100px;
+      width: 100% !important;
+      &__header {
+        h1 {
+          font-size: 36px;
+          font-weight: 700;
+        }
+        p {
+          font-size: 25px;
+          font-weight: 400;
+        }
+      }
+      &__container {
+        margin-bottom: 80px;
+        overflow-y: hidden;
+        display: inline-flex;
+        height: fit-content;
+        width: 100%;
+        &:focus {
+          outline: none;
+        }
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        &__event {
+          display: inline-block;
+          flex-shrink: 0;
+          margin: 0.5em 0.7em;
+          box-shadow: 0em 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 1em;
+          width: 312px;
+          height: 260px;
+          white-space: normal;
+          overflow: hidden;
+          h2,
+          h3 {
+            padding: 0 18px;
+            font-size: 1em;
+            margin-bottom: 0.3em;
+          }
+          h2 {
+            font-weight: normal;
+            > span {
+              margin-right: 0.5em;
+              font-weight: bold;
+            }
+          }
+          h3 {
+            font-weight: 400;
+            word-wrap: break-word;
+          }
+          .link {
+            color: @link-blue;
+          }
+          img {
+            padding: 0;
+            margin-bottom: 0.4em;
+            max-height: 175px;
+            width: 100%;
+            object-fit: cover;
+          }
+          // &:hover {
+          //cursor: pointer;
+          //transform: translateY(-0.2em);
+          //transition: transform 0.2s;
+          // }
+        }
+        .end {
+          box-shadow: none;
+        }
+      }
+    }
+    @media only screen and (max-width: 1050px) {
+      padding: 0em !important;
+      .home__events__grid {
+        padding: 0;
+        &__header {
+          padding: 3em 3em 0 3em !important;
+        }
+        &__container__event {
+          &:first-of-type {
+            margin-left: 3em;
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 500px) {
+      .home__events__grid {
+        &__container__event {
+          width: 276px;
+          height: 230px;
+          img {
+            max-height: 155px;
+          }
+        }
+      }
+    }
   }
 }

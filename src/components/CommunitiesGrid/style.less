@@ -2,7 +2,7 @@
 @import "../../styles/mixins.less";
 
 .communitiesGrid {
-  padding: 20px 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -20,18 +20,18 @@
     }
 
     &__label {
-      width: 200px;
+      width: 210px;
       h3 {
         margin: 0 !important;
         font-size: 1.7rem;
         font-weight: 500;
-        
         span {
           font-weight: 700;
         }
       }
       p {
         margin: 0;
+        color: @black;
         font-size: 1rem;
         position: absolute;
       }
@@ -43,35 +43,44 @@
       margin-right: 10px;
     }
 
-    &.ai {
+    &.ai--visible,
+    &.cyber--visible,
+    &.design--visible,
+    &.hack--visible,
+    &.innovate--visible {
+      opacity: 100%;
+    }
+
+    &.ai--visible {
       color: @red;
       .fade-up(0.3s);
     }
-    &.cyber {
+    &.cyber--visible {
       color: @turquoise;
       .fade-up(0.6s);
     }
-    &.design {
+    &.design--visible {
       color: @pink;
       .fade-up(0.9s);
     }
-    &.hack {
+    &.hack--visible {
       color: @orange;
       .fade-up(1.2s);
     }
-    &.innovate {
+    &.innovate--visible {
       color: @purple;
       .fade-up(1.5s);
-
     }
     .fade-up(@waitTime) {
-      animation:
-        hide @waitTime,
-        fade-up 0.6s @waitTime ease-in-out
+      animation: hide @waitTime, fade-up 0.6s @waitTime ease-in-out;
     }
     @keyframes hide {
-      from { opacity: 0; }
-      to { opacity: 0; }
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 0;
+      }
     }
     @keyframes fade-up {
       from {
@@ -83,23 +92,18 @@
         transform: translateY(0);
       }
     }
-    &.visible {
-      opacity: 100%;
-    }
-  }
-  @media only screen and (max-width: 1400px) {
-    padding: 0em !important;
   }
   @media only screen and (max-width: 500px) {
     .communitiesGrid__community {
+      padding: 20px 10px;
       &__label {
         h3 {
           margin: 0 !important;
-          font-size: 1.7rem;
+          font-size: 1.6rem;
         }
       }
       img {
-        width: 80px;
+        width: 70px;
         margin: 0;
         margin-right: 10px;
       }

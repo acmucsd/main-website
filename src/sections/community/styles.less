@@ -27,14 +27,15 @@
   }
   &__sub-orgs {
     &__community-card {
-      :before {
-        height: 80px;
-        display: absolute;
-        content: "";
-      }
-      display: flex;
-      height: 564px;
+      // :before {
+      //   height: 80px;
+      //   display: absolute;
+      //   content: "";
+      // }
+      display: inline-flex;
+      height: auto;
       width: 100vw;
+      min-height: 564px;
       margin-left: 0px !important;
       padding-right: 96px;
       margin-bottom: 10px;
@@ -47,7 +48,6 @@
         top: 0;
         left: 0;
         min-width: 70px;
-        height: 564px;
         z-index: -1;
       }
       &__logo {

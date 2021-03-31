@@ -7,7 +7,7 @@ import SEO from "../components/SEO"
 import CommunityHero from "../sections/community/Community.Hero"
 import CommunitySuborgs from "../sections/community/Community.Suborgs"
 
-const CommunityPage: React.FC = () => (
+const CommunitiesPage: React.FC = () => (
   <Layout>
     <SEO title="Community" />
     <CommunityHero />
@@ -15,4 +15,4 @@ const CommunityPage: React.FC = () => (
   </Layout>
 )
 
-export default CommunityPage
+export default CommunitiesPage

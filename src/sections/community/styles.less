@@ -2,7 +2,134 @@
 
 .community {
   &__hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 110px;
+    > h1 {
+      font-weight: 500;
+      font-size: 45px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    > p {
+      font-weight: 500;
+      font-size: 20px;
+      width: 500px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    &__communities {
+      text-align: left;
+    }
   }
   &__sub-orgs {
+    &__community-card {
+      display: inline-flex;
+      height: auto;
+      width: 100vw;
+      min-height: 564px;
+      margin-left: 0px !important;
+      padding-right: 96px;
+      margin-bottom: 10px;
+      padding-top: -80px;
+      @media (min-width: 960px) {
+        margin-left: calc(-1 * ((100vw - 960px) / 2)) !important;
+      }
+
+      .color_slide {
+        position: relative;
+        top: 0;
+        left: 0;
+        min-width: 70px;
+        z-index: -1;
+      }
+      &__logo {
+        min-width: 226px;
+        max-width: 226px;
+        margin: 66px;
+      }
+      &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        > div {
+          max-width: 570px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          > h1 {
+            font-weight: 500;
+            font-size: 45px;
+          }
+          > p {
+            font-weight: 500;
+            font-size: 18px;
+            margin-bottom: 30px;
+          }
+          .community-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: start;
+            flex-wrap: wrap;
+            padding-top: 4px;
+            width: 100%;
+
+            a {
+              border: none;
+              background-color: transparent;
+              outline: none;
+              padding-right: 30px;
+              img {
+                width: 40px;
+                &:hover {
+                  transform: scale(1.05);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
+}
+.red {
+  color: @red;
+}
+.redbg {
+  background-color: @light-red;
+}
+.redfill {
+  fill: @red !important;
+}
+.turquoise {
+  color: @turquoise;
+}
+.turquoisebg {
+  background-color: @light-turquoise;
+}
+.yellow {
+  color: @orange;
+}
+.yellowbg {
+  background-color: @light-orange;
+}
+.purple {
+  color: @purple;
+}
+.purplebg {
+  background-color: @light-purple;
+}
+.pink {
+  color: @pink;
+}
+.pinkbg {
+  background-color: @light-pink;
+}
+.spacer80px {
+  height: 80px;
 }

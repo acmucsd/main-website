@@ -1,4 +1,4 @@
-import { EventObject } from './api/EventsAPI';
+import { EventObject } from "./api/EventsAPI"
 
 /**
  * Determines if given string is a valid website link.
@@ -7,23 +7,23 @@ import { EventObject } from './api/EventsAPI';
  */
 export const isURL = (str: string | undefined): boolean => {
   if (!str) {
-    return false;
+    return false
   }
 
   /* eslint-disable */
   const pattern = new RegExp(
-    '^(https?:\\/\\/)?' + // protocol
-      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-      '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-      '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-      '(\\#[-a-z\\d_]*)?$', // fragment locator
-    'i',
-  );
+    "^(https?:\\/\\/)?" + // protocol
+      "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
+      "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
+      "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
+      "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
+      "(\\#[-a-z\\d_]*)?$", // fragment locator
+    "i"
+  )
   /* eslint-disable */
 
-  return !!pattern.test(str);
-};
+  return !!pattern.test(str)
+}
 
 /**
  * Ensures a valid website link is an absolute path.
@@ -32,15 +32,15 @@ export const isURL = (str: string | undefined): boolean => {
  */
 export const getAbsoluteURL = (str: string): string | undefined => {
   if (!str) {
-    return undefined;
+    return undefined
   }
 
   if (isURL(str) && !/^https?:\/\//i.test(str)) {
-    return `http://${str}`;
+    return `http://${str}`
   }
 
-  return str;
-};
+  return str
+}
 
 /**
  * Contains timing information for an event.
@@ -48,9 +48,9 @@ export const getAbsoluteURL = (str: string): string | undefined => {
  * * @param {string} time The time description.
  */
 export type EventTime = {
-  date: string;
-  time: string;
-};
+  date: string
+  time: string
+}
 
 /**
  * Converts an event's date information into human readable descriptions.
@@ -58,26 +58,32 @@ export type EventTime = {
  * @return {EventTime} English strings describing date and time.
  */
 export const getDateTime = (event: EventObject): EventTime => {
-  const startDate = new Date(event.start);
-  const endDate = new Date(event.end);
-  const result: EventTime = { date: '', time: '' };
+  const startDate = new Date(event.start)
+  const endDate = new Date(event.end)
+  const result: EventTime = { date: "", time: "" }
 
   if (startDate.getDate() !== endDate.getDate()) {
-    result.date = `${startDate.toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-    })} - ${endDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`;
+    result.date = `${startDate.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+    })} - ${endDate.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+    })}`
   } else {
-    result.date = startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    result.date = startDate.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+    })
   }
 
-  result.time = `${startDate.toLocaleTimeString('en-US', {
-    hour: 'numeric',
-    minute: '2-digit',
-  })} - ${endDate.toLocaleTimeString('en-US', {
-    hour: 'numeric',
-    minute: '2-digit',
-  })}`;
+  result.time = `${startDate.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+  })} - ${endDate.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+  })}`
 
-  return result;
-};
+  return result
+}

@@ -12,7 +12,6 @@ const SponsorshipPage: React.FC = () => (
   <Layout>
     <SEO title="Sponsors" />
     <SponsorshipInfo />
-
     <SponsorshipLogo />
     <SponsorshipBenefits />
   </Layout>

@@ -2,6 +2,26 @@
 
 .sponsorship {
   &__logos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    &__header {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 80px;
+    }
+    &__img-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      > img {
+        padding: 10px;
+      }
+    }
   }
   &__info {
     padding-left: 45px;

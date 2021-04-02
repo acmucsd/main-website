@@ -1,6 +1,29 @@
 @import "../../styles/colors.less";
 
 .sponsorship {
+  &__info {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 110px;
+    height: 90vh;
+    min-height: 500px;
+    display: flex;
+    align-items: flex-start;
+    &__text {
+      padding-left: 56px;
+      &__title {
+        font-size: 45px;
+        font-weight: 500;
+        margin-bottom: 30px;
+      }
+
+      &__description {
+        font-size: 35px;
+        font-weight: 500;
+        margin-top: 0px;
+      }
+    }
+  }
   &__logos {
     display: flex;
     flex-direction: column;
@@ -23,26 +46,53 @@
       }
     }
   }
-  &__info {
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-top: 110px;
-    height: 90vh;
-    min-height: 500px;
-    display: flex;
-    align-items: flex-start;
-    &__text {
-      padding-left: 56px;
-      &__title {
-        font-size: 45px;
-        font-weight: 500;
-        margin-bottom: 30px;
-      }
 
-      &__description {
-        font-size: 35px;
-        font-weight: 500;
-        margin-top: 0px;
+  &__benefits {
+    padding-top: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    &__header {
+      max-width: 600px;
+
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 60px;
+    }
+    &__benefit-list {
+      max-width: 600px;
+
+      &__bullet {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding-bottom: 25px;
+        > img {
+          float: left;
+          padding-right: 27px;
+          margin: 0px;
+        }
+        > p {
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 26.04px;
+          margin: 0px;
+        }
+      }
+    }
+    &__footer {
+      max-width: 600px;
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 32.55px;
+      padding-top: 90px;
+      padding-bottom: 80px;
+      > a {
+        color: @black;
+        font-weight: bold;
       }
     }
   }

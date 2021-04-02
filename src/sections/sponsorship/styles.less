@@ -4,21 +4,42 @@
   &__info {
     padding-left: 45px;
     padding-right: 45px;
-    padding-top: 110px;
     height: 90vh;
     min-height: 500px;
     display: flex;
     align-items: flex-start;
+    align-items: center;
+    @media only screen and (min-width: 810px) {
+      flex-direction: row;
+    }
+    @media only screen and (max-width: 812px) {
+      flex-direction: column;
+    }
+    &__img {
+      width: 295px;
+    }
     &__text {
       padding-left: 56px;
       &__title {
+        @media only screen and (min-width: 810px) {
+          padding-top: 0px;
+        }
+        @media only screen and (max-width: 812px) {
+          padding-top: 50px;
+        }
         font-size: 45px;
         font-weight: 500;
         margin-bottom: 30px;
       }
 
       &__description {
-        font-size: 35px;
+        @media only screen and (min-width: 810px) {
+          font-size: 35px;
+        }
+        @media only screen and (max-width: 812px) {
+          font-size: 26px;
+          width: 400px;
+        }
         font-weight: 500;
         margin-top: 0px;
       }
@@ -30,10 +51,21 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
     &__header {
-      font-size: 36px;
+      @media only screen and (min-width: 810px) {
+        font-size: 36px;
+        margin-bottom: 80px;
+      }
+      @media only screen and (max-width: 812px) {
+        font-size: 30px;
+        margin-bottom: 40px;
+      }
+
+      padding-left: 40px;
+      padding-right: 40px;
       font-weight: bold;
-      margin-bottom: 80px;
     }
     &__img-grid {
       display: flex;
@@ -48,7 +80,14 @@
   }
 
   &__benefits {
-    padding-top: 160px;
+    padding-left: 40px;
+    padding-right: 40px;
+    @media only screen and (min-width: 810px) {
+      padding-top: 160px;
+    }
+    @media only screen and (max-width: 812px) {
+      padding-top: 80px;
+    }
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -58,7 +97,12 @@
 
       font-size: 36px;
       font-weight: bold;
-      margin-bottom: 60px;
+      @media only screen and (min-width: 810px) {
+        margin-bottom: 60px;
+      }
+      @media only screen and (max-width: 812px) {
+        margin-bottom: 30px;
+      }
     }
     &__benefit-list {
       max-width: 600px;
@@ -88,8 +132,15 @@
       font-size: 25px;
       font-weight: 400;
       line-height: 32.55px;
-      padding-top: 90px;
-      padding-bottom: 80px;
+      @media only screen and (min-width: 810px) {
+        padding-top: 90px;
+        padding-bottom: 80px;
+      }
+      @media only screen and (max-width: 812px) {
+        padding-top: 50px;
+        padding-bottom: 40px;
+      }
+
       > a {
         color: @black;
         font-weight: bold;
@@ -110,4 +161,23 @@
 .purple {
   color: @purple;
   font-weight: bold;
+}
+.mobile {
+  @media only screen and (min-width: 810px) {
+    display: none;
+    padding-top: 100px;
+  }
+  @media only screen and (max-width: 812px) {
+    display: flex;
+    padding-top: 0px;
+  }
+}
+.desktop {
+  @media only screen and (min-width: 810px) {
+    display: flex;
+    padding-top: 0px;
+  }
+  @media only screen and (max-width: 812px) {
+    display: none;
+  }
 }

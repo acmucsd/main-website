@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import "./styles.less"
 import * as Scroll from "react-scroll"
 import {
@@ -256,15 +256,58 @@ const DesignCommunity = () => {
   )
 }
 const CommunitySubOrgs: React.FC = () => {
+  const [windowWidth, setWidth] = useState(window.innerWidth)
+  const [selected, setSelected] = useState("")
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  })
+
+  const handleResize = () => {
+    setWidth(window.innerWidth)
+  }
+  
   return (
-    <section className="community__sub-orgs">
-      <div className="spacer80px" id="AI"></div>
-      <AICommunity />
-      <CyberCommunity />
-      <HackCommunity />
-      <InnovateCommunity />
-      <DesignCommunity />
-    </section>
+    <>{
+      windowWidth > 850 ? (
+        <section className="community__sub-orgs">
+          <div className="spacer80px" id="AI"></div>
+          <AICommunity />
+          <CyberCommunity />
+          <HackCommunity />
+          <InnovateCommunity />
+          <DesignCommunity />
+        </section>
+      ) : (
+        <section className="community__sub-orgs--mobile">
+          {
+            selected === "" ?
+            (
+              <div className=""></div>
+            ) :
+            ""
+          }
+          <div className="community__sub-orgs--mobile__navigation">
+            <button onClick={() => setSelected("ai")}>
+              <img src={AILogo} alt="AI Logo"/>
+            </button>
+            <button onClick={() => setSelected("cyber")}>
+              <img src={CyberLogo} alt="Cyber Logo" />
+            </button>
+            <button onClick={() => setSelected("hack")}>
+              <img src={HackLogo} alt="Hack Logo"/>
+            </button>
+            <button onClick={() => setSelected("innovate")}>
+              <img src={InnovateLogo} alt="Innovate Logo"/>
+            </button>
+            <button onClick={() => setSelected("design")}>
+              <img src={DesignLogo} alt="Design Logo"/>
+            </button>
+          </div>
+        </section>
+      )
+    }</>
   )
 }
 

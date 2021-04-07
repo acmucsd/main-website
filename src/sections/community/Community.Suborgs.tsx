@@ -35,19 +35,32 @@ import InnovateYoutube from "../../assets/communities-links/innovate-youtube.svg
 
 import DesignLogo from "../../assets/logos/acm-design.svg"
 
-const AICommunity = () => {
+const AICommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
   return (
     <div className="community__sub-orgs__community-card">
       <div className="color_slide redbg" />
-
       <div className="community__sub-orgs__community-card__content">
-        <img
-          src={AILogo}
-          alt="ACM AI"
-          className="community__sub-orgs__community-card__logo"
-        />
+        {
+          !isMobile ?
+          <img
+            src={AILogo}
+            alt="ACM AI"
+            className="community__sub-orgs__community-card__logo"
+          /> :
+          ""
+        }   
         <div>
-          <h1 className="red">ACM AI</h1>
+          <div className="community__sub-orgs__community-card__header">
+            {
+              isMobile ?
+              <img
+                src={AILogo}
+                alt="ACM AI"
+              /> :
+              ""
+            }
+            <h1 className="red">ACM AI</h1>
+          </div>
           <p>
             Our goals are to help build a community of AI enthusiasts at UCSD
             and connect that community to the broader AI network.
@@ -75,19 +88,33 @@ const AICommunity = () => {
     </div>
   )
 }
-const CyberCommunity = () => {
+const CyberCommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
   return (
     <div className="community__sub-orgs__community-card">
       <div className="color_slide turquoisebg" />
 
       <div className="community__sub-orgs__community-card__content">
-        <img
-          src={CyberLogo}
-          alt="ACM Cyber"
-          className="community__sub-orgs__community-card__logo"
-        />
+        {
+          !isMobile ?
+          <img
+            src={CyberLogo}
+            alt="ACM Cyber"
+            className="community__sub-orgs__community-card__logo"
+          /> :
+          ""
+        } 
         <div>
-          <h1 className="turquoise">ACM Cyber</h1>
+          <div className="community__sub-orgs__community-card__header">
+            {
+              isMobile ?
+              <img
+                src={CyberLogo}
+                alt="ACM Cyber"
+              /> :
+              ""
+            }
+            <h1 className="turquoise">ACM Cyber</h1>
+          </div>
           <p>
             ACM Cyber aims to provide member-first opportunities to learn,
             teach, and practice critical cybersecurity skills to help the UCSD
@@ -130,19 +157,33 @@ const CyberCommunity = () => {
     </div>
   )
 }
-const HackCommunity = () => {
+const HackCommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
   return (
     <div className="community__sub-orgs__community-card" id="Hack">
       <div className="color_slide yellowbg" />
 
       <div className="community__sub-orgs__community-card__content">
-        <img
-          src={HackLogo}
-          alt="ACM Hack"
-          className="community__sub-orgs__community-card__logo"
-        />
+        {
+          !isMobile ?
+          <img
+            src={HackLogo}
+            alt="ACM Hack"
+            className="community__sub-orgs__community-card__logo"
+          /> :
+          ""
+        } 
         <div>
-          <h1 className="yellow">ACM Hack</h1>
+          <div className="community__sub-orgs__community-card__header">
+            {
+              isMobile ?
+              <img
+                src={HackLogo}
+                alt="ACM Hack"
+              /> :
+              ""
+            }
+            <h1 className="yellow">ACM Hack</h1>
+          </div>
           <p>
             We focus on learning more about software engineering and exploring
             what is possible through code.
@@ -173,19 +214,33 @@ const HackCommunity = () => {
   )
 }
 
-const InnovateCommunity = () => {
+const InnovateCommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
   return (
     <div className="community__sub-orgs__community-card" id="Innovate">
       <div className="color_slide purplebg" />
 
       <div className="community__sub-orgs__community-card__content">
-        <img
-          src={InnovateLogo}
-          alt="ACM Innovate"
-          className="community__sub-orgs__community-card__logo"
-        />
+        {
+          !isMobile ?
+          <img
+            src={InnovateLogo}
+            alt="ACM Innovate"
+            className="community__sub-orgs__community-card__logo"
+          /> :
+          ""
+        } 
         <div>
-          <h1 className="purple">ACM Innovate</h1>
+          <div className="community__sub-orgs__community-card__header">
+            {
+              isMobile ?
+              <img
+                src={InnovateLogo}
+                alt="ACM Innovate"
+              /> :
+              ""
+            }
+            <h1 className="purple">ACM Innovate</h1>
+          </div>
           <p>
             We create and foster an entrepreneurial spirit with regard to both
             new nonprofit and for-profit companies.
@@ -219,19 +274,33 @@ const InnovateCommunity = () => {
   )
 }
 
-const DesignCommunity = () => {
+const DesignCommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
   return (
     <div className="community__sub-orgs__community-card">
       <div className="color_slide pinkbg" />
 
       <div className="community__sub-orgs__community-card__content">
-        <img
-          src={DesignLogo}
-          alt="ACM Design"
-          className="community__sub-orgs__community-card__logo"
-        />
+        {
+          !isMobile ?
+          <img
+            src={DesignLogo}
+            alt="ACM Design"
+            className="community__sub-orgs__community-card__logo"
+          /> :
+          ""
+        } 
         <div>
-          <h1 className="pink">ACM Design</h1>
+          <div className="community__sub-orgs__community-card__header">
+            {
+              isMobile ?
+              <img
+                src={DesignLogo}
+                alt="ACM Design"
+              /> :
+              ""
+            }
+            <h1 className="pink">ACM Design</h1>
+          </div>
           <p>
             We explore the intersection between computing and design. We want to
             demonstrate that design can be accessible and highly valuable to
@@ -255,57 +324,69 @@ const DesignCommunity = () => {
     </div>
   )
 }
-const CommunitySubOrgs: React.FC = () => {
-  const [windowWidth, setWidth] = useState(window.innerWidth)
+
+const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
   const [selected, setSelected] = useState("")
 
-  useEffect(() => {
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  })
-
-  const handleResize = () => {
-    setWidth(window.innerWidth)
+  const renderCommunity = (suborg: string) => {
+    switch(suborg) {
+      case 'ai':
+        return <AICommunity isMobile={isMobile}/>
+      case 'cyber':
+        return <CyberCommunity isMobile={isMobile}/>
+      case 'hack':
+        return <HackCommunity isMobile={isMobile}/>
+      case 'innovate':
+        return <InnovateCommunity isMobile={isMobile}/>
+      case 'design':
+        return <DesignCommunity isMobile={isMobile}/>
+      default:
+        return (
+          <div className="community__sub-orgs--mobile__description">
+            <p>ACM @ UCSD is one large community, but it is made up of several smaller
+            communities focused on specific areas of technology.</p>
+            <p>Learn more about each community</p>
+          </div>
+        )
+    }
   }
   
   return (
-    <>{
-      windowWidth > 850 ? (
+    <>
+      {
+        !isMobile ? (
         <section className="community__sub-orgs">
           <div className="spacer80px" id="AI"></div>
-          <AICommunity />
-          <CyberCommunity />
-          <HackCommunity />
-          <InnovateCommunity />
-          <DesignCommunity />
+          <AICommunity isMobile={isMobile}/>
+          <CyberCommunity isMobile={isMobile}/>
+          <HackCommunity isMobile={isMobile}/>
+          <InnovateCommunity isMobile={isMobile}/>
+          <DesignCommunity isMobile={isMobile}/>
         </section>
-      ) : (
-        <section className="community__sub-orgs--mobile">
-          {
-            selected === "" ?
-            (
-              <div className=""></div>
-            ) :
-            ""
-          }
-          <div className="community__sub-orgs--mobile__navigation">
-            <button onClick={() => setSelected("ai")}>
-              <img src={AILogo} alt="AI Logo"/>
-            </button>
-            <button onClick={() => setSelected("cyber")}>
-              <img src={CyberLogo} alt="Cyber Logo" />
-            </button>
-            <button onClick={() => setSelected("hack")}>
-              <img src={HackLogo} alt="Hack Logo"/>
-            </button>
-            <button onClick={() => setSelected("innovate")}>
-              <img src={InnovateLogo} alt="Innovate Logo"/>
-            </button>
-            <button onClick={() => setSelected("design")}>
-              <img src={DesignLogo} alt="Design Logo"/>
-            </button>
-          </div>
-        </section>
+        ) : (
+        <>
+          <section className="community__sub-orgs--mobile">
+            <h1 className="community__sub-orgs--mobile__header"onClick={() => setSelected("")}>Communities</h1>
+            {renderCommunity(selected)}
+            <div className="community__sub-orgs--mobile__navigation">
+              <button onClick={() => setSelected("ai")}>
+                <img className={selected === "ai" ? "selected" : ""} src={AILogo} alt="AI Logo"/>
+              </button>
+              <button onClick={() => setSelected("cyber")}>
+                <img src={CyberLogo} alt="Cyber Logo" />
+              </button>
+              <button onClick={() => setSelected("hack")}>
+                <img src={HackLogo} alt="Hack Logo"/>
+              </button>
+              <button onClick={() => setSelected("innovate")}>
+                <img src={InnovateLogo} alt="Innovate Logo"/>
+              </button>
+              <button onClick={() => setSelected("design")}>
+                <img src={DesignLogo} alt="Design Logo"/>
+              </button>
+            </div>
+          </section>
+        </>
       )
     }</>
   )

@@ -24,8 +24,54 @@
     &__communities {
       text-align: left;
     }
+    @media only screen and (max-width: 812px) {
+      margin-top: 50px;
+      > h1 {
+        text-align: left;
+      }
+      > p {
+        display: none;
+      }
+    }
   }
   &__sub-orgs {
+    &--mobile {
+      h1 {
+        font-weight: 500;
+        font-size: 45px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      &__description > p {
+        padding: 0 2rem;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+      &__navigation {
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+        > button {
+          background: none;
+          outline: none;
+          border: none;
+          img {
+            margin: 0;
+          }
+          &:hover {
+            cursor: pointer;
+            img {
+              transform: scale(1.1);
+              transition: transform 0.2s;
+            }
+          }
+        }
+      }
+    }
+    .selected {
+      border: solid 5px #000;
+    }
     &__community-card {
       display: inline-flex;
       height: auto;
@@ -45,6 +91,15 @@
         left: 0;
         min-width: 70px;
         z-index: -1;
+      }
+      &__header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        img {
+          height: 60px;
+          margin-right: 10px;
+        }
       }
       &__logo {
         min-width: 226px;
@@ -90,6 +145,33 @@
                   transform: scale(1.05);
                 }
               }
+            }
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 812px) {
+      p {
+        padding: 3em !important;
+      }
+      &__community-card {
+        padding: 0 3em !important;
+        .color_slide {
+          display: none;
+        }
+        &__header {
+          justify-content: center;
+          h1 {
+            font-size: 28px;
+          }
+        }
+        &__content {
+          div {
+            p {
+              font-size: 16px;
+            }
+            .community-links a {
+              padding-right: 20px;
             }
           }
         }

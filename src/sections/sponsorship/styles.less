@@ -4,7 +4,7 @@
   &__info {
     padding-left: 45px;
     padding-right: 45px;
-    height: 90vh;
+    height: 620px;
     min-height: 500px;
     display: flex;
     align-items: flex-start;
@@ -43,10 +43,12 @@
       &__description {
         @media only screen and (min-width: 810px) {
           font-size: 35px;
+          text-align: left;
         }
         @media only screen and (max-width: 812px) {
           font-size: 26px;
           max-width: 400px;
+          text-align: center;
         }
         font-weight: 500;
         margin-top: 0px;
@@ -59,15 +61,15 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     &__header {
       @media only screen and (min-width: 810px) {
         font-size: 36px;
         margin-bottom: 80px;
       }
       @media only screen and (max-width: 812px) {
-        font-size: 30px;
+        font-size: 32px;
         margin-bottom: 40px;
       }
 
@@ -82,6 +84,16 @@
       flex-wrap: wrap;
       flex-direction: row;
       > img {
+        @media only screen and (max-width: 812px) {
+          padding: 0px 40px;
+        }
+        padding: 10px;
+      }
+      > #first {
+        @media only screen and (max-width: 812px) {
+          padding: 0px 44px;
+        }
+
         padding: 10px;
       }
     }

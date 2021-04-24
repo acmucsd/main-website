@@ -18,7 +18,15 @@ import DesignLogo from "../../assets/logos/acm-design.svg"
 import HackLogo from "../../assets/logos/acm-hack.svg"
 import InnovateLogo from "../../assets/logos/acm-innovate.svg"
 
-const CommunitiesGrid = () => {
+interface CommunitiesGridProps {
+  verticalLayout: boolean
+}
+
+const defaultProps: CommunitiesGridProps = {
+  verticalLayout: false
+}
+
+const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({verticalLayout}) => {
   const [hasBeenVisible, setHasBeenVisible] = useState(false)
 
   return (
@@ -27,7 +35,7 @@ const CommunitiesGrid = () => {
         if (isVisible) setHasBeenVisible(true)
       }}
     >
-      <div className="communitiesGrid">
+      <div className={verticalLayout ? 'communitiesGrid vertical' : 'communitiesGrid'}>
         <a
           href="/communities#AI"
           className={`communitiesGrid__community ${
@@ -39,6 +47,7 @@ const CommunitiesGrid = () => {
             <h3>
               <span>ACM</span> AI
             </h3>
+            <p>Artificial Intelligence</p>
           </div>
         </a>
         <a
@@ -52,6 +61,8 @@ const CommunitiesGrid = () => {
             <h3>
               <span>ACM</span> Cyber
             </h3>
+            <p>Cyber Security</p>
+
           </div>
         </a>
         <a
@@ -65,7 +76,7 @@ const CommunitiesGrid = () => {
             <h3>
               <span>ACM</span> Design
             </h3>
-            <p>Coming Soon</p>
+            <p>Design and Interaction</p>
           </div>
         </a>
         <a
@@ -79,6 +90,7 @@ const CommunitiesGrid = () => {
             <h3>
               <span>ACM</span> Hack
             </h3>
+            <p>Software Engineering</p>
           </div>
         </a>
         <a
@@ -92,10 +104,13 @@ const CommunitiesGrid = () => {
             <h3>
               <span>ACM</span> Innovate
             </h3>
+            <p>Entrepreneurship</p>
           </div>
         </a>
       </div>
     </VisibilitySensor>
   )
 }
+
+CommunitiesGrid.defaultProps = defaultProps
 export default CommunitiesGrid

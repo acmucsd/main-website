@@ -2,12 +2,133 @@
 
 .about {
   &__hero {
+    display: flex;
+    align-items: center;
+    margin: 75px 0;
+    h1 {
+      font-size: 45px;
+      margin-bottom: 40px;
+    }
+    h3 {
+      font-size: 25px;
+      font-weight: 500;
+    }
+    img {
+      width: 40%;
+    }
   }
   &__get-involved {
-  }
-  &__communities {
+    h2 {
+      text-align: center;
+      font-size: 45px;
+    }
+    a {
+      font-weight: 500;
+      color: @black;
+    }
+    &__section {
+      display: flex;
+      flex-direction: row;
+      > img {
+        margin-right: 40px;
+        height: 240px;
+      }
+      margin: 100px 3rem;
+      &__description {
+        h3 {
+          font-size: 30px;
+          margin-bottom: 30px;
+        }
+        .purple {
+          color: @purple;
+        }
+        .orange {
+          color: @orange;
+        }
+        .blue {
+          color: @blue;
+        }
+        .pink {
+          color: @pink;
+        }
+        p {
+          font-size: 20px;
+          font-weight: 500;
+          margin-bottom: 0px;
+        }
+        &__links {
+          margin-top: 30px;
+          align-items: flex-start;
+          justify-content: flex-start;
+          img {
+            margin: 0 35px 0 0;
+            height: 40px;
+          }
+        }
+        form {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          label {
+            font-size: 25px;
+            font-weight: 500;
+            margin: 10px 0 20px 0;
+          }
+          input {
+            padding: 2px 2px 2px 1em;
+            width: 272px;
+            margin-bottom: 24px;
+            border-radius: 8px;
+            border-color: solid 1px @black;
+            font-weight: bold;
+            font-size: 16px;
+            outline: none;
+          }
+          button {
+            color: @white;
+            background-color: @black;
+            height: 2em;
+            width: 165px;
+            height: 35px;
+            border-radius: 8px;
+            border-color: @black;
+            border-style: none;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 36px;
+            outline: none;
+          }
+        }
+      }
+    }
   }
   &__membership {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      text-align: center;
+      font-size: 45px;
+    }
+    p {
+      font-size: 20px;
+      padding: 0 100px;
+      text-align: center;
+    }
+    button {
+      color: @white;
+      background-color: @black;
+      height: 2em;
+      width: 165px;
+      height: 35px;
+      border-radius: 8px;
+      border-color: @black;
+      border-style: none;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 36px;
+      outline: none;
+    }
   }
   &__board {
   }

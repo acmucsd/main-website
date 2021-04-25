@@ -14,7 +14,34 @@
       font-weight: 500;
     }
     img {
+      padding-left: 2em;
       width: 40%;
+    }
+    @media only screen and (max-width: 1050px) {
+      padding: 0 3rem !important;
+    }
+    @media only screen and (max-width: 814px) {
+      align-items: center;
+      &__description > div {
+        display: flex;
+        align-items: center;
+      }
+      img {
+        padding-left: 0.2em;
+        width: 50%;
+      }
+    }
+    @media only screen and (max-width: 500px) {
+      h3 {
+        font-size: 20px;
+        font-weight: 400;
+      }
+      &__description > div {
+        flex-direction: column;
+      }
+      img {
+        width: 100%;
+      }
     }
   }
   &__get-involved {
@@ -97,6 +124,89 @@
             font-size: 20px;
             margin-bottom: 36px;
             outline: none;
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 814px) {
+      h2 {
+        padding: 0 1em;
+        font-size: 40px;
+        text-align: center;
+      }
+      &__section {
+        flex-direction: column;
+        &__communities--mobile {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 40px 0;
+          > div {
+            height: 70px;
+            a img {
+              margin: 0 10px;
+              width: 90px;
+            }
+          }
+        }
+        &__description {
+          padding: 0 3em;
+          display: flex;
+          flex-direction: column;
+          align-items: left;
+          > img {
+            height: 260px;
+            width: 260px;
+            align-self: center;
+          }
+          h3 {
+            font-size: 32px;
+            text-align: center;
+          }
+          p {
+            font-weight: 400;
+            text-align: center;
+          }
+          a {
+            text-align: center;
+          }
+          &__links {
+            align-self: center;
+            img {
+              margin: 0 25px 0 0;
+              height: 55px;
+            }
+          }
+          form {
+            align-items: center;
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 500px) {
+      h2 {
+        text-align: left;
+      }
+      &__section {
+        &__communities--mobile {
+          > div {
+            height: 60px;
+            a img {
+              margin: 0 5px;
+              width: 70px;
+            }
+          }
+        }
+        &__description {
+          padding: 0 0em;
+          p {
+            text-align: left;
+          }
+          a {
+            text-align: left;
+          }
+          form {
+            align-items: flex-start;
           }
         }
       }

@@ -11,7 +11,7 @@ import AboutBoard from "../sections/about/About.Board"
 
 const AboutPage: React.FC = () => {
   const [windowWidth, setWidth] = useState(window.innerWidth)
-  const isMobile = windowWidth < 814
+  const isMobile = windowWidth <= 814
 
   useEffect(() => {
     window.addEventListener('resize', handleResize)

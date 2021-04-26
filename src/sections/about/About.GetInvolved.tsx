@@ -30,9 +30,9 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }>  = ({isMobile}) => {
                     {isMobile && <img src={AboutSocial} alt=""/>}
                     {!isMobile && <p>To keep up with what's happening, we recommend joining our discord server, following our Facebook and Instagram. </p>}
                     <div className="about__get-involved__section__description__links">
-                        <a href=""><img src={DiscordLogo} alt="Discord Logo"/></a>
-                        <a href=""><img src={FacebookLogo} alt="Facebook Logo"/></a>
-                        <a href=""><img src={LinkedinLogo} alt="Linkedin Logo"/></a>
+                        <a href="https://discord.com/"><img src={DiscordLogo} alt="Discord Logo"/></a>
+                        <a href="https://www.facebook.com/acmucsd"><img src={FacebookLogo} alt="Facebook Logo"/></a>
+                        <a href="https://www.linkedin.com/company/acm-ucsd/"><img src={LinkedinLogo} alt="Linkedin Logo"/></a>
                     </div>
                     <form>
                         <label>Subscribe to our Newsletter!</label>
@@ -58,13 +58,13 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }>  = ({isMobile}) => {
                     isMobile &&
                     <div className="about__get-involved__section__communities--mobile">
                         <div>
-                            <a href=""><img src={HackLogo} alt="ACM Hack Logo"/></a>
-                            <a href=""><img src={InnovateLogo} alt="ACM Innovate Logo"/></a>
+                            <a href="/communities#Hack"><img src={HackLogo} alt="ACM Hack Logo"/></a>
+                            <a href="/communities#Innovate"><img src={InnovateLogo} alt="ACM Innovate Logo"/></a>
                         </div>
                         <div>
-                            <a href=""><img src={AILogo} alt="ACM AI Logo"/></a>
-                            <a href=""><img src={CyberLogo} alt="ACM Cyber Logo"/></a>
-                            <a href=""><img src={DesignLogo} alt="ACM Design Logo"/></a>
+                            <a href="/communities#AI"><img src={AILogo} alt="ACM AI Logo"/></a>
+                            <a href="/communities#Cyber"><img src={CyberLogo} alt="ACM Cyber Logo"/></a>
+                            <a href="/communities#Design"><img src={DesignLogo} alt="ACM Design Logo"/></a>
                         </div>
                     </div>
                 }

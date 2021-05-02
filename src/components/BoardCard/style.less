@@ -1,0 +1,114 @@
+@import "../../styles/colors.less";
+@import "../../styles/mixins.less";
+
+.BoardCard {
+  background: #ffffff;
+  border: 3px solid;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  width: 174px;
+  height: 222px;
+  @media only screen and (max-width: 500px) {
+    width: 133px;
+    height: 169px;
+  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  &_titleHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 53px;
+    @media only screen and (max-width: 500px) {
+      height: 40px;
+    }
+    > h1 {
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 17px;
+      margin: 0px 12px;
+      @media only screen and (max-width: 500px) {
+        font-size: 11px;
+        margin: 0px 8px;
+      }
+    }
+  }
+  &_pfp {
+    width: 100%;
+    height: 114px;
+
+    @media only screen and (max-width: 500px) {
+      font-size: 11px;
+      height: 87px;
+    }
+    > img {
+      margin: 0;
+    }
+    overflow: hidden;
+  }
+  &_footer {
+    width: 100%;
+    height: 42px;
+    h1 {
+      font-size: 16px;
+      line-height: 21px;
+      color: @black;
+      margin: 0px 12px;
+      margin-top: 2px;
+      @media only screen and (max-width: 500px) {
+        font-size: 14px;
+        margin: 0px 8px;
+      }
+    }
+    > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0px 12px;
+      @media only screen and (max-width: 500px) {
+        margin: 0px 8px;
+      }
+      margin-top: 4px;
+      > p {
+        font-size: 12px;
+        line-height: 16px;
+        margin: 0;
+        @media only screen and (max-width: 500px) {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+.BoardCard.general {
+  border-color: @blue;
+  color: @blue;
+  path {
+    fill: @blue;
+  }
+}
+.BoardCard.ai {
+  border-color: @red;
+  color: @red;
+  path {
+    fill: @red;
+  }
+}
+.BoardCard.cyber {
+  border-color: @turquoise;
+  color: @turquoise;
+}
+.BoardCard.hack {
+  border-color: @orange;
+  color: @orange;
+}
+.BoardCard.innovate {
+  border-color: @purple;
+  color: @purple;
+}
+.BoardCard.design {
+  border-color: @pink;
+  color: @pink;
+}

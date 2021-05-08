@@ -36,8 +36,11 @@ const BoardGrid: React.FC<BoardGridProps> = ({ members_list, isMobile }) => {
     setCurrentPage(generateCurrentPage(members_list, page))
   }, [])
   useEffect(() => {
+    if (page > Math.ceil(members_list.length / 8 - 1)) {
+      setPage(Math.ceil(members_list.length / 8 - 1))
+    }
     setCurrentPage(generateCurrentPage(members_list, page))
-  }, [page])
+  }, [page, members_list])
   return (
     <div className="BoardGrid">
       <div className="BoardGrid_arrowContainer">

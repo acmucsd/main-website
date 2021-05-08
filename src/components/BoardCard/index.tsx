@@ -1,21 +1,46 @@
 import React from "react"
 import "./style.less"
 
-const BoardCard: React.FC = props => {
-  const org = "ai"
+interface BoardCardProps {
+  boardmember: Object
+}
+
+const defaultProps: BoardCardProps = {
+  boardmember: {
+    name: "Kitten Kittenson",
+    org: "ai",
+    title: "Department Funding Manager",
+    email: "kitten@acmucsd.org",
+    profile_image:
+      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+    personal_link: "ucsd.edu",
+  },
+}
+const openInNewTab = url => {
+  const newWindow = window.open(url, "_blank", "noopener,noreferrer")
+  if (newWindow) newWindow.opener = null
+}
+const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
+  const name = boardmember.name
+  const org = boardmember.org
+  const title = boardmember.title
+  const email = boardmember.email
+  const profile_image = boardmember.profile_image
+  const personal_link = boardmember.personal_link
+
   return (
-    <div className="BoardCard ai">
+    <div
+      className={"BoardCard " + org}
+      onClick={() => openInNewTab(personal_link)}
+    >
       <div className="BoardCard_titleHeader">
-        <h1>Department Funding Manager</h1>
+        <h1>{title}</h1>
       </div>
       <div className="BoardCard_pfp">
-        <img
-          alt="cat"
-          src="https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg"
-        />
+        <img alt={name} src={profile_image} />
       </div>
       <div className="BoardCard_footer">
-        <h1>Kitten Kittenson</h1>
+        <h1>{name}</h1>
         <div>
           <svg
             width="18"
@@ -29,11 +54,12 @@ const BoardCard: React.FC = props => {
               className={org}
             />
           </svg>
-          <p>kitten@acmucsd.org</p>
+          <p>{email}</p>
         </div>
       </div>
     </div>
   )
 }
 
+BoardCard.defaultProps = defaultProps
 export default BoardCard

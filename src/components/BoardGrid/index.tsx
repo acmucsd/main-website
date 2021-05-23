@@ -21,7 +21,7 @@ const generateCurrentPage = (members_list, page) => {
   return (
     <div className="BoardGrid_grid">
       {current_page.map(member => {
-        return <BoardCard boardmember={member} />
+        return <BoardCard boardmember={member} key={Math.random() * 100000} />
       })}
     </div>
   )

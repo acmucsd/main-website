@@ -28,17 +28,15 @@ const members_list = [
     org: "ai",
     title: "Department Funding Manager",
     email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+    profile_image: "",
     personal_link: "ucsd.edu",
   },
   {
     name: "Kitten Kittenson",
-    org: "cyber",
+    org: "general",
     title: "Community Director",
     email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+    profile_image: "",
     personal_link: "ucsd.edu",
   },
   {

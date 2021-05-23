@@ -1,6 +1,13 @@
 import React from "react"
 import "./style.less"
 
+import GeneralDefault from "../../assets/default-board-images/general-default.svg"
+import AIDefault from "../../assets/default-board-images/ai-default.svg"
+import CyberDefault from "../../assets/default-board-images/cyber-default.svg"
+import DesignDefault from "../../assets/default-board-images/design-default.svg"
+import HackDefault from "../../assets/default-board-images/hack-default.svg"
+import InnovateDefault from "../../assets/default-board-images/innovate-default.svg"
+
 interface BoardCardProps {
   boardmember: Object
 }
@@ -27,7 +34,27 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
   const email = boardmember.email
   const profile_image = boardmember.profile_image
   const personal_link = boardmember.personal_link
-
+  let boardDefault
+  switch (org) {
+    case "general":
+      boardDefault = GeneralDefault
+      break
+    case "ai":
+      boardDefault = AIDefault
+      break
+    case "cyber":
+      boardDefault = CyberDefault
+      break
+    case "design":
+      boardDefault = DesignDefault
+      break
+    case "hack":
+      boardDefault = HackDefault
+      break
+    case "innovate":
+      boardDefault = InnovateDefault
+      break
+  }
   return (
     <div
       className={"BoardCard " + org}
@@ -37,7 +64,11 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
         <h1>{title}</h1>
       </div>
       <div className="BoardCard_pfp">
-        <img alt={name} src={profile_image} />
+        {profile_image !== "" ? (
+          <img alt={name} src={profile_image} />
+        ) : (
+          <img alt={name} src={boardDefault} />
+        )}
       </div>
       <div className="BoardCard_footer">
         <h1>{name}</h1>

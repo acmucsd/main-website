@@ -30,6 +30,7 @@ const members_list = [
     email: "kitten@acmucsd.org",
     profile_image: "",
     personal_link: "ucsd.edu",
+    linkedin_link: "https://linkedin.com",
   },
   {
     name: "Kitten Kittenson",

@@ -10,13 +10,21 @@
   width: 174px;
   height: 222px;
   margin: 15px;
+  cursor: pointer;
 
   -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 1s; /* Firefox < 16 */
   -ms-animation: fadein 1s; /* Internet Explorer */
   -o-animation: fadein 1s; /* Opera < 12.1 */
   animation: fadein 1s;
-
+  &_hoverable_svg {
+    transition: box-shadow 0.1s;
+  }
+  &_hoverable_svg:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.1s;
+  }
   @media only screen and (max-width: 600px) {
     width: 133px;
     height: 169px;
@@ -72,10 +80,12 @@
         margin: 0px 8px;
       }
     }
+    > div > svg {
+      margin-right: 10px;
+    }
     > div {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
       margin: 0px 12px;
       @media only screen and (max-width: 600px) {
         margin: 0px 8px;

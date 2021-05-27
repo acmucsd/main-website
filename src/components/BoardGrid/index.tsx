@@ -15,9 +15,6 @@ const generateCurrentPage = (members_list, page) => {
     page * per_page,
     (page + 1) * per_page
   )
-  // console.log(current_page)
-  // console.log(page)
-  // console.log("indices " + page * per_page + ", " + (page + 1) * per_page)
   return (
     <div className="BoardGrid_grid">
       {current_page.map(member => {

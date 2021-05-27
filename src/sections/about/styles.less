@@ -258,6 +258,8 @@
       flex-wrap: wrap;
       width: fit-content;
       margin: 0 20px 60px 20px;
+      transition: transform 0.1s;
+      transform: scale(1);
       > p {
         width: fit-content;
         margin: 10px;
@@ -269,6 +271,11 @@
         margin: 7px;
       }
       color: #6b6b6b;
+      :hover {
+        transition: transform 0.1s;
+        transform: scale(1.1);
+        cursor: pointer;
+      }
     }
   }
 }

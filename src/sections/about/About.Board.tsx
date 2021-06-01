@@ -22,457 +22,461 @@ import DesignEmpty from "../../assets/board-filters/design-empty.svg"
 
 import InnovateSelected from "../../assets/board-filters/innovate-selected.svg"
 import InnovateEmpty from "../../assets/board-filters/innovate-empty.svg"
-const members_list = [
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image: "",
-    personal_link: "ucsd.edu",
-    linkedin_link: "https://linkedin.com",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "general",
-    title: "Community Director",
-    email: "kitten@acmucsd.org",
-    profile_image: "",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "hack",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "design",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "innovate",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "general",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "cyber",
-    title: "Community Director",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "hack",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "design",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "innovate",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "general",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "cyber",
-    title: "Community Director",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "hack",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "design",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "innovate",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "general",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "cyber",
-    title: "Community Director",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "hack",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "design",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "innovate",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "general",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "cyber",
-    title: "Community Director",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "hack",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "design",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "innovate",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "general",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-  {
-    name: "Kitten Kittenson",
-    org: "ai",
-    title: "Department Funding Manager",
-    email: "kitten@acmucsd.org",
-    profile_image:
-      "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
-    personal_link: "ucsd.edu",
-  },
-]
+
+import BoardData from '../../board-data.json'
+const members_list = BoardData
+
+// const members_list = [
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image: "",
+//     personal_link: "ucsd.edu",
+//     linkedin_link: "https://linkedin.com",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "general",
+//     title: "Community Director",
+//     email: "kitten@acmucsd.org",
+//     profile_image: "",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "hack",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "design",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "innovate",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "general",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "cyber",
+//     title: "Community Director",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "hack",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "design",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "innovate",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "general",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "cyber",
+//     title: "Community Director",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "hack",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "design",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "innovate",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "general",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "cyber",
+//     title: "Community Director",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "hack",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "design",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "innovate",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "general",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "cyber",
+//     title: "Community Director",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "hack",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "design",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "innovate",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "general",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+//   {
+//     name: "Kitten Kittenson",
+//     org: "ai",
+//     title: "Department Funding Manager",
+//     email: "kitten@acmucsd.org",
+//     profile_image:
+//       "https://www.petage.com/wp-content/uploads/2019/09/Depositphotos_74974941_xl-2015-e1569443284386-670x627.jpg",
+//     personal_link: "ucsd.edu",
+//   },
+// ]
 const filter = (filters, members_list) => {
   if (filters.length == 0) {
     // assume all board

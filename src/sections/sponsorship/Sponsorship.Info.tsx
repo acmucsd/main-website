@@ -1,8 +1,7 @@
 import React from "react"
 import "./styles.less"
 
-import SponsorHeroLogo from "../../assets/sponsor_hero.svg"
-import SponsorHeroLogoMobile from "../../assets/sponsor_hero_mobile.svg"
+import SponsorHeroLogo from "../../assets/sponsor-images/sponsor_hero.png"
 
 const SponsorshipInfo: React.FC = () => {
   return (

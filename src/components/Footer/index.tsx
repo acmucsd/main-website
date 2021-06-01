@@ -32,6 +32,7 @@ const cardContents = [
   },
 ]
 const Footer: React.FC = () => {
+  const [email, setEmail] = useState("")
   return (
     <div className="footer">
       <img className="acmBlueFade" src={ACMBlueFade} />
@@ -59,9 +60,10 @@ const Footer: React.FC = () => {
               type="text"
               id="emailinput"
               name="fname"
-              value="my@email.com"
+              placeholder="my@email.com"
+              onChange={(e) => setEmail(e.target.value)}
             />
-            <button>Subscribe!</button>
+            <button className={email.length > 0 ? "blue" : ""}>Subscribe!</button>
           </div>
         </div>
       </div>
@@ -92,7 +94,7 @@ const Footer: React.FC = () => {
             type="text"
             id="emailinput"
             name="fname"
-            value="my@email.com"
+            placeholder="my@email.com"
           />
           <button>Subscribe!</button>
         </div>

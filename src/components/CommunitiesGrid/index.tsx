@@ -31,6 +31,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({verticalLayout}) => {
 
   return (
     <VisibilitySensor
+      partialVisibility={true}
       onChange={isVisible => {
         if (isVisible) setHasBeenVisible(true)
       }}

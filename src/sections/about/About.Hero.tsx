@@ -11,7 +11,7 @@ const AboutHero: React.FC<{ isMobile: boolean }>  = ({ isMobile }) => {
                     <h1>What is ACM @ UCSD?</h1>
                     {isMobile && <img src={HeroImage} alt="About Hero Image"/>}
                 </div>
-                <h3>We are the Association for Computing Machinery at UCSD! <br/><br/>We are an inclusive member-first community for all who are interested in the field of computing. We welcome all skill levels and majors to our events and activities!</h3>
+                <h3>We are the Association for Computing Machinery at UCSD! <br/><br/>We are an inclusive member-first community for all who are interested in the field of computing. We welcome all skill levels and majors!</h3>
             </div>
             {!isMobile && <img src={HeroImage} alt="About Hero Image"/>}
         </section>

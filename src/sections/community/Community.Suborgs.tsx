@@ -14,6 +14,7 @@ import {
 import AILogo from "../../assets/logos/acm-ai.svg"
 import AIDiscord from "../../assets/communities-links/ai-discord.svg"
 import AIHome from "../../assets/communities-links/ai-home.svg"
+import AILogoSelected from "../../assets/communities-navigation/ai-selected.svg"
 
 import CyberLogo from "../../assets/logos/acm-cyber.svg"
 import CyberDiscord from "../../assets/communities-links/cyber-discord.svg"
@@ -23,17 +24,21 @@ import CyberFacebook from "../../assets/communities-links/cyber-facebook.svg"
 import CyberYoutube from "../../assets/communities-links/cyber-youtube.svg"
 import CyberMail from "../../assets/communities-links/cyber-mail.svg"
 import CyberLinkedin from "../../assets/communities-links/cyber-linkedin.svg"
+import CyberLogoSelected from "../../assets/communities-navigation/cyber-selected.svg"
 
 import HackLogo from "../../assets/logos/acm-hack.svg"
 import HackDiscord from "../../assets/communities-links/hack-discord.svg"
 import HackHome from "../../assets/communities-links/hack-home.svg"
+import HackLogoSelected from "../../assets/communities-navigation/hack-selected.svg"
 
 import InnovateLogo from "../../assets/logos/acm-innovate.svg"
 import InnovateDiscord from "../../assets/communities-links/innovate-discord.svg"
 import InnovateHome from "../../assets/communities-links/innovate-home.svg"
 import InnovateYoutube from "../../assets/communities-links/innovate-youtube.svg"
+import InnovateLogoSelected from "../../assets/communities-navigation/innovate-selected.svg"
 
 import DesignLogo from "../../assets/logos/acm-design.svg"
+import DesignLogoSelected from "../../assets/communities-navigation/design-selected.svg"
 
 const AICommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
   return (
@@ -370,19 +375,19 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
             {renderCommunity(selected)}
             <div className="community__sub-orgs--mobile__navigation">
               <button onClick={() => setSelected("ai")}>
-                <img className={selected === "ai" ? "selected" : ""} src={AILogo} alt="AI Logo"/>
+                <img src={selected === "ai" ? AILogoSelected : AILogo} alt="AI Logo"/>
               </button>
               <button onClick={() => setSelected("cyber")}>
-                <img src={CyberLogo} alt="Cyber Logo" />
+                <img src={selected === "cyber" ? CyberLogoSelected : CyberLogo} alt="Cyber Logo" />
               </button>
               <button onClick={() => setSelected("hack")}>
-                <img src={HackLogo} alt="Hack Logo"/>
+                <img src={selected === "hack" ? HackLogoSelected : HackLogo} alt="Hack Logo"/>
               </button>
               <button onClick={() => setSelected("innovate")}>
-                <img src={InnovateLogo} alt="Innovate Logo"/>
+                <img src={selected === "innovate" ? InnovateLogoSelected : InnovateLogo} alt="Innovate Logo"/>
               </button>
               <button onClick={() => setSelected("design")}>
-                <img src={DesignLogo} alt="Design Logo"/>
+                <img src={selected === "design" ? DesignLogoSelected : DesignLogo} alt="Design Logo"/>
               </button>
             </div>
           </section>

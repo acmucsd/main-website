@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
+import { Size, useWindowSize } from "../utils"
 
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
@@ -10,17 +11,13 @@ import AboutMembership from "../sections/about/About.Membership"
 import AboutBoard from "../sections/about/About.Board"
 
 const AboutPage: React.FC = () => {
-  const [windowWidth, setWidth] = useState(window.innerWidth)
-  const isMobile = windowWidth <= 814
+  const size: Size = useWindowSize()
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  })
-
-  const handleResize = () => {
-    setWidth(window.innerWidth)
-  }
+    setIsMobile(size.width < 814)
+  }, [size])
+  
   return (
     <Layout>
       <SEO title="About" />

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './styles.less'
 
 import CommunitiesGrid from '../../components/CommunitiesGrid'
@@ -20,6 +20,7 @@ import FacebookLogo from '../../assets/facebook-dark.svg'
 import LinkedinLogo from '../../assets/linkedin-dark.svg'
 
 const AboutGetInvolved: React.FC<{ isMobile: boolean }>  = ({isMobile}) => {
+    const [email, setEmail] = useState("")
     return (
         <section className="about__get-involved">
             <h2>How can I get involved?</h2>
@@ -28,11 +29,10 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }>  = ({isMobile}) => {
                 <div className="about__get-involved__section__description">
                     <h3 className="purple">Connect with us on Social Media</h3>
                     {isMobile && <img src={AboutSocial} alt=""/>}
-                    {!isMobile && <p>To keep up with what's happening, we recommend joining our discord server, following our Facebook and Instagram. </p>}
+                    {!isMobile && <p>To keep up with what's happening, we recommend joining our Discord server and following us on Facebook. </p>}
                     <div className="about__get-involved__section__description__links">
                         <a href="https://discord.com/"><img src={DiscordLogo} alt="Discord Logo"/></a>
                         <a href="https://www.facebook.com/acmucsd"><img src={FacebookLogo} alt="Facebook Logo"/></a>
-                        <a href="https://www.linkedin.com/company/acm-ucsd/"><img src={LinkedinLogo} alt="Linkedin Logo"/></a>
                     </div>
                     <form>
                         <label>Subscribe to our Newsletter!</label>
@@ -41,8 +41,9 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }>  = ({isMobile}) => {
                             id="emailinput"
                             name="fname"
                             placeholder="my@email.com"
+                            onChange={(e) => setEmail(e.target.value)}
                         />
-                        <button>Subscribe!</button>
+                        <button className={email.length > 0 ? "blue" : ""}>Subscribe!</button>
                     </form>
                 </div>
             </div>
@@ -77,7 +78,7 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }>  = ({isMobile}) => {
                     {isMobile && <img src={AboutBitByte} alt=""/>}
                     <p>Join ACM’s Bit-Byte program that pairs students to make lifelong friendships! Our upperclassmen bigs (bytes) help their littles (bits) grow in their academic, social and professional lives.</p>
                     <br/>
-                    <p>Apply before date: <a href="#">some_application_link</a></p>
+                    <a href="https://acmurl.com/bit-byte">Apply before date</a>
                 </div>
             </div>
             <div className="about__get-involved__section">
@@ -85,10 +86,9 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }>  = ({isMobile}) => {
                 <div className="about__get-involved__section__description">
                     <h3 className="pink">Participate in ACM Projects!</h3>
                     {isMobile && <img src={AboutProjects} alt=""/>}
-                    <p>Sign up to join a team in our quarter-long projects program to grow your skills in coding, design, or project management.</p>
+                    <p>Sign up to join a team in our quarter-long projects. Grow your skills in coding, design, or project management.</p>
                     <br/>
-                    <p>Check out these exciting projects!</p>
-                    <a href="#">github.com/acmucsd-projects</a>
+                    <a href="https://github.com/acmucsd-projects">Check out these exciting projects!</a>
                 </div>
             </div>
         </section>

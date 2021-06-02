@@ -71,7 +71,17 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
         )}
       </div>
       <div className="BoardCard_footer">
-        <h1>{name}</h1>
+        <h1
+          className={
+            name.length > 19
+              ? "BoardCard_long-name"
+              : name.length > 15
+              ? "BoardCard_medium-name"
+              : "BoardCard_short-name"
+          }
+        >
+          {name}
+        </h1>
         <div>
           {personal_link && personal_link !== "" && (
             <svg

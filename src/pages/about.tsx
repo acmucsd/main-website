@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import { Size, useWindowSize } from "../utils"
 
@@ -21,10 +21,10 @@ const AboutPage: React.FC = () => {
   return (
     <Layout>
       <SEO title="About" />
-      <AboutHero isMobile={isMobile}/>
-      <AboutGetInvolved isMobile={isMobile}/>
+      <AboutHero isMobile={isMobile} />
+      <AboutGetInvolved isMobile={isMobile} />
       {!isMobile && <AboutMembership />}
-      <AboutBoard />
+      <AboutBoard isMobile={isMobile} />
     </Layout>
   )
 }

@@ -246,5 +246,41 @@
     }
   }
   &__board {
+    &__title {
+      font-family: DM Sans;
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 59px;
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 120px;
+    }
+    &__filters {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: fit-content;
+      margin: 0 20px 60px 20px;
+      transition: transform 0.1s;
+      transform: scale(1);
+      > p {
+        width: fit-content;
+        margin: 10px;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 39px;
+      }
+      > * {
+        margin: 7px;
+      }
+      color: #6b6b6b;
+      :hover {
+        transition: transform 0.1s;
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
   }
 }

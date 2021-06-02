@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/Layout"
@@ -14,8 +14,8 @@ const AboutPage: React.FC = () => {
   const isMobile = windowWidth <= 814
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
   })
 
   const handleResize = () => {
@@ -24,10 +24,10 @@ const AboutPage: React.FC = () => {
   return (
     <Layout>
       <SEO title="About" />
-      <AboutHero isMobile={isMobile}/>
-      <AboutGetInvolved isMobile={isMobile}/>
+      <AboutHero isMobile={isMobile} />
+      <AboutGetInvolved isMobile={isMobile} />
       {!isMobile && <AboutMembership />}
-      <AboutBoard />
+      <AboutBoard isMobile={isMobile} />
     </Layout>
   )
 }

@@ -30,7 +30,7 @@ const NavigationBar: React.FC = () => {
             </Link>
           </li>
           <li className="navigation-bar__login">
-            <Link to={"/login"}>Member Login</Link>
+            <Link to={"https://members.acmucsd.com/login"}>Member Login</Link>
           </li>
           <li className="navigation-bar__nav-button">
             <Link to="#contact" onClick={scrollToContacts}>

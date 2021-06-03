@@ -1,6 +1,6 @@
 import React from "react"
 import "./styles.less"
-import Number from "../../components/statistic"
+import Number from "../../components/Statistic"
 
 const HomeJoinTheClub: React.FC = () => {
   return (

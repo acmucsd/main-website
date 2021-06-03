@@ -61,9 +61,11 @@ const Footer: React.FC = () => {
               id="emailinput"
               name="fname"
               placeholder="my@email.com"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={e => setEmail(e.target.value)}
             />
-            <button className={email.length > 0 ? "blue" : ""}>Subscribe!</button>
+            <button className={email.length > 0 ? "blue" : ""}>
+              Subscribe!
+            </button>
           </div>
         </div>
       </div>

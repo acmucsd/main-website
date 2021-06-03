@@ -29,7 +29,7 @@ const defaultProps: CommunitiesGridProps = {
 const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
   verticalLayout,
 }) => {
-  const [hasBeenVisible, setHasBeenVisible] = useState(false)
+  const [hasBeenVisible, setHasBeenVisible] = useState(true)
 
   return (
     <VisibilitySensor

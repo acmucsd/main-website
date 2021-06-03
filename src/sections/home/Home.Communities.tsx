@@ -12,7 +12,7 @@ const HomeCommunities: React.FC = () => {
             ACM consists of 5 orgs that each focus on a specific area of tech.
           </p>
         </div>
-        <CommunitiesGrid verticalLayout={false}/>
+        <CommunitiesGrid verticalLayout={false} />
       </div>
     </section>
   )

@@ -23,10 +23,12 @@ interface CommunitiesGridProps {
 }
 
 const defaultProps: CommunitiesGridProps = {
-  verticalLayout: false
+  verticalLayout: false,
 }
 
-const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({verticalLayout}) => {
+const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
+  verticalLayout,
+}) => {
   const [hasBeenVisible, setHasBeenVisible] = useState(false)
 
   return (
@@ -36,7 +38,11 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({verticalLayout}) => {
         if (isVisible) setHasBeenVisible(true)
       }}
     >
-      <div className={verticalLayout ? 'communitiesGrid vertical' : 'communitiesGrid'}>
+      <div
+        className={
+          verticalLayout ? "communitiesGrid vertical" : "communitiesGrid"
+        }
+      >
         <a
           href="/communities#AI"
           className={`communitiesGrid__community ${
@@ -63,7 +69,6 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({verticalLayout}) => {
               <span>ACM</span> Cyber
             </h3>
             <p>Cyber Security</p>
-
           </div>
         </a>
         <a

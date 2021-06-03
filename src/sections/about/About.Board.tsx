@@ -23,7 +23,7 @@ import DesignEmpty from "../../assets/board-filters/design-empty.svg"
 import InnovateSelected from "../../assets/board-filters/innovate-selected.svg"
 import InnovateEmpty from "../../assets/board-filters/innovate-empty.svg"
 
-import BoardData from '../../board-data.json'
+import BoardData from "../../board-data.json"
 const members_list = BoardData
 
 // const members_list = [

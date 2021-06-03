@@ -17,7 +17,7 @@ const AboutPage: React.FC = () => {
   useEffect(() => {
     setIsMobile(size.width < 814)
   }, [size])
-  
+
   return (
     <Layout>
       <SEO title="About" />

@@ -40,30 +40,23 @@ import InnovateLogoSelected from "../../assets/communities-navigation/innovate-s
 import DesignLogo from "../../assets/logos/acm-design.svg"
 import DesignLogoSelected from "../../assets/communities-navigation/design-selected.svg"
 
-const AICommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
+const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   return (
     <div className="community__sub-orgs__community-card">
       <div className="color_slide redbg" />
       <div className="community__sub-orgs__community-card__content">
-        {
-          !isMobile ?
+        {!isMobile ? (
           <img
             src={AILogo}
             alt="ACM AI"
             className="community__sub-orgs__community-card__logo"
-          /> :
+          />
+        ) : (
           ""
-        }   
+        )}
         <div>
           <div className="community__sub-orgs__community-card__header">
-            {
-              isMobile ?
-              <img
-                src={AILogo}
-                alt="ACM AI"
-              /> :
-              ""
-            }
+            {isMobile ? <img src={AILogo} alt="ACM AI" /> : ""}
             <h1 className="red">ACM AI</h1>
           </div>
           <p>
@@ -93,31 +86,24 @@ const AICommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
     </div>
   )
 }
-const CyberCommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
+const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   return (
     <div className="community__sub-orgs__community-card">
       <div className="color_slide turquoisebg" />
 
       <div className="community__sub-orgs__community-card__content">
-        {
-          !isMobile ?
+        {!isMobile ? (
           <img
             src={CyberLogo}
             alt="ACM Cyber"
             className="community__sub-orgs__community-card__logo"
-          /> :
+          />
+        ) : (
           ""
-        } 
+        )}
         <div>
           <div className="community__sub-orgs__community-card__header">
-            {
-              isMobile ?
-              <img
-                src={CyberLogo}
-                alt="ACM Cyber"
-              /> :
-              ""
-            }
+            {isMobile ? <img src={CyberLogo} alt="ACM Cyber" /> : ""}
             <h1 className="turquoise">ACM Cyber</h1>
           </div>
           <p>
@@ -162,31 +148,24 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
     </div>
   )
 }
-const HackCommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
+const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   return (
     <div className="community__sub-orgs__community-card" id="Hack">
       <div className="color_slide yellowbg" />
 
       <div className="community__sub-orgs__community-card__content">
-        {
-          !isMobile ?
+        {!isMobile ? (
           <img
             src={HackLogo}
             alt="ACM Hack"
             className="community__sub-orgs__community-card__logo"
-          /> :
+          />
+        ) : (
           ""
-        } 
+        )}
         <div>
           <div className="community__sub-orgs__community-card__header">
-            {
-              isMobile ?
-              <img
-                src={HackLogo}
-                alt="ACM Hack"
-              /> :
-              ""
-            }
+            {isMobile ? <img src={HackLogo} alt="ACM Hack" /> : ""}
             <h1 className="yellow">ACM Hack</h1>
           </div>
           <p>
@@ -219,31 +198,24 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
   )
 }
 
-const InnovateCommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
+const InnovateCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   return (
     <div className="community__sub-orgs__community-card" id="Innovate">
       <div className="color_slide purplebg" />
 
       <div className="community__sub-orgs__community-card__content">
-        {
-          !isMobile ?
+        {!isMobile ? (
           <img
             src={InnovateLogo}
             alt="ACM Innovate"
             className="community__sub-orgs__community-card__logo"
-          /> :
+          />
+        ) : (
           ""
-        } 
+        )}
         <div>
           <div className="community__sub-orgs__community-card__header">
-            {
-              isMobile ?
-              <img
-                src={InnovateLogo}
-                alt="ACM Innovate"
-              /> :
-              ""
-            }
+            {isMobile ? <img src={InnovateLogo} alt="ACM Innovate" /> : ""}
             <h1 className="purple">ACM Innovate</h1>
           </div>
           <p>
@@ -279,31 +251,24 @@ const InnovateCommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
   )
 }
 
-const DesignCommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
+const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   return (
     <div className="community__sub-orgs__community-card">
       <div className="color_slide pinkbg" />
 
       <div className="community__sub-orgs__community-card__content">
-        {
-          !isMobile ?
+        {!isMobile ? (
           <img
             src={DesignLogo}
             alt="ACM Design"
             className="community__sub-orgs__community-card__logo"
-          /> :
+          />
+        ) : (
           ""
-        } 
+        )}
         <div>
           <div className="community__sub-orgs__community-card__header">
-            {
-              isMobile ?
-              <img
-                src={DesignLogo}
-                alt="ACM Design"
-              /> :
-              ""
-            }
+            {isMobile ? <img src={DesignLogo} alt="ACM Design" /> : ""}
             <h1 className="pink">ACM Design</h1>
           </div>
           <p>
@@ -330,70 +295,95 @@ const DesignCommunity: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
   )
 }
 
-const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({isMobile}) => {
+const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const [selected, setSelected] = useState("")
 
   const renderCommunity = (suborg: string) => {
-    switch(suborg) {
-      case 'ai':
-        return <AICommunity isMobile={isMobile}/>
-      case 'cyber':
-        return <CyberCommunity isMobile={isMobile}/>
-      case 'hack':
-        return <HackCommunity isMobile={isMobile}/>
-      case 'innovate':
-        return <InnovateCommunity isMobile={isMobile}/>
-      case 'design':
-        return <DesignCommunity isMobile={isMobile}/>
+    switch (suborg) {
+      case "ai":
+        return <AICommunity isMobile={isMobile} />
+      case "cyber":
+        return <CyberCommunity isMobile={isMobile} />
+      case "hack":
+        return <HackCommunity isMobile={isMobile} />
+      case "innovate":
+        return <InnovateCommunity isMobile={isMobile} />
+      case "design":
+        return <DesignCommunity isMobile={isMobile} />
       default:
         return (
           <div className="community__sub-orgs--mobile__description">
-            <p>ACM @ UCSD is one large community, but it is made up of several smaller
-            communities focused on specific areas of technology.</p>
+            <p>
+              ACM @ UCSD is one large community, but it is made up of several
+              smaller communities focused on specific areas of technology.
+            </p>
             <p>Learn more about each community</p>
           </div>
         )
     }
   }
-  
+
   return (
     <>
-      {
-        !isMobile ? (
+      {!isMobile ? (
         <section className="community__sub-orgs">
           <div className="spacer80px" id="AI"></div>
-          <AICommunity isMobile={isMobile}/>
-          <CyberCommunity isMobile={isMobile}/>
-          <HackCommunity isMobile={isMobile}/>
-          <InnovateCommunity isMobile={isMobile}/>
-          <DesignCommunity isMobile={isMobile}/>
+          <AICommunity isMobile={isMobile} />
+          <CyberCommunity isMobile={isMobile} />
+          <HackCommunity isMobile={isMobile} />
+          <InnovateCommunity isMobile={isMobile} />
+          <DesignCommunity isMobile={isMobile} />
         </section>
-        ) : (
+      ) : (
         <>
           <section className="community__sub-orgs--mobile">
-            <h1 className="community__sub-orgs--mobile__header"onClick={() => setSelected("")}>Communities</h1>
+            <h1
+              className="community__sub-orgs--mobile__header"
+              onClick={() => setSelected("")}
+            >
+              Communities
+            </h1>
             {renderCommunity(selected)}
             <div className="community__sub-orgs--mobile__navigation">
               <button onClick={() => setSelected("ai")}>
-                <img src={selected === "ai" ? AILogoSelected : AILogo} alt="AI Logo"/>
+                <img
+                  src={selected === "ai" ? AILogoSelected : AILogo}
+                  alt="AI Logo"
+                />
               </button>
               <button onClick={() => setSelected("cyber")}>
-                <img src={selected === "cyber" ? CyberLogoSelected : CyberLogo} alt="Cyber Logo" />
+                <img
+                  src={selected === "cyber" ? CyberLogoSelected : CyberLogo}
+                  alt="Cyber Logo"
+                />
               </button>
               <button onClick={() => setSelected("hack")}>
-                <img src={selected === "hack" ? HackLogoSelected : HackLogo} alt="Hack Logo"/>
+                <img
+                  src={selected === "hack" ? HackLogoSelected : HackLogo}
+                  alt="Hack Logo"
+                />
               </button>
               <button onClick={() => setSelected("innovate")}>
-                <img src={selected === "innovate" ? InnovateLogoSelected : InnovateLogo} alt="Innovate Logo"/>
+                <img
+                  src={
+                    selected === "innovate"
+                      ? InnovateLogoSelected
+                      : InnovateLogo
+                  }
+                  alt="Innovate Logo"
+                />
               </button>
               <button onClick={() => setSelected("design")}>
-                <img src={selected === "design" ? DesignLogoSelected : DesignLogo} alt="Design Logo"/>
+                <img
+                  src={selected === "design" ? DesignLogoSelected : DesignLogo}
+                  alt="Design Logo"
+                />
               </button>
             </div>
           </section>
         </>
-      )
-    }</>
+      )}
+    </>
   )
 }
 

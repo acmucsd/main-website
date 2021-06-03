@@ -1,0 +1,130 @@
+@import "../../styles/colors.less";
+@import "../../styles/mixins.less";
+
+.communitiesGrid {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  &__community {
+    padding: 20px 20px;
+    text-decoration: none;
+    color: @black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    opacity: 0;
+    transform: scale(1);
+    transition: transform ease-in-out 0.1s;
+    &:hover {
+      transform: scale(1.05);
+      transition: transform ease-in-out 0.1s;
+    }
+
+    &__label {
+      width: 210px;
+      h3 {
+        margin: 0 !important;
+        font-size: 1.7rem;
+        font-weight: 500;
+
+        span {
+          font-weight: 700;
+        }
+      }
+      p {
+        margin: 0;
+        color: @black;
+        font-size: 1rem;
+        font-weight: 400;
+        position: absolute;
+      }
+    }
+
+    img {
+      width: 60px;
+      margin: 0;
+      margin-right: 10px;
+    }
+
+    &.ai--visible,
+    &.cyber--visible,
+    &.design--visible,
+    &.hack--visible,
+    &.innovate--visible {
+      opacity: 100%;
+    }
+
+    &.ai--visible {
+      color: @red;
+      .fade-up(0.3s);
+    }
+    &.cyber--visible {
+      color: @turquoise;
+      .fade-up(0.6s);
+    }
+    &.design--visible {
+      color: @pink;
+      .fade-up(0.9s);
+    }
+    &.hack--visible {
+      color: @orange;
+      .fade-up(1.2s);
+    }
+    &.innovate--visible {
+      color: @purple;
+      .fade-up(1.5s);
+    }
+    .fade-up(@waitTime) {
+      animation: hide @waitTime, fade-up 0.6s @waitTime ease-in-out;
+    }
+    @keyframes hide {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+    @keyframes fade-up {
+      from {
+        opacity: 0%;
+        transform: translateY(5vh);
+      }
+      to {
+        opacity: 100%;
+        transform: translateY(0);
+      }
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .communitiesGrid__community {
+      padding: 20px 10px;
+      &__label {
+        h3 {
+          margin: 0 !important;
+          font-size: 1.6rem;
+        }
+      }
+      img {
+        width: 70px;
+        margin: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.vertical {
+  margin: 20px 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  .communitiesGrid__community {
+    padding: 15px 0;
+    img {
+      width: 80px;
+    }
+  }
+}

@@ -4,9 +4,9 @@
 #
 version: 2
 jobs:
-  lint:
+  build:
     docker:
-      - image: circleci/node:10.16.2
+      - image: circleci/node:12.22.1
     steps:
       - checkout
       - restore_cache:
@@ -18,11 +18,10 @@ jobs:
           paths:
             - node_modules
       - run:
-          command: yarn run lint
-
+          command: yarn build
   test:
     docker:
-      - image: circleci/node:10.16.2
+      - image: circleci/node:12.22.1
     steps:
       - checkout
       - restore_cache:
@@ -35,10 +34,9 @@ jobs:
             - node_modules
       - run:
           command: yarn test
-
-  coveralls:
+  lint:
     docker:
-      - image: circleci/node:10.16.2
+      - image: circleci/node:12.22.1
     steps:
       - checkout
       - restore_cache:
@@ -50,19 +48,11 @@ jobs:
           paths:
             - node_modules
       - run:
-          command: yarn run coveralls
-
+          command: yarn run lint
 workflows:
   version: 2
   test_and_deploy:
     jobs:
-      - lint
+      - build
       - test
-      # TODO: reimplement coveralls for unit testing
-      # - coveralls:
-      #     requires:
-      #       - lint
-      #       - test
-      #     filters:
-      #       branches:
-      #         only: master
+      - lint

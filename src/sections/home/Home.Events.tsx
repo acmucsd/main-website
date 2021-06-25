@@ -63,7 +63,9 @@ const HomeEvents: React.FC = () => {
       <div className="home__events__grid">
         <div className="home__events__grid__header">
           <h1>Events</h1>
-          <p>ACM hosts 120+ events for our diverse array of students.</p>
+          <p>
+            ACM at UCSD hosts 120+ events for our diverse array of students.
+          </p>
         </div>
       </div>
       <div
@@ -81,7 +83,7 @@ const HomeEvents: React.FC = () => {
         role="menuitem"
         tabIndex={0}
       >
-        {events &&
+        {events && events.length > 0 ? (
           events.map((value, index) => {
             const timing = getDateTime(value)
             return (
@@ -103,7 +105,14 @@ const HomeEvents: React.FC = () => {
                 )}
               </div>
             )
-          })}
+          })
+        ) : (
+          <div className="home__events__grid__container__event--default">
+            <p>
+              No events this week. <br /> Check back later!
+            </p>
+          </div>
+        )}
         <div aria-hidden="true" className="event end" />
       </div>
     </section>

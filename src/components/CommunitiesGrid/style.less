@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    opacity: 0;
+    //opacity: 0;
     transform: scale(1);
     transition: transform ease-in-out 0.1s;
     &:hover {
@@ -47,35 +47,37 @@
       margin-right: 10px;
     }
 
-    &.ai--visible,
-    &.cyber--visible,
-    &.design--visible,
-    &.hack--visible,
-    &.innovate--visible {
-      opacity: 100%;
-    }
+    // &.ai--visible,
+    // &.cyber--visible,
+    // &.design--visible,
+    // &.hack--visible,
+    // &.innovate--visible {
+    //   opacity: 100%;
+    // }
 
     &.ai--visible {
       color: @red;
-      .fade-up(0.3s);
+      // .fade-up(0.3s);
     }
     &.cyber--visible {
       color: @turquoise;
-      .fade-up(0.6s);
+      // .fade-up(0.6s);
     }
     &.design--visible {
       color: @pink;
-      .fade-up(0.9s);
+      // .fade-up(0.9s);
     }
     &.hack--visible {
       color: @orange;
-      .fade-up(1.2s);
+      // .fade-up(1.2s);
     }
     &.innovate--visible {
       color: @purple;
-      .fade-up(1.5s);
+      // .fade-up(1.5s);
     }
     .fade-up(@waitTime) {
+      -webkit-animation: hide @waitTime, fade-up 0.6s @waitTime ease-in-out;
+      -moz-animation: hide @waitTime, fade-up 0.6s @waitTime ease-in-out;
       animation: hide @waitTime, fade-up 0.6s @waitTime ease-in-out;
     }
     @keyframes hide {

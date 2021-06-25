@@ -29,92 +29,92 @@ const defaultProps: CommunitiesGridProps = {
 const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
   verticalLayout,
 }) => {
-  const [hasBeenVisible, setHasBeenVisible] = useState(false)
+  const [hasBeenVisible, setHasBeenVisible] = useState(true)
 
   return (
-    <VisibilitySensor
-      partialVisibility={true}
-      onChange={isVisible => {
-        if (isVisible) setHasBeenVisible(true)
-      }}
+    // <VisibilitySensor
+    //   partialVisibility={true}
+    //   onChange={isVisible => {
+    //     if (isVisible) setHasBeenVisible(true)
+    //   }}
+    // >
+    <div
+      className={
+        verticalLayout ? "communitiesGrid vertical" : "communitiesGrid"
+      }
     >
-      <div
-        className={
-          verticalLayout ? "communitiesGrid vertical" : "communitiesGrid"
-        }
+      <a
+        href="/communities#AI"
+        className={`communitiesGrid__community ${
+          hasBeenVisible ? "ai--visible" : " "
+        }`}
       >
-        <a
-          href="/communities#AI"
-          className={`communitiesGrid__community ${
-            hasBeenVisible ? "ai--visible" : " "
-          }`}
-        >
-          <img src={AILogo} alt="ACM AI" />
-          <div className="communitiesGrid__community__label">
-            <h3>
-              <span>ACM</span> AI
-            </h3>
-            <p>Artificial Intelligence</p>
-          </div>
-        </a>
-        <a
-          href="/communities#Cyber"
-          className={`communitiesGrid__community ${
-            hasBeenVisible ? "cyber--visible" : " "
-          }`}
-        >
-          <img src={CyberLogo} alt="ACM Cyber" />
-          <div className="communitiesGrid__community__label">
-            <h3>
-              <span>ACM</span> Cyber
-            </h3>
-            <p>Cyber Security</p>
-          </div>
-        </a>
-        <a
-          href="/communities#Design"
-          className={`communitiesGrid__community ${
-            hasBeenVisible ? "design--visible" : " "
-          }`}
-        >
-          <img src={DesignLogo} alt="ACM Design" />
-          <div className="communitiesGrid__community__label">
-            <h3>
-              <span>ACM</span> Design
-            </h3>
-            <p>Design and Interaction</p>
-          </div>
-        </a>
-        <a
-          href="/communities#Hack"
-          className={`communitiesGrid__community ${
-            hasBeenVisible ? "hack--visible" : " "
-          }`}
-        >
-          <img src={HackLogo} alt="ACM Hack" />
-          <div className="communitiesGrid__community__label">
-            <h3>
-              <span>ACM</span> Hack
-            </h3>
-            <p>Software Engineering</p>
-          </div>
-        </a>
-        <a
-          href="/communities#Innovate"
-          className={`communitiesGrid__community ${
-            hasBeenVisible ? "innovate--visible" : " "
-          }`}
-        >
-          <img src={InnovateLogo} alt="ACM Innovate" />
-          <div className="communitiesGrid__community__label">
-            <h3>
-              <span>ACM</span> Innovate
-            </h3>
-            <p>Entrepreneurship</p>
-          </div>
-        </a>
-      </div>
-    </VisibilitySensor>
+        <img src={AILogo} alt="ACM AI" />
+        <div className="communitiesGrid__community__label">
+          <h3>
+            <span>ACM</span> AI
+          </h3>
+          <p>Artificial Intelligence</p>
+        </div>
+      </a>
+      <a
+        href="/communities#Cyber"
+        className={`communitiesGrid__community ${
+          hasBeenVisible ? "cyber--visible" : " "
+        }`}
+      >
+        <img src={CyberLogo} alt="ACM Cyber" />
+        <div className="communitiesGrid__community__label">
+          <h3>
+            <span>ACM</span> Cyber
+          </h3>
+          <p>Cyber Security</p>
+        </div>
+      </a>
+      <a
+        href="/communities#Design"
+        className={`communitiesGrid__community ${
+          hasBeenVisible ? "design--visible" : " "
+        }`}
+      >
+        <img src={DesignLogo} alt="ACM Design" />
+        <div className="communitiesGrid__community__label">
+          <h3>
+            <span>ACM</span> Design
+          </h3>
+          <p>Design and Interaction</p>
+        </div>
+      </a>
+      <a
+        href="/communities#Hack"
+        className={`communitiesGrid__community ${
+          hasBeenVisible ? "hack--visible" : " "
+        }`}
+      >
+        <img src={HackLogo} alt="ACM Hack" />
+        <div className="communitiesGrid__community__label">
+          <h3>
+            <span>ACM</span> Hack
+          </h3>
+          <p>Software Engineering</p>
+        </div>
+      </a>
+      <a
+        href="/communities#Innovate"
+        className={`communitiesGrid__community ${
+          hasBeenVisible ? "innovate--visible" : " "
+        }`}
+      >
+        <img src={InnovateLogo} alt="ACM Innovate" />
+        <div className="communitiesGrid__community__label">
+          <h3>
+            <span>ACM</span> Innovate
+          </h3>
+          <p>Entrepreneurship</p>
+        </div>
+      </a>
+    </div>
+    // </VisibilitySensor>
   )
 }
 

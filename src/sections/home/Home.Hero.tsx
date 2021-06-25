@@ -1,13 +1,30 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Typist from "react-typist"
 import "react-typist/dist/Typist.css"
 import Button from "../../components/Button/Button.tsx"
 import "./styles.less"
+
 import Arrow from "../../assets/arrow.svg"
 import CoolLogo from "../../assets/cool_logo_1000x1000.png"
 import CoolLogoMobile from "../../assets/cool_logo.png"
 
 const HomeHero: React.FC = () => {
+  const [scrolled, setScrolled] = React.useState(false)
+
+  useEffect(() => {
+    if (!scrolled) {
+      const handleScroll = () => {
+        setScrolled(true)
+        window.removeEventListener("scroll", handleScroll)
+        return undefined
+      }
+
+      window.addEventListener("scroll", handleScroll)
+      return () => window.removeEventListener("scroll", handleScroll)
+    }
+    return undefined
+  }, [scrolled])
+
   return (
     <section className="home__hero">
       <div className="home__hero--grid">
@@ -34,11 +51,7 @@ const HomeHero: React.FC = () => {
               <span>community.&nbsp;</span>
             </Typist>
             <div className="buttons">
-              <Button
-                title="Learn More!"
-                link="https://members.acmucsd.com/"
-                type="secondary"
-              />
+              <Button title="Learn More!" link="/about" type="secondary" />
               <Button
                 title="Join Us Now!"
                 link="https://members.acmucsd.com"
@@ -47,8 +60,8 @@ const HomeHero: React.FC = () => {
             </div>
           </div>
         </div>
+        {scrolled ? null : <img className="arrow" alt="" src={Arrow} />}
       </div>
-      {/* {scrolled ? null : <img className="arrow" alt="" src={Arrow} />} */}
     </section>
   )
 }

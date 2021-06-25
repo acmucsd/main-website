@@ -1,1 +1,982 @@
-[{"name": "Stanley Lee", "org": "general", "title": "President", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1Z1hl3zgLeQAdlJrGk7dQOcpk8MH_P2xw", "email": "stl005@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Steven Steiner", "org": "general", "title": "Vice President Development", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1iilM20StaMGT40aimsooZB1zPVxFYvds", "email": "sisteine@ucsd.edu", "linkedin_link": "https://www.linkedin.com/in/sisteine", "personal_link": ""}, {"name": "Ronak Shah", "org": "general", "title": "Product Manager", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1866F7BTCX--oi4p6Hnlxtx9-zQbSViMj", "email": "rmshah@ucsd.edu", "linkedin_link": "https://www.linkedin.com/in/trulyronak", "personal_link": "https://ronakshah.net"}, {"name": "Jennifer Pham", "org": "general", "title": "Front End Developer", "specialization": "-----", "profile_image": "", "email": "j9pham@ucsd.edu", "linkedin_link": "https://www.linkedin.com/in/Jennifer Pham", "personal_link": ""}, {"name": "Paul Pan", "org": "general", "title": "Front End Developer", "specialization": "-----", "profile_image": "", "email": "jpan@ucsd.edu", "linkedin_link": "https://www.linkedin.com/in/jpan05", "personal_link": ""}, {"name": "Meshach Adoe", "org": "general", "title": "Front End Developer", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1o4C2LnZH0x5x_XbZw-D4gWIVcQyvLZ7U", "email": "madoe@ucsd.edu", "linkedin_link": "https://www.linkedin.com/in/meshachadoe", "personal_link": ""}, {"name": "Sean Ye", "org": "general", "title": "Front End Developer", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=16nopyewQPdZO_rJNPS8o3ZK8twUnktRK", "email": "", "linkedin_link": "https://www.linkedin.com/in/seanye24", "personal_link": "https://seancye.com"}, {"name": "Joey Dang", "org": "general", "title": "Front End Developer", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=14zZ4KBlXRcRxqFf83_DwL4nqF186X8mV", "email": "jodang@ucsd.edu", "linkedin_link": "https://www.linkedin.com/in/dangjoeyy", "personal_link": ""}, {"name": "Shravan Hariharan", "org": "general", "title": "Back End Developer", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1rLb8TXwQyFJa9Kv0lzjQr2qdkkOs6XUV", "email": "smhariha@ucsd.edu", "linkedin_link": "https://www.linkedin.com/in/shravanhariharan", "personal_link": ""}, {"name": "Michael Shao", "org": "general", "title": "Back End Developer", "specialization": "-----", "profile_image": "", "email": "mlshao@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Matei-Alexandru Gardus", "org": "general", "title": "Automation Developer", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=17NaqUkrd9ejT-zi0ot33O1eQXwngGED5", "email": "mgardus@ucsd.edu", "linkedin_link": "https://www.linkedin.com/in/storm_firefox1", "personal_link": "https://stormhub.io"}, {"name": "Kevin He", "org": "general", "title": "Automation Developer", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=15gn98MFy-ZFs_O6dWFyKPdALduzRy_Ea", "email": "khe@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Samuel Fleet", "org": "general", "title": "Design Lead", "specialization": "-----", "profile_image": "", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Lara Canonizado", "org": "general", "title": "UX/UI Designer", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1P8V3ph0tHd0-N091YjsyNuG_-SE0-kwT", "email": "lcanoniz@ucsd.edu", "linkedin_link": "https://www.linkedin.com/in/laracanonizado", "personal_link": "https://www.laracanonizado.com/"}, {"name": "Tam (Tyler) Tran", "org": "general", "title": "UX/UI Designer", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1gBNyDXeXxKBIgVIlxk9AhqMj-lvqdDIj", "email": "ttt016@ucsd.edu", "linkedin_link": "https://www.linkedin.com/in/tamtranht02", "personal_link": "https://tylerred19.github.io/"}, {"name": "Daphne Nong", "org": "general", "title": "UX/UI Designer", "specialization": "-----", "profile_image": "", "email": "dynong@ucsd.edu", "linkedin_link": "", "personal_link": "https://www.daphnenong.me/"}, {"name": "Avery Blas", "org": "general", "title": "UX/UI Designer", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=19K9j_U2cvRpBXRi1s9X_a9WtRZKgt3wz", "email": "ablas@ucsd.edu", "linkedin_link": "https://www.linkedin.com/in/avery blas", "personal_link": ""}, {"name": "Michele Murakami", "org": "general", "title": "UX/UI Designer", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1mIw17uY77dy6iwEaBtcYtO-9HN737v_L", "email": "mmurakam@ucsd.edu", "linkedin_link": "", "personal_link": "https://michelemurakami.com/"}, {"name": "Juliet Zhuang", "org": "general", "title": "UX/UI Designer", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1MVDAlz6gWZGry8rtxD3vYNuSZk1Ob60Q", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Tiffany Lee", "org": "general", "title": "UX/UI Designer", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1wQQr66UcvrgxjReoDLI1bpdZqacGp3FD", "email": "tll001@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Bryce Tsuyuki", "org": "general", "title": "Vice President Events", "specialization": ":)", "profile_image": "https://drive.google.com/uc?id=1i6YHOKr9q1Q4zU8aQx0L81QseEnSegDg", "email": "btsuyuki@ucsd.edu", "linkedin_link": "", "personal_link": "https://brycetsuyuki.com/"}, {"name": "Christopher Cha", "org": "general", "title": "Event Director", "specialization": "Technical Event Director", "profile_image": "", "email": "ccha@ucsd.edu", "linkedin_link": "", "personal_link": "https://rinsworth.github.io/"}, {"name": "Eric Xiao", "org": "general", "title": "Event Director", "specialization": "Technical Event Director", "profile_image": "https://drive.google.com/uc?id=1NIHtF3IVP_xBJ74xgyGgSqEjzgod5DzS", "email": "erxiao@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Nick Nebel", "org": "general", "title": "Event Director", "specialization": "Technical Event Director", "profile_image": "", "email": "nnebel@ucsd.edu", "linkedin_link": "https://www.linkedin.com/in/butt", "personal_link": ""}, {"name": "Jeffrey Ha", "org": "general", "title": "Event Director", "specialization": "Interview Prep", "profile_image": "https://drive.google.com/uc?id=14cHSPTooIrxRFOlPPLezQaJwdvj4iyUu", "email": "jha@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Thang Phan", "org": "general", "title": "Event Director", "specialization": "ProDev", "profile_image": "", "email": "", "linkedin_link": "https://www.linkedin.com/in/linkedin is dumb af", "personal_link": ""}, {"name": "Anna Liu", "org": "general", "title": "Event Director", "specialization": "ProDev", "profile_image": "https://drive.google.com/uc?id=1-wpzt4FHJWiDIjPLCyxDCpZ3L2F-OLXG", "email": "a2liu@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Nishant Balaji", "org": "general", "title": "Event Coordinator", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1VutUyxj7WjDS_H4zsw-JoQrZKzxf2fMf", "email": "nibalaji@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Connie Chang", "org": "general", "title": "Event Coordinator", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1TDCe7ds4Xigm5IZmSDbfqo4i1pCyrwKl", "email": "hcchang@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Kristina Diep", "org": "general", "title": "Event Coordinator", "specialization": "AV Manager", "profile_image": "https://drive.google.com/uc?id=1TFqMvQ7D_pLoJdrD8YzvFgybXahLhPss", "email": "kldiep@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Tristan Tjan", "org": "general", "title": "Vice President External", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=14aqK5JY8TZmuX22m5VM1Aa-gtZYEG5vU", "email": "ttjan@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Alvin Wang", "org": "general", "title": "Sponsorship Director", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1bRYi5nBPA0VTn6ZYSyR9PiIAgu-OaXOC", "email": "acw011@ucsd.edu", "linkedin_link": "", "personal_link": "https://www.acwang.me/"}, {"name": "Kelynn Ma", "org": "general", "title": "Sponsorship Associate", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1M00BdfqybyYQ62hHAgvMTsObj255Nl7X", "email": "kem005@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Bella Coles", "org": "general", "title": "Sponsorship Associate", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1Rfr-MMWrwpjfsRgTdHMibxTTV_dLrhDo", "email": "acoles@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Uday Kalra", "org": "general", "title": "Sponsorship Associate", "specialization": "-----", "profile_image": "", "email": "ukalra@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Elias Arghand", "org": "general", "title": "Marketing Director", "specialization": "-----", "profile_image": "", "email": "earghand@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Samuel Wu", "org": "general", "title": "Public Relations", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1sVP-r20iZQvc79BbKP4TACfUeoF7nhfz", "email": "saw003@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Henry Luu", "org": "general", "title": "Public Relations", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1v2xMLAtaGYhdEPsjvNIoxQm20IQ1ZcQ7", "email": "hluu@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Vivian Wu", "org": "general", "title": "Public Relations", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1wPexF-3XH7Ft__a4UBiy4nIB3I_ota34", "email": "vrwu@ucsd.edu", "linkedin_link": "", "personal_link": "https://vrwu.github.io/"}, {"name": "Tiffany Chang", "org": "general", "title": "Content Creation", "specialization": "-----", "profile_image": "", "email": "ptchang@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Anthony Manrique", "org": "general", "title": "Content Creation", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1wNHGW6WAV_BVru6KJefk3rD-wizWdfnx", "email": "amanriqu@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Tristin Xie", "org": "general", "title": "Vice President Finance", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1VC5OvldFV9J6xe3IFKd-iVRPp4ab2cwq", "email": "tyx001@ucsd.edu", "linkedin_link": "", "personal_link": "https://www.tristinxie.com/"}, {"name": "Alexander Yu", "org": "general", "title": "Funding Manager", "specialization": "Internal", "profile_image": "https://drive.google.com/uc?id=1wuCM6bxBiylENOD-VL4RumLJ1_qYzYRA", "email": "awy001@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Samantha Susanto", "org": "general", "title": "Funding Manager", "specialization": "AS", "profile_image": "https://drive.google.com/uc?id=1FoLH_iNrTn81S3NxY2XBeyfytG3SbaBp", "email": "ssusanto@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Aaron Yu", "org": "general", "title": "Funding Manager", "specialization": "Department", "profile_image": "", "email": "axyu@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Shirley Qi", "org": "general", "title": "Vice President Membership", "specialization": "-----", "profile_image": "https://drive.google.com/uc?id=1bZFglg2n1wEI79_ThIREJ4gEu06bFQph", "email": "shqi@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Jacob Lin", "org": "general", "title": "Community Director", "specialization": "Bit-Byte", "profile_image": "https://drive.google.com/uc?id=1-9xceKqycB_WnTMvXB_0TiA1uOd8SdXD", "email": "jal041@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Edward De Leon", "org": "general", "title": "Community Director", "specialization": "Discord Moderator", "profile_image": "", "email": "edeleon@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Alistair Gray", "org": "general", "title": "Community Director", "specialization": "Social", "profile_image": "https://drive.google.com/uc?id=1OMsqIqHOMosTARbunHMuExi16NSoWINl", "email": "ajgray@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Faith Lu", "org": "general", "title": "Community Director", "specialization": "Social", "profile_image": "", "email": "falu@uscd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Fiona Chen", "org": "general", "title": "Community Director", "specialization": "Social", "profile_image": "https://drive.google.com/uc?id=1vXxMGz9P7zQOH4azRH9jQ1iqTDTOV5nd", "email": "fichen@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "William Duan", "org": "general", "title": "Vice President Projects", "specialization": "-----", "profile_image": "", "email": "widuan@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Max Cohen", "org": "general", "title": "Projects Lead", "specialization": "Collaboration Lead", "profile_image": "https://drive.google.com/uc?id=1gjLMd_lLMZrerKyRI_0THpbWHuOEjc1k", "email": "m1cohen@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Trisa Leung", "org": "general", "title": "Projects Lead", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1mAi6yM45TLZ-QQOrl29lJj7BExaQRzyD", "email": "t1leung@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Stone Tao", "org": "ai", "title": "President", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1KV6QKsvt9Aq8SY5J0onLK9i1kGjjD766", "email": "stao@ucsd.edu", "linkedin_link": "", "personal_link": "https://stoneztao.com"}, {"name": "Edward Yang", "org": "ai", "title": "Director of Operations", "specialization": "", "profile_image": "", "email": "e7yang@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Jonathan Zamora", "org": "ai", "title": "Director of Marketing", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1pVIJIXeJeFIJ0t_ZjVNlAMQ_FYzEJUEJ", "email": "jzamoraa@ucsd.edu", "linkedin_link": "", "personal_link": "https://jonzamora.dev"}, {"name": "Judy Liu", "org": "ai", "title": "Event Lead", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1gnQ9sMYkcfrEPJtEnt7juYP1pxn_Vqln", "email": "lel006@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Jason Vega", "org": "ai", "title": "Event Lead", "specialization": "", "profile_image": "", "email": "jvega@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Joseph Liu", "org": "ai", "title": "Event Lead", "specialization": "", "profile_image": "", "email": "e1liu@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Satyam Gupta", "org": "ai", "title": "Event Lead", "specialization": "", "profile_image": "", "email": "sagupta@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Christopher Cha", "org": "ai", "title": "Event Lead", "specialization": "", "profile_image": "", "email": "ccha@ucsd.edu", "linkedin_link": "", "personal_link": "https://rinsworth.github.io/"}, {"name": "Dhanvi Desu", "org": "ai", "title": "Developer", "specialization": "", "profile_image": "", "email": "ddesu@ucsd.edu", "linkedin_link": "https://www.linkedin.com/in/linkedin.com/in/dhanvidesu", "personal_link": "dhanvidesu.herokuapp.com"}, {"name": "William Duan", "org": "ai", "title": "Developer", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1GzEXuOZaIisCYUi_-DbVeKCNNBKeZL4E", "email": "widuan@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Joshua Hong", "org": "ai", "title": "Developer", "specialization": "", "profile_image": "", "email": "jjhong@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Yuru Zhou", "org": "ai", "title": "Developer", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1UdIug_H9Tabmikg9Shl40FxQhXMdLCuX", "email": "yuz101@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Dennis Luc", "org": "ai", "title": "Marketing Coordinator ", "specialization": "", "profile_image": "", "email": "dluc@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Karthik Guruvayurappan", "org": "ai", "title": "Sponsorship Coordinator", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1zMlj1KcSYC9kn8ok7OFTxGdssn27swGx", "email": "kguruvay@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Andy Peterson", "org": "cyber", "title": "President", "specialization": "", "profile_image": "", "email": "acpeters@ucsd.edu", "linkedin_link": "https://www.linkedin.com/in/https://linkedin.com/in/i-am-andrew-peterson", "personal_link": ""}, {"name": "RJ Wakefield-Carl", "org": "cyber", "title": "Director of Competition", "specialization": "", "profile_image": "https://drive.google.com/uc?id=19ce4qHTwFD2tnq4xVo2W48Phc2rkHVoA", "email": "rewakefi@eng.ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Kevin Son", "org": "cyber", "title": "Director of Logistics", "specialization": "", "profile_image": "", "email": "keson@ucsd.org", "linkedin_link": "", "personal_link": ""}, {"name": "Rahil Shah", "org": "cyber", "title": "Director of Content", "specialization": "", "profile_image": "", "email": "r5shah@ucsd.edu", "linkedin_link": "", "personal_link": "https://rahil.us"}, {"name": "Jessica Lam", "org": "cyber", "title": "Director of Membership", "specialization": "", "profile_image": "", "email": "jplam@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Aaron James Eason", "org": "cyber", "title": "Director of Finance", "specialization": "\"Daddy of Dollars\"", "profile_image": "", "email": "aeason@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Samuel Fleet", "org": "design", "title": "President", "specialization": "", "profile_image": "", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "N/A", "org": "design", "title": "Director of Operations", "specialization": "", "profile_image": "", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Michele Murakami", "org": "design", "title": "Director of Dev x Design", "specialization": "[ACM Dev Design Lead]", "profile_image": "https://drive.google.com/uc?id=1mIw17uY77dy6iwEaBtcYtO-9HN737v_L", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Avery Blas", "org": "design", "title": "Director of Design Projects", "specialization": "[ACM Projects Design Lead]", "profile_image": "https://drive.google.com/uc?id=19K9j_U2cvRpBXRi1s9X_a9WtRZKgt3wz", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Xinchen Fu", "org": "design", "title": "TBD", "specialization": "", "profile_image": "", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Tiffany Lee", "org": "design", "title": "Events Coordinator", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1wQQr66UcvrgxjReoDLI1bpdZqacGp3FD", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Daphne Nong", "org": "design", "title": "TBD", "specialization": "", "profile_image": "", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "N/A", "org": "design", "title": "Senior Designer", "specialization": "", "profile_image": "", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Lara Canonizado", "org": "design", "title": "Designer", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1P8V3ph0tHd0-N091YjsyNuG_-SE0-kwT", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Tam (Tyler) Tran", "org": "design", "title": "Designer", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1gBNyDXeXxKBIgVIlxk9AhqMj-lvqdDIj", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Juliet Zhuang", "org": "design", "title": "Designer", "specialization": "", "profile_image": "", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "David Dempsey", "org": "hack", "title": "President", "specialization": "", "profile_image": "", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Bella Coles", "org": "hack", "title": "External Relations Lead", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1Rfr-MMWrwpjfsRgTdHMibxTTV_dLrhDo", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Trisa Leung", "org": "hack", "title": "Projects Lead", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1mAi6yM45TLZ-QQOrl29lJj7BExaQRzyD", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Garrett Luu", "org": "hack", "title": "Technical Event Lead", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1wp7e-G7dpnxieUsZqSUnQ1yvmQfjIYC4", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Faris Ashai", "org": "hack", "title": "Technical Event Lead", "specialization": "", "profile_image": "", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Ryan Heo", "org": "hack", "title": "Technical Event Lead", "specialization": "", "profile_image": "", "email": "", "linkedin_link": "", "personal_link": ""}, {"name": "Yuru Zhou", "org": "hack", "title": "Technical Event Lead", "specialization": "", "profile_image": "", "email": "yuz101@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Henry Chan", "org": "hack", "title": "Technical Event Lead", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1_33xUfUKokydqGbfLwN9rhDCY7p5PeOu", "email": "hechan@ucsd.edu", "linkedin_link": "", "personal_link": "https://chanhenry54.github.io/"}, {"name": "Shravan Hariharan", "org": "hack", "title": "Technical Event Lead", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1rLb8TXwQyFJa9Kv0lzjQr2qdkkOs6XUV", "email": "smhariha@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Praneet Bhoj", "org": "innovate", "title": "President", "specialization": "", "profile_image": "https://drive.google.com/uc?id=1PqiVupIlorlDbFt9Q61J6VWenjQKmbJW", "email": "pnbhoj@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Ryan Heo", "org": "innovate", "title": "Workshop Director", "specialization": "", "profile_image": "", "email": "rjheo@ucsd.edu", "linkedin_link": "", "personal_link": ""}, {"name": "Jacob Bolano", "org": "innovate", "title": "Workshop Director", "specialization": "", "profile_image": "https://drive.google.com/uc?id=11E6K54kiEQXDud2Gf3hysxuMTJmRCb0k", "email": "jbolano@ucsd.edu", "linkedin_link": "https://www.linkedin.com/in/www.linkedin.com/in/jacobbolano", "personal_link": ""}, {"name": "Yunyi Huang", "org": "innovate", "title": "Talk Manager", "specialization": "", "profile_image": "", "email": "yuh022@ucsd.edu", "linkedin_link": "", "personal_link": ""}]
+[
+  {
+    "name": "Stanley Lee",
+    "org": "general",
+    "title": "President",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1Z1hl3zgLeQAdlJrGk7dQOcpk8MH_P2xw",
+    "email": "stl005@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Steven Steiner",
+    "org": "general",
+    "title": "Vice President Development",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1iilM20StaMGT40aimsooZB1zPVxFYvds",
+    "email": "sisteine@ucsd.edu",
+    "linkedin_link": "https://www.linkedin.com/in/sisteine",
+    "personal_link": ""
+  },
+  {
+    "name": "Ronak Shah",
+    "org": "general",
+    "title": "Product Manager",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1866F7BTCX--oi4p6Hnlxtx9-zQbSViMj",
+    "email": "rmshah@ucsd.edu",
+    "linkedin_link": "https://www.linkedin.com/in/trulyronak",
+    "personal_link": "https://ronakshah.net"
+  },
+  {
+    "name": "Jennifer Pham",
+    "org": "general",
+    "title": "Front End Developer",
+    "specialization": "-----",
+    "profile_image": "",
+    "email": "j9pham@ucsd.edu",
+    "linkedin_link": "https://www.linkedin.com/in/Jennifer Pham",
+    "personal_link": ""
+  },
+  {
+    "name": "Paul Pan",
+    "org": "general",
+    "title": "Front End Developer",
+    "specialization": "-----",
+    "profile_image": "",
+    "email": "jpan@ucsd.edu",
+    "linkedin_link": "https://www.linkedin.com/in/jpan05",
+    "personal_link": ""
+  },
+  {
+    "name": "Meshach Adoe",
+    "org": "general",
+    "title": "Front End Developer",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1o4C2LnZH0x5x_XbZw-D4gWIVcQyvLZ7U",
+    "email": "madoe@ucsd.edu",
+    "linkedin_link": "https://www.linkedin.com/in/meshachadoe",
+    "personal_link": ""
+  },
+  {
+    "name": "Sean Ye",
+    "org": "general",
+    "title": "Front End Developer",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=16nopyewQPdZO_rJNPS8o3ZK8twUnktRK",
+    "email": "",
+    "linkedin_link": "https://www.linkedin.com/in/seanye24",
+    "personal_link": "https://seancye.com"
+  },
+  {
+    "name": "Joey Dang",
+    "org": "general",
+    "title": "Front End Developer",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=14zZ4KBlXRcRxqFf83_DwL4nqF186X8mV",
+    "email": "jodang@ucsd.edu",
+    "linkedin_link": "https://www.linkedin.com/in/dangjoeyy",
+    "personal_link": ""
+  },
+  {
+    "name": "Shravan Hariharan",
+    "org": "general",
+    "title": "Back End Developer",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1rLb8TXwQyFJa9Kv0lzjQr2qdkkOs6XUV",
+    "email": "smhariha@ucsd.edu",
+    "linkedin_link": "https://www.linkedin.com/in/shravanhariharan",
+    "personal_link": ""
+  },
+  {
+    "name": "Michael Shao",
+    "org": "general",
+    "title": "Back End Developer",
+    "specialization": "-----",
+    "profile_image": "",
+    "email": "mlshao@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Matei-Alexandru Gardus",
+    "org": "general",
+    "title": "Automation Developer",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=17NaqUkrd9ejT-zi0ot33O1eQXwngGED5",
+    "email": "mgardus@ucsd.edu",
+    "linkedin_link": "https://www.linkedin.com/in/storm_firefox1",
+    "personal_link": "https://stormhub.io"
+  },
+  {
+    "name": "Kevin He",
+    "org": "general",
+    "title": "Automation Developer",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=15gn98MFy-ZFs_O6dWFyKPdALduzRy_Ea",
+    "email": "khe@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Samuel Fleet",
+    "org": "general",
+    "title": "Design Lead",
+    "specialization": "-----",
+    "profile_image": "",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Lara Canonizado",
+    "org": "general",
+    "title": "UX/UI Designer",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1P8V3ph0tHd0-N091YjsyNuG_-SE0-kwT",
+    "email": "lcanoniz@ucsd.edu",
+    "linkedin_link": "https://www.linkedin.com/in/laracanonizado",
+    "personal_link": "https://www.laracanonizado.com/"
+  },
+  {
+    "name": "Tam (Tyler) Tran",
+    "org": "general",
+    "title": "UX/UI Designer",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1gBNyDXeXxKBIgVIlxk9AhqMj-lvqdDIj",
+    "email": "ttt016@ucsd.edu",
+    "linkedin_link": "https://www.linkedin.com/in/tamtranht02",
+    "personal_link": "https://tylerred19.github.io/"
+  },
+  {
+    "name": "Daphne Nong",
+    "org": "general",
+    "title": "UX/UI Designer",
+    "specialization": "-----",
+    "profile_image": "",
+    "email": "dynong@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": "https://www.daphnenong.me/"
+  },
+  {
+    "name": "Avery Blas",
+    "org": "general",
+    "title": "UX/UI Designer",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=19K9j_U2cvRpBXRi1s9X_a9WtRZKgt3wz",
+    "email": "ablas@ucsd.edu",
+    "linkedin_link": "https://www.linkedin.com/in/avery blas",
+    "personal_link": ""
+  },
+  {
+    "name": "Michele Murakami",
+    "org": "general",
+    "title": "UX/UI Designer",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1mIw17uY77dy6iwEaBtcYtO-9HN737v_L",
+    "email": "mmurakam@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": "https://michelemurakami.com/"
+  },
+  {
+    "name": "Juliet Zhuang",
+    "org": "general",
+    "title": "UX/UI Designer",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1MVDAlz6gWZGry8rtxD3vYNuSZk1Ob60Q",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Tiffany Lee",
+    "org": "general",
+    "title": "UX/UI Designer",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1wQQr66UcvrgxjReoDLI1bpdZqacGp3FD",
+    "email": "tll001@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Bryce Tsuyuki",
+    "org": "general",
+    "title": "Vice President Events",
+    "specialization": ":)",
+    "profile_image": "https://drive.google.com/uc?id=1i6YHOKr9q1Q4zU8aQx0L81QseEnSegDg",
+    "email": "btsuyuki@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": "https://brycetsuyuki.com/"
+  },
+  {
+    "name": "Christopher Cha",
+    "org": "general",
+    "title": "Event Director",
+    "specialization": "Technical Event Director",
+    "profile_image": "",
+    "email": "ccha@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": "https://rinsworth.github.io/"
+  },
+  {
+    "name": "Eric Xiao",
+    "org": "general",
+    "title": "Event Director",
+    "specialization": "Technical Event Director",
+    "profile_image": "https://drive.google.com/uc?id=1NIHtF3IVP_xBJ74xgyGgSqEjzgod5DzS",
+    "email": "erxiao@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Nick Nebel",
+    "org": "general",
+    "title": "Event Director",
+    "specialization": "Technical Event Director",
+    "profile_image": "",
+    "email": "nnebel@ucsd.edu",
+    "linkedin_link": "https://www.linkedin.com/in/butt",
+    "personal_link": ""
+  },
+  {
+    "name": "Jeffrey Ha",
+    "org": "general",
+    "title": "Event Director",
+    "specialization": "Interview Prep",
+    "profile_image": "https://drive.google.com/uc?id=14cHSPTooIrxRFOlPPLezQaJwdvj4iyUu",
+    "email": "jha@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Thang Phan",
+    "org": "general",
+    "title": "Event Director",
+    "specialization": "ProDev",
+    "profile_image": "",
+    "email": "",
+    "linkedin_link": "https://www.linkedin.com/in/linkedin is dumb af",
+    "personal_link": ""
+  },
+  {
+    "name": "Anna Liu",
+    "org": "general",
+    "title": "Event Director",
+    "specialization": "ProDev",
+    "profile_image": "https://drive.google.com/uc?id=1-wpzt4FHJWiDIjPLCyxDCpZ3L2F-OLXG",
+    "email": "a2liu@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Nishant Balaji",
+    "org": "general",
+    "title": "Event Coordinator",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1VutUyxj7WjDS_H4zsw-JoQrZKzxf2fMf",
+    "email": "nibalaji@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Connie Chang",
+    "org": "general",
+    "title": "Event Coordinator",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1TDCe7ds4Xigm5IZmSDbfqo4i1pCyrwKl",
+    "email": "hcchang@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Kristina Diep",
+    "org": "general",
+    "title": "Event Coordinator",
+    "specialization": "AV Manager",
+    "profile_image": "https://drive.google.com/uc?id=1TFqMvQ7D_pLoJdrD8YzvFgybXahLhPss",
+    "email": "kldiep@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Tristan Tjan",
+    "org": "general",
+    "title": "Vice President External",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=14aqK5JY8TZmuX22m5VM1Aa-gtZYEG5vU",
+    "email": "ttjan@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Alvin Wang",
+    "org": "general",
+    "title": "Sponsorship Director",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1bRYi5nBPA0VTn6ZYSyR9PiIAgu-OaXOC",
+    "email": "acw011@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": "https://www.acwang.me/"
+  },
+  {
+    "name": "Kelynn Ma",
+    "org": "general",
+    "title": "Sponsorship Associate",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1M00BdfqybyYQ62hHAgvMTsObj255Nl7X",
+    "email": "kem005@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Bella Coles",
+    "org": "general",
+    "title": "Sponsorship Associate",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1Rfr-MMWrwpjfsRgTdHMibxTTV_dLrhDo",
+    "email": "acoles@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Uday Kalra",
+    "org": "general",
+    "title": "Sponsorship Associate",
+    "specialization": "-----",
+    "profile_image": "",
+    "email": "ukalra@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Elias Arghand",
+    "org": "general",
+    "title": "Marketing Director",
+    "specialization": "-----",
+    "profile_image": "",
+    "email": "earghand@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Samuel Wu",
+    "org": "general",
+    "title": "Public Relations",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1sVP-r20iZQvc79BbKP4TACfUeoF7nhfz",
+    "email": "saw003@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Henry Luu",
+    "org": "general",
+    "title": "Public Relations",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1v2xMLAtaGYhdEPsjvNIoxQm20IQ1ZcQ7",
+    "email": "hluu@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Vivian Wu",
+    "org": "general",
+    "title": "Public Relations",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1wPexF-3XH7Ft__a4UBiy4nIB3I_ota34",
+    "email": "vrwu@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": "https://vrwu.github.io/"
+  },
+  {
+    "name": "Tiffany Chang",
+    "org": "general",
+    "title": "Content Creation",
+    "specialization": "-----",
+    "profile_image": "",
+    "email": "ptchang@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Anthony Manrique",
+    "org": "general",
+    "title": "Content Creation",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1wNHGW6WAV_BVru6KJefk3rD-wizWdfnx",
+    "email": "amanriqu@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Tristin Xie",
+    "org": "general",
+    "title": "Vice President Finance",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1VC5OvldFV9J6xe3IFKd-iVRPp4ab2cwq",
+    "email": "tyx001@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": "https://www.tristinxie.com/"
+  },
+  {
+    "name": "Alexander Yu",
+    "org": "general",
+    "title": "Funding Manager",
+    "specialization": "Internal",
+    "profile_image": "https://drive.google.com/uc?id=1wuCM6bxBiylENOD-VL4RumLJ1_qYzYRA",
+    "email": "awy001@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Samantha Susanto",
+    "org": "general",
+    "title": "Funding Manager",
+    "specialization": "AS",
+    "profile_image": "https://drive.google.com/uc?id=1FoLH_iNrTn81S3NxY2XBeyfytG3SbaBp",
+    "email": "ssusanto@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Aaron Yu",
+    "org": "general",
+    "title": "Funding Manager",
+    "specialization": "Department",
+    "profile_image": "",
+    "email": "axyu@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Shirley Qi",
+    "org": "general",
+    "title": "Vice President Membership",
+    "specialization": "-----",
+    "profile_image": "https://drive.google.com/uc?id=1bZFglg2n1wEI79_ThIREJ4gEu06bFQph",
+    "email": "shqi@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Jacob Lin",
+    "org": "general",
+    "title": "Community Director",
+    "specialization": "Bit-Byte",
+    "profile_image": "https://drive.google.com/uc?id=1-9xceKqycB_WnTMvXB_0TiA1uOd8SdXD",
+    "email": "jal041@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Edward De Leon",
+    "org": "general",
+    "title": "Community Director",
+    "specialization": "Discord Moderator",
+    "profile_image": "",
+    "email": "edeleon@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Alistair Gray",
+    "org": "general",
+    "title": "Community Director",
+    "specialization": "Social",
+    "profile_image": "https://drive.google.com/uc?id=1OMsqIqHOMosTARbunHMuExi16NSoWINl",
+    "email": "ajgray@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Faith Lu",
+    "org": "general",
+    "title": "Community Director",
+    "specialization": "Social",
+    "profile_image": "",
+    "email": "falu@uscd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Fiona Chen",
+    "org": "general",
+    "title": "Community Director",
+    "specialization": "Social",
+    "profile_image": "https://drive.google.com/uc?id=1vXxMGz9P7zQOH4azRH9jQ1iqTDTOV5nd",
+    "email": "fichen@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "William Duan",
+    "org": "general",
+    "title": "Vice President Projects",
+    "specialization": "-----",
+    "profile_image": "",
+    "email": "widuan@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Max Cohen",
+    "org": "general",
+    "title": "Projects Lead",
+    "specialization": "Collaboration Lead",
+    "profile_image": "https://drive.google.com/uc?id=1gjLMd_lLMZrerKyRI_0THpbWHuOEjc1k",
+    "email": "m1cohen@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Trisa Leung",
+    "org": "general",
+    "title": "Projects Lead",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1mAi6yM45TLZ-QQOrl29lJj7BExaQRzyD",
+    "email": "t1leung@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Stone Tao",
+    "org": "ai",
+    "title": "President",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1KV6QKsvt9Aq8SY5J0onLK9i1kGjjD766",
+    "email": "stao@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": "https://stoneztao.com"
+  },
+  {
+    "name": "Edward Yang",
+    "org": "ai",
+    "title": "Director of Operations",
+    "specialization": "",
+    "profile_image": "",
+    "email": "e7yang@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Jonathan Zamora",
+    "org": "ai",
+    "title": "Director of Marketing",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1pVIJIXeJeFIJ0t_ZjVNlAMQ_FYzEJUEJ",
+    "email": "jzamoraa@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": "https://jonzamora.dev"
+  },
+  {
+    "name": "Judy Liu",
+    "org": "ai",
+    "title": "Event Lead",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1gnQ9sMYkcfrEPJtEnt7juYP1pxn_Vqln",
+    "email": "lel006@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Jason Vega",
+    "org": "ai",
+    "title": "Event Lead",
+    "specialization": "",
+    "profile_image": "",
+    "email": "jvega@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Joseph Liu",
+    "org": "ai",
+    "title": "Event Lead",
+    "specialization": "",
+    "profile_image": "",
+    "email": "e1liu@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Satyam Gupta",
+    "org": "ai",
+    "title": "Event Lead",
+    "specialization": "",
+    "profile_image": "",
+    "email": "sagupta@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Christopher Cha",
+    "org": "ai",
+    "title": "Event Lead",
+    "specialization": "",
+    "profile_image": "",
+    "email": "ccha@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": "https://rinsworth.github.io/"
+  },
+  {
+    "name": "Dhanvi Desu",
+    "org": "ai",
+    "title": "Developer",
+    "specialization": "",
+    "profile_image": "",
+    "email": "ddesu@ucsd.edu",
+    "linkedin_link": "https://www.linkedin.com/in/linkedin.com/in/dhanvidesu",
+    "personal_link": "dhanvidesu.herokuapp.com"
+  },
+  {
+    "name": "William Duan",
+    "org": "ai",
+    "title": "Developer",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1GzEXuOZaIisCYUi_-DbVeKCNNBKeZL4E",
+    "email": "widuan@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Joshua Hong",
+    "org": "ai",
+    "title": "Developer",
+    "specialization": "",
+    "profile_image": "",
+    "email": "jjhong@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Yuru Zhou",
+    "org": "ai",
+    "title": "Developer",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1UdIug_H9Tabmikg9Shl40FxQhXMdLCuX",
+    "email": "yuz101@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Dennis Luc",
+    "org": "ai",
+    "title": "Marketing Coordinator ",
+    "specialization": "",
+    "profile_image": "",
+    "email": "dluc@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Karthik Guruvayurappan",
+    "org": "ai",
+    "title": "Sponsorship Coordinator",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1zMlj1KcSYC9kn8ok7OFTxGdssn27swGx",
+    "email": "kguruvay@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Andy Peterson",
+    "org": "cyber",
+    "title": "President",
+    "specialization": "",
+    "profile_image": "",
+    "email": "acpeters@ucsd.edu",
+    "linkedin_link": "https://www.linkedin.com/in/https://linkedin.com/in/i-am-andrew-peterson",
+    "personal_link": ""
+  },
+  {
+    "name": "RJ Wakefield-Carl",
+    "org": "cyber",
+    "title": "Director of Competition",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=19ce4qHTwFD2tnq4xVo2W48Phc2rkHVoA",
+    "email": "rewakefi@eng.ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Kevin Son",
+    "org": "cyber",
+    "title": "Director of Logistics",
+    "specialization": "",
+    "profile_image": "",
+    "email": "keson@ucsd.org",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Rahil Shah",
+    "org": "cyber",
+    "title": "Director of Content",
+    "specialization": "",
+    "profile_image": "",
+    "email": "r5shah@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": "https://rahil.us"
+  },
+  {
+    "name": "Jessica Lam",
+    "org": "cyber",
+    "title": "Director of Membership",
+    "specialization": "",
+    "profile_image": "",
+    "email": "jplam@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Aaron James Eason",
+    "org": "cyber",
+    "title": "Director of Finance",
+    "specialization": "\"Daddy of Dollars\"",
+    "profile_image": "",
+    "email": "aeason@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Samuel Fleet",
+    "org": "design",
+    "title": "President",
+    "specialization": "",
+    "profile_image": "",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "N/A",
+    "org": "design",
+    "title": "Director of Operations",
+    "specialization": "",
+    "profile_image": "",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Michele Murakami",
+    "org": "design",
+    "title": "Director of Dev x Design",
+    "specialization": "[ACM Dev Design Lead]",
+    "profile_image": "https://drive.google.com/uc?id=1mIw17uY77dy6iwEaBtcYtO-9HN737v_L",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Avery Blas",
+    "org": "design",
+    "title": "Director of Design Projects",
+    "specialization": "[ACM Projects Design Lead]",
+    "profile_image": "https://drive.google.com/uc?id=19K9j_U2cvRpBXRi1s9X_a9WtRZKgt3wz",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Xinchen Fu",
+    "org": "design",
+    "title": "TBD",
+    "specialization": "",
+    "profile_image": "",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Tiffany Lee",
+    "org": "design",
+    "title": "Events Coordinator",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1wQQr66UcvrgxjReoDLI1bpdZqacGp3FD",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Daphne Nong",
+    "org": "design",
+    "title": "TBD",
+    "specialization": "",
+    "profile_image": "",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "N/A",
+    "org": "design",
+    "title": "Senior Designer",
+    "specialization": "",
+    "profile_image": "",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Lara Canonizado",
+    "org": "design",
+    "title": "Designer",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1P8V3ph0tHd0-N091YjsyNuG_-SE0-kwT",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Tam (Tyler) Tran",
+    "org": "design",
+    "title": "Designer",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1gBNyDXeXxKBIgVIlxk9AhqMj-lvqdDIj",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Juliet Zhuang",
+    "org": "design",
+    "title": "Designer",
+    "specialization": "",
+    "profile_image": "",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "David Dempsey",
+    "org": "hack",
+    "title": "President",
+    "specialization": "",
+    "profile_image": "",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Bella Coles",
+    "org": "hack",
+    "title": "External Relations Lead",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1Rfr-MMWrwpjfsRgTdHMibxTTV_dLrhDo",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Trisa Leung",
+    "org": "hack",
+    "title": "Projects Lead",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1mAi6yM45TLZ-QQOrl29lJj7BExaQRzyD",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Garrett Luu",
+    "org": "hack",
+    "title": "Technical Event Lead",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1wp7e-G7dpnxieUsZqSUnQ1yvmQfjIYC4",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Faris Ashai",
+    "org": "hack",
+    "title": "Technical Event Lead",
+    "specialization": "",
+    "profile_image": "",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Ryan Heo",
+    "org": "hack",
+    "title": "Technical Event Lead",
+    "specialization": "",
+    "profile_image": "",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Yuru Zhou",
+    "org": "hack",
+    "title": "Technical Event Lead",
+    "specialization": "",
+    "profile_image": "",
+    "email": "yuz101@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Henry Chan",
+    "org": "hack",
+    "title": "Technical Event Lead",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1_33xUfUKokydqGbfLwN9rhDCY7p5PeOu",
+    "email": "hechan@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": "https://chanhenry54.github.io/"
+  },
+  {
+    "name": "Shravan Hariharan",
+    "org": "hack",
+    "title": "Technical Event Lead",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1rLb8TXwQyFJa9Kv0lzjQr2qdkkOs6XUV",
+    "email": "smhariha@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Praneet Bhoj",
+    "org": "innovate",
+    "title": "President",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1PqiVupIlorlDbFt9Q61J6VWenjQKmbJW",
+    "email": "pnbhoj@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Ryan Heo",
+    "org": "innovate",
+    "title": "Workshop Director",
+    "specialization": "",
+    "profile_image": "",
+    "email": "rjheo@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Jacob Bolano",
+    "org": "innovate",
+    "title": "Workshop Director",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=11E6K54kiEQXDud2Gf3hysxuMTJmRCb0k",
+    "email": "jbolano@ucsd.edu",
+    "linkedin_link": "https://www.linkedin.com/in/www.linkedin.com/in/jacobbolano",
+    "personal_link": ""
+  },
+  {
+    "name": "Yunyi Huang",
+    "org": "innovate",
+    "title": "Talk Manager",
+    "specialization": "",
+    "profile_image": "",
+    "email": "yuh022@ucsd.edu",
+    "linkedin_link": "",
+    "personal_link": ""
+  }
+]

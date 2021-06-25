@@ -2,6 +2,7 @@
 
 .about {
   &__hero {
+    min-height: calc(100vh - 200px);
     display: flex;
     align-items: center;
     margin: 75px 0;
@@ -13,7 +14,7 @@
       font-size: 25px;
       font-weight: 500;
     }
-    img {
+    .hero-img {
       padding-left: 2em;
       width: 40%;
     }
@@ -230,7 +231,7 @@
       padding: 0 130px 0 165px;
       text-align: left;
     }
-    button {
+    > a {
       color: @white;
       background-color: @black;
       height: 2em;
@@ -241,8 +242,15 @@
       border-style: none;
       font-weight: bold;
       font-size: 20px;
+      text-decoration: none;
+      text-align: center;
       margin-bottom: 36px;
+      padding: 4px 0;
       outline: none;
+      &:hover {
+        opacity: 0.85;
+        transition: opacity 0.2s;
+      }
     }
   }
   &__board {

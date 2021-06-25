@@ -11,11 +11,11 @@ const SponsorshipLogos: React.FC = () => {
         Thank you to our current sponsors!
       </h1>
       <div className="sponsorship__logos__img-grid">
-        <img src={OptiverImg} alt="Optiver" id="first" />
+        <a href="https://www.optiver.com/"><img src={OptiverImg} alt="Optiver" id="first" /></a>
       </div>
       <div className="sponsorship__logos__img-grid">
-        <img src={CSEImg} alt="CSE" />
-        <img src={TESCImg} alt="TESC" />
+        <a href="https://cse.ucsd.edu/"><img src={CSEImg} alt="CSE" /></a>
+        <a href="https://tesc.ucsd.edu/"><img src={TESCImg} alt="TESC" /></a>
       </div>
     </section>
   )

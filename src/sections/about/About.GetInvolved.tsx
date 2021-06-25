@@ -35,7 +35,7 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             </p>
           )}
           <div className="about__get-involved__section__description__links">
-            <a href="https://discord.com/">
+            <a href="https://acmurl.com/discord">
               <img src={DiscordLogo} alt="Discord Logo" />
             </a>
             <a href="https://www.facebook.com/acmucsd">
@@ -63,7 +63,7 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <h3 className="orange">Join our Communities</h3>
           {isMobile && <img src={AboutCommunities} alt="" />}
           <p>
-            ACM @ UCSD is one large community, but it is made up of several
+            ACM at UCSD is one large community, but it is made up of several
             smaller communities focused on specific areas of technology.
           </p>
           {!isMobile && <CommunitiesGrid verticalLayout />}
@@ -104,7 +104,7 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             (bits) grow in their academic, social and professional lives.
           </p>
           <br />
-          <a href="https://acmurl.com/bit-byte">Apply before date</a>
+          <a href="https://acmurl.com/bit-byte">Find out more!</a>
         </div>
       </div>
       <div className="about__get-involved__section">

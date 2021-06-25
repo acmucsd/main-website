@@ -15,7 +15,7 @@ const cardContents = [
   { title: "Email", value: "contact@acmucsd.org", icon: EmailIcon },
   {
     title: "Discord",
-    value: "discord.com/somelink",
+    value: "acmurl.com/discord",
     icon: DiscordIcon,
   },
   { title: "Medium", value: "medium.com/acmucsd", icon: MediumIcon },
@@ -44,7 +44,9 @@ const Footer: React.FC = () => {
               let linkprefix = item.title === "Email" ? "mailto:" : "https://"
               return (
                 <div className="footerContents__contact__card">
-                  <img src={item.icon} alt={item.title} />
+                  <a href={linkprefix + item.value}>
+                    <img src={item.icon} alt={item.title} />
+                  </a>
                   <div>
                     <h3>{item.title}</h3>
                     <a href={linkprefix + item.value}>{item.value}</a>
@@ -85,7 +87,7 @@ const Footer: React.FC = () => {
           <a href="http://instagram.com/acm.ucsd">
             <img src={InstagramIcon} alt="Instagram" />
           </a>
-          <a href="http://discord.com/somelink/">
+          <a href="http://acmurl.com/discord">
             <img src={DiscordIcon} alt="Discord" />
           </a>
         </div>

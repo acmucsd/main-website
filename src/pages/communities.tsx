@@ -18,7 +18,7 @@ const CommunitiesPage: React.FC = () => {
 
   return (
     <Layout>
-      <SEO title="Community" />
+      <SEO title="Communities" />
       <CommunityHero isMobile={isMobile} />
       <CommunitySuborgs isMobile={isMobile} />
     </Layout>

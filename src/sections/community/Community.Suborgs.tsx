@@ -130,7 +130,7 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             <a href="https://www.facebook.com/cyberucsd">
               <img src={CyberFacebook} alt="Cyber Facebook" />
             </a>
-            <a href="https://twitter.com/cyberucsd,">
+            <a href="https://twitter.com/cyberucsd">
               <img src={CyberTwitter} alt="Cyber Twitter" />
             </a>
             <a href="https://www.youtube.com/playlist?list=PLpmCTDt8lemWaQ_ZruBe3Dt6ddtVdX-yR">
@@ -314,7 +314,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         return (
           <div className="community__sub-orgs--mobile__description">
             <p>
-              ACM @ UCSD is one large community, but it is made up of several
+              ACM at UCSD is one large community, but it is made up of several
               smaller communities focused on specific areas of technology.
             </p>
             <p>Learn more about each community</p>

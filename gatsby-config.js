@@ -5,7 +5,6 @@ module.exports = {
     author: `@acm.ucsd`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

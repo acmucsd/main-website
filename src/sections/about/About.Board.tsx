@@ -499,7 +499,6 @@ const AboutBoard: React.FC = ({ isMobile }) => {
   useEffect(() => {
     setDisplayList(filter(filters, members_list))
   }, [filters])
-  console.log(filters)
   return (
     <section className="about__board">
       <h1 className="about__board__title">Meet the Board</h1>

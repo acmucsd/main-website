@@ -31,6 +31,10 @@ const cardContents = [
     icon: InstagramIcon,
   },
 ]
+function isValidEmail(input) {
+  const reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  return reg.test(String(input).toLowerCase())
+}
 const Footer: React.FC = () => {
   const [email, setEmail] = useState("")
   return (
@@ -65,7 +69,7 @@ const Footer: React.FC = () => {
               placeholder="my@email.com"
               onChange={e => setEmail(e.target.value)}
             />
-            <button className={email.length > 0 ? "blue" : ""}>
+            <button className={isValidEmail(email) ? "blue" : ""}>
               Subscribe!
             </button>
           </div>

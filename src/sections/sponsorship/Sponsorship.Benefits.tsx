@@ -11,28 +11,31 @@ const BenefitList: React.FC = () => {
     <div className="sponsorship__benefits__benefit-list">
       <div className="sponsorship__benefits__benefit-list__bullet">
         <img src={RedBullet} />
-        <p>Access to our diverse and large member database</p>
+        <p>
+          Access to our diverse and large member database to recruit talented
+          UCSD students.
+        </p>
       </div>
       <div className="sponsorship__benefits__benefit-list__bullet">
         <img src={TurquoiseBullet} />
         <p>
           Opportunity to establish brand name and relationship with UCSD
           computing students by partnering with largest engineering org on
-          campus
+          campus.
         </p>
       </div>
       <div className="sponsorship__benefits__benefit-list__bullet">
         <img src={YellowBullet} />
         <p>
           Ability to expose students to different opportunities and unique life
-          at their company
+          at their company.
         </p>
       </div>
       <div className="sponsorship__benefits__benefit-list__bullet">
         <img src={PurpleBullet} />
         <p>
           Get to help and guide university students, especially those that are
-          struggling to navigate the many diverse fields in computing
+          struggling to navigate the many diverse fields in computing.
         </p>
       </div>
       <div className="sponsorship__benefits__benefit-list__bullet">

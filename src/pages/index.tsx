@@ -17,8 +17,8 @@ const IndexPage: React.FC = () => (
     </Helmet>
     <HomeHero />
     <HomeJoinTheClub />
-    <HomeCommunities />
     <HomeEvents />
+    <HomeCommunities />
   </Layout>
 )
 

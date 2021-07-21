@@ -29,11 +29,22 @@
     padding-top: 9px;
     padding-bottom: 9px;
     margin-left: 32px;
-    a > img {
-      height: 60px;
-    }
     a {
-      height: 60px;
+      //height: 60px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-decoration: none;
+      > img {
+        height: 60px;
+        margin: 0;
+      }
+      > p {
+        font-size: 16px;
+        color: @black;
+        margin-left: 4px;
+        margin-bottom: 2px;
+      }
     }
   }
 
@@ -109,7 +120,7 @@
   }
 }
 
-@media only screen and (max-width: 812px) {
+@media only screen and (max-width: 900px) {
   .navigation-bar {
     display: none;
   }
@@ -136,11 +147,18 @@
   }
 
   .navbar-mobile > a:first-of-type {
+    display: flex;
+    align-items: center;
     float: left;
     height: 60px;
     margin: 9px 32px;
+    text-decoration: none;
     img {
       height: 60px;
+    }
+    > p {
+      color: @black;
+      margin: 0 0 0 4px;
     }
   }
   .icon {

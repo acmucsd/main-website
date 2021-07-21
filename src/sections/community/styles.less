@@ -7,7 +7,8 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    margin-top: 100px;
+    padding-top: 140px;
+    height: calc(90vh - 78px);
     > h1 {
       font-size: 45px;
       margin-bottom: 30px;
@@ -24,6 +25,8 @@
       text-align: left;
     }
     @media only screen and (max-width: 812px) {
+      padding-top: 20px;
+      height: 0;
       margin-top: 50px;
       > h1 {
         text-align: left;
@@ -52,10 +55,12 @@
         justify-content: center;
         padding: 1em;
         > button {
+          width: 90px;
           background: none;
           outline: none;
           border: none;
           img {
+            width: 90px;
             margin: 0;
           }
           &:hover {
@@ -73,7 +78,7 @@
     }
     &__community-card {
       display: inline-flex;
-      height: auto;
+      height: calc(100vh - 78px);
       width: 100vw;
       min-height: 564px;
       margin-left: 0px !important;
@@ -111,6 +116,14 @@
         flex-direction: row;
         justify-content: center;
         width: 100%;
+        > a {
+          display: flex;
+          justify-content: center;
+          &:hover img {
+            transition: transform 0.2s;
+            transform: scale(1.05);
+          }
+        }
         > div {
           max-width: 570px;
           display: flex;

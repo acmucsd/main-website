@@ -12,7 +12,7 @@ const HomeEvents: React.FC = () => {
     if (eventsArray === undefined) {
       setEvents(new Array<EventObject>())
     }
-    setEvents(eventsArray)
+    setEvents([])
   }
 
   useEffect(() => {

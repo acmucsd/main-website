@@ -7,7 +7,7 @@
   justify-content: center;
   flex-wrap: wrap;
   &__community {
-    padding: 20px 20px;
+    padding: 20px 0px;
     text-decoration: none;
     color: @black;
     display: flex;
@@ -128,5 +128,18 @@
     img {
       width: 80px;
     }
+  }
+}
+
+.colWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  .communitiesGrid {
+    display: inline-block;
+  }
+  @media only screen and (max-width: 932px) {
+    flex-direction: column;
+    align-items: center;
   }
 }

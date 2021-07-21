@@ -46,11 +46,13 @@ const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       <div className="color_slide redbg" />
       <div className="community__sub-orgs__community-card__content">
         {!isMobile ? (
-          <img
-            src={AILogo}
-            alt="ACM AI"
-            className="community__sub-orgs__community-card__logo"
-          />
+          <a href="https://ai.acmucsd.com/">
+            <img
+              src={AILogo}
+              alt="ACM AI"
+              className="community__sub-orgs__community-card__logo"
+            />
+          </a>
         ) : (
           ""
         )}
@@ -93,11 +95,13 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
 
       <div className="community__sub-orgs__community-card__content">
         {!isMobile ? (
-          <img
-            src={CyberLogo}
-            alt="ACM Cyber"
-            className="community__sub-orgs__community-card__logo"
-          />
+          <a href="https://sdc.tf/">
+            <img
+              src={CyberLogo}
+              alt="ACM Cyber"
+              className="community__sub-orgs__community-card__logo"
+            />
+          </a>
         ) : (
           ""
         )}
@@ -139,7 +143,7 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             <a href="https://www.linkedin.com/company/cyber-ucsd/">
               <img src={CyberLinkedin} alt="Cyber LinkedIn" />
             </a>
-            <a href="https://acmurl.com/joincyber" id="Hack">
+            <a href="https://acmurl.com/joincyber" id="Design">
               <img src={CyberMail} alt="Cyber Mail" />
             </a>
           </div>
@@ -155,11 +159,13 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
 
       <div className="community__sub-orgs__community-card__content">
         {!isMobile ? (
-          <img
-            src={HackLogo}
-            alt="ACM Hack"
-            className="community__sub-orgs__community-card__logo"
-          />
+          <a href="https://hack.acmucsd.com/">
+            <img
+              src={HackLogo}
+              alt="ACM Hack"
+              className="community__sub-orgs__community-card__logo"
+            />
+          </a>
         ) : (
           ""
         )}
@@ -205,11 +211,13 @@ const InnovateCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
 
       <div className="community__sub-orgs__community-card__content">
         {!isMobile ? (
-          <img
-            src={InnovateLogo}
-            alt="ACM Innovate"
-            className="community__sub-orgs__community-card__logo"
-          />
+          <a href="https://innovate.acmucsd.com/">
+            <img
+              src={InnovateLogo}
+              alt="ACM Innovate"
+              className="community__sub-orgs__community-card__logo"
+            />
+          </a>
         ) : (
           ""
         )}
@@ -330,9 +338,9 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <div className="spacer80px" id="AI"></div>
           <AICommunity isMobile={isMobile} />
           <CyberCommunity isMobile={isMobile} />
+          <DesignCommunity isMobile={isMobile} />
           <HackCommunity isMobile={isMobile} />
           <InnovateCommunity isMobile={isMobile} />
-          <DesignCommunity isMobile={isMobile} />
         </section>
       ) : (
         <>

@@ -62,16 +62,9 @@ const Footer: React.FC = () => {
           <div className="footerContents__newsletter">
             <h2>Newsletter</h2>
             <p>Receive weekly events and news!</p>
-            <input
-              type="text"
-              id="emailinput"
-              name="fname"
-              placeholder="my@email.com"
-              onChange={e => setEmail(e.target.value)}
-            />
-            <button className={isValidEmail(email) ? "blue" : ""}>
+            <a href="https://acmurl.com/newsletter" target="_blank">
               Subscribe!
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -98,13 +91,9 @@ const Footer: React.FC = () => {
         <div className="mobileFooterContainer__newsletter">
           <h2>Newsletter</h2>
           <p>Receive weekly events and news!</p>
-          <input
-            type="text"
-            id="emailinput"
-            name="fname"
-            placeholder="my@email.com"
-          />
-          <button>Subscribe!</button>
+          <a href="https://acmurl.com/newsletter" target="_blank">
+            Subscribe!
+          </a>
         </div>
       </div>
     </div>

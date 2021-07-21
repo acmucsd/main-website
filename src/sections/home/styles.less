@@ -51,7 +51,8 @@
         width: 100%;
         margin: 37px 0px;
         > a {
-          width: 225px;
+          font-size: 24px;
+          width: 200px;
           text-decoration: none;
           margin-right: 16px;
         }
@@ -111,12 +112,17 @@
           justify-content: center;
           width: 100%;
           margin: 1em 0 0 0 !important;
-          font-size: 32px !important;
         }
       }
     }
 
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 784px) {
+      .buttons > a {
+        font-size: 18px !important;
+      }
+    }
+
+    @media only screen and (max-width: 540px) {
       &--grid {
         padding-top: 1em !important;
 
@@ -149,11 +155,12 @@
   }
   &__join-the-club {
     padding: 0 !important;
+    margin: 100px 0;
     &__grid {
       width: 100% !important;
       &__header {
         h1 {
-          font-size: 36px;
+          font-size: 40px;
           font-weight: 700;
         }
         p {
@@ -206,12 +213,12 @@
   }
   &__communities {
     padding: 0 !important;
+    margin: 100px 0;
     &__grid {
-      padding-top: 100px;
       width: 100% !important;
       &__header {
         h1 {
-          font-size: 36px;
+          font-size: 40px;
           font-weight: 700;
         }
         p {
@@ -231,12 +238,12 @@
   }
   &__events {
     padding: 0 !important;
+    margin: 100px 0 50px 0;
     &__grid {
-      padding-top: 100px;
       width: 100% !important;
       &__header {
         h1 {
-          font-size: 36px;
+          font-size: 40px;
           font-weight: 700;
         }
         p {
@@ -245,7 +252,7 @@
         }
       }
       &__container {
-        margin-bottom: 80px;
+        //margin-bottom: 80px;
         overflow-y: hidden;
         display: inline-flex;
         height: fit-content;
@@ -327,6 +334,9 @@
           padding: 3em 3em 0 3em !important;
         }
         &__container__event {
+          &--default {
+            margin: 0 3em !important;
+          }
           &:first-of-type {
             margin-left: 3em;
           }

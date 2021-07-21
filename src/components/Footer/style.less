@@ -96,7 +96,9 @@
       font-size: 16px;
       outline: none;
     }
-    button {
+    > a {
+      text-decoration: none;
+      padding: 5px 30px;
       cursor: pointer;
       color: @white;
       background-color: @dark-grey;
@@ -110,14 +112,12 @@
       font-size: 20px;
       margin-bottom: 36px;
       outline: none;
-    }
-    .blue {
-      background-color: @blue;
-    }
-    .blue:hover {
-      background-color: @hover-blue;
-      transform: translatey(-1px);
-      transition: 200ms;
+      &:hover {
+        cursor: pointer;
+        color: @black;
+        background-color: @hover-blue;
+        transition-duration: 200ms;
+      }
     }
   }
 }
@@ -184,7 +184,9 @@
       font-size: 16px;
       outline: none;
     }
-    button {
+    > a {
+      text-decoration: none;
+      padding: 4px 0;
       color: @white;
       background-color: @dark-grey;
       height: 2em;

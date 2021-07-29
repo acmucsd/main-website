@@ -70,15 +70,17 @@
       &--grid {
         flex-direction: column;
         padding-top: 2em !important;
+        min-height: calc(40vh - 81px);
 
         &--cool-img {
-          margin: 0px;
+          margin: 40px 0px;
           min-width: 325px;
           max-width: 50vw;
 
           img {
             max-width: 50vw;
             min-width: 325px;
+            margin: 0;
           }
         }
 
@@ -116,10 +118,15 @@
       }
     }
 
+    @media only screen and (max-width: 380px) {
+      .buttons > a {
+        font-size: 16px !important;
+      }
+    }
+
     @media only screen and (max-width: 540px) {
       &--grid {
         padding-top: 1em !important;
-
         &--cool-img {
           img {
             max-width: none;
@@ -128,11 +135,12 @@
         }
 
         &--description {
-          font-size: 28px;
+          font-size: 26px;
           .description-block {
-            margin: 0.5em;
+            margin: 0 1.5rem;
             .Typist {
               min-height: 3em;
+              width: 100%;
             }
           }
         }
@@ -194,6 +202,7 @@
     }
 
     @media only screen and (max-width: 500px) {
+      margin: 40px 0;
       padding: 3em !important;
       h1 {
         font-size: 28px;
@@ -225,6 +234,7 @@
       padding: 3em !important;
     }
     @media only screen and (max-width: 500px) {
+      margin: 40px 0;
       .home__communities__grid {
         padding: 0;
       }
@@ -332,6 +342,7 @@
       }
     }
     @media only screen and (max-width: 500px) {
+      margin: 40px 0 50px 0;
       .home__events__grid {
         &__container__event {
           width: 276px;

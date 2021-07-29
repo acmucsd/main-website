@@ -11,8 +11,6 @@ import EmailIcon from "../../assets/email.svg"
 import LinkedinIcon from "../../assets/linkedin.svg"
 import YoutubeIcon from "../../assets/youtube.svg"
 
-// import ACMBlueFade from "../../assets/ACMBlueFade.svg"
-
 const cardContents = [
   { title: "Email", value: "contact@acmucsd.org", icon: EmailIcon },
   {

@@ -79,7 +79,6 @@ const HomeEvents: React.FC = () => {
         onTouchCancel={handleMoveEnd}
         onTouchEnd={handleMoveEnd}
         onDragStart={() => false}
-        //ref={sliderRef}
         role="menuitem"
         tabIndex={0}
       >

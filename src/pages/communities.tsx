@@ -8,9 +8,10 @@ import SEO from "../components/SEO"
 import CommunityHero from "../sections/community/Community.Hero"
 import CommunitySuborgs from "../sections/community/Community.Suborgs"
 
-const CommunitiesPage: React.FC = () => {
+const CommunitiesPage: React.FC = (props: any) => {
   const size: Size = useWindowSize()
   const [isMobile, setIsMobile] = useState(false)
+  const suborgSelection = props.location.hash.substring(1);
 
   useEffect(() => {
     setIsMobile(size.width < 812)
@@ -20,7 +21,7 @@ const CommunitiesPage: React.FC = () => {
     <Layout>
       <SEO title="Communities" />
       <CommunityHero isMobile={isMobile} />
-      <CommunitySuborgs isMobile={isMobile} />
+      <CommunitySuborgs isMobile={isMobile} suborg={suborgSelection}/>
     </Layout>
   )
 }

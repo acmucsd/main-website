@@ -18,6 +18,30 @@ import DiscordLogo from "../../assets/discord-dark.svg"
 import FacebookLogo from "../../assets/facebook-dark.svg"
 import LinkedinLogo from "../../assets/linkedin-dark.svg"
 
+const renderMobileCommunityGrid = () => (
+  <div className="about__get-involved__section__communities--mobile">
+    <div>
+      <a href="/communities#Hack">
+        <img src={HackLogo} alt="ACM Hack Logo" />
+      </a>
+      <a href="/communities#Innovate">
+        <img src={InnovateLogo} alt="ACM Innovate Logo" />
+      </a>
+    </div>
+    <div>
+      <a href="/communities#AI">
+        <img src={AILogo} alt="ACM AI Logo" />
+      </a>
+      <a href="/communities#Cyber">
+        <img src={CyberLogo} alt="ACM Cyber Logo" />
+      </a>
+      <a href="/communities#Design">
+        <img src={DesignLogo} alt="ACM Design Logo" />
+      </a>
+    </div>
+  </div>
+)
+
 const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const [email, setEmail] = useState("")
   return (
@@ -35,26 +59,19 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             </p>
           )}
           <div className="about__get-involved__section__description__links">
-            <a href="https://discord.com/">
+            <a href="https://acmurl.com/discord">
               <img src={DiscordLogo} alt="Discord Logo" />
             </a>
             <a href="https://www.facebook.com/acmucsd">
               <img src={FacebookLogo} alt="Facebook Logo" />
             </a>
           </div>
-          <form>
+          <div className="about__get-involved__section__description__newsletter">
             <label>Subscribe to our Newsletter!</label>
-            <input
-              type="text"
-              id="emailinput"
-              name="fname"
-              placeholder="my@email.com"
-              onChange={e => setEmail(e.target.value)}
-            />
-            <button className={email.length > 0 ? "blue" : ""}>
+            <a href="https://acmurl.com/newsletter" target="_blank">
               Subscribe!
-            </button>
-          </form>
+            </a>
+          </div>
         </div>
       </div>
       <div className="about__get-involved__section">
@@ -63,34 +80,12 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <h3 className="orange">Join our Communities</h3>
           {isMobile && <img src={AboutCommunities} alt="" />}
           <p>
-            ACM @ UCSD is one large community, but it is made up of several
+            ACM at UCSD is one large community, but it is made up of several
             smaller communities focused on specific areas of technology.
           </p>
-          {!isMobile && <CommunitiesGrid verticalLayout />}
+          {!isMobile && <CommunitiesGrid colLayout />}
         </div>
-        {isMobile && (
-          <div className="about__get-involved__section__communities--mobile">
-            <div>
-              <a href="/communities#Hack">
-                <img src={HackLogo} alt="ACM Hack Logo" />
-              </a>
-              <a href="/communities#Innovate">
-                <img src={InnovateLogo} alt="ACM Innovate Logo" />
-              </a>
-            </div>
-            <div>
-              <a href="/communities#AI">
-                <img src={AILogo} alt="ACM AI Logo" />
-              </a>
-              <a href="/communities#Cyber">
-                <img src={CyberLogo} alt="ACM Cyber Logo" />
-              </a>
-              <a href="/communities#Design">
-                <img src={DesignLogo} alt="ACM Design Logo" />
-              </a>
-            </div>
-          </div>
-        )}
+        {isMobile && renderMobileCommunityGrid()}
       </div>
 
       <div className="about__get-involved__section">
@@ -101,10 +96,15 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <p>
             Join ACM’s Bit-Byte program that pairs students to make lifelong
             friendships! Our upperclassmen bigs (bytes) help their littles
-            (bits) grow in their academic, social and professional lives.
+            (bits) grow in their academic, social, and professional lives.
           </p>
           <br />
-          <a href="https://acmurl.com/bit-byte">Apply before date</a>
+          <a
+            className="about__get-involved__section__description__button--blue"
+            href="https://acmurl.com/bit-byte"
+          >
+            Learn more!
+          </a>
         </div>
       </div>
       <div className="about__get-involved__section">
@@ -117,8 +117,11 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             skills in coding, design, or project management.
           </p>
           <br />
-          <a href="https://github.com/acmucsd-projects">
-            Check out these exciting projects!
+          <a
+            className="about__get-involved__section__description__button--pink"
+            href="https://github.com/acmucsd-projects"
+          >
+            See Projects!
           </a>
         </div>
       </div>

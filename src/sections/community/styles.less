@@ -7,24 +7,26 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    margin-top: 110px;
+    padding-top: 140px;
+    height: 650px;
     > h1 {
-      font-weight: 500;
       font-size: 45px;
       margin-bottom: 30px;
       text-align: center;
     }
     > p {
-      font-weight: 500;
       font-size: 20px;
-      width: 500px;
+      font-weight: 500;
+      width: 650px;
       margin-bottom: 40px;
-      text-align: center;
+      text-align: left;
     }
     &__communities {
       text-align: left;
     }
     @media only screen and (max-width: 812px) {
+      padding-top: 20px;
+      height: 0;
       margin-top: 50px;
       > h1 {
         text-align: left;
@@ -53,10 +55,12 @@
         justify-content: center;
         padding: 1em;
         > button {
+          width: 90px;
           background: none;
           outline: none;
           border: none;
           img {
+            width: 90px;
             margin: 0;
           }
           &:hover {
@@ -74,14 +78,14 @@
     }
     &__community-card {
       display: inline-flex;
-      height: auto;
+      height: calc(100vh - 78px);
       width: 100vw;
       min-height: 564px;
       margin-left: 0px !important;
       padding-right: 96px;
       margin-bottom: 10px;
       padding-top: -80px;
-      
+
       @media (min-width: 960px) {
         margin-left: calc(-1 * ((100vw - 960px) / 2)) !important;
       }
@@ -112,6 +116,14 @@
         flex-direction: row;
         justify-content: center;
         width: 100%;
+        > a {
+          display: flex;
+          justify-content: center;
+          &:hover img {
+            transition: transform 0.2s;
+            transform: scale(1.05);
+          }
+        }
         > div {
           max-width: 570px;
           display: flex;

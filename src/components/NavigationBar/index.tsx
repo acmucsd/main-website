@@ -27,6 +27,7 @@ const NavigationBar: React.FC = () => {
           <li className="navigation-bar__logo">
             <Link to="/">
               <img src={ACMLogo} alt="ACM Logo" />
+              <p>at UCSD</p>
             </Link>
           </li>
           <li className="navigation-bar__login">
@@ -50,6 +51,7 @@ const NavigationBar: React.FC = () => {
           <div className="navbar-mobile">
             <Link to="/">
               <img src={ACMLogo} alt="ACM Logo" />
+              <p>at UCSD</p>
             </Link>
             <button className="icon" onClick={toggleMenu} type="button">
               <img className="menuicon" src={MenuButtonIcon} alt="Menu Icon" />

@@ -9,57 +9,68 @@
   position: relative;
 }
 .footerContainer {
+  padding-bottom: 80px;
   display: flex;
   justify-content: center;
 }
 .footerContents {
-  width: 660px;
   h2 {
-    font-size: 25px;
+    font-size: 42px;
     font-weight: 700;
     width: 100%;
     text-align: center;
     padding-top: 56px;
   }
 
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    @media only screen and (max-width: 985px) {
+      flex-wrap: wrap;
+      padding: 0 40px;
+    }
+  }
+
   &__contact {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     &__card {
-      display: inline-block;
-      width: 310px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 240px;
       height: 75px;
-      margin: 10px;
+      margin: 10px 5px;
+      a:hover img {
+        transform: scale(1.05);
+        transition: transform 0.2s;
+      }
       img {
         float: left;
-        width: 55px;
+        width: 45px;
         margin: 10px;
       }
       div {
-        height: 55px;
         margin: 10px;
-        width: 215px;
-        float: right;
+        width: 140px;
         h3 {
           font-size: 20px;
           font-weight: 500;
           margin: 0px;
         }
         a {
-          font-size: 15px;
+          font-size: 20px;
           font-weight: 500;
           margin: 0px;
           color: white;
+          text-decoration: none;
         }
       }
     }
   }
   &__newsletter {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -92,7 +103,9 @@
       font-size: 16px;
       outline: none;
     }
-    button {
+    > a {
+      text-decoration: none;
+      padding: 5px 30px;
       cursor: pointer;
       color: @white;
       background-color: @dark-grey;
@@ -106,14 +119,17 @@
       font-size: 20px;
       margin-bottom: 36px;
       outline: none;
-    }
-    .blue {
-      background-color: @blue;
+      &:hover {
+        cursor: pointer;
+        color: @black;
+        background-color: @hover-blue;
+        transition-duration: 200ms;
+      }
     }
   }
 }
 .acmBlueFade {
-  display: block;
+  display: none;
   margin: 0 !important;
   position: absolute;
   bottom: 10px;
@@ -130,8 +146,8 @@
   h2 {
     padding-top: 56px;
     text-align: center;
-    font-size: 25px;
-    margin-bottom: 2px;
+    font-size: 32px;
+    margin-bottom: 40px;
   }
   a {
     text-align: center;
@@ -175,9 +191,11 @@
       font-size: 16px;
       outline: none;
     }
-    button {
+    > a {
+      text-decoration: none;
+      padding: 4px 0;
       color: @white;
-      background-color: @dark-grey;
+      background-color: @blue;
       height: 2em;
       width: 165px;
       height: 35px;
@@ -192,27 +210,28 @@
   }
 }
 .community-links {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   flex-direction: row;
-  justify-content: space-between;
-  align-items: start;
   padding-top: 4px;
   width: 272px;
 
   a {
+    height: 50px;
+    margin-bottom: 20px;
     border: none;
     background-color: transparent;
     outline: none;
     padding: 0px;
     img {
-      width: 41px;
+      width: 70%;
       &:hover {
         transform: scale(1.05);
       }
     }
   }
 }
-@media only screen and (min-width: 810px) {
+@media only screen and (min-width: 984px) {
   .acmBlueFade {
     display: block;
   }
@@ -221,7 +240,7 @@
   }
 }
 
-@media only screen and (max-width: 812px) {
+@media only screen and (max-width: 986px) {
   .footerContainer {
     display: none;
   }

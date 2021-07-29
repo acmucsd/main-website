@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({ link, title, type }) => {
     )
   } else {
     return (
-      <a href={link} className="button priamry">
+      <a href={link} className="button primary">
         <div>{title}</div>
       </a>
     )

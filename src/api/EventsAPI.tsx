@@ -30,9 +30,11 @@ const handleErrors = (response: Response): Promise<EventsResponse> => {
 
 const getAllEvents = async (): Promise<EventsArray | undefined> => {
   let apiurl = "https://api.acmucsd.com/api/v2/event/future"
-  if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
-    apiurl = "https://api.acmucsd.com/api/v2/event/past"
-  }
+
+  // TODO: Fix test data for development purposes (images are not showing up)
+  // if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
+  //   apiurl = "https://testing.api.acmucsd.com/api/v2/event/future"
+  // }
 
   try {
     const response: Response = await fetch(apiurl)

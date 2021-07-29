@@ -1,11 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `ACM UCSD`,
+    title: `ACM at UCSD`,
     description: `We are the Association for Computing Machinery at UCSD! We are an inclusive member-first community for all who are interested in the field of computing. We welcome all skill levels and majors to our events and activities!`,
     author: `@acm.ucsd`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -1,9 +1,9 @@
 {
   "name": "main-website",
   "private": true,
-  "description": "The main website for ACM @ UCSD.",
+  "description": "The main website for ACM at UCSD.",
   "version": "0.9.0",
-  "author": "ACM UCSD",
+  "author": "ACM at UCSD",
   "dependencies": {
     "@babel/core": "^7.13.1",
     "@fontsource/dm-sans": "^4.2.2",
@@ -12,7 +12,6 @@
     "gatsby-plugin-less": "^4.7.0",
     "gatsby-plugin-manifest": "^2.12.0",
     "gatsby-plugin-offline": "^3.10.0",
-    "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-sharp": "^2.14.1",
     "gatsby-plugin-tslint": "^0.0.2",
     "gatsby-plugin-typescript": "^2.12.0",

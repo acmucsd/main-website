@@ -1,8 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
 
 import HomeHero from "../sections/home/Home.Hero"
 import HomeCommunities from "../sections/home/Home.Communities"
@@ -11,11 +10,15 @@ import HomeEvents from "../sections/home/Home.Events"
 
 const IndexPage: React.FC = () => (
   <Layout>
-    <SEO title="Home" />
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>ACM at UCSD</title>
+      <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
     <HomeHero />
     <HomeJoinTheClub />
-    <HomeCommunities />
     <HomeEvents />
+    <HomeCommunities />
   </Layout>
 )
 

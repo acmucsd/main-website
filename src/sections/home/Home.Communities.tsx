@@ -9,7 +9,8 @@ const HomeCommunities: React.FC = () => {
         <div className="home__communities__grid__header">
           <h1>Communities</h1>
           <p>
-            ACM consists of 5 orgs that each focus on a specific area of tech.
+            ACM at UCSD consists of 5 orgs that each focus on a specific area of
+            tech.
           </p>
         </div>
         <CommunitiesGrid verticalLayout={false} />

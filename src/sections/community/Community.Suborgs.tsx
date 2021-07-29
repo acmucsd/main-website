@@ -303,10 +303,15 @@ const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   )
 }
 
-const CommunitySubOrgs: React.FC<{ isMobile: boolean, suborg: string }> = ({ isMobile, suborg }) => {
+const CommunitySubOrgs: React.FC<{ isMobile: boolean; suborg: string }> = ({
+  isMobile,
+  suborg,
+}) => {
   const [selected, setSelected] = useState("")
 
-  useEffect(() => {setSelected(suborg.toLowerCase())}, []);
+  useEffect(() => {
+    setSelected(suborg.toLowerCase())
+  }, [])
 
   const renderCommunity = (suborg: string) => {
     switch (suborg) {

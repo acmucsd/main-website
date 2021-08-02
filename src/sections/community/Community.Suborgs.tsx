@@ -121,8 +121,6 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             industry panels, competitive CTF training, and mentorship
             opportunities for our members. Our largest event of the year is San
             Diego CTF (Capture the Flag), a 48 hour jeopardy style hacking game.
-            Our goals are to help build a community of AI enthusiasts at UCSD
-            and connect that community to the broader AI network.
           </p>
           <div className="community-links">
             <a href="https://acmurl.com/cyberdiscord">
@@ -186,9 +184,7 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             <br />
             Our events are for people of all skill levels, so whether you're a
             first-time coder or a skilled programmer, we'd be happy to have you
-            join the ACM Hack community! ACM Cyber aims to provide member-first
-            opportunities to learn, teach, and practice critical cybersecurity
-            skills to help the UCSD community thrive.
+            join the ACM Hack community!
           </p>
           <div className="community-links" id="Innovate">
             <a href="http://acmurl.com/hack-disc">

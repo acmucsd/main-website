@@ -110,14 +110,14 @@ const fetchBoardData = async () => {
       title: row[Column.Position],
       specialization: specialized_position,
       profile_image: "",
-      email: row[Column.UCSD_Email],
+      email: row[Column.ACM_Email],
       linkedin_link: linkedin_url,
       personal_link: row[Column.Website],
       profile_image: image_url,
     })
   }
 
-  fs.writeFile("src/board-data.json", JSON.stringify(board, null, 4), err => {
+  fs.writeFile("src/board-data.json", JSON.stringify(board, null, 2), err => {
     if (err) {
       console.error(err)
       return

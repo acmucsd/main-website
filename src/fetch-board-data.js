@@ -79,8 +79,7 @@ const fetchBoardData = async () => {
 
     let image_url = ""
     if (row[Column.ImageID] !== "") {
-      image_url =
-        "https://drive.google.com/uc?id=" + row[Column.ImageID]
+      image_url = "https://drive.google.com/uc?id=" + row[Column.ImageID]
     }
 
     let linkedin_url = row[Column.LinkedIn]

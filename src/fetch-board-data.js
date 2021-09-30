@@ -4,30 +4,17 @@ const fs = require("fs")
 
 const documentID =
   "2PACX-1vQwZzdPyMYxxJF-9FZMLxis3Raq3ZqhWO28kEFhbO6HYtPqV7YvcX8h0GYmr35Is9tCHjCwA06RkoRr"
-const gID = "356415068"
+const gID = "1961532449"
 const URL = `https://docs.google.com/spreadsheets/d/e/${documentID}/pub?gid=${gID}&single=true&output=csv`
 
 const Column = {
   Position: 0,
-  Specialized_Position: 1,
+  Position_Special: 1,
   Name: 2,
-  Pronouns: 3,
-  Term_Start: 4,
-  Term_End: 5,
-  Onboarded: 6,
-  ACM_Email: 7,
-  UCSD_Email: 8,
-  Phone_Number: 9,
-  Github: 10,
-  LinkedIn: 11,
-  Website: 12,
-  Major: 13,
-  Grad_Year: 14,
-  T_Shirt_Size: 15,
-  PID: 16,
-  Discord: 17,
-  Messenger: 18,
-  Profile_Image_ID: 19,
+  Email: 3,
+  LinkedIn: 4,
+  Website: 5,
+  ImageID: 6,
 }
 
 const fetchBoardData = async () => {
@@ -85,15 +72,15 @@ const fetchBoardData = async () => {
       continue
     }
 
-    let specialized_position = ""
-    if (row[Column.Specialized_Position] !== "-----") {
-      specialized_position = row[Column.Specialized_Position]
+    let Position_Special = ""
+    if (row[Column.Position_Special] !== "-----") {
+      Position_Special = row[Column.Position_Special]
     }
 
     let image_url = ""
-    if (row[Column.Profile_Image_ID] !== "") {
+    if (row[Column.ImageID] !== "") {
       image_url =
-        "https://drive.google.com/uc?id=" + row[Column.Profile_Image_ID]
+        "https://drive.google.com/uc?id=" + row[Column.ImageID]
     }
 
     let linkedin_url = row[Column.LinkedIn]
@@ -108,9 +95,9 @@ const fetchBoardData = async () => {
       name: row[Column.Name],
       org: division,
       title: row[Column.Position],
-      specialization: specialized_position,
+      specialization: Position_Special,
       profile_image: "",
-      email: row[Column.ACM_Email],
+      email: row[Column.Email],
       linkedin_link: linkedin_url,
       personal_link: row[Column.Website],
       profile_image: image_url,

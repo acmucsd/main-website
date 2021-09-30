@@ -57,7 +57,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"No tests! Write tests! -> https://gatsby.dev/unit-testing\"",
-    "fetchBoard": "node src/fetch-board-data.js"
+    "fetchBoard": "node src/fetch-board-data.js && prettier --write src/board-data.json"
   },
   "repository": {
     "type": "git",

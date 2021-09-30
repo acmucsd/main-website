@@ -750,16 +750,6 @@
     "personal_link": ""
   },
   {
-    "name": "N/A",
-    "org": "design",
-    "title": "Director of Operations",
-    "specialization": "",
-    "profile_image": "",
-    "email": "",
-    "linkedin_link": "",
-    "personal_link": ""
-  },
-  {
     "name": "Michele Murakami",
     "org": "design",
     "title": "Director of Dev x Design",
@@ -782,7 +772,7 @@
   {
     "name": "Xinchen Fu",
     "org": "design",
-    "title": "TBD",
+    "title": "Designer",
     "specialization": "",
     "profile_image": "",
     "email": "",
@@ -802,17 +792,7 @@
   {
     "name": "Daphne Nong",
     "org": "design",
-    "title": "TBD",
-    "specialization": "",
-    "profile_image": "",
-    "email": "",
-    "linkedin_link": "",
-    "personal_link": ""
-  },
-  {
-    "name": "N/A",
-    "org": "design",
-    "title": "Senior Designer",
+    "title": "Designer",
     "specialization": "",
     "profile_image": "",
     "email": "",

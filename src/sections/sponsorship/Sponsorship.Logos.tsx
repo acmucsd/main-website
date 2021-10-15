@@ -5,6 +5,7 @@ import OptiverImg from "../../assets/sponsor-images/optiver_logo.png"
 import CSEImg from "../../assets/sponsor-images/CSE_logo.png"
 import TESCImg from "../../assets/sponsor-images/tesc_logo.png"
 import RobinhoodImg from "../../assets/sponsor-images/robinhood_logo.png"
+import GearImg from "../../assets/sponsor-images/gear_logo.png"
 
 const SponsorshipLogos: React.FC = () => {
   return (
@@ -13,11 +14,16 @@ const SponsorshipLogos: React.FC = () => {
         Thank you to our current sponsors!
       </h1>
       <div className="sponsorship__logos__img-grid">
+        <a href="https://gear-tech.io/">
+          <img src={GearImg} alt="Gear" />
+        </a>
+      </div>
+      <div className="sponsorship__logos__img-grid">
         <a href="https://www.optiver.com/">
           <img src={OptiverImg} alt="Optiver" />
         </a>
-        <a href="https://robinhood.com/">
-          <img src={RobinhoodImg} alt="Robinhood" id="robinhood" />
+        <a href="https://www.robinhood.com/">
+          <img src={RobinhoodImg} alt="Robinhood" />
         </a>
       </div>
       <div className="sponsorship__logos__img-grid">

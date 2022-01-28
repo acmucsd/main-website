@@ -26,7 +26,7 @@ const HomeHero: React.FC = () => {
   }, [scrolled])
 
   const scrollDown = () => {
-    window.scrollBy(0, window.innerHeight)
+    window.scrollBy({top: window.innerHeight, behavior: 'smooth'})
   }
 
   return (

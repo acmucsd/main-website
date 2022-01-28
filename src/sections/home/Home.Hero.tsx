@@ -51,7 +51,6 @@ const HomeHero: React.FC = () => {
               <span>community.&nbsp;</span>
             </Typist>
             <div className="buttons">
-              <Button title="Learn More!" link="/about" type="secondary" />
               <Button
                 title="Join Us Now!"
                 link="https://members.acmucsd.com"

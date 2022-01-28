@@ -25,6 +25,10 @@ const HomeHero: React.FC = () => {
     return undefined
   }, [scrolled])
 
+  const scrollDown = () => {
+    window.scrollBy(0, window.innerHeight)
+  }
+
   return (
     <section className="home__hero">
       <div className="home__hero--grid">
@@ -59,7 +63,9 @@ const HomeHero: React.FC = () => {
             </div>
           </div>
         </div>
-        {scrolled ? null : <img className="arrow" alt="" src={Arrow} />}
+        {scrolled ? null : (
+          <img className="arrow" alt="" onClick={scrollDown} src={Arrow} />
+        )}
       </div>
     </section>
   )

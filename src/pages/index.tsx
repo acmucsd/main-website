@@ -13,6 +13,11 @@ const IndexPage: React.FC = () => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>ACM at UCSD</title>
+      <meta property="og:title" content="Association for Computing Machinery (UCSD) official website" />
+      <meta
+        property="og:description"
+        content="We are UCSD's largest code + design + innovate community."
+      />
       <link rel="canonical" href="http://mysite.com/example" />
     </Helmet>
     <HomeHero />

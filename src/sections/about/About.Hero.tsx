@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-
+import Image from 'next/image'
 
 import Arrow from "../../../public/assets/arrow.svg"
 import HeroImage from "../../../public/assets/about-images/about-hero.png"
@@ -26,7 +26,7 @@ const AboutHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       <div className="about__hero__description">
         <div>
           <h1>What is ACM at UCSD?</h1>
-          {isMobile && <img src={HeroImage} alt="About Hero Image" />}
+          {isMobile && <Image src={HeroImage.src} alt="About Hero Image" />}
         </div>
         <h3>
           We are the Association for Computing Machinery at UCSD! <br />
@@ -36,9 +36,9 @@ const AboutHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         </h3>
       </div>
       {!isMobile && (
-        <img src={HeroImage} className="hero-img" alt="About Hero Image" />
+        <Image src={HeroImage.src} className="hero-img" alt="About Hero Image" />
       )}
-      {scrolled ? null : <img className="arrow" alt="" src={Arrow} />}
+      {scrolled ? null : <Image className="arrow" alt="" src={Arrow} />}
     </section>
   )
 }

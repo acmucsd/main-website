@@ -65,7 +65,7 @@ const HomeHero: React.FC = () => {
           </div>
         </div>
         {scrolled ? null : (
-          <img className="arrow" alt="" onClick={scrollDown} src={Arrow} />
+          <Image className="arrow" alt="" onClick={scrollDown} src={Arrow} />
         )}
       </div>
     </section>

@@ -1,4 +1,5 @@
 import React from "react"
+import Image from 'next/image'
 import RedBullet from "../../../public/assets/sponsor-bullets/diamond-red.svg"
 import TurquoiseBullet from "../../../public/assets/sponsor-bullets/diamond-turquoise.svg"
 import YellowBullet from "../../../public/assets/sponsor-bullets/diamond-yellow.svg"
@@ -9,14 +10,14 @@ const BenefitList: React.FC = () => {
   return (
     <div className="sponsorship__benefits__benefit-list">
       <div className="sponsorship__benefits__benefit-list__bullet">
-        <img src={RedBullet} />
+        <Image src={RedBullet} alt="red bullet" />
         <p>
           Access to our diverse and large member database to recruit talented
           UCSD students.
         </p>
       </div>
       <div className="sponsorship__benefits__benefit-list__bullet">
-        <img src={TurquoiseBullet} />
+        <Image src={TurquoiseBullet} alt="turquoise bullet" />
         <p>
           Opportunity to establish brand name and relationship with UCSD
           computing students by partnering with largest engineering org on
@@ -24,21 +25,21 @@ const BenefitList: React.FC = () => {
         </p>
       </div>
       <div className="sponsorship__benefits__benefit-list__bullet">
-        <img src={YellowBullet} />
+        <Image src={YellowBullet} alt="a Yellow bullet" />
         <p>
           Ability to expose students to different opportunities and unique life
           at their company.
         </p>
       </div>
       <div className="sponsorship__benefits__benefit-list__bullet">
-        <img src={PurpleBullet} />
+        <Image src={PurpleBullet} alt="a Purple bullet" />
         <p>
           Get to help and guide university students, especially those that are
           struggling to navigate the many diverse fields in computing.
         </p>
       </div>
       <div className="sponsorship__benefits__benefit-list__bullet">
-        <img src={PinkBullet} />
+        <Image src={PinkBullet} alt="a Pink bullet" />
         <p>And much much more!</p>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React from "react"
-
+import Image from 'next/image'
 import OptiverImg from "../../../public/assets/sponsor-images/optiver_logo.png"
 import CSEImg from "../../../public/assets/sponsor-images/CSE_logo.png"
 import TESCImg from "../../../public/assets/sponsor-images/tesc_logo.png"
@@ -14,23 +14,23 @@ const SponsorshipLogos: React.FC = () => {
       </h1>
       <div className="sponsorship__logos__img-grid">
         <a href="https://gear-tech.io/">
-          <img src={GearImg} alt="Gear" />
+          <Image src={GearImg} alt="Gear" />
         </a>
       </div>
       <div className="sponsorship__logos__img-grid">
         <a href="https://www.optiver.com/">
-          <img src={OptiverImg} alt="Optiver" />
+          <Image src={OptiverImg} alt="Optiver" />
         </a>
         <a href="https://www.robinhood.com/">
-          <img src={RobinhoodImg} alt="Robinhood" />
+          <Image src={RobinhoodImg} alt="Robinhood" />
         </a>
       </div>
       <div className="sponsorship__logos__img-grid">
         <a href="https://cse.ucsd.edu/">
-          <img src={CSEImg} alt="CSE" />
+          <Image src={CSEImg} alt="CSE" />
         </a>
         <a href="https://tesc.ucsd.edu/">
-          <img src={TESCImg} alt="TESC" />
+          <Image src={TESCImg} alt="TESC" />
         </a>
       </div>
     </section>

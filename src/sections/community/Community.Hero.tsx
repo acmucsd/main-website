@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-
+import Image from 'next/image'
 
 import Arrow from "../../../public/assets/arrow.svg"
 import CommunitiesGrid from "../../components/CommunitiesGrid"
@@ -33,7 +33,7 @@ const CommunityHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <div className="community__hero__communities">
             <CommunitiesGrid />
           </div>
-          {scrolled ? null : <img className="arrow" alt="" src={Arrow} />}
+          {scrolled ? null : <Image className="arrow" alt="" src={Arrow} />}
         </>
       ) : (
         ""

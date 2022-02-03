@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-
+import Image from 'next/image'
 import Arrow from "../../../public/assets/arrow.svg"
 import SponsorHeroLogo from "../../../public/assets/sponsor-images/sponsor_hero.png"
 
@@ -32,7 +32,7 @@ const SponsorshipInfo: React.FC = () => {
             <span className="purple"> innovators</span>!
           </h2>
         </div>
-        <img
+        <Image
           className="sponsorship__info__img"
           src={SponsorHeroLogo}
           alt="Sponsor Logo"
@@ -40,7 +40,7 @@ const SponsorshipInfo: React.FC = () => {
       </div>
       <div className="sponsorship__info mobile">
         <h1 className="sponsorship__info__text__title">Sponsor</h1>
-        <img
+        <Image
           className="sponsorship__info__img"
           src={SponsorHeroLogo}
           alt="Sponsor Logo"
@@ -52,7 +52,7 @@ const SponsorshipInfo: React.FC = () => {
           <span className="purple"> innovators</span>!
         </h2>
       </div>
-      {scrolled ? null : <img className="arrow" alt="" src={Arrow} />}
+      {scrolled ? null : <Image className="arrow" alt="" src={Arrow} />}
     </section>
   )
 }

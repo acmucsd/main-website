@@ -1,0 +1,214 @@
+@import "../../styles/colors.scss";
+
+
+.BoardCard {
+  position: relative;
+  background: #ffffff;
+  border: 3px solid;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  width: 174px;
+  height: 222px;
+  margin: 15px;
+
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+  -ms-animation: fadein 1s; /* Internet Explorer */
+  -o-animation: fadein 1s; /* Opera < 12.1 */
+  animation: fadein 1s;
+  &_hoverable_svg {
+    transition: transform 0.1s;
+  }
+  &_hoverable_svg:hover {
+    cursor: pointer;
+    transition: transform 0.1s;
+    transform: scale(1.15);
+  }
+  @media only screen and (max-width: 600px) {
+    width: 133px;
+    height: 169px;
+    margin: 5px;
+  }
+  padding: 0;
+  &_titleHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 53px;
+    @media only screen and (max-width: 600px) {
+      height: 40px;
+    }
+    > h1 {
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 17px;
+      margin: 0px 12px;
+      text-align: center;
+      @media only screen and (max-width: 600px) {
+        font-size: 11px;
+        margin: 0px 8px;
+      }
+    }
+  }
+  &_pfp {
+    position: relative;
+    width: 100%;
+    height: 114px;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 11px;
+      height: 87px;
+    }
+    > img {
+      position: absolute;
+      left: -1000%;
+      right: -1000%;
+      top: -1000%;
+      bottom: -1000%;
+      margin: auto;
+      min-height: 100%;
+      min-width: 100%;
+    }
+    overflow: hidden;
+  }
+  &_footer {
+    width: 100%;
+    height: 42px;
+    h1 {
+      color: $black;
+      margin: 0px 12px;
+      margin-top: 2px;
+      @media only screen and (max-width: 600px) {
+        font-size: 14px;
+        margin: 0px 8px;
+      }
+    }
+    > div > svg {
+      margin-right: 10px;
+    }
+    > div {
+      display: flex;
+      flex-direction: row;
+      margin: 0px 12px;
+      @media only screen and (max-width: 600px) {
+        margin: 0px 8px;
+      }
+      margin-top: 4px;
+      > p {
+        font-size: 12px;
+        line-height: 16px;
+        margin: 0;
+        @media only screen and (max-width: 600px) {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  &_long-name {
+    vertical-align: bottom;
+    font-size: 12px;
+    line-height: 21px;
+  }
+  &_medium-name {
+    vertical-align: bottom;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  &_short-name {
+    vertical-align: bottom;
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+.BoardCard.general {
+  border-color: $blue;
+  color: $blue;
+  path {
+    fill: $blue;
+  }
+}
+.BoardCard.ai {
+  border-color: $red;
+  color: $red;
+  path {
+    fill: $red;
+  }
+}
+.BoardCard.cyber {
+  border-color: $turquoise;
+  color: $turquoise;
+  path {
+    fill: $turquoise;
+  }
+}
+.BoardCard.hack {
+  border-color: $orange;
+  color: $orange;
+  path {
+    fill: $orange;
+  }
+}
+.BoardCard.innovate {
+  border-color: $purple;
+  color: $purple;
+  path {
+    fill: $purple;
+  }
+}
+.BoardCard.design {
+  border-color: $pink;
+  color: $pink;
+  path {
+    fill: $pink;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}

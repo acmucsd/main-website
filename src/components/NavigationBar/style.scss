@@ -1,0 +1,211 @@
+@import "../../styles/colors.scss";
+
+.navigation-bar {
+  height: 78px;
+  font-size: 18px;
+  font-weight: bold;
+
+  ul {
+    text-decoration: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style-type: none;
+    height: 100%;
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0 !important;
+    text-decoration: none;
+    list-style-type: none;
+    height: 100%;
+    margin-right: 32px;
+  }
+
+  &__logo {
+    float: left;
+    height: 78px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-left: 32px;
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-decoration: none;
+      > img {
+        height: 60px;
+        margin: 0;
+      }
+      > p {
+        font-size: 16px;
+        color: $black;
+        margin-left: 4px;
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  &__nav-button {
+    float: right;
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+  &__login {
+    float: right;
+    height: 100%;
+    align-self: center;
+    &:hover {
+      opacity: 0.85;
+      transition: 200ms;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+
+      height: 35px !important;
+      width: 150px;
+
+      color: $white !important;
+      background-color: $black !important;
+      border-radius: 0.5em;
+    }
+  }
+
+  &__nav-button--login {
+    float: right;
+  }
+}
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-weight: bold;
+  background-color: $white;
+  z-index: 2;
+  font-size: 18px;
+  height: 78px;
+}
+.rainbow {
+  width: 100vw;
+  height: 0.4em;
+  display: table;
+  z-index: 3;
+  background: linear-gradient(
+    270deg,
+    $red 0%,
+    $orange 18.75%,
+    $green 36.98%,
+    $turquoise 55.73%,
+    $blue 75%,
+    $purple 100%
+  );
+}
+.navbar-mobile-div {
+  display: none;
+}
+// Styling for menu based nav bar
+
+@media only screen and (min-width: 810px) {
+  .mobile-links {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .navigation-bar {
+    display: none;
+  }
+  .navbar-mobile {
+    margin: 0px !important;
+    height: 78px;
+    a:first-of-type {
+      img {
+        margin-bottom: 0px !important;
+      }
+    }
+  }
+  .navbar-mobile-div {
+    font-size: 16px;
+    display: block;
+  }
+
+  .navbar-mobile > button {
+    padding: 0px 30px;
+    float: right;
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+
+  .navbar-mobile > a:first-of-type {
+    display: flex;
+    align-items: center;
+    float: left;
+    height: 60px;
+    margin: 9px 32px;
+    text-decoration: none;
+    img {
+      height: 60px;
+    }
+    > p {
+      color: $black;
+      margin: 0 0 0 4px;
+    }
+  }
+  .icon {
+    height: 78px;
+  }
+  .menuicon {
+    height: 20px;
+    width: 40px;
+    margin: 29px 0;
+  }
+
+  .mobile-links {
+    z-index: 2;
+    background-color: $black;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    a {
+      font-size: 24px !important;
+      font-weight: bold;
+      text-decoration: underline solid transparent;
+      transition: text-decoration 0.2s ease;
+      color: $white;
+      padding: 0.5em;
+      display: block;
+      text-align: center;
+      background-color: $black;
+    }
+    a:first-of-type {
+      margin-top: 0.5em;
+    }
+    a:hover {
+      text-decoration: underline solid Currentcolor;
+    }
+    button {
+      position: absolute;
+      right: 30px;
+      top: 28px;
+      height: 40px !important;
+      width: 40px !important;
+      color: $white;
+      background-color: $black;
+      cursor: pointer;
+      border: none;
+      outline: 0;
+      font-size: 1.3em;
+      img {
+        float: right;
+      }
+    }
+  }
+}

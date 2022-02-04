@@ -53,11 +53,11 @@ const NavigationBar: React.FC = () => {
         <div className="navbar-mobile-div">
           <div className="navbar-mobile">
             <Link href="/"><a>
-              <Image src={ACMLogo} alt="ACM Logo" />
+              <img src={ACMLogo.src} alt="ACM Logo" />
               <p>at UCSD</p></a>
             </Link>
             <button className="icon" onClick={toggleMenu} type="button">
-              <Image className="menuicon" src={MenuButtonIcon} alt="Menu Icon" />
+              <img className="menuicon" src={MenuButtonIcon.src} alt="Menu Icon" />
             </button>
           </div>
         </div>
@@ -65,9 +65,9 @@ const NavigationBar: React.FC = () => {
       {menuState && (
         <div className="mobile-links">
           <button className="closebutton" onClick={toggleMenu} type="button">
-            <Image
+            <img
               className="closeicon"
-              src={CloseMenuButton}
+              src={CloseMenuButton.src}
               color="white"
               alt="Menu Icon"
             />

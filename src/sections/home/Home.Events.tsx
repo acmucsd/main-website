@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { EventsArray, EventObject, getAllEvents } from "../../api/EventsAPI"
 import { isURL, getAbsoluteURL, getDateTime } from "../../utils"
-import Image from 'next/image'
 
 const HomeEvents: React.FC = () => {
   const [events, setEvents] = useState<EventsArray>()
@@ -87,7 +86,7 @@ const HomeEvents: React.FC = () => {
             const timing = getDateTime(value)
             return (
               <div className="home__events__grid__container__event" key={index}>
-                <Image src={value.cover} alt={value.title} />
+                <img src={value.cover} alt={value.title} />
                 <h2>
                   <span>{timing.date}</span>
                   {timing.time}
@@ -114,7 +113,7 @@ const HomeEvents: React.FC = () => {
         )}
         <div aria-hidden="true" className="event end" />
       </div>
-    </section>
+    </section >
   )
 }
 

@@ -21,22 +21,26 @@ import CommunitiesGrid from "../../components/CommunitiesGrid"
 const renderMobileCommunityGrid = () => (
   <div className="about__get-involved__section__communities--mobile">
     <div>
-      <Link href="/communities#Hack"><a>
-        <Image src={HackLogo} alt="ACM Hack Logo" />
-      </a></Link>
-      <Link href="/communities#Innovate"> <a >
-        <Image src={InnovateLogo} alt="ACM Innovate Logo" />
-      </a></Link>
+      <Link href="/communities#Hack">
+        <a>
+          <img src={HackLogo.src} alt="ACM Hack Logo" />
+        </a>
+      </Link>
+      <Link href="/communities#Innovate">
+        <a>
+          <img src={InnovateLogo.src} alt="ACM Innovate Logo" />
+        </a>
+      </Link>
     </div>
     <div>
       <Link href="/communities#AI"><a>
-        <Image src={AILogo} alt="ACM AI Logo" />
+        <img src={AILogo.src} alt="ACM AI Logo" />
       </a></Link>
       <Link href="/communities#Cyber"><a>
-        <Image src={CyberLogo} alt="ACM Cyber Logo" />
+        <img src={CyberLogo.src} alt="ACM Cyber Logo" />
       </a></Link>
       <Link href="/communities#Design"><a>
-        <Image src={DesignLogo} alt="ACM Design Logo" />
+        <img src={DesignLogo.src} alt="ACM Design Logo" />
       </a></Link>
     </div>
   </div>
@@ -48,10 +52,10 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
     <section className="about__get-involved">
       <h2>How can I get involved?</h2>
       <div className="about__get-involved__section">
-        {!isMobile && <Image src={AboutSocial} alt="" />}
+        {!isMobile && <img src={AboutSocial.src} alt="" />}
         <div className="about__get-involved__section__description">
           <h3 className="purple">Connect with us on Social Media</h3>
-          {isMobile && <Image src={AboutSocial} alt="" />}
+          {isMobile && <img src={AboutSocial.src} alt="" />}
           {!isMobile && (
             <p>
               To keep up with what&apos;s happening, we recommend joining our Discord
@@ -60,10 +64,10 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           )}
           <div className="about__get-involved__section__description__links">
             <a href="https://acmurl.com/discord">
-              <Image src={DiscordLogo} alt="Discord Logo" />
+              <img src={DiscordLogo.src} alt="Discord Logo" />
             </a>
             <a href="https://www.facebook.com/acmucsd">
-              <Image src={FacebookLogo} alt="Facebook Logo" />
+              <img src={FacebookLogo.src} alt="Facebook Logo" />
             </a>
           </div>
           <div className="about__get-involved__section__description__newsletter">
@@ -75,10 +79,10 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         </div>
       </div>
       <div className="about__get-involved__section">
-        {!isMobile && <Image src={AboutCommunities} alt="" />}
+        {!isMobile && <img src={AboutCommunities.src} alt="" />}
         <div className="about__get-involved__section__description">
           <h3 className="orange">Join our Communities</h3>
-          {isMobile && <Image src={AboutCommunities} alt="" />}
+          {isMobile && <img src={AboutCommunities.src} alt="" />}
           <p>
             ACM at UCSD is one large community, but it is made up of several
             smaller communities focused on specific areas of technology.
@@ -89,10 +93,10 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       </div>
 
       <div className="about__get-involved__section">
-        {!isMobile && <Image src={AboutBitByte} alt="" />}
+        {!isMobile && <img src={AboutBitByte.src} alt="" />}
         <div className="about__get-involved__section__description">
           <h3 className="blue">Become a mentor/mentee!</h3>
-          {isMobile && <Image src={AboutBitByte} alt="" />}
+          {isMobile && <img src={AboutBitByte.src} alt="" />}
           <p>
             Join ACM’s Bit-Byte program that pairs students to make lifelong
             friendships! Our upperclassmen bigs (bytes) help their littles
@@ -108,10 +112,10 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         </div>
       </div>
       <div className="about__get-involved__section">
-        {!isMobile && <Image src={AboutProjects} alt="" />}
+        {!isMobile && <img src={AboutProjects.src} alt="" />}
         <div className="about__get-involved__section__description">
           <h3 className="pink">Participate in ACM Projects!</h3>
-          {isMobile && <Image src={AboutProjects} alt="" />}
+          {isMobile && <img src={AboutProjects.src} alt="" />}
           <p>
             Sign up to join a team in our quarter-long projects. Grow your
             skills in coding, design, or project management.

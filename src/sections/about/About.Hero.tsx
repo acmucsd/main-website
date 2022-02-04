@@ -26,7 +26,7 @@ const AboutHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       <div className="about__hero__description">
         <div>
           <h1>What is ACM at UCSD?</h1>
-          {isMobile && <Image src={HeroImage.src} alt="About Hero Image" />}
+          {isMobile && <img src={HeroImage.src} alt="About Hero Image" />}
         </div>
         <h3>
           We are the Association for Computing Machinery at UCSD! <br />
@@ -36,9 +36,9 @@ const AboutHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         </h3>
       </div>
       {!isMobile && (
-        <Image src={HeroImage.src} className="hero-img" alt="About Hero Image" />
+        <img src={HeroImage.src} className="hero-img" alt="About Hero Image" />
       )}
-      {scrolled ? null : <Image className="arrow" alt="" src={Arrow} />}
+      {scrolled ? null : <img className="arrow" alt="" src={Arrow} />}
     </section>
   )
 }

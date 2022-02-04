@@ -16,12 +16,10 @@ import InnovateHome from "../../../public/assets/communities-links/innovate-home
 import InnovateYoutube from "../../../public/assets/communities-links/innovate-youtube.svg"
 import AILogoSelected from "../../../public/assets/communities-navigation/ai-selected.svg"
 import CyberLogoSelected from "../../../public/assets/communities-navigation/cyber-selected.svg"
-import DesignLogoSelected from "../../../public/assets/communities-navigation/design-selected.svg"
 import HackLogoSelected from "../../../public/assets/communities-navigation/hack-selected.svg"
 import InnovateLogoSelected from "../../../public/assets/communities-navigation/innovate-selected.svg"
 import AILogo from "../../../public/assets/logos/acm-ai.svg"
 import CyberLogo from "../../../public/assets/logos/acm-cyber.svg"
-import DesignLogo from "../../../public/assets/logos/acm-design.svg"
 import HackLogo from "../../../public/assets/logos/acm-hack.svg"
 import InnovateLogo from "../../../public/assets/logos/acm-innovate.svg"
 
@@ -246,50 +244,6 @@ const InnovateCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   )
 }
 
-const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
-  return (
-    <div className="community__sub-orgs__community-card">
-      <div className="color_slide pinkbg" />
-
-      <div className="community__sub-orgs__community-card__content">
-        {!isMobile ? (
-          <Image
-            src={DesignLogo}
-            alt="ACM Design"
-            className="community__sub-orgs__community-card__logo"
-          />
-        ) : (
-          ""
-        )}
-        <div>
-          <div className="community__sub-orgs__community-card__header">
-            {isMobile ? <Image src={DesignLogo} alt="ACM Design" /> : ""}
-            <h1 className="pink">ACM Design</h1>
-          </div>
-          <p>
-            We explore the intersection between computing and design. We want to
-            demonstrate that design can be accessible and highly valuable to
-            students in a wide range of disciplines.
-            <br />
-            <br />
-            Members learn and apply design skills through working on projects in
-            a supportive, collaborative, and open environment.
-            <br />
-            <br />
-            We will officially launch ACM Design in Fall 2021. We will be
-            running seminars, workshops, designathons, and our collaborative
-            studio called Co|Lab. Keep an eye out for our workshops and
-            opportunities to get involved.
-            <br />
-            <br />
-          </p>
-          <div className="community-links"></div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
 const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const [selected, setSelected] = useState("")
 
@@ -303,8 +257,6 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         return <HackCommunity isMobile={isMobile} />
       case "innovate":
         return <InnovateCommunity isMobile={isMobile} />
-      case "design":
-        return <DesignCommunity isMobile={isMobile} />
       default:
         return (
           <div className="community__sub-orgs--mobile__description">
@@ -325,7 +277,6 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <div className="spacer80px" id="AI"></div>
           <AICommunity isMobile={isMobile} />
           <CyberCommunity isMobile={isMobile} />
-          <DesignCommunity isMobile={isMobile} />
           <HackCommunity isMobile={isMobile} />
           <InnovateCommunity isMobile={isMobile} />
         </section>
@@ -366,12 +317,6 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
                       : InnovateLogo
                   }
                   alt="Innovate Logo"
-                />
-              </button>
-              <button onClick={() => setSelected("design")}>
-                <Image
-                  src={selected === "design" ? DesignLogoSelected : DesignLogo}
-                  alt="Design Logo"
                 />
               </button>
             </div>

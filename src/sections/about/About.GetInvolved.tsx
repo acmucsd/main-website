@@ -9,7 +9,6 @@ import DiscordLogo from "../../../public/assets/discord-dark.svg"
 import FacebookLogo from "../../../public/assets/facebook-dark.svg"
 import AILogo from "../../../public/assets/logos/acm-ai.svg"
 import CyberLogo from "../../../public/assets/logos/acm-cyber.svg"
-import DesignLogo from "../../../public/assets/logos/acm-design.svg"
 import HackLogo from "../../../public/assets/logos/acm-hack.svg"
 import InnovateLogo from "../../../public/assets/logos/acm-innovate.svg"
 import CommunitiesGrid from "../../components/CommunitiesGrid"
@@ -38,9 +37,6 @@ const renderMobileCommunityGrid = () => (
       </a></Link>
       <Link href="/communities#Cyber"><a>
         <img src={CyberLogo.src} alt="ACM Cyber Logo" />
-      </a></Link>
-      <Link href="/communities#Design"><a>
-        <img src={DesignLogo.src} alt="ACM Design Logo" />
       </a></Link>
     </div>
   </div>

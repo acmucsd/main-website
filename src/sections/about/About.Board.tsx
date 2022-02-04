@@ -17,9 +17,6 @@ import CyberEmpty from "../../../public/assets/board-filters/cyber-empty.svg"
 import HackSelected from "../../../public/assets/board-filters/hack-selected.svg"
 import HackEmpty from "../../../public/assets/board-filters/hack-empty.svg"
 
-import DesignSelected from "../../../public/assets/board-filters/design-selected.svg"
-import DesignEmpty from "../../../public/assets/board-filters/design-empty.svg"
-
 import InnovateSelected from "../../../public/assets/board-filters/innovate-selected.svg"
 import InnovateEmpty from "../../../public/assets/board-filters/innovate-empty.svg"
 
@@ -116,17 +113,6 @@ const AboutBoard: React.FC<AboutBoardProps> = ({ isMobile }) => {
           />
         ) : (
           <Image alt="innovate is not selected" src={InnovateEmpty} onClick={() => setFilters(["innovate"])} />
-        )}
-        {filters.includes("design") ? (
-          <Image
-            alt="design is selected"
-            src={DesignSelected}
-            onClick={() => {
-              setFilters(filters.filter(e => e !== "design"))
-            }}
-          />
-        ) : (
-          <Image alt="design is not selected" src={DesignEmpty} onClick={() => setFilters(["design"])} />
         )}
       </div>
       <BoardGrid members_list={displayList} isMobile={isMobile} />

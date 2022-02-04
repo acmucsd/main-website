@@ -3,7 +3,6 @@ import Link from "next/link"
 import Image from "next/image"
 import AILogo from "../../../public/assets/logos/acm-ai.svg"
 import CyberLogo from "../../../public/assets/logos/acm-cyber.svg"
-import DesignLogo from "../../../public/assets/logos/acm-design.svg"
 import HackLogo from "../../../public/assets/logos/acm-hack.svg"
 import InnovateLogo from "../../../public/assets/logos/acm-innovate.svg"
 
@@ -59,20 +58,6 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
                   <span>ACM</span> Cyber
                 </h3>
                 <p>Cyber Security</p>
-              </div>
-            </a></Link>
-          <Link
-            href="/communities#Design"
-          ><a
-            className={`communitiesGrid__community ${hasBeenVisible ? "design--visible" : " "
-              }`}
-          >
-              <Image src={DesignLogo} alt="ACM Design" />
-              <div className="communitiesGrid__community__label">
-                <h3>
-                  <span>ACM</span> Design
-                </h3>
-                <p>Design and Interaction</p>
               </div>
             </a></Link>
         </div>
@@ -139,20 +124,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
               <p>Cyber Security</p>
             </div>
           </a></Link>
-        <Link
-          href="/communities#Design"
-        ><a
-          className={`communitiesGrid__community ${hasBeenVisible ? "design--visible" : " "
-            }`}
-        >
-            <Image src={DesignLogo} alt="ACM Design" />
-            <div className="communitiesGrid__community__label">
-              <h3>
-                <span>ACM</span> Design
-              </h3>
-              <p>Design and Interaction</p>
-            </div>
-          </a></Link>
+
         <Link
           href="/communities#Hack"
         ><a

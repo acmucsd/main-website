@@ -10,6 +10,7 @@ import DiscordIcon from "../../assets/discord.svg"
 import EmailIcon from "../../assets/email.svg"
 import LinkedinIcon from "../../assets/linkedin.svg"
 import YoutubeIcon from "../../assets/youtube.svg"
+import VercelIcon from "../../assets/vercel.svg"
 
 const cardContents = [
   { title: "Email", value: "contact@acmucsd.org", icon: EmailIcon },
@@ -72,8 +73,15 @@ const Footer: React.FC = () => {
             <div className="footerContents__newsletter">
               <h2>Newsletter</h2>
               <p>Receive weekly events and news!</p>
-              <a href="https://acmurl.com/newsletter" target="_blank">
+              <a
+                href="https://acmurl.com/newsletter"
+                target="_blank"
+                className="subscribe-btn"
+              >
                 Subscribe!
+              </a>
+              <a href="https://vercel.com" className="vercel-btn">
+                <img src={VercelIcon} alt="Vercel" />
               </a>
             </div>
           </div>
@@ -110,8 +118,15 @@ const Footer: React.FC = () => {
         <div className="mobileFooterContainer__newsletter">
           <h2>Newsletter</h2>
           <p>Receive weekly events and news!</p>
-          <a href="https://acmurl.com/newsletter" target="_blank">
+          <a
+            className="mobile-subscribe-btn"
+            href="https://acmurl.com/newsletter"
+            target="_blank"
+          >
             Subscribe!
+          </a>
+          <a href="https://vercel.com" className="mobile-vercel-btn">
+            <img src={VercelIcon} alt="Vercel" />
           </a>
         </div>
       </div>

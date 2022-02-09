@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
           >
             Subscribe!
           </a>
-          <a href="https://vercel.com" className="mobile-vercel-btn">
+          <a href="https://vercel.com/?utm_source=acmucsd&utm_campaign=oss" className="mobile-vercel-btn">
             <img src={VercelIcon} alt="Vercel" />
           </a>
         </div>

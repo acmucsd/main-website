@@ -1,6 +1,4 @@
-import React from "react"
-
-import Number from "../../components/Statistic"
+import Number from "src/components/Statistic"
 
 const HomeJoinTheClub: React.FC = () => {
   return (

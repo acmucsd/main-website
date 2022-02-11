@@ -1,5 +1,4 @@
-@import "../../styles/colors.scss";
-
+@import "src/styles/colors.scss";
 
 .BoardCard {
   position: relative;
@@ -154,13 +153,6 @@
   color: $purple;
   path {
     fill: $purple;
-  }
-}
-.BoardCard.design {
-  border-color: $pink;
-  color: $pink;
-  path {
-    fill: $pink;
   }
 }
 

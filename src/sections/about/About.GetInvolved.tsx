@@ -1,22 +1,17 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { useState } from "react"
-import AboutBitByte from "../../../public/assets/about-images/about-bitbyte.png"
-import AboutCommunities from "../../../public/assets/about-images/about-communities.png"
-import AboutProjects from "../../../public/assets/about-images/about-projects.png"
-import AboutSocial from "../../../public/assets/about-images/about-social.png"
-import DiscordLogo from "../../../public/assets/discord-dark.svg"
-import FacebookLogo from "../../../public/assets/facebook-dark.svg"
-import AILogo from "../../../public/assets/logos/acm-ai.svg"
-import CyberLogo from "../../../public/assets/logos/acm-cyber.svg"
-import HackLogo from "../../../public/assets/logos/acm-hack.svg"
-import InnovateLogo from "../../../public/assets/logos/acm-innovate.svg"
-import CommunitiesGrid from "../../components/CommunitiesGrid"
-
-
-
-
-
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import AboutBitByte from "public/assets/about-images/about-bitbyte.png";
+import AboutCommunities from "public/assets/about-images/about-communities.png";
+import AboutProjects from "public/assets/about-images/about-projects.png";
+import AboutSocial from "public/assets/about-images/about-social.png";
+import DiscordLogo from "public/assets/discord-dark.svg";
+import FacebookLogo from "public/assets/facebook-dark.svg";
+import AILogo from "public/assets/logos/acm-ai.svg";
+import CyberLogo from "public/assets/logos/acm-cyber.svg";
+import HackLogo from "public/assets/logos/acm-hack.svg";
+import InnovateLogo from "public/assets/logos/acm-innovate.svg";
+import CommunitiesGrid from "src/components/CommunitiesGrid";
 const renderMobileCommunityGrid = () => (
   <div className="about__get-involved__section__communities--mobile">
     <div>
@@ -32,18 +27,22 @@ const renderMobileCommunityGrid = () => (
       </Link>
     </div>
     <div>
-      <Link href="/communities#AI"><a>
-        <img src={AILogo.src} alt="ACM AI Logo" />
-      </a></Link>
-      <Link href="/communities#Cyber"><a>
-        <img src={CyberLogo.src} alt="ACM Cyber Logo" />
-      </a></Link>
+      <Link href="/communities#AI">
+        <a>
+          <img src={AILogo.src} alt="ACM AI Logo" />
+        </a>
+      </Link>
+      <Link href="/communities#Cyber">
+        <a>
+          <img src={CyberLogo.src} alt="ACM Cyber Logo" />
+        </a>
+      </Link>
     </div>
   </div>
-)
+);
 
 const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
-  const [email, setEmail] = useState("")
+  const [email, setEmail] = useState("");
   return (
     <section className="about__get-involved">
       <h2>How can I get involved?</h2>
@@ -54,8 +53,8 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           {isMobile && <img src={AboutSocial.src} alt="" />}
           {!isMobile && (
             <p>
-              To keep up with what&apos;s happening, we recommend joining our Discord
-              server and following us on Facebook.{" "}
+              To keep up with what&apos;s happening, we recommend joining our
+              Discord server and following us on Facebook.
             </p>
           )}
           <div className="about__get-involved__section__description__links">
@@ -68,7 +67,11 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           </div>
           <div className="about__get-involved__section__description__newsletter">
             <label>Subscribe to our Newsletter!</label>
-            <a href="https://acmurl.com/newsletter" target="_blank" rel="noreferrer">
+            <a
+              href="https://acmurl.com/newsletter"
+              target="_blank"
+              rel="noreferrer"
+            >
               Subscribe!
             </a>
           </div>
@@ -126,7 +129,7 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default AboutGetInvolved
+export default AboutGetInvolved;

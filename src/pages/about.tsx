@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react"
-import { Size, useWindowSize } from "../utils"
+import { useEffect, useState } from "react";
+import { Size, useWindowSize } from "src/utils";
 
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Layout from "src/components/Layout";
+import SEO from "src/components/SEO";
 
-import AboutHero from "../sections/about/About.Hero"
-import AboutGetInvolved from "../sections/about/About.GetInvolved"
-import AboutMembership from "../sections/about/About.Membership"
-import AboutBoard from "../sections/about/About.Board"
+import AboutHero from "src/sections/about/About.Hero";
+import AboutGetInvolved from "src/sections/about/About.GetInvolved";
+import AboutMembership from "src/sections/about/About.Membership";
+import AboutBoard from "src/sections/about/About.Board";
 
 const AboutPage: React.FC = () => {
-  const size: Size = useWindowSize()
-  const [isMobile, setIsMobile] = useState(false)
+  const size: Size = useWindowSize();
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsMobile((size.width || 0) < 814)
-  }, [size])
+    setIsMobile((size.width || 0) < 814);
+  }, [size]);
 
   return (
     <Layout>
@@ -25,7 +25,7 @@ const AboutPage: React.FC = () => {
       {!isMobile && <AboutMembership />}
       <AboutBoard isMobile={isMobile} />
     </Layout>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

@@ -1,4 +1,4 @@
-@import "../../styles/colors.scss";
+@import "src/styles/colors.scss";
 
 .communitiesGrid {
   padding: 0;
@@ -20,6 +20,7 @@
     }
 
     &__label {
+      margin-left: 10px;
       width: 210px;
       h3 {
         margin: 0 !important;
@@ -33,9 +34,8 @@
       p {
         margin: 0;
         color: $black;
-        font-size: 1rem;
-        font-weight: 400;
-        position: absolute;
+        font-size: 1rem !important;
+        font-weight: 400 !important;
       }
     }
 
@@ -50,9 +50,6 @@
     }
     &.cyber--visible {
       color: $turquoise;
-    }
-    &.design--visible {
-      color: $pink;
     }
     &.hack--visible {
       color: $orange;

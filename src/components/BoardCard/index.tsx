@@ -1,24 +1,22 @@
-import React from "react"
-import Image from "next/image"
+import Image from "next/image";
 
-import GeneralDefault from "../../../public/assets/default-board-images/general-default.svg"
-import AIDefault from "../../../public/assets/default-board-images/ai-default.svg"
-import CyberDefault from "../../../public/assets/default-board-images/cyber-default.svg"
-import DesignDefault from "../../../public/assets/default-board-images/design-default.svg"
-import HackDefault from "../../../public/assets/default-board-images/hack-default.svg"
-import InnovateDefault from "../../../public/assets/default-board-images/innovate-default.svg"
+import GeneralDefault from "public/assets/default-board-images/general-default.svg";
+import AIDefault from "public/assets/default-board-images/ai-default.svg";
+import CyberDefault from "public/assets/default-board-images/cyber-default.svg";
+import HackDefault from "public/assets/default-board-images/hack-default.svg";
+import InnovateDefault from "public/assets/default-board-images/innovate-default.svg";
 
 interface BoardMember {
-  name: string
-  org: string
-  title: string
-  email: string
-  profile_image: string
-  personal_link: string
-  linkedin_link: string
+  name: string;
+  org: string;
+  title: string;
+  email: string;
+  profile_image: string;
+  personal_link: string;
+  linkedin_link: string;
 }
 interface BoardCardProps {
-  boardmember: BoardMember
+  boardmember: BoardMember;
 }
 
 const defaultProps: BoardCardProps = {
@@ -32,52 +30,41 @@ const defaultProps: BoardCardProps = {
     personal_link: "ucsd.edu",
     linkedin_link: "",
   },
-}
-const openInNewTab = url => {
-  const newWindow = window.open(url, "_blank", "noopener,noreferrer")
-  if (newWindow) newWindow.opener = null
-}
+};
+const openInNewTab = (url) => {
+  const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+  if (newWindow) newWindow.opener = null;
+};
 const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
-  const name = boardmember.name || ""
-  const org = boardmember.org || ""
-  const title = boardmember.title || ""
-  const email = boardmember.email || ""
-  const profile_image = boardmember.profile_image || ""
-  const personal_link = boardmember.personal_link || ""
-  const linkedin_link = boardmember.linkedin_link || ""
+  const name = boardmember.name || "";
+  const org = boardmember.org || "";
+  const title = boardmember.title || "";
+  const email = boardmember.email || "";
+  const profile_image = boardmember.profile_image || "";
+  const personal_link = boardmember.personal_link || "";
+  const linkedin_link = boardmember.linkedin_link || "";
 
-  let boardDefault
-  switch (org) {
-    case "general":
-      boardDefault = GeneralDefault
-      break
-    case "ai":
-      boardDefault = AIDefault
-      break
-    case "cyber":
-      boardDefault = CyberDefault
-      break
-    case "design":
-      boardDefault = DesignDefault
-      break
-    case "hack":
-      boardDefault = HackDefault
-      break
-    case "innovate":
-      boardDefault = InnovateDefault
-      break
-  }
+  const defaultImgs = {
+    general: GeneralDefault,
+    ai: AIDefault,
+    cyber: CyberDefault,
+    hack: HackDefault,
+    innovate: InnovateDefault,
+  };
+
+  const boardDefault = defaultImgs[org];
+
   return (
     <div className={"BoardCard " + org}>
       <div className="BoardCard_titleHeader">
         <h1>{title}</h1>
       </div>
       <div className="BoardCard_pfp">
-        {profile_image !== "" ? (
-          <Image alt={name} src={profile_image} layout="fill" />
-        ) : (
-          <Image alt={name} src={boardDefault} layout="fill" />
-        )}
+        <Image
+          alt={name}
+          src={profile_image !== "" ? profile_image : boardDefault}
+          layout="fill"
+        />
       </div>
       <div className="BoardCard_footer">
         <h1
@@ -85,8 +72,8 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
             name.length > 19
               ? "BoardCard_long-name"
               : name.length > 15
-                ? "BoardCard_medium-name"
-                : "BoardCard_short-name"
+              ? "BoardCard_medium-name"
+              : "BoardCard_short-name"
           }
         >
           {name}
@@ -144,8 +131,8 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-BoardCard.defaultProps = defaultProps
-export default BoardCard
+BoardCard.defaultProps = defaultProps;
+export default BoardCard;

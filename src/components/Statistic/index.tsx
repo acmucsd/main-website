@@ -1,14 +1,12 @@
-import React, { useState } from "react"
-import CountUp from "react-countup"
-import VisibilitySensor from "react-visibility-sensor"
-
-
+import { useState } from "react";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
 interface NumberProps {
-  color: string
-  description: string
-  extension: string
-  number: number
+  color: string;
+  description: string;
+  extension: string;
+  number: number;
 }
 
 // eslint-disable-next-line object-curly-newline
@@ -18,7 +16,7 @@ const Number: React.FC<NumberProps> = ({
   extension,
   number,
 }) => {
-  const [hasBeenVisible, setHasBeenVisible] = useState(false)
+  const [hasBeenVisible, setHasBeenVisible] = useState(false);
 
   return (
     <div
@@ -33,8 +31,8 @@ const Number: React.FC<NumberProps> = ({
         }}
       >
         <VisibilitySensor
-          onChange={isVisible => {
-            if (isVisible) setHasBeenVisible(true)
+          onChange={(isVisible) => {
+            if (isVisible) setHasBeenVisible(true);
           }}
         >
           {hasBeenVisible ? (
@@ -53,7 +51,7 @@ const Number: React.FC<NumberProps> = ({
       </span>
       <span className="description">{description}</span>
     </div>
-  )
-}
+  );
+};
 
-export default Number
+export default Number;

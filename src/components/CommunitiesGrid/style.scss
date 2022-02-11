@@ -1,4 +1,4 @@
-@import "../../styles/colors.scss";
+@import "src/styles/colors.scss";
 
 .communitiesGrid {
   padding: 0;
@@ -20,6 +20,7 @@
     }
 
     &__label {
+      margin-left: 10px;
       width: 210px;
       h3 {
         margin: 0 !important;
@@ -35,7 +36,6 @@
         color: $black;
         font-size: 1rem;
         font-weight: 400;
-        position: absolute;
       }
     }
 

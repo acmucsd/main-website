@@ -1,21 +1,20 @@
-import "../styles/colors.scss";
-import '../styles/index.css'
-import "../styles/mixins.scss";
+import "src/styles/colors.scss";
+import "src/styles/index.css";
+import "src/styles/mixins.scss";
 // component css imports
-import "../components/BoardCard/style.scss"
-import "../components/BoardGrid/style.scss"
-import "../components/Button/style.scss"
-import "../components/CommunitiesGrid/style.scss"
-import "../components/Footer/style.scss"
-import "../components/Layout/style.scss"
-import "../components/NavigationBar/style.scss"
-import "../components/Statistic/style.scss"
+import "src/components/BoardCard/style.scss";
+import "src/components/BoardGrid/style.scss";
+import "src/components/Button/style.scss";
+import "src/components/CommunitiesGrid/style.scss";
+import "src/components/Footer/style.scss";
+import "src/components/Layout/style.scss";
+import "src/components/NavigationBar/style.scss";
+import "src/components/Statistic/style.scss";
 // section css imports
-import "../sections/about/styles.scss"
-import "../sections/community/styles.scss"
-import "../sections/home/styles.scss"
-import "../sections/sponsorship/styles.scss"
-
+import "src/sections/about/styles.scss";
+import "src/sections/community/styles.scss";
+import "src/sections/home/styles.scss";
+import "src/sections/sponsorship/styles.scss";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

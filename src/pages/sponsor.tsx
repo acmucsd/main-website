@@ -1,11 +1,9 @@
-import React from "react"
+import Layout from "src/components/Layout";
+import SEO from "src/components/SEO";
 
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
-
-import SponsorshipLogo from "../sections/sponsorship/Sponsorship.Logos"
-import SponsorshipInfo from "../sections/sponsorship/Sponsorship.Info"
-import SponsorshipBenefits from "../sections/sponsorship/Sponsorship.Benefits"
+import SponsorshipLogo from "src/sections/sponsorship/Sponsorship.Logos";
+import SponsorshipInfo from "src/sections/sponsorship/Sponsorship.Info";
+import SponsorshipBenefits from "src/sections/sponsorship/Sponsorship.Benefits";
 
 const SponsorshipPage: React.FC = () => (
   <Layout>
@@ -14,6 +12,6 @@ const SponsorshipPage: React.FC = () => (
     <SponsorshipLogo />
     <SponsorshipBenefits />
   </Layout>
-)
+);
 
-export default SponsorshipPage
+export default SponsorshipPage;

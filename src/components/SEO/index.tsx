@@ -1,10 +1,8 @@
-import Head from 'next/head';
-import React from 'react';
+import Head from "next/head";
 
 interface SEOProps {
   title: string;
   description?: string;
-
 }
 const SEO: React.FC<SEOProps> = ({ title, description }) => {
   return (
@@ -20,8 +18,7 @@ const SEO: React.FC<SEOProps> = ({ title, description }) => {
      <meta property="twitter:title" content={title} />
      <meta property="twitter:description" content={description} /> */}
     </Head>
-  )
-}
-
+  );
+};
 
 export default SEO;

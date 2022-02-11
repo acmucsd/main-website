@@ -1,25 +1,24 @@
-import React, { useEffect } from "react"
-import Image from 'next/image'
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
-import Arrow from "../../../public/assets/arrow.svg"
-import HeroImage from "../../../public/assets/about-images/about-hero.png"
+import HeroImage from "public/assets/about-images/about-hero.png";
 
 const AboutHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
-  const [scrolled, setScrolled] = React.useState(false)
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     if (!scrolled) {
       const handleScroll = () => {
-        setScrolled(true)
-        window.removeEventListener("scroll", handleScroll)
-        return undefined
-      }
+        setScrolled(true);
+        window.removeEventListener("scroll", handleScroll);
+        return undefined;
+      };
 
-      window.addEventListener("scroll", handleScroll)
-      return () => window.removeEventListener("scroll", handleScroll)
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
     }
-    return undefined
-  }, [scrolled])
+    return undefined;
+  }, [scrolled]);
 
   return (
     <section className="about__hero">
@@ -38,9 +37,11 @@ const AboutHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       {!isMobile && (
         <img src={HeroImage.src} className="hero-img" alt="About Hero Image" />
       )}
-      {scrolled ? null : <img className="arrow" alt="" src={Arrow} />}
+      {scrolled ? null : (
+        <img className="arrow" alt="" src="/assets/arrow.svg" />
+      )}
     </section>
-  )
-}
+  );
+};
 
-export default AboutHero
+export default AboutHero;

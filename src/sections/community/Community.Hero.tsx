@@ -1,11 +1,11 @@
-import React, { useEffect } from "react"
+import { useState, useEffect } from "react"
 import Image from 'next/image'
 
-import Arrow from "../../../public/assets/arrow.svg"
-import CommunitiesGrid from "../../components/CommunitiesGrid"
+import Arrow from "public/assets/arrow.svg"
+import CommunitiesGrid from "src/components/CommunitiesGrid"
 
 const CommunityHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
-  const [scrolled, setScrolled] = React.useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     if (!scrolled) {
@@ -18,12 +18,11 @@ const CommunityHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       window.addEventListener("scroll", handleScroll)
       return () => window.removeEventListener("scroll", handleScroll)
     }
-    return undefined
   }, [scrolled])
 
   return (
     <section className="community__hero">
-      {!isMobile ? (
+      {!isMobile && (
         <>
           <h1>Communities</h1>
           <p>
@@ -33,10 +32,8 @@ const CommunityHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <div className="community__hero__communities">
             <CommunitiesGrid />
           </div>
-          {scrolled ? null : <Image className="arrow" alt="" src={Arrow} />}
+          {!scrolled && <Image className="arrow" alt="" src={Arrow} />}
         </>
-      ) : (
-        ""
       )}
     </section>
   )

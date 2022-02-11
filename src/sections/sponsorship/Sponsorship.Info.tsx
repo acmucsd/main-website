@@ -1,10 +1,10 @@
-import React, { useEffect } from "react"
+import { useState, useEffect } from "react"
 import Image from 'next/image'
-import Arrow from "../../../public/assets/arrow.svg"
-import SponsorHeroLogo from "../../../public/assets/sponsor-images/sponsor_hero.png"
+import Arrow from "public/assets/arrow.svg"
+import SponsorHeroLogo from "public/assets/sponsor-images/sponsor_hero.png"
 
 const SponsorshipInfo: React.FC = () => {
-  const [scrolled, setScrolled] = React.useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     if (!scrolled) {
@@ -52,7 +52,7 @@ const SponsorshipInfo: React.FC = () => {
           <span className="purple"> innovators</span>!
         </h2>
       </div>
-      {scrolled ? null : <Image className="arrow" alt="" src={Arrow} />}
+      {!scrolled  &&<Image className="arrow" alt="" src={Arrow} />}
     </section>
   )
 }

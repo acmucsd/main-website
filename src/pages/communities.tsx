@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react"
-import { Size, useWindowSize } from "../utils"
+import { useState, useEffect } from "react";
+import { Size, useWindowSize } from "src/utils";
 
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Layout from "src/components/Layout";
+import SEO from "src/components/SEO";
 
-import CommunityHero from "../sections/community/Community.Hero"
-import CommunitySuborgs from "../sections/community/Community.Suborgs"
+import CommunityHero from "src/sections/community/Community.Hero";
+import CommunitySuborgs from "src/sections/community/Community.Suborgs";
 
 const CommunitiesPage: React.FC = () => {
-  const size: Size = useWindowSize()
-  const [isMobile, setIsMobile] = useState(false)
+  const size: Size = useWindowSize();
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsMobile((size.width || 0) < 812)
-  }, [size])
+    setIsMobile((size.width || 0) < 812);
+  }, [size]);
 
   return (
     <Layout>
@@ -21,7 +21,7 @@ const CommunitiesPage: React.FC = () => {
       <CommunityHero isMobile={isMobile} />
       <CommunitySuborgs isMobile={isMobile} />
     </Layout>
-  )
-}
+  );
+};
 
-export default CommunitiesPage
+export default CommunitiesPage;

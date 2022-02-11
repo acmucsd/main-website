@@ -1,6 +1,4 @@
-import React from "react"
-import CommunitiesGrid from "../../components/CommunitiesGrid"
-
+import CommunitiesGrid from "src/components/CommunitiesGrid"
 
 const HomeCommunities: React.FC = () => {
   return (

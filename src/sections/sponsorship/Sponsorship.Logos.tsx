@@ -1,10 +1,9 @@
-import React from "react"
-import Image from 'next/image'
-import OptiverImg from "../../../public/assets/sponsor-images/optiver_logo.png"
-import CSEImg from "../../../public/assets/sponsor-images/CSE_logo.png"
-import TESCImg from "../../../public/assets/sponsor-images/tesc_logo.png"
-import RobinhoodImg from "../../../public/assets/sponsor-images/robinhood_logo.png"
-import GearImg from "../../../public/assets/sponsor-images/gear_logo.png"
+import Image from "next/image";
+import OptiverImg from "public/assets/sponsor-images/optiver_logo.png";
+import CSEImg from "public/assets/sponsor-images/CSE_logo.png";
+import TESCImg from "public/assets/sponsor-images/tesc_logo.png";
+import RobinhoodImg from "public/assets/sponsor-images/robinhood_logo.png";
+import GearImg from "public/assets/sponsor-images/gear_logo.png";
 
 const SponsorshipLogos: React.FC = () => {
   return (
@@ -34,7 +33,7 @@ const SponsorshipLogos: React.FC = () => {
         </a>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SponsorshipLogos
+export default SponsorshipLogos;

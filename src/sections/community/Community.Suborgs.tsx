@@ -1,40 +1,34 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import Image from 'next/image'
-import AIDiscord from "../../../public/assets/communities-links/ai-discord.svg"
-import AIHome from "../../../public/assets/communities-links/ai-home.svg"
-import CyberDiscord from "../../../public/assets/communities-links/cyber-discord.svg"
-import CyberFacebook from "../../../public/assets/communities-links/cyber-facebook.svg"
-import CyberHome from "../../../public/assets/communities-links/cyber-home.svg"
-import CyberLinkedin from "../../../public/assets/communities-links/cyber-linkedin.svg"
-import CyberMail from "../../../public/assets/communities-links/cyber-mail.svg"
-import CyberTwitter from "../../../public/assets/communities-links/cyber-twitter.svg"
-import CyberYoutube from "../../../public/assets/communities-links/cyber-youtube.svg"
-import HackDiscord from "../../../public/assets/communities-links/hack-discord.svg"
-import HackHome from "../../../public/assets/communities-links/hack-home.svg"
-import InnovateDiscord from "../../../public/assets/communities-links/innovate-discord.svg"
-import InnovateHome from "../../../public/assets/communities-links/innovate-home.svg"
-import InnovateYoutube from "../../../public/assets/communities-links/innovate-youtube.svg"
-import AILogoSelected from "../../../public/assets/communities-navigation/ai-selected.svg"
-import CyberLogoSelected from "../../../public/assets/communities-navigation/cyber-selected.svg"
-import HackLogoSelected from "../../../public/assets/communities-navigation/hack-selected.svg"
-import InnovateLogoSelected from "../../../public/assets/communities-navigation/innovate-selected.svg"
-import AILogo from "../../../public/assets/logos/acm-ai.svg"
-import CyberLogo from "../../../public/assets/logos/acm-cyber.svg"
-import HackLogo from "../../../public/assets/logos/acm-hack.svg"
-import InnovateLogo from "../../../public/assets/logos/acm-innovate.svg"
-
-
-
-
-
-
+import AIDiscord from "public/assets/communities-links/ai-discord.svg"
+import AIHome from "public/assets/communities-links/ai-home.svg"
+import CyberDiscord from "public/assets/communities-links/cyber-discord.svg"
+import CyberFacebook from "public/assets/communities-links/cyber-facebook.svg"
+import CyberHome from "public/assets/communities-links/cyber-home.svg"
+import CyberLinkedin from "public/assets/communities-links/cyber-linkedin.svg"
+import CyberMail from "public/assets/communities-links/cyber-mail.svg"
+import CyberTwitter from "public/assets/communities-links/cyber-twitter.svg"
+import CyberYoutube from "public/assets/communities-links/cyber-youtube.svg"
+import HackDiscord from "public/assets/communities-links/hack-discord.svg"
+import HackHome from "public/assets/communities-links/hack-home.svg"
+import InnovateDiscord from "public/assets/communities-links/innovate-discord.svg"
+import InnovateHome from "public/assets/communities-links/innovate-home.svg"
+import InnovateYoutube from "public/assets/communities-links/innovate-youtube.svg"
+import AILogoSelected from "public/assets/communities-navigation/ai-selected.svg"
+import CyberLogoSelected from "public/assets/communities-navigation/cyber-selected.svg"
+import HackLogoSelected from "public/assets/communities-navigation/hack-selected.svg"
+import InnovateLogoSelected from "public/assets/communities-navigation/innovate-selected.svg"
+import AILogo from "public/assets/logos/acm-ai.svg"
+import CyberLogo from "public/assets/logos/acm-cyber.svg"
+import HackLogo from "public/assets/logos/acm-hack.svg"
+import InnovateLogo from "public/assets/logos/acm-innovate.svg"
 
 const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   return (
     <div className="community__sub-orgs__community-card">
       <div className="color_slide redbg" />
       <div className="community__sub-orgs__community-card__content">
-        {!isMobile ? (
+        {!isMobile && (
           <a href="https://ai.acmucsd.com/">
             <Image
               src={AILogo}
@@ -42,8 +36,6 @@ const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
               className="community__sub-orgs__community-card__logo"
             />
           </a>
-        ) : (
-          ""
         )}
         <div>
           <div className="community__sub-orgs__community-card__header">
@@ -83,7 +75,7 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       <div className="color_slide turquoisebg" />
 
       <div className="community__sub-orgs__community-card__content">
-        {!isMobile ? (
+        {!isMobile && (
           <a href="https://sdc.tf/">
             <Image
               src={CyberLogo}
@@ -91,12 +83,10 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
               className="community__sub-orgs__community-card__logo"
             />
           </a>
-        ) : (
-          ""
         )}
         <div>
           <div className="community__sub-orgs__community-card__header">
-            {isMobile ? <Image src={CyberLogo} alt="ACM Cyber" /> : ""}
+            {isMobile && <Image src={CyberLogo} alt="ACM Cyber" />}
             <h1 className="turquoise">ACM Cyber</h1>
           </div>
           <p>
@@ -145,7 +135,7 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       <div className="color_slide yellowbg" />
 
       <div className="community__sub-orgs__community-card__content">
-        {!isMobile ? (
+        {!isMobile && (
           <a href="https://hack.acmucsd.com/">
             <Image
               src={HackLogo}
@@ -153,12 +143,10 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
               className="community__sub-orgs__community-card__logo"
             />
           </a>
-        ) : (
-          ""
         )}
         <div>
           <div className="community__sub-orgs__community-card__header">
-            {isMobile ? <Image src={HackLogo} alt="ACM Hack" /> : ""}
+            {isMobile && <Image src={HackLogo} alt="ACM Hack" />}
             <h1 className="yellow">ACM Hack</h1>
           </div>
           <p>
@@ -195,7 +183,7 @@ const InnovateCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       <div className="color_slide purplebg" />
 
       <div className="community__sub-orgs__community-card__content">
-        {!isMobile ? (
+        {!isMobile && (
           <a href="https://innovate.acmucsd.com/">
             <Image
               src={InnovateLogo}
@@ -203,8 +191,6 @@ const InnovateCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
               className="community__sub-orgs__community-card__logo"
             />
           </a>
-        ) : (
-          ""
         )}
         <div>
           <div className="community__sub-orgs__community-card__header">

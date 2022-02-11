@@ -1,16 +1,15 @@
-import React, { useState } from "react"
-import Link from 'next/link'
-import Image from 'next/image'
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-
-import FacebookIcon from "../../../public/assets/facebook.svg"
-import MediumIcon from "../../../public/assets/medium.svg"
-import GithubIcon from "../../../public/assets/github.svg"
-import InstagramIcon from "../../../public/assets/instagram.svg"
-import DiscordIcon from "../../../public/assets/discord.svg"
-import EmailIcon from "../../../public/assets/email.svg"
-import LinkedinIcon from "../../../public/assets/linkedin.svg"
-import YoutubeIcon from "../../../public/assets/youtube.svg"
+import FacebookIcon from "public/assets/facebook.svg";
+import MediumIcon from "public/assets/medium.svg";
+import GithubIcon from "public/assets/github.svg";
+import InstagramIcon from "public/assets/instagram.svg";
+import DiscordIcon from "public/assets/discord.svg";
+import EmailIcon from "public/assets/email.svg";
+import LinkedinIcon from "public/assets/linkedin.svg";
+import YoutubeIcon from "public/assets/youtube.svg";
 
 const cardContents = [
   { title: "Email", value: "contact@acmucsd.org", icon: EmailIcon },
@@ -41,13 +40,14 @@ const cardContents = [
     value: "acmurl.com/youtube",
     icon: YoutubeIcon,
   },
-]
+];
 function isValidEmail(input) {
-  const reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  return reg.test(String(input).toLowerCase())
+  const reg =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return reg.test(String(input).toLowerCase());
 }
 const Footer: React.FC = () => {
-  const [email, setEmail] = useState("")
+  const [email, setEmail] = useState("");
   return (
     <div className="footer">
       {/* <Image className="acmBlueFade" src={ACMBlueFade} /> */}
@@ -57,23 +57,30 @@ const Footer: React.FC = () => {
           <div className="footerContents__wrapper">
             <div className="footerContents__contact">
               {cardContents.map((item, key) => {
-                let linkprefix = item.title === "Email" ? "mailto:" : "https://"
+                let linkprefix =
+                  item.title === "Email" ? "mailto:" : "https://";
                 return (
                   <div key={key} className="footerContents__contact__card">
-                    <Link href={linkprefix + item.value}><a>
-                      <Image src={item.icon} alt={item.title} />
-                    </a></Link>
+                    <Link href={linkprefix + item.value}>
+                      <a>
+                        <Image src={item.icon} alt={item.title} />
+                      </a>
+                    </Link>
                     <div>
                       <a href={linkprefix + item.value}>{item.title}</a>
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
             <div className="footerContents__newsletter">
               <h2>Newsletter</h2>
               <p>Receive weekly events and news!</p>
-              <a href="https://acmurl.com/newsletter" target="_blank" rel="noreferrer">
+              <a
+                href="https://acmurl.com/newsletter"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Subscribe!
               </a>
             </div>
@@ -111,16 +118,20 @@ const Footer: React.FC = () => {
         <div className="mobileFooterContainer__newsletter">
           <h2>Newsletter</h2>
           <p>Receive weekly events and news!</p>
-          <a href="https://acmurl.com/newsletter" target="_blank" rel="noreferrer">
+          <a
+            href="https://acmurl.com/newsletter"
+            target="_blank"
+            rel="noreferrer"
+          >
             Subscribe!
           </a>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
 
 /*
 <div>

@@ -1,7 +1,3 @@
-import React from "react"
-
-
-
 const AboutMembership: React.FC = () => {
   return (
     <section className="about__membership">
@@ -14,7 +10,7 @@ const AboutMembership: React.FC = () => {
       </p>
       <a href="https://members.acmucsd.com/register">Sign up now!</a>
     </section>
-  )
-}
+  );
+};
 
-export default AboutMembership
+export default AboutMembership;

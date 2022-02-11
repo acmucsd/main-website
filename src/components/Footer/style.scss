@@ -1,4 +1,4 @@
-@import "../../styles/colors.scss";;
+@import "src/styles/colors.scss";
 
 .footer {
   width: 100%;
@@ -229,6 +229,10 @@
         transform: scale(1.05);
       }
     }
+  }
+  img {
+    width: 45px;
+    height: 45px;
   }
 }
 @media only screen and (min-width: 984px) {

@@ -1,10 +1,9 @@
-import React from "react"
 import Image from 'next/image'
-import RedBullet from "../../../public/assets/sponsor-bullets/diamond-red.svg"
-import TurquoiseBullet from "../../../public/assets/sponsor-bullets/diamond-turquoise.svg"
-import YellowBullet from "../../../public/assets/sponsor-bullets/diamond-yellow.svg"
-import PurpleBullet from "../../../public/assets/sponsor-bullets/diamond-purple.svg"
-import PinkBullet from "../../../public/assets/sponsor-bullets/diamond-pink.svg"
+import RedBullet from "public/assets/sponsor-bullets/diamond-red.svg"
+import TurquoiseBullet from "public/assets/sponsor-bullets/diamond-turquoise.svg"
+import YellowBullet from "public/assets/sponsor-bullets/diamond-yellow.svg"
+import PurpleBullet from "public/assets/sponsor-bullets/diamond-purple.svg"
+import PinkBullet from "public/assets/sponsor-bullets/diamond-pink.svg"
 
 const BenefitList: React.FC = () => {
   return (
@@ -54,7 +53,7 @@ const SponsorshipBenefits: React.FC = () => {
       <BenefitList />
       <span className="sponsorship__benefits__footer">
         Interested in hearing about how collaborating with us could benefit you?
-        Feel free to reach out to us at{" "}
+        Feel free to reach out to us at&nbsp;
         <a href="mailto:sponsor@acmucsd.org">sponsor@acmucsd.org!</a>
       </span>
     </section>

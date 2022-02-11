@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import AILogo from "public/assets/logos/acm-ai.svg";
 import CyberLogo from "public/assets/logos/acm-cyber.svg";
-import DesignLogo from "public/assets/logos/acm-design.svg";
+// import DesignLogo from "public/assets/logos/acm-design.svg";
 import HackLogo from "public/assets/logos/acm-hack.svg";
 import InnovateLogo from "public/assets/logos/acm-innovate.svg";
 
@@ -61,7 +61,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
               </div>
             </a>
           </Link>
-          <Link href="/communities#Design">
+          {/* <Link href="/communities#Design">
             <a
               className={`communitiesGrid__community ${
                 hasBeenVisible ? "design--visible" : " "
@@ -75,7 +75,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
                 <p>Design and Interaction</p>
               </div>
             </a>
-          </Link>
+          </Link> */}
         </div>
         <div className="communitiesGrid">
           <Link href="/communities#Hack">
@@ -144,7 +144,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
             </div>
           </a>
         </Link>
-        <Link href="/communities#Design">
+        {/* <Link href="/communities#Design">
           <a
             className={`communitiesGrid__community ${
               hasBeenVisible ? "design--visible" : " "
@@ -158,7 +158,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
               <p>Design and Interaction</p>
             </div>
           </a>
-        </Link>
+        </Link> */}
         <Link href="/communities#Hack">
           <a
             className={`communitiesGrid__community ${

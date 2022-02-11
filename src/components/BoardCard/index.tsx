@@ -3,7 +3,7 @@ import Image from "next/image";
 import GeneralDefault from "public/assets/default-board-images/general-default.svg";
 import AIDefault from "public/assets/default-board-images/ai-default.svg";
 import CyberDefault from "public/assets/default-board-images/cyber-default.svg";
-import DesignDefault from "public/assets/default-board-images/design-default.svg";
+// import DesignDefault from "public/assets/default-board-images/design-default.svg";
 import HackDefault from "public/assets/default-board-images/hack-default.svg";
 import InnovateDefault from "public/assets/default-board-images/innovate-default.svg";
 
@@ -49,7 +49,7 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
     general: GeneralDefault,
     ai: AIDefault,
     cyber: CyberDefault,
-    design: DesignDefault,
+    // design: DesignDefault,
     hack: HackDefault,
     innovate: InnovateDefault,
   };

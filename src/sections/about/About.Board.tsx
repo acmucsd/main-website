@@ -20,8 +20,8 @@ import HackEmpty from "public/assets/board-filters/hack-empty.svg";
 import InnovateSelected from "public/assets/board-filters/innovate-selected.svg";
 import InnovateEmpty from "public/assets/board-filters/innovate-empty.svg";
 
-import DesignSelected from "public/assets/board-filters/design-selected.svg";
-import DesignEmpty from "public/assets/board-filters/design-empty.svg";
+// import DesignSelected from "public/assets/board-filters/design-selected.svg";
+// import DesignEmpty from "public/assets/board-filters/design-empty.svg";
 
 import BoardData from "src/board-data.json";
 const members_list = BoardData;
@@ -145,7 +145,7 @@ const AboutBoard: React.FC<AboutBoardProps> = ({ isMobile }) => {
             onClick={() => setFilters(["innovate"])}
           />
         )}
-        {filters.includes("design") ? (
+        {/* {filters.includes("design") ? (
           <img
             src={DesignSelected.src}
             alt="design is selected"
@@ -159,7 +159,7 @@ const AboutBoard: React.FC<AboutBoardProps> = ({ isMobile }) => {
             src={DesignEmpty.src}
             onClick={() => setFilters(["design"])}
           />
-        )}
+        )} */}
       </div>
       <BoardGrid members_list={displayList} isMobile={isMobile} />
     </section>

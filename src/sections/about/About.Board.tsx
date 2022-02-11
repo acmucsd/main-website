@@ -143,21 +143,6 @@ const AboutBoard: React.FC<AboutBoardProps> = ({ isMobile }) => {
             onClick={() => setFilters(["innovate"])}
           />
         )}
-        {/* {filters.includes("design") ? (
-          <img
-            src={DesignSelected.src}
-            alt="design is selected"
-            onClick={() => {
-              setFilters(filters.filter((e) => e !== "design"));
-            }}
-          />
-        ) : (
-          <img
-            alt="design is not selected"
-            src={DesignEmpty.src}
-            onClick={() => setFilters(["design"])}
-          />
-        )} */}
       </div>
       <BoardGrid members_list={displayList} isMobile={isMobile} />
     </section>

@@ -17,10 +17,12 @@ const generateCurrentPage = (members_list, page) => {
   );
   return (
     <div className="BoardGrid_grid">
-      {current_page.map((member) => {
-        console.log(member);
-        return <BoardCard boardmember={member} key={member.email} />;
-      })}
+      {current_page.map((member) => (
+        <BoardCard
+          boardmember={member}
+          key={`${member.name}-${member.email}-${member.org}`}
+        />
+      ))}
     </div>
   );
 };

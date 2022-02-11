@@ -60,11 +60,7 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
         <h1>{title}</h1>
       </div>
       <div className="BoardCard_pfp">
-        <Image
-          alt={name}
-          src={profile_image !== "" ? profile_image : boardDefault}
-          layout="fill"
-        />
+        <img alt={name} src={profile_image || boardDefault.src} />
       </div>
       <div className="BoardCard_footer">
         <h1

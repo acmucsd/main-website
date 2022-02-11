@@ -54,5 +54,4 @@ workflows:
   test_and_deploy:
     jobs:
       - build
-      - test
       - lint

@@ -6,7 +6,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:12.22.1
+      - image: circleci/node:16.13.1
     steps:
       - checkout
       - restore_cache:
@@ -21,7 +21,7 @@ jobs:
           command: yarn build
   test:
     docker:
-      - image: circleci/node:12.22.1
+      - image: circleci/node:16.13.1
     steps:
       - checkout
       - restore_cache:
@@ -36,7 +36,7 @@ jobs:
           command: yarn test
   lint:
     docker:
-      - image: circleci/node:12.22.1
+      - image: circleci/node:16.13.1
     steps:
       - checkout
       - restore_cache:

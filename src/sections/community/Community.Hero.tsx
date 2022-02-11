@@ -1,24 +1,16 @@
-import { useState, useEffect } from "react"
-import Image from 'next/image'
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
-import Arrow from "public/assets/arrow.svg"
-import CommunitiesGrid from "src/components/CommunitiesGrid"
+import CommunitiesGrid from "src/components/CommunitiesGrid";
 
 const CommunityHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    if (!scrolled) {
-      const handleScroll = () => {
-        setScrolled(true)
-        window.removeEventListener("scroll", handleScroll)
-        return undefined
-      }
-
-      window.addEventListener("scroll", handleScroll)
-      return () => window.removeEventListener("scroll", handleScroll)
-    }
-  }, [scrolled])
+    const onScroll = () => setScrolled(window.scrollY !== 0);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <section className="community__hero">
@@ -32,11 +24,23 @@ const CommunityHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <div className="community__hero__communities">
             <CommunitiesGrid />
           </div>
-          {!scrolled && <Image className="arrow" alt="" src={Arrow} />}
+          {!scrolled && (
+            <img
+              className="arrow"
+              onClick={() =>
+                window.scrollBy({
+                  top: window.innerHeight - 78,
+                  behavior: "smooth",
+                })
+              }
+              alt=""
+              src="/assets/arrow.svg"
+            />
+          )}
         </>
       )}
     </section>
-  )
-}
+  );
+};
 
-export default CommunityHero
+export default CommunityHero;

@@ -27,10 +27,7 @@ const AddPost: React.FC<Props> = ({ savePost }) => {
           <input onChange={handleForm} type="text" id="body" />
         </div>
       </div>
-      <button
-        className="Form__button"
-        disabled={formData === undefined ? true : false}
-      >
+      <button className="Form__button" disabled={formData === undefined}>
         Add Post
       </button>
     </form>

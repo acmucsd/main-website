@@ -103,7 +103,7 @@
       font-size: 16px;
       outline: none;
     }
-    > a {
+    .subscribe-btn {
       text-decoration: none;
       padding: 5px 30px;
       cursor: pointer;
@@ -125,6 +125,22 @@
         background-color: $hover-blue;
         transition-duration: 200ms;
       }
+    }
+    .vercel-btn {
+      text-decoration: none;
+      cursor: pointer;
+      color: $white;
+      background-color: none;
+      height: 2em;
+      width: 165px;
+      height: 35px;
+      border-radius: 8px;
+      border-color: $black;
+      border-style: none;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 36px;
+      outline: none;
     }
   }
 }
@@ -191,11 +207,27 @@
       font-size: 16px;
       outline: none;
     }
-    > a {
+    .mobile-subscribe-btn {
       text-decoration: none;
       padding: 4px 0;
       color: $white;
       background-color: $blue;
+      height: 2em;
+      width: 165px;
+      height: 35px;
+      border-radius: 8px;
+      border-color: $black;
+      border-style: none;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 36px;
+      outline: none;
+    }
+    .mobile-vercel-btn {
+      text-decoration: none;
+      padding: 4px 0;
+      color: $white;
+      background-color: none;
       height: 2em;
       width: 165px;
       height: 35px;
@@ -225,6 +257,7 @@
     padding: 0px;
     img {
       width: 70%;
+      height: unset;
       &:hover {
         transform: scale(1.05);
       }

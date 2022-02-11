@@ -9,6 +9,7 @@ import DiscordLogo from "public/assets/discord-dark.svg";
 import FacebookLogo from "public/assets/facebook-dark.svg";
 import AILogo from "public/assets/logos/acm-ai.svg";
 import CyberLogo from "public/assets/logos/acm-cyber.svg";
+import DesignLogo from "public/assets/logos/acm-design.svg";
 import HackLogo from "public/assets/logos/acm-hack.svg";
 import InnovateLogo from "public/assets/logos/acm-innovate.svg";
 import CommunitiesGrid from "src/components/CommunitiesGrid";
@@ -37,6 +38,11 @@ const renderMobileCommunityGrid = () => (
           <img src={CyberLogo.src} alt="ACM Cyber Logo" />
         </a>
       </Link>
+      <Link href="/communities#Design">
+        <a>
+          <img src={DesignLogo.src} alt="ACM Design Logo" />
+        </a>
+      </Link>
     </div>
   </div>
 );
@@ -54,7 +60,7 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           {!isMobile && (
             <p>
               To keep up with what&apos;s happening, we recommend joining our
-              Discord server and following us on Facebook.{" "}
+              Discord server and following us on Facebook.
             </p>
           )}
           <div className="about__get-involved__section__description__links">

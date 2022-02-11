@@ -13,23 +13,23 @@ const SponsorshipLogos: React.FC = () => {
       </h1>
       <div className="sponsorship__logos__img-grid">
         <a href="https://gear-tech.io/">
-          <Image src={GearImg} alt="Gear" />
+          <img src={GearImg.src} alt="Gear" />
         </a>
       </div>
       <div className="sponsorship__logos__img-grid">
         <a href="https://www.optiver.com/">
-          <Image src={OptiverImg} alt="Optiver" />
+          <img src={OptiverImg.src} alt="Optiver" />
         </a>
         <a href="https://www.robinhood.com/">
-          <Image src={RobinhoodImg} alt="Robinhood" />
+          <img src={RobinhoodImg.src} alt="Robinhood" />
         </a>
       </div>
       <div className="sponsorship__logos__img-grid">
         <a href="https://cse.ucsd.edu/">
-          <Image src={CSEImg} alt="CSE" />
+          <img src={CSEImg.src} alt="CSE" />
         </a>
         <a href="https://tesc.ucsd.edu/">
-          <Image src={TESCImg} alt="TESC" />
+          <img src={TESCImg.src} alt="TESC" />
         </a>
       </div>
     </section>

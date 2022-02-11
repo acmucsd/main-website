@@ -44,7 +44,6 @@ const Number: React.FC<NumberProps> = ({
               redraw
             />
           ) : (
-            // eslint-disable-next-line react/jsx-one-expression-per-line
             <span className="count">0{extension}</span>
           )}
         </VisibilitySensor>

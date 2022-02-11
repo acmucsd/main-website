@@ -10,6 +10,7 @@ import DiscordIcon from "public/assets/discord.svg";
 import EmailIcon from "public/assets/email.svg";
 import LinkedinIcon from "public/assets/linkedin.svg";
 import YoutubeIcon from "public/assets/youtube.svg";
+import VercelIcon from "public/assets/vercel.svg";
 
 const cardContents = [
   { title: "Email", value: "contact@acmucsd.org", icon: EmailIcon },
@@ -50,7 +51,6 @@ const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
   return (
     <div className="footer">
-      {/* <Image className="acmBlueFade" src={ACMBlueFade} /> */}
       <div className="footerContainer">
         <div className="footerContents">
           <h2>Connect With Us!</h2>
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
                   <div key={key} className="footerContents__contact__card">
                     <Link href={linkprefix + item.value}>
                       <a>
-                        <Image src={item.icon} alt={item.title} />
+                        <img src={item.icon.src} alt={item.title} />
                       </a>
                     </Link>
                     <div>
@@ -80,8 +80,12 @@ const Footer: React.FC = () => {
                 href="https://acmurl.com/newsletter"
                 target="_blank"
                 rel="noreferrer"
+                className="subscribe-btn"
               >
                 Subscribe!
+              </a>
+              <a href="https://vercel.com" className="vercel-btn">
+                <img src={VercelIcon.src} alt="Vercel" />
               </a>
             </div>
           </div>
@@ -91,28 +95,28 @@ const Footer: React.FC = () => {
         <h2>Connect With Us!</h2>
         <div className="community-links">
           <a href="mailto:contact@acmucsd.org">
-            <Image src={EmailIcon} alt="Email" />
+            <img src={EmailIcon.src} alt="Email" />
           </a>
           <a href="http://acmurl.com/discord">
-            <Image src={DiscordIcon} alt="Discord" />
+            <img src={DiscordIcon.src} alt="Discord" />
           </a>
           <a href="http://facebook.com/acmucsd/">
-            <Image src={FacebookIcon} alt="Facebook" />
+            <img src={FacebookIcon.src} alt="Facebook" />
           </a>
           <a href="http://medium.com/acmucsd">
-            <Image src={MediumIcon} alt="Medium" />
+            <img src={MediumIcon.src} alt="Medium" />
           </a>
           <a href="http://instagram.com/acm.ucsd">
-            <Image src={InstagramIcon} alt="Instagram" />
+            <img src={InstagramIcon.src} alt="Instagram" />
           </a>
           <a href="http://github.com/acmucsd">
-            <Image src={GithubIcon} alt="GitHub" />
+            <img src={GithubIcon.src} alt="GitHub" />
           </a>
           <a href="http://acmurl.com/youtube">
-            <Image src={YoutubeIcon} alt="Youtube" />
+            <img src={YoutubeIcon.src} alt="Youtube" />
           </a>
           <a href="http://acmurl.com/linkedin">
-            <Image src={LinkedinIcon} alt="Linkedin" />
+            <img src={LinkedinIcon.src} alt="Linkedin" />
           </a>
         </div>
         <div className="mobileFooterContainer__newsletter">
@@ -122,8 +126,12 @@ const Footer: React.FC = () => {
             href="https://acmurl.com/newsletter"
             target="_blank"
             rel="noreferrer"
+            className="mobile-subscribe-btn"
           >
             Subscribe!
+          </a>
+          <a href="https://vercel.com" className="mobile-vercel-btn">
+            <img src={VercelIcon.src} alt="Vercel" />
           </a>
         </div>
       </div>
@@ -132,17 +140,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-
-/*
-<div>
-        
-        <div className="footerContainer--right">
-          <h2>Newsletter</h2>
-          <p>Receive weekly events and news!</p>
-          <div className="newsLetterContainer">
-            <input type="text" id="emailinput" name="fname" value="my@email.com" />
-            <button>></button>
-          </div>
-        </div>
-      </div>
-*/

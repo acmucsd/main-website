@@ -45,38 +45,28 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
   const personal_link = boardmember.personal_link || "";
   const linkedin_link = boardmember.linkedin_link || "";
 
-  let boardDefault;
-  switch (org) {
-    case "general":
-      boardDefault = GeneralDefault;
-      break;
-    case "ai":
-      boardDefault = AIDefault;
-      break;
-    case "cyber":
-      boardDefault = CyberDefault;
-      break;
-    case "design":
-      boardDefault = DesignDefault;
-      break;
-    case "hack":
-      boardDefault = HackDefault;
-      break;
-    case "innovate":
-      boardDefault = InnovateDefault;
-      break;
-  }
+  const defaultImgs = {
+    general: GeneralDefault,
+    ai: AIDefault,
+    cyber: CyberDefault,
+    design: DesignDefault,
+    hack: HackDefault,
+    innovate: InnovateDefault,
+  };
+
+  const boardDefault = defaultImgs[org];
+
   return (
     <div className={"BoardCard " + org}>
       <div className="BoardCard_titleHeader">
         <h1>{title}</h1>
       </div>
       <div className="BoardCard_pfp">
-        {profile_image !== "" ? (
-          <Image alt={name} src={profile_image} layout="fill" />
-        ) : (
-          <Image alt={name} src={boardDefault} layout="fill" />
-        )}
+        <Image
+          alt={name}
+          src={profile_image !== "" ? profile_image : boardDefault}
+          layout="fill"
+        />
       </div>
       <div className="BoardCard_footer">
         <h1

@@ -1,24 +1,16 @@
-import { useState, useEffect } from "react"
-import Image from 'next/image'
-import Arrow from "public/assets/arrow.svg"
-import SponsorHeroLogo from "public/assets/sponsor-images/sponsor_hero.png"
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Arrow from "public/assets/arrow.svg";
+import SponsorHeroLogo from "public/assets/sponsor-images/sponsor_hero.png";
 
 const SponsorshipInfo: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    if (!scrolled) {
-      const handleScroll = () => {
-        setScrolled(true)
-        window.removeEventListener("scroll", handleScroll)
-        return undefined
-      }
-
-      window.addEventListener("scroll", handleScroll)
-      return () => window.removeEventListener("scroll", handleScroll)
-    }
-    return undefined
-  }, [scrolled])
+    const onScroll = () => setScrolled(window.scrollY !== 0);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <section>
@@ -32,17 +24,17 @@ const SponsorshipInfo: React.FC = () => {
             <span className="purple"> innovators</span>!
           </h2>
         </div>
-        <Image
+        <img
           className="sponsorship__info__img"
-          src={SponsorHeroLogo}
+          src={SponsorHeroLogo.src}
           alt="Sponsor Logo"
         />
       </div>
       <div className="sponsorship__info mobile">
         <h1 className="sponsorship__info__text__title">Sponsor</h1>
-        <Image
+        <img
           className="sponsorship__info__img"
-          src={SponsorHeroLogo}
+          src={SponsorHeroLogo.src}
           alt="Sponsor Logo"
         />
         <h2 className="sponsorship__info__text__description">
@@ -52,9 +44,21 @@ const SponsorshipInfo: React.FC = () => {
           <span className="purple"> innovators</span>!
         </h2>
       </div>
-      {!scrolled  &&<Image className="arrow" alt="" src={Arrow} />}
+      {!scrolled && (
+        <img
+          className="arrow"
+          onClick={() =>
+            window.scrollBy({
+              top: window.innerHeight - 78,
+              behavior: "smooth",
+            })
+          }
+          alt=""
+          src="/assets/arrow.svg"
+        />
+      )}
     </section>
-  )
-}
+  );
+};
 
-export default SponsorshipInfo
+export default SponsorshipInfo;

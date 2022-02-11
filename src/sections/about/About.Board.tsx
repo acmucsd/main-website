@@ -20,6 +20,9 @@ import HackEmpty from "public/assets/board-filters/hack-empty.svg";
 import InnovateSelected from "public/assets/board-filters/innovate-selected.svg";
 import InnovateEmpty from "public/assets/board-filters/innovate-empty.svg";
 
+import DesignSelected from "public/assets/board-filters/design-selected.svg";
+import DesignEmpty from "public/assets/board-filters/design-empty.svg";
+
 import BoardData from "src/board-data.json";
 const members_list = BoardData;
 
@@ -54,92 +57,107 @@ const AboutBoard: React.FC<AboutBoardProps> = ({ isMobile }) => {
       <div className="about__board__filters">
         <p>Filter:</p>
         {filters.length == 0 ? (
-          <Image
+          <img
             alt="all board is now selected"
-            src={AllBoardSelected}
+            src={AllBoardSelected.src}
             onClick={() => setFilters([])}
           />
         ) : (
-          <Image
+          <img
             alt="all board is no longer selected"
-            src={AllBoardEmpty}
+            src={AllBoardEmpty.src}
             onClick={() => setFilters([])}
           />
         )}
         {filters.includes("general") ? (
-          <Image
+          <img
             alt="general is now selected"
-            src={GeneralSelected}
+            src={GeneralSelected.src}
             onClick={() => {
               setFilters(filters.filter((e) => e !== "general"));
             }}
           />
         ) : (
-          <Image
+          <img
             alt="general is not selected"
-            src={GeneralEmpty}
+            src={GeneralEmpty.src}
             onClick={() => setFilters(["general"])}
           />
         )}
         <br />
         {filters.includes("ai") ? (
-          <Image
+          <img
             alt="ai is now selected"
-            src={AISelected}
+            src={AISelected.src}
             onClick={() => {
               setFilters(filters.filter((e) => e !== "ai"));
             }}
           />
         ) : (
-          <Image
+          <img
             alt="ai is not selected"
-            src={AIEmpty}
+            src={AIEmpty.src}
             onClick={() => setFilters(["ai"])}
           />
         )}
         {filters.includes("cyber") ? (
-          <Image
+          <img
             alt="cyber is now selected"
-            src={CyberSelected}
+            src={CyberSelected.src}
             onClick={() => {
               setFilters(filters.filter((e) => e !== "cyber"));
             }}
           />
         ) : (
-          <Image
+          <img
             alt="cyber is not selected"
-            src={CyberEmpty}
+            src={CyberEmpty.src}
             onClick={() => setFilters(["cyber"])}
           />
         )}
         {filters.includes("hack") ? (
-          <Image
-            src={HackSelected}
+          <img
+            src={HackSelected.src}
             alt="hack is selected"
             onClick={() => {
               setFilters(filters.filter((e) => e !== "hack"));
             }}
           />
         ) : (
-          <Image
+          <img
             alt="hack is not selected"
-            src={HackEmpty}
+            src={HackEmpty.src}
             onClick={() => setFilters(["hack"])}
           />
         )}
         {filters.includes("innovate") ? (
-          <Image
-            src={InnovateSelected}
+          <img
+            src={InnovateSelected.src}
             alt="innovate is selected"
             onClick={() => {
               setFilters(filters.filter((e) => e !== "innovate"));
             }}
           />
         ) : (
-          <Image
+          <img
             alt="innovate is not selected"
-            src={InnovateEmpty}
+            src={InnovateEmpty.src}
             onClick={() => setFilters(["innovate"])}
+          />
+        )}
+        {filters.includes("design") ? (
+          <img
+            src={DesignSelected.src}
+            alt="design is selected"
+            onClick={() => {
+              setFilters(filters.filter((e) => e !== "design"));
+            }}
+          />
+        ) : (
+          <img
+            alt="design is not selected"
+            src={DesignEmpty.src}
+            onClick={() => setFilters(["design"])}
           />
         )}
       </div>

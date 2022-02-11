@@ -18,7 +18,8 @@ const generateCurrentPage = (members_list, page) => {
   return (
     <div className="BoardGrid_grid">
       {current_page.map((member) => {
-        return <BoardCard boardmember={member} key={Math.random() * 100000} />;
+        console.log(member);
+        return <BoardCard boardmember={member} key={member.email} />;
       })}
     </div>
   );
@@ -29,21 +30,22 @@ const BoardGrid: React.FC<BoardGridProps> = ({ members_list, isMobile }) => {
   const maxPage = Math.ceil(members_list.length / 8 - 1);
 
   useEffect(() => {
-    setPage(0);
     setCurrentPage(generateCurrentPage(members_list, page));
   }, [members_list, page]);
+
   useEffect(() => {
     if (page > Math.ceil(members_list.length / 8 - 1)) {
       setPage(Math.ceil(members_list.length / 8 - 1));
     }
     setCurrentPage(generateCurrentPage(members_list, page));
   }, [page, members_list]);
+
   return (
     <div className="BoardGrid">
       <div className="BoardGrid_arrowContainer">
         {page !== 0 && (
-          <Image
-            src={LeftArrow}
+          <img
+            src={LeftArrow.src}
             alt="left arrow"
             onClick={() => setPage(page >= 1 ? page - 1 : 0)}
           />
@@ -52,8 +54,8 @@ const BoardGrid: React.FC<BoardGridProps> = ({ members_list, isMobile }) => {
       {currentPage}
       <div className="BoardGrid_arrowContainer">
         {page !== maxPage && (
-          <Image
-            src={RightArrow}
+          <img
+            src={RightArrow.src}
             alt="right arrow"
             onClick={() => setPage(page < maxPage ? page + 1 : maxPage)}
           />

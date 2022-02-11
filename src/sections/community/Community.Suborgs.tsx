@@ -1,27 +1,29 @@
-import { useState } from "react"
-import Image from 'next/image'
-import AIDiscord from "public/assets/communities-links/ai-discord.svg"
-import AIHome from "public/assets/communities-links/ai-home.svg"
-import CyberDiscord from "public/assets/communities-links/cyber-discord.svg"
-import CyberFacebook from "public/assets/communities-links/cyber-facebook.svg"
-import CyberHome from "public/assets/communities-links/cyber-home.svg"
-import CyberLinkedin from "public/assets/communities-links/cyber-linkedin.svg"
-import CyberMail from "public/assets/communities-links/cyber-mail.svg"
-import CyberTwitter from "public/assets/communities-links/cyber-twitter.svg"
-import CyberYoutube from "public/assets/communities-links/cyber-youtube.svg"
-import HackDiscord from "public/assets/communities-links/hack-discord.svg"
-import HackHome from "public/assets/communities-links/hack-home.svg"
-import InnovateDiscord from "public/assets/communities-links/innovate-discord.svg"
-import InnovateHome from "public/assets/communities-links/innovate-home.svg"
-import InnovateYoutube from "public/assets/communities-links/innovate-youtube.svg"
-import AILogoSelected from "public/assets/communities-navigation/ai-selected.svg"
-import CyberLogoSelected from "public/assets/communities-navigation/cyber-selected.svg"
-import HackLogoSelected from "public/assets/communities-navigation/hack-selected.svg"
-import InnovateLogoSelected from "public/assets/communities-navigation/innovate-selected.svg"
-import AILogo from "public/assets/logos/acm-ai.svg"
-import CyberLogo from "public/assets/logos/acm-cyber.svg"
-import HackLogo from "public/assets/logos/acm-hack.svg"
-import InnovateLogo from "public/assets/logos/acm-innovate.svg"
+import { useState } from "react";
+import Image from "next/image";
+import AIDiscord from "public/assets/communities-links/ai-discord.svg";
+import AIHome from "public/assets/communities-links/ai-home.svg";
+import CyberDiscord from "public/assets/communities-links/cyber-discord.svg";
+import CyberFacebook from "public/assets/communities-links/cyber-facebook.svg";
+import CyberHome from "public/assets/communities-links/cyber-home.svg";
+import CyberLinkedin from "public/assets/communities-links/cyber-linkedin.svg";
+import CyberMail from "public/assets/communities-links/cyber-mail.svg";
+import CyberTwitter from "public/assets/communities-links/cyber-twitter.svg";
+import CyberYoutube from "public/assets/communities-links/cyber-youtube.svg";
+import HackDiscord from "public/assets/communities-links/hack-discord.svg";
+import HackHome from "public/assets/communities-links/hack-home.svg";
+import InnovateDiscord from "public/assets/communities-links/innovate-discord.svg";
+import InnovateHome from "public/assets/communities-links/innovate-home.svg";
+import InnovateYoutube from "public/assets/communities-links/innovate-youtube.svg";
+import AILogoSelected from "public/assets/communities-navigation/ai-selected.svg";
+import CyberLogoSelected from "public/assets/communities-navigation/cyber-selected.svg";
+import HackLogoSelected from "public/assets/communities-navigation/hack-selected.svg";
+import InnovateLogoSelected from "public/assets/communities-navigation/innovate-selected.svg";
+import DesignLogoSelected from "public/assets/communities-navigation/design-selected.svg";
+import AILogo from "public/assets/logos/acm-ai.svg";
+import CyberLogo from "public/assets/logos/acm-cyber.svg";
+import HackLogo from "public/assets/logos/acm-hack.svg";
+import InnovateLogo from "public/assets/logos/acm-innovate.svg";
+import DesignLogo from "public/assets/logos/acm-design.svg";
 
 const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   return (
@@ -30,8 +32,8 @@ const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       <div className="community__sub-orgs__community-card__content">
         {!isMobile && (
           <a href="https://ai.acmucsd.com/">
-            <Image
-              src={AILogo}
+            <img
+              src={AILogo.src}
               alt="ACM AI"
               className="community__sub-orgs__community-card__logo"
             />
@@ -39,7 +41,7 @@ const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         )}
         <div>
           <div className="community__sub-orgs__community-card__header">
-            {isMobile ? <Image src={AILogo} alt="ACM AI" /> : ""}
+            {isMobile && <img src={AILogo.src} alt="ACM AI" />}
             <h1 className="red">ACM AI</h1>
           </div>
           <p>
@@ -58,17 +60,18 @@ const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           </p>
           <div className="community-links" id="Cyber">
             <a href="https://acmurl.com/ai-disc">
-              <Image src={AIDiscord} alt="AI Discord" />
+              <img src={AIDiscord.src} alt="AI Discord" />
             </a>
             <a href="https://ai.acmucsd.com/">
-              <Image src={AIHome} alt="AI Home" />
+              <img src={AIHome.src} alt="AI Home" />
             </a>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
 const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   return (
     <div className="community__sub-orgs__community-card">
@@ -77,8 +80,8 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       <div className="community__sub-orgs__community-card__content">
         {!isMobile && (
           <a href="https://sdc.tf/">
-            <Image
-              src={CyberLogo}
+            <img
+              src={CyberLogo.src}
               alt="ACM Cyber"
               className="community__sub-orgs__community-card__logo"
             />
@@ -86,7 +89,7 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         )}
         <div>
           <div className="community__sub-orgs__community-card__header">
-            {isMobile && <Image src={CyberLogo} alt="ACM Cyber" />}
+            {isMobile && <img src={CyberLogo.src} alt="ACM Cyber" />}
             <h1 className="turquoise">ACM Cyber</h1>
           </div>
           <p>
@@ -103,32 +106,33 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           </p>
           <div className="community-links">
             <a href="https://acmurl.com/cyberdiscord">
-              <Image src={CyberDiscord} alt="Cyber Discord" />
+              <img src={CyberDiscord.src} alt="Cyber Discord" />
             </a>
             <a href="https://sdc.tf/">
-              <Image src={CyberHome} alt="Cyber Home" />
+              <img src={CyberHome.src} alt="Cyber Home" />
             </a>
             <a href="https://www.facebook.com/cyberucsd">
-              <Image src={CyberFacebook} alt="Cyber Facebook" />
+              <img src={CyberFacebook.src} alt="Cyber Facebook" />
             </a>
             <a href="https://twitter.com/cyberucsd">
-              <Image src={CyberTwitter} alt="Cyber Twitter" />
+              <img src={CyberTwitter.src} alt="Cyber Twitter" />
             </a>
             <a href="https://www.youtube.com/playlist?list=PLpmCTDt8lemWaQ_ZruBe3Dt6ddtVdX-yR">
-              <Image src={CyberYoutube} alt="Cyber Youtube" />
+              <img src={CyberYoutube.src} alt="Cyber Youtube" />
             </a>
             <a href="https://www.linkedin.com/company/cyber-ucsd/">
-              <Image src={CyberLinkedin} alt="Cyber LinkedIn" />
+              <img src={CyberLinkedin.src} alt="Cyber LinkedIn" />
             </a>
             <a href="https://acmurl.com/joincyber" id="Design">
-              <Image src={CyberMail} alt="Cyber Mail" />
+              <img src={CyberMail.src} alt="Cyber Mail" />
             </a>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
 const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   return (
     <div className="community__sub-orgs__community-card" id="Hack">
@@ -137,8 +141,8 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       <div className="community__sub-orgs__community-card__content">
         {!isMobile && (
           <a href="https://hack.acmucsd.com/">
-            <Image
-              src={HackLogo}
+            <img
+              src={HackLogo.src}
               alt="ACM Hack"
               className="community__sub-orgs__community-card__logo"
             />
@@ -146,7 +150,7 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         )}
         <div>
           <div className="community__sub-orgs__community-card__header">
-            {isMobile && <Image src={HackLogo} alt="ACM Hack" />}
+            {isMobile && <img src={HackLogo.src} alt="ACM Hack" />}
             <h1 className="yellow">ACM Hack</h1>
           </div>
           <p>
@@ -159,23 +163,23 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             engineering and finding their path.
             <br />
             <br />
-            Our events are for people of all skill levels, so whether you&apos;re a
-            first-time coder or a skilled programmer, we&apos;d be happy to have you
-            join the ACM Hack community!
+            Our events are for people of all skill levels, so whether
+            you&apos;re a first-time coder or a skilled programmer, we&apos;d be
+            happy to have you join the ACM Hack community!
           </p>
           <div className="community-links" id="Innovate">
             <a href="http://acmurl.com/hack-disc">
-              <Image src={HackDiscord} alt="Hack Discord" />
+              <img src={HackDiscord.src} alt="Hack Discord" />
             </a>
             <a href="https://hack.acmucsd.com/">
-              <Image src={HackHome} alt="Hack Home" />
+              <img src={HackHome.src} alt="Hack Home" />
             </a>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const InnovateCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   return (
@@ -185,8 +189,8 @@ const InnovateCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       <div className="community__sub-orgs__community-card__content">
         {!isMobile && (
           <a href="https://innovate.acmucsd.com/">
-            <Image
-              src={InnovateLogo}
+            <img
+              src={InnovateLogo.src}
               alt="ACM Innovate"
               className="community__sub-orgs__community-card__logo"
             />
@@ -194,7 +198,7 @@ const InnovateCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         )}
         <div>
           <div className="community__sub-orgs__community-card__header">
-            {isMobile ? <Image src={InnovateLogo} alt="ACM Innovate" /> : ""}
+            {isMobile && <img src={InnovateLogo.src} alt="ACM Innovate" />}
             <h1 className="purple">ACM Innovate</h1>
           </div>
           <p>
@@ -215,34 +219,90 @@ const InnovateCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           </p>
           <div className="community-links" id="Design">
             <a href="https://acmurl.com/innovate-discord">
-              <Image src={InnovateDiscord} alt="Innovate Discord" />
+              <img src={InnovateDiscord.src} alt="Innovate Discord" />
             </a>
             <a href="https://innovate.acmucsd.com/">
-              <Image src={InnovateHome} alt="Innovate Home" />
+              <img src={InnovateHome.src} alt="Innovate Home" />
             </a>
             <a href="https://acmurl.com/innovate-youtube">
-              <Image src={InnovateYoutube} alt="Innovate Youtube" />
+              <img src={InnovateYoutube.src} alt="Innovate Youtube" />
             </a>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
+  return (
+    <div className="community__sub-orgs__community-card" id="Design">
+      <div className="color_slide pinkbg" />
+
+      <div className="community__sub-orgs__community-card__content">
+        {!isMobile && (
+          <a href="https://design.acmucsd.com/">
+            <img
+              src={DesignLogo.src}
+              alt="ACM Design"
+              className="community__sub-orgs__community-card__logo"
+            />
+          </a>
+        )}
+        <div>
+          <div className="community__sub-orgs__community-card__header">
+            {isMobile && <img src={DesignLogo.src} alt="ACM Design" />}
+            <h1 className="pink">ACM Design</h1>
+          </div>
+          <p>
+            We create and foster an entrepreneurial spirit with regard to both
+            new nonprofit and for-profit companies.
+            <br />
+            <br />
+            Our mission is to increase interest and accessibility in startups
+            and bring the innovation spirit and mentality to members’ careers.
+            <br />
+            <br />
+            We frequently host activities: guest speaker talks, workshops, and
+            side projects. We have a lot of exciting stuff planned for the
+            future!
+            <br />
+            <br />
+            All skill levels welcome!
+          </p>
+          <div className="community-links" id="Design">
+            {/* TODO: Make real links */}
+            {/* <a href="https://acmurl.com/design-discord">
+              <img src={DesignDiscord.src} alt="Design Discord" />
+            </a> */}
+            {/* <a href="https://design.acmucsd.com/">
+              <img src={DesignHome.src} alt="Design Home" />
+            </a> */}
+            {/* <a href="https://acmurl.com/design-youtube">
+              <img src={DesignYoutube.src} alt="Design Youtube" />
+            </a> */}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
-  const [selected, setSelected] = useState("")
+  const [selected, setSelected] = useState("");
 
   const renderCommunity = (suborg: string) => {
     switch (suborg) {
       case "ai":
-        return <AICommunity isMobile={isMobile} />
+        return <AICommunity isMobile={isMobile} />;
       case "cyber":
-        return <CyberCommunity isMobile={isMobile} />
+        return <CyberCommunity isMobile={isMobile} />;
       case "hack":
-        return <HackCommunity isMobile={isMobile} />
+        return <HackCommunity isMobile={isMobile} />;
       case "innovate":
-        return <InnovateCommunity isMobile={isMobile} />
+        return <InnovateCommunity isMobile={isMobile} />;
+      case "design":
+        return <DesignCommunity isMobile={isMobile} />;
       default:
         return (
           <div className="community__sub-orgs--mobile__description">
@@ -252,9 +312,9 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             </p>
             <p>Learn more about each community</p>
           </div>
-        )
+        );
     }
-  }
+  };
 
   return (
     <>
@@ -265,6 +325,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <CyberCommunity isMobile={isMobile} />
           <HackCommunity isMobile={isMobile} />
           <InnovateCommunity isMobile={isMobile} />
+          <DesignCommunity isMobile={isMobile} />
         </section>
       ) : (
         <>
@@ -278,31 +339,45 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             {renderCommunity(selected)}
             <div className="community__sub-orgs--mobile__navigation">
               <button onClick={() => setSelected("ai")}>
-                <Image
-                  src={selected === "ai" ? AILogoSelected : AILogo}
+                <img
+                  src={selected === "ai" ? AILogoSelected.src : AILogo.src}
                   alt="AI Logo"
                 />
               </button>
               <button onClick={() => setSelected("cyber")}>
-                <Image
-                  src={selected === "cyber" ? CyberLogoSelected : CyberLogo}
+                <img
+                  src={
+                    selected === "cyber" ? CyberLogoSelected.src : CyberLogo.src
+                  }
                   alt="Cyber Logo"
                 />
               </button>
               <button onClick={() => setSelected("hack")}>
-                <Image
-                  src={selected === "hack" ? HackLogoSelected : HackLogo}
+                <img
+                  src={
+                    selected === "hack" ? HackLogoSelected.src : HackLogo.src
+                  }
                   alt="Hack Logo"
                 />
               </button>
               <button onClick={() => setSelected("innovate")}>
-                <Image
+                <img
                   src={
                     selected === "innovate"
-                      ? InnovateLogoSelected
-                      : InnovateLogo
+                      ? InnovateLogoSelected.src
+                      : InnovateLogo.src
                   }
                   alt="Innovate Logo"
+                />
+              </button>
+              <button onClick={() => setSelected("design")}>
+                <img
+                  src={
+                    selected === "design"
+                      ? DesignLogoSelected.src
+                      : DesignLogo.src
+                  }
+                  alt="Design Logo"
                 />
               </button>
             </div>
@@ -310,7 +385,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         </>
       )}
     </>
-  )
-}
+  );
+};
 
-export default CommunitySubOrgs
+export default CommunitySubOrgs;

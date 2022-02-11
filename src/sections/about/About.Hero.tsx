@@ -2,23 +2,16 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import HeroImage from "public/assets/about-images/about-hero.png";
+import ArrowIcon from "public/assets/arrow.svg";
 
 const AboutHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    if (!scrolled) {
-      const handleScroll = () => {
-        setScrolled(true);
-        window.removeEventListener("scroll", handleScroll);
-        return undefined;
-      };
-
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }
-    return undefined;
-  }, [scrolled]);
+    const onScroll = () => setScrolled(window.scrollY !== 0);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <section className="about__hero">
@@ -37,8 +30,18 @@ const AboutHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       {!isMobile && (
         <img src={HeroImage.src} className="hero-img" alt="About Hero Image" />
       )}
-      {scrolled ? null : (
-        <img className="arrow" alt="" src="/assets/arrow.svg" />
+      {!scrolled && (
+        <img
+          className="arrow"
+          onClick={() =>
+            window.scrollBy({
+              top: window.innerHeight - 78,
+              behavior: "smooth",
+            })
+          }
+          alt=""
+          src="/assets/arrow.svg"
+        />
       )}
     </section>
   );

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { value useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -43,8 +43,7 @@ const cardContents = [
   },
 ];
 function isValidEmail(input) {
-  const reg =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return reg.test(String(input).toLowerCase());
 }
 const Footer: React.FC = () => {
@@ -84,7 +83,7 @@ const Footer: React.FC = () => {
               >
                 Subscribe!
               </a>
-              <a href="https://vercel.com" className="vercel-btn">
+              <a href="https://vercel.com/?utm_source=acmucsd&utm_campaign=oss" className="vercel-btn">
                 <img src={VercelIcon.src} alt="Vercel" />
               </a>
             </div>
@@ -130,7 +129,10 @@ const Footer: React.FC = () => {
           >
             Subscribe!
           </a>
-          <a href="https://vercel.com" className="mobile-vercel-btn">
+          <a
+            href="https://vercel.com/?utm_source=acmucsd&utm_campaign=oss"
+            className="mobile-vercel-btn"
+          >
             <img src={VercelIcon.src} alt="Vercel" />
           </a>
         </div>

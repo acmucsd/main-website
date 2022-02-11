@@ -18,12 +18,10 @@ import AILogoSelected from "public/assets/communities-navigation/ai-selected.svg
 import CyberLogoSelected from "public/assets/communities-navigation/cyber-selected.svg";
 import HackLogoSelected from "public/assets/communities-navigation/hack-selected.svg";
 import InnovateLogoSelected from "public/assets/communities-navigation/innovate-selected.svg";
-// import DesignLogoSelected from "public/assets/communities-navigation/design-selected.svg";
 import AILogo from "public/assets/logos/acm-ai.svg";
 import CyberLogo from "public/assets/logos/acm-cyber.svg";
 import HackLogo from "public/assets/logos/acm-hack.svg";
 import InnovateLogo from "public/assets/logos/acm-innovate.svg";
-// import DesignLogo from "public/assets/logos/acm-design.svg";
 
 const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   return (
@@ -234,50 +232,6 @@ const InnovateCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   );
 };
 
-// const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
-//   return (
-//     <div className="community__sub-orgs__community-card" id="Design">
-//       <div className="color_slide pinkbg" />
-
-//       <div className="community__sub-orgs__community-card__content">
-//         {!isMobile && (
-//           <a href="https://design.acmucsd.com/">
-//             <img
-//               src={DesignLogo.src}
-//               alt="ACM Design"
-//               className="community__sub-orgs__community-card__logo"
-//             />
-//           </a>
-//         )}
-//         <div>
-//           <div className="community__sub-orgs__community-card__header">
-//             {isMobile && <img src={DesignLogo.src} alt="ACM Design" />}
-//             <h1 className="pink">ACM Design</h1>
-//           </div>
-//           <p>
-//             We create and foster an entrepreneurial spirit with regard to both
-//             new nonprofit and for-profit companies.
-//             <br />
-//             <br />
-//             Our mission is to increase interest and accessibility in startups
-//             and bring the innovation spirit and mentality to members’ careers.
-//             <br />
-//             <br />
-//             We frequently host activities: guest speaker talks, workshops, and
-//             side projects. We have a lot of exciting stuff planned for the
-//             future!
-//             <br />
-//             <br />
-//             All skill levels welcome!
-//           </p>
-//           <div className="community-links" id="Design">
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
 const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const [selected, setSelected] = useState("");
 
@@ -291,8 +245,6 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         return <HackCommunity isMobile={isMobile} />;
       case "innovate":
         return <InnovateCommunity isMobile={isMobile} />;
-      // case "design":
-      //   return <DesignCommunity isMobile={isMobile} />;
       default:
         return (
           <div className="community__sub-orgs--mobile__description">
@@ -315,7 +267,6 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <CyberCommunity isMobile={isMobile} />
           <HackCommunity isMobile={isMobile} />
           <InnovateCommunity isMobile={isMobile} />
-          {/* <DesignCommunity isMobile={isMobile} /> */}
         </section>
       ) : (
         <>
@@ -360,16 +311,6 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
                   alt="Innovate Logo"
                 />
               </button>
-              {/* <button onClick={() => setSelected("design")}>
-                <img
-                  src={
-                    selected === "design"
-                      ? DesignLogoSelected.src
-                      : DesignLogo.src
-                  }
-                  alt="Design Logo"
-                />
-              </button> */}
             </div>
           </section>
         </>

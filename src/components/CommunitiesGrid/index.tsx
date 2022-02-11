@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import AILogo from "public/assets/logos/acm-ai.svg";
 import CyberLogo from "public/assets/logos/acm-cyber.svg";
-// import DesignLogo from "public/assets/logos/acm-design.svg";
 import HackLogo from "public/assets/logos/acm-hack.svg";
 import InnovateLogo from "public/assets/logos/acm-innovate.svg";
 
@@ -61,21 +60,6 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
               </div>
             </a>
           </Link>
-          {/* <Link href="/communities#Design">
-            <a
-              className={`communitiesGrid__community ${
-                hasBeenVisible ? "design--visible" : " "
-              }`}
-            >
-              <img src={DesignLogo.src} alt="ACM Design" />
-              <div className="communitiesGrid__community__label">
-                <h3>
-                  <span>ACM</span> Design
-                </h3>
-                <p>Design and Interaction</p>
-              </div>
-            </a>
-          </Link> */}
         </div>
         <div className="communitiesGrid">
           <Link href="/communities#Hack">
@@ -144,21 +128,6 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
             </div>
           </a>
         </Link>
-        {/* <Link href="/communities#Design">
-          <a
-            className={`communitiesGrid__community ${
-              hasBeenVisible ? "design--visible" : " "
-            }`}
-          >
-            <img src={DesignLogo.src} alt="ACM Design" />
-            <div className="communitiesGrid__community__label">
-              <h3>
-                <span>ACM</span> Design
-              </h3>
-              <p>Design and Interaction</p>
-            </div>
-          </a>
-        </Link> */}
         <Link href="/communities#Hack">
           <a
             className={`communitiesGrid__community ${

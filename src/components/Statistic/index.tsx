@@ -9,7 +9,6 @@ interface NumberProps {
   number: number;
 }
 
-// eslint-disable-next-line object-curly-newline
 const Number: React.FC<NumberProps> = ({
   color,
   description,

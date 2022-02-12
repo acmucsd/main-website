@@ -17,7 +17,7 @@ const NavigationBar: React.FC = () => {
     setMenuState(!menuState);
   };
   const scrollToContacts = (): void => {
-    window.scrollTo({ top: document.body.scrollHeight });
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
     setMenuState(false);
   };
   return (

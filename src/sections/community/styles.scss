@@ -81,6 +81,7 @@
       height: calc(100vh - 78px);
       width: 100vw;
       min-height: 564px;
+      height: fit-content;
       margin-left: 0px !important;
       padding-right: 96px;
       margin-bottom: 10px;
@@ -116,6 +117,7 @@
         flex-direction: row;
         justify-content: center;
         width: 100%;
+        height: fit-content;
         > a {
           display: flex;
           justify-content: center;
@@ -128,7 +130,8 @@
           max-width: 570px;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: flex-start;
+          height: fit-content;
           > h1 {
             font-weight: 500;
             font-size: 45px;

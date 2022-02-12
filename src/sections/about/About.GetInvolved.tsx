@@ -12,7 +12,8 @@ import CyberLogo from "public/assets/logos/acm-cyber.svg";
 import HackLogo from "public/assets/logos/acm-hack.svg";
 import InnovateLogo from "public/assets/logos/acm-innovate.svg";
 import CommunitiesGrid from "src/components/CommunitiesGrid";
-const renderMobileCommunityGrid = () => (
+
+const MobileCommunityGrid = () => (
   <div className="about__get-involved__section__communities--mobile">
     <div>
       <Link href="/communities#Hack">
@@ -88,7 +89,7 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           </p>
           {!isMobile && <CommunitiesGrid colLayout />}
         </div>
-        {isMobile && renderMobileCommunityGrid()}
+        {isMobile && <CommunitiesGrid />}
       </div>
 
       <div className="about__get-involved__section">

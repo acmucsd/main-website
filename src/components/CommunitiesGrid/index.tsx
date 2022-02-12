@@ -101,7 +101,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
         <Link href="/communities#AI">
           <a
             className={`communitiesGrid__community ${
-              hasBeenVisible ? "ai--visible" : " "
+              hasBeenVisible && "ai--visible"
             }`}
           >
             <img src={AILogo.src} alt="ACM AI" />
@@ -116,7 +116,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
         <Link href="/communities#Cyber">
           <a
             className={`communitiesGrid__community ${
-              hasBeenVisible ? "cyber--visible" : " "
+              hasBeenVisible && "cyber--visible"
             }`}
           >
             <img src={CyberLogo.src} alt="ACM Cyber" />
@@ -131,7 +131,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
         <Link href="/communities#Hack">
           <a
             className={`communitiesGrid__community ${
-              hasBeenVisible ? "hack--visible" : " "
+              hasBeenVisible && "hack--visible"
             }`}
           >
             <img src={HackLogo.src} alt="ACM Hack" />
@@ -146,7 +146,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
         <Link href="/communities#Innovate">
           <a
             className={`communitiesGrid__community ${
-              hasBeenVisible ? "innovate--visible" : " "
+              hasBeenVisible && "innovate--visible"
             }`}
           >
             <img src={InnovateLogo.src} alt="ACM Innovate" />

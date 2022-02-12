@@ -73,7 +73,6 @@ const HomeEvents: React.FC = () => {
         onTouchCancel={handleMoveEnd}
         onTouchEnd={handleMoveEnd}
         onDragStart={() => false}
-        role="menuitem"
         tabIndex={0}
       >
         {events && events.length > 0 ? (

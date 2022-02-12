@@ -1,4 +1,3 @@
-import Layout from "src/components/Layout";
 import SEO from "src/components/SEO";
 
 import SponsorshipLogo from "src/sections/sponsorship/Sponsorship.Logos";

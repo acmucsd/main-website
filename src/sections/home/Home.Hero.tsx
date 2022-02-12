@@ -58,7 +58,6 @@ const HomeHero: React.FC = () => {
             onClick={() =>
               window.scrollBy({
                 top: window.innerHeight - 78,
-                behavior: "smooth",
               })
             }
             src="assets/arrow.svg"

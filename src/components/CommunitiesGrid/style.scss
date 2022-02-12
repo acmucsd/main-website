@@ -1,11 +1,17 @@
 @import "src/styles/colors.scss";
 
+.communityGridWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .communitiesGrid {
   padding: 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 580px;
   &__community {
     padding: 20px 0px;
     text-decoration: none;

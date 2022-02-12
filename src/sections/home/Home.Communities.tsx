@@ -1,4 +1,4 @@
-import CommunitiesGrid from "src/components/CommunitiesGrid"
+import CommunitiesGrid from "src/components/CommunitiesGrid";
 
 const HomeCommunities: React.FC = () => {
   return (
@@ -11,10 +11,10 @@ const HomeCommunities: React.FC = () => {
             tech.
           </p>
         </div>
-        <CommunitiesGrid verticalLayout={false} />
+        <CommunitiesGrid />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HomeCommunities
+export default HomeCommunities;

@@ -1,11 +1,11 @@
-import fs from "fs";
+import fs from 'fs'
 
 const Sitemap = () => {};
 
 export const getServerSideProps = ({ res }) => {
   const baseUrl = {
     development: "http://localhost:3000",
-    production: "https://acmucsd.vercel.app/",
+    production: "https://acmucsd.vercel.app",
   }[process.env.NODE_ENV];
 
   const staticPages = fs

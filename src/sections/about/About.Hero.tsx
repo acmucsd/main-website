@@ -36,7 +36,6 @@ const AboutHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           onClick={() =>
             window.scrollBy({
               top: window.innerHeight - 78,
-              behavior: "smooth",
             })
           }
           alt=""

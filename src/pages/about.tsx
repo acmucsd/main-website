@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Size, useWindowSize } from "src/utils";
 
-import Layout from "src/components/Layout";
 import SEO from "src/components/SEO";
 
 import AboutHero from "src/sections/about/About.Hero";
@@ -18,13 +17,13 @@ const AboutPage: React.FC = () => {
   }, [size]);
 
   return (
-    <Layout>
+    <>
       <SEO title="About" />
       <AboutHero isMobile={isMobile} />
       <AboutGetInvolved isMobile={isMobile} />
       {!isMobile && <AboutMembership />}
       <AboutBoard isMobile={isMobile} />
-    </Layout>
+    </>
   );
 };
 

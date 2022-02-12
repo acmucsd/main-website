@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Size, useWindowSize } from "src/utils";
 
-import Layout from "src/components/Layout";
 import SEO from "src/components/SEO";
 
 import CommunityHero from "src/sections/community/Community.Hero";
@@ -16,11 +15,11 @@ const CommunitiesPage: React.FC = () => {
   }, [size]);
 
   return (
-    <Layout>
+    <>
       <SEO title="Communities" />
       <CommunityHero isMobile={isMobile} />
       <CommunitySuborgs isMobile={isMobile} />
-    </Layout>
+    </>
   );
 };
 

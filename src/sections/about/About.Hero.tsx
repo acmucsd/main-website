@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-import HeroImage from "public/assets/about-images/about-hero.png";
 import ArrowIcon from "public/assets/arrow.svg";
 
-const AboutHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
+const AboutHero: React.FC<{ isMobile: boolean; image: string }> = ({
+  isMobile,
+  image,
+}) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -18,7 +20,7 @@ const AboutHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       <div className="about__hero__description">
         <div>
           <h1>What is ACM at UCSD?</h1>
-          {isMobile && <img src={HeroImage.src} alt="About Hero Image" />}
+          {isMobile && <img src={image} alt="About Hero Image" />}
         </div>
         <h3>
           We are the Association for Computing Machinery at UCSD! <br />
@@ -28,7 +30,7 @@ const AboutHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         </h3>
       </div>
       {!isMobile && (
-        <img src={HeroImage.src} className="hero-img" alt="About Hero Image" />
+        <img src={image} className="hero-img" alt="About Hero Image" />
       )}
       {!scrolled && (
         <img

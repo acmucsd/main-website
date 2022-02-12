@@ -1,6 +1,5 @@
 @import "src/styles/colors.scss";
 
-
 .home {
   &__hero {
     &--grid {
@@ -131,6 +130,7 @@
         }
 
         &--description {
+          text-align: center;
           font-size: 26px;
           .description-block {
             margin: 0 1.5rem;

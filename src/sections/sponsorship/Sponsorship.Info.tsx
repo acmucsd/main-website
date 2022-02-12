@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Arrow from "public/assets/arrow.svg";
-import SponsorHeroLogo from "public/assets/sponsor-images/sponsor_hero.png";
 
-const SponsorshipInfo: React.FC = () => {
+const SponsorshipInfo: React.FC<{ image: string }> = ({ image }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,7 +25,7 @@ const SponsorshipInfo: React.FC = () => {
         </div>
         <img
           className="sponsorship__info__img"
-          src={SponsorHeroLogo.src}
+          src={image}
           alt="Sponsor Logo"
         />
       </div>
@@ -34,7 +33,7 @@ const SponsorshipInfo: React.FC = () => {
         <h1 className="sponsorship__info__text__title">Sponsor</h1>
         <img
           className="sponsorship__info__img"
-          src={SponsorHeroLogo.src}
+          src={image}
           alt="Sponsor Logo"
         />
         <h2 className="sponsorship__info__text__description">

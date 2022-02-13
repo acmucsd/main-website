@@ -4,7 +4,7 @@ import "react-typist/dist/Typist.css";
 import Button from "src/components/Button";
 import Image from "next/image";
 
-import Arrow from "public/assets/arrow.svg";
+import ArrowIcon from 'public/assets/arrow.svg'
 import CoolLogo from "public/assets/cool_logo_1000x1000.png";
 import CoolLogoMobile from "public/assets/cool_logo.png";
 
@@ -60,7 +60,7 @@ const HomeHero: React.FC = () => {
                 top: window.innerHeight - 78,
               })
             }
-            src="assets/arrow.svg"
+            src={ArrowIcon.src}
           />
         )}
       </div>

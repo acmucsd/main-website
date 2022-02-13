@@ -1,17 +1,9 @@
-import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import CommunitiesGrid from "src/components/CommunitiesGrid";
-import ArrowIcon from 'public/assets/arrow.svg'
+import ScrollDownArrow from "src/components/ScrollDownArrow";
 
 const CommunityHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY !== 0);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <section className="community__hero">
@@ -25,18 +17,7 @@ const CommunityHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <div className="community__hero__communities">
             <CommunitiesGrid />
           </div>
-          {scrolled ? null : (
-            <img
-              className="arrow"
-              onClick={() =>
-                window.scrollBy({
-                  top: window.innerHeight - 78,
-                })
-              }
-              alt=""
-              src={ArrowIcon.src}
-            />
-          )}
+          <ScrollDownArrow />
         </>
       )}
     </section>

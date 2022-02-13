@@ -9,6 +9,7 @@ import "src/components/Button/style.scss";
 import "src/components/CommunitiesGrid/style.scss";
 import "src/components/Footer/style.scss";
 import "src/components/NavigationBar/style.scss";
+import "src/components/ScrollDownArrow/styles.scss";
 import "src/components/Statistic/style.scss";
 // section css imports
 import "src/sections/about/styles.scss";

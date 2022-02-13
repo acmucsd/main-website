@@ -1,19 +1,11 @@
-import { useState, useEffect } from "react";
 import Image from "next/image";
 
-import ArrowIcon from "public/assets/arrow.svg";
+import ScrollDownArrow from "src/components/ScrollDownArrow";
 
 const AboutHero: React.FC<{ isMobile: boolean; image: string }> = ({
   isMobile,
   image,
 }) => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY !== 0);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <section className="about__hero">
@@ -32,18 +24,7 @@ const AboutHero: React.FC<{ isMobile: boolean; image: string }> = ({
       {isMobile ? null : (
         <img src={image} className="hero-img" alt="About Hero Image" />
       )}
-      {scrolled ? null : (
-        <img
-          className="arrow"
-          onClick={() =>
-            window.scrollBy({
-              top: window.innerHeight - 78,
-            })
-          }
-          alt=""
-          src={ArrowIcon.src}
-        />
-      )}
+      <ScrollDownArrow />
     </section>
   );
 };

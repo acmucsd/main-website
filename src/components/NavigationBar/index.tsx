@@ -1,46 +1,53 @@
-import React, { useState, useEffect } from "react"
-import { Link, navigate, graphql, useStaticQuery } from "gatsby"
-import "./style.less"
-import ACMLogo from "../../assets/ACMWhiteLogo.png"
-import MenuButtonIcon from "../../assets/menubutton.svg"
-import CloseMenuButton from "../../assets/closemenubutton.svg"
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+import ACMLogo from "public/assets/ACMWhiteLogo.png";
+import CloseMenuButton from "public/assets/closemenubutton.svg";
+import MenuButtonIcon from "public/assets/menubutton.svg";
 
 const navLinks = [
   { to: "/sponsor", text: "Sponsor" },
   { to: "/communities", text: "Communities" },
   { to: "/about", text: "About Us" },
-]
+];
 
 const NavigationBar: React.FC = () => {
-  const [menuState, setMenuState] = useState(false)
+  const [menuState, setMenuState] = useState(false);
   const toggleMenu = () => {
-    setMenuState(!menuState)
-  }
+    setMenuState(!menuState);
+  };
   const scrollToContacts = (): void => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })
-    setMenuState(false)
-  }
+    window.scrollTo({ top: document.body.scrollHeight });
+    setMenuState(false);
+  };
   return (
     <div className="fixed-nav">
       <div className="navigation-bar">
         <ul>
           <li className="navigation-bar__logo">
-            <Link to="/">
-              <img src={ACMLogo} alt="ACM Logo" />
-              <p>at UCSD</p>
+            <Link href="/">
+              <a>
+                {/* image breaking the website right now */}
+                <img src={ACMLogo.src} alt="ACM Logo" />
+                <p>at UCSD</p>
+              </a>
             </Link>
           </li>
           <li className="navigation-bar__login">
-            <Link to={"https://members.acmucsd.com/login"}>Member Login</Link>
-          </li>
-          <li className="navigation-bar__nav-button">
-            <Link to="#contact" onClick={scrollToContacts}>
-              Contact
+            <Link href={"https://members.acmucsd.com/login"}>
+              <a>Member Login</a>
             </Link>
           </li>
-          {navLinks.map(link => (
-            <li className="navigation-bar__nav-button">
-              <Link to={link.to}>{link.text}</Link>
+          <li className="navigation-bar__nav-button">
+            <Link href="#contact">
+              <a onClick={scrollToContacts}>Contact</a>
+            </Link>
+          </li>
+          {navLinks.map((link, key) => (
+            <li key={key} className="navigation-bar__nav-button">
+              <Link href={link.to}>
+                <a>{link.text}</a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -49,12 +56,18 @@ const NavigationBar: React.FC = () => {
       {!menuState && (
         <div className="navbar-mobile-div">
           <div className="navbar-mobile">
-            <Link to="/">
-              <img src={ACMLogo} alt="ACM Logo" />
-              <p>at UCSD</p>
+            <Link href="/">
+              <a>
+                <img src={ACMLogo.src} alt="ACM Logo" />
+                <p>at UCSD</p>
+              </a>
             </Link>
             <button className="icon" onClick={toggleMenu} type="button">
-              <img className="menuicon" src={MenuButtonIcon} alt="Menu Icon" />
+              <img
+                className="menuicon"
+                src={MenuButtonIcon.src}
+                alt="Menu Icon"
+              />
             </button>
           </div>
         </div>
@@ -64,19 +77,25 @@ const NavigationBar: React.FC = () => {
           <button className="closebutton" onClick={toggleMenu} type="button">
             <img
               className="closeicon"
-              src={CloseMenuButton}
+              src={CloseMenuButton.src}
               color="white"
               alt="Menu Icon"
             />
           </button>
-          <Link to="/about">About Us</Link>
-          <Link to="/communities">Communities</Link>
-          <Link to="/sponsor">Sponsor</Link>
-          <Link to="#contact" onClick={scrollToContacts}>
-            Contact
+          <Link href="/about">
+            <a>About Us</a>
+          </Link>
+          <Link href="/communities">
+            <a>Communities</a>
+          </Link>
+          <Link href="/sponsor">
+            <a>Sponsor</a>
+          </Link>
+          <Link href="#contact">
+            <a onClick={scrollToContacts}>Contact</a>
           </Link>
           {/* <Link
-            to="#contact"
+            href="#contact"
             onClick={(): void => {
               toggleMenu()
               scrollToContacts()
@@ -92,7 +111,7 @@ const NavigationBar: React.FC = () => {
 
       <div className="rainbow" />
     </div>
-  )
-}
+  );
+};
 
-export default NavigationBar
+export default NavigationBar;

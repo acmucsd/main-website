@@ -13,7 +13,7 @@ const defaultProps: ButtonProps = {
 const Button: React.FC<ButtonProps> = ({ link, title, type }) => {
   if (type === "primary" || type === "secondary") {
     return (
-      <a href={link} className={"button " + type}>
+      <a href={link} className={`button ${type}`}>
         <div>{title}</div>
       </a>
     );

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import CommunitiesGrid from "src/components/CommunitiesGrid";
+import ArrowIcon from 'public/assets/arrow.svg'
 
 const CommunityHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -33,7 +34,7 @@ const CommunityHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
                 })
               }
               alt=""
-              src="/assets/arrow.svg"
+              src={ArrowIcon.src}
             />
           )}
         </>

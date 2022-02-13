@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Arrow from "public/assets/arrow.svg";
+import ArrowIcon from "public/assets/arrow.svg";
 
 const SponsorshipInfo: React.FC<{ image: string }> = ({ image }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -53,7 +53,7 @@ const SponsorshipInfo: React.FC<{ image: string }> = ({ image }) => {
             })
           }
           alt=""
-          src="/assets/arrow.svg"
+          src={ArrowIcon.src}
         />
       )}
     </section>

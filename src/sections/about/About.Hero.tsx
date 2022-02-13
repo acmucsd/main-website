@@ -41,7 +41,7 @@ const AboutHero: React.FC<{ isMobile: boolean; image: string }> = ({
             })
           }
           alt=""
-          src="/assets/arrow.svg"
+          src={ArrowIcon.src}
         />
       )}
     </section>

@@ -13,13 +13,10 @@ const navLinks = [
 
 const NavigationBar: React.FC = () => {
   const [menuState, setMenuState] = useState(false);
-  const toggleMenu = () => {
-    setMenuState(!menuState);
-  };
-  const scrollToContacts = (): void => {
-    window.scrollTo({ top: document.body.scrollHeight });
-    setMenuState(false);
-  };
+
+  const toggleMenu = () => setMenuState(!menuState);
+  const scrollToContacts = () => setMenuState(false);
+
   return (
     <div className="fixed-nav">
       <div className="navigation-bar">
@@ -94,15 +91,6 @@ const NavigationBar: React.FC = () => {
           <Link href="#contact">
             <a onClick={scrollToContacts}>Contact</a>
           </Link>
-          {/* <Link
-            href="#contact"
-            onClick={(): void => {
-              toggleMenu()
-              scrollToContacts()
-            }}
-          >
-            Contact
-          </Link> */}
           <a href="https://members.acmucsd.com/login" onClick={toggleMenu}>
             Login
           </a>

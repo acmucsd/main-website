@@ -49,7 +49,7 @@ function isValidEmail(input) {
 const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
   return (
-    <div className="footer">
+    <div className="footer" id="contact">
       <div className="footerContainer">
         <div className="footerContents">
           <h2>Connect With Us!</h2>

@@ -20,7 +20,7 @@ const AboutHero: React.FC<{ isMobile: boolean; image: string }> = ({
       <div className="about__hero__description">
         <div>
           <h1>What is ACM at UCSD?</h1>
-          {isMobile && <img src={image} alt="About Hero Image" />}
+          {!isMobile ? null : <img src={image} alt="About Hero Image" />}
         </div>
         <h3>
           We are the Association for Computing Machinery at UCSD! <br />
@@ -29,10 +29,10 @@ const AboutHero: React.FC<{ isMobile: boolean; image: string }> = ({
           in the field of computing. We welcome all skill levels and majors!
         </h3>
       </div>
-      {!isMobile && (
+      {isMobile ? null : (
         <img src={image} className="hero-img" alt="About Hero Image" />
       )}
-      {!scrolled && (
+      {scrolled ? null : (
         <img
           className="arrow"
           onClick={() =>

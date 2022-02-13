@@ -15,7 +15,7 @@ const CommunityHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
 
   return (
     <section className="community__hero">
-      {!isMobile && (
+      {isMobile ? null : (
         <>
           <h1>Communities</h1>
           <p>
@@ -25,7 +25,7 @@ const CommunityHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <div className="community__hero__communities">
             <CommunitiesGrid />
           </div>
-          {!scrolled && (
+          {scrolled ? null : (
             <img
               className="arrow"
               onClick={() =>

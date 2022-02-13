@@ -45,7 +45,7 @@ const BoardGrid: React.FC<BoardGridProps> = ({ members_list, isMobile }) => {
   return (
     <div className="BoardGrid">
       <div className="BoardGrid_arrowContainer">
-        {page !== 0 && (
+        {page === 0 ? null : (
           <img
             src={LeftArrow.src}
             alt="left arrow"
@@ -55,7 +55,7 @@ const BoardGrid: React.FC<BoardGridProps> = ({ members_list, isMobile }) => {
       </div>
       {currentPage}
       <div className="BoardGrid_arrowContainer">
-        {page !== maxPage && (
+        {page === maxPage ? null : (
           <img
             src={RightArrow.src}
             alt="right arrow"

@@ -53,26 +53,7 @@ const NavigationBar: React.FC = () => {
         </ul>
       </div>
 
-      {!menuState && (
-        <div className="navbar-mobile-div">
-          <div className="navbar-mobile">
-            <Link href="/">
-              <a>
-                <img src={ACMLogo.src} alt="ACM Logo" />
-                <p>at UCSD</p>
-              </a>
-            </Link>
-            <button className="icon" onClick={toggleMenu} type="button">
-              <img
-                className="menuicon"
-                src={MenuButtonIcon.src}
-                alt="Menu Icon"
-              />
-            </button>
-          </div>
-        </div>
-      )}
-      {menuState && (
+      {menuState ? (
         <div className="mobile-links">
           <button className="closebutton" onClick={toggleMenu} type="button">
             <img
@@ -106,6 +87,24 @@ const NavigationBar: React.FC = () => {
           <a href="https://members.acmucsd.com/login" onClick={toggleMenu}>
             Login
           </a>
+        </div>
+      ) : (
+        <div className="navbar-mobile-div">
+          <div className="navbar-mobile">
+            <Link href="/">
+              <a>
+                <img src={ACMLogo.src} alt="ACM Logo" />
+                <p>at UCSD</p>
+              </a>
+            </Link>
+            <button className="icon" onClick={toggleMenu} type="button">
+              <img
+                className="menuicon"
+                src={MenuButtonIcon.src}
+                alt="Menu Icon"
+              />
+            </button>
+          </div>
         </div>
       )}
 

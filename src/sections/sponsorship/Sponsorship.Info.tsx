@@ -43,7 +43,7 @@ const SponsorshipInfo: React.FC<{ image: string }> = ({ image }) => {
           <span className="purple"> innovators</span>!
         </h2>
       </div>
-      {!scrolled && (
+      {scrolled ? null : (
         <img
           className="arrow"
           onClick={() =>

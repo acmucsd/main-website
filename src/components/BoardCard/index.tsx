@@ -75,7 +75,7 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
           {name}
         </h1>
         <div>
-          {personal_link && personal_link !== "" && (
+          {!personal_link ? null : (
             <svg
               className="BoardCard_hoverable_svg"
               width="14"
@@ -91,7 +91,7 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
               />
             </svg>
           )}
-          {email && email !== "" && (
+          {!email ? null : (
             <svg
               className="BoardCard_hoverable_svg"
               width="18"
@@ -106,7 +106,7 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
               />
             </svg>
           )}
-          {linkedin_link && linkedin_link !== "" && (
+          {!linkedin_link ? null : (
             <svg
               className="BoardCard_hoverable_svg"
               width="14"

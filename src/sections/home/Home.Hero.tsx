@@ -51,7 +51,7 @@ const HomeHero: React.FC = () => {
             </div>
           </div>
         </div>
-        {!scrolled && (
+        {scrolled ? null : (
           <img
             className="arrow"
             alt=""

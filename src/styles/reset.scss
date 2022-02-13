@@ -6,6 +6,11 @@ html {
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
+
+* {
+  scroll-margin-top: 78px;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;

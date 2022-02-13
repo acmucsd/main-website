@@ -1,0 +1,29 @@
+@import "src/styles/colors.scss";
+
+.button {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.5em 1em;
+  display: inline-block;
+  border-radius: 10px;
+  color: white;
+  margin: 5px 0px;
+}
+.primary {
+  background-color: $pink;
+}
+.secondary {
+  background-color: $blue;
+}
+.button > a {
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: inherit;
+}
+
+.button:hover {
+  opacity: 0.85;
+  transform: translatey(-1px);
+  transition: 200ms;
+}

@@ -1,41 +1,29 @@
-import React, { useEffect } from "react"
-import Typist from "react-typist"
-import "react-typist/dist/Typist.css"
-import Button from "../../components/Button/Button.tsx"
-import "./styles.less"
+import { useState, useEffect } from "react";
+import Typist from "react-typist";
+import "react-typist/dist/Typist.css";
+import Button from "src/components/Button";
+import Image from "next/image";
 
-import Arrow from "../../assets/arrow.svg"
-import CoolLogo from "../../assets/cool_logo_1000x1000.png"
-import CoolLogoMobile from "../../assets/cool_logo.png"
+import Arrow from "public/assets/arrow.svg";
+import CoolLogo from "public/assets/cool_logo_1000x1000.png";
+import CoolLogoMobile from "public/assets/cool_logo.png";
 
 const HomeHero: React.FC = () => {
-  const [scrolled, setScrolled] = React.useState(false)
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    if (!scrolled) {
-      const handleScroll = () => {
-        setScrolled(true)
-        window.removeEventListener("scroll", handleScroll)
-        return undefined
-      }
-
-      window.addEventListener("scroll", handleScroll)
-      return () => window.removeEventListener("scroll", handleScroll)
-    }
-    return undefined
-  }, [scrolled])
-
-  const scrollDown = () => {
-    window.scrollBy({ top: window.innerHeight, behavior: "smooth" })
-  }
+    const onScroll = () => setScrolled(window.scrollY !== 0);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <section className="home__hero">
       <div className="home__hero--grid">
         <div className="home__hero--grid--cool-img">
           <img
-            src={CoolLogoMobile}
-            srcSet={`${CoolLogoMobile} 500w, ${CoolLogo} 1000w`}
+            src={CoolLogoMobile.src}
+            srcSet={`${CoolLogoMobile.src} 500w, ${CoolLogo.src} 1000w`}
             alt="Cool Logo"
           />
         </div>
@@ -63,12 +51,21 @@ const HomeHero: React.FC = () => {
             </div>
           </div>
         </div>
-        {scrolled ? null : (
-          <img className="arrow" alt="" onClick={scrollDown} src={Arrow} />
+        {!scrolled && (
+          <img
+            className="arrow"
+            alt=""
+            onClick={() =>
+              window.scrollBy({
+                top: window.innerHeight - 78,
+              })
+            }
+            src="assets/arrow.svg"
+          />
         )}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HomeHero
+export default HomeHero;

@@ -1,6 +1,4 @@
-import React from "react"
-import "./styles.less"
-import Number from "../../components/Statistic"
+import Number from "src/components/Statistic";
 
 const HomeJoinTheClub: React.FC = () => {
   return (
@@ -9,7 +7,7 @@ const HomeJoinTheClub: React.FC = () => {
         <div className="home__join-the-club__grid__header">
           <h1>Join the club.</h1>
           <p>
-            ACM at UCSD is inclusive community of students passionate about
+            ACM at UCSD is an inclusive community of students passionate about
             technology.
           </p>
         </div>
@@ -35,7 +33,7 @@ const HomeJoinTheClub: React.FC = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HomeJoinTheClub
+export default HomeJoinTheClub;

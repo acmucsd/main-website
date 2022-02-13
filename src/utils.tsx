@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
-import { EventObject } from "./api/EventsAPI"
+import { useState, useEffect } from "react";
+import { EventObject } from "./api/EventsAPI";
 
 /**
  * Determines if given string is a valid website link.
@@ -8,10 +8,9 @@ import { EventObject } from "./api/EventsAPI"
  */
 export const isURL = (str: string | undefined): boolean => {
   if (!str) {
-    return false
+    return false;
   }
 
-  /* eslint-disable */
   const pattern = new RegExp(
     "^(https?:\\/\\/)?" + // protocol
       "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
@@ -20,11 +19,10 @@ export const isURL = (str: string | undefined): boolean => {
       "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
       "(\\#[-a-z\\d_]*)?$", // fragment locator
     "i"
-  )
-  /* eslint-disable */
+  );
 
-  return !!pattern.test(str)
-}
+  return !!pattern.test(str);
+};
 
 /**
  * Ensures a valid website link is an absolute path.
@@ -33,15 +31,15 @@ export const isURL = (str: string | undefined): boolean => {
  */
 export const getAbsoluteURL = (str: string): string | undefined => {
   if (!str) {
-    return undefined
+    return undefined;
   }
 
   if (isURL(str) && !/^https?:\/\//i.test(str)) {
-    return `http://${str}`
+    return `http://${str}`;
   }
 
-  return str
-}
+  return str;
+};
 
 /**
  * Contains timing information for an event.
@@ -49,9 +47,9 @@ export const getAbsoluteURL = (str: string): string | undefined => {
  * * @param {string} time The time description.
  */
 export type EventTime = {
-  date: string
-  time: string
-}
+  date: string;
+  time: string;
+};
 
 /**
  * Converts an event's date information into human readable descriptions.
@@ -59,9 +57,9 @@ export type EventTime = {
  * @return {EventTime} English strings describing date and time.
  */
 export const getDateTime = (event: EventObject): EventTime => {
-  const startDate = new Date(event.start)
-  const endDate = new Date(event.end)
-  const result: EventTime = { date: "", time: "" }
+  const startDate = new Date(event.start);
+  const endDate = new Date(event.end);
+  const result: EventTime = { date: "", time: "" };
 
   if (startDate.getDate() !== endDate.getDate()) {
     result.date = `${startDate.toLocaleDateString("en-US", {
@@ -70,12 +68,12 @@ export const getDateTime = (event: EventObject): EventTime => {
     })} - ${endDate.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
-    })}`
+    })}`;
   } else {
     result.date = startDate.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
-    })
+    });
   }
 
   result.time = `${startDate.toLocaleTimeString("en-US", {
@@ -84,32 +82,32 @@ export const getDateTime = (event: EventObject): EventTime => {
   })} - ${endDate.toLocaleTimeString("en-US", {
     hour: "numeric",
     minute: "2-digit",
-  })}`
+  })}`;
 
-  return result
-}
+  return result;
+};
 
 // Define general type for useWindowSize hook, which includes width and height
 export interface Size {
-  width: number | undefined
-  height: number | undefined
+  width: number | undefined;
+  height: number | undefined;
 }
 
 export function useWindowSize(): Size {
   const [windowSize, setWindowSize] = useState<Size>({
     width: undefined,
     height: undefined,
-  })
+  });
   useEffect(() => {
     function handleResize() {
       setWindowSize({
         width: window.innerWidth,
         height: window.innerHeight,
-      })
+      });
     }
-    window.addEventListener("resize", handleResize)
-    handleResize()
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
-  return windowSize
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return windowSize;
 }

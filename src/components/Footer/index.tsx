@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react"
-import { Link, navigate, graphql, useStaticQuery } from "gatsby"
-import "./style.less"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-import FacebookIcon from "../../assets/facebook.svg"
-import MediumIcon from "../../assets/medium.svg"
-import GithubIcon from "../../assets/github.svg"
-import InstagramIcon from "../../assets/instagram.svg"
-import DiscordIcon from "../../assets/discord.svg"
-import EmailIcon from "../../assets/email.svg"
-import LinkedinIcon from "../../assets/linkedin.svg"
-import YoutubeIcon from "../../assets/youtube.svg"
-import VercelIcon from "../../assets/vercel.svg"
+import FacebookIcon from "public/assets/facebook.svg";
+import MediumIcon from "public/assets/medium.svg";
+import GithubIcon from "public/assets/github.svg";
+import InstagramIcon from "public/assets/instagram.svg";
+import DiscordIcon from "public/assets/discord.svg";
+import EmailIcon from "public/assets/email.svg";
+import LinkedinIcon from "public/assets/linkedin.svg";
+import YoutubeIcon from "public/assets/youtube.svg";
+import VercelIcon from "public/assets/vercel.svg";
 
 const cardContents = [
   { title: "Email", value: "contact@acmucsd.org", icon: EmailIcon },
@@ -41,33 +41,35 @@ const cardContents = [
     value: "acmurl.com/youtube",
     icon: YoutubeIcon,
   },
-]
+];
 function isValidEmail(input) {
-  const reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  return reg.test(String(input).toLowerCase())
+  const reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return reg.test(String(input).toLowerCase());
 }
 const Footer: React.FC = () => {
-  const [email, setEmail] = useState("")
+  const [email, setEmail] = useState("");
   return (
     <div className="footer">
-      {/* <img className="acmBlueFade" src={ACMBlueFade} /> */}
       <div className="footerContainer">
         <div className="footerContents">
           <h2>Connect With Us!</h2>
           <div className="footerContents__wrapper">
             <div className="footerContents__contact">
-              {cardContents.map(item => {
-                let linkprefix = item.title === "Email" ? "mailto:" : "https://"
+              {cardContents.map((item, key) => {
+                let linkprefix =
+                  item.title === "Email" ? "mailto:" : "https://";
                 return (
-                  <div className="footerContents__contact__card">
-                    <a href={linkprefix + item.value}>
-                      <img src={item.icon} alt={item.title} />
-                    </a>
+                  <div key={key} className="footerContents__contact__card">
+                    <Link href={linkprefix + item.value}>
+                      <a>
+                        <img src={item.icon.src} alt={item.title} />
+                      </a>
+                    </Link>
                     <div>
                       <a href={linkprefix + item.value}>{item.title}</a>
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
             <div className="footerContents__newsletter">
@@ -76,12 +78,13 @@ const Footer: React.FC = () => {
               <a
                 href="https://acmurl.com/newsletter"
                 target="_blank"
+                rel="noreferrer"
                 className="subscribe-btn"
               >
                 Subscribe!
               </a>
-              <a href="https://vercel.com" className="vercel-btn">
-                <img src={VercelIcon} alt="Vercel" />
+              <a href="https://vercel.com/?utm_source=acmucsd&utm_campaign=oss" className="vercel-btn">
+                <img src={VercelIcon.src} alt="Vercel" />
               </a>
             </div>
           </div>
@@ -91,61 +94,51 @@ const Footer: React.FC = () => {
         <h2>Connect With Us!</h2>
         <div className="community-links">
           <a href="mailto:contact@acmucsd.org">
-            <img src={EmailIcon} alt="Email" />
+            <img src={EmailIcon.src} alt="Email" />
           </a>
           <a href="http://acmurl.com/discord">
-            <img src={DiscordIcon} alt="Discord" />
+            <img src={DiscordIcon.src} alt="Discord" />
           </a>
           <a href="http://facebook.com/acmucsd/">
-            <img src={FacebookIcon} alt="Facebook" />
+            <img src={FacebookIcon.src} alt="Facebook" />
           </a>
           <a href="http://medium.com/acmucsd">
-            <img src={MediumIcon} alt="Medium" />
+            <img src={MediumIcon.src} alt="Medium" />
           </a>
           <a href="http://instagram.com/acm.ucsd">
-            <img src={InstagramIcon} alt="Instagram" />
+            <img src={InstagramIcon.src} alt="Instagram" />
           </a>
           <a href="http://github.com/acmucsd">
-            <img src={GithubIcon} alt="GitHub" />
+            <img src={GithubIcon.src} alt="GitHub" />
           </a>
           <a href="http://acmurl.com/youtube">
-            <img src={YoutubeIcon} alt="Youtube" />
+            <img src={YoutubeIcon.src} alt="Youtube" />
           </a>
           <a href="http://acmurl.com/linkedin">
-            <img src={LinkedinIcon} alt="Linkedin" />
+            <img src={LinkedinIcon.src} alt="Linkedin" />
           </a>
         </div>
         <div className="mobileFooterContainer__newsletter">
           <h2>Newsletter</h2>
           <p>Receive weekly events and news!</p>
           <a
-            className="mobile-subscribe-btn"
             href="https://acmurl.com/newsletter"
             target="_blank"
+            rel="noreferrer"
+            className="mobile-subscribe-btn"
           >
             Subscribe!
           </a>
-          <a href="https://vercel.com/?utm_source=acmucsd&utm_campaign=oss" className="mobile-vercel-btn">
-            <img src={VercelIcon} alt="Vercel" />
+          <a
+            href="https://vercel.com/?utm_source=acmucsd&utm_campaign=oss"
+            className="mobile-vercel-btn"
+          >
+            <img src={VercelIcon.src} alt="Vercel" />
           </a>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
-
-/*
-<div>
-        
-        <div className="footerContainer--right">
-          <h2>Newsletter</h2>
-          <p>Receive weekly events and news!</p>
-          <div className="newsLetterContainer">
-            <input type="text" id="emailinput" name="fname" value="my@email.com" />
-            <button>></button>
-          </div>
-        </div>
-      </div>
-*/
+export default Footer;

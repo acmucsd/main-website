@@ -450,6 +450,96 @@
     "personal_link": ""
   },
   {
+    "name": "Michele Murakami",
+    "org": "general",
+    "title": "Director of Dev x Design",
+    "specialization": "[ACM Dev Design Lead]",
+    "profile_image": "https://drive.google.com/uc?id=1uT6kSX_R9EtdUpJxnK7DpwgsnF2FpS5a",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Avery Blas",
+    "org": "general",
+    "title": "Director of Design Projects",
+    "specialization": "[ACM Projects Design Lead]",
+    "profile_image": "https://drive.google.com/uc?id=16svB8NBuZ8j1vnNv9AkKBP5_bwXfsthS",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Kaitlyn Chin",
+    "org": "general",
+    "title": "Graphics Lead",
+    "specialization": "",
+    "profile_image": "",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Xinchen Fu",
+    "org": "general",
+    "title": "TBD",
+    "specialization": "",
+    "profile_image": "",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Tiffany Lee",
+    "org": "general",
+    "title": "Events Coordinator",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1QU5RBfGpmRb2KdZZK3AQLmp3RgrGQ_xS",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Daphne Nong",
+    "org": "general",
+    "title": "TBD",
+    "specialization": "",
+    "profile_image": "",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Lara Canonizado",
+    "org": "general",
+    "title": "Designer",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1YXOUh_GnLZ9v2U8BQSVUvwvqJq96cpjW",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Tam (Tyler) Tran",
+    "org": "general",
+    "title": "Designer",
+    "specialization": "",
+    "profile_image": "https://drive.google.com/uc?id=1W5l5fmdiQkeuL9fceP4tyD_TPKDwcdZZ",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
+    "name": "Juliet Zhuang",
+    "org": "general",
+    "title": "Designer",
+    "specialization": "",
+    "profile_image": "",
+    "email": "",
+    "linkedin_link": "",
+    "personal_link": ""
+  },
+  {
     "name": "Stone Tao",
     "org": "ai",
     "title": "President",
@@ -687,106 +777,6 @@
     "profile_image": "",
     "email": "aaron@acmucsd.org",
     "linkedin_link": "https://www.linkedin.com/in/aaron-james-eason/",
-    "personal_link": ""
-  },
-  {
-    "name": "Samuel Fleet",
-    "org": "design",
-    "title": "President",
-    "specialization": "",
-    "profile_image": "",
-    "email": "",
-    "linkedin_link": "",
-    "personal_link": ""
-  },
-  {
-    "name": "Michele Murakami",
-    "org": "design",
-    "title": "Director of Dev x Design",
-    "specialization": "[ACM Dev Design Lead]",
-    "profile_image": "https://drive.google.com/uc?id=1uT6kSX_R9EtdUpJxnK7DpwgsnF2FpS5a",
-    "email": "",
-    "linkedin_link": "",
-    "personal_link": ""
-  },
-  {
-    "name": "Avery Blas",
-    "org": "design",
-    "title": "Director of Design Projects",
-    "specialization": "[ACM Projects Design Lead]",
-    "profile_image": "https://drive.google.com/uc?id=16svB8NBuZ8j1vnNv9AkKBP5_bwXfsthS",
-    "email": "",
-    "linkedin_link": "",
-    "personal_link": ""
-  },
-  {
-    "name": "Kaitlyn Chin",
-    "org": "design",
-    "title": "Graphics Lead",
-    "specialization": "",
-    "profile_image": "",
-    "email": "",
-    "linkedin_link": "",
-    "personal_link": ""
-  },
-  {
-    "name": "Xinchen Fu",
-    "org": "design",
-    "title": "TBD",
-    "specialization": "",
-    "profile_image": "",
-    "email": "",
-    "linkedin_link": "",
-    "personal_link": ""
-  },
-  {
-    "name": "Tiffany Lee",
-    "org": "design",
-    "title": "Events Coordinator",
-    "specialization": "",
-    "profile_image": "https://drive.google.com/uc?id=1QU5RBfGpmRb2KdZZK3AQLmp3RgrGQ_xS",
-    "email": "",
-    "linkedin_link": "",
-    "personal_link": ""
-  },
-  {
-    "name": "Daphne Nong",
-    "org": "design",
-    "title": "TBD",
-    "specialization": "",
-    "profile_image": "",
-    "email": "",
-    "linkedin_link": "",
-    "personal_link": ""
-  },
-  {
-    "name": "Lara Canonizado",
-    "org": "design",
-    "title": "Designer",
-    "specialization": "",
-    "profile_image": "https://drive.google.com/uc?id=1YXOUh_GnLZ9v2U8BQSVUvwvqJq96cpjW",
-    "email": "",
-    "linkedin_link": "",
-    "personal_link": ""
-  },
-  {
-    "name": "Tam (Tyler) Tran",
-    "org": "design",
-    "title": "Designer",
-    "specialization": "",
-    "profile_image": "https://drive.google.com/uc?id=1W5l5fmdiQkeuL9fceP4tyD_TPKDwcdZZ",
-    "email": "",
-    "linkedin_link": "",
-    "personal_link": ""
-  },
-  {
-    "name": "Juliet Zhuang",
-    "org": "design",
-    "title": "Designer",
-    "specialization": "",
-    "profile_image": "",
-    "email": "",
-    "linkedin_link": "",
     "personal_link": ""
   },
   {

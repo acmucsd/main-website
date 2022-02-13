@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react"
-import { EventsArray, EventObject, getAllEvents } from "../../api/EventsAPI"
-import { isURL, getAbsoluteURL, getDateTime } from "../../utils"
-import "./styles.less"
+import Image from "next/image"
+import { useState, useEffect } from "react"
+import { EventsArray, EventObject, getAllEvents } from "src/api/EventsAPI"
+import { isURL, getAbsoluteURL, getDateTime } from "src/utils"
 
 const HomeEvents: React.FC = () => {
   const [events, setEvents] = useState<EventsArray>()
@@ -35,7 +35,6 @@ const HomeEvents: React.FC = () => {
     if (isTouch) {
       deltaX = e.touches[0].clientX
     } else {
-      //e.preventDefault();
       deltaX = -1 * e.movementX
     }
     const firstEvent = document.getElementsByClassName(
@@ -50,14 +49,9 @@ const HomeEvents: React.FC = () => {
     }
   }
 
-  const handleMoveStart = () => {
-    toggleDragging(true)
-  }
-
-  const handleMoveEnd = () => {
-    toggleDragging(false)
-  }
-
+  const handleMoveStart = () => toggleDragging(true)
+  const handleMoveEnd = () => toggleDragging(false)
+  
   return (
     <section className="home__events">
       <div className="home__events__grid">
@@ -79,7 +73,6 @@ const HomeEvents: React.FC = () => {
         onTouchCancel={handleMoveEnd}
         onTouchEnd={handleMoveEnd}
         onDragStart={() => false}
-        role="menuitem"
         tabIndex={0}
       >
         {events && events.length > 0 ? (
@@ -114,7 +107,7 @@ const HomeEvents: React.FC = () => {
         )}
         <div aria-hidden="true" className="event end" />
       </div>
-    </section>
+    </section >
   )
 }
 

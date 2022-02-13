@@ -4,7 +4,7 @@ import { EventsArray, EventObject, getAllEvents } from "src/api/EventsAPI"
 import { isURL, getAbsoluteURL, getDateTime } from "src/utils"
 
 const HomeEvents: React.FC = () => {
-  const [events, setEvents] = useState<EventsArray>()
+  const [events, setEvents] = useState<EventsArray | undefined>(undefined)
   const [dragging, toggleDragging] = useState(false)
 
   const updateEvents = async (): Promise<void> => {

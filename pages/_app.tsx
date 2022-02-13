@@ -3,14 +3,14 @@ import "src/styles/index.css";
 import "src/styles/mixins.scss";
 import "src/styles/reset.scss";
 // component css imports
-import "src/components/BoardCard/style.scss";
-import "src/components/BoardGrid/style.scss";
-import "src/components/Button/style.scss";
-import "src/components/CommunitiesGrid/style.scss";
-import "src/components/Footer/style.scss";
-import "src/components/NavigationBar/style.scss";
+import "src/components/BoardCard/styles.scss";
+import "src/components/BoardGrid/styles.scss";
+import "src/components/Button/styles.scss";
+import "src/components/CommunitiesGrid/styles.scss";
+import "src/components/Footer/styles.scss";
+import "src/components/NavigationBar/styles.scss";
 import "src/components/ScrollDownArrow/styles.scss";
-import "src/components/Statistic/style.scss";
+import "src/components/Statistic/styles.scss";
 // section css imports
 import "src/sections/about/styles.scss";
 import "src/sections/community/styles.scss";

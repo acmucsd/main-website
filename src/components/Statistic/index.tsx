@@ -1,6 +1,6 @@
 import { useState } from "react";
 import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
+import { InView } from "react-intersection-observer";
 
 interface NumberProps {
   color: string;
@@ -15,7 +15,7 @@ const Number: React.FC<NumberProps> = ({
   extension,
   number,
 }) => {
-  const [hasBeenVisible, setHasBeenVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   return (
     <div
@@ -29,12 +29,13 @@ const Number: React.FC<NumberProps> = ({
           color,
         }}
       >
-        <VisibilitySensor
-          onChange={(isVisible) => {
-            if (isVisible) setHasBeenVisible(true);
+        <InView
+          as="div"
+          onChange={(inView) => {
+            if (!isVisible && inView) setIsVisible(true);
           }}
         >
-          {hasBeenVisible ? (
+          {isVisible ? (
             <CountUp
               className={`count ${color}`}
               start={0}
@@ -45,7 +46,7 @@ const Number: React.FC<NumberProps> = ({
           ) : (
             <span className="count">0{extension}</span>
           )}
-        </VisibilitySensor>
+        </InView>
       </span>
       <span className="description">{description}</span>
     </div>

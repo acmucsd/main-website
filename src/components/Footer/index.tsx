@@ -47,7 +47,6 @@ function isValidEmail(input) {
   return reg.test(String(input).toLowerCase());
 }
 const Footer: React.FC = () => {
-  const [email, setEmail] = useState("");
   return (
     <div className="footer" id="contact">
       <div className="footerContainer">
@@ -61,11 +60,9 @@ const Footer: React.FC = () => {
                 const href = `${linkprefix}${item.value}`;
                 return (
                   <div key={key} className="footerContents__contact__card">
-                    <Link href={href}>
-                      <a>
-                        <img src={item.icon.src} alt={item.title} />
-                      </a>
-                    </Link>
+                    <a href={href}>
+                      <img src={item.icon.src} alt={item.title} />
+                    </a>
                     <div>
                       <a href={href}>{item.title}</a>
                     </div>

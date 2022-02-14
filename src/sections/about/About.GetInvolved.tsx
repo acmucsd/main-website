@@ -19,11 +19,11 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
     <section className="about__get-involved">
       <h2>How can I get involved?</h2>
       <div className="about__get-involved__section">
-        {!isMobile && <img src={AboutSocial.src} alt="" />}
+        {isMobile ? null : <img src={AboutSocial.src} alt="" />}
         <div className="about__get-involved__section__description">
           <h3 className="purple">Connect with us on Social Media</h3>
-          {isMobile && <img src={AboutSocial.src} alt="" />}
-          {!isMobile && (
+          {!isMobile ? null : <img src={AboutSocial.src} alt="" />}
+          {isMobile ? null : (
             <p>
               To keep up with what&apos;s happening, we recommend joining our
               Discord server and following us on Facebook.
@@ -50,24 +50,24 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         </div>
       </div>
       <div className="about__get-involved__section">
-        {!isMobile && <img src={AboutCommunities.src} alt="" />}
+        {isMobile ? null : <img src={AboutCommunities.src} alt="" />}
         <div className="about__get-involved__section__description">
           <h3 className="orange">Join our Communities</h3>
-          {isMobile && <img src={AboutCommunities.src} alt="" />}
+          {!isMobile ? null : <img src={AboutCommunities.src} alt="" />}
           <p>
             ACM at UCSD is one large community, but it is made up of several
             smaller communities focused on specific areas of technology.
           </p>
-          {!isMobile && <CommunitiesGrid colLayout />}
+          {isMobile ? null : <CommunitiesGrid colLayout />}
         </div>
-        {isMobile && <CommunitiesGrid />}
+        {!isMobile ? null : <CommunitiesGrid />}
       </div>
 
       <div className="about__get-involved__section">
-        {!isMobile && <img src={AboutBitByte.src} alt="" />}
+        {isMobile ? null : <img src={AboutBitByte.src} alt="" />}
         <div className="about__get-involved__section__description">
           <h3 className="blue">Become a mentor/mentee!</h3>
-          {isMobile && <img src={AboutBitByte.src} alt="" />}
+          {!isMobile ? null : <img src={AboutBitByte.src} alt="" />}
           <p>
             Join ACM’s Bit-Byte program that pairs students to make lifelong
             friendships! Our upperclassmen bigs (bytes) help their littles
@@ -83,10 +83,10 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         </div>
       </div>
       <div className="about__get-involved__section">
-        {!isMobile && <img src={AboutProjects.src} alt="" />}
+        {isMobile ? null : <img src={AboutProjects.src} alt="" />}
         <div className="about__get-involved__section__description">
           <h3 className="pink">Participate in ACM Projects!</h3>
-          {isMobile && <img src={AboutProjects.src} alt="" />}
+          {!isMobile ? null : <img src={AboutProjects.src} alt="" />}
           <p>
             Sign up to join a team in our quarter-long projects. Grow your
             skills in coding, design, or project management.

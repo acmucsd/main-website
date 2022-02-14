@@ -32,9 +32,8 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
         >
           <Link href="/communities#AI">
             <a
-              className={`communitiesGrid__community ${
-                hasBeenVisible ? "ai--visible" : " "
-              }`}
+              className={`communitiesGrid__community ${hasBeenVisible ? "ai--visible" : ""
+                }`}
             >
               <img src={AILogo.src} alt="ACM AI" />
               <div className="communitiesGrid__community__label">
@@ -47,9 +46,8 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
           </Link>
           <Link href="/communities#Cyber">
             <a
-              className={`communitiesGrid__community ${
-                hasBeenVisible ? "cyber--visible" : " "
-              }`}
+              className={`communitiesGrid__community ${hasBeenVisible ? "cyber--visible" : ""
+                }`}
             >
               <img src={CyberLogo.src} alt="ACM Cyber" />
               <div className="communitiesGrid__community__label">
@@ -64,9 +62,8 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
         <div className="communitiesGrid">
           <Link href="/communities#Hack">
             <a
-              className={`communitiesGrid__community ${
-                hasBeenVisible ? "hack--visible" : " "
-              }`}
+              className={`communitiesGrid__community ${hasBeenVisible ? "hack--visible" : ""
+                }`}
             >
               <img src={HackLogo.src} alt="ACM Hack" />
               <div className="communitiesGrid__community__label">
@@ -79,9 +76,8 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
           </Link>
           <Link href="/communities#Innovate">
             <a
-              className={`communitiesGrid__community ${
-                hasBeenVisible ? "innovate--visible" : " "
-              }`}
+              className={`communitiesGrid__community ${hasBeenVisible ? "innovate--visible" : ""
+                }`}
             >
               <img src={InnovateLogo.src} alt="ACM Innovate" />
               <div className="communitiesGrid__community__label">
@@ -101,9 +97,8 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
         <div className="communitiesGrid">
           <Link href="/communities#AI">
             <a
-              className={`communitiesGrid__community ${
-                hasBeenVisible && "ai--visible"
-              }`}
+              className={`communitiesGrid__community ${hasBeenVisible ? "ai--visible" : ""
+                }`}
             >
               <img src={AILogo.src} alt="ACM AI" />
               <div className="communitiesGrid__community__label">
@@ -116,9 +111,8 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
           </Link>
           <Link href="/communities#Cyber">
             <a
-              className={`communitiesGrid__community ${
-                hasBeenVisible && "cyber--visible"
-              }`}
+              className={`communitiesGrid__community ${hasBeenVisible ? "cyber--visible" : ""
+                }`}
             >
               <img src={CyberLogo.src} alt="ACM Cyber" />
               <div className="communitiesGrid__community__label">
@@ -131,9 +125,8 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
           </Link>
           <Link href="/communities#Hack">
             <a
-              className={`communitiesGrid__community ${
-                hasBeenVisible && "hack--visible"
-              }`}
+              className={`communitiesGrid__community ${hasBeenVisible ? "hack--visible" : ""
+                }`}
             >
               <img src={HackLogo.src} alt="ACM Hack" />
               <div className="communitiesGrid__community__label">
@@ -146,9 +139,8 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
           </Link>
           <Link href="/communities#Innovate">
             <a
-              className={`communitiesGrid__community ${
-                hasBeenVisible && "innovate--visible"
-              }`}
+              className={`communitiesGrid__community ${hasBeenVisible ? "innovate--visible" : ""
+                }`}
             >
               <img src={InnovateLogo.src} alt="ACM Innovate" />
               <div className="communitiesGrid__community__label">

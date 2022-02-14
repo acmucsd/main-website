@@ -36,7 +36,7 @@ const CommunityComponent: React.FC<{
     <div className="community__sub-orgs__community-card" id={org}>
       <div className={`color_slide ${color}bg`} />
       <div className="community__sub-orgs__community-card__content">
-        {!isMobile && (
+        {isMobile ? null : (
           <a href={website}>
             <img
               src={logo}
@@ -47,7 +47,7 @@ const CommunityComponent: React.FC<{
         )}
         <div>
           <div className="community__sub-orgs__community-card__header">
-            {isMobile && <img src={logo} alt={`ACM ${org}`} />}
+            {!isMobile ? null : <img src={logo} alt={`ACM ${org}`} />}
             <h1 className={color}>ACM {org}</h1>
           </div>
           {description}

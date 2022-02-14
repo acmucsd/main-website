@@ -56,17 +56,18 @@ const Footer: React.FC = () => {
           <div className="footerContents__wrapper">
             <div className="footerContents__contact">
               {cardContents.map((item, key) => {
-                let linkprefix =
+                const linkprefix =
                   item.title === "Email" ? "mailto:" : "https://";
+                const href = `${linkprefix}${item.value}`;
                 return (
                   <div key={key} className="footerContents__contact__card">
-                    <Link href={linkprefix + item.value}>
+                    <Link href={href}>
                       <a>
                         <img src={item.icon.src} alt={item.title} />
                       </a>
                     </Link>
                     <div>
-                      <a href={linkprefix + item.value}>{item.title}</a>
+                      <a href={href}>{item.title}</a>
                     </div>
                   </div>
                 );

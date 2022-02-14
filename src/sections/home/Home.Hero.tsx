@@ -1,22 +1,13 @@
-import { useState, useEffect } from "react";
 import Typist from "react-typist";
 import "react-typist/dist/Typist.css";
-import Button from "src/components/Button";
 import Image from "next/image";
 
-import ArrowIcon from 'public/assets/arrow.svg'
+import Button from "src/components/Button";
+import ScrollDownArrow from "src/components/ScrollDownArrow";
 import CoolLogo from "public/assets/cool_logo_1000x1000.png";
 import CoolLogoMobile from "public/assets/cool_logo.png";
 
 const HomeHero: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY !== 0);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
     <section className="home__hero">
       <div className="home__hero--grid">
@@ -51,18 +42,7 @@ const HomeHero: React.FC = () => {
             </div>
           </div>
         </div>
-        {!scrolled && (
-          <img
-            className="arrow"
-            alt=""
-            onClick={() =>
-              window.scrollBy({
-                top: window.innerHeight - 78,
-              })
-            }
-            src={ArrowIcon.src}
-          />
-        )}
+        <ScrollDownArrow />
       </div>
     </section>
   );

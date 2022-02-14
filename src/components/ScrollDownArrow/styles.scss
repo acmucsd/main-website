@@ -1,0 +1,32 @@
+.arrow {
+  cursor: pointer;
+  left: 50vw;
+  bottom: 50px;
+  height: 30px;
+  margin: auto;
+  position: absolute;
+  width: 30px;
+  animation: ca3_fade_move_down 1.5s ease-in-out infinite;
+
+  @keyframes ca3_fade_move_down {
+    0% {
+      transform: translate(0, -10px);
+      opacity: 0;
+    }
+    35% {
+      opacity: 1;
+    }
+    70% {
+      transform: translate(0, 10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0, 10px);
+      opacity: 0;
+    }
+  }
+
+  @media only screen and (max-width: 1050px) {
+    display: none;
+  }
+}

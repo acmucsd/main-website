@@ -28,7 +28,7 @@ const AboutPage: React.FC = () => {
       />
       <AboutHero isMobile={isMobile} image={HeroImage.src} />
       <AboutGetInvolved isMobile={isMobile} />
-      {!isMobile && <AboutMembership />}
+      {isMobile ? null : <AboutMembership />}
       <AboutBoard isMobile={isMobile} />
     </>
   );

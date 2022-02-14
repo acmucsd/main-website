@@ -1,7 +1,7 @@
 interface ButtonProps {
   title: string;
   link: string;
-  type: string;
+  type: "primary" | "secondary";
 }
 
 const defaultProps: ButtonProps = {
@@ -11,19 +11,11 @@ const defaultProps: ButtonProps = {
 };
 
 const Button: React.FC<ButtonProps> = ({ link, title, type }) => {
-  if (type === "primary" || type === "secondary") {
-    return (
-      <a href={link} className={"button " + type}>
-        <div>{title}</div>
-      </a>
-    );
-  } else {
-    return (
-      <a href={link} className="button primary">
-        <div>{title}</div>
-      </a>
-    );
-  }
+  return (
+    <a href={link} className={`button ${type}`}>
+      <div>{title}</div>
+    </a>
+  );
 };
 Button.defaultProps = defaultProps;
 export default Button;

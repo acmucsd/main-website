@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Size, useWindowSize } from "src/utils";
+import { Size, useWindowSize } from "src/utils/utils";
 
 import SEO from "src/components/SEO";
 

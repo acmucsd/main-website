@@ -1,4 +1,4 @@
-import "src/styles/colors.scss";
+import "src/styles/vars.scss";
 import "src/styles/index.css";
 import "src/styles/mixins.scss";
 import "src/styles/reset.scss";

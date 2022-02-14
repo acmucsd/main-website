@@ -8,7 +8,6 @@ import CoolLogo from "public/assets/cool_logo_1000x1000.png";
 import CoolLogoMobile from "public/assets/cool_logo.png";
 
 const HomeHero: React.FC = () => {
-
   return (
     <section className="home__hero">
       <div className="home__hero--grid">

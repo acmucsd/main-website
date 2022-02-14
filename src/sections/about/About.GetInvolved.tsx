@@ -13,35 +13,6 @@ import HackLogo from "public/assets/logos/acm-hack.svg";
 import InnovateLogo from "public/assets/logos/acm-innovate.svg";
 import CommunitiesGrid from "src/components/CommunitiesGrid";
 
-const MobileCommunityGrid = () => (
-  <div className="about__get-involved__section__communities--mobile">
-    <div>
-      <Link href="/communities#Hack">
-        <a>
-          <img src={HackLogo.src} alt="ACM Hack Logo" />
-        </a>
-      </Link>
-      <Link href="/communities#Innovate">
-        <a>
-          <img src={InnovateLogo.src} alt="ACM Innovate Logo" />
-        </a>
-      </Link>
-    </div>
-    <div>
-      <Link href="/communities#AI">
-        <a>
-          <img src={AILogo.src} alt="ACM AI Logo" />
-        </a>
-      </Link>
-      <Link href="/communities#Cyber">
-        <a>
-          <img src={CyberLogo.src} alt="ACM Cyber Logo" />
-        </a>
-      </Link>
-    </div>
-  </div>
-);
-
 const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const [email, setEmail] = useState("");
   return (

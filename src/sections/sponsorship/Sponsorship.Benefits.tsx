@@ -1,49 +1,51 @@
 import Image from "next/image";
-import RedBullet from "public/assets/sponsor-bullets/diamond-red.svg";
-import TurquoiseBullet from "public/assets/sponsor-bullets/diamond-turquoise.svg";
-import YellowBullet from "public/assets/sponsor-bullets/diamond-yellow.svg";
-import PurpleBullet from "public/assets/sponsor-bullets/diamond-purple.svg";
-import PinkBullet from "public/assets/sponsor-bullets/diamond-pink.svg";
+
+const bullets = [
+  {
+    color: "red",
+    description:
+      "Access to our diverse and large member database to recruit talented UCSD students.",
+  },
+  {
+    color: "turquoise",
+    description:
+      "Opportunity to establish brand name and relationship with UCSD computing students by partnering with largest engineering org on campus.",
+  },
+  {
+    color: "yellow",
+    description:
+      "Ability to expose students to different opportunities and unique life at their company.",
+  },
+  {
+    color: "purple",
+    description:
+      "Get to help and guide university students, especially those that are struggling to navigate the many diverse fields in computing.",
+  },
+  {
+    color: "pink",
+    description: "And much much more!",
+  },
+];
 
 const BenefitList: React.FC = () => {
   return (
     <div className="sponsorship__benefits__benefit-list">
-      <div className="sponsorship__benefits__benefit-list__bullet">
-        <img src={RedBullet.src} alt="red bullet" />
-        <p>
-          Access to our diverse and large member database to recruit talented
-          UCSD students.
-        </p>
-      </div>
-      <div className="sponsorship__benefits__benefit-list__bullet">
-        <img src={TurquoiseBullet.src} alt="turquoise bullet" />
-        <p>
-          Opportunity to establish brand name and relationship with UCSD
-          computing students by partnering with largest engineering org on
-          campus.
-        </p>
-      </div>
-      <div className="sponsorship__benefits__benefit-list__bullet">
-        <img src={YellowBullet.src} alt="a Yellow bullet" />
-        <p>
-          Ability to expose students to different opportunities and unique life
-          at their company.
-        </p>
-      </div>
-      <div className="sponsorship__benefits__benefit-list__bullet">
-        <img src={PurpleBullet.src} alt="a Purple bullet" />
-        <p>
-          Get to help and guide university students, especially those that are
-          struggling to navigate the many diverse fields in computing.
-        </p>
-      </div>
-      <div className="sponsorship__benefits__benefit-list__bullet">
-        <img src={PinkBullet.src} alt="a Pink bullet" />
-        <p>And much much more!</p>
-      </div>
+      {bullets.map(({ color, description }, key) => (
+        <div
+          key={`${color} bullet-${key}`}
+          className="sponsorship__benefits__benefit-list__bullet"
+        >
+          <img
+            src={`/assets/sponsor-bullets/diamond-${color}.svg`}
+            alt={`${color} bullet`}
+          />
+          <p>{description}</p>
+        </div>
+      ))}
     </div>
   );
 };
+
 const SponsorshipBenefits: React.FC = () => {
   return (
     <section className="sponsorship__benefits">

@@ -1,9 +1,32 @@
 import Image from "next/image";
-import OptiverImg from "public/assets/sponsor-images/optiver_logo.png";
-import CSEImg from "public/assets/sponsor-images/CSE_logo.png";
-import TESCImg from "public/assets/sponsor-images/tesc_logo.png";
-import RobinhoodImg from "public/assets/sponsor-images/robinhood_logo.png";
-import GearImg from "public/assets/sponsor-images/gear_logo.png";
+
+const sponsors = [
+  {
+    img: "/assets/sponsor-images/gear_logo.png",
+    href: "https://gear-tech.io/",
+    alt: "Gear",
+  },
+  {
+    img: "/assets/sponsor-images/optiver_logo.png",
+    href: "https://www.optiver.com/",
+    alt: "Optiver",
+  },
+  {
+    img: "/assets/sponsor-images/robinhood_logo.png",
+    href: "https://www.robinhood.com/",
+    alt: "Robinhood",
+  },
+  {
+    img: "/assets/sponsor-images/CSE_logo.png",
+    href: "https://cse.ucsd.edu/",
+    alt: "CSE",
+  },
+  {
+    img: "/assets/sponsor-images/tesc_logo.png",
+    href: "https://tesc.ucsd.edu/",
+    alt: "TESC",
+  },
+];
 
 const SponsorshipLogos: React.FC = () => {
   return (
@@ -11,26 +34,12 @@ const SponsorshipLogos: React.FC = () => {
       <h1 className="sponsorship__logos__header">
         Thank you to our current sponsors!
       </h1>
-      <div className="sponsorship__logos__img-grid">
-        <a href="https://gear-tech.io/">
-          <img src={GearImg.src} alt="Gear" />
-        </a>
-      </div>
-      <div className="sponsorship__logos__img-grid">
-        <a href="https://www.optiver.com/">
-          <img src={OptiverImg.src} alt="Optiver" />
-        </a>
-        <a href="https://www.robinhood.com/">
-          <img src={RobinhoodImg.src} alt="Robinhood" />
-        </a>
-      </div>
-      <div className="sponsorship__logos__img-grid">
-        <a href="https://cse.ucsd.edu/">
-          <img src={CSEImg.src} alt="CSE" />
-        </a>
-        <a href="https://tesc.ucsd.edu/">
-          <img src={TESCImg.src} alt="TESC" />
-        </a>
+      <div className="sponsorship__logos__img-container">
+        {sponsors.map(({ img, href, alt }, key) => (
+          <a key={`${alt}-${key}`} href={href}>
+            <img src={img} alt={alt} />
+          </a>
+        ))}
       </div>
     </section>
   );

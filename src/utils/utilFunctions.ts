@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { EventObject } from "src/api/EventsAPI";
+import { EventObject } from "src/api/events";
 
 /**
  * Determines if given string is a valid website link.

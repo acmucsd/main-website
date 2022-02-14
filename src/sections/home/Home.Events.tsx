@@ -1,4 +1,4 @@
-import { EventObject } from "src/api/EventsAPI";
+import { EventObject } from "src/api/events";
 import { isURL, getAbsoluteURL, getDateTime } from "src/utils/utilFunctions";
 
 const HomeEvents: React.FC<{ events: Array<EventObject> }> = ({ events }) => {

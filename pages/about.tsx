@@ -9,8 +9,9 @@ import AboutMembership from "src/sections/about/About.Membership";
 import AboutBoard from "src/sections/about/About.Board";
 
 import HeroImage from "public/assets/about-images/about-hero.png";
+import { getBoardData } from "src/api/board";
 
-const AboutPage: React.FC = () => {
+const AboutPage: React.FC<{ board: any }> = ({ board }) => {
   const size: Size = useWindowSize();
   const [isMobile, setIsMobile] = useState(false);
 
@@ -29,9 +30,17 @@ const AboutPage: React.FC = () => {
       <AboutHero isMobile={isMobile} image={HeroImage.src} />
       <AboutGetInvolved isMobile={isMobile} />
       {isMobile ? null : <AboutMembership />}
-      <AboutBoard isMobile={isMobile} />
+      <AboutBoard isMobile={isMobile} boardData={board} />
     </>
   );
 };
 
 export default AboutPage;
+
+export async function getStaticProps() {
+  return {
+    props: {
+      board: await getBoardData(),
+    },
+  };
+}

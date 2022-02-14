@@ -28,7 +28,7 @@ const handleErrors = (response: Response): Promise<EventsResponse> => {
   return response.json();
 };
 
-const getAllEvents = async (): Promise<EventsArray | undefined> => {
+export const getAllEvents = async (): Promise<EventsArray | undefined> => {
   let apiurl = "https://api.acmucsd.com/api/v2/event/future";
 
   // TODO: Fix test data for development purposes (images are not showing up)
@@ -44,5 +44,3 @@ const getAllEvents = async (): Promise<EventsArray | undefined> => {
     return undefined;
   }
 };
-
-export { getAllEvents };

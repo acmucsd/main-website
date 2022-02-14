@@ -2,25 +2,23 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import BoardGrid from "src/components/BoardGrid";
 import BoardFilters from "src/components/BoardFilters";
-import BoardData from "src/board-data.json";
-
-const members_list = BoardData;
 
 interface AboutBoardProps {
   isMobile: boolean;
+  boardData: any[];
 }
 
-const AboutBoard: React.FC<AboutBoardProps> = ({ isMobile }) => {
+const AboutBoard: React.FC<AboutBoardProps> = ({ isMobile, boardData }) => {
   const [activeFilters, setActiveFilters] = useState([]);
-  const [displayList, setDisplayList] = useState(members_list);
+  const [displayList, setDisplayList] = useState(boardData);
 
   useEffect(() => {
-    if (activeFilters.length === 0) setDisplayList(members_list);
+    if (activeFilters.length === 0) setDisplayList(boardData);
     else
       setDisplayList(
-        members_list.filter((member) => activeFilters.includes(member.org))
+        boardData.filter((member) => activeFilters.includes(member.org))
       );
-  }, [activeFilters]);
+  }, [activeFilters, boardData]);
 
   return (
     <section className="about__board">

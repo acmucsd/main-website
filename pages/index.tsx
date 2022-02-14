@@ -4,7 +4,7 @@ import HomeJoinTheClub from "src/sections/home/Home.JoinTheClub";
 import HomeEvents from "src/sections/home/Home.Events";
 import SEO from "src/components/SEO";
 import CoolLogo from "public/assets/cool_logo_1000x1000.png";
-import { EventObject, getAllEvents } from "src/api/EventsAPI";
+import { EventObject, getAllEvents } from "src/api/events";
 
 const IndexPage: React.FC<{ events: Array<EventObject> }> = ({ events }) => (
   <>

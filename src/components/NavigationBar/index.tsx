@@ -13,13 +13,9 @@ const navLinks = [
 
 const NavigationBar: React.FC = () => {
   const [menuState, setMenuState] = useState(false);
-  const toggleMenu = () => {
-    setMenuState(!menuState);
-  };
-  const scrollToContacts = (): void => {
-    window.scrollTo({ top: document.body.scrollHeight });
-    setMenuState(false);
-  };
+
+  const toggleMenu = () => setMenuState(!menuState);
+
   return (
     <div className="fixed-nav">
       <div className="navigation-bar">
@@ -40,7 +36,7 @@ const NavigationBar: React.FC = () => {
           </li>
           <li className="navigation-bar__nav-button">
             <Link href="#contact">
-              <a onClick={scrollToContacts}>Contact</a>
+              <a>Contact</a>
             </Link>
           </li>
           {navLinks.map((link, key) => (
@@ -53,7 +49,31 @@ const NavigationBar: React.FC = () => {
         </ul>
       </div>
 
-      {!menuState && (
+      {menuState ? (
+        <div className="mobile-links">
+          <button className="closebutton" onClick={toggleMenu} type="button">
+            <img
+              className="closeicon"
+              src={CloseMenuButton.src}
+              color="white"
+              alt="Menu Icon"
+            />
+          </button>
+          <Link href="/about">
+            <a onClick={toggleMenu}>About Us</a>
+          </Link>
+          <Link href="/communities">
+            <a onClick={toggleMenu}>Communities</a>
+          </Link>
+          <Link href="/sponsor">
+            <a onClick={toggleMenu}>Sponsor</a>
+          </Link>
+          <Link href="#contact">
+            <a onClick={toggleMenu}>Contact</a>
+          </Link>
+          <a href="https://members.acmucsd.com/login">Login</a>
+        </div>
+      ) : (
         <div className="navbar-mobile-div">
           <div className="navbar-mobile">
             <Link href="/">
@@ -70,42 +90,6 @@ const NavigationBar: React.FC = () => {
               />
             </button>
           </div>
-        </div>
-      )}
-      {menuState && (
-        <div className="mobile-links">
-          <button className="closebutton" onClick={toggleMenu} type="button">
-            <img
-              className="closeicon"
-              src={CloseMenuButton.src}
-              color="white"
-              alt="Menu Icon"
-            />
-          </button>
-          <Link href="/about">
-            <a>About Us</a>
-          </Link>
-          <Link href="/communities">
-            <a>Communities</a>
-          </Link>
-          <Link href="/sponsor">
-            <a>Sponsor</a>
-          </Link>
-          <Link href="#contact">
-            <a onClick={scrollToContacts}>Contact</a>
-          </Link>
-          {/* <Link
-            href="#contact"
-            onClick={(): void => {
-              toggleMenu()
-              scrollToContacts()
-            }}
-          >
-            Contact
-          </Link> */}
-          <a href="https://members.acmucsd.com/login" onClick={toggleMenu}>
-            Login
-          </a>
         </div>
       )}
 

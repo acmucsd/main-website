@@ -4,7 +4,7 @@ import { EventsArray, EventObject, getAllEvents } from "src/api/EventsAPI"
 import { isURL, getAbsoluteURL, getDateTime } from "src/utils"
 
 const HomeEvents: React.FC = () => {
-  const [events, setEvents] = useState<EventsArray>()
+  const [events, setEvents] = useState<EventsArray | undefined>(undefined)
   const [dragging, toggleDragging] = useState(false)
 
   const updateEvents = async (): Promise<void> => {
@@ -51,7 +51,7 @@ const HomeEvents: React.FC = () => {
 
   const handleMoveStart = () => toggleDragging(true)
   const handleMoveEnd = () => toggleDragging(false)
-  
+
   return (
     <section className="home__events">
       <div className="home__events__grid">
@@ -75,7 +75,7 @@ const HomeEvents: React.FC = () => {
         onDragStart={() => false}
         tabIndex={0}
       >
-        {events && events.length > 0 ? (
+        {(events && events.length > 0) ? (
           events.map((value, index) => {
             const timing = getDateTime(value)
             return (

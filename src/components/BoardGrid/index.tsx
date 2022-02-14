@@ -4,43 +4,23 @@ import BoardCard from "src/components/BoardCard";
 import LeftArrow from "public/assets/left-arrow.svg";
 
 import RightArrow from "public/assets/right-arrow.svg";
+import { BoardMemberProps } from "src/types";
 
 interface BoardGridProps {
-  members_list: unknown[];
+  members_list: BoardMemberProps[];
   isMobile: boolean;
 }
-const generateCurrentPage = (members_list, page) => {
-  const per_page = 8;
-  const current_page = members_list.slice(
-    page * per_page,
-    (page + 1) * per_page
-  );
-  return (
-    <div className="BoardGrid_grid">
-      {current_page.map((member) => (
-        <BoardCard
-          boardmember={member}
-          key={`${member.name}-${member.email}-${member.org}`}
-        />
-      ))}
-    </div>
-  );
-};
+
 const BoardGrid: React.FC<BoardGridProps> = ({ members_list, isMobile }) => {
   const [page, setPage] = useState(0);
-  const [currentPage, setCurrentPage] = useState<unknown>();
+  const [activeCards, setActiveCards] = useState<BoardMemberProps[]>([]);
   const maxPage = Math.ceil(members_list.length / 8 - 1);
 
-  useEffect(() => {
-    setCurrentPage(generateCurrentPage(members_list, page));
-  }, [members_list, page]);
+  const per_page = 8;
 
   useEffect(() => {
-    if (page > Math.ceil(members_list.length / 8 - 1)) {
-      setPage(Math.ceil(members_list.length / 8 - 1));
-    }
-    setCurrentPage(generateCurrentPage(members_list, page));
-  }, [page, members_list]);
+    setActiveCards(members_list.slice(page * per_page, (page + 1) * per_page));
+  }, [members_list, page]);
 
   return (
     <div className="BoardGrid">
@@ -53,7 +33,14 @@ const BoardGrid: React.FC<BoardGridProps> = ({ members_list, isMobile }) => {
           />
         )}
       </div>
-      {currentPage}
+      <div className="BoardGrid_grid">
+        {activeCards.map((member) => (
+          <BoardCard
+            boardmember={member}
+            key={`${member.name}-${member.email}-${member.org}`}
+          />
+        ))}
+      </div>
       <div className="BoardGrid_arrowContainer">
         {page === maxPage ? null : (
           <img

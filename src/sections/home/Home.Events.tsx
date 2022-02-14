@@ -1,43 +1,7 @@
-import { useState } from "react";
 import { EventObject } from "src/api/EventsAPI";
 import { isURL, getAbsoluteURL, getDateTime } from "src/utils";
 
 const HomeEvents: React.FC<{ events: Array<EventObject> }> = ({ events }) => {
-  const [dragging, toggleDragging] = useState(false);
-
-  const handleMove = (e: any) => {
-    if (!dragging) {
-      return;
-    }
-    const em = parseFloat(
-      window.getComputedStyle(
-        document.getElementsByClassName("home__events__grid__container")[0]
-      ).fontSize
-    );
-    const isTouch = e.movementX === "";
-    let deltaX = 0;
-    if (isTouch) {
-      deltaX = e.touches[0].clientX;
-    } else {
-      deltaX = -1 * e.movementX;
-    }
-    const firstEvent = document.getElementsByClassName(
-      "event"
-    )[0] as HTMLElement;
-    const cardWidth = em * 20;
-    const minMargin = events ? em - events.length * 20 * em : cardWidth;
-    const oldmargin = parseFloat(
-      window.getComputedStyle(firstEvent).marginLeft
-    );
-    const newmargin = oldmargin - deltaX;
-    if (newmargin >= minMargin && newmargin <= em) {
-      firstEvent.style.marginLeft = `${oldmargin - deltaX}px`;
-    }
-  };
-
-  const handleMoveStart = () => toggleDragging(true);
-  const handleMoveEnd = () => toggleDragging(false);
-
   return (
     <section className="home__events">
       <div className="home__events__grid">
@@ -48,19 +12,7 @@ const HomeEvents: React.FC<{ events: Array<EventObject> }> = ({ events }) => {
           </p>
         </div>
       </div>
-      <div
-        className="home__events__grid__container"
-        onMouseDown={handleMoveStart}
-        onMouseMove={handleMove}
-        onMouseUp={handleMoveEnd}
-        onMouseLeave={handleMoveEnd}
-        onTouchStart={handleMoveStart}
-        onTouchMove={handleMove}
-        onTouchCancel={handleMoveEnd}
-        onTouchEnd={handleMoveEnd}
-        onDragStart={() => false}
-        tabIndex={0}
-      >
+      <div className="home__events__grid__container" tabIndex={0}>
         {events && events.length > 0 ? (
           events.map((value, index) => {
             const timing = getDateTime(value);

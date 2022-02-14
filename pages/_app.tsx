@@ -1,6 +1,5 @@
 import "src/styles/colors.scss";
 import "src/styles/index.css";
-import "src/styles/mixins.scss";
 import "src/styles/reset.scss";
 // component css imports
 import "src/components/BoardCard/styles.scss";

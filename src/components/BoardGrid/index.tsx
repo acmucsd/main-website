@@ -4,7 +4,7 @@ import BoardCard from "src/components/BoardCard";
 import LeftArrow from "public/assets/left-arrow.svg";
 
 import RightArrow from "public/assets/right-arrow.svg";
-import { BoardMemberProps } from "src/types";
+import { BoardMemberProps } from "src/utils/types";
 
 interface BoardGridProps {
   members_list: BoardMemberProps[];

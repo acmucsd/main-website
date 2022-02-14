@@ -4,7 +4,9 @@ import HomeJoinTheClub from "src/sections/home/Home.JoinTheClub";
 import HomeEvents from "src/sections/home/Home.Events";
 import SEO from "src/components/SEO";
 import CoolLogo from "public/assets/cool_logo_1000x1000.png";
-const IndexPage: React.FC = () => (
+import { EventObject, getAllEvents } from "src/api/EventsAPI";
+
+const IndexPage: React.FC<{ events: Array<EventObject> }> = ({ events }) => (
   <>
     <SEO
       title="ACM at UCSD"
@@ -14,9 +16,20 @@ const IndexPage: React.FC = () => (
     />
     <HomeHero />
     <HomeJoinTheClub />
-    <HomeEvents />
+    <HomeEvents events={events} />
     <HomeCommunities />
   </>
 );
 
 export default IndexPage;
+
+export async function getStaticProps() {
+  const events = await getAllEvents();
+
+  return {
+    props: {
+      events: events || [],
+    },
+    revalidate: 1 * 60 * 60, // once every hour (in seconds)
+  };
+}

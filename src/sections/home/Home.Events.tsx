@@ -1,57 +1,7 @@
-import Image from "next/image"
-import { useState, useEffect } from "react"
-import { EventsArray, EventObject, getAllEvents } from "src/api/EventsAPI"
-import { isURL, getAbsoluteURL, getDateTime } from "src/utils"
+import { EventObject } from "src/api/EventsAPI";
+import { isURL, getAbsoluteURL, getDateTime } from "src/utils";
 
-const HomeEvents: React.FC = () => {
-  const [events, setEvents] = useState<EventsArray | undefined>(undefined)
-  const [dragging, toggleDragging] = useState(false)
-
-  const updateEvents = async (): Promise<void> => {
-    const eventsArray: EventsArray | undefined = await getAllEvents()
-    if (eventsArray === undefined) {
-      setEvents(new Array<EventObject>())
-    }
-    setEvents(eventsArray)
-  }
-
-  useEffect(() => {
-    if (!events) {
-      updateEvents()
-    }
-  }, [events])
-
-  const handleMove = (e: any) => {
-    if (!dragging) {
-      return
-    }
-    const em = parseFloat(
-      window.getComputedStyle(
-        document.getElementsByClassName("home__events__grid__container")[0]
-      ).fontSize
-    )
-    const isTouch = e.movementX === ""
-    let deltaX = 0
-    if (isTouch) {
-      deltaX = e.touches[0].clientX
-    } else {
-      deltaX = -1 * e.movementX
-    }
-    const firstEvent = document.getElementsByClassName(
-      "event"
-    )[0] as HTMLElement
-    const cardWidth = em * 20
-    const minMargin = events ? em - events.length * 20 * em : cardWidth
-    const oldmargin = parseFloat(window.getComputedStyle(firstEvent).marginLeft)
-    const newmargin = oldmargin - deltaX
-    if (newmargin >= minMargin && newmargin <= em) {
-      firstEvent.style.marginLeft = `${oldmargin - deltaX}px`
-    }
-  }
-
-  const handleMoveStart = () => toggleDragging(true)
-  const handleMoveEnd = () => toggleDragging(false)
-
+const HomeEvents: React.FC<{ events: Array<EventObject> }> = ({ events }) => {
   return (
     <section className="home__events">
       <div className="home__events__grid">
@@ -62,22 +12,10 @@ const HomeEvents: React.FC = () => {
           </p>
         </div>
       </div>
-      <div
-        className="home__events__grid__container"
-        onMouseDown={handleMoveStart}
-        onMouseMove={handleMove}
-        onMouseUp={handleMoveEnd}
-        onMouseLeave={handleMoveEnd}
-        onTouchStart={handleMoveStart}
-        onTouchMove={handleMove}
-        onTouchCancel={handleMoveEnd}
-        onTouchEnd={handleMoveEnd}
-        onDragStart={() => false}
-        tabIndex={0}
-      >
-        {(events && events.length > 0) ? (
+      <div className="home__events__grid__container" tabIndex={0}>
+        {events && events.length > 0 ? (
           events.map((value, index) => {
-            const timing = getDateTime(value)
+            const timing = getDateTime(value);
             return (
               <div className="home__events__grid__container__event" key={index}>
                 <img src={value.cover} alt={value.title} />
@@ -96,7 +34,7 @@ const HomeEvents: React.FC = () => {
                   <h3>{value.location}</h3>
                 )}
               </div>
-            )
+            );
           })
         ) : (
           <div className="home__events__grid__container__event--default">
@@ -107,8 +45,8 @@ const HomeEvents: React.FC = () => {
         )}
         <div aria-hidden="true" className="event end" />
       </div>
-    </section >
-  )
-}
+    </section>
+  );
+};
 
-export default HomeEvents
+export default HomeEvents;

@@ -15,13 +15,14 @@ import InnovateDiscord from "public/assets/communities-links/innovate-discord.sv
 import InnovateHome from "public/assets/communities-links/innovate-home.svg";
 import InnovateYoutube from "public/assets/communities-links/innovate-youtube.svg";
 import AILogoSelected from "public/assets/communities-navigation/ai-selected.svg";
+import AILogo from "public/assets/logos/acm-ai.svg";
 import CyberLogoSelected from "public/assets/communities-navigation/cyber-selected.svg";
 import HackLogoSelected from "public/assets/communities-navigation/hack-selected.svg";
 import InnovateLogoSelected from "public/assets/communities-navigation/innovate-selected.svg";
-import AILogo from "public/assets/logos/acm-ai.svg";
 import CyberLogo from "public/assets/logos/acm-cyber.svg";
 import HackLogo from "public/assets/logos/acm-hack.svg";
 import InnovateLogo from "public/assets/logos/acm-innovate.svg";
+import { ORGS } from "src/utils/constants";
 
 const CommunityComponent: React.FC<{
   org: string;
@@ -274,42 +275,26 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             Communities
           </h1>
           <div className="community__sub-orgs--mobile__navigation">
-            <button onClick={() => setSelected("ai")}>
-              <img
-                src={selected === "ai" ? AILogoSelected.src : AILogo.src}
-                alt="AI Logo"
-              />
-            </button>
-            <button onClick={() => setSelected("cyber")}>
-              <img
-                src={
-                  selected === "cyber" ? CyberLogoSelected.src : CyberLogo.src
-                }
-                alt="Cyber Logo"
-              />
-            </button>
-            <button onClick={() => setSelected("hack")}>
-              <img
-                src={selected === "hack" ? HackLogoSelected.src : HackLogo.src}
-                alt="Hack Logo"
-              />
-            </button>
-            <button onClick={() => setSelected("innovate")}>
-              <img
-                src={
-                  selected === "innovate"
-                    ? InnovateLogoSelected.src
-                    : InnovateLogo.src
-                }
-                alt="Innovate Logo"
-              />
-            </button>
+            {ORGS.slice(1).map((org, key) => (
+              <button
+                key={`${org}_community-btn-${key}`}
+                onClick={() => setSelected(org)}
+              >
+                <img
+                  src={
+                    selected === org
+                      ? `/assets/communities-navigation/${org}-selected.svg`
+                      : `/assets/logos/acm-${org}.svg`
+                  }
+                  alt={`${org} logo`}
+                />
+              </button>
+            ))}
           </div>
           {communityComponents[selected]}
         </section>
       ) : (
         <section className="community__sub-orgs">
-          <div className="spacer80px"></div>
           <AICommunity isMobile={isMobile} />
           <CyberCommunity isMobile={isMobile} />
           <HackCommunity isMobile={isMobile} />

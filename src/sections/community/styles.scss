@@ -37,6 +37,7 @@
     }
   }
   &__sub-orgs {
+    margin-top: 80px;
     &--mobile {
       h1 {
         font-weight: 500;
@@ -227,7 +228,4 @@
 }
 .pinkbg {
   background-color: $light-pink;
-}
-.spacer80px {
-  height: 80px;
 }

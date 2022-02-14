@@ -51,7 +51,7 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             ACM at UCSD is one large community, but it is made up of several
             smaller communities focused on specific areas of technology.
           </p>
-          {isMobile ? null : <CommunitiesGrid colLayout />}
+          {isMobile ? null : <CommunitiesGrid />}
         </div>
         {!isMobile ? null : <CommunitiesGrid />}
       </div>

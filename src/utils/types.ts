@@ -4,13 +4,12 @@ export interface IPost {
   body: string;
 }
 
-export interface BoardMemberProps {
+export interface BoardMember {
   name: string;
   org: string;
   title: string;
-  specialization: string;
-  profile_image: string;
   email: string;
+  profile_image: string;
   linkedin_link: string;
   personal_link: string;
 }

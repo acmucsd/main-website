@@ -4,16 +4,16 @@ import BoardCard from "src/components/BoardCard";
 import LeftArrow from "public/assets/left-arrow.svg";
 
 import RightArrow from "public/assets/right-arrow.svg";
-import { BoardMemberProps } from "src/utils/types";
+import { BoardMember } from "src/utils/types";
 
 interface BoardGridProps {
-  members_list: BoardMemberProps[];
+  members_list: BoardMember[];
   isMobile: boolean;
 }
 
 const BoardGrid: React.FC<BoardGridProps> = ({ members_list, isMobile }) => {
   const [page, setPage] = useState(0);
-  const [activeCards, setActiveCards] = useState<BoardMemberProps[]>([]);
+  const [activeCards, setActiveCards] = useState<BoardMember[]>([]);
   const maxPage = Math.ceil(members_list.length / 8 - 1);
 
   const per_page = 8;

@@ -1,1 +1,1 @@
-export const ORGS = ["Cyber", "AI", "Hack", "Innovate"];
+export const ORGS = ["general", "cyber", "ai", "hack", "innovate"];

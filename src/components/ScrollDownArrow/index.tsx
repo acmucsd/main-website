@@ -11,10 +11,10 @@ const ScrollDownArrow = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  return scrolled ? null : (
+  return (
     <img
-      className="arrow"
-      alt=""
+      className={`arrow ${scrolled ? 'hide' : 'show'}`}
+      alt="Scroll Arrow"
       onClick={() =>
         window.scrollBy({
           top: window.innerHeight - 78,

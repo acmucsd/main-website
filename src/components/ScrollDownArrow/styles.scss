@@ -10,7 +10,7 @@
     display: none;
   }
 }
-
+// ensures the scroll down button fades away as the user scrolls down
 @keyframes hide {
   from {
     opacity: 1;

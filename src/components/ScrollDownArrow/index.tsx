@@ -13,7 +13,7 @@ const ScrollDownArrow = () => {
 
   return (
     <img
-      className={`arrow ${scrolled ? 'scrolled' : ''}`}
+      className={`arrow ${scrolled ? 'hide' : 'show'}`}
       alt="Scroll Arrow"
       onClick={() =>
         window.scrollBy({

@@ -28,7 +28,7 @@ const MyApp = ({ Component, pageProps }) => (
         margin: `0 auto`,
         maxWidth: 960,
         minHeight: 960,
-        padding: `81px 0`,
+        padding: `85px 0`,
       }}
     >
       <main>

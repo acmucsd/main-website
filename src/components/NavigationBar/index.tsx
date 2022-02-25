@@ -8,6 +8,7 @@ import MenuButtonIcon from "public/assets/menubutton.svg";
 const navLinks = [
   { to: "/sponsor", text: "Sponsor" },
   { to: "/communities", text: "Communities" },
+  { to: "/events", text: "Events" },
   { to: "/about", text: "About Us" },
 ];
 
@@ -61,6 +62,9 @@ const NavigationBar: React.FC = () => {
           </button>
           <Link href="/about">
             <a onClick={toggleMenu}>About Us</a>
+          </Link>
+          <Link href="/events">
+            <a onClick={toggleMenu}>Events</a>
           </Link>
           <Link href="/communities">
             <a onClick={toggleMenu}>Communities</a>

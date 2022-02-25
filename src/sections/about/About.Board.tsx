@@ -20,7 +20,6 @@ import HackEmpty from "public/assets/board-filters/hack-empty.svg";
 import InnovateSelected from "public/assets/board-filters/innovate-selected.svg";
 import InnovateEmpty from "public/assets/board-filters/innovate-empty.svg";
 
-
 import BoardData from "src/board-data.json";
 const members_list = BoardData;
 

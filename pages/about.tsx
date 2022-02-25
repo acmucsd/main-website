@@ -44,5 +44,6 @@ export async function getStaticProps() {
     props: {
       board: boardData || [],
     },
+    revalidate: 1 * 60 * 60 * 24, // once every day (in seconds)
   };
 }

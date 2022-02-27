@@ -23,7 +23,6 @@ const NavigationBar: React.FC = () => {
           <li className="navigation-bar__logo">
             <Link href="/">
               <a>
-                {/* image breaking the website right now */}
                 <img src={ACMLogo.src} alt="ACM Logo" />
                 <p>at UCSD</p>
               </a>
@@ -52,12 +51,7 @@ const NavigationBar: React.FC = () => {
       {menuState ? (
         <div className="mobile-links">
           <button className="closebutton" onClick={toggleMenu} type="button">
-            <img
-              className="closeicon"
-              src={CloseMenuButton.src}
-              color="white"
-              alt="Menu Icon"
-            />
+            <img className="closeicon" src={CloseMenuButton.src} color="white" alt="Menu Icon" />
           </button>
           <Link href="/about">
             <a onClick={toggleMenu}>About Us</a>
@@ -83,11 +77,7 @@ const NavigationBar: React.FC = () => {
               </a>
             </Link>
             <button className="icon" onClick={toggleMenu} type="button">
-              <img
-                className="menuicon"
-                src={MenuButtonIcon.src}
-                alt="Menu Icon"
-              />
+              <img className="menuicon" src={MenuButtonIcon.src} alt="Menu Icon" />
             </button>
           </div>
         </div>

@@ -1,0 +1,143 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-weight: bold;
+  background-color: #eee; // TODO: temporary background
+  z-index: 10;
+  font-size: 18px;
+  height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .left {
+    height: 78px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-left: 32px;
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-decoration: none;
+      > img {
+        height: 60px;
+        margin: 0;
+      }
+      > p {
+        font-size: 16px;
+        color: black;
+        margin-left: 4px;
+        white-space: nowrap;
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &.hidden {
+      display: none;
+    }
+    .navItem {
+      float: right;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: black;
+      margin-right: 32px;
+    }
+
+    .loginButton {
+      float: right;
+      height: 100%;
+      align-self: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+
+      height: 35px;
+      width: 150px;
+
+      color: white;
+      background-color: black;
+      border-radius: 0.5em;
+      margin-right: 32px;
+
+      &:hover {
+        opacity: 0.85;
+        transition: 200ms;
+      }
+    }
+  }
+
+  .toggleIcon {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    margin: 0 30px;
+    padding: 0;
+
+    .bar1 {
+      width: 40px;
+      height: 5px;
+      border-radius: 2px;
+      background-color: black;
+      position: absolute;
+      top: 1.5px;
+      transition: 0.3s ease-in-out all;
+
+      &.open {
+        transform: rotate(45deg);
+        top: 5px;
+        right: 0;
+      }
+    }
+
+    .bar2 {
+      width: 23px;
+      height: 5px;
+      border-radius: 2px;
+      background-color: black;
+      position: absolute;
+      right: 0;
+      bottom: 1.5px;
+      transition: 0.3s ease-in-out all;
+
+      &.open {
+        transform: rotate(-45deg);
+        width: 40px;
+        top: 5px;
+        right: 0;
+      }
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .rainbow {
+    width: 100vw;
+    height: 0.4em;
+    position: absolute;
+    bottom: -0.4em;
+    background: linear-gradient(
+      // TODO: use actual colors
+      270deg,
+      red 0%,
+      orange 18.75%,
+      green 36.98%,
+      turquoise 55.73%,
+      blue 75%,
+      purple 100%
+    );
+  }
+}

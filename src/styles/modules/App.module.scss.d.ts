@@ -7,8 +7,10 @@ declare namespace AppModuleScssNamespace {
     hidden: string;
     left: string;
     loginButton: string;
+    mobileNav: string;
     navItem: string;
     navbar: string;
+    navbarWrapper: string;
     open: string;
     rainbow: string;
     right: string;

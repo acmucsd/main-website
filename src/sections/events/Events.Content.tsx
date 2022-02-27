@@ -23,6 +23,7 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
             month={months[new Date(event.start).getMonth()]}
             date={new Date(event.start).getDate()}
             day={days[new Date(event.start).getDay()]}
+            org={event.committee}
             title={event.title}
             location={event.location}
             time={getDateTime(event).time}

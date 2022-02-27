@@ -126,8 +126,22 @@
       overflow: hidden; /*prevent text from being shown outside the border */
       text-overflow: ellipsis; /*cut off text with an ellipsis*/
       max-height: 40px;
-      color: #684afa;
       margin: 0;
+      &.general {
+        color: #62b0ff;
+      }
+      &.innovate {
+        color: #816dff;
+      }
+      &.hack {
+        color: #f9a857;
+      }
+      &.cyber {
+        color: #51c0c0;
+      }
+      &.ai {
+        color: #ff6f6f;
+      }
     }
     .eventLocation,
     .eventTime {

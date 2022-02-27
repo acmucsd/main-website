@@ -2,6 +2,7 @@
 
 declare namespace EventsModuleScssNamespace {
   export interface IEventsModuleScss {
+    ai: string;
     card: string;
     cardBody: string;
     cardContainer: string;
@@ -9,11 +10,15 @@ declare namespace EventsModuleScssNamespace {
     cardDay: string;
     cardFooter: string;
     cardHeader: string;
+    cyber: string;
     eventLocation: string;
     eventTime: string;
     eventTitle: string;
     eventsContainer: string;
     footerIcon: string;
+    general: string;
+    hack: string;
+    innovate: string;
   }
 }
 

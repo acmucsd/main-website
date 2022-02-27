@@ -4,7 +4,6 @@ import s from "src/styles/modules/Events.module.scss";
 import { days, months, getDateTime } from "src/utils";
 
 const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
-  console.log(events);
   return (
     <div className={s.eventsContainer}>
       {/* <div className={s.header}>

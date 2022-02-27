@@ -1,54 +1,46 @@
-const get = (valueObj) => valueObj?.v ?? "";
+import { BoardMemberProps } from "src/types";
 
-const getName = (userData) => get(userData[2]);
-
-const getOrg = (userData) => {
-  if (get(userData[0]).toLowerCase() === "members at large") return "";
-  return get(userData[0]).toLowerCase();
+const formatLinkedIn = val => {
+  return val.includes("https://www.linkedin.com/in/") ? val : `https://www.linkedin.com/in/${val}`;
 };
-
-const getTitle = (userData) => {
-  if (!get(userData[1]) || get(userData[0] === "-----")) return "";
-  return get(userData[1]);
-};
-
-const getSpecialization = (userData) => {
-  if (!get(userData[3]) || get(userData[3]) === "-----") return "";
-  return get(userData[3]);
-};
-
-const getImage = (userData) => get(userData[22]);
-
-const getACMEmail = (userData) => get(userData[9]);
-
-const getUCSDEmail = (userData) => get(userData[10]);
-
-const getLinkedIn = (userData) => {
-  return get(userData[13]).includes("https://www.linkedin.com/in/")
-    ? get(userData[13])
-    : `https://www.linkedin.com/in/${get(userData[13])}`;
-};
-
-const getWebsite = (userData) => get(userData[14]);
 
 export const getBoardData = async () => {
   const url = process.env.SPREADSHEET_URL;
 
-  const rawData: { c: { v: any }[] }[] = await fetch(url) // This is the type thats given cant change
-    .then((res) => res.text())
-    .then((res) => JSON.parse(res.substring(47).slice(0, -2))?.table?.rows); // strip weird data header
-  return rawData
-    .map((row) => row.c) // Map row object to row data array
-    .map((userData) => ({
-      name: getName(userData),
-      org: getOrg(userData),
-      title: getTitle(userData),
-      specialization: getSpecialization(userData),
-      profile_image: getImage(userData),
-      email: getUCSDEmail(userData),
-      linkedin_link: getLinkedIn(userData),
-      personal_link: getWebsite(userData),
-    }))
-    .filter((user) => user.name !== "") // Filter out missing rows
-    .filter((user) => user.org !== ""); // Filter out members at large
+  const data: BoardMemberProps[] = await fetch(url)
+    .then(res => res.text())
+    .then(res => JSON.parse(res.substring(47).slice(0, -2))) // only get object
+    .then(res => {
+      const cols = res.table.cols.map((col, idx) => {
+        return { idx, label: col.label };
+      });
+      const colMap = {};
+      cols.forEach(colHeader => {
+        colMap[colHeader.label.toLowerCase()] = colHeader.idx;
+      });
+      colMap["team"] = 0; // Team shall always be the first column
+
+      const rows = res.table.rows
+        .map(row => row.c)
+        .map(row => {
+          const get = label => row[colMap[label.toLowerCase()]]?.v ?? ""; // helper function for repetitive task
+          const userData: BoardMemberProps = {
+            name: get("Name"), // use spreadsheet column headers to find data
+            org: get("Team").toLowerCase(),
+            title: get("Position"),
+            email: get("ACM Email"),
+            profile_image: get("Profile Picture"),
+            personal_link: get("Website"),
+            linkedin_link: formatLinkedIn(get("LinkedIn")),
+          };
+          return userData;
+        })
+        .filter(user => user.name) // don't include anyone missing a name
+        .filter(user => user.org && user.org !== "members at large"); // only show users in an actual org (not members at large)
+
+      return rows;
+    });
+  console.log(data);
+
+  return data;
 };

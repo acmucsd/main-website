@@ -5,7 +5,7 @@ const formatLinkedIn = val => {
 };
 
 export const getBoardData = async () => {
-  const url = process.env.SPREADSHEET_URL;
+  const url = process.env.SPREADSHEET_URL; // Default value can be found at https://vercel.com/acmucsd/main-website/settings/environment-variables
 
   const data: BoardMemberProps[] = await fetch(url)
     .then(res => res.text())
@@ -40,7 +40,5 @@ export const getBoardData = async () => {
 
       return rows;
     });
-  console.log(data);
-
   return data;
 };

@@ -8,8 +8,8 @@ export interface BoardMemberProps {
   name: string;
   org: string;
   title: string;
-  email: string;
+  email?: string;
   profile_image: string;
-  personal_link: string;
-  linkedin_link: string;
+  personal_link?: string;
+  linkedin_link?: string;
 }

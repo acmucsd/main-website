@@ -28,15 +28,17 @@ export const getBoardData = async () => {
             name: get("Name"), // use spreadsheet column headers to find data
             org: get("Team").toLowerCase(),
             title: get("Position"),
-            email: get("ACM Email"),
             profile_image: get("Profile Picture"),
-            personal_link: get("Website"),
-            linkedin_link: formatLinkedIn(get("LinkedIn")),
+            email: get("ACM Email") || undefined,
+            personal_link: get("Website") || undefined,
+            linkedin_link: formatLinkedIn(get("LinkedIn")) || undefined,
           };
           return userData;
         })
-        .filter(user => user.name) // don't include anyone missing a name
-        .filter(user => user.org && user.org !== "members at large"); // only show users in an actual org (not members at large)
+        .filter(user => user.name) // name is required
+        .filter(user => user.org && user.org !== "members at large") // valid suborg is required
+        .filter(user => user.title) // position title is required
+        .filter(user => user.profile_image); // image url is required
 
       return rows;
     });

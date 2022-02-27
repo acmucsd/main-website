@@ -29,9 +29,9 @@ export const getBoardData = async () => {
             org: get("Team").toLowerCase(),
             title: get("Position"),
             profile_image: get("Profile Picture"),
-            email: get("ACM Email") || undefined,
-            personal_link: get("Website") || undefined,
-            linkedin_link: formatLinkedIn(get("LinkedIn")) || undefined,
+            email: get("ACM Email") || null,
+            personal_link: get("Website") || null,
+            linkedin_link: formatLinkedIn(get("LinkedIn")) || null,
           };
           return userData;
         })

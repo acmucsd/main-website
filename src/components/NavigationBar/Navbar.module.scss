@@ -1,3 +1,5 @@
+@use "src/styles/colors" as colors;
+
 .navbarWrapper {
   position: fixed;
   top: 0;
@@ -7,7 +9,7 @@
   white-space: nowrap;
 
   .navbar {
-    background-color: #fff;
+    background-color: colors.$white;
     z-index: 20;
     font-size: 18px;
     width: 100%;
@@ -33,7 +35,7 @@
         }
         > p {
           font-size: 16px;
-          color: black;
+          color: colors.$black;
           margin-left: 4px;
           margin-bottom: 2px;
         }
@@ -53,7 +55,7 @@
         display: flex;
         align-items: center;
         text-decoration: none;
-        color: black;
+        color: colors.$black;
         margin-right: 32px;
       }
 
@@ -69,8 +71,8 @@
         height: 35px;
         width: 150px;
 
-        color: white;
-        background-color: black;
+        color: colors.$white;
+        background-color: colors.$black;
         border-radius: 0.5em;
         margin-right: 32px;
 
@@ -87,12 +89,12 @@
       height: 20px;
       margin: 0 30px;
       padding: 0;
-      background-color: white;
+      background-color: colors.$white;
       .bar1 {
         width: 40px;
         height: 5px;
         border-radius: 2px;
-        background-color: black;
+        background-color: colors.$black;
         position: absolute;
         top: 1.5px;
         transition: 0.2s cubic-bezier(0, 0.1, 0.9, 1) all;
@@ -108,7 +110,7 @@
         width: 23px;
         height: 5px;
         border-radius: 2px;
-        background-color: black;
+        background-color: colors.$black;
         position: absolute;
         right: 0;
         bottom: 1.5px;
@@ -131,7 +133,7 @@
   .mobileNav {
     // top: 83px;
     width: 100vw;
-    background-color: white;
+    background-color: colors.$white;
     position: relative;
     z-index: -1;
     display: flex;
@@ -147,10 +149,11 @@
     .navItem {
       width: 100%;
       text-align: center;
-      color: black;
+      color: colors.$black;
       transition: 0.2s ease-in-out all;
+      text-decoration: underline solid transparent;
       &:hover {
-        text-decoration: underline solid transparent;
+        text-decoration: underline solid currentColor;
       }
     }
   }
@@ -161,12 +164,12 @@
     bottom: -0.4em;
     background: linear-gradient(
       270deg,
-      #ff6f6f 0%,
-      #f9a857 18.75%,
-      #80ce1c 36.98%,
-      #51c0c0 55.73%,
-      #62b0ff 75%,
-      #816dff 100%
+      colors.$red 0%,
+      colors.$orange 18.75%,
+      colors.$green 36.98%,
+      colors.$turquoise 55.73%,
+      colors.$blue 75%,
+      colors.$purple 100%
     );
   }
 }

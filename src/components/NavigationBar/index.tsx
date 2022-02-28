@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import ACMLogo from "public/assets/ACMWhiteLogo.png";
-import s from "src/styles/modules/App.module.scss";
+import s from "src/components/NavigationBar/Navbar.module.scss";
 import { Size, useWindowSize } from "src/utils";
 
 const navLinks = [

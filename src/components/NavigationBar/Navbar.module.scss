@@ -81,6 +81,9 @@
           transition: 0.3s;
         }
       }
+      &.hidden {
+        display: none;
+      }
     }
 
     // toggle button for mobile menu is only visible on mobile, otherwise hidden
@@ -125,6 +128,9 @@
           top: 5px;
           right: 0;
         }
+      }
+      &.hidden {
+        display: none;
       }
     }
   }
@@ -173,9 +179,4 @@
       colors.$purple 100%
     );
   }
-}
-
-// we use this class to either hide the navlinks or mobile menu toggle based on viewport width
-.hidden {
-  display: none;
 }

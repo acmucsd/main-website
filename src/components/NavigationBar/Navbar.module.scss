@@ -148,7 +148,7 @@
     line-height: 300%;
     transition: 0.3s ease-in-out;
     // mobile menu is hidden by positioning under fixed navbar, we open it by sliding it out
-    margin-top: -15rem;
+    margin-top: -18rem;
     &.open {
       margin-top: 0;
     }

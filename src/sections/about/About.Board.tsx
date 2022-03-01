@@ -20,9 +20,7 @@ import HackEmpty from "public/assets/board-filters/hack-empty.svg";
 import InnovateSelected from "public/assets/board-filters/innovate-selected.svg";
 import InnovateEmpty from "public/assets/board-filters/innovate-empty.svg";
 
-
-import BoardData from "src/board-data.json";
-const members_list = BoardData;
+import { BoardMemberProps } from "src/types";
 
 const filter = (filters, members_list) => {
   if (filters.length == 0) {
@@ -38,17 +36,16 @@ const filter = (filters, members_list) => {
 const renderFilters = (filters, setFilters) => {};
 interface AboutBoardProps {
   isMobile: boolean;
+  board: BoardMemberProps[];
 }
-const AboutBoard: React.FC<AboutBoardProps> = ({ isMobile }) => {
+const AboutBoard: React.FC<AboutBoardProps> = ({ isMobile, board }) => {
   const [filters, setFilters] = useState([]);
-  const [displayList, setDisplayList] = useState(members_list);
+  const [displayList, setDisplayList] = useState(board);
 
   useEffect(() => {
-    setDisplayList(filter(filters, members_list));
-  }, [filters]);
-  useEffect(() => {
-    setDisplayList(filter(filters, members_list));
-  }, [filters]);
+    setDisplayList(filter(filters, board));
+  }, [board, filters]);
+
   return (
     <section className="about__board">
       <h1 className="about__board__title">Meet the Board</h1>

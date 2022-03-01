@@ -4,9 +4,10 @@ import BoardCard from "src/components/BoardCard";
 import LeftArrow from "public/assets/left-arrow.svg";
 
 import RightArrow from "public/assets/right-arrow.svg";
+import { BoardMemberProps } from "src/types/index";
 
 interface BoardGridProps {
-  members_list: unknown[];
+  members_list: BoardMemberProps[];
   isMobile: boolean;
 }
 const generateCurrentPage = (members_list, page) => {

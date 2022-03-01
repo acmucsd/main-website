@@ -5,10 +5,10 @@ import s from "src/components/NavigationBar/Navbar.module.scss";
 import { Size, useWindowSize } from "src/utils";
 
 const navLinks = [
-  { to: "#contact", text: "Contact" },
-  { to: "/sponsor", text: "Sponsor" },
-  { to: "/communities", text: "Communities" },
   { to: "/about", text: "About Us" },
+  { to: "/communities", text: "Communities" },
+  { to: "/sponsor", text: "Sponsor" },
+  { to: "#contact", text: "Contact" },
 ];
 
 const NavigationBar: React.FC = () => {
@@ -66,6 +66,9 @@ const NavigationBar: React.FC = () => {
             <a className={`${s.navItem}`}>{link.text}</a>
           </Link>
         ))}
+        <Link href={"https://members.acmucsd.com/login"}>
+          <a className={s.navItem}>Member Login</a>
+        </Link>
       </div>
 
       {/* Bottom Rainbow */}

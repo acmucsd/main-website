@@ -8,7 +8,6 @@ import "src/components/BoardGrid/styles.scss";
 import "src/components/Button/styles.scss";
 import "src/components/CommunitiesGrid/styles.scss";
 import "src/components/Footer/styles.scss";
-import "src/components/NavigationBar/styles.scss";
 import "src/components/ScrollDownArrow/styles.scss";
 import "src/components/Statistic/styles.scss";
 // section css imports
@@ -28,7 +27,7 @@ const MyApp = ({ Component, pageProps }) => (
         margin: `0 auto`,
         maxWidth: 960,
         minHeight: 960,
-        padding: `81px 0`,
+        padding: `85px 0`,
       }}
     >
       <main>

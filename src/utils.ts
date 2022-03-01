@@ -111,3 +111,20 @@ export function useWindowSize(): Size {
   }, []);
   return windowSize;
 }
+
+export const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "June",
+  "July",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+export const days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];

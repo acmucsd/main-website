@@ -8,7 +8,7 @@ const EventCard: React.FC<{
   title: string;
   location: string;
   time: string;
-  facebookUrl: string;
+  facebookUrl?: string;
 }> = ({ month, date, day, title, org, location, time, facebookUrl }) => (
   <div className={s.card}>
     <div className={s.cardHeader}>
@@ -24,9 +24,11 @@ const EventCard: React.FC<{
       <h3 className={s.eventTime}>{time}</h3>
     </div>
     <div className={s.cardFooter}>
-      <a href={facebookUrl}>
-        <img src="/assets/facebook.svg" alt="" width={20} height={20} className={s.footerIcon} />
-      </a>
+      {!facebookUrl ? null : (
+        <a href={facebookUrl}>
+          <img src="/assets/facebook.svg" alt="" width={20} height={20} className={s.footerIcon} />
+        </a>
+      )}
     </div>
   </div>
 );

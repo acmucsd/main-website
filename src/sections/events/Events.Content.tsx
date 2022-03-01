@@ -27,7 +27,7 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
             title={event.title}
             location={event.location}
             time={getDateTime(event).time}
-            facebookUrl={"https://facebook.com"}
+            facebookUrl={null} // TODO: Facebook url is not currently passed in from API
           />
         ))}
       </div>

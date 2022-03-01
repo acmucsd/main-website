@@ -1,0 +1,182 @@
+@use "src/styles/colors" as colors;
+
+.navbarWrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-weight: bold;
+  z-index: 10;
+  white-space: nowrap;
+
+  // container for fixed navbar (desktop and mobile)
+  .navbar {
+    background-color: colors.$white;
+    z-index: 20;
+    font-size: 18px;
+    width: 100%;
+
+    height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // left side of navbar is just the acm logo
+    .left {
+      height: 78px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      margin-left: 32px;
+      a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+        > img {
+          height: 60px;
+          margin: 0;
+        }
+        > p {
+          font-size: 16px;
+          color: colors.$black;
+          margin-left: 4px;
+          margin-bottom: 2px;
+        }
+      }
+    }
+
+    // navbar right side contains all navlinks on desktop
+    .right {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+
+      .navItem {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: colors.$black;
+        margin-right: 32px;
+      }
+
+      .loginButton {
+        height: 100%;
+        align-self: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+
+        height: 35px;
+        width: 150px;
+
+        color: colors.$white;
+        background-color: colors.$black;
+        border-radius: 0.5em;
+        margin-right: 32px;
+
+        &:hover {
+          opacity: 0.85;
+          transition: 0.3s;
+        }
+      }
+      &.hidden {
+        display: none;
+      }
+    }
+
+    // toggle button for mobile menu is only visible on mobile, otherwise hidden
+    .toggleIcon {
+      position: relative;
+      width: 40px;
+      height: 20px;
+      margin: 0 30px;
+      padding: 0;
+      background-color: colors.$white;
+
+      // the toggle icon is composed of two bars we can separately animate between a hamburger icon and an x icon (default is hamburger, we have .open class we can toggle to rotate into the shape of an x)
+      .bar1 {
+        width: 40px;
+        height: 5px;
+        border-radius: 2px;
+        background-color: colors.$black;
+        position: absolute;
+        top: 1.5px;
+        transition: 0.3s ease-in-out all;
+
+        &.open {
+          transform: rotate(45deg);
+          top: 5px;
+          right: 0;
+        }
+      }
+
+      .bar2 {
+        width: 23px;
+        height: 5px;
+        border-radius: 2px;
+        background-color: colors.$black;
+        position: absolute;
+        right: 0;
+        bottom: 1.5px;
+        transition: 0.3s ease-in-out all;
+
+        &.open {
+          transform: rotate(-45deg);
+          width: 40px;
+          top: 5px;
+          right: 0;
+        }
+      }
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+
+  // menu div for links only on mobile version
+  .mobileNav {
+    width: 100vw;
+    background-color: colors.$white;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    line-height: 300%;
+    transition: 0.3s ease-in-out;
+    // mobile menu is hidden by positioning under fixed navbar, we open it by sliding it out
+    margin-top: -15rem;
+    &.open {
+      margin-top: 0;
+    }
+    .navItem {
+      width: 100%;
+      text-align: center;
+      color: colors.$black;
+      transition: 0.3s ease-in-out all;
+      text-decoration: underline solid transparent;
+      &:hover {
+        text-decoration: underline solid currentColor;
+      }
+    }
+  }
+
+  // rainbow bar is always visible below navbar, positioned to be at the bottom of the container even when mobile slides out and height changes
+  .rainbow {
+    width: 100vw;
+    height: 0.4em;
+    bottom: -0.4em;
+    background: linear-gradient(
+      270deg,
+      colors.$red 0%,
+      colors.$orange 18.75%,
+      colors.$green 36.98%,
+      colors.$turquoise 55.73%,
+      colors.$blue 75%,
+      colors.$purple 100%
+    );
+  }
+}

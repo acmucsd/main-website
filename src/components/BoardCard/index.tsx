@@ -5,18 +5,9 @@ import AIDefault from "public/assets/default-board-images/ai-default.svg";
 import CyberDefault from "public/assets/default-board-images/cyber-default.svg";
 import HackDefault from "public/assets/default-board-images/hack-default.svg";
 import InnovateDefault from "public/assets/default-board-images/innovate-default.svg";
-
-interface BoardMember {
-  name: string;
-  org: string;
-  title: string;
-  email: string;
-  profile_image: string;
-  personal_link: string;
-  linkedin_link: string;
-}
+import { BoardMemberProps } from "src/types/index";
 interface BoardCardProps {
-  boardmember: BoardMember;
+  boardmember: BoardMemberProps;
 }
 
 const defaultProps: BoardCardProps = {

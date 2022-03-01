@@ -9,8 +9,10 @@ import AboutMembership from "src/sections/about/About.Membership";
 import AboutBoard from "src/sections/about/About.Board";
 
 import HeroImage from "public/assets/about-images/about-hero.png";
+import { BoardMemberProps } from "src/types";
+import { getBoardData } from "src/api/BoardAPI";
 
-const AboutPage: React.FC = () => {
+const AboutPage: React.FC<{ board: BoardMemberProps[] }> = ({ board }) => {
   const size: Size = useWindowSize();
   const [isMobile, setIsMobile] = useState(false);
 
@@ -29,9 +31,19 @@ const AboutPage: React.FC = () => {
       <AboutHero isMobile={isMobile} image={HeroImage.src} />
       <AboutGetInvolved isMobile={isMobile} />
       {isMobile ? null : <AboutMembership />}
-      <AboutBoard isMobile={isMobile} />
+      <AboutBoard isMobile={isMobile} board={board} />
     </>
   );
 };
 
 export default AboutPage;
+
+export async function getStaticProps() {
+  const boardData = await getBoardData();
+  return {
+    props: {
+      board: boardData || [],
+    },
+    revalidate: 1 * 60 * 60, // generate once every hour (in seconds)
+  };
+}

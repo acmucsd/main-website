@@ -78,7 +78,7 @@
 
         &:hover {
           opacity: 0.85;
-          transition: 200ms;
+          transition: 0.3s;
         }
       }
     }
@@ -97,7 +97,7 @@
         background-color: colors.$black;
         position: absolute;
         top: 1.5px;
-        transition: 0.2s cubic-bezier(0, 0.1, 0.9, 1) all;
+        transition: 0.3s ease-in-out all;
 
         &.open {
           transform: rotate(45deg);
@@ -114,7 +114,7 @@
         position: absolute;
         right: 0;
         bottom: 1.5px;
-        transition: 0.2s cubic-bezier(0, 0.1, 0.9, 1) all;
+        transition: 0.3s ease-in-out all;
 
         &.open {
           transform: rotate(-45deg);
@@ -141,7 +141,7 @@
     align-items: center;
     line-height: 300%;
     margin-top: -15rem;
-    transition: 0.4s ease-in-out;
+    transition: 0.3s ease-in-out;
     &.open {
       margin-top: 0;
     }
@@ -149,7 +149,7 @@
       width: 100%;
       text-align: center;
       color: colors.$black;
-      transition: 0.2s ease-in-out all;
+      transition: 0.3s ease-in-out all;
       text-decoration: underline solid transparent;
       &:hover {
         text-decoration: underline solid currentColor;

@@ -64,7 +64,9 @@ const NavigationBar: React.FC = () => {
       <div className={`${s.mobileNav} ${menuOpen && s.open}`}>
         {navLinks.map((link, key) => (
           <Link key={key} href={link.to}>
-            <a className={`${s.navItem}`}>{link.text}</a>
+            <a className={`${s.navItem}`} onClick={() => setMenuOpen(false)}>
+              {link.text}
+            </a>
           </Link>
         ))}
         <Link href={"https://members.acmucsd.com/login"}>

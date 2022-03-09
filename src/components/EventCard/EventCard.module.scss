@@ -1,80 +1,10 @@
-.eventsContainer {
-  margin: 0 3rem;
-  width: auto;
-}
-
-// .header {
-//   margin-top: 1.5rem;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-
-// .headerText {
-//   width: fit-content;
-//   margin: 0;
-//   padding: 0;
-// }
-
-// .filterContainer {
-//   display: flex;
-//   flex-direction: row;
-//   gap: 0 10px;
-// }
-
-// .filterButton {
-//   width: 7.5rem;
-//   height: 2rem;
-//   padding: 0;
-//   background: #ffffff;
-//   border: 1px solid black;
-//   box-sizing: border-box;
-//   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
-//   border-radius: 10px;
-//   font-family: DM Sans;
-//   font-style: normal;
-//   font-weight: bold;
-//   font-size: 20px;
-//   line-height: 100%;
-
-//   &.general {
-//     border-color: #62b0ff;
-//     color: #62b0ff;
-//   }
-//   &.hack {
-//     border-color: #f9a857;
-//     color: #f9a857;
-//   }
-//   &.cyber {
-//     border-color: #51c0c0;
-//     color: #51c0c0;
-//   }
-//   &.innovate {
-//     border-color: #816dff;
-//     color: #816dff;
-//   }
-//   &.ai {
-//     border-color: #ff6f6f;
-//     color: #ff6f6f;
-//   }
-// }
-
-.cardContainer {
-  width: 100%;
-  display: grid;
-  gap: 2rem 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  justify-items: center;
-  align-items: center;
-  margin-top: 2rem;
-}
+@use "src/styles/colors" as colors;
 
 .card {
   width: 100%;
   height: 177px;
-  background: #ffffff;
-  box-shadow: 0px 1px 6px #000000;
+  background: colors.$white;
+  box-shadow: 0px 1px 6px colors.$black;
   border-radius: 20px;
   position: relative;
   padding: 0.75rem;
@@ -94,7 +24,7 @@
       font-weight: normal;
       font-size: 25px;
       line-height: 100%;
-      color: #333333;
+      color: colors.$black;
       margin: 0;
       display: inline;
     }
@@ -106,7 +36,7 @@
       font-weight: normal;
       font-size: 11px;
       line-height: 100%;
-      color: #000000;
+      color: colors.$black;
       text-transform: uppercase;
     }
   }
@@ -128,19 +58,19 @@
       max-height: 40px;
       margin: 0;
       &.general {
-        color: #62b0ff;
+        color: colors.$blue;
       }
       &.innovate {
-        color: #816dff;
+        color: colors.$purple;
       }
       &.hack {
-        color: #f9a857;
+        color: colors.$orange;
       }
       &.cyber {
-        color: #51c0c0;
+        color: colors.$turquoise;
       }
       &.ai {
-        color: #ff6f6f;
+        color: colors.$red;
       }
     }
     .eventLocation,
@@ -151,7 +81,7 @@
       font-size: 13px;
       line-height: 17px;
 
-      color: #333333;
+      color: colors.$black;
       margin: 0;
     }
   }

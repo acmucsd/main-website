@@ -1,4 +1,4 @@
-import s from "src/styles/modules/Events.module.scss";
+import s from "./EventCard.module.scss";
 
 const EventCard: React.FC<{
   month: string;
@@ -24,6 +24,15 @@ const EventCard: React.FC<{
       <h3 className={s.eventTime}>{time}</h3>
     </div>
     <div className={s.cardFooter}>
+      <a role="button">
+        <img
+          src="/assets/calendar.svg"
+          alt=""
+          width={20}
+          height={20}
+          className={s.footerIcon}
+        ></img>
+      </a>
       {!facebookUrl ? null : (
         <a href={facebookUrl}>
           <img src="/assets/facebook.svg" alt="" width={20} height={20} className={s.footerIcon} />

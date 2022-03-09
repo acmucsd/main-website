@@ -1,5 +1,7 @@
 @use "src/styles/colors" as colors;
 
+$mobile: 920px;
+
 .eventsContainer {
   margin: 0 3rem;
   width: auto;
@@ -23,7 +25,7 @@
     flex-direction: row;
     gap: 0 10px;
 
-    @media only screen and (max-width: 920px) {
+    @media only screen and (max-width: $mobile) {
       display: none;
     }
 

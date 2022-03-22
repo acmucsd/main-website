@@ -13,7 +13,6 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
       events.filter(event => {
         if (activeFilter == "all") return true;
         else {
-          console.log(event.committee);
           return event.committee.toLowerCase() == activeFilter;
         }
       })
@@ -90,6 +89,7 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
             date={new Date(event.start).getDate()}
             day={days[new Date(event.start).getDay()]}
             org={event.committee}
+            uuid={event.uuid}
             title={event.title}
             location={event.location}
             time={getDateTime(event).time}

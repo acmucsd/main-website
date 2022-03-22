@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { formatURLEventTitle } from "src/utils";
 import s from "./EventCard.module.scss";
 
 const EventCard: React.FC<{
@@ -12,7 +13,7 @@ const EventCard: React.FC<{
   facebookUrl?: string;
   uuid: string;
 }> = ({ month, date, day, title, org, location, time, facebookUrl, uuid }) => (
-  <Link href={`/event/${uuid}`} passHref>
+  <Link href={`/events/${formatURLEventTitle(title)}-${uuid}`} passHref>
     <div className={s.card}>
       <div className={s.cardHeader}>
         <h1 className={s.cardDate}>
@@ -28,13 +29,7 @@ const EventCard: React.FC<{
       </div>
       <div className={s.cardFooter}>
         <a role="button">
-          <img
-            src="/assets/calendar.svg"
-            alt=""
-            width={20}
-            height={20}
-            className={s.footerIcon}
-          ></img>
+          <img src="/assets/calendar.svg" alt="" width={20} height={20} className={s.footerIcon} />
         </a>
         {!facebookUrl ? null : (
           <a href={facebookUrl}>

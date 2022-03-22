@@ -21,7 +21,7 @@ const NavigationBar: React.FC = () => {
 
   // Switch to mobile less than 920px
   useEffect(() => {
-    setMobile(size.width < 920);
+    setMobile(size.width <= 960);
   }, [size]);
 
   // If they go back to desktop size, don't keep the menu open

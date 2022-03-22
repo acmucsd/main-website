@@ -1,6 +1,6 @@
 @use "src/styles/colors" as colors;
 
-$mobile: 920px;
+$mobile: 960px;
 
 .eventsContainer {
   margin: 0 3rem;
@@ -90,7 +90,7 @@ $mobile: 920px;
   .mobileFilters {
     display: none;
 
-    @media only screen and (max-width: 920px) {
+    @media only screen and (max-width: $mobile) {
       display: block;
     }
   }

@@ -19,52 +19,42 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
     );
   }, [activeFilter, events]);
 
+  const filter = (committee: string): void => {
+    if (activeFilter == committee) setActiveFilter("all");
+    else setActiveFilter(committee);
+  };
+
   return (
     <div className={s.eventsContainer}>
       <div className={s.header}>
         <h1 className={s.headerText}>Events</h1>
         <div className={s.filterContainer}>
           <button
-            onClick={() => {
-              if (activeFilter == "general") setActiveFilter("all");
-              else setActiveFilter("general");
-            }}
+            onClick={() => filter("general")}
             className={`${s.filterButton} ${s.general} ${activeFilter == "general" && s.active}`}
           >
             General
           </button>
           <button
-            onClick={() => {
-              if (activeFilter == "hack") setActiveFilter("all");
-              else setActiveFilter("hack");
-            }}
+            onClick={() => filter("hack")}
             className={`${s.filterButton} ${s.hack} ${activeFilter == "hack" && s.active}`}
           >
             Hack
           </button>
           <button
-            onClick={() => {
-              if (activeFilter == "cyber") setActiveFilter("all");
-              else setActiveFilter("cyber");
-            }}
+            onClick={() => filter("cyber")}
             className={`${s.filterButton} ${s.cyber} ${activeFilter == "cyber" && s.active}`}
           >
             Cyber
           </button>
           <button
-            onClick={() => {
-              if (activeFilter == "innovate") setActiveFilter("all");
-              else setActiveFilter("innovate");
-            }}
+            onClick={() => filter("innovate")}
             className={`${s.filterButton} ${s.innovate} ${activeFilter == "innovate" && s.active}`}
           >
             Innovate
           </button>
           <button
-            onClick={() => {
-              if (activeFilter == "ai") setActiveFilter("all");
-              else setActiveFilter("ai");
-            }}
+            onClick={() => filter("ai")}
             className={`${s.filterButton} ${s.ai} ${activeFilter == "ai" && s.active}`}
           >
             AI
@@ -93,7 +83,7 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
             title={event.title}
             location={event.location}
             time={getDateTime(event).time}
-            facebookUrl={null} // TODO: Facebook url is not currently passed in from API
+            facebookUrl={event.facebookUrl}
           />
         ))}
       </div>

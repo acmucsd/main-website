@@ -42,7 +42,7 @@ export const getAbsoluteURL = (str: string): string | undefined => {
 };
 
 export const formatURLEventTitle = (title: string): string => {
-  return title.toLowerCase().trim().replaceAll(" ", "-");
+  return title.toLowerCase().trim().replace(/ /g, "-");
 };
 /**
  * Contains timing information for an event.

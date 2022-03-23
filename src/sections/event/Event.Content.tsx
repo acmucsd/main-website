@@ -16,7 +16,7 @@ const EventContent: React.FC<{ event: EventObject }> = ({ event }) => {
         <Link href={"/events"}>
           <a className={s.backButton}>&lt; Back to Events</a>
         </Link>
-        <h3 className={`${s.eventType} ${s[committee.toLowerCase()]}`}>General Event</h3>
+        <h3 className={`${s.eventType} ${s[committee.toLowerCase()]}`}>{committee} Event</h3>
       </div>
       <div className={s.eventBody}>
         <img src={event.cover} className={s.eventCover} alt="Event Cover Photo" />

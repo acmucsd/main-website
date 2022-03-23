@@ -72,7 +72,9 @@
       .titleLocationGrid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(2, 2rem);
+        grid-template-rows: 1fr 1fr;
+        row-gap: 0.25rem;
+        column-gap: 1rem;
         align-items: center;
 
         @media screen and (max-width: 960px) {
@@ -119,7 +121,6 @@
         .location {
           grid-column: 2;
           grid-row: 1;
-          text-align: end;
 
           @media screen and (max-width: 960px) {
             grid-column: 1;
@@ -131,10 +132,9 @@
           font-style: normal;
           font-weight: 400;
           font-size: 18px;
-          text-align: right;
+          text-align: end;
           margin: 0;
 
-          white-space: nowrap;
           color: #333333;
         }
 

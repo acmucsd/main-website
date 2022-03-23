@@ -53,17 +53,6 @@ const EventContent: React.FC<{ event: EventObject }> = ({ event }) => {
               <img src="/assets/calendar.svg" alt="Add to Calendar" width={30} height={30} />
               Save to Google Calendar
             </a>
-            {!facebookUrl ? null : (
-              <a className={s.eventLink}>
-                <img
-                  src="/assets/facebook-dark.svg"
-                  alt="View on Facebook"
-                  width={30}
-                  height={30}
-                />
-                View on Facebook
-              </a>
-            )}
           </div>
           <p className={s.eventDescription}>{description}</p>
         </div>

@@ -38,8 +38,10 @@ const handleErrors = (response: Response) => {
   return response.json();
 };
 
-const getAllEvents = async (): Promise<EventsArray | undefined> => {
-  const api_url = `${EVENT_API}/future`;
+const getAllEvents = async (
+  type: "past" | "future" | "" = ""
+): Promise<EventsArray | undefined> => {
+  const api_url = `${EVENT_API}/${type}`;
 
   try {
     const response: Response = await fetch(api_url);

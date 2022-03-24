@@ -24,7 +24,7 @@ const IndexPage: React.FC<{ events: Array<EventObject> }> = ({ events }) => (
 export default IndexPage;
 
 export async function getStaticProps() {
-  const events = await getAllEvents();
+  const events = await getAllEvents("future");
 
   return {
     props: {

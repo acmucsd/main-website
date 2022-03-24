@@ -12,7 +12,7 @@ export default EventPage;
 
 // Only render dynamic paths for actual events, don't need a fallback to generate if the link is wrong
 export async function getStaticPaths() {
-  const events = await getAllEvents();
+  const events = await getAllEvents("future");
   return {
     paths: events.map(event => ({
       params: {

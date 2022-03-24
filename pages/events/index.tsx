@@ -2,11 +2,14 @@ import { EventsArray, getAllEvents } from "src/api/EventsAPI";
 import SEO from "src/components/SEO";
 import EventsContent from "src/sections/events/Events.Content";
 
-const EventsPage: React.FC<{ events: EventsArray }> = ({ events }) => {
+const EventsPage: React.FC<{ futureEvents: EventsArray; pastEvents: EventsArray }> = ({
+  futureEvents,
+  pastEvents,
+}) => {
   return (
     <>
       <SEO title="Events" path="/events" />
-      <EventsContent events={events} />
+      <EventsContent events={futureEvents} />
     </>
   );
 };
@@ -14,10 +17,12 @@ const EventsPage: React.FC<{ events: EventsArray }> = ({ events }) => {
 export default EventsPage;
 
 export async function getStaticProps() {
-  const eventsData = await getAllEvents();
+  const futureEvents = await getAllEvents("future");
+  const pastEvents = await getAllEvents("past");
   return {
     props: {
-      events: eventsData || [],
+      futureEvents: futureEvents || [],
+      pastEvents: pastEvents || [],
     },
     revalidate: 1 * 60 * 60,
   };

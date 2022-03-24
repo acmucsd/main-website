@@ -2,7 +2,7 @@ import NotFoundPage from "pages/404";
 import { EventObject, getAllEvents, getEvent } from "src/api/EventsAPI";
 import SEO from "src/components/SEO";
 import EventContent from "src/sections/event/Event.Content";
-import { formatURLEventTitle } from "src/utils";
+import { formatURLEventTitle, getDateTime } from "src/utils";
 
 const EventPage: React.FC<{ event: EventObject }> = ({ event }) => {
   if (!event) return <NotFoundPage />;
@@ -11,7 +11,9 @@ const EventPage: React.FC<{ event: EventObject }> = ({ event }) => {
       <SEO
         title={event.title}
         path={`${formatURLEventTitle(event.title)}-${event.uuid}`}
-        description={event.description}
+        description={`${event.location} - ${getDateTime(event).time}\n\nEvent Description: ${
+          event.description
+        }`}
         image={event.cover}
       />
       <EventContent event={event} />;

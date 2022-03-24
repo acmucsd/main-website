@@ -64,6 +64,8 @@ const getEvent = async (uuid: string): Promise<EventObject | undefined> => {
   }
 };
 
+// Referencing this answer to save text in a file and download it
+// https://stackoverflow.com/questions/44656610/download-a-string-as-txt-file-in-react
 const createDownloadFile = (textContent: string, title: string): void => {
   const element = document.createElement("a");
   const file = new Blob([textContent], { type: "text/plain" });
@@ -81,7 +83,7 @@ const downloadICS = (event: EventObject): void => {
   const attributes: ics.EventAttributes = {
     start: [
       startDate.getFullYear(),
-      startDate.getMonth() + 1,
+      startDate.getMonth() + 1, // Library is 1-indexed rather than 0-indexed
       startDate.getDate(),
       startDate.getHours(),
       startDate.getMinutes(),
@@ -99,6 +101,8 @@ const downloadICS = (event: EventObject): void => {
   createDownloadFile(response.value, formatURLEventTitle(event.title));
 };
 
+// Referencing this link format - no official API documentation exists
+// https://github.com/InteractionDesignFoundation/add-event-to-calendar-docs/blob/main/services/google.md
 const saveToGoogleCal = ({ title, description, location, start, end }: EventObject): void => {
   const url = new URL("https://www.google.com/calendar/render?action=TEMPLATE");
   const params = new URLSearchParams(url.search);

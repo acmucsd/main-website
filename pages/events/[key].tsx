@@ -1,8 +1,10 @@
+import NotFoundPage from "pages/404";
 import { getAllEvents, getEvent } from "src/api/EventsAPI";
 import EventContent from "src/sections/event/Event.Content";
 import { formatURLEventTitle } from "src/utils";
 
 const EventPage = ({ event }) => {
+  if (!event) return <NotFoundPage />;
   return <EventContent event={event} />;
 };
 
@@ -12,14 +14,12 @@ export default EventPage;
 export async function getStaticPaths() {
   const events = await getAllEvents();
   return {
-    paths: events.map(event => {
-      return {
-        params: {
-          key: `${formatURLEventTitle(event.title)}-${event.uuid}`,
-        },
-      };
-    }),
-    fallback: false,
+    paths: events.map(event => ({
+      params: {
+        key: `${formatURLEventTitle(event.title)}-${event.uuid}`,
+      },
+    })),
+    fallback: "blocking",
   };
 }
 

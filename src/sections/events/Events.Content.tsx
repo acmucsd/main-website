@@ -1,7 +1,6 @@
 import { EventsArray } from "src/api/EventsAPI";
 import EventCard from "src/components/EventCard";
 import s from "./Events.module.scss";
-import { days, months, getDateTime } from "src/utils";
 import { useEffect, useState } from "react";
 
 const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
@@ -73,18 +72,7 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
       </div>
       <div className={s.cardContainer}>
         {visibleEvents.map((event, key) => (
-          <EventCard
-            key={key}
-            month={months[new Date(event.start).getMonth()]}
-            date={new Date(event.start).getDate()}
-            day={days[new Date(event.start).getDay()]}
-            org={event.committee}
-            uuid={event.uuid}
-            title={event.title}
-            location={event.location}
-            time={getDateTime(event).time}
-            facebookUrl={event.facebookUrl}
-          />
+          <EventCard key={key} event={event} />
         ))}
       </div>
       {visibleEvents.length !== 0 ? null : <div className={s.noEvents}>No Events :(</div>}

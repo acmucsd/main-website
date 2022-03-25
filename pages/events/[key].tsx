@@ -16,7 +16,7 @@ const EventPage: React.FC<{ event: EventObject }> = ({ event }) => {
         }`}
         image={event.cover}
       />
-      <EventContent event={event} />;
+      <EventContent event={event} />
     </>
   );
 };

@@ -60,7 +60,7 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
           </button>
         </div>
         <div className={s.mobileFilters}>
-          <select name="" id="">
+          <select onChange={e => setActiveFilter(e.target.value)}>
             <option value="all">All</option>
             <option value="general">General</option>
             <option value="innovate">Innovate</option>

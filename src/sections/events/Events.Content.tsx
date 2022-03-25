@@ -1,7 +1,6 @@
 import { EventsArray } from "src/api/EventsAPI";
 import EventCard from "src/components/EventCard";
 import s from "./Events.module.scss";
-import { days, months, getDateTime } from "src/utils";
 import { useEffect, useState } from "react";
 
 const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
@@ -13,12 +12,16 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
       events.filter(event => {
         if (activeFilter == "all") return true;
         else {
-          console.log(event.committee);
           return event.committee.toLowerCase() == activeFilter;
         }
       })
     );
   }, [activeFilter, events]);
+
+  const filter = (committee: string): void => {
+    if (activeFilter == committee) setActiveFilter("all");
+    else setActiveFilter(committee);
+  };
 
   return (
     <div className={s.eventsContainer}>
@@ -26,46 +29,31 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
         <h1 className={s.headerText}>Events</h1>
         <div className={s.filterContainer}>
           <button
-            onClick={() => {
-              if (activeFilter == "general") setActiveFilter("all");
-              else setActiveFilter("general");
-            }}
+            onClick={() => filter("general")}
             className={`${s.filterButton} ${s.general} ${activeFilter == "general" && s.active}`}
           >
             General
           </button>
           <button
-            onClick={() => {
-              if (activeFilter == "hack") setActiveFilter("all");
-              else setActiveFilter("hack");
-            }}
+            onClick={() => filter("hack")}
             className={`${s.filterButton} ${s.hack} ${activeFilter == "hack" && s.active}`}
           >
             Hack
           </button>
           <button
-            onClick={() => {
-              if (activeFilter == "cyber") setActiveFilter("all");
-              else setActiveFilter("cyber");
-            }}
+            onClick={() => filter("cyber")}
             className={`${s.filterButton} ${s.cyber} ${activeFilter == "cyber" && s.active}`}
           >
             Cyber
           </button>
           <button
-            onClick={() => {
-              if (activeFilter == "innovate") setActiveFilter("all");
-              else setActiveFilter("innovate");
-            }}
+            onClick={() => filter("innovate")}
             className={`${s.filterButton} ${s.innovate} ${activeFilter == "innovate" && s.active}`}
           >
             Innovate
           </button>
           <button
-            onClick={() => {
-              if (activeFilter == "ai") setActiveFilter("all");
-              else setActiveFilter("ai");
-            }}
+            onClick={() => filter("ai")}
             className={`${s.filterButton} ${s.ai} ${activeFilter == "ai" && s.active}`}
           >
             AI
@@ -84,17 +72,7 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
       </div>
       <div className={s.cardContainer}>
         {visibleEvents.map((event, key) => (
-          <EventCard
-            key={key}
-            month={months[new Date(event.start).getMonth()]}
-            date={new Date(event.start).getDate()}
-            day={days[new Date(event.start).getDay()]}
-            org={event.committee}
-            title={event.title}
-            location={event.location}
-            time={getDateTime(event).time}
-            facebookUrl={null} // TODO: Facebook url is not currently passed in from API
-          />
+          <EventCard key={key} event={event} />
         ))}
       </div>
       {visibleEvents.length !== 0 ? null : <div className={s.noEvents}>No Events :(</div>}

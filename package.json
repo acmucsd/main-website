@@ -9,6 +9,7 @@
     "isready": "npm run format && npm run lint && npm run build"
   },
   "dependencies": {
+    "ics": "^2.35.0",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-countup": "^6.1.1",

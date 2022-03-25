@@ -27,9 +27,7 @@ const filter = (filters, members_list) => {
     // assume all board
     return members_list;
   } else {
-    const displayList = members_list.filter((member) =>
-      filters.includes(member.org)
-    );
+    const displayList = members_list.filter(member => filters.includes(member.org));
     return displayList;
   }
 };
@@ -69,7 +67,7 @@ const AboutBoard: React.FC<AboutBoardProps> = ({ isMobile, board }) => {
             alt="general is now selected"
             src={GeneralSelected.src}
             onClick={() => {
-              setFilters(filters.filter((e) => e !== "general"));
+              setFilters(filters.filter(e => e !== "general"));
             }}
           />
         ) : (
@@ -85,22 +83,18 @@ const AboutBoard: React.FC<AboutBoardProps> = ({ isMobile, board }) => {
             alt="ai is now selected"
             src={AISelected.src}
             onClick={() => {
-              setFilters(filters.filter((e) => e !== "ai"));
+              setFilters(filters.filter(e => e !== "ai"));
             }}
           />
         ) : (
-          <img
-            alt="ai is not selected"
-            src={AIEmpty.src}
-            onClick={() => setFilters(["ai"])}
-          />
+          <img alt="ai is not selected" src={AIEmpty.src} onClick={() => setFilters(["ai"])} />
         )}
         {filters.includes("cyber") ? (
           <img
             alt="cyber is now selected"
             src={CyberSelected.src}
             onClick={() => {
-              setFilters(filters.filter((e) => e !== "cyber"));
+              setFilters(filters.filter(e => e !== "cyber"));
             }}
           />
         ) : (
@@ -115,7 +109,7 @@ const AboutBoard: React.FC<AboutBoardProps> = ({ isMobile, board }) => {
             src={HackSelected.src}
             alt="hack is selected"
             onClick={() => {
-              setFilters(filters.filter((e) => e !== "hack"));
+              setFilters(filters.filter(e => e !== "hack"));
             }}
           />
         ) : (
@@ -130,7 +124,7 @@ const AboutBoard: React.FC<AboutBoardProps> = ({ isMobile, board }) => {
             src={InnovateSelected.src}
             alt="innovate is selected"
             onClick={() => {
-              setFilters(filters.filter((e) => e !== "innovate"));
+              setFilters(filters.filter(e => e !== "innovate"));
             }}
           />
         ) : (

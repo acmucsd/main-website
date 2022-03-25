@@ -6,6 +6,7 @@ import { Size, useWindowSize } from "src/utils";
 
 const navLinks = [
   { to: "/about", text: "About Us" },
+  { to: "/events", text: "Events" },
   { to: "/communities", text: "Communities" },
   { to: "/sponsor", text: "Sponsor" },
   { to: "#contact", text: "Contact" },
@@ -18,9 +19,9 @@ const NavigationBar: React.FC = () => {
   const [mobile, setMobile] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  // Switch to mobile less than 920px
+  // Switch to mobile less than 960px
   useEffect(() => {
-    setMobile(size.width < 920);
+    setMobile(size.width <= 960);
   }, [size]);
 
   // If they go back to desktop size, don't keep the menu open

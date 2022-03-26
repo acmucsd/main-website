@@ -35,10 +35,12 @@ const HomeHero: React.FC = () => {
             </Typist>
             <div className="buttons">
               <Button
-                title="Join Us Now!"
-                link="https://members.acmucsd.com"
+                internalLink
+                title="Find Events"
+                link="/events"
                 type="primary"
               />
+              <a href="https://members.acmucsd.com" target={"_blank"} rel="noreferrer">Member Login {'>'}</a>
             </div>
           </div>
         </div>

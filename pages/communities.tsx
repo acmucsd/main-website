@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Size, useWindowSize } from "src/utils";
+import { Size, useWindowSize } from "src/utils/general";
 
 import SEO from "src/components/SEO";
 
@@ -18,7 +18,7 @@ const CommunitiesPage: React.FC = () => {
   return (
     <>
       <SEO
-        title="Communities"
+        title="Communities | ACM at UCSD"
         path="/communities"
         description="ACM at UCSD is one large community, but it is made up of several smaller communities focused on specific areas of technology."
         image={ACMWhiteLogo.src}

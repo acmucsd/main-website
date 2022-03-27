@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { downloadICS, EventObject, saveToGoogleCal } from "src/api/EventsAPI";
-import { days, getDateTime, months } from "src/utils";
+import { days, getDateTime, months } from "src/utils/general";
 import s from "./Event.module.scss";
 
 const EventContent: React.FC<{ event: EventObject }> = ({ event }) => {

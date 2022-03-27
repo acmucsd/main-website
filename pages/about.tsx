@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Size, useWindowSize } from "src/utils";
+import { Size, useWindowSize } from "src/utils/general";
 
 import SEO from "src/components/SEO";
 
@@ -23,7 +23,7 @@ const AboutPage: React.FC<{ board: BoardMemberProps[] }> = ({ board }) => {
   return (
     <>
       <SEO
-        title="About"
+        title="About | ACM at UCSD"
         path="/about"
         description="We are the Association for Computing Machinery at UCSD! We are an inclusive member-first community for all who are interested in the field of computing. We welcome all skill levels and majors!"
         image={HeroImage.src}

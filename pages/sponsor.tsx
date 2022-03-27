@@ -8,7 +8,7 @@ import SponsorHeroLogo from "public/assets/sponsor-images/sponsor_hero.png";
 const SponsorshipPage: React.FC = () => (
   <>
     <SEO
-      title="Sponsor"
+      title="Sponsor | ACM at UCSD"
       path="/sponsor"
       description="Impact a community of 1000+ aspiring developers, designers, and innovators!"
       image={SponsorHeroLogo.src}

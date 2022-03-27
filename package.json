@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@teamsupercell/typings-for-css-modules-loader": "^2.5.1",
+    "@types/gtag.js": "^0.0.10",
     "@types/node": "^17.0.14",
     "@types/react": "^17.0.38",
     "@types/react-typist": "^2.0.3",

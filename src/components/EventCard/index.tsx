@@ -11,7 +11,7 @@ const EventCard: React.FC<{
   const date = new Date(event.start).getDate();
   const day = days[new Date(event.start).getDay()];
   const time = getDateTime(event).time;
-  const { committee, uuid, title, location, facebookUrl } = event;
+  const { committee, uuid, title, location, eventLink } = event;
   return (
     <Link href={`/events/${formatURLEventTitle(title)}-${uuid}`} passHref>
       <div className={s.card}>
@@ -42,8 +42,8 @@ const EventCard: React.FC<{
               className={s.footerIcon}
             />
           </a>
-          {!facebookUrl ? null : (
-            <a href={facebookUrl}>
+          {!eventLink ? null : (
+            <a href={eventLink}>
               <img
                 src="/assets/facebook.svg"
                 alt=""

@@ -8,7 +8,7 @@ const EventContent: React.FC<{ event: EventObject }> = ({ event }) => {
   const date = new Date(event.start).getDate();
   const day = days[(new Date(event.start).getDay() + 6) % 7];
   const time = getDateTime(event).time;
-  const { committee, title, location, description, start, end, facebookUrl } = event;
+  const { committee, title, location, description, start, end, eventLink } = event;
 
   return (
     <div className={s.container}>

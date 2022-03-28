@@ -40,7 +40,7 @@ const HomeHero: React.FC = () => {
               <a
                 className="hero-btn"
                 href="https://members.acmucsd.com"
-                target={"_blank"}
+                target="_blank"
                 rel="noreferrer"
               >
                 Join Us &gt;

@@ -135,4 +135,4 @@ export const months = [
   "Dec",
 ];
 
-export const days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+export const days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];

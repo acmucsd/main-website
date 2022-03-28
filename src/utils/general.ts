@@ -68,23 +68,28 @@ export const getDateTime = (event: EventObject): EventTime => {
     result.date = `${startDate.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
+      timeZone: 'America/Los_Angeles'
     })} - ${endDate.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
+      timeZone: 'America/Los_Angeles'
     })}`;
   } else {
     result.date = startDate.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
+      timeZone: 'America/Los_Angeles'
     });
   }
 
   result.time = `${startDate.toLocaleTimeString("en-US", {
     hour: "numeric",
     minute: "2-digit",
+    timeZone: 'America/Los_Angeles'
   })} - ${endDate.toLocaleTimeString("en-US", {
     hour: "numeric",
     minute: "2-digit",
+    timeZone: 'America/Los_Angeles'
   })}`;
 
   return result;

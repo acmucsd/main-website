@@ -5,7 +5,6 @@ import "src/styles/reset.scss";
 // component css imports
 import "src/components/BoardCard/styles.scss";
 import "src/components/BoardGrid/styles.scss";
-import "src/components/Button/styles.scss";
 import "src/components/CommunitiesGrid/styles.scss";
 import "src/components/Footer/styles.scss";
 import "src/components/ScrollDownArrow/styles.scss";

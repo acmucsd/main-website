@@ -2,7 +2,6 @@ import Typist from "react-typist";
 import "react-typist/dist/Typist.css";
 import Image from "next/image";
 
-import Button from "src/components/Button";
 import ScrollDownArrow from "src/components/ScrollDownArrow";
 import CoolLogo from "public/assets/cool_logo_1000x1000.png";
 import CoolLogoMobile from "public/assets/cool_logo.png";

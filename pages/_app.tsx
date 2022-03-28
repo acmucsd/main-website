@@ -22,6 +22,7 @@ import Footer from "src/components/Footer";
 const MyApp = ({ Component, pageProps }) => (
   <>
     <NavigationBar />
+
     <div
       style={{
         margin: `0 auto`,

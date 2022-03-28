@@ -2,10 +2,10 @@ import Typist from "react-typist";
 import "react-typist/dist/Typist.css";
 import Image from "next/image";
 
-import Button from "src/components/Button";
 import ScrollDownArrow from "src/components/ScrollDownArrow";
 import CoolLogo from "public/assets/cool_logo_1000x1000.png";
 import CoolLogoMobile from "public/assets/cool_logo.png";
+import Link from "next/link";
 
 const HomeHero: React.FC = () => {
   return (
@@ -34,11 +34,17 @@ const HomeHero: React.FC = () => {
               <span>community.&nbsp;</span>
             </Typist>
             <div className="buttons">
-              <Button
-                title="Join Us Now!"
-                link="https://members.acmucsd.com"
-                type="primary"
-              />
+              <Link href="/events">
+                <a className="hero-btn btn-outlined">Find Events &gt;</a>
+              </Link>
+              <a
+                className="hero-btn"
+                href="https://members.acmucsd.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Join Us &gt;
+              </a>
             </div>
           </div>
         </div>

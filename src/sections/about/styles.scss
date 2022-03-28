@@ -1,4 +1,4 @@
-@import "src/styles/colors.scss";
+@use "src/styles/colors.scss" as colors;
 
 .about {
   &__hero {
@@ -51,7 +51,7 @@
     }
     a {
       font-weight: 500;
-      color: $black;
+      color: colors.$black;
     }
     &__section {
       display: flex;
@@ -67,16 +67,16 @@
           margin-bottom: 30px;
         }
         .purple {
-          color: $purple;
+          color: colors.$purple;
         }
         .orange {
-          color: $orange;
+          color: colors.$orange;
         }
         .blue {
-          color: $blue;
+          color: colors.$blue;
         }
         .pink {
-          color: $pink;
+          color: colors.$pink;
         }
         p {
           font-size: 20px;
@@ -109,41 +109,41 @@
             width: 272px;
             margin-bottom: 24px;
             border-radius: 8px;
-            border-color: solid 1px $black;
+            border-color: solid 1px colors.$black;
             font-weight: bold;
             font-size: 16px;
             outline: none;
           }
           > a {
             cursor: pointer;
-            color: $white;
+            color: colors.$white;
             text-decoration: none;
-            background-color: $black;
+            background-color: colors.$black;
             padding: 4px 30px;
             height: 2em;
             width: 165px;
             height: 35px;
             border-radius: 8px;
-            border-color: $black;
+            border-color: colors.$black;
             border-style: none;
             font-weight: bold;
             font-size: 20px;
             margin-bottom: 36px;
             outline: none;
             &:hover {
-              color: $white;
-              background-color: $blue;
+              color: colors.$white;
+              background-color: colors.$blue;
               transition-duration: 200ms;
             }
           }
         }
         > a {
-          color: $white;
+          color: colors.$white;
           height: 2em;
           width: 165px;
           height: 35px;
           border-radius: 8px;
-          border-color: $black;
+          border-color: colors.$black;
           border-style: none;
           font-weight: bold;
           font-size: 20px;
@@ -158,10 +158,10 @@
           }
         }
         &__button--blue {
-          background-color: $blue;
+          background-color: colors.$blue;
         }
         &__button--pink {
-          background-color: $pink;
+          background-color: colors.$pink;
         }
       }
     }
@@ -268,13 +268,13 @@
       font-weight: 500;
     }
     > a {
-      color: $white;
-      background-color: $black;
+      color: colors.$white;
+      background-color: colors.$black;
       height: 2em;
       width: 165px;
       height: 35px;
       border-radius: 8px;
-      border-color: $black;
+      border-color: colors.$black;
       border-style: none;
       font-weight: 500;
       font-size: 20px;
@@ -319,7 +319,7 @@
       > * {
         margin: 7px;
       }
-      color: #6b6b6b;
+      color: colors.$dark-grey;
       > img:hover {
         transition: transform 0.1s;
         transform: scale(1.1);

@@ -1,5 +1,5 @@
 import * as ics from "ics";
-import { formatURLEventTitle } from "src/utils";
+import { formatURLEventTitle } from "src/utils/general";
 const EVENT_API = "https://api.acmucsd.com/api/v2/event";
 
 export type EventObject = {

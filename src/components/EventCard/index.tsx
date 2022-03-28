@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { EventObject, saveToGoogleCal } from "src/api/EventsAPI";
-import { formatURLEventTitle } from "src/utils";
+import { formatURLEventTitle } from "src/utils/general";
 import s from "./EventCard.module.scss";
-import { days, months, getDateTime } from "src/utils";
+import { days, months, getDateTime } from "src/utils/general";
 
 const EventCard: React.FC<{
   event: EventObject;

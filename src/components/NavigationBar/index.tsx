@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import ACMLogo from "public/assets/ACMWhiteLogo.png";
 import s from "src/components/NavigationBar/Navbar.module.scss";
-import { Size, useWindowSize } from "src/utils";
+import { Size, useWindowSize } from "src/utils/general";
 
 const navLinks = [
   { to: "/about", text: "About Us" },

@@ -25,8 +25,9 @@ import * as ga from "src/utils/analytics"
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
+
   useEffect(() => {
-    const handleRouteChange = (url) => {
+    const handleRouteChange = (url: string) => {
       ga.pageview(url)
     }
     //When the component is mounted, subscribe to router changes
@@ -39,6 +40,7 @@ const MyApp = ({ Component, pageProps }) => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
   }, [router.events])
+
   return (
     <>
       <NavigationBar />

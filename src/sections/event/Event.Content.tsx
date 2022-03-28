@@ -41,7 +41,7 @@ const EventContent: React.FC<{ event: EventObject }> = ({ event }) => {
               }}
             >
               <img src="/assets/calendar.svg" alt="Add to Calendar" width={30} height={30} />
-              Download Calendar Event
+              Add to Apple Calendar
             </a>
             <a
               className={s.eventLink}
@@ -51,7 +51,7 @@ const EventContent: React.FC<{ event: EventObject }> = ({ event }) => {
               }}
             >
               <img src="/assets/calendar.svg" alt="Add to Calendar" width={30} height={30} />
-              Save to Google Calendar
+              Add to Google Calendar
             </a>
           </div>
           <p className={s.eventDescription}>{description}</p>

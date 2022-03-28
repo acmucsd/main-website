@@ -1,8 +1,8 @@
-@import "src/styles/colors.scss";
+@use "src/styles/colors.scss" as colors;
 
 .BoardCard {
   position: relative;
-  background: #ffffff;
+  background: colors.$white;
   border: 3px solid;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
@@ -71,7 +71,7 @@
     width: 100%;
     height: 42px;
     h1 {
-      color: $black;
+      color: colors.$black;
       margin: 0px 12px;
       margin-top: 2px;
       @media only screen and (max-width: 600px) {
@@ -117,38 +117,38 @@
   }
 }
 .BoardCard.general {
-  border-color: $blue;
-  color: $blue;
+  border-color: colors.$blue;
+  color: colors.$blue;
   path {
-    fill: $blue;
+    fill: colors.$blue;
   }
 }
 .BoardCard.ai {
-  border-color: $red;
-  color: $red;
+  border-color: colors.$red;
+  color: colors.$red;
   path {
-    fill: $red;
+    fill: colors.$red;
   }
 }
 .BoardCard.cyber {
-  border-color: $turquoise;
-  color: $turquoise;
+  border-color: colors.$turquoise;
+  color: colors.$turquoise;
   path {
-    fill: $turquoise;
+    fill: colors.$turquoise;
   }
 }
 .BoardCard.hack {
-  border-color: $orange;
-  color: $orange;
+  border-color: colors.$orange;
+  color: colors.$orange;
   path {
-    fill: $orange;
+    fill: colors.$orange;
   }
 }
 .BoardCard.innovate {
-  border-color: $purple;
-  color: $purple;
+  border-color: colors.$purple;
+  color: colors.$purple;
   path {
-    fill: $purple;
+    fill: colors.$purple;
   }
 }
 

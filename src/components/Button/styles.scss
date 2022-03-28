@@ -1,29 +1,27 @@
-@import "src/styles/colors.scss";
+@use "src/styles/colors.scss" as colors;
 
 .button {
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 0.5em 1em;
-  display: inline-block;
   border-radius: 10px;
-  color: white;
+  color: colors.$white;
+  display: inline-block;
+  font-size: 1.5rem;
   margin: 5px 0px;
-}
-.primary {
-  background-color: $pink;
-}
-.secondary {
-  background-color: $blue;
-}
-.button > a {
+  padding: 0.5em 1em;
+  text-align: center;
   text-decoration: none;
-  font-family: inherit;
-  font-weight: 500;
-  color: inherit;
-}
+  width: 12.5rem;
 
-.button:hover {
-  opacity: 0.85;
-  transform: translatey(-1px);
-  transition: 0.2s;
+  &:hover {
+    opacity: 0.85;
+    transform: translatey(-1px);
+    transition: 0.2s;
+  }
+
+  &.primary {
+    background-color: colors.$pink;
+  }
+
+  &.secondary {
+    background-color: colors.$blue;
+  }
 }

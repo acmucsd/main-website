@@ -2,6 +2,14 @@ import { useState, useEffect } from "react";
 import { EventObject } from "src/api/EventsAPI";
 
 /**
+ * Adds http to a url that's missing it
+ * Lifted from https://stackoverflow.com/a/53206485
+ * @param url The string to add http to
+ * @returns a normalized url
+ */
+export const withHttp = url => !/^https?:\/\//i.test(url) ? `http://${url}` : url;
+
+/**
  * Determines if given string is a valid website link.
  * @param {string} str The string containing a potential URL.
  * @return {boolean} True if valid URL, false otherwise.

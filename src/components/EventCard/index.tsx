@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { downloadICS, EventObject, saveToGoogleCal } from "src/api/EventsAPI";
-import { formatURLEventTitle } from "src/utils";
-import s from "./EventCard.module.scss";
-import { days, months, getDateTime } from "src/utils";
 import { useState } from "react";
 import { QuestionModal } from "../QuestionModal";
+import s from "./EventCard.module.scss";
+import { days, months, formatURLEventTitle, getDateTime } from "src/utils/general";
 
 const EventCard: React.FC<{
   event: EventObject;

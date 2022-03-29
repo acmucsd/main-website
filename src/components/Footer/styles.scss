@@ -1,10 +1,10 @@
-@import "src/styles/colors.scss";
+@use "src/styles/colors.scss" as colors;
 
 .footer {
   width: 100%;
   height: 100%;
-  background-color: $black;
-  color: $white;
+  background-color: colors.$black;
+  color: colors.$white;
   z-index: 1;
   position: relative;
 }
@@ -97,7 +97,7 @@
       margin-bottom: 24px;
       border-radius: 8px;
 
-      border-color: $black;
+      border-color: colors.$black;
       border-style: none;
       font-weight: bold;
       font-size: 16px;
@@ -107,13 +107,13 @@
       text-decoration: none;
       padding: 5px 30px;
       cursor: pointer;
-      color: $white;
-      background-color: $dark-grey;
+      color: colors.$white;
+      background-color: colors.$dark-grey;
       height: 2em;
       width: 165px;
       height: 35px;
       border-radius: 8px;
-      border-color: $black;
+      border-color: colors.$black;
       border-style: none;
       font-weight: bold;
       font-size: 20px;
@@ -121,21 +121,21 @@
       outline: none;
       &:hover {
         cursor: pointer;
-        color: $black;
-        background-color: $hover-blue;
+        color: colors.$black;
+        background-color: colors.$hover-blue;
         transition-duration: 0.2s;
       }
     }
     .vercel-btn {
       text-decoration: none;
       cursor: pointer;
-      color: $white;
+      color: colors.$white;
       background-color: none;
       height: 2em;
       width: 165px;
       height: 35px;
       border-radius: 8px;
-      border-color: $black;
+      border-color: colors.$black;
       border-style: none;
       font-weight: bold;
       font-size: 20px;
@@ -170,7 +170,7 @@
     font-size: 15px;
     font-weight: 400;
     margin-bottom: 35px;
-    color: $white;
+    color: colors.$white;
     text-decoration: underline;
   }
   &__newsletter {
@@ -201,7 +201,7 @@
       margin-bottom: 23px !important;
       border-radius: 8px;
 
-      border-color: $black;
+      border-color: colors.$black;
       border-style: none;
       font-weight: bold;
       font-size: 16px;
@@ -210,13 +210,13 @@
     .mobile-subscribe-btn {
       text-decoration: none;
       padding: 4px 0;
-      color: $white;
-      background-color: $blue;
+      color: colors.$white;
+      background-color: colors.$blue;
       height: 2em;
       width: 165px;
       height: 35px;
       border-radius: 8px;
-      border-color: $black;
+      border-color: colors.$black;
       border-style: none;
       font-weight: bold;
       font-size: 20px;
@@ -226,13 +226,13 @@
     .mobile-vercel-btn {
       text-decoration: none;
       padding: 4px 0;
-      color: $white;
+      color: colors.$white;
       background-color: none;
       height: 2em;
       width: 165px;
       height: 35px;
       border-radius: 8px;
-      border-color: $black;
+      border-color: colors.$black;
       border-style: none;
       font-weight: bold;
       font-size: 20px;
@@ -242,13 +242,13 @@
     .mobile-vercel-btn {
       text-decoration: none;
       padding: 4px 0;
-      color: $white;
+      color: colors.$white;
       background-color: none;
       height: 2em;
       width: 165px;
       height: 35px;
       border-radius: 8px;
-      border-color: $black;
+      border-color: colors.$black;
       border-style: none;
       font-weight: bold;
       font-size: 20px;

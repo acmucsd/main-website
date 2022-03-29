@@ -1,4 +1,4 @@
-@import "src/styles/colors.scss";
+@use "src/styles/colors.scss" as colors;
 
 .sponsorship {
   &__info {
@@ -29,7 +29,7 @@
 
       padding: 1rem;
       position: relative;
-      background: linear-gradient(to right, red, purple);
+      background: linear-gradient(to right, colors.$red, colors.$purple);
       padding: 3px;
     }
     &__text {
@@ -177,24 +177,24 @@
       }
 
       > a {
-        color: $black;
+        color: colors.$black;
         font-weight: bold;
       }
     }
   }
 }
 .blue {
-  color: $blue;
+  color: colors.$blue;
   font-weight: bold;
 }
 
 .pink {
-  color: $pink;
+  color: colors.$pink;
   font-weight: bold;
 }
 
 .purple {
-  color: $purple;
+  color: colors.$purple;
   font-weight: bold;
 }
 .mobile {

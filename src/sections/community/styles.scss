@@ -1,4 +1,4 @@
-@import "src/styles/colors.scss";
+@use "src/styles/colors.scss" as colors;
 
 .community {
   &__hero {
@@ -74,7 +74,7 @@
       }
     }
     .selected {
-      border: solid 5px #000;
+      border: solid 5px colors.$black;
     }
     &__community-card {
       display: inline-flex;
@@ -196,37 +196,37 @@
   }
 }
 .red {
-  color: $red;
+  color: colors.$red;
 }
 .redbg {
-  background-color: $light-red;
+  background-color: colors.$light-red;
 }
 .redfill {
-  fill: $red !important;
+  fill: colors.$red !important;
 }
 .turquoise {
-  color: $turquoise;
+  color: colors.$turquoise;
 }
 .turquoisebg {
-  background-color: $light-turquoise;
+  background-color: colors.$light-turquoise;
 }
 .yellow {
-  color: $orange;
+  color: colors.$orange;
 }
 .yellowbg {
-  background-color: $light-orange;
+  background-color: colors.$light-orange;
 }
 .purple {
-  color: $purple;
+  color: colors.$purple;
 }
 .purplebg {
-  background-color: $light-purple;
+  background-color: colors.$light-purple;
 }
 .pink {
-  color: $pink;
+  color: colors.$pink;
 }
 .pinkbg {
-  background-color: $light-pink;
+  background-color: colors.$light-pink;
 }
 .spacer80px {
   height: 80px;

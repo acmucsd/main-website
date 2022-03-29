@@ -1,7 +1,7 @@
-@import "src/styles/colors.scss";
+@use "src/styles/colors.scss" as colors;
 
 .number {
-  border-left: 8px solid;
+  border-left: 8px solid colors.$black;
   display: inline-block;
   padding: 0 20px;
   width: 250px;

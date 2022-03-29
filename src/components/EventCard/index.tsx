@@ -3,7 +3,8 @@ import { EventObject, saveToGoogleCal } from "src/api/EventsAPI";
 import { formatURLEventTitle, withHttp } from "src/utils/general";
 import s from "./EventCard.module.scss";
 import { days, months, getDateTime } from "src/utils/general";
-import { FaFacebook, FaCalendarAlt } from 'react-icons/fa'
+import { FaFacebook, FaCalendarAlt } from "react-icons/fa";
+import { GRAY } from "src/utils/constants";
 
 const EventCard: React.FC<{
   event: EventObject;
@@ -29,17 +30,22 @@ const EventCard: React.FC<{
           <h3 className={s.eventTime}>{time}</h3>
         </div>
         <div className={s.cardFooter}>
-          <a className={s.footerIcon}
+          <a
             onClick={e => {
               saveToGoogleCal(event);
               e.stopPropagation();
             }}
           >
-            <FaCalendarAlt color="grey" />
+            <FaCalendarAlt color={GRAY} size={25} />
           </a>
           {!eventLink ? null : (
-            <a className={s.footerIcon} href={withHttp(eventLink)} target="_blank" rel="noreferrer">
-              <FaFacebook color="grey" />
+            <a
+              onClick={e => e.stopPropagation()}
+              href={withHttp(eventLink)}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaFacebook color={GRAY} size={25} />
             </a>
           )}
         </div>

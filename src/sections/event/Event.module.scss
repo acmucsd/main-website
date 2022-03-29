@@ -196,12 +196,14 @@
       .eventLinks {
         display: grid;
         grid-template-columns: 1fr 1fr;
-
+        gap: 20px 10px;
         .eventLink {
           display: flex;
           align-items: center;
           cursor: pointer;
-          gap: 5px;
+          color: colors.$black;
+          text-decoration: none;
+          gap: 10px;
           img {
             margin: 0;
           }

@@ -11,7 +11,7 @@
   display: grid;
   cursor: pointer;
   grid-template-columns: 1fr;
-  grid-template-rows: 2rem 1fr 20px;
+  grid-template-rows: 2rem 1fr 30px;
 
   .cardHeader {
     display: flex;
@@ -87,13 +87,8 @@
     }
   }
   .cardFooter {
-    gap: 10px;
+    gap: 15px;
     display: flex;
     flex-direction: row;
-    .footerIcon {
-      z-index: 2;
-      padding: 2px;
-      cursor: pointer;
-    }
   }
 }

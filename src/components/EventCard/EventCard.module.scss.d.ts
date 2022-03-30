@@ -13,7 +13,6 @@ declare namespace EventCardModuleScssNamespace {
     eventLocation: string;
     eventTime: string;
     eventTitle: string;
-    footerIcon: string;
     general: string;
     hack: string;
     innovate: string;

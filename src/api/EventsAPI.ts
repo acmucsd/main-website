@@ -10,13 +10,12 @@ export type EventObject = {
   title: string;
   description: string;
   location: string;
-  eventLink: string;
+  eventLink?: string;
   start: string;
   end: string;
   pointValue: number;
   requiresStaff: boolean;
   staffPointBonus: number;
-  facebookUrl?: string;
 };
 
 export type EventsArray = EventObject[];
@@ -117,4 +116,4 @@ const saveToGoogleCal = ({ title, description, location, start, end }: EventObje
   window.open(GCAL_LINK);
 };
 
-export { getEvent, getAllEvents, saveToAppleCal as downloadICS, saveToGoogleCal };
+export { getEvent, getAllEvents, saveToAppleCal, saveToGoogleCal };

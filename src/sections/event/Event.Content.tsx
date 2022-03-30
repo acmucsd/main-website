@@ -1,17 +1,19 @@
 import Link from "next/link";
 import { useState } from "react";
-import { downloadICS, EventObject, saveToGoogleCal } from "src/api/EventsAPI";
-import { days, getDateTime, months } from "src/utils/general";
+import { saveToAppleCal, EventObject, saveToGoogleCal } from "src/api/EventsAPI";
+import { days, getDateTime, months, withHttp } from "src/utils/general";
 import { QuestionModal } from "src/components/QuestionModal";
+import { GRAY } from "src/utils/constants";
 
 import s from "./Event.module.scss";
+import { FaCalendarAlt, FaFacebook } from "react-icons/fa";
 
 const EventContent: React.FC<{ event: EventObject }> = ({ event }) => {
   const month = months[new Date(event.start).getMonth()];
   const date = new Date(event.start).getDate();
   const day = days[new Date(event.start).getDay()];
   const time = getDateTime(event).time;
-  const { committee, title, location, description, start, end, facebookUrl } = event;
+  const { committee, title, location, description, start, end, eventLink } = event;
 
   return (
     <>
@@ -36,29 +38,42 @@ const EventContent: React.FC<{ event: EventObject }> = ({ event }) => {
               <h2 className={`${s.title} ${s[committee.toLowerCase()]}`}>{title}</h2>
               <h2 className={s.time}>{time}</h2>
             </div>
-            <div className={s.eventLinks}>
+            <h2 className={s.location}>{location}</h2>
+            <h2 className={`${s.title} ${s[committee.toLowerCase()]}`}>{title}</h2>
+            <h2 className={s.time}>{time}</h2>
+          </div>
+          <div className={s.eventLinks}>
+            <a
+              className={s.eventLink}
+              onClick={e => {
+                e.preventDefault();
+                saveToAppleCal(event);
+              }}
+            >
+              <FaCalendarAlt size="30" color={GRAY} />
+              Add to Apple Calendar
+            </a>
+            <a
+              className={s.eventLink}
+              onClick={e => {
+                e.preventDefault();
+                saveToGoogleCal(event);
+              }}
+            >
+              <FaCalendarAlt size="30" color={GRAY} />
+              Add to Google Calendar
+            </a>
+            {event.eventLink && (
               <a
                 className={s.eventLink}
-                onClick={e => {
-                  e.preventDefault();
-                  downloadICS(event);
-                }}
+                href={withHttp(event.eventLink)}
+                target="_blank"
+                rel="noreferrer"
               >
-                <img src="/assets/calendar.svg" alt="Add to Calendar" width={30} height={30} />
-                Add to Apple Calendar
+                <FaFacebook size="30" color={GRAY} />
+                Go to Facebook Event
               </a>
-              <a
-                className={s.eventLink}
-                onClick={e => {
-                  e.preventDefault();
-                  saveToGoogleCal(event);
-                }}
-              >
-                <img src="/assets/calendar.svg" alt="Add to Calendar" width={30} height={30} />
-                Add to Google Calendar
-              </a>
-            </div>
-            <p className={s.eventDescription}>{description}</p>
+            )}
           </div>
         </div>
       </div>

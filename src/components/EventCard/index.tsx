@@ -1,9 +1,12 @@
 import Link from "next/link";
-import { downloadICS, EventObject, saveToGoogleCal } from "src/api/EventsAPI";
+import { saveToAppleCal, EventObject, saveToGoogleCal } from "src/api/EventsAPI";
 import { useState } from "react";
 import { QuestionModal } from "../QuestionModal";
 import s from "./EventCard.module.scss";
-import { days, months, formatURLEventTitle, getDateTime } from "src/utils/general";
+import { days, months, formatURLEventTitle, getDateTime, withHttp } from "src/utils/general";
+import { FaFacebook, FaCalendarAlt } from "react-icons/fa";
+import { GRAY } from "src/utils/constants";
+
 
 const EventCard: React.FC<{
   event: EventObject;
@@ -13,8 +16,7 @@ const EventCard: React.FC<{
   const date = new Date(event.start).getDate();
   const day = days[new Date(event.start).getDay()];
   const time = getDateTime(event).time;
-  const { committee, uuid, title, location, facebookUrl } = event;
-
+  const { committee, uuid, title, location, eventLink } = event;
   return (
     <>
       <QuestionModal
@@ -24,7 +26,7 @@ const EventCard: React.FC<{
         onCancel={() => displayPrompt(false)}
         onSelect={(option) => {
           if (option === "Apple Calendar") {
-            downloadICS(event);
+            saveToAppleCal(event);
           } else {
             saveToGoogleCal(event);
           }
@@ -32,7 +34,6 @@ const EventCard: React.FC<{
         }}
 
       />
-
       <Link href={`/events/${formatURLEventTitle(title)}-${uuid}`} passHref>
         <div className={s.card}>
           <div className={s.cardHeader}>
@@ -54,23 +55,16 @@ const EventCard: React.FC<{
                 e.stopPropagation();
               }}
             >
-              <img
-                src="/assets/calendar.svg"
-                alt=""
-                width={20}
-                height={20}
-                className={s.footerIcon}
-              />
+              <FaCalendarAlt color={GRAY} size={25} />
             </a>
-            {!facebookUrl ? null : (
-              <a href={facebookUrl}>
-                <img
-                  src="/assets/facebook.svg"
-                  alt=""
-                  width={20}
-                  height={20}
-                  className={s.footerIcon}
-                />
+            {!eventLink ? null : (
+              <a
+                onClick={e => e.stopPropagation()}
+                href={withHttp(eventLink)}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaFacebook color={GRAY} size={25} />
               </a>
             )}
           </div>

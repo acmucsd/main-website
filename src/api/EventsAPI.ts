@@ -68,14 +68,14 @@ const getEvent = async (uuid: string): Promise<EventObject | undefined> => {
 // https://stackoverflow.com/questions/44656610/download-a-string-as-txt-file-in-react
 const createDownloadFile = (textContent: string, title: string): void => {
   const element = document.createElement("a");
-  const file = new Blob([textContent], { type: "text/plain" });
+  const file = new Blob([textContent], { type: "text/calendar" });
   element.href = URL.createObjectURL(file);
   element.download = `${title}.ics`;
   document.body.appendChild(element);
   element.click();
 };
 
-const downloadICS = (event: EventObject): void => {
+const saveToAppleCal = (event: EventObject): void => {
   const startDate = new Date(event.start);
   const endDate = new Date(event.end);
   const duration = endDate.getTime() - startDate.getTime();
@@ -117,4 +117,4 @@ const saveToGoogleCal = ({ title, description, location, start, end }: EventObje
   window.open(GCAL_LINK);
 };
 
-export { getEvent, getAllEvents, downloadICS, saveToGoogleCal };
+export { getEvent, getAllEvents, saveToAppleCal as downloadICS, saveToGoogleCal };

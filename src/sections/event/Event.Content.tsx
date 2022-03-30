@@ -1,12 +1,10 @@
 import Link from "next/link";
-import { useState } from "react";
-import { saveToAppleCal, EventObject, saveToGoogleCal } from "src/api/EventsAPI";
-import { days, getDateTime, months, withHttp } from "src/utils/general";
-import { QuestionModal } from "src/components/QuestionModal";
-import { GRAY } from "src/utils/constants";
-
-import s from "./Event.module.scss";
 import { FaCalendarAlt, FaFacebook } from "react-icons/fa";
+import { EventObject, saveToAppleCal, saveToGoogleCal } from "src/api/EventsAPI";
+import { GRAY } from "src/utils/constants";
+import { days, getDateTime, months, withHttp } from "src/utils/general";
+import s from "./Event.module.scss";
+
 
 const EventContent: React.FC<{ event: EventObject }> = ({ event }) => {
   const month = months[new Date(event.start).getMonth()];

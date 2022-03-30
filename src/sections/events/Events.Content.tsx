@@ -1,8 +1,7 @@
-import { downloadICS, EventsArray, saveToGoogleCal } from "src/api/EventsAPI";
+import { useEffect, useState } from "react";
+import { EventsArray } from "src/api/EventsAPI";
 import EventCard from "src/components/EventCard";
 import s from "./Events.module.scss";
-import { useEffect, useState } from "react";
-import { QuestionModal } from "src/components/QuestionModal";
 
 const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
   const [activeFilter, setActiveFilter] = useState("all");

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FaCalendarAlt, FaFacebook } from "react-icons/fa";
-import { downloadICS, EventObject, saveToGoogleCal } from "src/api/EventsAPI";
+import { saveToAppleCal, EventObject, saveToGoogleCal } from "src/api/EventsAPI";
 import { GRAY } from "src/utils/constants";
 import { days, getDateTime, months, withHttp } from "src/utils/general";
 import s from "./Event.module.scss";
@@ -39,11 +39,11 @@ const EventContent: React.FC<{ event: EventObject }> = ({ event }) => {
               className={s.eventLink}
               onClick={e => {
                 e.preventDefault();
-                downloadICS(event);
+                saveToAppleCal(event);
               }}
             >
               <FaCalendarAlt size="30" color={GRAY} />
-              Download Calendar Event
+              Add to Apple Calendar
             </a>
             <a
               className={s.eventLink}
@@ -53,7 +53,7 @@ const EventContent: React.FC<{ event: EventObject }> = ({ event }) => {
               }}
             >
               <FaCalendarAlt size="30" color={GRAY} />
-              Save to Google Calendar
+              Add to Google Calendar
             </a>
             {event.eventLink && (
               <a

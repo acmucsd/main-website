@@ -1,6 +1,5 @@
 import Typist from "react-typist";
 import "react-typist/dist/Typist.css";
-import Image from "next/image";
 
 import ScrollDownArrow from "src/components/ScrollDownArrow";
 import CoolLogo from "public/assets/cool_logo_1000x1000.png";
@@ -34,17 +33,17 @@ const HomeHero: React.FC = () => {
               <span>community.&nbsp;</span>
             </Typist>
             <div className="buttons">
-              <Link href="/events">
-                <a className="hero-btn btn-outlined">Find Events &gt;</a>
-              </Link>
               <a
-                className="hero-btn"
+                className="hero-btn btn-outlined"
                 href="https://members.acmucsd.com"
                 target="_blank"
                 rel="noreferrer"
               >
                 Join Us &gt;
               </a>
+              <Link href="/events">
+                <a className="hero-btn">Explore Events &gt;</a>
+              </Link>
             </div>
           </div>
         </div>

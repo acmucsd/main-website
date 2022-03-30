@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { EventObject } from "src/api/EventsAPI";
 import { isURL, getAbsoluteURL, getDateTime } from "src/utils/general";
 
@@ -7,9 +8,7 @@ const HomeEvents: React.FC<{ events: Array<EventObject> }> = ({ events }) => {
       <div className="home__events__grid">
         <div className="home__events__grid__header">
           <h1>Events</h1>
-          <p>
-            ACM at UCSD hosts 120+ events for our diverse array of students.
-          </p>
+          <p>ACM at UCSD hosts 120+ events for our diverse array of students.</p>
         </div>
       </div>
       <div className="home__events__grid__container" tabIndex={0}>
@@ -24,10 +23,7 @@ const HomeEvents: React.FC<{ events: Array<EventObject> }> = ({ events }) => {
                   {timing.time}
                 </h2>
                 {isURL(value.location.trim()) ? (
-                  <a
-                    className="link"
-                    href={getAbsoluteURL(value.location.trim())}
-                  >
+                  <a className="link" href={getAbsoluteURL(value.location.trim())}>
                     <h3>{value.location}</h3>
                   </a>
                 ) : (
@@ -45,6 +41,9 @@ const HomeEvents: React.FC<{ events: Array<EventObject> }> = ({ events }) => {
         )}
         <div aria-hidden="true" className="event end" />
       </div>
+      <Link href="/events">
+        <a className="home__events__see-all">See All Events &gt;</a>
+      </Link>
     </section>
   );
 };

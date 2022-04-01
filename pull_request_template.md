@@ -16,8 +16,10 @@ Fixes # (issue) (Remove if there isn't an issue this fixes. If this relates to a
 - [ ] Something Else <!-- Edit this type of change if you select this -->
 
 # How Has This Been Tested?
-- [ ] Tested on Localhost
-- [ ] Tested on Deployed Preview
+- [ ] Tested on Localhost (Desktop)
+- [ ] Tested on Localhost (Mobile) - use https://ngrok.io to get a copy on a mobile device
+- [ ] Tested on Deployed Preview (Desktop)
+- [ ] Tested on Deployed Preview (Mobile)
 
 
 # Checklist:

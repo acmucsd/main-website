@@ -4,6 +4,7 @@ import CSEImg from "public/assets/sponsor-images/CSE_logo.png";
 import TESCImg from "public/assets/sponsor-images/tesc_logo.png";
 import RobinhoodImg from "public/assets/sponsor-images/robinhood_logo.png";
 import GearImg from "public/assets/sponsor-images/gear_logo.png";
+import LockheedMartin from "public/assets/sponsor-images/lockheed_martin_logo.png";
 
 const SponsorshipLogos: React.FC = () => {
   return (
@@ -14,6 +15,9 @@ const SponsorshipLogos: React.FC = () => {
       <div className="sponsorship__logos__img-grid">
         <a href="https://gear-tech.io/">
           <img src={GearImg.src} alt="Gear" />
+        </a>
+        <a href="https://www.lockheedmartin.com/">
+          <img src={LockheedMartin.src} alt="Lockheed Martin" />
         </a>
       </div>
       <div className="sponsorship__logos__img-grid">

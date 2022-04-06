@@ -21,7 +21,9 @@ const EventContent: React.FC<{ event: EventObject }> = ({ event }) => {
         <h3 className={`${s.eventType} ${s[committee.toLowerCase()]}`}>{committee} Event</h3>
       </div>
       <div className={s.eventBody}>
-        <img src={event.cover} className={s.eventCover} alt="Event Cover Photo" />
+        <div className={s.coverContainer}>
+          <img src={event.cover} className={s.eventCover} alt="Event Cover Photo" />
+        </div>
         <div className={s.eventInfo}>
           <div className={s.titleLocationGrid}>
             <div className={s.date}>

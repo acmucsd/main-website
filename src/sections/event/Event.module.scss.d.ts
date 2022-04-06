@@ -5,6 +5,7 @@ declare namespace EventModuleScssNamespace {
     ai: string;
     backButton: string;
     container: string;
+    coverContainer: string;
     cyber: string;
     date: string;
     eventBody: string;

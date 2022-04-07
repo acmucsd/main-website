@@ -11,11 +11,11 @@ const AboutHero: React.FC<{ isMobile: boolean; image: string }> = ({
     <section className="about__hero">
       <div className="about__hero__description">
         <div>
-          <h1>What is ACM at UCSD?</h1>
+          <h1>What is ACM Chapter at UCSD?</h1>
           {!isMobile ? null : <img src={image} alt="About Hero Image" />}
         </div>
         <h3>
-          We are the Association for Computing Machinery at UCSD! <br />
+          We are the Association for Computing Machinery Chapter at UCSD! <br />
           <br />
           We are an inclusive member-first community for all who are interested
           in the field of computing. We welcome all skill levels and majors!

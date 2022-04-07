@@ -5,7 +5,7 @@ import SEO from "src/components/SEO";
 
 import CommunityHero from "src/sections/community/Community.Hero";
 import CommunitySuborgs from "src/sections/community/Community.Suborgs";
-import ACMWhiteLogo from "public/assets/ACMWhiteLogo.png";
+import ACMWhiteLogo from "public/assets/ACMChapterLogo.png";
 
 const CommunitiesPage: React.FC = () => {
   const size: Size = useWindowSize();

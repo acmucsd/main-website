@@ -48,7 +48,7 @@ const CommunityComponent: React.FC<{
         <div>
           <div className="community__sub-orgs__community-card__header">
             {!isMobile ? null : <img src={logo} alt={`ACM ${org}`} />}
-            <h1 className={color}>ACM {org}</h1>
+            <h1 className={color}>ACM Chapter {org}</h1>
           </div>
           {description}
           <div className="community-links">

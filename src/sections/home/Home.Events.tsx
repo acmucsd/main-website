@@ -8,7 +8,7 @@ const HomeEvents: React.FC<{ events: Array<EventObject> }> = ({ events }) => {
       <div className="home__events__grid">
         <div className="home__events__grid__header">
           <h1>Events</h1>
-          <p>ACM at UCSD hosts 120+ events for our diverse array of students.</p>
+          <p>ACM Chapter at UCSD hosts 120+ events for our diverse array of students.</p>
         </div>
       </div>
       <div className="home__events__grid__container" tabIndex={0}>

@@ -48,7 +48,7 @@ const CommunityComponent: React.FC<{
         <div>
           <div className="community__sub-orgs__community-card__header">
             {!isMobile ? null : <img src={logo} alt={`ACM ${org}`} />}
-            <h1 className={color}>ACM {org}</h1>
+            <h1 className={color}>ACM Chapter {org}</h1>
           </div>
           {description}
           <div className="community-links">
@@ -148,9 +148,8 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
     ]}
     description={
       <p>
-        ACM Cyber aims to provide member-first opportunities to learn, teach,
-        and practice critical cybersecurity skills to help the UCSD community
-        thrive.
+        ACM Chapter Cyber aims to provide member-first opportunities to learn, teach, and practice
+        critical cybersecurity skills to help the UCSD community thrive.
         <br />
         <br />
         With over 300 members currently registered, we are one of the fastest
@@ -193,9 +192,8 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         engineering and finding their path.
         <br />
         <br />
-        Our events are for people of all skill levels, so whether you&apos;re a
-        first-time coder or a skilled programmer, we&apos;d be happy to have you
-        join the ACM Hack community!
+        Our events are for people of all skill levels, so whether you&apos;re a first-time coder or
+        a skilled programmer, we&apos;d be happy to have you join the ACM Chapter Hack community!
       </p>
     }
   />
@@ -255,8 +253,8 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
     general: (
       <div className="community__sub-orgs--mobile__description">
         <p>
-          ACM at UCSD is one large community, but it is made up of several
-          smaller communities focused on specific areas of technology.
+          ACM Chapter at UCSD is one large community, but it is made up of several smaller
+          communities focused on specific areas of technology.
         </p>
         <p>Learn more about each community</p>
       </div>

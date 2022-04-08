@@ -106,9 +106,8 @@
         transition: 0.3s ease-in-out all;
 
         &.open {
-          transform: rotate(45deg);
-          top: 5px;
-          right: 0;
+          transform: rotate(-45deg) translateY(-10px);
+          transform-origin: top right;
         }
       }
 
@@ -123,10 +122,9 @@
         transition: 0.3s ease-in-out all;
 
         &.open {
-          transform: rotate(-45deg);
           width: 40px;
-          top: 5px;
-          right: 0;
+          transform: rotate(45deg) translateY(10px);
+          transform-origin: bottom right;
         }
       }
       &.hidden {

@@ -5,7 +5,7 @@ const HomeJoinTheClub: React.FC = () => {
     <section className="home__join-the-club">
       <div className="home__join-the-club__grid">
         <div className="home__join-the-club__grid__header">
-          <h1>Join the club.</h1>
+          <h1>Join us.</h1>
           <p>
             ACM Chapter at UCSD is an inclusive community of students passionate about technology.
           </p>

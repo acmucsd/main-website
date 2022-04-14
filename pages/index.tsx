@@ -11,7 +11,7 @@ const IndexPage: React.FC<{ events: Array<EventObject> }> = ({ events }) => (
     <SEO
       title="ACM at UCSD"
       path="/"
-      description="Join the club. ACM at UCSD is an inclusive community of students passionate about technology. 1000+ UCSD members. 120+ annual events. 850+ cups of boba served."
+      description="Join us. ACM at UCSD is an inclusive community of students passionate about technology. 1000+ UCSD members. 120+ annual events. 850+ cups of boba served."
       image={CoolLogo.src}
     />
     <HomeHero />

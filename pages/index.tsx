@@ -1,6 +1,6 @@
 import HomeHero from "src/sections/home/Home.Hero";
 import HomeCommunities from "src/sections/home/Home.Communities";
-import HomeJoinTheClub from "src/sections/home/Home.JoinTheClub";
+import HomeJoinUs from "src/sections/home/Home.JoinUs";
 import HomeEvents from "src/sections/home/Home.Events";
 import SEO from "src/components/SEO";
 import CoolLogo from "public/assets/cool_logo_1000x1000.png";
@@ -15,7 +15,7 @@ const IndexPage: React.FC<{ events: Array<EventObject> }> = ({ events }) => (
       image={CoolLogo.src}
     />
     <HomeHero />
-    <HomeJoinTheClub />
+    <HomeJoinUs />
     <HomeEvents events={events} />
     <HomeCommunities />
   </>

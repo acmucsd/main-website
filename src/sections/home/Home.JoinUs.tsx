@@ -1,6 +1,6 @@
 import Number from "src/components/Statistic";
 
-const HomeJoinTheClub: React.FC = () => {
+const HomeJoinUs: React.FC = () => {
   return (
     <section className="home__join-us">
       <div className="home__join-us__grid">
@@ -20,4 +20,4 @@ const HomeJoinTheClub: React.FC = () => {
   );
 };
 
-export default HomeJoinTheClub;
+export default HomeJoinUs;

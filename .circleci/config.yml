@@ -4,36 +4,6 @@
 #
 version: 2
 jobs:
-  build:
-    docker:
-      - image: circleci/node:16.13.1
-    steps:
-      - checkout
-      - restore_cache:
-          key: package-cache-{{checksum "package.json"}}
-      - run:
-          command: yarn install
-      - save_cache:
-          key: package-cache-{{checksum "package.json"}}
-          paths:
-            - node_modules
-      - run:
-          command: yarn build
-  test:
-    docker:
-      - image: circleci/node:16.13.1
-    steps:
-      - checkout
-      - restore_cache:
-          key: package-cache-{{checksum "package.json"}}
-      - run:
-          command: yarn install
-      - save_cache:
-          key: package-cache-{{checksum "package.json"}}
-          paths:
-            - node_modules
-      - run:
-          command: yarn test
   lint:
     docker:
       - image: circleci/node:16.13.1

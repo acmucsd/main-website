@@ -13,7 +13,7 @@ const Offline = () => (
         marginTop: "5rem",
       }}
     >
-      404: Not Found
+      404: Failed to Load Page
     </h1>
     <p
       style={{

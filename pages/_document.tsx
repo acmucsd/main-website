@@ -5,6 +5,10 @@ export default function Document() {
 	return (
 		<Html>
 			<Head>
+				<link rel="manifest" href="/manifest.json" />
+				<link rel="apple-touch-icon" href="/icon.png"></link>
+				<meta name="theme-color" content="#fff" />
+
 				{/* Global Site Tag (gtag.js) - Google Analytics */}
 				<script
 					async

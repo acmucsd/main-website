@@ -6,104 +6,131 @@
     display: flex;
     align-items: center;
     margin: 75px 0;
+
     h1 {
       font-size: 45px;
       margin-bottom: 40px;
     }
+
     h3 {
       font-size: 25px;
       font-weight: 500;
     }
+
     .hero-img {
       padding-left: 2em;
       width: 40%;
     }
+
     @media only screen and (max-width: 1050px) {
       padding: 0 3rem !important;
     }
+
     @media only screen and (max-width: 814px) {
       align-items: center;
+
       &__description > div {
         display: flex;
         align-items: center;
       }
+
       img {
         padding-left: 0.2em;
         width: 50%;
       }
     }
+
     @media only screen and (max-width: 500px) {
       h3 {
         font-size: 20px;
       }
+
       &__description > div {
         flex-direction: column;
       }
+
       img {
         width: 100%;
       }
     }
   }
+
   &__get-involved {
     h2 {
       text-align: center;
       font-size: 45px;
     }
+
     a {
       font-weight: 500;
       color: colors.$black;
     }
+
     &__section {
       display: flex;
       flex-direction: row;
+
       > img {
         margin-right: 40px;
         height: 240px;
       }
+
       margin: 100px 3rem;
+
       &__description {
         h3 {
           font-size: 30px;
           margin-bottom: 30px;
         }
+
         .purple {
           color: colors.$purple;
         }
+
         .orange {
           color: colors.$orange;
         }
+
         .blue {
           color: colors.$blue;
         }
+
         .pink {
           color: colors.$pink;
         }
+
         p {
           font-size: 20px;
           font-weight: 500;
-          margin-bottom: 0px;
+          margin-bottom: 0;
         }
+
         &__links {
           margin-top: 30px;
           align-items: flex-start;
           justify-content: flex-start;
+
           img {
             margin: 0 25px 0 0;
             height: 40px;
           }
+
           a:hover img {
             transform: scale(1.05);
           }
         }
+
         &__newsletter {
           margin-top: 20px;
           display: flex;
           flex-direction: column;
+
           label {
             font-size: 25px;
             font-weight: 500;
-            margin: 10px 0 20px 0;
+            margin: 10px 0 20px;
           }
+
           input {
             padding: 2px 2px 2px 1em;
             width: 272px;
@@ -114,6 +141,7 @@
             font-size: 16px;
             outline: none;
           }
+
           > a {
             cursor: pointer;
             color: colors.$white;
@@ -130,6 +158,7 @@
             font-size: 20px;
             margin-bottom: 36px;
             outline: none;
+
             &:hover {
               color: colors.$white;
               background-color: colors.$blue;
@@ -137,6 +166,7 @@
             }
           }
         }
+
         > a {
           color: colors.$white;
           height: 2em;
@@ -152,100 +182,124 @@
           margin-bottom: 36px;
           padding: 4px 12px;
           outline: none;
+
           &:hover {
             opacity: 0.85;
             transition: opacity 0.2s;
           }
         }
+
         &__button--blue {
           background-color: colors.$blue;
         }
+
         &__button--pink {
           background-color: colors.$pink;
         }
       }
     }
+
     @media only screen and (max-width: 814px) {
       h2 {
         padding: 0 1em;
         font-size: 40px;
         text-align: center;
       }
+
       &__section {
         flex-direction: column;
+
         &__communities--mobile {
           display: flex;
           flex-direction: column;
           align-items: center;
           margin: 40px 0;
+
           > div {
             height: 70px;
+
             a img {
               margin: 0 10px;
               width: 90px;
             }
           }
         }
+
         &__description {
           padding: 0 3em;
           display: flex;
           flex-direction: column;
           align-items: center;
+
           > img {
             height: 260px;
             width: 260px;
             align-self: center;
           }
+
           h3 {
             font-size: 32px;
             text-align: center;
           }
+
           p {
             text-align: center;
           }
+
           a {
             text-align: center;
           }
+
           &__links {
             align-self: center;
+
             img {
               margin: 0 15px;
               height: 55px;
             }
           }
+
           &__newsletter {
             align-items: center;
             text-align: center;
           }
+
           form {
             align-items: center;
           }
         }
       }
     }
+
     @media only screen and (max-width: 500px) {
       h2 {
         text-align: left;
       }
+
       &__section {
         &__communities--mobile {
           > div {
             height: 60px;
+
             a img {
               margin: 0 5px;
               width: 70px;
             }
           }
         }
+
         &__description {
-          padding: 0 0em;
+          padding: 0;
           align-items: flex-start;
+
           p {
             text-align: left;
           }
+
           a {
             text-align: center;
           }
+
           form {
             align-items: flex-start;
           }
@@ -253,20 +307,24 @@
       }
     }
   }
+
   &__membership {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     h2 {
       text-align: center;
       font-size: 45px;
     }
+
     p {
       font-size: 20px;
       padding: 0 130px 0 165px;
       text-align: left;
       font-weight: 500;
     }
+
     > a {
       color: colors.$white;
       background-color: colors.$black;
@@ -283,15 +341,17 @@
       margin-bottom: 36px;
       padding: 4px 0;
       outline: none;
+
       &:hover {
         opacity: 0.85;
         transition: opacity 0.2s;
       }
     }
   }
+
   &__board {
     &__title {
-      font-family: DM Sans;
+      font-family: "DM Sans";
       font-size: 45px;
       font-weight: 700;
       line-height: 59px;
@@ -299,6 +359,7 @@
       margin-bottom: 20px;
       margin-top: 120px;
     }
+
     &__filters {
       display: flex;
       flex-direction: row;
@@ -306,9 +367,10 @@
       align-items: center;
       flex-wrap: wrap;
       width: fit-content;
-      margin: 0 20px 60px 20px;
+      margin: 0 20px 60px;
       transition: transform 0.1s;
       transform: scale(1);
+
       > p {
         width: fit-content;
         margin: 10px;
@@ -316,10 +378,13 @@
         font-size: 30px;
         line-height: 39px;
       }
+
       > * {
         margin: 7px;
       }
+
       color: colors.$dark-grey;
+
       > img:hover {
         transition: transform 0.1s;
         transform: scale(1.1);

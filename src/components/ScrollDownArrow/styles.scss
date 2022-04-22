@@ -6,15 +6,18 @@
   margin: auto;
   position: absolute;
   width: 30px;
+
   @media only screen and (max-width: 1050px) {
     display: none;
   }
 }
+
 // ensures the scroll down button fades away as the user scrolls down
 @keyframes hide {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
@@ -28,6 +31,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }

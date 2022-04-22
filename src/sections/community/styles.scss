@@ -9,11 +9,13 @@
     width: 100%;
     padding-top: 140px;
     height: 650px;
+
     > h1 {
       font-size: 45px;
       margin-bottom: 30px;
       text-align: center;
     }
+
     > p {
       font-size: 20px;
       font-weight: 500;
@@ -21,21 +23,26 @@
       margin-bottom: 40px;
       text-align: left;
     }
+
     &__communities {
       text-align: left;
     }
+
     @media only screen and (max-width: 812px) {
       padding-top: 20px;
       height: 0;
       margin-top: 50px;
+
       > h1 {
         text-align: left;
       }
+
       > p {
         display: none;
       }
     }
   }
+
   &__sub-orgs {
     &--mobile {
       h1 {
@@ -44,27 +51,33 @@
         margin-bottom: 30px;
         text-align: center;
       }
+
       &__description > p {
         padding: 0 2rem;
         text-align: center;
         font-size: 1.1rem;
         font-weight: 500;
       }
+
       &__navigation {
         display: flex;
         justify-content: center;
         padding: 1em;
+
         > button {
           width: 90px;
           background: none;
           outline: none;
           border: none;
+
           img {
             width: 90px;
             margin: 0;
           }
+
           &:hover {
             cursor: pointer;
+
             img {
               transform: scale(1.1);
               transition: transform 0.2s;
@@ -73,16 +86,18 @@
         }
       }
     }
+
     .selected {
       border: solid 5px colors.$black;
     }
+
     &__community-card {
       display: inline-flex;
       height: calc(100vh - 78px);
       width: 100vw;
       min-height: 564px;
       height: fit-content;
-      margin-left: 0px !important;
+      margin-left: 0 !important;
       padding-right: 96px;
       margin-bottom: 10px;
       padding-top: -80px;
@@ -98,49 +113,59 @@
         min-width: 70px;
         z-index: -1;
       }
+
       &__header {
         display: flex;
         align-items: center;
         justify-content: flex-start;
+
         img {
           height: 60px;
           margin-right: 10px;
         }
       }
+
       &__logo {
         min-width: 226px;
         max-width: 226px;
         margin: 66px;
       }
+
       &__content {
         display: flex;
         flex-direction: row;
         justify-content: center;
         width: 100%;
         height: fit-content;
+
         > a {
           display: flex;
           justify-content: center;
+
           &:hover img {
             transition: transform 0.2s;
             transform: scale(1.05);
           }
         }
+
         > div {
           max-width: 570px;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
           height: fit-content;
+
           > h1 {
             font-weight: 500;
             font-size: 45px;
           }
+
           > p {
             font-weight: 500;
             font-size: 18px;
             margin-bottom: 30px;
           }
+
           .community-links {
             display: flex;
             flex-direction: row;
@@ -155,8 +180,10 @@
               background-color: transparent;
               outline: none;
               padding-right: 30px;
+
               img {
                 width: 40px;
+
                 &:hover {
                   transform: scale(1.05);
                 }
@@ -166,26 +193,33 @@
         }
       }
     }
+
     @media only screen and (max-width: 812px) {
       p {
         padding: 3em !important;
       }
+
       &__community-card {
         padding: 0 3em !important;
+
         .color_slide {
           display: none;
         }
+
         &__header {
           justify-content: left;
+
           h1 {
             font-size: 28px;
           }
         }
+
         &__content {
           div {
             p {
               font-size: 16px;
             }
+
             .community-links a {
               padding-right: 20px;
             }
@@ -195,39 +229,51 @@
     }
   }
 }
+
 .red {
   color: colors.$red;
 }
+
 .redbg {
   background-color: colors.$light-red;
 }
+
 .redfill {
   fill: colors.$red !important;
 }
+
 .turquoise {
   color: colors.$turquoise;
 }
+
 .turquoisebg {
   background-color: colors.$light-turquoise;
 }
+
 .yellow {
   color: colors.$orange;
 }
+
 .yellowbg {
   background-color: colors.$light-orange;
 }
+
 .purple {
   color: colors.$purple;
 }
+
 .purplebg {
   background-color: colors.$light-purple;
 }
+
 .pink {
   color: colors.$pink;
 }
+
 .pinkbg {
   background-color: colors.$light-pink;
 }
+
 .spacer80px {
   height: 80px;
 }

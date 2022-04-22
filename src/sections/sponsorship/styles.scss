@@ -8,39 +8,48 @@
     display: flex;
     align-items: flex-start;
     align-items: center;
+
     @media only screen and (min-width: 810px) {
       flex-direction: row;
     }
+
     @media only screen and (max-width: 812px) {
       min-height: 500px;
       flex-direction: column;
     }
+
     &__img {
       width: 40%;
+
       @media only screen and (max-width: 740px) {
         width: 50%;
       }
+
       @media only screen and (max-width: 500px) {
         width: 80%;
       }
     }
+
     .module-border-wrap {
       width: 295px;
-
       padding: 1rem;
       position: relative;
       background: linear-gradient(to right, colors.$red, colors.$purple);
       padding: 3px;
     }
+
     &__text {
       padding-left: 56px;
+
       &__title {
         @media only screen and (min-width: 810px) {
-          padding-top: 0px;
+          padding-top: 0;
         }
+
         @media only screen and (max-width: 812px) {
           padding-top: 50px;
         }
+
         font-size: 45px;
         margin-bottom: 30px;
       }
@@ -49,16 +58,19 @@
         @media only screen and (min-width: 810px) {
           text-align: left;
         }
+
         @media only screen and (max-width: 812px) {
           max-width: 400px;
           text-align: center;
         }
+
         font-size: 25px;
         font-weight: 500;
-        margin-top: 0px;
+        margin-top: 0;
       }
     }
   }
+
   &__logos {
     display: flex;
     flex-direction: column;
@@ -67,11 +79,13 @@
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
+
     &__header {
       @media only screen and (min-width: 810px) {
         font-size: 36px;
         margin-bottom: 80px;
       }
+
       @media only screen and (max-width: 812px) {
         font-size: 32px;
         margin-bottom: 40px;
@@ -81,24 +95,29 @@
       padding-right: 40px;
       font-weight: bold;
     }
+
     &__img-grid {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
       flex-direction: row;
+
       a {
         &:hover {
           cursor: pointer;
+
           img {
             transform: scale(1.05);
             transition: transform 0.2s;
           }
         }
+
         img {
           @media only screen and (max-width: 812px) {
-            padding: 0px 40px;
+            padding: 0 40px;
           }
+
           width: 400px;
           padding: 10px;
         }
@@ -106,7 +125,7 @@
 
       > #first {
         @media only screen and (max-width: 812px) {
-          padding: 0px 44px;
+          padding: 0 44px;
         }
 
         padding: 10px;
@@ -117,28 +136,34 @@
   &__benefits {
     padding-left: 40px;
     padding-right: 40px;
+
     @media only screen and (min-width: 810px) {
       padding-top: 160px;
     }
+
     @media only screen and (max-width: 812px) {
       padding-top: 80px;
     }
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
     &__header {
       max-width: 600px;
-
       font-size: 36px;
       font-weight: bold;
+
       @media only screen and (min-width: 810px) {
         margin-bottom: 60px;
       }
+
       @media only screen and (max-width: 812px) {
         margin-bottom: 30px;
       }
     }
+
     &__benefit-list {
       max-width: 600px;
 
@@ -149,28 +174,33 @@
         align-items: center;
         justify-content: flex-start;
         padding-bottom: 25px;
+
         > img {
           float: left;
           padding-right: 27px;
-          margin: 0px;
+          margin: 0;
         }
+
         > p {
           font-size: 20px;
           font-weight: 500;
           line-height: 26.04px;
-          margin: 0px;
+          margin: 0;
         }
       }
     }
+
     &__footer {
       max-width: 600px;
       font-size: 25px;
       font-weight: 500;
       line-height: 32.55px;
+
       @media only screen and (min-width: 810px) {
         padding-top: 90px;
         padding-bottom: 80px;
       }
+
       @media only screen and (max-width: 812px) {
         padding-top: 50px;
         padding-bottom: 40px;
@@ -183,6 +213,7 @@
     }
   }
 }
+
 .blue {
   color: colors.$blue;
   font-weight: bold;
@@ -197,21 +228,25 @@
   color: colors.$purple;
   font-weight: bold;
 }
+
 .mobile {
   @media only screen and (min-width: 810px) {
     display: none;
     padding-top: 100px;
   }
+
   @media only screen and (max-width: 812px) {
     display: flex;
-    padding-top: 0px;
+    padding-top: 0;
   }
 }
+
 .desktop {
   @media only screen and (min-width: 810px) {
     display: flex;
-    padding-top: 0px;
+    padding-top: 0;
   }
+
   @media only screen and (max-width: 812px) {
     display: none;
   }

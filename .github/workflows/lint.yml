@@ -7,7 +7,17 @@ on:
     branches: [ main ]
 
 jobs:
-  run-linter:
+  stylelint:
+    name: Run Linter
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+    - run: yarn install
+    - run: yarn stylelint
+  eslint:
     name: Run Linter
     runs-on: ubuntu-latest
     steps:

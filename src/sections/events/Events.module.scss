@@ -36,9 +36,9 @@ $mobile: 960px;
       background: colors.$white;
       border: 1px solid black;
       box-sizing: border-box;
-      box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 3px 4px rgb(0 0 0 / 25%);
       border-radius: 10px;
-      font-family: DM Sans;
+      font-family: "DM Sans";
       font-style: normal;
       font-weight: bold;
       font-size: 20px;
@@ -47,38 +47,47 @@ $mobile: 960px;
       &.general {
         border-color: colors.$blue;
         color: colors.$blue;
+
         &.active {
           background-color: colors.$blue;
           color: colors.$white;
         }
       }
+
       &.hack {
         border-color: colors.$orange;
         color: colors.$orange;
+
         &.active {
           background-color: colors.$orange;
           color: colors.$white;
         }
       }
+
       &.cyber {
         border-color: colors.$turquoise;
         color: colors.$turquoise;
+
         &.active {
           background-color: colors.$turquoise;
           color: colors.$white;
         }
       }
+
       &.innovate {
         border-color: colors.$purple;
         color: colors.$purple;
+
         &.active {
           background-color: colors.$purple;
           color: colors.$white;
         }
       }
+
       &.ai {
         border-color: colors.$red;
         color: colors.$red;
+
         &.active {
           background-color: colors.$red;
           color: colors.$white;
@@ -100,7 +109,6 @@ $mobile: 960px;
     justify-content: center;
     align-items: center;
     height: 50vh;
-
     font-family: "DM Sans", sans-serif;
     font-style: normal;
     font-weight: bold;

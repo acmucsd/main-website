@@ -41,7 +41,7 @@ export const getBoardData = async () => {
     .map(row => {
       const boardMemberData: BoardMemberProps = {
         name: row["Name"],
-        org: row["Team"].toLowerCase(),
+        org: row["Team"]?.toLowerCase(),
         title: row["Position"],
         profile_image: row["Profile Picture"],
         email: row["ACM Email"] || null,

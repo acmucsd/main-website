@@ -11,8 +11,8 @@ const CommunityHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         <>
           <h1>Communities</h1>
           <p>
-            ACM Chapter at UCSD is one large community, but it is made up of several smaller
-            communities focused on specific areas of technology.
+            ACM at UCSD is one large community, but it is made up of several
+            smaller communities focused on specific areas of technology.
           </p>
           <div className="community__hero__communities">
             <CommunitiesGrid />

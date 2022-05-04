@@ -38,7 +38,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
               <img src={AILogo.src} alt="ACM AI" />
               <div className="communitiesGrid__community__label">
                 <h3>
-                  <span>ACM Chapter</span> AI
+                  <span>ACM</span> AI
                 </h3>
                 <p>Artificial Intelligence</p>
               </div>
@@ -52,7 +52,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
               <img src={CyberLogo.src} alt="ACM Cyber" />
               <div className="communitiesGrid__community__label">
                 <h3>
-                  <span>ACM Chapter</span> Cyber
+                  <span>ACM</span> Cyber
                 </h3>
                 <p>Cyber Security</p>
               </div>
@@ -68,7 +68,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
               <img src={HackLogo.src} alt="ACM Hack" />
               <div className="communitiesGrid__community__label">
                 <h3>
-                  <span>ACM Chapter</span> Hack
+                  <span>ACM</span> Hack
                 </h3>
                 <p>Software Engineering</p>
               </div>
@@ -82,7 +82,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
               <img src={InnovateLogo.src} alt="ACM Innovate" />
               <div className="communitiesGrid__community__label">
                 <h3>
-                  <span>ACM Chapter</span> Innovate
+                  <span>ACM</span> Innovate
                 </h3>
                 <p>Entrepreneurship</p>
               </div>
@@ -103,7 +103,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
               <img src={AILogo.src} alt="ACM AI" />
               <div className="communitiesGrid__community__label">
                 <h3>
-                  <span>ACM Chapter</span> AI
+                  <span>ACM</span> AI
                 </h3>
                 <p>Artificial Intelligence</p>
               </div>
@@ -117,7 +117,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
               <img src={CyberLogo.src} alt="ACM Cyber" />
               <div className="communitiesGrid__community__label">
                 <h3>
-                  <span>ACM Chapter</span> Cyber
+                  <span>ACM</span> Cyber
                 </h3>
                 <p>Cyber Security</p>
               </div>
@@ -131,7 +131,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
               <img src={HackLogo.src} alt="ACM Hack" />
               <div className="communitiesGrid__community__label">
                 <h3>
-                  <span>ACM Chapter</span> Hack
+                  <span>ACM</span> Hack
                 </h3>
                 <p>Software Engineering</p>
               </div>
@@ -145,7 +145,7 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
               <img src={InnovateLogo.src} alt="ACM Innovate" />
               <div className="communitiesGrid__community__label">
                 <h3>
-                  <span>ACM Chapter</span> Innovate
+                  <span>ACM</span> Innovate
                 </h3>
                 <p>Entrepreneurship</p>
               </div>

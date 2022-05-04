@@ -6,9 +6,7 @@ const HomeJoinUs: React.FC = () => {
       <div className="home__join-us__grid">
         <div className="home__join-us__grid__header">
           <h1>Join us.</h1>
-          <p>
-            ACM Chapter at UCSD is an inclusive community of students passionate about technology.
-          </p>
+          <p>ACM at UCSD is an inclusive community of students passionate about technology.</p>
         </div>
         <div className="home__join-us__grid__numbers">
           <Number color="#FF6F6F" description="ucsd members" extension="+" number={1000} />

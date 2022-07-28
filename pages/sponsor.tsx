@@ -4,8 +4,9 @@ import SponsorshipLogo from "src/sections/sponsorship/Sponsorship.Logos";
 import SponsorshipInfo from "src/sections/sponsorship/Sponsorship.Info";
 import SponsorshipBenefits from "src/sections/sponsorship/Sponsorship.Benefits";
 import SponsorHeroLogo from "public/assets/sponsor-images/sponsor_hero.png";
+import { NextPage } from "next";
 
-const SponsorshipPage: React.FC = () => (
+const SponsorshipPage: NextPage = () => (
   <>
     <SEO
       title="Sponsor | ACM at UCSD"

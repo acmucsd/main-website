@@ -1,6 +1,7 @@
+import { NextPage } from "next";
 import SEO from "src/components/SEO";
 
-const NotFoundPage = () => (
+const NotFoundPage: NextPage = () => (
   <>
     <SEO
       title="404: Not Found"

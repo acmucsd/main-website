@@ -1,6 +1,7 @@
+import { NextPage } from "next";
 import SEO from "src/components/SEO";
 
-const Offline = () => (
+const Offline: NextPage = () => (
   <>
     <SEO
       title="Page Offline"

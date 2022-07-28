@@ -11,8 +11,9 @@ import AboutBoard from "src/sections/about/About.Board";
 import HeroImage from "public/assets/about-images/about-hero.png";
 import { BoardMemberProps } from "src/types";
 import { getBoardData } from "src/api/BoardAPI";
+import { NextPage } from "next";
 
-const AboutPage: React.FC<{ board: BoardMemberProps[] }> = ({ board }) => {
+const AboutPage: NextPage<{ board: BoardMemberProps[] }> = ({ board }) => {
   const size: Size = useWindowSize();
   const [isMobile, setIsMobile] = useState(false);
 

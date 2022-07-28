@@ -6,8 +6,9 @@ import SEO from "src/components/SEO";
 import CommunityHero from "src/sections/community/Community.Hero";
 import CommunitySuborgs from "src/sections/community/Community.Suborgs";
 import ACMWhiteLogo from "public/assets/ACMWhiteLogo.png";
+import { NextPage } from "next";
 
-const CommunitiesPage: React.FC = () => {
+const CommunitiesPage: NextPage = () => {
   const size: Size = useWindowSize();
   const [isMobile, setIsMobile] = useState(false);
 

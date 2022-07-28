@@ -1,6 +1,3 @@
-import Typist from "react-typist";
-import "react-typist/dist/Typist.css";
-
 import ScrollDownArrow from "src/components/ScrollDownArrow";
 import CoolLogo from "public/assets/cool_logo_1000x1000.png";
 import CoolLogoMobile from "public/assets/cool_logo.png";
@@ -19,11 +16,7 @@ const HomeHero: React.FC = () => {
         </div>
         <div className="home__hero--grid--description">
           <div className="description-block">
-            <Typist
-              className="join"
-              avgTypingDelay={40}
-              cursor={{ hideWhenDone: true, hideWhenDoneDelay: 1400 }}
-            >
+            <div>
               <span>We are UCSD&#39;s largest</span>
               <br />
               <span className="blue">code + </span>
@@ -31,7 +24,7 @@ const HomeHero: React.FC = () => {
               <span className="purple">innovate</span>
               <br />
               <span>community.&nbsp;</span>
-            </Typist>
+            </div>
             <div className="buttons">
               <a
                 className="hero-btn btn-outlined"

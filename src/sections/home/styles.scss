@@ -15,11 +15,9 @@
         font-size: 40px;
 
         .description-block {
-          .Typist {
-            line-height: 52px;
-            width: 100%;
-            min-height: 156px;
-          }
+          line-height: 52px;
+          width: 100%;
+          min-height: 156px;
         }
       }
 
@@ -69,13 +67,6 @@
       }
     }
 
-    @media only screen and (min-width: 1400px) {
-      // for long screens
-      &--grid &--grid--description .description-block .Typist {
-        min-height: 3em;
-      }
-    }
-
     @media only screen and (max-width: 1050px) {
       // for tablets and mobile
       &--grid {
@@ -101,12 +92,6 @@
           font-size: 32px;
           line-height: 32px;
           margin-left: 0;
-          .description-block {
-            .Typist {
-              line-height: 32px;
-              min-height: 96px;
-            }
-          }
         }
 
         .buttons {

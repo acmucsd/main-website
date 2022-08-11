@@ -19,7 +19,7 @@ const HomeHero: React.FC = () => {
             <div>
               <span>We are UCSD&#39;s largest</span>
               <br />
-              <span className="blue">code + </span>
+              <span className="blue">hacking + </span>
               <span className="pink">design + </span>
               <span className="purple">innovate</span>
               <br />

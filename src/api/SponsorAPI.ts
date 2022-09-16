@@ -22,10 +22,10 @@ export const getSponsorsData = async () => {
 
   // Fetches from first worksheet in spreadsheet. When a new year is created, it will automatically switch to filling sponsor data from there.
 
-  // Load the spreadsheet at index 0, when the board data for a new year is added as a worksheet, it will automatically select from there instead
+  // Load the spreadsheet at index 0, when the sponsor data for a new year is added as a worksheet, it will automatically select from there instead
   const sponsorSheet: GoogleSpreadsheetWorksheet = doc.sheetsByIndex[0];
 
-  // Headers should be in the second row after the first row with title "ACM Board 20XX-20XX"
+  // Headers should be in the second row after the first row with the title
   await sponsorSheet.loadHeaderRow(2);
   const rows = await sponsorSheet.getRows();
 

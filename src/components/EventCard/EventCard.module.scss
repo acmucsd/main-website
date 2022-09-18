@@ -29,6 +29,7 @@
       margin: 0;
       display: inline;
     }
+
     .cardDay {
       display: inline;
       margin: 0 0 0 10px;
@@ -53,27 +54,28 @@
       font-weight: bold;
       font-size: 15px;
       line-height: 110%;
-      white-space: pre-wrap; /*keep text on one line */
-      overflow: hidden; /*prevent text from being shown outside the border */
-      text-overflow: ellipsis; /*cut off text with an ellipsis*/
+      white-space: pre-wrap;
+      /*keep text on one line */
+      overflow: hidden;
+      /*prevent text from being shown outside the border */
+      text-overflow: ellipsis;
+      /*cut off text with an ellipsis*/
       max-height: 40px;
       margin: 0;
+
       &.general {
         color: colors.$blue;
       }
-      &.innovate {
-        color: colors.$purple;
-      }
-      &.hack {
-        color: colors.$orange;
-      }
+
       &.cyber {
         color: colors.$turquoise;
       }
+
       &.ai {
         color: colors.$red;
       }
     }
+
     .eventLocation,
     .eventTime {
       font-family: DM Sans;
@@ -86,6 +88,7 @@
       margin: 0;
     }
   }
+
   .cardFooter {
     gap: 15px;
     display: flex;

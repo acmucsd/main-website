@@ -2,11 +2,13 @@
 
 .container {
   margin: 40px;
+
   .eventHeader {
     line-height: 2rem;
     height: 2rem;
     margin-bottom: 40px;
-    & > * {
+
+    &>* {
       display: inline-block;
       margin: 0;
       height: 100%;
@@ -15,26 +17,25 @@
       font-weight: 700;
       font-size: 20px;
     }
+
     .backButton {
       float: left;
       text-decoration: none;
       color: black;
     }
+
     .eventType {
       float: right;
       line-height: 32px;
+
       &.general {
         color: colors.$blue;
       }
-      &.hack {
-        color: colors.$orange;
-      }
+
       &.ai {
         color: colors.$red;
       }
-      &.innovate {
-        color: colors.$purple;
-      }
+
       &.cyber {
         color: colors.$turquoise;
       }
@@ -58,6 +59,7 @@
       object-position: top left;
       overflow: hidden;
       border-radius: 10px;
+
       @media screen and (max-width: 960px) {
         width: 100%;
         height: auto;
@@ -148,6 +150,7 @@
             grid-row: 2;
             text-align: start;
           }
+
           font-family: "DM Sans";
           font-style: normal;
           font-weight: 700;
@@ -158,15 +161,11 @@
           &.general {
             color: colors.$blue;
           }
-          &.hack {
-            color: colors.$orange;
-          }
+
           &.ai {
             color: colors.$red;
           }
-          &.innovate {
-            color: colors.$purple;
-          }
+
           &.cyber {
             color: colors.$turquoise;
           }
@@ -182,6 +181,7 @@
             grid-row: 4;
             text-align: start;
           }
+
           font-family: "DM Sans";
           font-style: normal;
           font-weight: 400;
@@ -197,6 +197,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px 10px;
+
         .eventLink {
           display: flex;
           align-items: center;
@@ -204,6 +205,7 @@
           color: colors.$black;
           text-decoration: none;
           gap: 10px;
+
           img {
             margin: 0;
           }

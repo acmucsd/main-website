@@ -7,10 +7,6 @@ import AboutProjects from "public/assets/about-images/about-projects.png";
 import AboutSocial from "public/assets/about-images/about-social.png";
 import DiscordLogo from "public/assets/discord-dark.svg";
 import FacebookLogo from "public/assets/facebook-dark.svg";
-import AILogo from "public/assets/logos/acm-ai.svg";
-import CyberLogo from "public/assets/logos/acm-cyber.svg";
-import HackLogo from "public/assets/logos/acm-hack.svg";
-import InnovateLogo from "public/assets/logos/acm-innovate.svg";
 import CommunitiesGrid from "src/components/CommunitiesGrid";
 
 const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {

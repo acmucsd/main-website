@@ -14,12 +14,6 @@ import GeneralEmpty from "public/assets/board-filters/general-empty.svg";
 import CyberSelected from "public/assets/board-filters/cyber-selected.svg";
 import CyberEmpty from "public/assets/board-filters/cyber-empty.svg";
 
-import HackSelected from "public/assets/board-filters/hack-selected.svg";
-import HackEmpty from "public/assets/board-filters/hack-empty.svg";
-
-import InnovateSelected from "public/assets/board-filters/innovate-selected.svg";
-import InnovateEmpty from "public/assets/board-filters/innovate-empty.svg";
-
 import { BoardMemberProps } from "src/types";
 
 const filter = (filters, members_list) => {
@@ -31,7 +25,7 @@ const filter = (filters, members_list) => {
     return displayList;
   }
 };
-const renderFilters = (filters, setFilters) => {};
+const renderFilters = (filters, setFilters) => { };
 interface AboutBoardProps {
   isMobile: boolean;
   board: BoardMemberProps[];
@@ -102,36 +96,6 @@ const AboutBoard: React.FC<AboutBoardProps> = ({ isMobile, board }) => {
             alt="cyber is not selected"
             src={CyberEmpty.src}
             onClick={() => setFilters(["cyber"])}
-          />
-        )}
-        {filters.includes("hack") ? (
-          <img
-            src={HackSelected.src}
-            alt="hack is selected"
-            onClick={() => {
-              setFilters(filters.filter(e => e !== "hack"));
-            }}
-          />
-        ) : (
-          <img
-            alt="hack is not selected"
-            src={HackEmpty.src}
-            onClick={() => setFilters(["hack"])}
-          />
-        )}
-        {filters.includes("innovate") ? (
-          <img
-            src={InnovateSelected.src}
-            alt="innovate is selected"
-            onClick={() => {
-              setFilters(filters.filter(e => e !== "innovate"));
-            }}
-          />
-        ) : (
-          <img
-            alt="innovate is not selected"
-            src={InnovateEmpty.src}
-            onClick={() => setFilters(["innovate"])}
           />
         )}
       </div>

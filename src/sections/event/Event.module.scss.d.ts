@@ -18,8 +18,6 @@ declare namespace EventModuleScssNamespace {
     eventLinks: string;
     eventType: string;
     general: string;
-    hack: string;
-    innovate: string;
     location: string;
     time: string;
     title: string;

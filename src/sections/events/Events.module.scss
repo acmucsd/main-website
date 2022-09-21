@@ -47,38 +47,27 @@ $mobile: 960px;
       &.general {
         border-color: colors.$blue;
         color: colors.$blue;
+
         &.active {
           background-color: colors.$blue;
           color: colors.$white;
         }
       }
-      &.hack {
-        border-color: colors.$orange;
-        color: colors.$orange;
-        &.active {
-          background-color: colors.$orange;
-          color: colors.$white;
-        }
-      }
+
       &.cyber {
         border-color: colors.$turquoise;
         color: colors.$turquoise;
+
         &.active {
           background-color: colors.$turquoise;
           color: colors.$white;
         }
       }
-      &.innovate {
-        border-color: colors.$purple;
-        color: colors.$purple;
-        &.active {
-          background-color: colors.$purple;
-          color: colors.$white;
-        }
-      }
+
       &.ai {
         border-color: colors.$red;
         color: colors.$red;
+
         &.active {
           background-color: colors.$red;
           color: colors.$white;

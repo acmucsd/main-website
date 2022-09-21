@@ -9,19 +9,10 @@ import CyberLinkedin from "public/assets/communities-links/cyber-linkedin.svg";
 import CyberMail from "public/assets/communities-links/cyber-mail.svg";
 import CyberTwitter from "public/assets/communities-links/cyber-twitter.svg";
 import CyberYoutube from "public/assets/communities-links/cyber-youtube.svg";
-import HackDiscord from "public/assets/communities-links/hack-discord.svg";
-import HackHome from "public/assets/communities-links/hack-home.svg";
-import InnovateDiscord from "public/assets/communities-links/innovate-discord.svg";
-import InnovateHome from "public/assets/communities-links/innovate-home.svg";
-import InnovateYoutube from "public/assets/communities-links/innovate-youtube.svg";
 import AILogoSelected from "public/assets/communities-navigation/ai-selected.svg";
 import CyberLogoSelected from "public/assets/communities-navigation/cyber-selected.svg";
-import HackLogoSelected from "public/assets/communities-navigation/hack-selected.svg";
-import InnovateLogoSelected from "public/assets/communities-navigation/innovate-selected.svg";
 import AILogo from "public/assets/logos/acm-ai.svg";
 import CyberLogo from "public/assets/logos/acm-cyber.svg";
-import HackLogo from "public/assets/logos/acm-hack.svg";
-import InnovateLogo from "public/assets/logos/acm-innovate.svg";
 
 const CommunityComponent: React.FC<{
   org: string;
@@ -163,95 +154,12 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   />
 );
 
-const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
-  <CommunityComponent
-    org={"Hack"}
-    color={"yellow"}
-    isMobile={isMobile}
-    website={"https://hack.acmucsd.com/"}
-    logo={HackLogo.src}
-    links={[
-      {
-        src: "http://acmurl.com/hack-disc",
-        logo: HackDiscord.src,
-        alt: "Hack Discord",
-      },
-      {
-        src: "https://hack.acmucsd.com/",
-        logo: HackHome.src,
-        alt: "Hack Home",
-      },
-    ]}
-    description={
-      <p>
-        We focus on learning more about software engineering and exploring what
-        is possible through code.
-        <br />
-        <br />
-        We frequently host workshops to empower students to create amazing
-        projects, as well as events to help students learn about software
-        engineering and finding their path.
-        <br />
-        <br />
-        Our events are for people of all skill levels, so whether you&apos;re a
-        first-time coder or a skilled programmer, we&apos;d be happy to have you
-        join the ACM Hack community!
-      </p>
-    }
-  />
-);
-const InnovateCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
-  <CommunityComponent
-    org={"Innovate"}
-    color={"purple"}
-    isMobile={isMobile}
-    website={"https://innovate.acmucsd.com/"}
-    logo={InnovateLogo.src}
-    links={[
-      {
-        src: "https://acmurl.com/innovate-discord",
-        logo: InnovateDiscord.src,
-        alt: "Innovate Discord",
-      },
-      {
-        src: "https://innovate.acmucsd.com/",
-        logo: InnovateHome.src,
-        alt: "Innovate Home",
-      },
-      {
-        src: "https://acmurl.com/innovate-youtube",
-        logo: InnovateYoutube.src,
-        alt: "Innovate Youtube",
-      },
-    ]}
-    description={
-      <p>
-        We create and foster an entrepreneurial spirit with regard to both new
-        nonprofit and for-profit companies.
-        <br />
-        <br />
-        Our mission is to increase interest and accessibility in startups and
-        bring the innovation spirit and mentality to members’ careers.
-        <br />
-        <br />
-        We frequently host activities: guest speaker talks, workshops, and side
-        projects. We have a lot of exciting stuff planned for the future!
-        <br />
-        <br />
-        All skill levels welcome!
-      </p>
-    }
-  />
-);
-
 const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const [selected, setSelected] = useState("general");
 
   const communityComponents = {
     ai: <AICommunity isMobile={isMobile} />,
     cyber: <CyberCommunity isMobile={isMobile} />,
-    hack: <HackCommunity isMobile={isMobile} />,
-    innovate: <InnovateCommunity isMobile={isMobile} />,
     general: (
       <div className="community__sub-orgs--mobile__description">
         <p>
@@ -288,22 +196,6 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
                 alt="Cyber Logo"
               />
             </button>
-            <button onClick={() => setSelected("hack")}>
-              <img
-                src={selected === "hack" ? HackLogoSelected.src : HackLogo.src}
-                alt="Hack Logo"
-              />
-            </button>
-            <button onClick={() => setSelected("innovate")}>
-              <img
-                src={
-                  selected === "innovate"
-                    ? InnovateLogoSelected.src
-                    : InnovateLogo.src
-                }
-                alt="Innovate Logo"
-              />
-            </button>
           </div>
           {communityComponents[selected]}
         </section>
@@ -312,8 +204,6 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <div className="spacer80px"></div>
           <AICommunity isMobile={isMobile} />
           <CyberCommunity isMobile={isMobile} />
-          <HackCommunity isMobile={isMobile} />
-          <InnovateCommunity isMobile={isMobile} />
         </section>
       )}
     </>

@@ -10,10 +10,8 @@ declare namespace EventsModuleScssNamespace {
     filterButton: string;
     filterContainer: string;
     general: string;
-    hack: string;
     header: string;
     headerText: string;
-    innovate: string;
     mobileFilters: string;
     noEvents: string;
   }

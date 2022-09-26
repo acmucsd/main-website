@@ -6,12 +6,14 @@
   justify-content: center;
   align-items: center;
 }
+
 .communitiesGrid {
   padding: 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 580px;
+
   &__community {
     padding: 20px 0px;
     text-decoration: none;
@@ -21,6 +23,7 @@
     align-items: center;
     transform: scale(1);
     transition: transform ease-in-out 0.1s;
+
     &:hover {
       transform: scale(1.05);
       transition: transform ease-in-out 0.1s;
@@ -29,6 +32,7 @@
     &__label {
       margin-left: 10px;
       width: 210px;
+
       h3 {
         margin: 0 !important;
         font-size: 1.7rem;
@@ -38,6 +42,7 @@
           font-weight: 700;
         }
       }
+
       p {
         margin: 0;
         color: colors.$black;
@@ -55,44 +60,45 @@
     &.ai--visible {
       color: colors.$red;
     }
+
     &.cyber--visible {
       color: colors.$turquoise;
-    }
-    &.hack--visible {
-      color: colors.$orange;
-    }
-    &.innovate--visible {
-      color: colors.$purple;
     }
 
     @keyframes hide {
       from {
         opacity: 0;
       }
+
       to {
         opacity: 0;
       }
     }
+
     @keyframes fade-up {
       from {
         opacity: 0%;
         transform: translateY(5vh);
       }
+
       to {
         opacity: 100%;
         transform: translateY(0);
       }
     }
   }
+
   @media only screen and (max-width: 500px) {
     .communitiesGrid__community {
       padding: 20px 10px;
+
       &__label {
         h3 {
           margin: 0 !important;
           font-size: 1.6rem;
         }
       }
+
       img {
         width: 70px;
         margin: 0;
@@ -108,8 +114,10 @@
   flex-wrap: nowrap;
   align-items: flex-start;
   justify-content: center;
+
   .communitiesGrid__community {
     padding: 15px 0;
+
     img {
       width: 80px;
     }
@@ -120,9 +128,11 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+
   .communitiesGrid {
     display: inline-block;
   }
+
   @media only screen and (max-width: 932px) {
     flex-direction: column;
     align-items: center;

@@ -2,9 +2,6 @@ import style from "./styles.module.scss";
 import GeneralDefault from "public/assets/default-board-images/general-default.svg";
 import AIDefault from "public/assets/default-board-images/ai-default.svg";
 import CyberDefault from "public/assets/default-board-images/cyber-default.svg";
-import HackDefault from "public/assets/default-board-images/hack-default.svg";
-import InnovateDefault from "public/assets/default-board-images/innovate-default.svg";
-
 import { BoardMemberProps } from "src/types/index";
 import Image from "next/image";
 import { withHttp } from "src/utils/general";
@@ -19,14 +16,6 @@ const openInNewTab = url => {
   if (newWindow) newWindow.opener = null;
 };
 
-const defaultImgs = {
-  general: GeneralDefault,
-  ai: AIDefault,
-  cyber: CyberDefault,
-  hack: HackDefault,
-  innovate: InnovateDefault,
-};
-
 const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
   const {
     name = "",
@@ -37,6 +26,12 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
     personal_link = "",
     linkedin_link = "",
   } = boardmember;
+
+  const defaultImgs = {
+    general: GeneralDefault,
+    ai: AIDefault,
+    cyber: CyberDefault,
+  };
 
   const boardDefault = defaultImgs[org];
 

@@ -36,22 +36,10 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
               General
             </button>
             <button
-              onClick={() => filter("hack")}
-              className={`${s.filterButton} ${s.hack} ${activeFilter == "hack" && s.active}`}
-            >
-              Hack
-            </button>
-            <button
               onClick={() => filter("cyber")}
               className={`${s.filterButton} ${s.cyber} ${activeFilter == "cyber" && s.active}`}
             >
               Cyber
-            </button>
-            <button
-              onClick={() => filter("innovate")}
-              className={`${s.filterButton} ${s.innovate} ${activeFilter == "innovate" && s.active}`}
-            >
-              Innovate
             </button>
             <button
               onClick={() => filter("ai")}
@@ -64,8 +52,6 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
             <select value={activeFilter} onChange={e => setActiveFilter(e.target.value)}>
               <option value="all">All</option>
               <option value="general">General</option>
-              <option value="innovate">Innovate</option>
-              <option value="hack">Hack</option>
               <option value="ai">AI</option>
               <option value="cyber">Cyber</option>
             </select>

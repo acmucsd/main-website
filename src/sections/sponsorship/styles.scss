@@ -81,35 +81,21 @@
       padding-right: 40px;
       font-weight: bold;
     }
-    &__img-grid {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      flex-direction: row;
-      a {
-        &:hover {
-          cursor: pointer;
-          img {
-            transform: scale(1.05);
-            transition: transform 0.2s;
-          }
-        }
-        img {
-          @media only screen and (max-width: 812px) {
-            padding: 0px 40px;
-          }
-          width: 400px;
-          padding: 10px;
-        }
+    &__grid {
+      position: relative;
+      width: 90%;
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      @media only screen and (max-width: 250px) {
+        grid-template-columns: 1fr;
       }
 
-      > #first {
-        @media only screen and (max-width: 812px) {
-          padding: 0px 44px;
+      a {
+        text-align: center;
+        img {
+          margin: 0;
         }
-
-        padding: 10px;
       }
     }
   }

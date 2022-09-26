@@ -1,43 +1,16 @@
-import Image from "next/image";
-import OptiverImg from "public/assets/sponsor-images/optiver_logo.png";
-import CSEImg from "public/assets/sponsor-images/CSE_logo.png";
-import TESCImg from "public/assets/sponsor-images/tesc_logo.png";
-import RobinhoodImg from "public/assets/sponsor-images/robinhood_logo.png";
-import GearImg from "public/assets/sponsor-images/gear_logo.png";
-import LockheedMartin from "public/assets/sponsor-images/lockheed_martin_logo.png";
+import { SponsorProps } from "src/types";
 
-const SponsorshipLogos: React.FC = () => {
-  return (
-    <section className="sponsorship__logos">
-      <h1 className="sponsorship__logos__header">
-        Thank you to our current sponsors!
-      </h1>
-      <div className="sponsorship__logos__img-grid">
-        <a href="https://gear-tech.io/">
-          <img src={GearImg.src} alt="Gear" />
+const SponsorshipLogos: React.FC<{ sponsors: SponsorProps[] }> = ({ sponsors }) => (
+  <section className="sponsorship__logos">
+    <h1 className="sponsorship__logos__header">Thank you to our current sponsors!</h1>
+    <div className="sponsorship__logos__grid">
+      {sponsors.map((sponsor, index) => (
+        <a href={sponsor.url} key={`${sponsor.name}-${index}`}>
+          <img src={sponsor.logo} alt={sponsor.name} />
         </a>
-        <a href="https://www.lockheedmartin.com/">
-          <img src={LockheedMartin.src} alt="Lockheed Martin" />
-        </a>
-      </div>
-      <div className="sponsorship__logos__img-grid">
-        <a href="https://www.optiver.com/">
-          <img src={OptiverImg.src} alt="Optiver" />
-        </a>
-        <a href="https://www.robinhood.com/">
-          <img src={RobinhoodImg.src} alt="Robinhood" />
-        </a>
-      </div>
-      <div className="sponsorship__logos__img-grid">
-        <a href="https://cse.ucsd.edu/">
-          <img src={CSEImg.src} alt="CSE" />
-        </a>
-        <a href="https://tesc.ucsd.edu/">
-          <img src={TESCImg.src} alt="TESC" />
-        </a>
-      </div>
-    </section>
-  );
-};
+      ))}
+    </div>
+  </section>
+);
 
 export default SponsorshipLogos;

@@ -1,66 +1,87 @@
-import { useState, useEffect } from "react";
 import Image from "next/image";
-import BoardCard from "src/components/BoardCard";
-import LeftArrow from "public/assets/left-arrow.svg";
-
-import RightArrow from "public/assets/right-arrow.svg";
-import { BoardMemberProps } from "src/types/index";
+import { useEffect, useState } from "react";
+import { BoardMemberProps } from "src/types";
+import BoardCard from "../BoardCard";
+import style from "./styles.module.scss";
 
 interface BoardGridProps {
   members_list: BoardMemberProps[];
-  isMobile: boolean;
 }
-const generateCurrentPage = (members_list, page) => {
-  const per_page = 8;
-  const current_page = members_list.slice(
-    page * per_page,
-    (page + 1) * per_page
-  );
-  return (
-    <div className="BoardGrid_grid">
-      {current_page.map((member) => (
-        <BoardCard
-          boardmember={member}
-          key={`${member.name}-${member.email}-${member.org}`}
-        />
-      ))}
-    </div>
-  );
-};
-const BoardGrid: React.FC<BoardGridProps> = ({ members_list, isMobile }) => {
-  const [page, setPage] = useState(0);
-  const [currentPage, setCurrentPage] = useState<unknown>();
-  const maxPage = Math.ceil(members_list.length / 8 - 1);
+
+const CARDS_PER_PAGE = 8;
+
+const BoardGrid: React.FC<BoardGridProps> = ({ members_list }) => {
+  const [activeFilter, setActiveFilter] = useState("");
+  const [boardCards, setBoardCards] = useState(members_list);
+  const [pageIndex, setPageIndex] = useState(0);
 
   useEffect(() => {
-    setCurrentPage(generateCurrentPage(members_list, page));
-  }, [members_list, page]);
+    setPageIndex(0);
+    if (activeFilter === "") setBoardCards(members_list);
+    else setBoardCards(members_list.filter(item => item.org === activeFilter));
+  }, [activeFilter, members_list]);
 
-  useEffect(() => {
-    if (page > Math.ceil(members_list.length / 8 - 1)) {
-      setPage(Math.ceil(members_list.length / 8 - 1));
-    }
-    setCurrentPage(generateCurrentPage(members_list, page));
-  }, [page, members_list]);
+  const hasMoreCards = () => {
+    return (pageIndex + 1) * CARDS_PER_PAGE >= boardCards.length;
+  };
 
   return (
-    <div className="BoardGrid">
-      <div className="BoardGrid_arrowContainer">
-        {page === 0 ? null : (
+    <div className={style.gridWrapper}>
+      <div className={style.gridFilters}>
+        <p>Filters</p>
+        <div className={style.filterButtons}>
+          <button
+            onClick={() => {
+              if (activeFilter === "general") setActiveFilter("");
+              else setActiveFilter("general");
+            }}
+            className={`${style.general} ${activeFilter === "general" ? style.active : ""}`}
+          >
+            General
+          </button>
+          <button
+            onClick={() => {
+              if (activeFilter === "cyber") setActiveFilter("");
+              else setActiveFilter("cyber");
+            }}
+            className={`${style.cyber} ${activeFilter === "cyber" ? style.active : ""}`}
+            // className={`${style.cyber} ${ activeFilter !== 'cyber' : '' ? style.active}`}
+          >
+            Cyber
+          </button>
+          <button
+            onClick={() => {
+              if (activeFilter === "ai") setActiveFilter("");
+              else setActiveFilter("ai");
+            }}
+            className={`${style.ai} ${activeFilter === "ai" ? style.active : ""}`}
+          >
+            AI
+          </button>
+        </div>
+      </div>
+      <div className={style.grid}>
+        {pageIndex === 0 ? null : (
           <img
-            src={LeftArrow.src}
-            alt="left arrow"
-            onClick={() => setPage(page >= 1 ? page - 1 : 0)}
+            onClick={() => setPageIndex(index => index - 1)}
+            className={style.left}
+            src="assets/left-arrow.svg"
+            alt="Paginate left"
           />
         )}
-      </div>
-      {currentPage}
-      <div className="BoardGrid_arrowContainer">
-        {page === maxPage ? null : (
+        <div className={style.cards}>
+          {boardCards
+            .slice(pageIndex * CARDS_PER_PAGE, (pageIndex + 1) * CARDS_PER_PAGE)
+            .map((item, index) => (
+              <BoardCard key={`${item.name}-${index}`} boardmember={item} />
+            ))}
+        </div>
+        {hasMoreCards() ? null : (
           <img
-            src={RightArrow.src}
-            alt="right arrow"
-            onClick={() => setPage(page < maxPage ? page + 1 : maxPage)}
+            onClick={() => setPageIndex(index => index + 1)}
+            className={style.right}
+            src="assets/right-arrow.svg"
+            alt="Paginate right"
           />
         )}
       </div>

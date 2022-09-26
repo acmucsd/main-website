@@ -16,9 +16,7 @@ declare namespace StylesModuleScssNamespace {
     fadein: string;
     footer: string;
     general: string;
-    hack: string;
     image: string;
-    innovate: string;
     links: string;
     title: string;
   }

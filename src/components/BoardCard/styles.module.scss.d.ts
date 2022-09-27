@@ -2,20 +2,10 @@
 
 declare namespace StylesModuleScssNamespace {
   export interface IStylesModuleScss {
-    BoardCard: string;
-    BoardCard_footer: string;
-    BoardCard_hoverable_svg: string;
-    "BoardCard_long-name": string;
-    "BoardCard_medium-name": string;
-    BoardCard_pfp: string;
-    "BoardCard_short-name": string;
-    BoardCard_titleHeader: string;
     ai: string;
     card: string;
     cyber: string;
-    fadein: string;
     footer: string;
-    general: string;
     image: string;
     links: string;
     title: string;

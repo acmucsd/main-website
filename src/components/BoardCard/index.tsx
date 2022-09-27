@@ -3,18 +3,12 @@ import GeneralDefault from "public/assets/default-board-images/general-default.s
 import AIDefault from "public/assets/default-board-images/ai-default.svg";
 import CyberDefault from "public/assets/default-board-images/cyber-default.svg";
 import { BoardMemberProps } from "src/types/index";
-import Image from "next/image";
 import { withHttp } from "src/utils/general";
-import { link } from "fs";
 
 interface BoardCardProps {
   boardmember: BoardMemberProps;
 }
 
-const openInNewTab = url => {
-  const newWindow = window.open(url, "_blank", "noopener,noreferrer");
-  if (newWindow) newWindow.opener = null;
-};
 
 const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
   const {
@@ -33,7 +27,6 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
     cyber: CyberDefault,
   };
 
-  const boardDefault = defaultImgs[org];
 
   const portfolioLink = withHttp(personal_link);
   const linkedinLink = withHttp(linkedin_link);

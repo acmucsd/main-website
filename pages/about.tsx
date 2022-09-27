@@ -32,7 +32,7 @@ const AboutPage: NextPage<{ board: BoardMemberProps[] }> = ({ board }) => {
       <AboutHero isMobile={isMobile} image={HeroImage.src} />
       <AboutGetInvolved isMobile={isMobile} />
       {isMobile ? null : <AboutMembership />}
-      <AboutBoard isMobile={isMobile} board={board} />
+      <AboutBoard board={board} />
     </>
   );
 };

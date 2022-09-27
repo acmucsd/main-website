@@ -7,7 +7,7 @@ import { EventObject } from "src/api/EventsAPI";
  * @param url The string to add http to
  * @returns a normalized url
  */
-export const withHttp = url => !/^https?:\/\//i.test(url) ? `http://${url}` : url;
+export const withHttp = url => (!url ? "" : !/^https?:\/\//i.test(url) ? `http://${url}` : url);
 
 /**
  * Determines if given string is a valid website link.
@@ -21,11 +21,11 @@ export const isURL = (str: string | undefined): boolean => {
 
   const pattern = new RegExp(
     "^(https?:\\/\\/)?" + // protocol
-    "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
-    "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
-    "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
-    "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
-    "(\\#[-a-z\\d_]*)?$", // fragment locator
+      "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
+      "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
+      "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
+      "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
+      "(\\#[-a-z\\d_]*)?$", // fragment locator
     "i"
   );
 
@@ -76,28 +76,28 @@ export const getDateTime = (event: EventObject): EventTime => {
     result.date = `${startDate.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
-      timeZone: 'America/Los_Angeles'
+      timeZone: "America/Los_Angeles",
     })} - ${endDate.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
-      timeZone: 'America/Los_Angeles'
+      timeZone: "America/Los_Angeles",
     })}`;
   } else {
     result.date = startDate.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
-      timeZone: 'America/Los_Angeles'
+      timeZone: "America/Los_Angeles",
     });
   }
 
   result.time = `${startDate.toLocaleTimeString("en-US", {
     hour: "numeric",
     minute: "2-digit",
-    timeZone: 'America/Los_Angeles'
+    timeZone: "America/Los_Angeles",
   })} - ${endDate.toLocaleTimeString("en-US", {
     hour: "numeric",
     minute: "2-digit",
-    timeZone: 'America/Los_Angeles'
+    timeZone: "America/Los_Angeles",
   })}`;
 
   return result;

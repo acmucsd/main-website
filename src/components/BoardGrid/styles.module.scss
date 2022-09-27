@@ -1,0 +1,93 @@
+@use "src/styles/colors.scss" as colors;
+
+.gridWrapper {
+  .gridFilters {
+    color: #000;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 0 2rem;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .filterButtons {
+      width: fit-content;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem 0;
+      padding: 0 2rem;
+      gap: 1rem;
+      button {
+        background-color: colors.$white;
+
+        min-width: 110px;
+        border-radius: 25px;
+
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21.4215px;
+        line-height: 28px;
+        text-align: center;
+      }
+      .general {
+        border: 1.5px solid colors.$blue;
+
+        &.active {
+          background-color: colors.$blue;
+          color: colors.$white;
+        }
+      }
+
+      .cyber {
+        border: 1.5px solid colors.$turquoise;
+        &.active {
+          background-color: colors.$turquoise;
+          color: colors.$white;
+        }
+      }
+
+      .ai {
+        border: 1px solid colors.$red;
+        &.active {
+          background-color: colors.$red;
+          color: colors.$white;
+        }
+      }
+    }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-rows: 1fr;
+    margin: 0 2rem;
+    .left {
+      height: 100%;
+      margin: 0;
+      padding: 0.5rem;
+      grid-column: 1;
+      cursor: pointer;
+    }
+    .cards {
+      grid-column: 2;
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      gap: 1rem;
+    }
+    .right {
+      height: 100%;
+      margin: 0;
+      padding: 0.5rem;
+      grid-column: 3;
+      cursor: pointer;
+    }
+  }
+}

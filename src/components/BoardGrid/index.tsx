@@ -45,7 +45,6 @@ const BoardGrid: React.FC<BoardGridProps> = ({ members_list }) => {
               else setActiveFilter("cyber");
             }}
             className={`${style.cyber} ${activeFilter === "cyber" ? style.active : ""}`}
-            // className={`${style.cyber} ${ activeFilter !== 'cyber' : '' ? style.active}`}
           >
             Cyber
           </button>

@@ -5,7 +5,7 @@ $mobile: 960px;
 .eventsContainer {
   margin: 0 3rem;
   width: auto;
-
+  min-height: 50vh;
   .header {
     margin-top: 1.5rem;
     display: flex;

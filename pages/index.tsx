@@ -25,7 +25,7 @@ const IndexPage: NextPage<{ events: Array<EventObject> }> = ({ events }) => (
 export default IndexPage;
 
 export async function getStaticProps() {
-  const events = await getAllEvents("future");
+  const events = await getAllEvents("past");
 
   return {
     props: {

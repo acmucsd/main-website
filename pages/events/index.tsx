@@ -15,7 +15,7 @@ const EventsPage: React.FC<{ futureEvents: EventsArray }> = ({ futureEvents }) =
 export default EventsPage;
 
 export async function getStaticProps() {
-  const futureEvents = await getAllEvents("past");
+  const futureEvents = await getAllEvents("future");
   return {
     props: {
       futureEvents: futureEvents || [],

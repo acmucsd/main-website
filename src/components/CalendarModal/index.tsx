@@ -1,8 +1,6 @@
 import React from "react";
 import { EventObject, saveToAppleCal, saveToGoogleCal } from "src/api/EventsAPI";
 import s from "./CalendarModal.module.scss";
-import GoogleCalendarLogo from "public/assets/googlecalendar.png";
-import AppleCalendarLogo from "public/assets/applecalendar.png";
 
 interface CalendarModalProps {
   show: boolean;
@@ -13,19 +11,13 @@ interface CalendarModalProps {
 export const CalendarModal: React.FC<CalendarModalProps> = ({ show, event, onClose }) => (
   <dialog className={s.modal} open={show}>
     <section className={s["modal-main"]}>
-      <h3>Add Event to Calendar</h3>
+      <h3>What type of calendar event would you like?</h3>
       <div className={s.options}>
-        <button className={s.google} onClick={() => saveToGoogleCal(event)}>
-          <img src={GoogleCalendarLogo.src} alt="google calendar" />
-          <b>Google Calendar</b>
-        </button>
-        <button className={s.apple} onClick={() => saveToAppleCal(event)}>
-          <img src={AppleCalendarLogo.src} alt="apple calendar" />
-          <b>Apple Calendar</b>
-        </button>
+        <button onClick={() => saveToAppleCal(event)}>Apple Calendar</button>
+        <button onClick={() => saveToGoogleCal(event)}>Google Calendar</button>
       </div>
       <br />
-      <button onClick={onClose}><b>Cancel</b></button>
+      <button onClick={onClose}>Cancel</button>
     </section>
   </dialog>
 );

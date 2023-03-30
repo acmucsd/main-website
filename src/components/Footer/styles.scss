@@ -5,14 +5,16 @@
   height: 100%;
   background-color: colors.$black;
   color: colors.$white;
-  z-index: 1;
+  z-index: -1;
   position: relative;
 }
+
 .footerContainer {
   padding-bottom: 80px;
   display: flex;
   justify-content: center;
 }
+
 .footerContents {
   h2 {
     font-size: 42px;
@@ -25,6 +27,7 @@
   &__wrapper {
     display: flex;
     align-items: flex-start;
+
     @media only screen and (max-width: 985px) {
       flex-wrap: wrap;
       padding: 0 40px;
@@ -35,6 +38,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     &__card {
       display: flex;
       justify-content: center;
@@ -42,23 +46,28 @@
       width: 240px;
       height: 75px;
       margin: 10px 5px;
+
       a:hover img {
         transform: scale(1.05);
         transition: transform 0.2s;
       }
+
       img {
         float: left;
         width: 45px;
         margin: 10px;
       }
+
       div {
         margin: 10px;
         width: 140px;
+
         h3 {
           font-size: 20px;
           font-weight: 500;
           margin: 0px;
         }
+
         a {
           font-size: 20px;
           font-weight: 500;
@@ -69,6 +78,7 @@
       }
     }
   }
+
   &__newsletter {
     width: 80%;
     display: flex;
@@ -76,6 +86,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding-left: 20px;
+
     h2 {
       font-size: 20px;
       font-weight: 700;
@@ -84,12 +95,14 @@
       padding-top: 20px;
       margin: 0px;
     }
+
     p {
       width: 100%;
       font-weight: 400;
       font-size: 16px;
       margin-bottom: 20px;
     }
+
     input {
       color: rgba(0, 0, 0, 0.5);
       padding: 2px 2px 2px 1em;
@@ -103,6 +116,7 @@
       font-size: 16px;
       outline: none;
     }
+
     .subscribe-btn {
       text-decoration: none;
       padding: 5px 30px;
@@ -119,6 +133,7 @@
       font-size: 20px;
       margin-bottom: 36px;
       outline: none;
+
       &:hover {
         cursor: pointer;
         color: colors.$black;
@@ -126,6 +141,7 @@
         transition-duration: 0.2s;
       }
     }
+
     .vercel-btn {
       text-decoration: none;
       cursor: pointer;
@@ -144,6 +160,7 @@
     }
   }
 }
+
 .acmBlueFade {
   display: none;
   margin: 0 !important;
@@ -159,12 +176,14 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: -7px !important;
+
   h2 {
     padding-top: 56px;
     text-align: center;
     font-size: 32px;
     margin-bottom: 40px;
   }
+
   a {
     text-align: center;
     font-size: 15px;
@@ -173,6 +192,7 @@
     color: colors.$white;
     text-decoration: underline;
   }
+
   &__newsletter {
     width: 272px;
     display: flex;
@@ -188,11 +208,13 @@
       padding-top: 6px;
       margin: 0px;
     }
+
     p {
       font-size: 16px;
       margin-bottom: 11px;
       text-align: left;
     }
+
     input {
       color: rgba(0, 0, 0, 0.5);
       padding: 2px 2px 2px 1em;
@@ -207,6 +229,7 @@
       font-size: 16px;
       outline: none;
     }
+
     .mobile-subscribe-btn {
       text-decoration: none;
       padding: 4px 0;
@@ -223,6 +246,7 @@
       margin-bottom: 36px;
       outline: none;
     }
+
     .mobile-vercel-btn {
       text-decoration: none;
       padding: 4px 0;
@@ -239,6 +263,7 @@
       margin-bottom: 36px;
       outline: none;
     }
+
     .mobile-vercel-btn {
       text-decoration: none;
       padding: 4px 0;
@@ -257,6 +282,7 @@
     }
   }
 }
+
 .community-links {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -271,23 +297,28 @@
     background-color: transparent;
     outline: none;
     padding: 0px;
+
     img {
       width: 70%;
       height: unset;
+
       &:hover {
         transform: scale(1.05);
       }
     }
   }
+
   img {
     width: 45px;
     height: 45px;
   }
 }
+
 @media only screen and (min-width: 984px) {
   .acmBlueFade {
     display: block;
   }
+
   .mobileFooterContainer {
     display: none;
   }
@@ -297,9 +328,11 @@
   .footerContainer {
     display: none;
   }
+
   .acmBlueFade {
     display: none;
   }
+
   .mobileFooterContainer {
     display: flex;
   }

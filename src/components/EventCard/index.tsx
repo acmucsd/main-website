@@ -1,17 +1,16 @@
 import Link from "next/link";
 import { saveToAppleCal, EventObject, saveToGoogleCal } from "src/api/EventsAPI";
 import { useState } from "react";
-import { QuestionModal } from "../QuestionModal";
+import { CalendarModal } from "../CalendarModal";
 import s from "./EventCard.module.scss";
 import { days, months, formatURLEventTitle, getDateTime, withHttp } from "src/utils/general";
 import { FaFacebook, FaCalendarAlt } from "react-icons/fa";
 import { GRAY } from "src/utils/constants";
 
-
 const EventCard: React.FC<{
   event: EventObject;
 }> = ({ event }) => {
-  const [showQuestionModal, displayPrompt] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const month = months[new Date(event.start).getMonth()];
   const date = new Date(event.start).getDate();
   const day = days[new Date(event.start).getDay()];
@@ -19,21 +18,7 @@ const EventCard: React.FC<{
   const { committee, uuid, title, location, eventLink } = event;
   return (
     <>
-      <QuestionModal
-        show={showQuestionModal}
-        title="What type of calendar event would you like?"
-        options={["Apple Calendar", "Google Calendar"]}
-        onCancel={() => displayPrompt(false)}
-        onSelect={(option) => {
-          if (option === "Apple Calendar") {
-            saveToAppleCal(event);
-          } else {
-            saveToGoogleCal(event);
-          }
-          displayPrompt(false);
-        }}
-
-      />
+      <CalendarModal show={isModalOpen} onClose={() => setIsModalOpen(false)} event={event} />
       <Link href={`/events/${formatURLEventTitle(title)}-${uuid}`} passHref>
         <div className={s.card}>
           <div className={s.cardHeader}>
@@ -51,7 +36,7 @@ const EventCard: React.FC<{
           <div className={s.cardFooter}>
             <a
               onClick={e => {
-                displayPrompt(true);
+                setIsModalOpen(true);
                 e.stopPropagation();
               }}
             >

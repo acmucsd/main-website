@@ -15,11 +15,11 @@ export const CalendarModal: React.FC<CalendarModalProps> = ({ show, event, onClo
     <section className={s["modal-main"]}>
       <h3>Add Event to Calendar</h3>
       <div className={s.options}>
-        <button className={s.google} onClick={() => saveToGoogleCal(event)}>
+        <button className={`${s.google} ${s.calendarButton}`} onClick={() => saveToGoogleCal(event)}>
           <img src={GoogleCalendarLogo.src} alt="google calendar" />
           <b>Google Calendar</b>
         </button>
-        <button className={s.apple} onClick={() => saveToAppleCal(event)}>
+        <button className={`${s.apple} ${s.calendarButton}`} onClick={() => saveToAppleCal(event)}>
           <img src={AppleCalendarLogo.src} alt="apple calendar" />
           <b>Apple Calendar</b>
         </button>

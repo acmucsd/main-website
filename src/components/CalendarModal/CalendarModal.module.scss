@@ -6,14 +6,14 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
   text-align: center;
-  z-index: 10;
+  z-index: 1;
 }
-
 .modal-main {
   padding: 1rem;
   position: fixed;
   background: white;
-  max-width: 500px;
+  min-width: 14rem;
+  max-width: 32rem;
   width: 60%;
   height: auto;
   top: 50%;
@@ -21,51 +21,36 @@
   transform: translate(-50%, -50%);
   border-radius: 10px;
 }
-
 .modal-main button {
   background-color: white;
+  color: black;
 }
-
 .options {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  align-items: center;
   justify-content: center;
-  position: center;
-
   .apple {
     background-color: #ffd8d8;
   }
-
   .google {
     background-color: #d4eafb;
   }
 }
-
-.options button {
+.calendarButton {
   padding: 1rem;
   border-radius: 10px;
   width: 80%;
-  top: 10%;
-  left: 10%;
-  position: relative;
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
-
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
   img {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: 15px;
-    height: 48px;
-    width: 48px;
+    height: 3rem;
+    width: 3rem;
   }
-
-  b {
-    margin-left: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: auto;
+  b{
+    color: black;
   }
 }

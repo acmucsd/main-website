@@ -45,10 +45,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5%;
+  gap: 10px;
   img {
     height: 3rem;
     width: 3rem;
+    margin:0;
   }
   b{
     color: black;

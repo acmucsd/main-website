@@ -12,7 +12,7 @@
   padding: 1rem;
   position: fixed;
   background: white;
-  min-width: 14rem;
+  min-width: 16rem;
   max-width: 32rem;
   width: 60%;
   height: auto;
@@ -53,5 +53,14 @@
   }
   b{
     color: black;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .calendarButton{
+    font-size: 0.8rem;
+    img{
+      height: 2rem;
+      width: 2rem;
+    }
   }
 }

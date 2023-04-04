@@ -2,6 +2,9 @@
 
 declare namespace CalendarModalModuleScssNamespace {
   export interface ICalendarModalModuleScss {
+    apple: string;
+    calendarButton: string;
+    google: string;
     modal: string;
     "modal-main": string;
     options: string;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { EventObject } from "src/api/EventsAPI";
-import { isURL, getAbsoluteURL, getDateTime } from "src/utils/general";
+import { isURL, getAbsoluteURL, getDateTime, formatURLEventTitle } from "src/utils/general";
 
 const HomeEvents: React.FC<{ events: Array<EventObject> }> = ({ events }) => {
   return (
@@ -15,7 +15,7 @@ const HomeEvents: React.FC<{ events: Array<EventObject> }> = ({ events }) => {
         {events && events.length > 0 ? (
           events.map((value, index) => {
             const timing = getDateTime(value);
-            const eventLink = "https://acmucsd.com/events/" + value.title.replace(/ /g, "-") + "-" + value.uuid;
+            const eventLink = `/events/${formatURLEventTitle(value.title)}-${value.uuid}`;
             return (
               <Link href={eventLink}>
                 <div className="home__events__grid__container__event" key={index}>

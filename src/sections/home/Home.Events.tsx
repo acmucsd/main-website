@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { EventObject } from "src/api/EventsAPI";
-import { isURL, getAbsoluteURL, getDateTime } from "src/utils/general";
+import { isURL, getAbsoluteURL, getDateTime, formatURLEventTitle } from "src/utils/general";
 
 const HomeEvents: React.FC<{ events: Array<EventObject> }> = ({ events }) => {
   return (
@@ -15,21 +15,24 @@ const HomeEvents: React.FC<{ events: Array<EventObject> }> = ({ events }) => {
         {events && events.length > 0 ? (
           events.map((value, index) => {
             const timing = getDateTime(value);
+            const eventLink = `/events/${formatURLEventTitle(value.title)}-${value.uuid}`;
             return (
-              <div className="home__events__grid__container__event" key={index}>
-                <img src={value.cover} alt={value.title} />
-                <h2>
-                  <span>{timing.date}</span>
-                  {timing.time}
-                </h2>
-                {isURL(value.location.trim()) ? (
-                  <a className="link" href={getAbsoluteURL(value.location.trim())}>
+              <Link href={eventLink}>
+                <div className="home__events__grid__container__event" key={index}>
+                  <img src={value.cover} alt={value.title} />
+                  <h2>
+                    <span>{timing.date}</span>
+                    {timing.time}
+                  </h2>
+                  {isURL(value.location.trim()) ? (
+                    <a className="link" href={getAbsoluteURL(value.location.trim())}>
+                      <h3>{value.location}</h3>
+                    </a>
+                  ) : (
                     <h3>{value.location}</h3>
-                  </a>
-                ) : (
-                  <h3>{value.location}</h3>
-                )}
-              </div>
+                  )}
+                </div>
+              </Link>
             );
           })
         ) : (

@@ -3,6 +3,7 @@
 declare namespace EventModuleScssNamespace {
   export interface IEventModuleScss {
     ai: string;
+    apple: string;
     backButton: string;
     container: string;
     cyber: string;
@@ -18,6 +19,7 @@ declare namespace EventModuleScssNamespace {
     eventLinks: string;
     eventType: string;
     general: string;
+    google: string;
     location: string;
     time: string;
     title: string;

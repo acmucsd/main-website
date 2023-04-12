@@ -4,7 +4,7 @@ import { useState } from "react";
 import { CalendarModal } from "../CalendarModal";
 import s from "./EventCard.module.scss";
 import { days, months, formatURLEventTitle, getDateTime, withHttp } from "src/utils/general";
-import { FaFacebook, FaCalendarAlt } from "react-icons/fa";
+import {  FaCalendarAlt } from "react-icons/fa";
 import { GRAY } from "src/utils/constants";
 
 const EventCard: React.FC<{
@@ -42,16 +42,6 @@ const EventCard: React.FC<{
             >
               <FaCalendarAlt color={GRAY} size={25} />
             </a>
-            {!eventLink ? null : (
-              <a
-                onClick={e => e.stopPropagation()}
-                href={withHttp(eventLink)}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaFacebook color={GRAY} size={25} />
-              </a>
-            )}
           </div>
         </div>
       </Link>

@@ -36,7 +36,7 @@ const EventContent: React.FC<{ event: EventObject }> = ({ event }) => {
           </div>
           <div className={s.eventLinks}>
             <a
-              className={s.eventLink}
+              className={`${s.eventLink} ${s.apple}`}
               onClick={e => {
                 e.preventDefault();
                 saveToAppleCal(event);
@@ -46,7 +46,7 @@ const EventContent: React.FC<{ event: EventObject }> = ({ event }) => {
               Add to Apple Calendar
             </a>
             <a
-              className={s.eventLink}
+              className={`${s.eventLink} ${s.google}`}
               onClick={e => {
                 e.preventDefault();
                 saveToGoogleCal(event);
@@ -55,17 +55,6 @@ const EventContent: React.FC<{ event: EventObject }> = ({ event }) => {
               <FaCalendarAlt size="30" color={GRAY} />
               Add to Google Calendar
             </a>
-            {event.eventLink && (
-              <a
-                className={s.eventLink}
-                href={withHttp(event.eventLink)}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaFacebook size="30" color={GRAY} />
-                Go to Facebook Event
-              </a>
-            )}
           </div>
           <p className={s.eventDescription}>{description}</p>
         </div>

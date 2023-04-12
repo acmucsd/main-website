@@ -17,7 +17,7 @@ const HomeEvents: React.FC<{ events: Array<EventObject> }> = ({ events }) => {
             const timing = getDateTime(value);
             const eventLink = `/events/${formatURLEventTitle(value.title)}-${value.uuid}`;
             return (
-              <Link href={eventLink}>
+              <Link href={eventLink} key={value.uuid} passHref>
                 <div className="home__events__grid__container__event" key={index}>
                   <img src={value.cover} alt={value.title} />
                   <h2>

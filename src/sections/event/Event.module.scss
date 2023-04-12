@@ -44,26 +44,18 @@
 
   .eventBody {
     display: grid;
-    grid-template-columns: 18rem 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
 
-    @media screen and (max-width: 960px) {
-      grid-template-columns: 1fr;
-    }
-
     .eventCover {
-      width: 18rem;
-      height: 18rem;
+      width: 100%;
+      height: auto;
       margin: 0;
       object-fit: cover;
       object-position: top left;
       overflow: hidden;
       border-radius: 10px;
 
-      @media screen and (max-width: 960px) {
-        width: 100%;
-        height: auto;
-      }
     }
 
     .eventInfo {

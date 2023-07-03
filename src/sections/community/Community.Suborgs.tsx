@@ -1,14 +1,8 @@
 import { useState } from "react";
-import Image from "next/image";
 import AIDiscord from "public/assets/communities-links/ai-discord.svg";
 import AIHome from "public/assets/communities-links/ai-home.svg";
 import CyberDiscord from "public/assets/communities-links/cyber-discord.svg";
-import CyberFacebook from "public/assets/communities-links/cyber-facebook.svg";
 import CyberHome from "public/assets/communities-links/cyber-home.svg";
-import CyberLinkedin from "public/assets/communities-links/cyber-linkedin.svg";
-import CyberMail from "public/assets/communities-links/cyber-mail.svg";
-import CyberTwitter from "public/assets/communities-links/cyber-twitter.svg";
-import CyberYoutube from "public/assets/communities-links/cyber-youtube.svg";
 import AILogoSelected from "public/assets/communities-navigation/ai-selected.svg";
 import CyberLogoSelected from "public/assets/communities-navigation/cyber-selected.svg";
 import AILogo from "public/assets/logos/acm-ai.svg";
@@ -110,31 +104,6 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         src: "https://sdc.tf/",
         logo: CyberHome.src,
         alt: "Cyber Home",
-      },
-      {
-        src: "https://www.facebook.com/cyberucsd",
-        logo: CyberFacebook.src,
-        alt: "Cyber Facebook",
-      },
-      {
-        src: "https://twitter.com/cyberucsd",
-        logo: CyberTwitter.src,
-        alt: "Cyber Twitter",
-      },
-      {
-        src: "https://www.youtube.com/playlist?list=PLpmCTDt8lemWaQ_ZruBe3Dt6ddtVdX-yR",
-        logo: CyberYoutube.src,
-        alt: "Cyber Youtube",
-      },
-      {
-        src: "https://www.linkedin.com/company/cyber-ucsd/",
-        logo: CyberLinkedin.src,
-        alt: "Cyber LinkedIn",
-      },
-      {
-        src: "https://acmurl.com/joincyber",
-        logo: CyberMail.src,
-        alt: "Cyber Mail",
       },
     ]}
     description={

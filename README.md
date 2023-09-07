@@ -3,7 +3,7 @@
 
 Check it out @ [acmucsd.com](https://acmucsd.com/)
 
-This is the source code behind our main website, and it's used to help prospective members learn more about acm, enable current members to see what events are happening, and inform potential sponsors to work with us.
+This is the source code behind our main website, and it's used to help prospective members learn more about ACM, enable current members to see what events are happening, and inform potential sponsors to work with us.
 
 This site is built with [Next.js](https://nextjs.org/) and [Typescript](https://www.typescriptlang.org/). If you've had prior experience with [React](http://reactjs.org/), the codebase will feel very familiar.
 

@@ -9,9 +9,9 @@ const HomeJoinUs: React.FC = () => {
           <p>ACM at UCSD is an inclusive community of students passionate about technology.</p>
         </div>
         <div className="home__join-us__grid__numbers">
-          <Number color="#FF6F6F" description="ucsd members" extension="+" number={1000} />
-          <Number color="#F9A857" description="annual events" extension="+" number={120} />
-          <Number color="#51C0C0" description="cups of boba" extension="+" number={850} />
+          <Number color="#FF6F6F" description="ucsd members" extension="+" number={2000} />
+          <Number color="#F9A857" description="annual events" extension="+" number={150} />
+          <Number color="#51C0C0" description="cups of boba" extension="+" number={1000} />
         </div>
       </div>
     </section>

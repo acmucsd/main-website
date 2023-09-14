@@ -10,7 +10,7 @@ const SponsorshipInfo: React.FC<{ image: string }> = ({ image }) => {
         <div className="sponsorship__info__text">
           <h1 className="sponsorship__info__text__title">Sponsor</h1>
           <h2 className="sponsorship__info__text__description">
-            Impact a community of 1000+ aspiring
+            Impact a community of 2000+ aspiring
             <span className="blue"> developers</span>,
             <span className="pink"> designers</span>, and
             <span className="purple"> innovators</span>!
@@ -30,7 +30,7 @@ const SponsorshipInfo: React.FC<{ image: string }> = ({ image }) => {
           alt="Sponsor Logo"
         />
         <h2 className="sponsorship__info__text__description">
-          Impact a community of 1000+ aspiring
+          Impact a community of 2000+ aspiring
           <span className="blue"> developers</span>,
           <span className="pink"> designers</span>, and
           <span className="purple"> innovators</span>!

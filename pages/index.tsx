@@ -12,7 +12,7 @@ const IndexPage: NextPage<{ events: Array<EventObject> }> = ({ events }) => (
     <SEO
       title="ACM at UCSD"
       path="/"
-      description="Join us. ACM at UCSD is an inclusive community of students passionate about technology. 1000+ UCSD members. 120+ annual events. 850+ cups of boba served."
+      description="Join us. ACM at UCSD is an inclusive community of students passionate about technology. 2000+ UCSD members. 150+ annual events. 1000+ cups of boba served."
       image={CoolLogo.src}
     />
     <HomeHero />

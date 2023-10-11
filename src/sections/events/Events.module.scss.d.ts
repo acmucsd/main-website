@@ -10,6 +10,7 @@ declare namespace EventsModuleScssNamespace {
     filterButton: string;
     filterContainer: string;
     general: string;
+    hack: string;
     header: string;
     headerText: string;
     mobileFilters: string;

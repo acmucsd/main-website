@@ -73,6 +73,16 @@ $mobile: 960px;
           color: colors.$white;
         }
       }
+
+      &.hack {
+        border-color: colors.$orange;
+        color: colors.$orange;
+
+        &.active {
+          background-color: colors.$orange;
+          color: colors.$white;
+        }
+      }
     }
   }
 

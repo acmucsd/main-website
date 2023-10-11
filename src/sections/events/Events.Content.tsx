@@ -47,6 +47,12 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
             >
               AI
             </button>
+            <button
+              onClick={() => filter("hack")}
+              className={`${s.filterButton} ${s.hack} ${activeFilter == "hack" && s.active}`}
+            >
+              Hack
+            </button>
           </div>
           <div className={s.mobileFilters}>
             <select value={activeFilter} onChange={e => setActiveFilter(e.target.value)}>

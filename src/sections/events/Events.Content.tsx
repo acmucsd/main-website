@@ -60,6 +60,7 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
               <option value="general">General</option>
               <option value="ai">AI</option>
               <option value="cyber">Cyber</option>
+              <option value="hack">Hack</option>
             </select>
           </div>
         </div>

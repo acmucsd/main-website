@@ -6,12 +6,12 @@ declare namespace StylesModuleScssNamespace {
     ai: string;
     cards: string;
     cyber: string;
-    hack: string;
     filterButtons: string;
     general: string;
     grid: string;
     gridFilters: string;
     gridWrapper: string;
+    hack: string;
     left: string;
     right: string;
   }

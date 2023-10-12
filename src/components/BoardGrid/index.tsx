@@ -57,6 +57,15 @@ const BoardGrid: React.FC<BoardGridProps> = ({ members_list }) => {
           >
             AI
           </button>
+          <button
+            onClick={() => {
+              if (activeFilter === "hack") setActiveFilter("");
+              else setActiveFilter("hack");
+            }}
+            className={`${style.hack} ${activeFilter === "hack" ? style.active : ""}`}
+          >
+            AI
+          </button>
         </div>
       </div>
       <div className={style.grid}>

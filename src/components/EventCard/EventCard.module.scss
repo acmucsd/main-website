@@ -74,6 +74,10 @@
       &.ai {
         color: colors.$red;
       }
+
+      &.hack {
+        color: colors.$orange;
+      }
     }
 
     .eventLocation,

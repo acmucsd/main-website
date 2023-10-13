@@ -94,4 +94,11 @@
       fill: colors.$turquoise;
     }
   }
+  &.hack {
+    border-color: colors.$orange;
+    color: colors.$orange;
+    path {
+      fill: colors.$orange;
+    }
+  }
 }

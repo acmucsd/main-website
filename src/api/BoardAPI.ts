@@ -15,7 +15,7 @@ const formatLinkedIn = (val: string): string => {
 
 
 //If data from row is blank or not formatted correctly (jpg or jpeg), use default link in place, otherwise do nothing
-const formatProfileImage = (val: string) => ((val?.includes(".jpg") || false) || (val?.includes(".jpeg")|| false) || (val?.includes(".png")||false)) ? val : `https://i.imgur.com/j7icEAQ.png`;
+const formatProfileImage = (val: string) => ((val?.includes(".jpg") || false) || (val?.includes(".jpeg")|| false) || (val?.includes(".png")||false)) ? val : `https://i.imgur.com/WneyVtE.png`;
 
 export const getBoardData = async () => {
   const { BOARD_SPREADSHEET_ID, GOOGLE_SERVICE_ACC_EMAIL, GOOGLE_SERVICE_KEY_PRIVATE } =

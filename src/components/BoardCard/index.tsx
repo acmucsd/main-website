@@ -30,12 +30,13 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
 
   const portfolioLink = withHttp(personal_link);
   const linkedinLink = withHttp(linkedin_link);
+  const defaultImage = (profile_image) => (profile_image==="https://i.imgur.com/WneyVtE.png") ? style.default: null;
 
   return (
     <div className={`${style.card} ${style[org]}`}>
       <div className={style.title}>{title}</div>
       <div className={style.image}>
-        <img src={profile_image} alt="" />
+        <img className = {defaultImage(profile_image)} src={profile_image} alt="" height=""/>
       </div>
       <div className={style.footer}>
         <p>{name}</p>

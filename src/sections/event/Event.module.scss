@@ -43,6 +43,10 @@
       &.hack {
         color: colors.$orange;
       }
+
+      &.design {
+        color: colors.$pink;
+      }
     }
   }
 
@@ -169,6 +173,10 @@
 
           &.hack {
             color: colors.$orange;
+          }
+
+          &.design {
+            color: colors.$pink;
           }
         }
 

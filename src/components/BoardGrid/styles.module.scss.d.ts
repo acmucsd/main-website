@@ -11,6 +11,7 @@ declare namespace StylesModuleScssNamespace {
     grid: string;
     gridFilters: string;
     gridWrapper: string;
+    hack: string;
     left: string;
     right: string;
   }

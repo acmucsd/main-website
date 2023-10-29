@@ -39,6 +39,10 @@
       &.cyber {
         color: colors.$turquoise;
       }
+
+      &.hack {
+        color: colors.$orange;
+      }
     }
   }
 
@@ -161,6 +165,10 @@
 
           &.cyber {
             color: colors.$turquoise;
+          }
+
+          &.hack {
+            color: colors.$orange;
           }
         }
 

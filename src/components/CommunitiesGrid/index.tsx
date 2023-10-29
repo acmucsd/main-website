@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import AILogo from "public/assets/logos/acm-ai.svg";
 import CyberLogo from "public/assets/logos/acm-cyber.svg";
+import HackLogo from "public/assets/logos/acm-hack.svg"
 
 interface CommunitiesGridProps {
   verticalLayout?: boolean;
@@ -56,6 +57,20 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
               </div>
             </a>
           </Link>
+          <Link href="/communities#Hack">
+            <a
+              className={`communitiesGrid__community ${hasBeenVisible ? "hack--visible" : ""
+                }`}
+            >
+              <img src={HackLogo.src} alt="ACM Hack" />
+              <div className="communitiesGrid__community__label">
+                <h3>
+                  <span>ACM</span> Hack
+                </h3>
+                <p>Software Engineering</p>
+              </div>
+            </a>
+          </Link>
         </div>
       </div>
     );
@@ -88,6 +103,20 @@ const CommunitiesGrid: React.FC<CommunitiesGridProps> = ({
                   <span>ACM</span> Cyber
                 </h3>
                 <p>Cyber Security</p>
+              </div>
+            </a>
+          </Link>
+          <Link href="/communities#Hack">
+            <a
+              className={`communitiesGrid__community ${hasBeenVisible ? "hack--visible" : ""
+                }`}
+            >
+              <img src={HackLogo.src} alt="ACM Hack" />
+              <div className="communitiesGrid__community__label">
+                <h3>
+                  <span>ACM</span> Hack
+                </h3>
+                <p>Software Engineering</p>
               </div>
             </a>
           </Link>

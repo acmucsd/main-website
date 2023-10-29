@@ -19,7 +19,7 @@
       font-weight: 500;
       width: 650px;
       margin-bottom: 40px;
-      text-align: left;
+      text-align: center;
     }
     &__communities {
       text-align: left;
@@ -203,6 +203,15 @@
 }
 .redfill {
   fill: colors.$red !important;
+}
+.orange {
+  color: colors.$orange;
+}
+.orangebg {
+  background-color: colors.$light-orange;
+}
+.orangefill {
+  fill: colors.$orange !important;
 }
 .turquoise {
   color: colors.$turquoise;

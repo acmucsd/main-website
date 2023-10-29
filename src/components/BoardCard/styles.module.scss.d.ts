@@ -7,6 +7,7 @@ declare namespace StylesModuleScssNamespace {
     cyber: string;
     default: string;
     footer: string;
+    hack: string;
     image: string;
     links: string;
     title: string;

@@ -20,6 +20,7 @@ declare namespace EventModuleScssNamespace {
     eventType: string;
     general: string;
     google: string;
+    hack: string;
     location: string;
     time: string;
     title: string;

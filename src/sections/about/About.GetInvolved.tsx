@@ -90,7 +90,7 @@ const AboutGetInvolved: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <br />
           <a
             className="about__get-involved__section__description__button--pink"
-            href="https://github.com/acmucsd-projects"
+            href="https://projects.acmucsd.com/"
           >
             See Projects!
           </a>

@@ -1,6 +1,6 @@
 import * as ics from "ics";
 import { formatURLEventTitle } from "src/utils/general";
-const EVENT_API = "https://api.acmucsd.com/api/v2/event";
+const EVENT_API = `${process.env.PORTAL_API_URL}/event`
 
 export type EventObject = {
   uuid: string;

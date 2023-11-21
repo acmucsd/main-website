@@ -83,6 +83,16 @@ $mobile: 960px;
           color: colors.$white;
         }
       }
+
+      &.design {
+        border-color: colors.$pink;
+        color: colors.$pink;
+
+        &.active {
+          background-color: colors.$pink;
+          color: colors.$white;
+        }
+      }
     }
   }
 

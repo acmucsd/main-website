@@ -6,6 +6,7 @@ declare namespace EventsModuleScssNamespace {
     ai: string;
     cardContainer: string;
     cyber: string;
+    design: string;
     eventsContainer: string;
     filterButton: string;
     filterContainer: string;

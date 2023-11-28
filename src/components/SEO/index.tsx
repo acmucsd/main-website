@@ -14,7 +14,7 @@ const SEO: React.FC<SEOProps> = ({ path, title, description, image }) => {
       <title>{title}</title>
       <meta
         name="description"
-        content="Join us. ACM at UCSD is an inclusive community of students passionate about technology. 1000+ UCSD members. 120+ annual events. 850+ cups of boba served."
+        content="Join us. ACM at UCSD is an inclusive community of students passionate about technology. 2000+ UCSD members. 150+ annual events. 1000+ cups of boba served."
       />
       <link rel="shortcut icon" href="/favicon.ico" />
 

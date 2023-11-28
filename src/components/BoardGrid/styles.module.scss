@@ -61,6 +61,14 @@
           color: colors.$white;
         }
       }
+
+      .hack {
+        border: 1px solid colors.$orange;
+        &.active {
+          background-color: colors.$orange;
+          color: colors.$white;
+        }
+      }
     }
   }
   .grid {

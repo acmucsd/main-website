@@ -3,10 +3,14 @@ import AIDiscord from "public/assets/communities-links/ai-discord.svg";
 import AIHome from "public/assets/communities-links/ai-home.svg";
 import CyberDiscord from "public/assets/communities-links/cyber-discord.svg";
 import CyberHome from "public/assets/communities-links/cyber-home.svg";
+import HackDiscord from "public/assets/communities-links/hack-discord.svg";
+import HackHome from "public/assets/communities-links/hack-home.svg";
 import AILogoSelected from "public/assets/communities-navigation/ai-selected.svg";
 import CyberLogoSelected from "public/assets/communities-navigation/cyber-selected.svg";
+import HackLogoSelected from "public/assets/communities-navigation/hack-selected.svg"
 import AILogo from "public/assets/logos/acm-ai.svg";
 import CyberLogo from "public/assets/logos/acm-cyber.svg";
+import HackLogo from "public/assets/logos/acm-hack.svg";
 
 const CommunityComponent: React.FC<{
   org: string;
@@ -123,12 +127,48 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   />
 );
 
+const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
+  <CommunityComponent
+    org="Hack"
+    color="orange"
+    website="https://hack.acmucsd.com/"
+    logo={HackLogo.src}
+    isMobile={isMobile}
+    links={[
+      {
+        src: "https://acmurl.com/hack-discord",
+        logo: HackDiscord.src,
+        alt: "Hack Discord",
+      },
+      {
+        src: "https://hack.acmucsd.com/",
+        logo: HackHome.src,
+        alt: "Hack Home",
+      },
+    ]}
+    description={
+      <p>
+        ACM Hack is a community centered around software engineering and exploring what is possible through code. 
+        <br />
+        <br />
+        Our name comes from Hackathons – events where software engineers write code to produce innovative projects. 
+        Our goal is to enable and prepare a community of software engineers to build new things and excel in industry. 
+        We do this through technical workshops on industry-relevant tools, bootcamps, and projects.
+        <br />
+        <br />
+        Join our Discord to engage with our community, and check out our website to learn more about us!
+      </p>
+    }
+  />
+);
+
 const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const [selected, setSelected] = useState("general");
 
   const communityComponents = {
     ai: <AICommunity isMobile={isMobile} />,
     cyber: <CyberCommunity isMobile={isMobile} />,
+    hack: <HackCommunity isMobile={isMobile} />,
     general: (
       <div className="community__sub-orgs--mobile__description">
         <p>
@@ -165,6 +205,14 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
                 alt="Cyber Logo"
               />
             </button>
+            <button onClick={() => setSelected("hack")}>
+              <img
+                src={
+                  selected === "hack" ? HackLogoSelected.src : HackLogo.src
+                }
+                alt="Hack Logo"
+              />
+            </button>
           </div>
           {communityComponents[selected]}
         </section>
@@ -173,6 +221,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <div className="spacer80px"></div>
           <AICommunity isMobile={isMobile} />
           <CyberCommunity isMobile={isMobile} />
+          <HackCommunity isMobile={isMobile} />
         </section>
       )}
     </>

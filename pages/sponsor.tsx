@@ -14,7 +14,7 @@ const SponsorshipPage: NextPage<{ sponsors: SponsorProps[] }> = ({ sponsors }) =
     <SEO
       title="Sponsor | ACM at UCSD"
       path="/sponsor"
-      description="Impact a community of 1000+ aspiring developers, designers, and innovators!"
+      description="Impact a community of 2000+ aspiring developers, designers, and innovators!"
       image={SponsorHeroLogo.src}
     />
     <SponsorshipInfo image={SponsorHeroLogo.src} />

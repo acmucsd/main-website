@@ -10,16 +10,17 @@ import {
 // Otherwise, consistently format as a LinkedIn profile url (some people may provide only the username portion on the spreadsheet)
 const formatLinkedIn = (val: string): string => {
   if (!val) return null;
-  return val.includes("https://www.linkedin.com/in/") ? val : `https://www.linkedin.com/in/${val}`;
+  return val.includes("https://www.linkedin.com/in/")
+    ? val
+    : `https://www.linkedin.com/in/${val}`;
 };
 
-
-//If data from row is blank or not formatted correctly (jpg or jpeg), use default link in place, otherwise do nothing
-const formatProfileImage = (val: string) => ((val?.includes(".jpg") || false) || (val?.includes(".jpeg")|| false) || (val?.includes(".png")||false)) ? val : `https://i.imgur.com/WneyVtE.png`;
-
 export const getBoardData = async () => {
-  const { BOARD_SPREADSHEET_ID, GOOGLE_SERVICE_ACC_EMAIL, GOOGLE_SERVICE_KEY_PRIVATE } =
-    process.env;
+  const {
+    BOARD_SPREADSHEET_ID,
+    GOOGLE_SERVICE_ACC_EMAIL,
+    GOOGLE_SERVICE_KEY_PRIVATE,
+  } = process.env;
 
   const doc = new GoogleSpreadsheet(BOARD_SPREADSHEET_ID);
 
@@ -42,22 +43,21 @@ export const getBoardData = async () => {
 
   // Map through array of rows, each one is an object with column headers as keys
   const boardMembers = rows
-    .map(row => {
+    .map((row) => {
       const boardMemberData: BoardMemberProps = {
         name: row["Name"],
         org: row["Team"]?.toLowerCase(),
         title: row["Position"],
-        profile_image: formatProfileImage(row["Profile Picture"]),
+        profile_image: row["Profile Picture"] || "",
         email: row["ACM Email"] || null,
         personal_link: row["Website"] || null,
         linkedin_link: formatLinkedIn(row["LinkedIn"] || null),
       };
       return boardMemberData;
     })
-    .filter(user => user.name) // name is required
-    .filter(user => user.org && user.org !== "members at large") // valid suborg is required
-    .filter(user => user.title) // position title is required
-    .filter(user => user.profile_image); // image url is required
+    .filter((user) => user.name) // name is required
+    .filter((user) => user.org && user.org !== "members at large") // valid suborg is required
+    .filter((user) => user.title); // position title is required
 
   return boardMembers;
 };

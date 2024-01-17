@@ -7,7 +7,8 @@ import HackDiscord from "public/assets/communities-links/hack-discord.svg";
 import HackHome from "public/assets/communities-links/hack-home.svg";
 import AILogoSelected from "public/assets/communities-navigation/ai-selected.svg";
 import CyberLogoSelected from "public/assets/communities-navigation/cyber-selected.svg";
-import HackLogoSelected from "public/assets/communities-navigation/hack-selected.svg"
+import HackLogoSelected from "public/assets/communities-navigation/hack-selected.svg";
+import DesignLogoSelected from "public/assets/communities-navigation/design-selected.svg";
 import AILogo from "public/assets/logos/acm-ai.svg";
 import CyberLogo from "public/assets/logos/acm-cyber.svg";
 import HackLogo from "public/assets/logos/acm-hack.svg";
@@ -237,7 +238,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             <button onClick={() => setSelected("design")}>
               <img
                 src={
-                  selected === "design" ? DesignLogo.src : DesignLogo.src
+                  selected === "design" ? DesignLogoSelected.src : DesignLogo.src
                 }
                 alt="Design Logo"
               />

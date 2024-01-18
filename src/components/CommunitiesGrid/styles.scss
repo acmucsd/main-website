@@ -4,15 +4,14 @@
   width: 100%;
   display: flex;
   align-items: center;
-  // justify-content: center;
 }
 
 .communitiesGrid {
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 580px;
+  max-width: 675px;
 
   &__community {
     padding: 20px 0px;

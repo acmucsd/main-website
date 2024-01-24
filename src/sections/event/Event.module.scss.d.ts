@@ -8,6 +8,7 @@ declare namespace EventModuleScssNamespace {
     container: string;
     cyber: string;
     date: string;
+    design: string;
     eventBody: string;
     eventCover: string;
     eventDate: string;

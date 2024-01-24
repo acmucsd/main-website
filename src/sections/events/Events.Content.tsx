@@ -53,6 +53,12 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
             >
               Hack
             </button>
+            <button
+              onClick={() => filter("design")}
+              className={`${s.filterButton} ${s.design} ${activeFilter == "design" && s.active}`}
+            >
+              Design
+            </button>
           </div>
           <div className={s.mobileFilters}>
             <select value={activeFilter} onChange={e => setActiveFilter(e.target.value)}>
@@ -61,6 +67,7 @@ const EventsContent: React.FC<{ events: EventsArray }> = ({ events }) => {
               <option value="ai">AI</option>
               <option value="cyber">Cyber</option>
               <option value="hack">Hack</option>
+              <option value="design">Design</option>
             </select>
           </div>
         </div>

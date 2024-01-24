@@ -177,7 +177,7 @@ const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         ACM Design centers around UI/UX design and exploring what is possible through all parts of design like research, graphic, and product.
         <br />
         <br />
-        We uplift new designers and curious developers to start design-thinking. As a growing community, we host events to teach designers to go from drawing out ideas to building innovative prototypes. We strive to allow designers to have better conversations with developers, while making developers more conscious of design methods.
+        We uplift new designers and curious developers to learn how to think like a designer. As a growing community, we host events to teach designers to go from mapping out ideas to building innovative prototypes. We strive to allow designers to have better conversations with developers while making developers more conscious of design methods.
       </p>
     }
   />

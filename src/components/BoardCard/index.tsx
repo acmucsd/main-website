@@ -1,8 +1,8 @@
 import style from "./styles.module.scss";
-import GeneralDefault from "public/assets/default-board-images/general-default.svg";
-import AIDefault from "public/assets/default-board-images/ai-default.svg";
-import CyberDefault from "public/assets/default-board-images/cyber-default.svg";
-import HackDefault from "public/assets/default-board-images/hack-default.svg";
+import GeneralDefault from "public/assets/ACMWhiteLogo.png";
+import AIDefault from "public/assets/logos/acm-ai.svg";
+import CyberDefault from "public/assets/logos/acm-cyber.svg";
+import HackDefault from "public/assets/logos/acm-hack.svg";
 import { BoardMemberProps } from "src/types/index";
 import { withHttp } from "src/utils/general";
 

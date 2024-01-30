@@ -37,7 +37,7 @@ const NavigationBar: React.FC = () => {
           <Link href="/">
             <a>
               <img src={ACMLogo.src} alt="ACM Logo" />
-              <p>at UCSD</p>
+              <p>at UC San Diego</p>
             </a>
           </Link>
         </div>

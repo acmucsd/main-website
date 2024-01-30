@@ -10,6 +10,7 @@ declare namespace EventCardModuleScssNamespace {
     cardFooter: string;
     cardHeader: string;
     cyber: string;
+    design: string;
     eventLocation: string;
     eventTime: string;
     eventTitle: string;

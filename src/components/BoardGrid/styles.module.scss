@@ -69,6 +69,14 @@
           color: colors.$white;
         }
       }
+
+      .design {
+        border: 1px solid colors.$pink;
+        &.active {
+          background-color: colors.$pink;
+          color: colors.$white;
+        }
+      }
     }
   }
   .grid {

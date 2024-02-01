@@ -7,10 +7,12 @@ import HackDiscord from "public/assets/communities-links/hack-discord.svg";
 import HackHome from "public/assets/communities-links/hack-home.svg";
 import AILogoSelected from "public/assets/communities-navigation/ai-selected.svg";
 import CyberLogoSelected from "public/assets/communities-navigation/cyber-selected.svg";
-import HackLogoSelected from "public/assets/communities-navigation/hack-selected.svg"
+import HackLogoSelected from "public/assets/communities-navigation/hack-selected.svg";
+import DesignLogoSelected from "public/assets/communities-navigation/design-selected.svg";
 import AILogo from "public/assets/logos/acm-ai.svg";
 import CyberLogo from "public/assets/logos/acm-cyber.svg";
 import HackLogo from "public/assets/logos/acm-hack.svg";
+import DesignLogo from "public/assets/logos/acm-design.svg";
 
 const CommunityComponent: React.FC<{
   org: string;
@@ -162,6 +164,25 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   />
 );
 
+const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
+  <CommunityComponent
+    org="Design"
+    color="pink"
+    website="https://acmucsd.com/"
+    logo={DesignLogo.src}
+    isMobile={isMobile}
+    links={[]}
+    description={
+      <p>
+        ACM Design centers around UI/UX design and exploring what is possible through all parts of design like research, graphic, and product.
+        <br />
+        <br />
+        We uplift new designers and curious developers to learn how to think like a designer. As a growing community, we host events to teach designers to go from mapping out ideas to building innovative prototypes. We strive to allow designers to have better conversations with developers while making developers more conscious of design methods.
+      </p>
+    }
+  />
+);
+
 const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const [selected, setSelected] = useState("general");
 
@@ -169,6 +190,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
     ai: <AICommunity isMobile={isMobile} />,
     cyber: <CyberCommunity isMobile={isMobile} />,
     hack: <HackCommunity isMobile={isMobile} />,
+    design: <DesignCommunity isMobile={isMobile} />,
     general: (
       <div className="community__sub-orgs--mobile__description">
         <p>
@@ -213,6 +235,14 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
                 alt="Hack Logo"
               />
             </button>
+            <button onClick={() => setSelected("design")}>
+              <img
+                src={
+                  selected === "design" ? DesignLogoSelected.src : DesignLogo.src
+                }
+                alt="Design Logo"
+              />
+            </button>
           </div>
           {communityComponents[selected]}
         </section>
@@ -222,6 +252,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <AICommunity isMobile={isMobile} />
           <CyberCommunity isMobile={isMobile} />
           <HackCommunity isMobile={isMobile} />
+          <DesignCommunity isMobile={isMobile} />
         </section>
       )}
     </>

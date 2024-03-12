@@ -107,4 +107,11 @@
       fill: colors.$orange;
     }
   }
+  &.design {
+    border-color: colors.$pink;
+    color: colors.$pink;
+    path {
+      fill: colors.$pink;
+    }
+  }
 }

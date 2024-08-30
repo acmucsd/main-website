@@ -59,7 +59,6 @@ const CommunityComponent: React.FC<{
             </div>
           </div>
           {description}
-          
         </div>
       </div>
     </div>

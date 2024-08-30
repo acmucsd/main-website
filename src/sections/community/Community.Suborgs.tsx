@@ -14,6 +14,16 @@ import CyberLogo from "public/assets/logos/acm-cyber.svg";
 import HackLogo from "public/assets/logos/acm-hack.svg";
 import DesignLogo from "public/assets/logos/acm-design.svg";
 
+const CommunityImages: React.FC<{
+  links: { src: string; logo: string; alt: string }[];
+}> = ({ links }) => {
+  return(
+    <div>
+      
+    </div>
+  );
+};
+
 const CommunityComponent: React.FC<{
   org: string;
   color: string;
@@ -40,15 +50,16 @@ const CommunityComponent: React.FC<{
           <div className="community__sub-orgs__community-card__header">
             {!isMobile ? null : <img src={logo} alt={`ACM ${org}`} />}
             <h1 className={color}>ACM {org}</h1>
+            <div className="community-links">
+              {links.map((link, index) => (
+                <a key={`${link}-${index}`} href={link.src}>
+                  <img src={link.logo} alt={link.alt} />
+                </a>
+              ))}
+            </div>
           </div>
           {description}
-          <div className="community-links">
-            {links.map((link, index) => (
-              <a key={`${link}-${index}`} href={link.src}>
-                <img src={link.logo} alt={link.alt} />
-              </a>
-            ))}
-          </div>
+          
         </div>
       </div>
     </div>

@@ -106,6 +106,10 @@
           height: 60px;
           margin-right: 10px;
         }
+
+        h1 {
+          flex-basis: 100%;
+        }
       }
       &__logo {
         min-width: 226px;

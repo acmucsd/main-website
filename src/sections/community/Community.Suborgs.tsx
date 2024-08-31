@@ -24,6 +24,59 @@ const CommunityImages: React.FC<{
   );
 };
 
+const CommunitiesTitle: React.FC<{
+  open?: boolean;
+  org: string;
+  color: string;
+  logo: string;
+  website: string;
+  description: any;
+}> = ({
+  open,
+  logo,
+  website,
+  org,
+  color,
+  description,
+}) => {
+
+  const getFullName = (org: string) => {
+    switch (org) {
+      case "AI":
+        return "Artificial Intelligence";
+      case "Cyber":
+        return "Cyber Security";
+      case "Hack":
+        return "Software Engineering";
+      case "Design":
+        return "Design";
+      default:
+        return org;
+    }
+  }
+
+  return (
+    <>
+      <div className="community__sub-orgs__logo-card">
+        <a href={website}>
+          <img
+            src={logo}
+            alt={`ACM ${org}`}
+            className="community__sub-orgs__logo-card__logo"
+          />
+        </a>
+        
+        {open ? ( 
+          <div className="community__sub-orgs__logo-card__content">
+            <h1 className={color}>ACM {org}</h1>
+            <h2 className="fullName">{getFullName(org)}</h2>
+          </div>
+        ) : null}  
+      </div>
+    </>
+  );
+};
+
 const CommunityComponent: React.FC<{
   org: string;
   color: string;
@@ -34,6 +87,10 @@ const CommunityComponent: React.FC<{
   description: any;
 }> = ({ isMobile, color, org, website, logo, links, description }) => {
   return (
+    // <>
+    //   <CommunitiesTitle open={true} logo={logo} website={website} org={org} color={color} description={description}/>
+    // </>
+    
     <div className="community__sub-orgs__community-card" id={org}>
       <div className={`color_slide ${color}bg`} />
       <div className="community__sub-orgs__community-card__content">

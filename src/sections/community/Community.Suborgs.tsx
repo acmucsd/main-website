@@ -13,7 +13,11 @@ import AILogo from "public/assets/logos/acm-ai.svg";
 import CyberLogo from "public/assets/logos/acm-cyber.svg";
 import HackLogo from "public/assets/logos/acm-hack.svg";
 import DesignLogo from "public/assets/logos/acm-design.svg";
-import BitByteLogo from "public/assets/logos/acm-bitbyte.svg";
+import BitByteLogo from "public/assets/logos/bitbyte.svg";
+import HackathonLogo from "public/assets/logos/hackathon.svg";
+import OutreachLogo from "public/assets/logos/reach.svg";
+import ProjectsLogo from "public/assets/logos/projects.svg";
+import SpaceLogo from "public/assets/logos/space.svg";
 import Link from "next/link";
 
 const CommunityImages: React.FC<{
@@ -61,6 +65,15 @@ const CommunitiesTitle: React.FC<{
 
   const [hover, setHover] = useState(false);
 
+  const filterDropShadow = `
+        drop-shadow(0px 0px 1px #FF0000) 
+        drop-shadow(0px 0px 1px #FF7F00)  
+        drop-shadow(0px 0px 1px #FFFF00)  
+        drop-shadow(0px 0px 1px #00FF00)  
+        drop-shadow(0px 0px 1px #0000FF)  
+        drop-shadow(0px 0px 1px #2E2B5F)  
+        drop-shadow(0px 0px 1px #8B00FF) 
+        `; 
 
   return (
     <>
@@ -70,7 +83,7 @@ const CommunitiesTitle: React.FC<{
             alt={`ACM ${org}`}
             className="community__sub-orgs__logo-card__logo"
             onClick={() => setSelected(org)}
-            style={{'--shadow-color': color, filter: (open || hover) ? `drop-shadow(0 0 1rem ${color=='' ? 'red' : color})` : 'none'} as React.CSSProperties}
+            style={{'--shadow-color': color, filter: (open || hover) ? ` ${color=='' ? `${filterDropShadow}` : `drop-shadow(0 0 1rem ${color})`} ` : 'none'} as React.CSSProperties}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
           />
@@ -324,7 +337,7 @@ const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (
     org="Reach"
     color=""
     website="https://outreach-website.vercel.app/"
-    logo={BitByteLogo.src}
+    logo={OutreachLogo.src}
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
@@ -336,7 +349,7 @@ const ProjectsTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (
     org="Projects"
     color=""
     website="https://projects.acmucsd.com/"
-    logo={BitByteLogo.src}
+    logo={ProjectsLogo.src}
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
@@ -348,7 +361,7 @@ const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org
     org="Space"
     color=""
     website="https://space.acmucsd.com/"
-    logo={BitByteLogo.src}
+    logo={SpaceLogo.src}
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}

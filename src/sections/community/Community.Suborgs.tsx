@@ -14,6 +14,7 @@ import CyberLogo from "public/assets/logos/acm-cyber.svg";
 import HackLogo from "public/assets/logos/acm-hack.svg";
 import DesignLogo from "public/assets/logos/acm-design.svg";
 import BitByteLogo from "public/assets/logos/acm-bitbyte.svg";
+import Link from "next/link";
 
 const CommunityImages: React.FC<{
   links: { src: string; logo: string; alt: string }[];
@@ -356,7 +357,11 @@ const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org
 
 const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const [selected, setSelected] = useState("general");
-  console.log(selected);
+  const [activeLink, setActiveLink] = useState("communities");
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  }
 
   const communityComponents = {
     ai: <AICommunity isMobile={isMobile} />,
@@ -420,26 +425,51 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         </section>
       ) : (
       <>
-        <section className="community__navigator">
-          <AITitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "ai"} setSelected={setSelected} />
-          <CyberTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "cyber"} setSelected={setSelected} />
-          <HackTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "hack"} setSelected={setSelected} />
-          <DesignTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "design"} setSelected={setSelected} />
-        </section>
-
-        <section className="community__navigator">
-          <BitByteTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "bit byte"} setSelected={setSelected} />
-          <OutreachTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "reach"} setSelected={setSelected} />
-          <ProjectsTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "projects"} setSelected={setSelected} />
-          <SpaceTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "space"} setSelected={setSelected} />
-        </section>
-        <section className="community__sub-orgs">
+      <section className="community__hero">
+        <div className="community__hero__toggle">
+            <Link href="">
+              <h3>
+                <a className={`link ${activeLink === 'communities' ? 'active' : ''}`} onClick={() => handleLinkClick("communities")}>
+                  Communities
+                </a>
+              </h3>
+            </Link>
+            <Link href="">
+              <h3>
+                <a className={`link ${activeLink === 'initiatives' ? 'active' : ''}`} onClick={() => handleLinkClick("initiatives")}>
+                  Initiatives
+                </a>
+              </h3>
+            </Link>
+          </div>
+          <p>
+            ACM at UCSD is one large community, but it is made up of several
+            smaller communities focused on specific areas of technology.
+          </p>
+          {activeLink === "communities" && (
+          <section className="community__navigator">
+            <AITitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "ai"} setSelected={setSelected} />
+            <CyberTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "cyber"} setSelected={setSelected} />
+            <HackTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "hack"} setSelected={setSelected} />
+            <DesignTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "design"} setSelected={setSelected} />
+          </section>
+          )}
+          {activeLink === "initiatives" && (
+          <section className="community__navigator">
+            <BitByteTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "bit byte"} setSelected={setSelected} />
+            <OutreachTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "reach"} setSelected={setSelected} />
+            <ProjectsTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "projects"} setSelected={setSelected} />
+            <SpaceTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "space"} setSelected={setSelected} />
+          </section>
+          )}
+      </section>
+      {/*<section className="community__sub-orgs">
           <div className="spacer80px"></div>
           <AICommunity isMobile={isMobile} />
           <CyberCommunity isMobile={isMobile} />
           <HackCommunity isMobile={isMobile} />
           <DesignCommunity isMobile={isMobile} />
-        </section>
+        </section>*/}
       </>
         
       )}

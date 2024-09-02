@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import CommunitiesGrid from "src/components/CommunitiesGrid";
 import ScrollDownArrow from "src/components/ScrollDownArrow";
+import CommunitySubOrgs from "./Community.Suborgs";
 
 const CommunityHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const [activeLink, setActiveLink] = useState("communities");

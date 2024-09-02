@@ -87,7 +87,8 @@
       margin-bottom: 10px;
       padding-top: -80px;
 
-      // To help centering with the color sidebar
+      // To help move the color side bar all the way to the left
+      // 960px is the max width of the div above the <main> tag
       @media (min-width: 960px) {
         margin-left: calc(-1 * ((100vw - 960px) / 2)) !important;
       }
@@ -175,25 +176,19 @@
 
 
     &__logo-card {
-      display: inline-flex; 
-      height: calc(100vh - 78px);
-      width: 100vw;
-      min-height: 564px;
+      display: flex; 
       height: fit-content; 
-      margin-left: 0px !important;
-      padding-right: 96px;
       margin-bottom: 10px;
-      padding-top: -80px;
 
       align-items: center;
 
-      .color_slide {
-        position: relative;
-        top: 0;
-        left: 0;
-        min-width: 70px;
-        z-index: -1;
+      max-width: 20%;
+
+      &[data-open=true] {
+        flex-grow: 1;
+        max-width: 40%;
       }
+      
       &__header {
         display: flex;
         align-items: center;
@@ -207,17 +202,27 @@
           flex-basis: 100%;
         }
       }
+
+      > button {
+        background: none;
+        outline: none;
+        border: none;
+        padding: 0;
+      }
       &__logo {
-        min-width: 226px;
-        max-width: 226px;
-        margin: 66px;
+        min-width: 120px;
+        max-width: 194px;
+        width: 194px;
+        margin: 36px 0;
+        margin-right: 46px;
       }
       &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 100%;
+        max-width: 50%;
         height: fit-content;
+        overflow-wrap: break-word;
         > a {
           display: flex;
           justify-content: center;
@@ -266,6 +271,7 @@
         }
       }
     }
+
     @media only screen and (max-width: 812px) {
       p {
         padding: 3em !important;
@@ -293,6 +299,23 @@
         }
       }
     }
+  }
+
+  &__navigator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    
+    // To help move the navigator all the way to the left, outside of normal max-width of parent
+    // 960px is the max width of the div above the <main> tag
+    @media (min-width: 960px) {
+      margin-left: calc(-1 * ((80vw - 960px) / 2));
+    }
+    
+    align-items: center;
+    width: 80vw;
   }
 }
 

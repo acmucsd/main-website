@@ -30,14 +30,16 @@ const CommunitiesTitle: React.FC<{
   color: string;
   logo: string;
   website: string;
-  description: any;
+  isMobile: boolean;
+  setSelected: (org: string) => void;
 }> = ({
   open,
   logo,
   website,
   org,
   color,
-  description,
+  isMobile,
+  setSelected,
 }) => {
 
   const getFullName = (org: string) => {
@@ -57,14 +59,16 @@ const CommunitiesTitle: React.FC<{
 
   return (
     <>
-      <div className="community__sub-orgs__logo-card">
-        <a href={website}>
+      <div className="community__sub-orgs__logo-card" data-open={open}>
+        {/* <button > */}
           <img
-            src={logo}
-            alt={`ACM ${org}`}
-            className="community__sub-orgs__logo-card__logo"
-          />
-        </a>
+              src={logo}
+              alt={`ACM ${org}`}
+              className="community__sub-orgs__logo-card__logo"
+              onClick={() => setSelected(org)}
+            />
+        {/* </button> */}
+        
         
         {open ? ( 
           <div className="community__sub-orgs__logo-card__content">
@@ -84,7 +88,7 @@ const CommunityComponent: React.FC<{
   website: string;
   logo: string;
   links: { src: string; logo: string; alt: string }[];
-  description: any;
+  description: any; // Input is HTML
 }> = ({ isMobile, color, org, website, logo, links, description }) => {
   return (
     // <>
@@ -160,6 +164,18 @@ const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   />
 );
 
+const AITitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+  <CommunitiesTitle
+    org="AI"
+    color="red"
+    website="https://ai.acmucsd.com/"
+    logo={AILogo.src}
+    isMobile={isMobile}
+    open={open}
+    setSelected={setSelected}
+  />
+);
+
 const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Cyber"
@@ -193,6 +209,18 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         Flag), a 48 hour jeopardy style hacking game.
       </p>
     }
+  />
+);
+
+const CyberTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+  <CommunitiesTitle
+    org="Cyber"
+    color="turquoise"
+    isMobile={isMobile}
+    website="https://sdc.tf/"
+    logo={CyberLogo.src}
+    open={open}
+    setSelected={setSelected}
   />
 );
 
@@ -231,6 +259,18 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   />
 );
 
+const HackTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+  <CommunitiesTitle
+    org="Hack"
+    color="orange"
+    website="https://hack.acmucsd.com/"
+    logo={HackLogo.src}
+    isMobile={isMobile}
+    open={open}
+    setSelected={setSelected}
+  />
+);
+
 const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Design"
@@ -250,8 +290,21 @@ const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   />
 );
 
+const DesignTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+  <CommunitiesTitle
+    org="Design"
+    color="pink"
+    website="https://acmucsd.com/"
+    logo={DesignLogo.src}
+    isMobile={isMobile}
+    open={open}
+    setSelected={setSelected}
+  />
+);
+
 const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const [selected, setSelected] = useState("general");
+  console.log(selected);
 
   const communityComponents = {
     ai: <AICommunity isMobile={isMobile} />,
@@ -314,6 +367,13 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           {communityComponents[selected]}
         </section>
       ) : (
+        <>
+        <section className="community__navigator">
+          <AITitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "ai"} setSelected={setSelected} />
+          <CyberTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "cyber"} setSelected={setSelected} />
+          <HackTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "hack"} setSelected={setSelected} />
+          <DesignTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "design"} setSelected={setSelected} />
+        </section>
         <section className="community__sub-orgs">
           <div className="spacer80px"></div>
           <AICommunity isMobile={isMobile} />
@@ -321,6 +381,8 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           <HackCommunity isMobile={isMobile} />
           <DesignCommunity isMobile={isMobile} />
         </section>
+      </>
+        
       )}
     </>
   );

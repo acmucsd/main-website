@@ -83,11 +83,12 @@ const CommunitiesTitle: React.FC<{
           <img
             src={logo}
             alt={`ACM ${org}`}
-            className={`community__sub-orgs__logo-card__logo ${glowClassName}`}
+            className={`community__sub-orgs__logo-card__logo ${(open || hover) ? 'glow-on-hover' : ''}`}
             onClick={() => setSelected(org)}
-            style={{'--shadow-color': color, filter: (open || hover) ? ` ${color=='' ? `${filterDropShadow}` : `drop-shadow(0 0 1rem ${color})`} ` : 'none'} as React.CSSProperties}
+            style={{'--shadow-color': color, filter: (open || hover) ? ` ${color=='' ? `` : `drop-shadow(0 0 1rem ${color})`} ` : 'none'} as React.CSSProperties}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
+            data-glow={open || hover}
           />
         
         {open ? ( 

@@ -404,8 +404,21 @@
   height: 80px;
 }
 
+
+// Rainbow glow behind initiative sections
+.glow-on-hover {
+
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+  }
+
 .glow-on-hover:before {
-  content: '';
+  content: 'BEFORE';
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
   position: absolute;
   top: -2px;
@@ -416,26 +429,22 @@
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   animation: glowing 20s linear infinite;
-  opacity: 0;
+  opacity: 1;
   transition: opacity .3s ease-in-out;
   border-radius: 10px;
 }
 
-.glow-on-hover:active {
-  color: #1e3a8a;
-}
-
-.glow-on-hover:active:after {
+.glow-on-hover[data-glow=true]:after {
   background: transparent;
 }
 
-.glow-on-hover:hover:before {
+.glow-on-hover[data-glow=true]:before {
   opacity: 1;
 }
 
 .glow-on-hover:after {
   z-index: -1;
-  content: '';
+  content: 'AFTER';
   position: absolute;
   width: 100%;
   height: 100%;

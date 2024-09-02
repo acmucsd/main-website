@@ -32,7 +32,6 @@ const CommunitiesTitle: React.FC<{
   website: string;
   isMobile: boolean;
   setSelected: (org: string) => void;
-  selected: boolean;
 }> = ({
   open,
   logo,
@@ -41,13 +40,7 @@ const CommunitiesTitle: React.FC<{
   color,
   isMobile,
   setSelected,
-  selected
 }) => {
-
-  const determineShadowColor = () => {
-    // Define the drop shadow color based on `org`
-    return color;
-  };
 
   const getFullName = (org: string) => {
     switch (org) {
@@ -64,6 +57,8 @@ const CommunitiesTitle: React.FC<{
     }
   }
 
+  console.log(open)
+
   return (
     <>
       <div className="community__sub-orgs__logo-card" data-open={open}>
@@ -73,7 +68,7 @@ const CommunitiesTitle: React.FC<{
               alt={`ACM ${org}`}
               className="community__sub-orgs__logo-card__logo"
               onClick={() => setSelected(org)}
-              style={{'--color': color} as React.CSSProperties}
+              style={{'--shadow-color': color, filter: open ? `drop-shadow(0 0 1rem ${color})` : 'none'} as React.CSSProperties}
               
             />
         {/* </button> */}
@@ -182,7 +177,6 @@ const AITitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: s
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
-    selected={false}
   />
 );
 
@@ -231,7 +225,6 @@ const CyberTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org
     logo={CyberLogo.src}
     open={open}
     setSelected={setSelected}
-    selected={false}
   />
 );
 
@@ -279,7 +272,6 @@ const HackTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org:
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
-    selected={false}
   />
 );
 
@@ -311,7 +303,6 @@ const DesignTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (or
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
-    selected={false}
   />
 );
 

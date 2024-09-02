@@ -21,6 +21,38 @@
       margin-bottom: 40px;
       text-align: center;
     }
+
+    &__toggle {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      gap: 8rem;
+
+      a {
+        position: relative;
+        color: rgba(0, 0, 0, 0.8);
+        text-decoration: none;
+      }
+    
+      a.active {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 12px;
+      }
+    
+      a.active::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        //background: conic-gradient(from 90deg at 50% 50%, #FF6D6D 0deg, #FDA44E 60deg, #FFDC24 120deg, #38CF6B 180deg, #62B0FF 240deg, #816DFF 300deg, #FF6D6D 360deg);
+        background: linear-gradient(to right, #FF6D6D, #FDA44E, #FFDC24, #38CF6B, #62B0FF, #816DFF, #FF6D6D);
+        background-size: 150% 150%;
+      }
+    }
+
     &__communities {
       text-align: left;
     }

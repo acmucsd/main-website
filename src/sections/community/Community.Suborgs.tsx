@@ -476,13 +476,13 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           </section>
           )}
       </section>
-      {/*<section className="community__sub-orgs">
+      <section className="community__sub-orgs">
           <div className="spacer80px"></div>
-          <AICommunity isMobile={isMobile} />
-          <CyberCommunity isMobile={isMobile} />
-          <HackCommunity isMobile={isMobile} />
-          <DesignCommunity isMobile={isMobile} />
-        </section>*/}
+            {selected.toLocaleLowerCase() === "ai" ? <AICommunity isMobile={isMobile} /> : null}
+            {selected.toLocaleLowerCase() === "cyber" ? <CyberCommunity isMobile={isMobile} /> : null }
+            {selected.toLocaleLowerCase() === "hack" ? <HackCommunity isMobile={isMobile} /> : null}
+            {selected.toLocaleLowerCase() === "design" ? <DesignCommunity isMobile={isMobile} /> : null}
+        </section>
       </>
         
       )}

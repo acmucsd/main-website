@@ -36,6 +36,7 @@ const CommunitiesTitle: React.FC<{
   color: string;
   logo: string;
   website: string;
+  glowClassName: string;
   isMobile: boolean;
   setSelected: (org: string) => void;
 }> = ({
@@ -45,6 +46,7 @@ const CommunitiesTitle: React.FC<{
   org,
   color,
   isMobile,
+  glowClassName,
   setSelected,
 }) => {
 
@@ -81,7 +83,7 @@ const CommunitiesTitle: React.FC<{
           <img
             src={logo}
             alt={`ACM ${org}`}
-            className="community__sub-orgs__logo-card__logo"
+            className={`community__sub-orgs__logo-card__logo ${glowClassName}`}
             onClick={() => setSelected(org)}
             style={{'--shadow-color': color, filter: (open || hover) ? ` ${color=='' ? `${filterDropShadow}` : `drop-shadow(0 0 1rem ${color})`} ` : 'none'} as React.CSSProperties}
             onMouseEnter={() => setHover(true)}
@@ -182,7 +184,7 @@ const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   />
 );
 
-const AITitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+const AITitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string }> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="AI"
     color="red"
@@ -191,6 +193,7 @@ const AITitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: s
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
+    glowClassName=""
   />
 );
 
@@ -230,7 +233,7 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   />
 );
 
-const CyberTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+const CyberTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Cyber"
     color="turquoise"
@@ -239,6 +242,7 @@ const CyberTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org
     logo={CyberLogo.src}
     open={open}
     setSelected={setSelected}
+    glowClassName={glowClassName}
   />
 );
 
@@ -277,7 +281,7 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   />
 );
 
-const HackTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+const HackTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName}) => (
   <CommunitiesTitle
     org="Hack"
     color="orange"
@@ -286,6 +290,7 @@ const HackTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org:
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
+    glowClassName={glowClassName}
   />
 );
 
@@ -308,7 +313,7 @@ const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   />
 );
 
-const DesignTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+const DesignTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string,}> = ({ isMobile, open, setSelected, glowClassName}) => (
   <CommunitiesTitle
     org="Design"
     color="pink"
@@ -317,10 +322,11 @@ const DesignTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (or
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
+    glowClassName={glowClassName}
   />
 );
 
-const BitByteTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+const BitByteTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Bit Byte"
     color=""
@@ -329,10 +335,11 @@ const BitByteTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (o
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
+    glowClassName={glowClassName}
   />
 );
 
-const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Reach"
     color=""
@@ -341,10 +348,11 @@ const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
+    glowClassName={glowClassName}
   />
 );
 
-const ProjectsTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+const ProjectsTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string,}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Projects"
     color=""
@@ -353,10 +361,11 @@ const ProjectsTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
+    glowClassName={glowClassName}
   />
 );
 
-const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string,}> = ({ isMobile, open, setSelected, glowClassName}) => (
   <CommunitiesTitle
     org="Space"
     color=""
@@ -365,6 +374,7 @@ const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
+    glowClassName={glowClassName}
   />
 );
 
@@ -391,6 +401,8 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       </div>
     ),
   };
+
+  const titleClassName = `link ${activeLink === 'initiatives' ? 'glow-on-hover' : ''}`;
 
   return (
     <>
@@ -442,14 +454,14 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         <div className="community__hero__toggle">
             <Link href="">
               <h3>
-                <a className={`link ${activeLink === 'communities' ? 'active' : ''}`} onClick={() => handleLinkClick("communities")}>
+                <a className={`${activeLink === 'communities' ? 'active' : ''}`} onClick={() => handleLinkClick("communities")}>
                   Communities
                 </a>
               </h3>
             </Link>
             <Link href="">
               <h3>
-                <a className={`link ${activeLink === 'initiatives' ? 'active' : ''}`} onClick={() => handleLinkClick("initiatives")}>
+                <a className={`${activeLink === 'initiatives' ? 'active' : ''}`} onClick={() => handleLinkClick("initiatives")}>
                   Initiatives
                 </a>
               </h3>
@@ -461,18 +473,18 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           </p>
           {activeLink === "communities" && (
           <section className="community__navigator">
-            <AITitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "ai"} setSelected={setSelected} />
-            <CyberTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "cyber"} setSelected={setSelected} />
-            <HackTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "hack"} setSelected={setSelected} />
-            <DesignTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "design"} setSelected={setSelected} />
+            <AITitle glowClassName="" isMobile={isMobile} open={selected.toLocaleLowerCase() === "ai"} setSelected={setSelected} />
+            <CyberTitle glowClassName="" isMobile={isMobile} open={selected.toLocaleLowerCase() === "cyber"} setSelected={setSelected} />
+            <HackTitle glowClassName="" isMobile={isMobile} open={selected.toLocaleLowerCase() === "hack"} setSelected={setSelected} />
+            <DesignTitle glowClassName="" isMobile={isMobile} open={selected.toLocaleLowerCase() === "design"} setSelected={setSelected} />
           </section>
           )}
           {activeLink === "initiatives" && (
           <section className="community__navigator">
-            <BitByteTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "bit byte"} setSelected={setSelected} />
-            <OutreachTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "reach"} setSelected={setSelected} />
-            <ProjectsTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "projects"} setSelected={setSelected} />
-            <SpaceTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "space"} setSelected={setSelected} />
+            <BitByteTitle glowClassName={titleClassName} isMobile={isMobile} open={selected.toLocaleLowerCase() === "bit byte"} setSelected={setSelected} />
+            <OutreachTitle glowClassName={titleClassName} isMobile={isMobile} open={selected.toLocaleLowerCase() === "reach"} setSelected={setSelected} />
+            <ProjectsTitle glowClassName={titleClassName} isMobile={isMobile} open={selected.toLocaleLowerCase() === "projects"} setSelected={setSelected} />
+            <SpaceTitle glowClassName={titleClassName} isMobile={isMobile} open={selected.toLocaleLowerCase() === "space"} setSelected={setSelected} />
           </section>
           )}
       </section>

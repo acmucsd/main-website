@@ -61,15 +61,13 @@ const CommunitiesTitle: React.FC<{
 
   return (
     <>
-      <div className="community__sub-orgs__logo-card" data-open={open}>
+      <div className="community__sub-orgs__logo-card" data-open={open} style={{'--shadow-color': color, filter: open ? `drop-shadow(0 0 1rem ${color})` : 'none'} as React.CSSProperties}>
         {/* <button > */}
           <img
               src={logo}
               alt={`ACM ${org}`}
               className="community__sub-orgs__logo-card__logo"
               onClick={() => setSelected(org)}
-              style={{'--shadow-color': color, filter: open ? `drop-shadow(0 0 1rem ${color})` : 'none'} as React.CSSProperties}
-              
             />
         {/* </button> */}
         

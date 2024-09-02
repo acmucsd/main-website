@@ -13,6 +13,7 @@ import AILogo from "public/assets/logos/acm-ai.svg";
 import CyberLogo from "public/assets/logos/acm-cyber.svg";
 import HackLogo from "public/assets/logos/acm-hack.svg";
 import DesignLogo from "public/assets/logos/acm-design.svg";
+import BitByteLogo from "public/assets/logos/acm-bitbyte.svg";
 
 const CommunityImages: React.FC<{
   links: { src: string; logo: string; alt: string }[];
@@ -310,7 +311,7 @@ const BitByteTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (o
     org="Bit Byte"
     color=""
     website="https://docs.google.com/presentation/d/1yNQmK_w2JQqOeA3MtSwN2_PQT5Q73VCcnGuW0NwzrjM/edit#slide=id.ga0ada6e7b3_0_50"
-    logo={DesignLogo.src}
+    logo={BitByteLogo.src}
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
@@ -322,7 +323,7 @@ const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (
     org="Reach"
     color=""
     website="https://outreach-website.vercel.app/"
-    logo={DesignLogo.src}
+    logo={BitByteLogo.src}
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
@@ -334,7 +335,7 @@ const ProjectsTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (
     org="Projects"
     color=""
     website="https://projects.acmucsd.com/"
-    logo={DesignLogo.src}
+    logo={BitByteLogo.src}
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
@@ -346,7 +347,7 @@ const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org
     org="Space"
     color=""
     website="https://space.acmucsd.com/"
-    logo={DesignLogo.src}
+    logo={BitByteLogo.src}
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}

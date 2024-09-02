@@ -73,7 +73,7 @@ const CommunitiesTitle: React.FC<{
               alt={`ACM ${org}`}
               className="community__sub-orgs__logo-card__logo"
               onClick={() => setSelected(org)}
-              style={{filter: selected ? `drop-shadow(0 0 1rem ${color})` : 'none', '--color': color} as React.CSSProperties}
+              style={{'--color': color} as React.CSSProperties}
               
             />
         {/* </button> */}
@@ -182,7 +182,7 @@ const AITitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: s
     isMobile={isMobile}
     open={open}
     setSelected={setSelected}
-    selected
+    selected={false}
   />
 );
 

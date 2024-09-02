@@ -57,20 +57,21 @@ const CommunitiesTitle: React.FC<{
     }
   }
 
-  console.log(open)
+  const [hover, setHover] = useState(false);
+
 
   return (
     <>
-      <div className="community__sub-orgs__logo-card" data-open={open} style={{'--shadow-color': color, filter: open ? `drop-shadow(0 0 1rem ${color})` : 'none'} as React.CSSProperties}>
-        {/* <button > */}
+      <div className="community__sub-orgs__logo-card" data-open={open} >
           <img
-              src={logo}
-              alt={`ACM ${org}`}
-              className="community__sub-orgs__logo-card__logo"
-              onClick={() => setSelected(org)}
-            />
-        {/* </button> */}
-        
+            src={logo}
+            alt={`ACM ${org}`}
+            className="community__sub-orgs__logo-card__logo"
+            onClick={() => setSelected(org)}
+            style={{'--shadow-color': color, filter: (open || hover) ? `drop-shadow(0 0 1rem ${color})` : 'none'} as React.CSSProperties}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+          />
         
         {open ? ( 
           <div className="community__sub-orgs__logo-card__content">

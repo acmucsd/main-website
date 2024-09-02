@@ -216,6 +216,11 @@
         margin: 36px 0;
         margin-right: 46px;
       }
+      
+      &__logo:hover {
+        filter: drop-shadow(0 0 1rem var(--color));
+      }
+
       &__content {
         display: flex;
         flex-direction: column;

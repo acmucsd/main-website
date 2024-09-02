@@ -68,7 +68,7 @@ const CommunitiesTitle: React.FC<{
             alt={`ACM ${org}`}
             className="community__sub-orgs__logo-card__logo"
             onClick={() => setSelected(org)}
-            style={{'--shadow-color': color, filter: (open || hover) ? `drop-shadow(0 0 1rem ${color})` : 'none'} as React.CSSProperties}
+            style={{'--shadow-color': color, filter: (open || hover) ? `drop-shadow(0 0 1rem ${color=='' ? 'red' : color})` : 'none'} as React.CSSProperties}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
           />
@@ -305,6 +305,54 @@ const DesignTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (or
   />
 );
 
+const BitByteTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+  <CommunitiesTitle
+    org="Bit Byte"
+    color=""
+    website="https://docs.google.com/presentation/d/1yNQmK_w2JQqOeA3MtSwN2_PQT5Q73VCcnGuW0NwzrjM/edit#slide=id.ga0ada6e7b3_0_50"
+    logo={DesignLogo.src}
+    isMobile={isMobile}
+    open={open}
+    setSelected={setSelected}
+  />
+);
+
+const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+  <CommunitiesTitle
+    org="Reach"
+    color=""
+    website="https://outreach-website.vercel.app/"
+    logo={DesignLogo.src}
+    isMobile={isMobile}
+    open={open}
+    setSelected={setSelected}
+  />
+);
+
+const ProjectsTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+  <CommunitiesTitle
+    org="Projects"
+    color=""
+    website="https://projects.acmucsd.com/"
+    logo={DesignLogo.src}
+    isMobile={isMobile}
+    open={open}
+    setSelected={setSelected}
+  />
+);
+
+const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; }> = ({ isMobile, open, setSelected }) => (
+  <CommunitiesTitle
+    org="Space"
+    color=""
+    website="https://space.acmucsd.com/"
+    logo={DesignLogo.src}
+    isMobile={isMobile}
+    open={open}
+    setSelected={setSelected}
+  />
+);
+
 const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const [selected, setSelected] = useState("general");
   console.log(selected);
@@ -370,12 +418,19 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           {communityComponents[selected]}
         </section>
       ) : (
-        <>
+      <>
         <section className="community__navigator">
           <AITitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "ai"} setSelected={setSelected} />
           <CyberTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "cyber"} setSelected={setSelected} />
           <HackTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "hack"} setSelected={setSelected} />
           <DesignTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "design"} setSelected={setSelected} />
+        </section>
+
+        <section className="community__navigator">
+          <BitByteTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "bit byte"} setSelected={setSelected} />
+          <OutreachTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "reach"} setSelected={setSelected} />
+          <ProjectsTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "projects"} setSelected={setSelected} />
+          <SpaceTitle isMobile={isMobile} open={selected.toLocaleLowerCase() === "space"} setSelected={setSelected} />
         </section>
         <section className="community__sub-orgs">
           <div className="spacer80px"></div>

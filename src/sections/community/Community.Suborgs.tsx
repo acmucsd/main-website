@@ -85,6 +85,10 @@ const CommunitiesTitle: React.FC<{
         return "Software Engineering";
       case "Design":
         return "Design";
+      case "Reach":
+        return "Outreach";
+      case "Space":
+        return "Space Career Fair";
       default:
         return org;
     }
@@ -367,7 +371,7 @@ const BitByteTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (o
 
 const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
-    org="Design"
+    org="Bit Byte"
     color=""
     website="https://docs.google.com/presentation/d/1yNQmK_w2JQqOeA3MtSwN2_PQT5Q73VCcnGuW0NwzrjM/edit#slide=id.ga0ada6e7b3_0_50"
     logo={BitByteLogo.src}

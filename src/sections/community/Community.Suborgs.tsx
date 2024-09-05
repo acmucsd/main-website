@@ -158,7 +158,7 @@ const CommunityComponent: React.FC<{
             />
           </a>*/
         )}
-        <div className="descHolder">
+        <div className="community__sub-orgs__community-card__content__desc-holder">
           <div className="community__sub-orgs__community-card__header">
             {/*{!isMobile ? null :  <img src={logo} alt={`ACM ${org}`} />}*/}
             <h1 className={color}>ACM {org}</h1>

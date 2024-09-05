@@ -23,6 +23,7 @@ We suggest using [`nvm`](https://github.com/nvm-sh/nvm) to manage multiple node 
 on separate projects. Installation [here](https://github.com/nvm-sh/nvm#installing-and-updating). To
 check if you have `nvm` installed, run `nvm -v` and ensure you can view your current version. 
 
+
 Likewise, you can use [`corepack`](https://github.com/nodejs/corepack) to ensure the right package
 manager and version is being used. If your node version is configured properly, `corepack` should
 already be installed and available. Manual installation [here](https://nodejs.org/en/download/)

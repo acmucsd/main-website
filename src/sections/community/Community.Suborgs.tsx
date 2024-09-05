@@ -110,7 +110,7 @@ const CommunitiesTitle: React.FC<{
             alt={`ACM ${org}`}
             className={`community__sub-orgs__logo-card__logo ${(open || hover) ? 'glow-on-hover' : ''}`}
             onClick={() => setSelected(org)}
-            // style={{'--shadow-color': color, filter: (open || hover) ? ` ${color=='' ? `` : `drop-shadow(0 0 1rem ${color})`} ` : 'none'} as React.CSSProperties}
+            style={{'--shadow-color': color, filter: (open || hover) ? ` ${color=='' ? `` : `drop-shadow(0 0 1rem ${color})`} ` : 'none'} as React.CSSProperties}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             data-glow={open || hover}
@@ -588,13 +588,22 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           </section>
           )}
       </section>
+      {/* <div className="spacer80px"></div> */}
       <section className="community__sub-orgs">
-          <div className="spacer80px"></div>
-            {selected.toLocaleLowerCase() === "ai" ? <AICommunity isMobile={isMobile} /> : null}
-            {selected.toLocaleLowerCase() === "cyber" ? <CyberCommunity isMobile={isMobile} /> : null }
-            {selected.toLocaleLowerCase() === "hack" ? <HackCommunity isMobile={isMobile} /> : null}
-            {selected.toLocaleLowerCase() === "design" ? <DesignCommunity isMobile={isMobile} /> : null}
-        </section>
+        
+        {selected.toLocaleLowerCase() === "ai" ? <AICommunity isMobile={isMobile} /> : null}
+        {selected.toLocaleLowerCase() === "cyber" ? <CyberCommunity isMobile={isMobile} /> : null }
+        {selected.toLocaleLowerCase() === "hack" ? <HackCommunity isMobile={isMobile} /> : null}
+        {selected.toLocaleLowerCase() === "design" ? <DesignCommunity isMobile={isMobile} /> : null}
+      </section>
+      
+      <section className="community__sub-orgs">
+        {selected.toLocaleLowerCase() === "bit byte" ? <BitByteDescription isMobile={isMobile} /> : null}
+        {selected.toLocaleLowerCase() === "reach" ? <OutreachDescription isMobile={isMobile} /> : null }
+        {selected.toLocaleLowerCase() === "projects" ? <ProjectsDescription isMobile={isMobile} /> : null}
+        {selected.toLocaleLowerCase() === "space" ? <SpaceDescription isMobile={isMobile} /> : null}
+      </section>
+
       </>
         
       )}

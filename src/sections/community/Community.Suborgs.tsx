@@ -110,7 +110,7 @@ const CommunitiesTitle: React.FC<{
             alt={`ACM ${org}`}
             className={`community__sub-orgs__logo-card__logo ${((open || hover)) ? 'glow-on-hover' : ''}`}
             onClick={() => setSelected(org)}
-            // style={{'--shadow-color': color, filter: (open || hover) ? ` ${color=='' ? `` : `drop-shadow(0 0 1rem ${color})`} ` : 'none'} as React.CSSProperties}
+            style={{'--shadow-color': color, filter: (open || hover) ? ` ${color=='' ? `` : `drop-shadow(0 0 1rem ${color})`} ` : 'none'} as React.CSSProperties}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             data-glow={open || hover}
@@ -145,17 +145,20 @@ const CommunityComponent: React.FC<{
       <div className={`color_slide ${color}bg`} />
       <div className="community__sub-orgs__community-card__content">
         {isMobile ? null : (
-          <a href={website}>
+          <div className="community__image-grid">
+            <CommunityImages />
+          </div>
+          /*<a href={website}>
             <img
               src={logo}
               alt={`ACM ${org}`}
               className="community__sub-orgs__community-card__logo"
             />
-          </a>
+          </a>*/
         )}
         <div>
           <div className="community__sub-orgs__community-card__header">
-            {!isMobile ? null : <img src={logo} alt={`ACM ${org}`} />}
+            {/*{!isMobile ? null :  <img src={logo} alt={`ACM ${org}`} />}*/}
             <h1 className={color}>ACM {org}</h1>
             <div className="community-links">
               {links.map((link, index) => (
@@ -476,7 +479,6 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         </section>
       ) : (
       <>
-      <CommunityImages />
       <section className="community__hero">
         <div className="community__hero__toggle">
             <Link href="">

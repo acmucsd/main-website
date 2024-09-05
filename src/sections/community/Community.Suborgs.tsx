@@ -85,6 +85,10 @@ const CommunitiesTitle: React.FC<{
         return "Software Engineering";
       case "Design":
         return "Design";
+      case "Reach":
+        return "Outreach";
+      case "Space":
+        return "Space Career Fair";
       default:
         return org;
     }
@@ -368,6 +372,24 @@ const BitByteTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (o
   />
 );
 
+const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
+  <CommunityComponent
+    org="Bit Byte"
+    color=""
+    website="https://docs.google.com/presentation/d/1yNQmK_w2JQqOeA3MtSwN2_PQT5Q73VCcnGuW0NwzrjM/edit#slide=id.ga0ada6e7b3_0_50"
+    logo={BitByteLogo.src}
+    isMobile={isMobile}
+    links={[]}
+    description={
+      <p>
+        Join ACM’s Bit-Byte program that pairs students to make lifelong friendships! 
+        Our upperclassmen bigs (bytes) help their littles (bits) grow in their academic, 
+        social, and professional lives.
+      </p>
+    }
+  />
+);
+
 const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Reach"
@@ -378,6 +400,26 @@ const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (
     open={open}
     setSelected={setSelected}
     glowClassName={glowClassName}
+  />
+);
+
+const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
+  <CommunityComponent
+    org="Reach"
+    color=""
+    website="https://outreach-website.vercel.app/"
+    logo={OutreachLogo.src}
+    isMobile={isMobile}
+    links={[]}
+    description={
+      <p>
+        Welcome to ACM Outreach at UCSD, where our mission is to ignite a passion for computing 
+        and STEM among K-12 students, with a special focus on those who are underrepresented 
+        in the computing community. Our goal is to empower students to explore the exciting 
+        world of computing by nurturing their curiosity and enthusiasm for technology. 
+        Join us in inspiring the next generation of innovators and problem solvers!
+      </p>
+    }
   />
 );
 
@@ -394,6 +436,23 @@ const ProjectsTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (
   />
 );
 
+const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
+  <CommunityComponent
+    org="Projects"
+    color=""
+    website="https://projects.acmucsd.com/"
+    logo={ProjectsLogo.src}
+    isMobile={isMobile}
+    links={[]}
+    description={
+      <p>
+        Sign up to join a team in our quarter-long projects. 
+        Grow your skills in coding, design, or project management.
+      </p>
+    }
+  />
+);
+
 const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string,}> = ({ isMobile, open, setSelected, glowClassName}) => (
   <CommunitiesTitle
     org="Space"
@@ -404,6 +463,24 @@ const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org
     open={open}
     setSelected={setSelected}
     glowClassName={glowClassName}
+  />
+);
+
+const SpaceDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
+  <CommunityComponent
+    org="Space"
+    color=""
+    website="https://space.acmucsd.com/"
+    logo={ProjectsLogo.src}
+    isMobile={isMobile}
+    links={[]}
+    description={
+      <p>
+        Through SPACE, students and recruiters can connect and interact with 
+        each other regarding professional opportunities such as internships, 
+        full or part-time positions, and student programs.
+      </p>
+    }
   />
 );
 
@@ -517,13 +594,22 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           </section>
           )}
       </section>
+      {/* <div className="spacer80px"></div> */}
       <section className="community__sub-orgs">
-          <div className="spacer80px"></div>
-            {selected.toLocaleLowerCase() === "ai" ? <AICommunity isMobile={isMobile} /> : null}
-            {selected.toLocaleLowerCase() === "cyber" ? <CyberCommunity isMobile={isMobile} /> : null }
-            {selected.toLocaleLowerCase() === "hack" ? <HackCommunity isMobile={isMobile} /> : null}
-            {selected.toLocaleLowerCase() === "design" ? <DesignCommunity isMobile={isMobile} /> : null}
-        </section>
+        
+        {selected.toLocaleLowerCase() === "ai" ? <AICommunity isMobile={isMobile} /> : null}
+        {selected.toLocaleLowerCase() === "cyber" ? <CyberCommunity isMobile={isMobile} /> : null }
+        {selected.toLocaleLowerCase() === "hack" ? <HackCommunity isMobile={isMobile} /> : null}
+        {selected.toLocaleLowerCase() === "design" ? <DesignCommunity isMobile={isMobile} /> : null}
+      </section>
+      
+      <section className="community__sub-orgs">
+        {selected.toLocaleLowerCase() === "bit byte" ? <BitByteDescription isMobile={isMobile} /> : null}
+        {selected.toLocaleLowerCase() === "reach" ? <OutreachDescription isMobile={isMobile} /> : null }
+        {selected.toLocaleLowerCase() === "projects" ? <ProjectsDescription isMobile={isMobile} /> : null}
+        {selected.toLocaleLowerCase() === "space" ? <SpaceDescription isMobile={isMobile} /> : null}
+      </section>
+
       </>
         
       )}

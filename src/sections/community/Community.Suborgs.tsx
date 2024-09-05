@@ -20,12 +20,37 @@ import ProjectsLogo from "public/assets/logos/projects.svg";
 import SpaceLogo from "public/assets/logos/space.svg";
 import Link from "next/link";
 
+import CatLong from "public/assets/communities-images/cat-long.svg";
+import CatSquare from "public/assets/communities-images/cat-square.svg";
+
 const CommunityImages: React.FC<{
-  links: { src: string; logo: string; alt: string }[];
-}> = ({ links }) => {
+  // links: { src: string; logo: string; alt: string }[];
+}> = ({  }) => {
   return(
-    <div>
+    <div className="community__image-grid">
+      <img
+        src={CatLong.src}
+        alt={`Half Cat 1`}
+        className="pic1"
+          />
       
+      <img
+        src={CatLong.src}
+        alt={`Half Cat 2`}
+        className="pic2"
+          />
+
+      <img
+        src={CatSquare.src}
+        alt={`Square Cat`}
+        className="pic3"
+          />
+
+      <img
+        src={CatLong.src}
+        alt={`Super Long Cat`}
+        className="pic4"
+          />
     </div>
   );
 };
@@ -85,7 +110,7 @@ const CommunitiesTitle: React.FC<{
             alt={`ACM ${org}`}
             className={`community__sub-orgs__logo-card__logo ${((open || hover)) ? 'glow-on-hover' : ''}`}
             onClick={() => setSelected(org)}
-            style={{'--shadow-color': color, filter: (open || hover) ? ` ${color=='' ? `` : `drop-shadow(0 0 1rem ${color})`} ` : 'none'} as React.CSSProperties}
+            // style={{'--shadow-color': color, filter: (open || hover) ? ` ${color=='' ? `` : `drop-shadow(0 0 1rem ${color})`} ` : 'none'} as React.CSSProperties}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             data-glow={open || hover}
@@ -451,6 +476,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         </section>
       ) : (
       <>
+      <CommunityImages />
       <section className="community__hero">
         <div className="community__hero__toggle">
             <Link href="">

@@ -131,16 +131,6 @@ const CommunitiesTitle: React.FC<{
   );
 };
 
-const CommunityImages: React.FC<{
-  links: { src: string; logo: string; alt: string }[];
-}> = ({ links }) => {
-  return(
-    <div>
-      
-    </div>
-  );
-};
-
 const CommunityComponent: React.FC<{
   org: string;
   color: string;

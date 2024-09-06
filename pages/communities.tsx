@@ -24,7 +24,7 @@ const CommunitiesPage: NextPage = () => {
         description="ACM at UCSD is one large community, but it is made up of several smaller communities focused on specific areas of technology."
         image={ACMWhiteLogo.src}
       />
-      <CommunityHero isMobile={isMobile} />
+      {/*<CommunityHero isMobile={isMobile} />*/}
       <CommunitySuborgs isMobile={isMobile} />
     </>
   );

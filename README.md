@@ -21,9 +21,8 @@ This site is powered by Vercel
 
 We suggest using [`nvm`](https://github.com/nvm-sh/nvm) to manage multiple node versions if you work
 on separate projects. Installation [here](https://github.com/nvm-sh/nvm#installing-and-updating). To
-check if you have `nvm` installed, run `nvm -v` and ensure you can view your current version. Once
-installed, run `nvm use` in the project root directory to set your node version to match the project
-requirements.
+check if you have `nvm` installed, run `nvm -v` and ensure you can view your current version. 
+
 
 Likewise, you can use [`corepack`](https://github.com/nodejs/corepack) to ensure the right package
 manager and version is being used. If your node version is configured properly, `corepack` should

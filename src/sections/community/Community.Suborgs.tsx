@@ -29,25 +29,25 @@ const CommunityImages: React.FC<{
   return(
     <div className="community__image-grid">
       <img
-        src={CatLong.src}
+        // src={CatLong.src}
         alt={`Half Cat 1`}
         className="pic1"
           />
       
       <img
-        src={CatLong.src}
+        // src={CatLong.src}
         alt={`Half Cat 2`}
         className="pic2"
           />
 
       <img
-        src={CatLong.src}
+        // src={CatLong.src}
         alt={`Square Cat`}
         className="pic3"
           />
 
       <img
-        src={CatLong.src}
+        // src={CatLong.src}
         alt={`Super Long Cat`}
         className="pic4"
           />

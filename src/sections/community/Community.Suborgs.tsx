@@ -41,7 +41,7 @@ const CommunityImages: React.FC<{
           />
 
       <img
-        src={CatSquare.src}
+        src={CatLong.src}
         alt={`Square Cat`}
         className="pic3"
           />

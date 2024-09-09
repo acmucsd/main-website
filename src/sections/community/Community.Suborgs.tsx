@@ -23,32 +23,50 @@ import Link from "next/link";
 import CatLong from "public/assets/communities-images/cat-long.svg";
 import CatSquare from "public/assets/communities-images/cat-square.svg";
 
+import BitByte1 from "public/assets/communities-images/BitByte/BitByte1.jpg";
+import BitByte2 from "public/assets/communities-images/BitByte/BitByte2.jpg";
+import BitByte3 from "public/assets/communities-images/BitByte/BitByte3.jpg";
+import BitByte4 from "public/assets/communities-images/BitByte/BitByte4.jpg";
+
+import Outreach1 from "public/assets/communities-images/Outreach/Reach1.jpg";
+import Outreach2 from "public/assets/communities-images/Outreach/Reach2.jpg";
+import Outreach3 from "public/assets/communities-images/Outreach/Reach3.jpg";
+import Outreach4 from "public/assets/communities-images/Outreach/Reach4.png";
+
+import SPACE1 from "public/assets/communities-images/SPACE/SPACE1.jpg";
+import SPACE2 from "public/assets/communities-images/SPACE/SPACE2.jpg";
+import SPACE3 from "public/assets/communities-images/SPACE/SPACE3.jpg";
+import SPACE4 from "public/assets/communities-images/SPACE/SPACE4.jpg";
+
+
 const CommunityImages: React.FC<{
   // links: { src: string; logo: string; alt: string }[];
-}> = ({  }) => {
+  srcs: string[];
+  alts: string[];
+}> = ({ srcs, alts }) => {
   return(
     <div className="community__image-grid">
       <img
-        // src={CatLong.src}
-        alt={`Half Cat 1`}
+        src={srcs[0] ?? CatLong.src}
+        alt={alts[0] ?? `Half Cat 1`}
         className="pic1"
           />
       
       <img
-        // src={CatLong.src}
-        alt={`Half Cat 2`}
+        src={srcs[1] ?? CatLong.src}
+        alt={alts[1] ?? `Half Cat 2`}
         className="pic2"
           />
 
       <img
-        // src={CatLong.src}
-        alt={`Square Cat`}
+        src={srcs[2] ?? CatSquare.src}
+        alt={alts[2] ?? `Square Cat`}
         className="pic3"
           />
 
       <img
-        // src={CatLong.src}
-        alt={`Super Long Cat`}
+        src={srcs[3] ?? CatLong.src}
+        alt={alts[3] ?? `Super Long Cat`}
         className="pic4"
           />
     </div>
@@ -139,7 +157,10 @@ const CommunityComponent: React.FC<{
   logo: string;
   links: { src: string; logo: string; alt: string }[];
   description: any; // Input is HTML
-}> = ({ isMobile, color, org, website, logo, links, description }) => {
+  srcs: string[];
+  alts: string[];
+  
+}> = ({ isMobile, color, org, website, logo, links, description, srcs, alts }) => {
   return (
     // <>
     //   <CommunitiesTitle open={true} logo={logo} website={website} org={org} color={color} description={description}/>
@@ -149,7 +170,7 @@ const CommunityComponent: React.FC<{
       <div className={`color_slide ${color}bg`} />
       <div className="community__sub-orgs__community-card__content">
         {isMobile ? null : (
-          <CommunityImages />
+          <CommunityImages srcs={srcs} alts={alts}/>
           /*<a href={website}>
             <img
               src={logo}
@@ -212,6 +233,9 @@ const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         to all the perks and be up to date on AI and the community!
       </p>
     }
+
+    srcs={[]}
+    alts={[]}
   />
 );
 
@@ -261,6 +285,8 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         Flag), a 48 hour jeopardy style hacking game.
       </p>
     }
+    srcs={[]}
+    alts={[]}
   />
 );
 
@@ -309,6 +335,8 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         Join our Discord to engage with our community, and check out our website to learn more about us!
       </p>
     }
+    srcs={[]}
+    alts={[]}
   />
 );
 
@@ -341,6 +369,8 @@ const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         We uplift new designers and curious developers to learn how to think like a designer. As a growing community, we host events to teach designers to go from mapping out ideas to building innovative prototypes. We strive to allow designers to have better conversations with developers while making developers more conscious of design methods.
       </p>
     }
+    srcs={[]}
+    alts={[]}
   />
 );
 
@@ -385,6 +415,8 @@ const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         social, and professional lives.
       </p>
     }
+    srcs={[BitByte1.src, BitByte2.src, BitByte3.src, BitByte4.src]}
+    alts={['Bit Byte 1', 'Bit Byte 2', 'Bit Byte 3', 'Bit Byte 4']}
   />
 );
 
@@ -418,6 +450,8 @@ const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         Join us in inspiring the next generation of innovators and problem solvers!
       </p>
     }
+    srcs={[Outreach1.src, Outreach2.src, Outreach3.src, Outreach4.src]}
+    alts={['Outreach 1', 'Outreach 2', 'Outreach 3', 'Outreach 4']}
   />
 );
 
@@ -448,6 +482,9 @@ const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         Grow your skills in coding, design, or project management.
       </p>
     }
+
+    srcs={[]}
+    alts={[]}
   />
 );
 
@@ -479,6 +516,8 @@ const SpaceDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         full or part-time positions, and student programs.
       </p>
     }
+    srcs={[SPACE1.src, SPACE2.src, SPACE3.src, SPACE4.src]}
+    alts={['Space 1', 'Space 2', 'Space 3', 'Space 4']}
   />
 );
 

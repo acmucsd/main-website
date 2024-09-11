@@ -415,7 +415,7 @@ const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         social, and professional lives.
       </p>
     }
-    srcs={[BitByte1.src, BitByte2.src, BitByte3.src, BitByte4.src]}
+    srcs={[BitByte1.src, BitByte2.src, BitByte4.src, BitByte3.src]}
     alts={['Bit Byte 1', 'Bit Byte 2', 'Bit Byte 3', 'Bit Byte 4']}
   />
 );

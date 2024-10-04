@@ -18,7 +18,7 @@ import HackathonLogo from "public/assets/logos/hackathon.svg";
 import OutreachLogo from "public/assets/logos/reach.png";
 import ProjectsLogo from "public/assets/logos/projects.png";
 import SpaceLogo from "public/assets/logos/space.svg";
-import Link from "next/link";
+// import Link from "next/link";
 
 import CatLong from "public/assets/communities-images/cat-long.svg";
 import CatSquare from "public/assets/communities-images/cat-square.svg";
@@ -595,20 +595,16 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       <>
       <section className="community__hero">
         <div className="community__hero__toggle">
-            <Link href="">
               <h3>
                 <a className={`${activeLink === 'communities' ? 'active' : ''}`} onClick={() => handleLinkClick("communities")}>
                   Communities
                 </a>
               </h3>
-            </Link>
-            <Link href="">
               <h3>
                 <a className={`${activeLink === 'initiatives' ? 'active' : ''}`} onClick={() => handleLinkClick("initiatives")}>
                   Initiatives
                 </a>
               </h3>
-            </Link>
           </div>
           <p>
             ACM at UCSD is one large community, but it is made up of several

@@ -18,7 +18,6 @@ import HackathonLogo from "public/assets/logos/hackathon.svg";
 import OutreachLogo from "public/assets/logos/reach.png";
 import ProjectsLogo from "public/assets/logos/projects.png";
 import SpaceLogo from "public/assets/logos/space.svg";
-// import Link from "next/link";
 
 import CatLong from "public/assets/communities-images/cat-long.svg";
 import CatSquare from "public/assets/communities-images/cat-square.svg";

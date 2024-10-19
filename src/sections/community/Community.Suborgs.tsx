@@ -48,7 +48,7 @@ const CommunityImages: React.FC<{
       <img
         src={srcs[0] ?? CatLong.src}
         alt={alts[0] ?? `Half Cat 1`}
-        className="pic1"
+        className={`pic1`}
           />
       
       <img
@@ -389,7 +389,7 @@ const DesignTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (or
 const BitByteTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Bit Byte"
-    color=""
+    color="DarkMagenta"
     website="https://docs.google.com/presentation/d/1yNQmK_w2JQqOeA3MtSwN2_PQT5Q73VCcnGuW0NwzrjM/edit#slide=id.ga0ada6e7b3_0_50"
     logo={BitByteLogo.src}
     isMobile={isMobile}
@@ -422,7 +422,7 @@ const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Reach"
-    color=""
+    color="DarkGreen"
     website="https://outreach-website.vercel.app/"
     logo={OutreachLogo.src}
     isMobile={isMobile}
@@ -457,7 +457,7 @@ const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 const ProjectsTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string,}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Projects"
-    color=""
+    color="DarkSlateGrey"
     website="https://projects.acmucsd.com/"
     logo={ProjectsLogo.src}
     isMobile={isMobile}
@@ -490,7 +490,7 @@ const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string,}> = ({ isMobile, open, setSelected, glowClassName}) => (
   <CommunitiesTitle
     org="Space"
-    color=""
+    color="Indigo"
     website="https://space.acmucsd.com/"
     logo={SpaceLogo.src}
     isMobile={isMobile}

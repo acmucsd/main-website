@@ -356,36 +356,84 @@
   &__image-grid {
     display: grid;
     height: 350px;
-    width: 570px;
-    gap: 0.5rem;
-    grid-template-columns: 17% auto auto auto auto auto; 
+    width: 600px;
+    gap: 0.1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    
     // For some reason if the grid-template-columns are set to
     // auto 17% auto auto auto auto; right side doesn't expand
     // if all are auto nothing expands
     // Code reviewer if you know please explain
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 1fr 1fr;
     overflow: hidden;
     flex-grow: 2;
-    transition: 800ms ease;
+    flex-shrink: 1;
+    transition: 300ms;
+    // transition: grid-template-columns 800ms ease;
+    // transition: grid-template-rows 800ms ease;
 
     &:has(.pic1:hover) {
-      grid-template-columns: 100% 0% 0% 0% 0% 0%;
-      grid-template-rows: 100% 0%;
+      grid-template-columns: 1fr 1fr 1fr 0fr 0fr 0fr;
+      grid-template-rows: 1fr 0fr;
+      gap: 0rem;
+      
+      // .pic4 {
+      //   display: none;
+      // }
+      // .pic2 {
+      //   display: none;
+      // }
+      // .pic3 {
+      //   display: none;
+      // }
     }
 
     &:has(.pic2:hover) {
-      grid-template-columns: 0% 0% 0% 0% 0% 100%;
-      grid-template-rows: 100% 0%;
+      grid-template-columns: 0fr 0fr 0fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 0fr;
+      gap: 0rem;
+
+      // .pic1 {
+      //   display: none;
+      // }
+      // .pic4 {
+      //   display: none;
+      // }
+      // .pic3 {
+      //   display: none;
+      // }
     }
 
     &:has(.pic3:hover) {
-      grid-template-columns: 100% 0% 0% 0% 0% 0%;
-      grid-template-rows: 0% 100%;
+      grid-template-columns: 1fr 1fr 0fr 0fr 0fr 0fr;
+      grid-template-rows: 0fr 1fr;
+      gap: 0rem;
+      
+      // .pic1 {
+      //   display: none;
+      // }
+      // .pic4 {
+      //   display: none;
+      // }
+      // .pic2 {
+      //   display: none;
+      // }
     }
 
     &:has(.pic4:hover) {
-      grid-template-columns: 0% 0% 0% 0% 0% 100%;
-      grid-template-rows: 0% 100%;
+      grid-template-columns:  0fr 0fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 0fr 1fr;
+      gap: 0rem;
+
+      // .pic1 {
+      //   display: none;
+      // }
+      // .pic2 {
+      //   display: none;
+      // }
+      // .pic3 {
+      //   display: none;
+      // }
     }
 
     img {
@@ -394,6 +442,7 @@
       border-radius: 20px;
       width: 100%;
       height: 100%;
+      margin-bottom: 0;
       // background-color: #38CF6B;
       // transition: 800ms ease;
     }
@@ -402,68 +451,68 @@
       grid-column: 1 / 4;
       grid-row: 1;
 
-      &:has(~ .pic2:hover) {
-        display: none;
-      }
+      // &:has(~ .pic2:hover) {
+      //   display: none;
+      // }
       
-      &:has(~ .pic3:hover) {
-        display: none;
-      }
+      // &:has(~ .pic3:hover) {
+      //   display: none;
+      // }
 
-      &:has(~ .pic4:hover) {
-        display: none;
-      }
+      // &:has(~ .pic4:hover) {
+      //   display: none;
+      // }
     }
 
     .pic2 {
       grid-column: 4 / -1;
       grid-row: 1;
 
-      &:has(~ .pic1:hover) {
-        display: none;
-      }
+      // &:has(~ .pic1:hover) {
+      //   display: none;
+      // }
       
-      &:has(~ .pic3:hover) {
-        display: none;
-      }
+      // &:has(~ .pic3:hover) {
+      //   display: none;
+      // }
 
-      &:has(~ .pic4:hover) {
-        display: none;
-      }
+      // &:has(~ .pic4:hover) {
+      //   display: none;
+      // }
     }
 
     .pic3 {
       grid-column: 1 / 3;
       grid-row: 2;
 
-      &:has(~ .pic2:hover) {
-        display: none;
-      }
+      // &:has(~ .pic2:hover) {
+      //   display: none;
+      // }
       
-      &:has(~ .pic1:hover) {
-        display: none;
-      }
+      // &:has(~ .pic1:hover) {
+      //   display: none;
+      // }
 
-      &:has(~ .pic4:hover) {
-        display: none;
-      }
+      // &:has(~ .pic4:hover) {
+      //   display: none;
+      // }
     }
     
     .pic4 {
       grid-column: 3 / -1;
       grid-row: 2;
 
-      &:has(~ .pic2:hover) {
-        display: none;
-      }
+      // &:has(~ .pic2:hover) {
+      //   display: none;
+      // }
       
-      &:has(~ .pic3:hover) {
-        display: none;
-      }
+      // &:has(~ .pic3:hover) {
+      //   display: none;
+      // }
 
-      &:has(~ .pic1:hover) {
-        display: none;
-      }
+      // &:has(~ .pic1:hover) {
+      //   display: none;
+      // }
     }
   }
 }

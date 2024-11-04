@@ -41,7 +41,7 @@ module.exports = withPWA({
       "drive.google.com",
       "acmucsd.s3.us-west-1.amazonaws.com",
       "i.imgur.com",
-      "media.licdn.com", // Gowtham (2024-2025)
+      "media.licdn.com",
     ],
   },
   webpack(config) {

@@ -44,13 +44,21 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
     <div className={`${style.card} ${style[org]}`}>
       <div className={style.title}>{title}</div>
       <div className={style.image}>
-        <Image
-          className={!validProfileImage ? style.default : null}
-          src={profileImage}
-          alt={`Photo of ${name}`}
-          width={169}
-          height={137}
-        />
+        {validProfileImage ? (
+          <Image
+            className={style.photo}
+            src={profileImage}
+            alt={`Photo of ${name}`}
+            width={169}
+            height={137 + 16}
+          />
+        ) : (
+          <img
+            className={style.default}
+            src={profileImage}
+            alt="ACM logo"
+          />
+        )}
       </div>
       <div className={style.footer}>
         <p>{name}</p>

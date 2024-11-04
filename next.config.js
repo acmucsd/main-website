@@ -37,7 +37,12 @@ const withTypedCssModules = config => {
 module.exports = withPWA({
   reactStrictMode: true,
   images: {
-    domains: ["drive.google.com", "acmucsd.s3.us-west-1.amazonaws.com", "i.imgur.com"],
+    domains: [
+      "drive.google.com",
+      "acmucsd.s3.us-west-1.amazonaws.com",
+      "i.imgur.com",
+      "media.licdn.com", // Gowtham (2024-2025)
+    ],
   },
   webpack(config) {
     config = withTypedCssModules(config);

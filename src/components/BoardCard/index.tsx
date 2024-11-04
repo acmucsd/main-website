@@ -1,3 +1,4 @@
+import Image from "next/image";
 import style from "./styles.module.scss";
 import GeneralDefault from "public/assets/ACMWhiteLogo.png";
 import AIDefault from "public/assets/logos/acm-ai.svg";
@@ -43,10 +44,12 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
     <div className={`${style.card} ${style[org]}`}>
       <div className={style.title}>{title}</div>
       <div className={style.image}>
-        <img
+        <Image
           className={!validProfileImage ? style.default : null}
           src={profileImage}
-          alt="Board Photo"
+          alt={`Photo of ${name}`}
+          width={169}
+          height={137}
         />
       </div>
       <div className={style.footer}>

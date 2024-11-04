@@ -3,6 +3,7 @@ import style from "./styles.module.scss";
 import GeneralDefault from "public/assets/ACMWhiteLogo.png";
 import AIDefault from "public/assets/logos/acm-ai.svg";
 import CyberDefault from "public/assets/logos/acm-cyber.svg";
+import DesignDefault from "public/assets/logos/acm-design.svg";
 import HackDefault from "public/assets/logos/acm-hack.svg";
 import { BoardMemberProps } from "src/types/index";
 import { withHttp } from "src/utils/general";
@@ -26,6 +27,7 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
     general: GeneralDefault,
     ai: AIDefault,
     cyber: CyberDefault,
+    design: DesignDefault,
     hack: HackDefault,
   };
 
@@ -44,21 +46,13 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
     <div className={`${style.card} ${style[org]}`}>
       <div className={style.title}>{title}</div>
       <div className={style.image}>
-        {validProfileImage ? (
-          <Image
-            className={style.photo}
-            src={profileImage}
-            alt={`Photo of ${name}`}
-            width={169}
-            height={137 + 16}
-          />
-        ) : (
-          <img
-            className={style.default}
-            src={profileImage}
-            alt="ACM logo"
-          />
-        )}
+        <Image
+          className={validProfileImage ? style.photo : style.default}
+          src={profileImage}
+          alt={validProfileImage ? `Photo of ${name}` : "ACM logo"}
+          width={169}
+          height={137 + (validProfileImage ? 16 : 0)}
+        />
       </div>
       <div className={style.footer}>
         <p>{name}</p>

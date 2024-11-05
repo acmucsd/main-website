@@ -31,8 +31,7 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
     hack: HackDefault,
   };
 
-  const boardPictureRegex = /(jpg)|(png)|(jpeg)/gim;
-  const validProfileImage = profile_image.match(boardPictureRegex);
+  const validProfileImage = /^https?:\/\//.test(profile_image);
 
   let profileImage = profile_image;
   if (!validProfileImage) {

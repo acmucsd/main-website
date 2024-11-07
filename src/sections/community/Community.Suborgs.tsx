@@ -167,20 +167,12 @@ const CommunityComponent: React.FC<{
     
     <div className="community__sub-orgs__community-card" id={org}>
       <div className={`color_slide ${color}bg`} />
-      <div className="community__sub-orgs__community-card__content">
+      <div className={`community__sub-orgs__community-card__content${isMobile ? ' mobile':''}`}>
         {isMobile ? null : (
           <CommunityImages srcs={srcs} alts={alts}/>
-          /*<a href={website}>
-            <img
-              src={logo}
-              alt={`ACM ${org}`}
-              className="community__sub-orgs__community-card__logo"
-            />
-          </a>*/
         )}
         <div className="community__sub-orgs__community-card__content__desc-holder">
           <div className="community__sub-orgs__community-card__header">
-            {/*{!isMobile ? null :  <img src={logo} alt={`ACM ${org}`} />}*/}
             <h1 className={color}>ACM {org}</h1>
             <div className="community-links">
               {links.map((link, index) => (
@@ -192,6 +184,13 @@ const CommunityComponent: React.FC<{
           </div>
           {description}
         </div>
+
+              
+        {
+        // Mobile images go below description
+        isMobile ?  (
+          <CommunityImages srcs={srcs} alts={alts}/>
+        ) : null}
       </div>
     </div>
   );

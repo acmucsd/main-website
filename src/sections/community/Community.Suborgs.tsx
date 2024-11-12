@@ -39,7 +39,6 @@ import SPACE4 from "public/assets/communities-images/SPACE/SPACE4.jpg";
 
 
 const CommunityImages: React.FC<{
-  // links: { src: string; logo: string; alt: string }[];
   srcs: string[];
   alts: string[];
 }> = ({ srcs, alts }) => {
@@ -84,11 +83,8 @@ const CommunitiesTitle: React.FC<{
 }> = ({
   open,
   logo,
-  website,
   org,
   color,
-  isMobile,
-  glowClassName,
   setSelected,
 }) => {
 
@@ -161,10 +157,6 @@ const CommunityComponent: React.FC<{
   
 }> = ({ isMobile, color, org, website, logo, links, description, srcs, alts }) => {
   return (
-    // <>
-    //   <CommunitiesTitle open={true} logo={logo} website={website} org={org} color={color} description={description}/>
-    // </>
-    
     <div className="community__sub-orgs__community-card" id={org}>
       <div className={`color_slide ${color}bg`} />
       <div className={`community__sub-orgs__community-card__content${isMobile ? ' mobile':''}`}>
@@ -625,7 +617,6 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           </section>
           )}
       </section>
-      {/* <div className="spacer80px"></div> */}
       <section className="community__sub-orgs">
         
         {selected.toLocaleLowerCase() === "ai" ? <AICommunity isMobile={isMobile} /> : null}

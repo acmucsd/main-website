@@ -11,6 +11,7 @@ declare namespace StylesModuleScssNamespace {
     hack: string;
     image: string;
     links: string;
+    photo: string;
     title: string;
   }
 }

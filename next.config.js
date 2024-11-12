@@ -42,6 +42,7 @@ module.exports = withPWA({
       "acmucsd.s3.us-west-1.amazonaws.com",
       "i.imgur.com",
       "media.licdn.com",
+      "mojeanmac.github.io"
     ],
   },
   webpack(config) {

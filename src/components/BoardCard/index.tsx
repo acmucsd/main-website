@@ -1,7 +1,9 @@
+import Image from "next/image";
 import style from "./styles.module.scss";
 import GeneralDefault from "public/assets/ACMWhiteLogo.png";
 import AIDefault from "public/assets/logos/acm-ai.svg";
 import CyberDefault from "public/assets/logos/acm-cyber.svg";
+import DesignDefault from "public/assets/logos/acm-design.svg";
 import HackDefault from "public/assets/logos/acm-hack.svg";
 import { BoardMemberProps } from "src/types/index";
 import { withHttp } from "src/utils/general";
@@ -25,11 +27,11 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
     general: GeneralDefault,
     ai: AIDefault,
     cyber: CyberDefault,
+    design: DesignDefault,
     hack: HackDefault,
   };
 
-  const boardPictureRegex = /(jpg)|(png)|(jpeg)/gim;
-  const validProfileImage = profile_image.match(boardPictureRegex);
+  const validProfileImage = /^https?:\/\//.test(profile_image);
 
   let profileImage = profile_image;
   if (!validProfileImage) {
@@ -43,10 +45,12 @@ const BoardCard: React.FC<BoardCardProps> = ({ boardmember }) => {
     <div className={`${style.card} ${style[org]}`}>
       <div className={style.title}>{title}</div>
       <div className={style.image}>
-        <img
-          className={!validProfileImage ? style.default : null}
+        <Image
+          className={validProfileImage ? style.photo : style.default}
           src={profileImage}
-          alt="Board Photo"
+          alt={validProfileImage ? `Photo of ${name}` : "ACM logo"}
+          width={169}
+          height={137 + (validProfileImage ? 16 : 0)}
         />
       </div>
       <div className={style.footer}>

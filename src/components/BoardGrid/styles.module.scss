@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     margin: 1rem 0;
-    padding: 0 2rem;
+    padding: 0 1rem;
     p {
       margin: 0;
       padding: 0;
@@ -81,29 +81,9 @@
   }
   .grid {
     display: grid;
-    grid-template-columns: 2rem 1fr 2rem;
-    grid-template-rows: 1fr;
-    margin: 0 2rem;
-    .left {
-      height: 100%;
-      margin: 0;
-      padding: 0.5rem;
-      grid-column: 1;
-      cursor: pointer;
-    }
-    .cards {
-      grid-column: 2;
-      display: flex;
-      justify-content: center;
-      flex-flow: row wrap;
-      gap: 1rem;
-    }
-    .right {
-      height: 100%;
-      margin: 0;
-      padding: 0.5rem;
-      grid-column: 3;
-      cursor: pointer;
-    }
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, 175px);
+    justify-content: center;
+    margin: 0 1rem;
   }
 }

@@ -4,7 +4,6 @@ declare namespace StylesModuleScssNamespace {
   export interface IStylesModuleScss {
     active: string;
     ai: string;
-    cards: string;
     cyber: string;
     design: string;
     filterButtons: string;
@@ -13,8 +12,6 @@ declare namespace StylesModuleScssNamespace {
     gridFilters: string;
     gridWrapper: string;
     hack: string;
-    left: string;
-    right: string;
   }
 }
 

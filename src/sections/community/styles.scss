@@ -360,7 +360,7 @@
     display: grid;
     height: 350px;
     width: 90%;
-    gap: 0.1rem;
+    gap: 0.5 rem;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
     
     // For some reason if the grid-template-columns are set to
@@ -430,9 +430,7 @@
 
 .fullName {
   color: rgba(0, 0, 0, 0.70);
-  font-family: "DM Sans";
   font-size: 26px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
 }

@@ -148,14 +148,12 @@ const CommunityComponent: React.FC<{
   org: string;
   color: string;
   isMobile: boolean;
-  website: string;
-  logo: string;
   links: { src: string; logo: string; alt: string }[];
-  description: any; // Input is HTML
+  description: React.ReactNode; // Input is HTML
   srcs: string[];
   alts: string[];
   
-}> = ({ isMobile, color, org, website, logo, links, description, srcs, alts }) => {
+}> = ({ isMobile, color, org, links, description, srcs, alts }) => {
   return (
     <div className="community__sub-orgs__community-card" id={org}>
       <div className={`color_slide ${color}bg`} />
@@ -192,8 +190,6 @@ const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="AI"
     color="red"
-    website="https://ai.acmucsd.com/"
-    logo={AILogo.src}
     isMobile={isMobile}
     links={[
       {
@@ -247,8 +243,6 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
     org="Cyber"
     color="turquoise"
     isMobile={isMobile}
-    website="https://sdc.tf/"
-    logo={CyberLogo.src}
     links={[
       {
         src: "https://acmurl.com/cyberdiscord",
@@ -297,8 +291,6 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Hack"
     color="orange"
-    website="https://hack.acmucsd.com/"
-    logo={HackLogo.src}
     isMobile={isMobile}
     links={[
       {
@@ -347,8 +339,6 @@ const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Design"
     color="pink"
-    website="https://acmucsd.com/"
-    logo={DesignLogo.src}
     isMobile={isMobile}
     links={[]}
     description={
@@ -394,8 +384,6 @@ const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Bit Byte"
     color=""
-    website="https://docs.google.com/presentation/d/1yNQmK_w2JQqOeA3MtSwN2_PQT5Q73VCcnGuW0NwzrjM/edit#slide=id.ga0ada6e7b3_0_50"
-    logo={BitByteLogo.src}
     isMobile={isMobile}
     links={[]}
     description={
@@ -427,8 +415,6 @@ const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Reach"
     color=""
-    website="https://outreach-website.vercel.app/"
-    logo={OutreachLogo.src}
     isMobile={isMobile}
     links={[]}
     description={
@@ -462,8 +448,6 @@ const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Projects"
     color=""
-    website="https://projects.acmucsd.com/"
-    logo={ProjectsLogo.src}
     isMobile={isMobile}
     links={[]}
     description={
@@ -495,8 +479,6 @@ const SpaceDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Space"
     color=""
-    website="https://space.acmucsd.com/"
-    logo={ProjectsLogo.src}
     isMobile={isMobile}
     links={[]}
     description={

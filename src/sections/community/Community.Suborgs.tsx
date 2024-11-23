@@ -3,6 +3,7 @@ import AIDiscord from "public/assets/communities-links/ai-discord.svg";
 import AIHome from "public/assets/communities-links/ai-home.svg";
 import CyberDiscord from "public/assets/communities-links/cyber-discord.svg";
 import CyberHome from "public/assets/communities-links/cyber-home.svg";
+import PalmTree from "public/assets/communities-links/palm-tree.png";
 import HackDiscord from "public/assets/communities-links/hack-discord.svg";
 import HackHome from "public/assets/communities-links/hack-home.svg";
 import AILogoSelected from "public/assets/communities-navigation/ai-selected.svg";
@@ -264,8 +265,13 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         alt: "Cyber Discord",
       },
       {
-        src: "https://sdc.tf/",
+        src: "https://cyber.acmucsd.com/",
         logo: CyberHome.src,
+        alt: "Cyber Home",
+      },
+      {
+        src: "https://sdc.tf/",
+        logo: PalmTree.src,
         alt: "Cyber Home",
       },
     ]}

@@ -37,6 +37,8 @@ import SPACE2 from "public/assets/communities-images/SPACE/SPACE2.jpg";
 import SPACE3 from "public/assets/communities-images/SPACE/SPACE3.jpg";
 import SPACE4 from "public/assets/communities-images/SPACE/SPACE4.jpg";
 
+import Image from "next/image";
+
 
 const CommunityImages: React.FC<{
   srcs: string[];
@@ -44,29 +46,45 @@ const CommunityImages: React.FC<{
 }> = ({ srcs, alts }) => {
   return(
     <div className="community__image-grid">
-      <img
-        src={srcs[0] ?? CatLong.src}
-        alt={alts[0] ?? `Half Cat 1`}
-        className={`pic1`}
+      <div className="nextImageHolder pic1">
+        <Image
+          src={srcs[0] ?? CatLong.src}
+          alt={alts[0] ?? `Half Cat 1`}
+          // className={`pic1`}
+          layout="fill"
           />
+      </div>
       
-      <img
+      <div className="nextImageHolder pic2"
+      >
+        <Image
         src={srcs[1] ?? CatLong.src}
         alt={alts[1] ?? `Half Cat 2`}
-        className="pic2"
+        // className="pic2"
+        layout="fill"
           />
+      </div>
+      
 
-      <img
-        src={srcs[2] ?? CatSquare.src}
-        alt={alts[2] ?? `Square Cat`}
-        className="pic3"
+      <div className="nextImageHolder pic3">
+        <Image
+          src={srcs[2] ?? CatSquare.src}
+          alt={alts[2] ?? `Square Cat`}
+          // className="pic3"
+          layout="fill"
           />
+      </div>
+      
 
-      <img
-        src={srcs[3] ?? CatLong.src}
-        alt={alts[3] ?? `Super Long Cat`}
-        className="pic4"
+      <div className="nextImageHolder pic4">
+        <Image
+          src={srcs[3] ?? CatLong.src}
+          alt={alts[3] ?? `Super Long Cat`}
+          // className="pic4"
+          layout="fill"
           />
+      </div>
+      
     </div>
   );
 };
@@ -550,6 +568,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
                   selected === "hack" ? HackLogoSelected.src : HackLogo.src
                 }
                 alt="Hack Logo"
+                
               />
             </button>
             <button onClick={() => setSelected("design")}>

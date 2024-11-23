@@ -109,10 +109,8 @@
     &__community-card {
       display: flex;
       height: calc(100vh - 78px);
-      // width: 100vw;
       min-height: 564px;
       height: fit-content;
-      // padding-right: 96px;
       margin-bottom: 10px;
       gap: 2.5rem;
       justify-content: space-between;
@@ -120,7 +118,7 @@
     
 
       .color_slide {
-        // To help move the color side bar all the way to the left
+      // To help move the color side bar all the way to the left
       // 960px is the max width of the div above the <main> tag
       @media (min-width: 960px) {
         margin-left: calc(-1 * ((100vw - 960px) / 2)) !important;
@@ -225,10 +223,6 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        // Image {
-        //   height: 60px;
-        //   margin-right: 10px;
-        // }
 
         h1 {
           flex-basis: 100%;
@@ -338,15 +332,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    // margin-left: auto;
-    // margin-right: auto;
-    
-    // To help move the navigator all the way to the left, outside of normal max-width of parent
-    // 960px is the max width of the div above the <main> tag
-    // @media (min-width: 960px) {
-    //   margin-left: calc(-1 * ((80vw - 960px) / 2));
-    // }
-    
     align-items: center;
     width: 100%;
   }

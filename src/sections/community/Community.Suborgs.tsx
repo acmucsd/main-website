@@ -50,7 +50,6 @@ const CommunityImages: React.FC<{
         <Image
           src={srcs[0] ?? CatLong.src}
           alt={alts[0] ?? `Half Cat 1`}
-          // className={`pic1`}
           layout="fill"
           />
       </div>
@@ -60,7 +59,6 @@ const CommunityImages: React.FC<{
         <Image
         src={srcs[1] ?? CatLong.src}
         alt={alts[1] ?? `Half Cat 2`}
-        // className="pic2"
         layout="fill"
           />
       </div>
@@ -70,7 +68,6 @@ const CommunityImages: React.FC<{
         <Image
           src={srcs[2] ?? CatSquare.src}
           alt={alts[2] ?? `Square Cat`}
-          // className="pic3"
           layout="fill"
           />
       </div>
@@ -80,7 +77,6 @@ const CommunityImages: React.FC<{
         <Image
           src={srcs[3] ?? CatLong.src}
           alt={alts[3] ?? `Super Long Cat`}
-          // className="pic4"
           layout="fill"
           />
       </div>

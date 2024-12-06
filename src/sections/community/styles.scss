@@ -134,6 +134,7 @@
         align-items: center;
         justify-content: flex-start;
         gap: 1rem;
+        flex-direction: column;
         img {
           height: 60px;
           margin-right: 10px;
@@ -141,6 +142,8 @@
 
         h1 {
           flex-basis: 100%;
+          justify-self: flex-star;
+          align-self: flex-start;
         }
       }
       &__logo {

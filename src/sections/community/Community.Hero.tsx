@@ -18,14 +18,14 @@ const CommunityHero: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         <>
           <div className="community__hero__toggle">
               <h3>
-                <a className={`link ${activeLink === 'communities' ? 'active' : ''}`} onClick={() => handleLinkClick("communities")}>
+                <button className={`${activeLink === 'communities' ? 'active' : ''}`} onClick={() => handleLinkClick("communities")}>
                   Communities
-                </a>
+                </button>
               </h3>
               <h3>
-                <a className={`link ${activeLink === 'initiatives' ? 'active' : ''}`} onClick={() => handleLinkClick("initiatives")}>
+                <button className={`${activeLink === 'initiatives' ? 'active' : ''}`} onClick={() => handleLinkClick("initiatives")}>
                   Initiatives
-                </a>
+                </button>
               </h3>
           </div>
 

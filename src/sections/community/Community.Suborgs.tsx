@@ -3,7 +3,7 @@ import AIDiscord from "public/assets/communities-links/ai-discord.svg";
 import AIHome from "public/assets/communities-links/ai-home.svg";
 import CyberDiscord from "public/assets/communities-links/cyber-discord.svg";
 import CyberHome from "public/assets/communities-links/cyber-home.svg";
-import PalmTree from "public/assets/communities-links/palm-tree.png";
+import SDCTFIcon from "public/assets/communities-links/sdctf.svg";
 import HackDiscord from "public/assets/communities-links/hack-discord.svg";
 import HackHome from "public/assets/communities-links/hack-home.svg";
 import AILogoSelected from "public/assets/communities-navigation/ai-selected.svg";
@@ -182,7 +182,7 @@ const CommunityComponent: React.FC<{
             <div className="community-links">
               {links.map((link, index) => (
                 <a key={`${link}-${index}`} href={link.src}>
-                  <img src={link.logo} alt={link.alt} />
+                  <img src={link.logo} alt={link.alt}  />
                 </a>
               ))}
             </div>
@@ -271,7 +271,7 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
       },
       {
         src: "https://sdc.tf/",
-        logo: PalmTree.src,
+        logo: SDCTFIcon.src,
         alt: "Cyber Home",
       },
     ]}

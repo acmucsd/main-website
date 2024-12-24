@@ -32,6 +32,7 @@
         position: relative;
         color: rgba(0, 0, 0, 0.8);
         text-decoration: none;
+        cursor: pointer;
       }
     
       a.active {
@@ -244,6 +245,7 @@
         width: 194px;
         margin: 36px 0;
         margin-right: 46px;
+        cursor: pointer;
       }
 
       &__content {

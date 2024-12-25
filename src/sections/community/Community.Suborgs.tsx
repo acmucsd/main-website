@@ -39,6 +39,11 @@ import SPACE2 from "public/assets/communities-images/SPACE/SPACE2.jpg";
 import SPACE3 from "public/assets/communities-images/SPACE/SPACE3.jpg";
 import SPACE4 from "public/assets/communities-images/SPACE/SPACE4.jpg";
 
+import AI1 from "public/assets/communities-images/AI/AIOldTown.jpg";
+import AI2 from "public/assets/communities-images/AI/AIBeach.jpg";
+import AI3 from "public/assets/communities-images/AI/AIOldTown2.jpg";
+import AI4 from "public/assets/communities-images/AI/AIStudy.jpg";
+
 import Cyber1 from "public/assets/communities-images/Cyber/Cyber1.jpeg";
 import Cyber2 from "public/assets/communities-images/Cyber/Cyber2.jpeg";
 import Cyber3 from "public/assets/communities-images/Cyber/Cyber3.jpeg";
@@ -251,7 +256,7 @@ const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
       </p>
     }
 
-    srcs={[]}
+    srcs={[AI1.src, AI2.src, AI3.src, AI4.src]}
     alts={[]}
   />
 );

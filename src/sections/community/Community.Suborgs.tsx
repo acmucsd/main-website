@@ -38,6 +38,11 @@ import SPACE2 from "public/assets/communities-images/SPACE/SPACE2.jpg";
 import SPACE3 from "public/assets/communities-images/SPACE/SPACE3.jpg";
 import SPACE4 from "public/assets/communities-images/SPACE/SPACE4.jpg";
 
+import Cyber1 from "public/assets/communities-images/Cyber/Cyber1.jpeg";
+import Cyber2 from "public/assets/communities-images/Cyber/Cyber2.jpeg";
+import Cyber3 from "public/assets/communities-images/Cyber/Cyber3.jpeg";
+import Cyber4 from "public/assets/communities-images/Cyber/CyberBoardGame.jpeg";
+
 import Image from "next/image";
 
 
@@ -182,7 +187,7 @@ const CommunityComponent: React.FC<{
             <div className="community-links">
               {links.map((link, index) => (
                 <a key={`${link}-${index}`} href={link.src}>
-                  <img src={link.logo} alt={link.alt}  />
+                  <img src={link.logo} alt={link.alt} />
                 </a>
               ))}
             </div>
@@ -289,7 +294,7 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         Flag), a 48 hour jeopardy style hacking game.
       </p>
     }
-    srcs={[]}
+    srcs={[Cyber1.src, Cyber2.src, Cyber4.src, Cyber3.src]}
     alts={[]}
   />
 );

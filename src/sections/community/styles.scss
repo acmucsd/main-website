@@ -383,13 +383,16 @@
     }
 
     .nextImageHolder {
-      object-fit: cover;
       overflow: hidden;
       border-radius: 20px;
       width: 100%;
       height: 100%;
       margin-bottom: 0;
       position: relative;
+
+      img{
+        object-fit: cover;
+      }
     }
 
     .pic1 {

@@ -171,6 +171,7 @@
           justify-content: flex-start;
           height: fit-content;
           flex-grow: 1;
+          margin-right: 1rem;
           > h1 {
             font-weight: 500;
             font-size: 45px;
@@ -241,10 +242,10 @@
       }
       &__logo {
         min-width: 120px;
-        max-width: 194px;
-        width: 194px;
+        max-width: 160px;
+        width: 160px;
         margin: 36px 0;
-        margin-right: 46px;
+        margin-right: 16px;
         cursor: pointer;
       }
 
@@ -263,16 +264,15 @@
             transform: scale(1.05);
           }
         }
+        h1 {
+          font-size: 1.8rem;
+        }
         > div {
           max-width: 570px;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
           height: fit-content;
-          > h1 {
-            font-weight: 500;
-            font-size: 45px;
-          }
           > p {
             font-weight: 500;
             font-size: 18px;

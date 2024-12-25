@@ -128,7 +128,7 @@ const CommunitiesTitle: React.FC<{
       case "Hack":
         return "Software Engineering";
       case "Design":
-        return "Design";
+        return "UI and UX Design";
       case "Reach":
         return "Outreach";
       case "Space":
@@ -157,7 +157,11 @@ const CommunitiesTitle: React.FC<{
             src={logo}
             alt={`ACM ${org}`}
             className={`community__sub-orgs__logo-card__logo ${((open || hover)) ? 'glow-on-hover' : ''}`}
-            onClick={() => setSelected(org)}
+            onClick={() => {
+              setSelected(org);
+              window.location.href = `#${org}`;
+            }
+            }
             style={{'--shadow-color': color, filter: (open || hover) ? ` ${color=='' ? `` : `drop-shadow(0 0 1rem ${color})`} ` : 'none'} as React.CSSProperties}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
@@ -571,7 +575,8 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             Communities
           </h1>
           <div className="community__sub-orgs--mobile__navigation">
-            <button onClick={() => setSelected("ai")}>
+            <button 
+              onClick={() => setSelected("ai")}>
               <img
                 src={selected === "ai" ? AILogoSelected.src : AILogo.src}
                 alt="AI Logo"
@@ -643,10 +648,10 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       </section>
       <section className="community__sub-orgs">
         
-        {selected.toLocaleLowerCase() === "ai" ? <AICommunity isMobile={isMobile} /> : null}
-        {selected.toLocaleLowerCase() === "cyber" ? <CyberCommunity isMobile={isMobile} /> : null }
-        {selected.toLocaleLowerCase() === "hack" ? <HackCommunity isMobile={isMobile} /> : null}
-        {selected.toLocaleLowerCase() === "design" ? <DesignCommunity isMobile={isMobile} /> : null}
+        <AICommunity isMobile={isMobile} />
+        <CyberCommunity isMobile={isMobile} />
+        <HackCommunity isMobile={isMobile} />
+        <DesignCommunity isMobile={isMobile} />
       </section>
       
       <section className="community__sub-orgs">

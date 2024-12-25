@@ -216,6 +216,7 @@
       margin-bottom: 10px;
 
       align-items: center;
+      justify-content: center;
 
       max-width: 20%;
 
@@ -253,6 +254,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: flex-start;
         max-width: 50%;
         height: fit-content;
         overflow-wrap: break-word;
@@ -266,7 +268,10 @@
         }
         h1 {
           font-size: 1.8rem;
+          margin-bottom: 0.5rem;
+          text-align: left;
         }
+        
         > div {
           max-width: 570px;
           display: flex;

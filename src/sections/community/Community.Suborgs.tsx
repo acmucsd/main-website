@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AIDiscord from "public/assets/communities-links/ai-discord.svg";
 import AIHome from "public/assets/communities-links/ai-home.svg";
+import AIInstagram from "public/assets/communities-links/ai-instagram.svg";
 import CyberDiscord from "public/assets/communities-links/cyber-discord.svg";
 import CyberHome from "public/assets/communities-links/cyber-home.svg";
 import SDCTFIcon from "public/assets/communities-links/sdctf.svg";
@@ -42,6 +43,11 @@ import Cyber1 from "public/assets/communities-images/Cyber/Cyber1.jpeg";
 import Cyber2 from "public/assets/communities-images/Cyber/Cyber2.jpeg";
 import Cyber3 from "public/assets/communities-images/Cyber/Cyber3.jpeg";
 import Cyber4 from "public/assets/communities-images/Cyber/CyberBoardGame.jpeg";
+
+import Hack1 from "public/assets/communities-images/Hack/Hack1.jpeg";
+import Hack2 from "public/assets/communities-images/Hack/Hack2.jpeg";
+import Hack3 from "public/assets/communities-images/Hack/Hack3.png";
+import Hack4 from "public/assets/communities-images/Hack/Hack4.png";
 
 import Image from "next/image";
 
@@ -222,6 +228,11 @@ const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         logo: AIHome.src,
         alt: "AI Home",
       },
+      {
+        src: "https://www.instagram.com/acm_ai_ucsd/",
+        logo: AIInstagram.src,
+        alt: "AI Instagram",
+      }
     ]}
     description={
       <p>
@@ -294,8 +305,8 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         Flag), a 48 hour jeopardy style hacking game.
       </p>
     }
-    srcs={[Cyber1.src, Cyber2.src, Cyber4.src, Cyber3.src]}
-    alts={[]}
+    srcs={[Cyber1.src, Cyber2.src, Cyber3.src, Cyber4.src]}
+    alts={["Picture of Cyber Event, Picture of Cyber Event, Picture of Cyber Event, Picture of Cyber Members Playing Board Games"]}
   />
 );
 
@@ -342,8 +353,8 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         Join our Discord to engage with our community, and check out our website to learn more about us!
       </p>
     }
-    srcs={[]}
-    alts={[]}
+    srcs={[Hack1.src, Hack2.src, Hack3.src, Hack4.src]}
+    alts={["Picture of Hack Event", "Picture of Hack Event", "Picture of Hack Event", "Picture of Hack Event"]}
   />
 );
 

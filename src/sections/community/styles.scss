@@ -115,7 +115,7 @@
       margin-bottom: 10px;
       gap: 2.5rem;
       justify-content: space-between;
-
+      align-items: center;
     
 
       .color_slide {
@@ -129,6 +129,7 @@
         left: 0;
         min-width: 70px;
         z-index: -1;
+        align-self: stretch;
       }
       &__header {
         display: flex;
@@ -470,6 +471,7 @@
 .pinkbg {
   background-color: colors.$light-pink;
 }
+
 .spacer80px {
   height: 80px;
 }

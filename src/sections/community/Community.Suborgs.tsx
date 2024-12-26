@@ -39,6 +39,11 @@ import SPACE2 from "public/assets/communities-images/SPACE/SPACE2.jpg";
 import SPACE3 from "public/assets/communities-images/SPACE/SPACE3.jpg";
 import SPACE4 from "public/assets/communities-images/SPACE/SPACE4.jpg";
 
+import Project1 from "public/assets/communities-images/Projects/ProjectShowcase.png";
+import Project2 from "public/assets/communities-images/Projects/Project2.png";
+import Project3 from "public/assets/communities-images/Projects/Project3.png";
+import Project4 from "public/assets/communities-images/Projects/Project4.png";
+
 import AI1 from "public/assets/communities-images/AI/AIOldTown.jpg";
 import AI2 from "public/assets/communities-images/AI/AIBeach.jpg";
 import AI3 from "public/assets/communities-images/AI/AIOldTown2.jpg";
@@ -415,7 +420,7 @@ const DesignTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (or
 const BitByteTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Bit Byte"
-    color="DarkMagenta"
+    color="purple"
     website="https://docs.google.com/presentation/d/1yNQmK_w2JQqOeA3MtSwN2_PQT5Q73VCcnGuW0NwzrjM/edit#slide=id.ga0ada6e7b3_0_50"
     logo={BitByteLogo.src}
     isMobile={isMobile}
@@ -428,7 +433,7 @@ const BitByteTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (o
 const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Bit Byte"
-    color=""
+    color="purple"
     isMobile={isMobile}
     links={[]}
     description={
@@ -459,7 +464,7 @@ const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (
 const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Reach"
-    color=""
+    color="DarkGreen"
     isMobile={isMobile}
     links={[]}
     description={
@@ -479,7 +484,7 @@ const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 const ProjectsTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string,}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Projects"
-    color="DarkSlateGrey"
+    color="TODO"
     website="https://projects.acmucsd.com/"
     logo={ProjectsLogo.src}
     isMobile={isMobile}
@@ -492,7 +497,7 @@ const ProjectsTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (
 const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Projects"
-    color=""
+    color="TODO"
     isMobile={isMobile}
     links={[]}
     description={
@@ -502,7 +507,7 @@ const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
       </p>
     }
 
-    srcs={[]}
+    srcs={[Project1.src, Project2.src, Project3.src, Project4.src]}
     alts={[]}
   />
 );
@@ -510,7 +515,7 @@ const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string,}> = ({ isMobile, open, setSelected, glowClassName}) => (
   <CommunitiesTitle
     org="Space"
-    color="Indigo"
+    color="navy"
     website="https://space.acmucsd.com/"
     logo={SpaceLogo.src}
     isMobile={isMobile}
@@ -523,7 +528,7 @@ const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org
 const SpaceDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Space"
-    color=""
+    color="navy"
     isMobile={isMobile}
     links={[]}
     description={
@@ -652,15 +657,11 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         <CyberCommunity isMobile={isMobile} />
         <HackCommunity isMobile={isMobile} />
         <DesignCommunity isMobile={isMobile} />
+        <BitByteDescription isMobile={isMobile} />
+        <OutreachDescription isMobile={isMobile} />
+        <ProjectsDescription isMobile={isMobile} />
+        <SpaceDescription isMobile={isMobile} /> 
       </section>
-      
-      <section className="community__sub-orgs">
-        {selected.toLocaleLowerCase() === "bit byte" ? <BitByteDescription isMobile={isMobile} /> : null}
-        {selected.toLocaleLowerCase() === "reach" ? <OutreachDescription isMobile={isMobile} /> : null }
-        {selected.toLocaleLowerCase() === "projects" ? <ProjectsDescription isMobile={isMobile} /> : null}
-        {selected.toLocaleLowerCase() === "space" ? <SpaceDescription isMobile={isMobile} /> : null}
-      </section>
-
       </>
         
       )}

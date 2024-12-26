@@ -451,7 +451,7 @@ const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Reach"
-    color="DarkGreen"
+    color="green"
     website="https://outreach-website.vercel.app/"
     logo={OutreachLogo.src}
     isMobile={isMobile}
@@ -464,7 +464,7 @@ const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (
 const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Reach"
-    color="DarkGreen"
+    color="green"
     isMobile={isMobile}
     links={[]}
     description={
@@ -484,7 +484,7 @@ const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 const ProjectsTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string,}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Projects"
-    color="TODO"
+    color="grey"
     website="https://projects.acmucsd.com/"
     logo={ProjectsLogo.src}
     isMobile={isMobile}
@@ -497,7 +497,7 @@ const ProjectsTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (
 const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Projects"
-    color="TODO"
+    color="grey"
     isMobile={isMobile}
     links={[]}
     description={
@@ -515,7 +515,7 @@ const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string,}> = ({ isMobile, open, setSelected, glowClassName}) => (
   <CommunitiesTitle
     org="Space"
-    color="navy"
+    color="blue"
     website="https://space.acmucsd.com/"
     logo={SpaceLogo.src}
     isMobile={isMobile}
@@ -528,7 +528,7 @@ const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org
 const SpaceDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Space"
-    color="navy"
+    color="blue"
     isMobile={isMobile}
     links={[]}
     description={

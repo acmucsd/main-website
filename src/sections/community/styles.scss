@@ -471,6 +471,24 @@
 .pinkbg {
   background-color: colors.$light-pink;
 }
+.green {
+  color: colors.$green;
+}
+.greenbg {
+  background-color: colors.$green; // TOFIX: change to light-green
+}
+.blue {
+  color: colors.$blue;
+}
+.bluebg {
+  background-color: colors.$light-blue;
+}
+.grey {
+  color: colors.$dark-grey;
+}
+.greybg {
+  background-color: colors.$grey;
+}
 
 .spacer80px {
   height: 80px;

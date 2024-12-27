@@ -59,6 +59,11 @@ import Hack2 from "public/assets/communities-images/Hack/Hack2.jpeg";
 import Hack3 from "public/assets/communities-images/Hack/Hack3.png";
 import Hack4 from "public/assets/communities-images/Hack/Hack4.png";
 
+import Design1 from "public/assets/communities-images/DesignACM/Design1.jpg";
+import Design2 from "public/assets/communities-images/DesignACM/Design2.jpg";
+import Design3 from "public/assets/communities-images/DesignACM/Design3.jpg";
+import Design4 from "public/assets/communities-images/DesignACM/Design4.jpg";
+
 import Image from "next/image";
 
 
@@ -399,8 +404,8 @@ const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         We uplift new designers and curious developers to learn how to think like a designer. As a growing community, we host events to teach designers to go from mapping out ideas to building innovative prototypes. We strive to allow designers to have better conversations with developers while making developers more conscious of design methods.
       </p>
     }
-    srcs={[]}
-    alts={[]}
+    srcs={[Design1.src, Design2.src, Design3.src, Design4.src]}
+    alts={["People brainstorming designs on sticky notes", "Design presenter presenting", "Design event wide shot", "Example design project"]}
   />
 );
 

@@ -207,7 +207,7 @@ const CommunityComponent: React.FC<{
             <div className="community-links">
               {links.map((link, index) => (
                 <a key={`${link}-${index}`} href={link.src}>
-                  <img src={link.logo} alt={link.alt} />
+                  <Image src={link.logo} alt={link.alt} layout='fill' objectFit='contain' />
                 </a>
               ))}
             </div>

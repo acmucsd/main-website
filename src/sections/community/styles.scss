@@ -190,14 +190,16 @@
             flex-wrap: wrap;
             padding-top: 4px;
             width: 100%;
+            gap: 2rem;
 
             a {
               border: none;
               background-color: transparent;
               outline: none;
-              padding-right: 30px;
+              position: relative;
+              width: 40px;
+
               img {
-                width: 40px;
                 &:hover {
                   transform: scale(1.05);
                   transition: transform 0.2s;

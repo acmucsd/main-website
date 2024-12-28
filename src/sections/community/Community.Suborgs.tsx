@@ -456,7 +456,7 @@ const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Reach"
-    color="green"
+    color="outreach-green"
     website="https://outreach-website.vercel.app/"
     logo={OutreachLogo.src}
     isMobile={isMobile}
@@ -469,7 +469,7 @@ const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (
 const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Reach"
-    color="green"
+    color="outreach-green"
     isMobile={isMobile}
     links={[]}
     description={

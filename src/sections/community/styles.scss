@@ -70,6 +70,9 @@
   }
   &__sub-orgs {
     &--mobile {
+      gap: 1rem;
+      flex-direction: column;
+      display: flex;
       h1 {
         font-weight: 500;
         font-size: 40px;
@@ -158,6 +161,11 @@
         &.mobile{
           flex-direction: column;
           gap: 1rem;
+
+          [class*="__desc-holder"]{
+            flex-basis: auto;
+            background-color: red($color: #000000);
+          }
         }
         justify-content: center;
         width: 100%;
@@ -312,9 +320,9 @@
     }
 
     @media only screen and (max-width: 812px) {
-      p {
-        padding: 3em !important;
-      }
+      // p {
+      //   padding: 3em !important;
+      // }
       &__community-card {
         padding: 0 3em !important;
         .color_slide {

@@ -577,7 +577,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   return (
     <>
       {isMobile ? (
-        <section className="community__sub-orgs--mobile">
+        <>
           <h1
             className="community__sub-orgs--mobile__header"
             onClick={() => setSelected("general")}
@@ -586,13 +586,19 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
           </h1>
           <div className="community__sub-orgs--mobile__navigation">
             <button 
-              onClick={() => setSelected("ai")}>
+              onClick={() => {
+                window.location.href = "#AI";
+                setSelected("ai");
+              }}>
               <img
                 src={selected === "ai" ? AILogoSelected.src : AILogo.src}
                 alt="AI Logo"
               />
             </button>
-            <button onClick={() => setSelected("cyber")}>
+            <button onClick={() => {
+              window.location.href = "Cyber";
+              setSelected("cyber");
+            }}>
               <img
                 src={
                   selected === "cyber" ? CyberLogoSelected.src : CyberLogo.src
@@ -600,7 +606,10 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
                 alt="Cyber Logo"
               />
             </button>
-            <button onClick={() => setSelected("hack")}>
+            <button onClick={() => {
+              window.location.href = `Hack`;
+              setSelected("hack");
+            }}>
               <img
                 src={
                   selected === "hack" ? HackLogoSelected.src : HackLogo.src
@@ -609,7 +618,10 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
                 
               />
             </button>
-            <button onClick={() => setSelected("design")}>
+            <button onClick={() => {
+              window.location.href = `#Design`;
+              setSelected("design");
+            }}>
               <img
                 src={
                   selected === "design" ? DesignLogoSelected.src : DesignLogo.src
@@ -618,8 +630,18 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
               />
             </button>
           </div>
-          {communityComponents[selected]}
-        </section>
+          {/* {communityComponents[selected]} */}
+          <section className="community__sub-orgs--mobile">
+            <AICommunity isMobile={isMobile} />
+            <CyberCommunity isMobile={isMobile} />
+            <HackCommunity isMobile={isMobile} />
+            <DesignCommunity isMobile={isMobile} />
+            <BitByteDescription isMobile={isMobile} />
+            <OutreachDescription isMobile={isMobile} />
+            <ProjectsDescription isMobile={isMobile} />
+            <SpaceDescription isMobile={isMobile} /> 
+          </section>
+        </>
       ) : (
       <>
       <section className="community__hero">

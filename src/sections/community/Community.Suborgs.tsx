@@ -596,7 +596,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
               />
             </button>
             <button onClick={() => {
-              window.location.href = "Cyber";
+              window.location.href = "#Cyber";
               setSelected("cyber");
             }}>
               <img
@@ -607,7 +607,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
               />
             </button>
             <button onClick={() => {
-              window.location.href = `Hack`;
+              window.location.href = `#Hack`;
               setSelected("hack");
             }}>
               <img

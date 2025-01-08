@@ -39,6 +39,11 @@ import SPACE2 from "public/assets/communities-images/SPACE/SPACE2.jpg";
 import SPACE3 from "public/assets/communities-images/SPACE/SPACE3.jpg";
 import SPACE4 from "public/assets/communities-images/SPACE/SPACE4.jpg";
 
+import Project1 from "public/assets/communities-images/Projects/ProjectShowcase.png";
+import Project2 from "public/assets/communities-images/Projects/Project2.png";
+import Project3 from "public/assets/communities-images/Projects/Project3.png";
+import Project4 from "public/assets/communities-images/Projects/Project4.png";
+
 import AI1 from "public/assets/communities-images/AI/AIOldTown.jpg";
 import AI2 from "public/assets/communities-images/AI/AIBeach.jpg";
 import AI3 from "public/assets/communities-images/AI/AIOldTown2.jpg";
@@ -53,6 +58,11 @@ import Hack1 from "public/assets/communities-images/Hack/Hack1.jpeg";
 import Hack2 from "public/assets/communities-images/Hack/Hack2.jpeg";
 import Hack3 from "public/assets/communities-images/Hack/Hack3.png";
 import Hack4 from "public/assets/communities-images/Hack/Hack4.png";
+
+import Design1 from "public/assets/communities-images/DesignACM/Design1.jpg";
+import Design2 from "public/assets/communities-images/DesignACM/Design2.jpg";
+import Design3 from "public/assets/communities-images/DesignACM/Design3.jpg";
+import Design4 from "public/assets/communities-images/DesignACM/Design4.jpg";
 
 import Image from "next/image";
 
@@ -128,7 +138,7 @@ const CommunitiesTitle: React.FC<{
       case "Hack":
         return "Software Engineering";
       case "Design":
-        return "Design";
+        return "UI and UX Design";
       case "Reach":
         return "Outreach";
       case "Space":
@@ -157,7 +167,11 @@ const CommunitiesTitle: React.FC<{
             src={logo}
             alt={`ACM ${org}`}
             className={`community__sub-orgs__logo-card__logo ${((open || hover)) ? 'glow-on-hover' : ''}`}
-            onClick={() => setSelected(org)}
+            onClick={() => {
+              setSelected(org);
+              window.location.href = `#${org}`;
+            }
+            }
             style={{'--shadow-color': color, filter: (open || hover) ? ` ${color=='' ? `` : `drop-shadow(0 0 1rem ${color})`} ` : 'none'} as React.CSSProperties}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
@@ -198,7 +212,7 @@ const CommunityComponent: React.FC<{
             <div className="community-links">
               {links.map((link, index) => (
                 <a key={`${link}-${index}`} href={link.src}>
-                  <img src={link.logo} alt={link.alt} />
+                  <Image src={link.logo} alt={link.alt} layout='fill' objectFit='contain' />
                 </a>
               ))}
             </div>
@@ -390,8 +404,8 @@ const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         We uplift new designers and curious developers to learn how to think like a designer. As a growing community, we host events to teach designers to go from mapping out ideas to building innovative prototypes. We strive to allow designers to have better conversations with developers while making developers more conscious of design methods.
       </p>
     }
-    srcs={[]}
-    alts={[]}
+    srcs={[Design1.src, Design2.src, Design3.src, Design4.src]}
+    alts={["People brainstorming designs on sticky notes", "Design presenter presenting", "Design event wide shot", "Example design project"]}
   />
 );
 
@@ -411,7 +425,7 @@ const DesignTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (or
 const BitByteTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Bit Byte"
-    color="DarkMagenta"
+    color="purple"
     website="https://docs.google.com/presentation/d/1yNQmK_w2JQqOeA3MtSwN2_PQT5Q73VCcnGuW0NwzrjM/edit#slide=id.ga0ada6e7b3_0_50"
     logo={BitByteLogo.src}
     isMobile={isMobile}
@@ -424,7 +438,7 @@ const BitByteTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (o
 const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Bit Byte"
-    color=""
+    color="purple"
     isMobile={isMobile}
     links={[]}
     description={
@@ -442,7 +456,7 @@ const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Reach"
-    color="DarkGreen"
+    color="outreach-green"
     website="https://outreach-website.vercel.app/"
     logo={OutreachLogo.src}
     isMobile={isMobile}
@@ -455,7 +469,7 @@ const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (
 const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Reach"
-    color=""
+    color="outreach-green"
     isMobile={isMobile}
     links={[]}
     description={
@@ -475,7 +489,7 @@ const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 const ProjectsTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string,}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Projects"
-    color="DarkSlateGrey"
+    color="grey"
     website="https://projects.acmucsd.com/"
     logo={ProjectsLogo.src}
     isMobile={isMobile}
@@ -488,7 +502,7 @@ const ProjectsTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (
 const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Projects"
-    color=""
+    color="grey"
     isMobile={isMobile}
     links={[]}
     description={
@@ -498,7 +512,7 @@ const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
       </p>
     }
 
-    srcs={[]}
+    srcs={[Project1.src, Project2.src, Project3.src, Project4.src]}
     alts={[]}
   />
 );
@@ -506,7 +520,7 @@ const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string,}> = ({ isMobile, open, setSelected, glowClassName}) => (
   <CommunitiesTitle
     org="Space"
-    color="Indigo"
+    color="blue"
     website="https://space.acmucsd.com/"
     logo={SpaceLogo.src}
     isMobile={isMobile}
@@ -519,7 +533,7 @@ const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org
 const SpaceDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityComponent
     org="Space"
-    color=""
+    color="blue"
     isMobile={isMobile}
     links={[]}
     description={
@@ -563,7 +577,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   return (
     <>
       {isMobile ? (
-        <section className="community__sub-orgs--mobile">
+        <>
           <h1
             className="community__sub-orgs--mobile__header"
             onClick={() => setSelected("general")}
@@ -571,21 +585,25 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             Communities
           </h1>
           <div className="community__sub-orgs--mobile__navigation">
-            <button onClick={() => setSelected("ai")}>
+            <a 
+              href="#AI"
+              onClick={() => setSelected("ai")}>
               <img
                 src={selected === "ai" ? AILogoSelected.src : AILogo.src}
                 alt="AI Logo"
               />
-            </button>
-            <button onClick={() => setSelected("cyber")}>
+            </a>
+            <a 
+              href="#Cyber" 
+              onClick={() => setSelected("cyber")}>
               <img
                 src={
                   selected === "cyber" ? CyberLogoSelected.src : CyberLogo.src
                 }
                 alt="Cyber Logo"
               />
-            </button>
-            <button onClick={() => setSelected("hack")}>
+            </a>
+            <a href="#Hack" onClick={() => setSelected("hack")}>
               <img
                 src={
                   selected === "hack" ? HackLogoSelected.src : HackLogo.src
@@ -593,18 +611,27 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
                 alt="Hack Logo"
                 
               />
-            </button>
-            <button onClick={() => setSelected("design")}>
+            </a>
+            <a href="#Design" onClick={() =>setSelected("design")}>
               <img
                 src={
                   selected === "design" ? DesignLogoSelected.src : DesignLogo.src
                 }
                 alt="Design Logo"
               />
-            </button>
+            </a>
           </div>
-          {communityComponents[selected]}
-        </section>
+          <section className="community__sub-orgs--mobile">
+            <AICommunity isMobile={isMobile} />
+            <CyberCommunity isMobile={isMobile} />
+            <HackCommunity isMobile={isMobile} />
+            <DesignCommunity isMobile={isMobile} />
+            <BitByteDescription isMobile={isMobile} />
+            <OutreachDescription isMobile={isMobile} />
+            <ProjectsDescription isMobile={isMobile} />
+            <SpaceDescription isMobile={isMobile} /> 
+          </section>
+        </>
       ) : (
       <>
       <section className="community__hero">
@@ -643,19 +670,15 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       </section>
       <section className="community__sub-orgs">
         
-        {selected.toLocaleLowerCase() === "ai" ? <AICommunity isMobile={isMobile} /> : null}
-        {selected.toLocaleLowerCase() === "cyber" ? <CyberCommunity isMobile={isMobile} /> : null }
-        {selected.toLocaleLowerCase() === "hack" ? <HackCommunity isMobile={isMobile} /> : null}
-        {selected.toLocaleLowerCase() === "design" ? <DesignCommunity isMobile={isMobile} /> : null}
+        <AICommunity isMobile={isMobile} />
+        <CyberCommunity isMobile={isMobile} />
+        <HackCommunity isMobile={isMobile} />
+        <DesignCommunity isMobile={isMobile} />
+        <BitByteDescription isMobile={isMobile} />
+        <OutreachDescription isMobile={isMobile} />
+        <ProjectsDescription isMobile={isMobile} />
+        <SpaceDescription isMobile={isMobile} /> 
       </section>
-      
-      <section className="community__sub-orgs">
-        {selected.toLocaleLowerCase() === "bit byte" ? <BitByteDescription isMobile={isMobile} /> : null}
-        {selected.toLocaleLowerCase() === "reach" ? <OutreachDescription isMobile={isMobile} /> : null }
-        {selected.toLocaleLowerCase() === "projects" ? <ProjectsDescription isMobile={isMobile} /> : null}
-        {selected.toLocaleLowerCase() === "space" ? <SpaceDescription isMobile={isMobile} /> : null}
-      </section>
-
       </>
         
       )}

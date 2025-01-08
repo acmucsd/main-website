@@ -585,31 +585,25 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             Communities
           </h1>
           <div className="community__sub-orgs--mobile__navigation">
-            <button 
-              onClick={() => {
-                window.location.href = "#AI";
-                setSelected("ai");
-              }}>
+            <a 
+              href="#AI"
+              onClick={() => setSelected("ai")}>
               <img
                 src={selected === "ai" ? AILogoSelected.src : AILogo.src}
                 alt="AI Logo"
               />
-            </button>
-            <button onClick={() => {
-              window.location.href = "#Cyber";
-              setSelected("cyber");
-            }}>
+            </a>
+            <a 
+              href="#Cyber" 
+              onClick={() => setSelected("cyber")}>
               <img
                 src={
                   selected === "cyber" ? CyberLogoSelected.src : CyberLogo.src
                 }
                 alt="Cyber Logo"
               />
-            </button>
-            <button onClick={() => {
-              window.location.href = `#Hack`;
-              setSelected("hack");
-            }}>
+            </a>
+            <a href="#Hack" onClick={() => setSelected("hack")}>
               <img
                 src={
                   selected === "hack" ? HackLogoSelected.src : HackLogo.src
@@ -617,20 +611,16 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
                 alt="Hack Logo"
                 
               />
-            </button>
-            <button onClick={() => {
-              window.location.href = `#Design`;
-              setSelected("design");
-            }}>
+            </a>
+            <a href="#Design" onClick={() =>setSelected("design")}>
               <img
                 src={
                   selected === "design" ? DesignLogoSelected.src : DesignLogo.src
                 }
                 alt="Design Logo"
               />
-            </button>
+            </a>
           </div>
-          {/* {communityComponents[selected]} */}
           <section className="community__sub-orgs--mobile">
             <AICommunity isMobile={isMobile} />
             <CyberCommunity isMobile={isMobile} />

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import styles from "./Suborgs.module.scss";
+
 import AIDiscord from "public/assets/communities-links/ai-discord.svg";
 import AIHome from "public/assets/communities-links/ai-home.svg";
 import AIInstagram from "public/assets/communities-links/ai-instagram.svg";
@@ -71,8 +73,8 @@ const CommunityImages: React.FC<{
   alts: string[];
 }> = ({ srcs, alts }) => {
   return (
-    <div className="community__image-grid">
-      <div className="nextImageHolder pic1">
+    <div className={styles.imageGrid}>
+      <div className={`${styles.nextImageHolder} ${styles.pic1}`}>
         <Image
           src={srcs[0] ?? CatLong.src}
           alt={alts[0] ?? `Half Cat 1`}
@@ -80,7 +82,7 @@ const CommunityImages: React.FC<{
         />
       </div>
 
-      <div className="nextImageHolder pic2">
+      <div className={`${styles.nextImageHolder} ${styles.pic2}`}>
         <Image
           src={srcs[1] ?? CatLong.src}
           alt={alts[1] ?? `Half Cat 2`}
@@ -88,7 +90,7 @@ const CommunityImages: React.FC<{
         />
       </div>
 
-      <div className="nextImageHolder pic3">
+      <div className={`${styles.nextImageHolder} ${styles.pic3}`}>
         <Image
           src={srcs[2] ?? CatSquare.src}
           alt={alts[2] ?? `Square Cat`}
@@ -96,7 +98,7 @@ const CommunityImages: React.FC<{
         />
       </div>
 
-      <div className="nextImageHolder pic4">
+      <div className={`${styles.nextImageHolder} ${styles.pic4}`}>
         <Image
           src={srcs[3] ?? CatLong.src}
           alt={alts[3] ?? `Super Long Cat`}
@@ -150,12 +152,12 @@ const CommunitiesTitle: React.FC<{
 
   return (
     <>
-      <div className="community__sub-orgs__logo-card" data-open={open}>
+      <div className={styles.logoCard} data-open={open}>
         <img
           src={logo}
           alt={`ACM ${org}`}
-          className={`community__sub-orgs__logo-card__logo ${
-            open || hover ? "glow-on-hover" : ""
+          className={`${styles.logo} ${
+            open || hover ? styles.glowOnHover : ""
           }`}
           onClick={() => {
             setSelected(org);
@@ -176,9 +178,9 @@ const CommunitiesTitle: React.FC<{
         />
 
         {open ? (
-          <div className="community__sub-orgs__logo-card__content">
-            <h1 className={color}>ACM {org}</h1>
-            <h2 className="fullName">{getFullName(org)}</h2>
+          <div className={styles.content}>
+            <h1 className={styles[color]}>ACM {org}</h1>
+            <h2 className={styles.fullName}>{getFullName(org)}</h2>
           </div>
         ) : null}
       </div>
@@ -196,18 +198,14 @@ const CommunityComponent: React.FC<{
   alts: string[];
 }> = ({ isMobile, color, org, links, description, srcs, alts }) => {
   return (
-    <div className="community__sub-orgs__community-card" id={org}>
-      <div className={`color_slide ${color}bg`} />
-      <div
-        className={`community__sub-orgs__community-card__content${
-          isMobile ? " mobile" : ""
-        }`}
-      >
+    <div className={styles.communityCard} id={org}>
+      <div className={`${styles.colorSlide} ${styles[`${color}bg`]}`} />
+      <div className={`${styles.content} ${isMobile ? styles.mobile : ""}`}>
         {isMobile ? null : <CommunityImages srcs={srcs} alts={alts} />}
-        <div className="community__sub-orgs__community-card__content__desc-holder">
-          <div className="community__sub-orgs__community-card__header">
-            <h1 className={color}>ACM {org}</h1>
-            <div className="community-links">
+        <div className={styles.descHolder}>
+          <div className={styles.header}>
+            <h1 className={styles[color]}>ACM {org}</h1>
+            <div className={styles.communityLinks}>
               {links.map((link, index) => (
                 <a key={`${link}-${index}`} href={link.src}>
                   <Image
@@ -624,7 +622,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
     hack: <HackCommunity isMobile={isMobile} />,
     design: <DesignCommunity isMobile={isMobile} />,
     general: (
-      <div className="community__sub-orgs--mobile__description">
+      <div className={styles.description}>
         <p>
           ACM at UCSD is one large community, but it is made up of several
           smaller communities focused on specific areas of technology.
@@ -635,20 +633,17 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   };
 
   const titleClassName = `link ${
-    activeLink === "initiatives" ? "glow-on-hover" : ""
+    activeLink === "initiatives" ? styles.glowOnHover : ""
   }`;
 
   return (
     <>
       {isMobile ? (
         <>
-          <h1
-            className="community__sub-orgs--mobile__header"
-            onClick={() => setSelected("general")}
-          >
+          <h1 className={styles.header} onClick={() => setSelected("general")}>
             Communities
           </h1>
-          <div className="community__sub-orgs--mobile__navigation">
+          <div className={styles.navigation}>
             <a href="#AI" onClick={() => setSelected("ai")}>
               <img
                 src={selected === "ai" ? AILogoSelected.src : AILogo.src}
@@ -680,7 +675,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
               />
             </a>
           </div>
-          <section className="community__sub-orgs--mobile">
+          <section className={styles.mobile}>
             <AICommunity isMobile={isMobile} />
             <CyberCommunity isMobile={isMobile} />
             <HackCommunity isMobile={isMobile} />
@@ -693,11 +688,13 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         </>
       ) : (
         <>
-          <section className="community__hero">
-            <div className="community__hero__toggle">
+          <section className={styles.hero}>
+            <div className={styles.toggle}>
               <h3>
                 <a
-                  className={`${activeLink === "communities" ? "active" : ""}`}
+                  className={`${
+                    activeLink === "communities" ? styles.active : ""
+                  }`}
                   onClick={() => handleLinkClick("communities")}
                 >
                   Communities
@@ -705,7 +702,9 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
               </h3>
               <h3>
                 <a
-                  className={`${activeLink === "initiatives" ? "active" : ""}`}
+                  className={`${
+                    activeLink === "initiatives" ? styles.active : ""
+                  }`}
                   onClick={() => handleLinkClick("initiatives")}
                 >
                   Initiatives
@@ -717,7 +716,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
               smaller communities focused on specific areas of technology.
             </p>
             {activeLink === "communities" && (
-              <section className="community__navigator">
+              <section className={styles.navigator}>
                 <AITitle
                   glowClassName=""
                   isMobile={isMobile}
@@ -745,7 +744,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
               </section>
             )}
             {activeLink === "initiatives" && (
-              <section className="community__navigator">
+              <section className={styles.navigator}>
                 <BitByteTitle
                   glowClassName={titleClassName}
                   isMobile={isMobile}
@@ -773,7 +772,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
               </section>
             )}
           </section>
-          <section className="community__sub-orgs">
+          <section className={styles.subOrgs}>
             <AICommunity isMobile={isMobile} />
             <CyberCommunity isMobile={isMobile} />
             <HackCommunity isMobile={isMobile} />

@@ -15,6 +15,7 @@ const CommunityImages: React.FC<{
           src={srcs[0] ?? CatLong.src}
           alt={alts[0] ?? `Half Cat 1`}
           layout="fill"
+          sizes="(max-width: 812px) 100vw, 450px"
         />
       </div>
 
@@ -23,6 +24,7 @@ const CommunityImages: React.FC<{
           src={srcs[1] ?? CatLong.src}
           alt={alts[1] ?? `Half Cat 2`}
           layout="fill"
+          sizes="(max-width: 812px) 100vw, 450px"
         />
       </div>
 
@@ -31,6 +33,7 @@ const CommunityImages: React.FC<{
           src={srcs[2] ?? CatSquare.src}
           alt={alts[2] ?? `Square Cat`}
           layout="fill"
+          sizes="(max-width: 812px) 100vw, 450px"
         />
       </div>
 
@@ -39,6 +42,7 @@ const CommunityImages: React.FC<{
           src={srcs[3] ?? CatLong.src}
           alt={alts[3] ?? `Super Long Cat`}
           layout="fill"
+          sizes="(max-width: 812px) 100vw, 450px"
         />
       </div>
     </div>

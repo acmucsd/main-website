@@ -9,7 +9,6 @@ declare namespace CommunityDescriptionModuleScssNamespace {
     descHolder: string;
     header: string;
     logo: string;
-    mobile: string;
   }
 }
 

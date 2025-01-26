@@ -493,61 +493,64 @@ const CommunitySubOrgs: React.FC = () => {
 
   return (
     <>
-      <CommunityNavbar
-        communities={
-          <>
-            <AITitle
-              glowClassName=""
-              open={selected.toLocaleLowerCase() === "ai"}
-              setSelected={setSelected}
-            />
-            <CyberTitle
-              glowClassName=""
-              open={selected.toLocaleLowerCase() === "cyber"}
-              setSelected={setSelected}
-            />
-            <HackTitle
-              glowClassName=""
-              open={selected.toLocaleLowerCase() === "hack"}
-              setSelected={setSelected}
-            />
-            <DesignTitle
-              glowClassName=""
-              open={selected.toLocaleLowerCase() === "design"}
-              setSelected={setSelected}
-            />
-          </>
-        }
-        initiatives={
-          <>
-            <BitByteTitle
-              glowClassName={styles.glowOnHover}
-              open={selected.toLocaleLowerCase() === "bit byte"}
-              setSelected={setSelected}
-            />
-            <OutreachTitle
-              glowClassName={styles.glowOnHover}
-              open={selected.toLocaleLowerCase() === "reach"}
-              setSelected={setSelected}
-            />
-            <ProjectsTitle
-              glowClassName={styles.glowOnHover}
-              open={selected.toLocaleLowerCase() === "projects"}
-              setSelected={setSelected}
-            />
-            <SpaceTitle
-              glowClassName={styles.glowOnHover}
-              open={selected.toLocaleLowerCase() === "space"}
-              setSelected={setSelected}
-            />
-          </>
-        }
-      />
-      <section className={styles.subOrgs}>
+      <h1 className={styles.title}>
+        Explore <strong>ACM</strong>
+      </h1>
+      <nav className={styles.sectionNav}>
+        <a href="#communities">Communities</a>
+        <a href="#initiatives">Initiatives</a>
+      </nav>
+      <section id="communities">
+        <nav className={styles.subOrgNav}>
+          <AITitle
+            glowClassName=""
+            open={selected.toLocaleLowerCase() === "ai"}
+            setSelected={setSelected}
+          />
+          <CyberTitle
+            glowClassName=""
+            open={selected.toLocaleLowerCase() === "cyber"}
+            setSelected={setSelected}
+          />
+          <HackTitle
+            glowClassName=""
+            open={selected.toLocaleLowerCase() === "hack"}
+            setSelected={setSelected}
+          />
+          <DesignTitle
+            glowClassName=""
+            open={selected.toLocaleLowerCase() === "design"}
+            setSelected={setSelected}
+          />
+        </nav>
         <AICommunity />
         <CyberCommunity />
         <HackCommunity />
         <DesignCommunity />
+      </section>
+      <section id="initiatives">
+        <nav className={styles.subOrgNav}>
+          <BitByteTitle
+            glowClassName={styles.glowOnHover}
+            open={selected.toLocaleLowerCase() === "bit byte"}
+            setSelected={setSelected}
+          />
+          <OutreachTitle
+            glowClassName={styles.glowOnHover}
+            open={selected.toLocaleLowerCase() === "reach"}
+            setSelected={setSelected}
+          />
+          <ProjectsTitle
+            glowClassName={styles.glowOnHover}
+            open={selected.toLocaleLowerCase() === "projects"}
+            setSelected={setSelected}
+          />
+          <SpaceTitle
+            glowClassName={styles.glowOnHover}
+            open={selected.toLocaleLowerCase() === "space"}
+            setSelected={setSelected}
+          />
+        </nav>
         <BitByteDescription />
         <OutreachDescription />
         <ProjectsDescription />

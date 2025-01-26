@@ -15,14 +15,14 @@
     font-size: 18px;
     width: 100%;
 
-    height: 78px;
+    height: 4.875rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     // left side of navbar is just the acm logo
     .left {
-      height: 78px;
+      height: 4.875rem;
       padding-top: 9px;
       padding-bottom: 9px;
       margin-left: 32px;
@@ -165,8 +165,8 @@
   // rainbow bar is always visible below navbar, positioned to be at the bottom of the container even when mobile slides out and height changes
   .rainbow {
     width: 100vw;
-    height: 0.4em;
-    bottom: -0.4em;
+    height: 0.4rem;
+    bottom: -0.4rem;
     background: linear-gradient(
       270deg,
       colors.$red 0%,

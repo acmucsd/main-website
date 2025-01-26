@@ -1,9 +1,14 @@
 .imageGrid {
+  flex: 1 0 0;
   display: grid;
   height: 350px;
   width: 90%;
   gap: 0.5rem;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  @media only screen and (max-width: 812px) {
+    flex: none;
+  }
 
   // For some reason if the grid-template-columns are set to
   // auto 17% auto auto auto auto; right side doesn't expand
@@ -11,8 +16,6 @@
   // Code reviewer if you know please explain
   grid-template-rows: 1fr 1fr;
   overflow: hidden;
-  flex-grow: 2;
-  flex-shrink: 1;
   transition: 300ms;
 
   &:has(.pic1:hover) {

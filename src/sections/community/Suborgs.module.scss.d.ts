@@ -5,23 +5,21 @@ declare namespace SuborgsModuleScssNamespace {
     blue: string;
     communityLinks: string;
     content: string;
-    description: string;
     fullName: string;
     glowOnHover: string;
     grey: string;
     header: string;
     logo: string;
     logoCard: string;
-    mobile: string;
-    navigation: string;
     orange: string;
     outreachGreen: string;
     pink: string;
     purple: string;
     red: string;
-    selected: string;
+    sectionNav: string;
     spacer80px: string;
-    subOrgs: string;
+    subOrgNav: string;
+    title: string;
     turquoise: string;
     yellow: string;
   }

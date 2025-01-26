@@ -64,73 +64,17 @@ import Design3 from "public/assets/communities-images/DesignACM/Design3.jpg";
 import Design4 from "public/assets/communities-images/DesignACM/Design4.jpg";
 
 import CommunityDescription from "./CommunityDescription";
-import CommunityNavbar from "./CommunityNavbar";
 
 const CommunitiesTitle: React.FC<{
-  open?: boolean;
-  org: string;
-  color: string;
-  logo: string;
-  website: string;
-  glowClassName: string;
-  setSelected: (org: string) => void;
-}> = ({ open, logo, org, color, setSelected }) => {
-  const getFullName = (org: string) => {
-    switch (org) {
-      case "AI":
-        return "Artificial Intelligence";
-      case "Cyber":
-        return "Cyber Security";
-      case "Hack":
-        return "Software Engineering";
-      case "Design":
-        return "UI and UX Design";
-      case "Reach":
-        return "Outreach";
-      case "Space":
-        return "Space Career Fair";
-      default:
-        return org;
-    }
-  };
-
-  const [hover, setHover] = useState(false);
-
+  logo: StaticImageData;
+  label: string;
+  id: string;
+}> = ({ logo, label, id }) => {
   return (
-    <>
-      <div className={styles.logoCard} data-open={open}>
-        <img
-          src={logo}
-          alt={`ACM ${org}`}
-          className={`${styles.logo} ${
-            open || hover ? styles.glowOnHover : ""
-          }`}
-          onClick={() => {
-            setSelected(org);
-            window.location.href = `#${org}`;
-          }}
-          style={
-            {
-              "--shadow-color": color,
-              filter:
-                open || hover
-                  ? ` ${color == "" ? `` : `drop-shadow(0 0 1rem ${color})`} `
-                  : "none",
-            } as React.CSSProperties
-          }
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-          data-glow={open || hover}
-        />
-
-        {open ? (
-          <div className={styles.content}>
-            <h1 className={styles[color]}>ACM {org}</h1>
-            <h2 className={styles.fullName}>{getFullName(org)}</h2>
-          </div>
-        ) : null}
-      </div>
-    </>
+    <a href={`#${id}`} className={styles.logoCard}>
+      <img src={logo.src} alt="" aria-hidden className={styles.logoHover} />
+      <img src={logo.src} alt={label} className={styles.logo} />
+    </a>
   );
 };
 
@@ -176,22 +120,6 @@ const AICommunity: React.FC = () => (
   />
 );
 
-const AITitle: React.FC<{
-  open?: boolean;
-  setSelected: (org: string) => void;
-  glowClassName: string;
-}> = ({ open, setSelected, glowClassName }) => (
-  <CommunitiesTitle
-    org="AI"
-    color="red"
-    website="https://ai.acmucsd.com/"
-    logo={AILogo.src}
-    open={open}
-    setSelected={setSelected}
-    glowClassName=""
-  />
-);
-
 const CyberCommunity: React.FC = () => (
   <CommunityDescription
     org="Cyber"
@@ -231,22 +159,6 @@ const CyberCommunity: React.FC = () => (
     alts={[
       "Picture of Cyber Event, Picture of Cyber Event, Picture of Cyber Event, Picture of Cyber Members Playing Board Games",
     ]}
-  />
-);
-
-const CyberTitle: React.FC<{
-  open?: boolean;
-  setSelected: (org: string) => void;
-  glowClassName: string;
-}> = ({ open, setSelected, glowClassName }) => (
-  <CommunitiesTitle
-    org="Cyber"
-    color="turquoise"
-    website="https://sdc.tf/"
-    logo={CyberLogo.src}
-    open={open}
-    setSelected={setSelected}
-    glowClassName={glowClassName}
   />
 );
 
@@ -293,22 +205,6 @@ const HackCommunity: React.FC = () => (
   />
 );
 
-const HackTitle: React.FC<{
-  open?: boolean;
-  setSelected: (org: string) => void;
-  glowClassName: string;
-}> = ({ open, setSelected, glowClassName }) => (
-  <CommunitiesTitle
-    org="Hack"
-    color="orange"
-    website="https://hack.acmucsd.com/"
-    logo={HackLogo.src}
-    open={open}
-    setSelected={setSelected}
-    glowClassName={glowClassName}
-  />
-);
-
 const DesignCommunity: React.FC = () => (
   <CommunityDescription
     org="Design"
@@ -338,38 +234,6 @@ const DesignCommunity: React.FC = () => (
   />
 );
 
-const DesignTitle: React.FC<{
-  open?: boolean;
-  setSelected: (org: string) => void;
-  glowClassName: string;
-}> = ({ open, setSelected, glowClassName }) => (
-  <CommunitiesTitle
-    org="Design"
-    color="pink"
-    website="https://acmucsd.com/"
-    logo={DesignLogo.src}
-    open={open}
-    setSelected={setSelected}
-    glowClassName={glowClassName}
-  />
-);
-
-const BitByteTitle: React.FC<{
-  open?: boolean;
-  setSelected: (org: string) => void;
-  glowClassName: string;
-}> = ({ open, setSelected, glowClassName }) => (
-  <CommunitiesTitle
-    org="Bit Byte"
-    color="purple"
-    website="https://docs.google.com/presentation/d/1yNQmK_w2JQqOeA3MtSwN2_PQT5Q73VCcnGuW0NwzrjM/edit#slide=id.ga0ada6e7b3_0_50"
-    logo={BitByteLogo.src}
-    open={open}
-    setSelected={setSelected}
-    glowClassName={glowClassName}
-  />
-);
-
 const BitByteDescription: React.FC = () => (
   <CommunityDescription
     org="Bit Byte"
@@ -384,22 +248,6 @@ const BitByteDescription: React.FC = () => (
     }
     srcs={[BitByte1.src, BitByte2.src, BitByte4.src, BitByte3.src]}
     alts={["Bit Byte 1", "Bit Byte 2", "Bit Byte 3", "Bit Byte 4"]}
-  />
-);
-
-const OutreachTitle: React.FC<{
-  open?: boolean;
-  setSelected: (org: string) => void;
-  glowClassName: string;
-}> = ({ open, setSelected, glowClassName }) => (
-  <CommunitiesTitle
-    org="Reach"
-    color="outreachGreen"
-    website="https://outreach-website.vercel.app/"
-    logo={OutreachLogo.src}
-    open={open}
-    setSelected={setSelected}
-    glowClassName={glowClassName}
   />
 );
 
@@ -423,22 +271,6 @@ const OutreachDescription: React.FC = () => (
   />
 );
 
-const ProjectsTitle: React.FC<{
-  open?: boolean;
-  setSelected: (org: string) => void;
-  glowClassName: string;
-}> = ({ open, setSelected, glowClassName }) => (
-  <CommunitiesTitle
-    org="Projects"
-    color="grey"
-    website="https://projects.acmucsd.com/"
-    logo={ProjectsLogo.src}
-    open={open}
-    setSelected={setSelected}
-    glowClassName={glowClassName}
-  />
-);
-
 const ProjectsDescription: React.FC = () => (
   <CommunityDescription
     org="Projects"
@@ -452,22 +284,6 @@ const ProjectsDescription: React.FC = () => (
     }
     srcs={[Project1.src, Project2.src, Project3.src, Project4.src]}
     alts={[]}
-  />
-);
-
-const SpaceTitle: React.FC<{
-  open?: boolean;
-  setSelected: (org: string) => void;
-  glowClassName: string;
-}> = ({ open, setSelected, glowClassName }) => (
-  <CommunitiesTitle
-    org="Space"
-    color="blue"
-    website="https://space.acmucsd.com/"
-    logo={SpaceLogo.src}
-    open={open}
-    setSelected={setSelected}
-    glowClassName={glowClassName}
   />
 );
 
@@ -502,26 +318,10 @@ const CommunitySubOrgs: React.FC = () => {
       </nav>
       <section id="communities">
         <nav className={styles.subOrgNav}>
-          <AITitle
-            glowClassName=""
-            open={selected.toLocaleLowerCase() === "ai"}
-            setSelected={setSelected}
-          />
-          <CyberTitle
-            glowClassName=""
-            open={selected.toLocaleLowerCase() === "cyber"}
-            setSelected={setSelected}
-          />
-          <HackTitle
-            glowClassName=""
-            open={selected.toLocaleLowerCase() === "hack"}
-            setSelected={setSelected}
-          />
-          <DesignTitle
-            glowClassName=""
-            open={selected.toLocaleLowerCase() === "design"}
-            setSelected={setSelected}
-          />
+          <CommunitiesTitle id="ai" label="ACM AI" logo={AILogo} />
+          <CommunitiesTitle id="cyber" label="ACM Cyber" logo={CyberLogo} />
+          <CommunitiesTitle id="hack" label="ACM Hack" logo={HackLogo} />
+          <CommunitiesTitle id="design" label="ACM Design" logo={DesignLogo} />
         </nav>
         <AICommunity />
         <CyberCommunity />
@@ -530,26 +330,18 @@ const CommunitySubOrgs: React.FC = () => {
       </section>
       <section id="initiatives">
         <nav className={styles.subOrgNav}>
-          <BitByteTitle
-            glowClassName={styles.glowOnHover}
-            open={selected.toLocaleLowerCase() === "bit byte"}
-            setSelected={setSelected}
+          <CommunitiesTitle id="bitbyte" label="Bit Byte" logo={BitByteLogo} />
+          <CommunitiesTitle
+            id="outreach"
+            label="ACM Outreach"
+            logo={OutreachLogo}
           />
-          <OutreachTitle
-            glowClassName={styles.glowOnHover}
-            open={selected.toLocaleLowerCase() === "reach"}
-            setSelected={setSelected}
+          <CommunitiesTitle
+            id="projects"
+            label="ACM Projects"
+            logo={ProjectsLogo}
           />
-          <ProjectsTitle
-            glowClassName={styles.glowOnHover}
-            open={selected.toLocaleLowerCase() === "projects"}
-            setSelected={setSelected}
-          />
-          <SpaceTitle
-            glowClassName={styles.glowOnHover}
-            open={selected.toLocaleLowerCase() === "space"}
-            setSelected={setSelected}
-          />
+          <CommunitiesTitle id="space" label="Space" logo={SpaceLogo} />
         </nav>
         <BitByteDescription />
         <OutreachDescription />

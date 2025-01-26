@@ -12,7 +12,6 @@ const CommunityDescription: React.FC<{
 }> = ({ colorClass, org, links, description, srcs, alts }) => {
   return (
     <div className={`${styles.communityCard} ${colorClass}`} id={org}>
-      <div className={styles.colorSlide} />
       <div className={`${styles.content}`}>
         <div className={styles.descHolder}>
           <div className={styles.header}>

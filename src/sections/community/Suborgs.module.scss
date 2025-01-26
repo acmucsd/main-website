@@ -8,14 +8,13 @@
 }
 
 .sectionNav {
-  background-color: white;
   position: sticky;
   top: 5.275rem;
   height: 4rem;
+  margin-bottom: -8rem;
   z-index: 2;
   display: flex;
   justify-content: center;
-  gap: 2rem;
 
   a {
     display: flex;
@@ -23,109 +22,43 @@
     color: inherit;
     text-decoration: none;
     font-size: 1.5rem;
-    padding: 0 1.5rem;
+    padding: 0 1.2rem;
   }
 }
 
 .subOrgNav {
-  background-color: white;
   position: sticky;
-  top: 9.275rem;
+  top: 5.275rem;
+  margin: 4rem 0;
+  padding-top: 4rem;
+  background-image: linear-gradient(to bottom, white 75%, transparent 100%);
   z-index: 1;
   display: flex;
   justify-content: center;
   gap: 1rem;
-}
 
-.logoCard {
-  display: flex;
-  height: fit-content;
-  margin-bottom: 10px;
+  .logoCard {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    position: relative;
 
-  align-items: center;
-  justify-content: center;
-
-  max-width: 20%;
-
-  &[data-open="true"] {
-    flex-grow: 1;
-    max-width: 40%;
-  }
-
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    h1 {
-      flex-basis: 100%;
+    .logo,
+    .logoHover {
+      width: 100%;
+      height: 100%;
     }
-  }
-
-  .logo {
-    min-width: 120px;
-    max-width: 160px;
-    width: 160px;
-    margin: 36px 0;
-    margin-right: 16px;
-    cursor: pointer;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 50%;
-    height: fit-content;
-    overflow-wrap: break-word;
-    > a {
-      display: flex;
-      justify-content: center;
-      &:hover img {
-        transition: transform 0.2s;
-        transform: scale(1.05);
-      }
+    .logoHover {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      filter: blur(0.5rem);
+      transition: opacity 0.2s;
+      z-index: -1;
     }
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-      text-align: left;
-      color: var(--main-color);
-    }
-
-    > div {
-      max-width: 570px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      height: fit-content;
-      > p {
-        font-weight: 500;
-        font-size: 18px;
-        margin-bottom: 30px;
-      }
-      .communityLinks {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        padding-top: 4px;
-        width: 100%;
-
-        a {
-          border: none;
-          background-color: transparent;
-          padding-right: 30px;
-          img {
-            width: 40px;
-            &:hover {
-              transform: scale(1.05);
-            }
-          }
-        }
-      }
+    &:hover .logoHover {
+      opacity: 1;
     }
   }
 }
@@ -138,39 +71,30 @@
 }
 .red {
   --main-color: #{colors.$red};
-  --side-color: #{colors.$light-red};
 }
 .orange {
   --main-color: #{colors.$orange};
-  --side-color: #{colors.$light-orange};
 }
 .turquoise {
   --main-color: #{colors.$turquoise};
-  --side-color: #{colors.$light-turquoise};
 }
 .yellow {
   --main-color: #{colors.$orange};
-  --side-color: #{colors.$light-orange};
 }
 .purple {
   --main-color: #{colors.$purple};
-  --side-color: #{colors.$light-purple};
 }
 .pink {
   --main-color: #{colors.$pink};
-  --side-color: #{colors.$light-pink};
 }
 .outreachGreen {
   --main-color: #{colors.$outreach-green};
-  --side-color: #{colors.$light-outreach-green};
 }
 .blue {
   --main-color: #{colors.$blue};
-  --side-color: #{colors.$light-blue};
 }
 .grey {
   --main-color: #{colors.$dark-grey};
-  --side-color: #{colors.$grey};
 }
 
 .spacer80px {

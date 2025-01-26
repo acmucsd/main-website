@@ -23,9 +23,6 @@ import OutreachLogo from "public/assets/logos/reach.png";
 import ProjectsLogo from "public/assets/logos/projects.png";
 import SpaceLogo from "public/assets/logos/space.svg";
 
-import CatLong from "public/assets/communities-images/cat-long.svg";
-import CatSquare from "public/assets/communities-images/cat-square.svg";
-
 import BitByte1 from "public/assets/communities-images/BitByte/BitByte1.jpg";
 import BitByte2 from "public/assets/communities-images/BitByte/BitByte2.jpg";
 import BitByte3 from "public/assets/communities-images/BitByte/BitByte3.jpg";
@@ -66,48 +63,8 @@ import Design2 from "public/assets/communities-images/DesignACM/Design2.jpg";
 import Design3 from "public/assets/communities-images/DesignACM/Design3.jpg";
 import Design4 from "public/assets/communities-images/DesignACM/Design4.jpg";
 
-import Image from "next/image";
-
-const CommunityImages: React.FC<{
-  srcs: string[];
-  alts: string[];
-}> = ({ srcs, alts }) => {
-  return (
-    <div className={styles.imageGrid}>
-      <div className={`${styles.nextImageHolder} ${styles.pic1}`}>
-        <Image
-          src={srcs[0] ?? CatLong.src}
-          alt={alts[0] ?? `Half Cat 1`}
-          layout="fill"
-        />
-      </div>
-
-      <div className={`${styles.nextImageHolder} ${styles.pic2}`}>
-        <Image
-          src={srcs[1] ?? CatLong.src}
-          alt={alts[1] ?? `Half Cat 2`}
-          layout="fill"
-        />
-      </div>
-
-      <div className={`${styles.nextImageHolder} ${styles.pic3}`}>
-        <Image
-          src={srcs[2] ?? CatSquare.src}
-          alt={alts[2] ?? `Square Cat`}
-          layout="fill"
-        />
-      </div>
-
-      <div className={`${styles.nextImageHolder} ${styles.pic4}`}>
-        <Image
-          src={srcs[3] ?? CatLong.src}
-          alt={alts[3] ?? `Super Long Cat`}
-          layout="fill"
-        />
-      </div>
-    </div>
-  );
-};
+import CommunityDescription from "./CommunityDescription";
+import CommunityNavbar from "./CommunityNavbar";
 
 const CommunitiesTitle: React.FC<{
   open?: boolean;
@@ -188,50 +145,8 @@ const CommunitiesTitle: React.FC<{
   );
 };
 
-const CommunityComponent: React.FC<{
-  org: string;
-  color: string;
-  isMobile: boolean;
-  links: { src: string; logo: string; alt: string }[];
-  description: React.ReactNode; // Input is HTML
-  srcs: string[];
-  alts: string[];
-}> = ({ isMobile, color, org, links, description, srcs, alts }) => {
-  return (
-    <div className={styles.communityCard} id={org}>
-      <div className={`${styles.colorSlide} ${styles[`${color}bg`]}`} />
-      <div className={`${styles.content} ${isMobile ? styles.mobile : ""}`}>
-        {isMobile ? null : <CommunityImages srcs={srcs} alts={alts} />}
-        <div className={styles.descHolder}>
-          <div className={styles.header}>
-            <h1 className={styles[color]}>ACM {org}</h1>
-            <div className={styles.communityLinks}>
-              {links.map((link, index) => (
-                <a key={`${link}-${index}`} href={link.src}>
-                  <Image
-                    src={link.logo}
-                    alt={link.alt}
-                    layout="fill"
-                    objectFit="contain"
-                  />
-                </a>
-              ))}
-            </div>
-          </div>
-          {description}
-        </div>
-
-        {
-          // Mobile images go below description
-          isMobile ? <CommunityImages srcs={srcs} alts={alts} /> : null
-        }
-      </div>
-    </div>
-  );
-};
-
 const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
-  <CommunityComponent
+  <CommunityDescription
     org="AI"
     color="red"
     isMobile={isMobile}
@@ -292,7 +207,7 @@ const AITitle: React.FC<{
 );
 
 const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
-  <CommunityComponent
+  <CommunityDescription
     org="Cyber"
     color="turquoise"
     isMobile={isMobile}
@@ -353,7 +268,7 @@ const CyberTitle: React.FC<{
 );
 
 const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
-  <CommunityComponent
+  <CommunityDescription
     org="Hack"
     color="orange"
     isMobile={isMobile}
@@ -415,7 +330,7 @@ const HackTitle: React.FC<{
 );
 
 const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
-  <CommunityComponent
+  <CommunityDescription
     org="Design"
     color="pink"
     isMobile={isMobile}
@@ -481,7 +396,7 @@ const BitByteTitle: React.FC<{
 );
 
 const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
-  <CommunityComponent
+  <CommunityDescription
     org="Bit Byte"
     color="purple"
     isMobile={isMobile}
@@ -517,7 +432,7 @@ const OutreachTitle: React.FC<{
 );
 
 const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
-  <CommunityComponent
+  <CommunityDescription
     org="Reach"
     color="outreach-green"
     isMobile={isMobile}
@@ -556,7 +471,7 @@ const ProjectsTitle: React.FC<{
 );
 
 const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
-  <CommunityComponent
+  <CommunityDescription
     org="Projects"
     color="grey"
     isMobile={isMobile}
@@ -591,7 +506,7 @@ const SpaceTitle: React.FC<{
 );
 
 const SpaceDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
-  <CommunityComponent
+  <CommunityDescription
     org="Space"
     color="blue"
     isMobile={isMobile}
@@ -610,31 +525,6 @@ const SpaceDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 
 const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const [selected, setSelected] = useState("general");
-  const [activeLink, setActiveLink] = useState("communities");
-
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
-  };
-
-  const communityComponents = {
-    ai: <AICommunity isMobile={isMobile} />,
-    cyber: <CyberCommunity isMobile={isMobile} />,
-    hack: <HackCommunity isMobile={isMobile} />,
-    design: <DesignCommunity isMobile={isMobile} />,
-    general: (
-      <div className={styles.description}>
-        <p>
-          ACM at UCSD is one large community, but it is made up of several
-          smaller communities focused on specific areas of technology.
-        </p>
-        <p>Learn more about each community</p>
-      </div>
-    ),
-  };
-
-  const titleClassName = `link ${
-    activeLink === "initiatives" ? styles.glowOnHover : ""
-  }`;
 
   return (
     <>
@@ -688,35 +578,9 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         </>
       ) : (
         <>
-          <section className={styles.hero}>
-            <div className={styles.toggle}>
-              <h3>
-                <a
-                  className={`${
-                    activeLink === "communities" ? styles.active : ""
-                  }`}
-                  onClick={() => handleLinkClick("communities")}
-                >
-                  Communities
-                </a>
-              </h3>
-              <h3>
-                <a
-                  className={`${
-                    activeLink === "initiatives" ? styles.active : ""
-                  }`}
-                  onClick={() => handleLinkClick("initiatives")}
-                >
-                  Initiatives
-                </a>
-              </h3>
-            </div>
-            <p>
-              ACM at UCSD is one large community, but it is made up of several
-              smaller communities focused on specific areas of technology.
-            </p>
-            {activeLink === "communities" && (
-              <section className={styles.navigator}>
+          <CommunityNavbar
+            communities={
+              <>
                 <AITitle
                   glowClassName=""
                   isMobile={isMobile}
@@ -741,37 +605,37 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
                   open={selected.toLocaleLowerCase() === "design"}
                   setSelected={setSelected}
                 />
-              </section>
-            )}
-            {activeLink === "initiatives" && (
-              <section className={styles.navigator}>
+              </>
+            }
+            initiatives={
+              <>
                 <BitByteTitle
-                  glowClassName={titleClassName}
+                  glowClassName={styles.glowOnHover}
                   isMobile={isMobile}
                   open={selected.toLocaleLowerCase() === "bit byte"}
                   setSelected={setSelected}
                 />
                 <OutreachTitle
-                  glowClassName={titleClassName}
+                  glowClassName={styles.glowOnHover}
                   isMobile={isMobile}
                   open={selected.toLocaleLowerCase() === "reach"}
                   setSelected={setSelected}
                 />
                 <ProjectsTitle
-                  glowClassName={titleClassName}
+                  glowClassName={styles.glowOnHover}
                   isMobile={isMobile}
                   open={selected.toLocaleLowerCase() === "projects"}
                   setSelected={setSelected}
                 />
                 <SpaceTitle
-                  glowClassName={titleClassName}
+                  glowClassName={styles.glowOnHover}
                   isMobile={isMobile}
                   open={selected.toLocaleLowerCase() === "space"}
                   setSelected={setSelected}
                 />
-              </section>
-            )}
-          </section>
+              </>
+            }
+          />
           <section className={styles.subOrgs}>
             <AICommunity isMobile={isMobile} />
             <CyberCommunity isMobile={isMobile} />

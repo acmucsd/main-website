@@ -3,7 +3,6 @@ import { Size, useWindowSize } from "src/utils/general";
 
 import SEO from "src/components/SEO";
 
-import CommunityHero from "src/sections/community/Hero";
 import CommunitySuborgs from "src/sections/community/Suborgs";
 import ACMWhiteLogo from "public/assets/ACMWhiteLogo.png";
 import { NextPage } from "next";

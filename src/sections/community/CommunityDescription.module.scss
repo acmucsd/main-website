@@ -1,0 +1,134 @@
+.communityCard {
+  display: flex;
+  height: calc(100vh - 78px);
+  min-height: 564px;
+  height: fit-content;
+  margin-bottom: 10px;
+  gap: 2.5rem;
+  justify-content: space-between;
+  align-items: center;
+
+  .colorSlide {
+    // To help move the color side bar all the way to the left
+    // 960px is the max width of the div above the <main> tag
+    @media (min-width: 960px) {
+      margin-left: calc(-1 * ((100vw - 960px) / 2)) !important;
+    }
+    position: relative;
+    top: 0;
+    left: 0;
+    min-width: 70px;
+    z-index: -1;
+    align-self: stretch;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    img {
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    h1 {
+      flex-basis: 100%;
+      justify-self: flex-star;
+      align-self: flex-start;
+    }
+  }
+  .logo {
+    min-width: 226px;
+    max-width: 226px;
+    margin: 66px;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    &.mobile {
+      flex-direction: column;
+      gap: 1rem;
+
+      .descHolder {
+        flex-basis: auto;
+        background-color: red($color: #000000);
+      }
+    }
+    justify-content: center;
+    width: 100%;
+    gap: 3.5rem;
+    align-items: center;
+    height: fit-content;
+    .descHolder {
+      flex-basis: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: fit-content;
+      flex-grow: 1;
+      margin-right: 1rem;
+      > h1 {
+        font-weight: 500;
+        font-size: 45px;
+      }
+      > p {
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+      .communityLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding-top: 4px;
+        width: 100%;
+        gap: 2rem;
+
+        a {
+          border: none;
+          background-color: transparent;
+          outline: none;
+          position: relative;
+          width: 40px;
+
+          img {
+            &:hover {
+              transform: scale(1.05);
+              transition: transform 0.2s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 812px) {
+  // p {
+  //   padding: 3em !important;
+  // }
+  .communityCard {
+    padding: 0 3em !important;
+    .colorSlide {
+      display: none;
+    }
+    .header {
+      justify-content: left;
+      h1 {
+        font-size: 28px;
+      }
+    }
+    .content {
+      div {
+        p {
+          font-size: 16px;
+        }
+        .communityLinks a {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}

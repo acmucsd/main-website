@@ -348,6 +348,7 @@ const CommunitySubOrgs: React.FC = () => {
         <ProjectsDescription />
         <SpaceDescription />
       </section>
+      <p className={styles.scrollDown}>Scroll down for more</p>
     </>
   );
 };

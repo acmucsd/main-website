@@ -1,11 +1,13 @@
 .communityCard {
   display: flex;
-  height: calc(100vh - 78px);
-  min-height: 564px;
-  height: fit-content;
-  margin-bottom: 2.5rem;
+  min-height: calc(100vh - 5.275rem);
+  box-sizing: border-box;
+  padding-top: 10rem;
+  padding-bottom: 2em;
   justify-content: space-between;
   align-items: center;
+  scroll-snap-align: start;
+  position: relative;
 
   .header {
     display: flex;
@@ -82,5 +84,16 @@
         }
       }
     }
+  }
+
+  .blob {
+    width: 80%;
+    position: absolute;
+    bottom: -2rem;
+    height: 3rem;
+    left: 10%;
+    border-radius: 2rem;
+    background-color: var(--main-color);
+    filter: blur(2rem);
   }
 }

@@ -34,6 +34,7 @@ const CommunityDescription: React.FC<{
 
         <CommunityImages srcs={srcs} alts={alts} />
       </div>
+      <div className={styles.blob} />
     </div>
   );
 };

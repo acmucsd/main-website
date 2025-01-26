@@ -63,6 +63,16 @@
   }
 }
 
+.scrollDown {
+  position: sticky;
+  bottom: 0.25rem;
+  font-weight: 500;
+  // font-style: italic;
+  color: white;
+  // text-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 2px 9px rgba(0, 0, 0, 0.14);
+  text-align: center;
+}
+
 .fullName {
   color: rgba(0, 0, 0, 0.7);
   font-size: 26px;

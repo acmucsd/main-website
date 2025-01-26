@@ -2,6 +2,7 @@
 
 declare namespace CommunityDescriptionModuleScssNamespace {
   export interface ICommunityDescriptionModuleScss {
+    blob: string;
     communityCard: string;
     communityLinks: string;
     content: string;

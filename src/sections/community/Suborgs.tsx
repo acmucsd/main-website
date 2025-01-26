@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Suborgs.module.scss";
 
 import AIDiscord from "public/assets/communities-links/ai-discord.svg";
@@ -66,12 +66,16 @@ import Design4 from "public/assets/communities-images/DesignACM/Design4.jpg";
 import CommunityDescription from "./CommunityDescription";
 
 const CommunitiesTitle: React.FC<{
+  selected: string;
   logo: StaticImageData;
   label: string;
   id: string;
-}> = ({ logo, label, id }) => {
+}> = ({ selected, logo, label, id }) => {
   return (
-    <a href={`#${id}`} className={styles.logoCard}>
+    <a
+      href={`#${id}`}
+      className={`${styles.logoCard} ${selected === id ? styles.active : ""}`}
+    >
       <img src={logo.src} alt="" aria-hidden className={styles.logoHover} />
       <img src={logo.src} alt={label} className={styles.logo} />
     </a>
@@ -329,7 +333,40 @@ const SpaceDescription: React.FC = () => (
 );
 
 const CommunitySubOrgs: React.FC = () => {
-  const [selected, setSelected] = useState("general");
+  const [section, setSection] = useState<"communities" | "initiatives">(
+    "communities"
+  );
+  const [selected, setSelected] = useState("");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const middle = window.innerHeight / 2;
+
+      setSection(
+        middle >
+          (document.getElementById("initiatives")?.getBoundingClientRect()
+            .top ?? 0)
+          ? "initiatives"
+          : "communities"
+      );
+
+      const communities = document.getElementsByClassName(
+        "community-description"
+      );
+      for (const community of Array.from(communities).reverse()) {
+        const { top } = community.getBoundingClientRect();
+        if (middle > top) {
+          setSelected(community.id);
+          return;
+        }
+      }
+      setSelected("");
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -337,16 +374,46 @@ const CommunitySubOrgs: React.FC = () => {
         Explore <strong>ACM</strong>
       </h1>
       <nav className={styles.sectionNav}>
-        <a href="#communities">Communities</a>
-        <a href="#initiatives">Initiatives</a>
+        <a
+          href="#communities"
+          className={section === "communities" ? styles.active : ""}
+        >
+          Communities
+        </a>
+        <a
+          href="#initiatives"
+          className={section === "initiatives" ? styles.active : ""}
+        >
+          Initiatives
+        </a>
       </nav>
       <section id="communities">
         <h2 className={styles.sectionHeading}>Communities</h2>
         <nav className={styles.subOrgNav}>
-          <CommunitiesTitle id="ai" label="ACM AI" logo={AILogo} />
-          <CommunitiesTitle id="cyber" label="ACM Cyber" logo={CyberLogo} />
-          <CommunitiesTitle id="hack" label="ACM Hack" logo={HackLogo} />
-          <CommunitiesTitle id="design" label="ACM Design" logo={DesignLogo} />
+          <CommunitiesTitle
+            selected={selected}
+            id="ai"
+            label="ACM AI"
+            logo={AILogo}
+          />
+          <CommunitiesTitle
+            selected={selected}
+            id="cyber"
+            label="ACM Cyber"
+            logo={CyberLogo}
+          />
+          <CommunitiesTitle
+            selected={selected}
+            id="hack"
+            label="ACM Hack"
+            logo={HackLogo}
+          />
+          <CommunitiesTitle
+            selected={selected}
+            id="design"
+            label="ACM Design"
+            logo={DesignLogo}
+          />
         </nav>
         <AICommunity />
         <CyberCommunity />
@@ -356,18 +423,30 @@ const CommunitySubOrgs: React.FC = () => {
       <section id="initiatives">
         <h2 className={styles.sectionHeading}>Initiatives</h2>
         <nav className={styles.subOrgNav}>
-          <CommunitiesTitle id="bitbyte" label="Bit Byte" logo={BitByteLogo} />
           <CommunitiesTitle
+            selected={selected}
+            id="bitbyte"
+            label="Bit Byte"
+            logo={BitByteLogo}
+          />
+          <CommunitiesTitle
+            selected={selected}
             id="outreach"
             label="ACM Outreach"
             logo={OutreachLogo}
           />
           <CommunitiesTitle
+            selected={selected}
             id="projects"
             label="ACM Projects"
             logo={ProjectsLogo}
           />
-          <CommunitiesTitle id="space" label="Space" logo={SpaceLogo} />
+          <CommunitiesTitle
+            selected={selected}
+            id="space"
+            label="Space"
+            logo={SpaceLogo}
+          />
         </nav>
         <BitByteDescription />
         <OutreachDescription />

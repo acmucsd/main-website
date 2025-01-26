@@ -13,7 +13,10 @@ const CommunityDescription: React.FC<{
   alts: string[];
 }> = ({ colorClass, id, name, subtitle, links, description, srcs, alts }) => {
   return (
-    <div className={`${styles.communityCard} ${colorClass}`} id={id}>
+    <div
+      className={`community-description ${styles.communityCard} ${colorClass}`}
+      id={id}
+    >
       <div className={`${styles.content}`}>
         <div className={styles.descHolder}>
           <div>

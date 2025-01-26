@@ -2,9 +2,8 @@
 
 declare namespace SuborgsModuleScssNamespace {
   export interface ISuborgsModuleScss {
+    active: string;
     blue: string;
-    fullName: string;
-    glowOnHover: string;
     grey: string;
     logo: string;
     logoCard: string;
@@ -17,7 +16,6 @@ declare namespace SuborgsModuleScssNamespace {
     sectionHeading: string;
     sectionNav: string;
     spaceBlue: string;
-    spacer80px: string;
     subOrgNav: string;
     title: string;
     turquoise: string;

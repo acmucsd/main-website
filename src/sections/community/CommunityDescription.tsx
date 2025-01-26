@@ -4,21 +4,21 @@ import Image from "next/image";
 
 const CommunityDescription: React.FC<{
   org: string;
-  color: string;
+  colorClass: string;
   isMobile: boolean;
   links: { src: string; logo: string; alt: string }[];
   description: React.ReactNode; // Input is HTML
   srcs: string[];
   alts: string[];
-}> = ({ isMobile, color, org, links, description, srcs, alts }) => {
+}> = ({ isMobile, colorClass, org, links, description, srcs, alts }) => {
   return (
-    <div className={styles.communityCard} id={org}>
-      <div className={`${styles.colorSlide} ${styles[`${color}bg`]}`} />
+    <div className={`${styles.communityCard} ${colorClass}`} id={org}>
+      <div className={styles.colorSlide} />
       <div className={`${styles.content} ${isMobile ? styles.mobile : ""}`}>
         {isMobile ? null : <CommunityImages srcs={srcs} alts={alts} />}
         <div className={styles.descHolder}>
           <div className={styles.header}>
-            <h1 className={styles[color]}>ACM {org}</h1>
+            <h1>ACM {org}</h1>
             <div className={styles.communityLinks}>
               {links.map((link, index) => (
                 <a key={`${link}-${index}`} href={link.src}>

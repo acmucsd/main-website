@@ -3,38 +3,27 @@
 declare namespace SuborgsModuleScssNamespace {
   export interface ISuborgsModuleScss {
     blue: string;
-    bluebg: string;
     communityLinks: string;
     content: string;
     description: string;
     fullName: string;
     glowOnHover: string;
     grey: string;
-    greybg: string;
     header: string;
     logo: string;
     logoCard: string;
     mobile: string;
     navigation: string;
     orange: string;
-    orangebg: string;
-    orangefill: string;
-    "outreach-green": string;
-    "outreach-greenbg": string;
+    outreachGreen: string;
     pink: string;
-    pinkbg: string;
     purple: string;
-    purplebg: string;
     red: string;
-    redbg: string;
-    redfill: string;
     selected: string;
     spacer80px: string;
     subOrgs: string;
     turquoise: string;
-    turquoisebg: string;
     yellow: string;
-    yellowbg: string;
   }
 }
 

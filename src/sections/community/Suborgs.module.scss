@@ -23,7 +23,6 @@
       > a {
         width: 90px;
         background: none;
-        outline: none;
         border: none;
         padding: 0.2rem 0.7rem;
         cursor: pointer;
@@ -100,6 +99,7 @@
       font-size: 1.8rem;
       margin-bottom: 0.5rem;
       text-align: left;
+      color: var(--main-color);
     }
 
     > div {
@@ -125,7 +125,6 @@
         a {
           border: none;
           background-color: transparent;
-          outline: none;
           padding-right: 30px;
           img {
             width: 40px;
@@ -146,64 +145,40 @@
   line-height: normal;
 }
 .red {
-  color: colors.$red;
-}
-.redbg {
-  background-color: colors.$light-red;
-}
-.redfill {
-  fill: colors.$red !important;
+  --main-color: #{colors.$red};
+  --side-color: #{colors.$light-red};
 }
 .orange {
-  color: colors.$orange;
-}
-.orangebg {
-  background-color: colors.$light-orange;
-}
-.orangefill {
-  fill: colors.$orange !important;
+  --main-color: #{colors.$orange};
+  --side-color: #{colors.$light-orange};
 }
 .turquoise {
-  color: colors.$turquoise;
-}
-.turquoisebg {
-  background-color: colors.$light-turquoise;
+  --main-color: #{colors.$turquoise};
+  --side-color: #{colors.$light-turquoise};
 }
 .yellow {
-  color: colors.$orange;
-}
-.yellowbg {
-  background-color: colors.$light-orange;
+  --main-color: #{colors.$orange};
+  --side-color: #{colors.$light-orange};
 }
 .purple {
-  color: colors.$purple;
-}
-.purplebg {
-  background-color: colors.$light-purple;
+  --main-color: #{colors.$purple};
+  --side-color: #{colors.$light-purple};
 }
 .pink {
-  color: colors.$pink;
+  --main-color: #{colors.$pink};
+  --side-color: #{colors.$light-pink};
 }
-.pinkbg {
-  background-color: colors.$light-pink;
-}
-.outreach-green {
-  color: colors.$outreach-green;
-}
-.outreach-greenbg {
-  background-color: colors.$light-outreach-green;
+.outreachGreen {
+  --main-color: #{colors.$outreach-green};
+  --side-color: #{colors.$light-outreach-green};
 }
 .blue {
-  color: colors.$blue;
-}
-.bluebg {
-  background-color: colors.$light-blue;
+  --main-color: #{colors.$blue};
+  --side-color: #{colors.$light-blue};
 }
 .grey {
-  color: colors.$dark-grey;
-}
-.greybg {
-  background-color: colors.$grey;
+  --main-color: #{colors.$dark-grey};
+  --side-color: #{colors.$grey};
 }
 
 .spacer80px {
@@ -215,7 +190,6 @@
 /*
 .glow-on-hover {
     border: none;
-    outline: none;
     color: #fff;
     cursor: pointer;
     position: relative;

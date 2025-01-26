@@ -148,7 +148,7 @@ const CommunitiesTitle: React.FC<{
 const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityDescription
     org="AI"
-    color="red"
+    colorClass={styles.red}
     isMobile={isMobile}
     links={[
       {
@@ -209,7 +209,7 @@ const AITitle: React.FC<{
 const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityDescription
     org="Cyber"
-    color="turquoise"
+    colorClass={styles.turquoise}
     isMobile={isMobile}
     links={[
       {
@@ -270,7 +270,7 @@ const CyberTitle: React.FC<{
 const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityDescription
     org="Hack"
-    color="orange"
+    colorClass={styles.orange}
     isMobile={isMobile}
     links={[
       {
@@ -332,7 +332,7 @@ const HackTitle: React.FC<{
 const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityDescription
     org="Design"
-    color="pink"
+    colorClass={styles.pink}
     isMobile={isMobile}
     links={[]}
     description={
@@ -398,7 +398,7 @@ const BitByteTitle: React.FC<{
 const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityDescription
     org="Bit Byte"
-    color="purple"
+    colorClass={styles.purple}
     isMobile={isMobile}
     links={[]}
     description={
@@ -421,7 +421,7 @@ const OutreachTitle: React.FC<{
 }> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Reach"
-    color="outreach-green"
+    color="outreachGreen"
     website="https://outreach-website.vercel.app/"
     logo={OutreachLogo.src}
     isMobile={isMobile}
@@ -434,7 +434,7 @@ const OutreachTitle: React.FC<{
 const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityDescription
     org="Reach"
-    color="outreach-green"
+    colorClass={styles.outreachGreen}
     isMobile={isMobile}
     links={[]}
     description={
@@ -473,7 +473,7 @@ const ProjectsTitle: React.FC<{
 const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityDescription
     org="Projects"
-    color="grey"
+    colorClass={styles.grey}
     isMobile={isMobile}
     links={[]}
     description={
@@ -508,7 +508,7 @@ const SpaceTitle: React.FC<{
 const SpaceDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   <CommunityDescription
     org="Space"
-    color="blue"
+    colorClass={styles.blue}
     isMobile={isMobile}
     links={[]}
     description={

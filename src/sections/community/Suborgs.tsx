@@ -73,7 +73,6 @@ const CommunitiesTitle: React.FC<{
   logo: string;
   website: string;
   glowClassName: string;
-  isMobile: boolean;
   setSelected: (org: string) => void;
 }> = ({ open, logo, org, color, setSelected }) => {
   const getFullName = (org: string) => {
@@ -96,16 +95,6 @@ const CommunitiesTitle: React.FC<{
   };
 
   const [hover, setHover] = useState(false);
-
-  const filterDropShadow = `
-        drop-shadow(0px 0px 1px #FF0000)
-        drop-shadow(0px 0px 1px #FF7F00)
-        drop-shadow(0px 0px 1px #FFFF00)
-        drop-shadow(0px 0px 1px #00FF00)
-        drop-shadow(0px 0px 1px #0000FF)
-        drop-shadow(0px 0px 1px #2E2B5F)
-        drop-shadow(0px 0px 1px #8B00FF)
-        `;
 
   return (
     <>
@@ -145,11 +134,10 @@ const CommunitiesTitle: React.FC<{
   );
 };
 
-const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
+const AICommunity: React.FC = () => (
   <CommunityDescription
     org="AI"
     colorClass={styles.red}
-    isMobile={isMobile}
     links={[
       {
         src: "https://acmurl.com/ai-disc",
@@ -189,28 +177,25 @@ const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 );
 
 const AITitle: React.FC<{
-  isMobile: boolean;
   open?: boolean;
   setSelected: (org: string) => void;
   glowClassName: string;
-}> = ({ isMobile, open, setSelected, glowClassName }) => (
+}> = ({ open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="AI"
     color="red"
     website="https://ai.acmucsd.com/"
     logo={AILogo.src}
-    isMobile={isMobile}
     open={open}
     setSelected={setSelected}
     glowClassName=""
   />
 );
 
-const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
+const CyberCommunity: React.FC = () => (
   <CommunityDescription
     org="Cyber"
     colorClass={styles.turquoise}
-    isMobile={isMobile}
     links={[
       {
         src: "https://acmurl.com/cyberdiscord",
@@ -250,15 +235,13 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 );
 
 const CyberTitle: React.FC<{
-  isMobile: boolean;
   open?: boolean;
   setSelected: (org: string) => void;
   glowClassName: string;
-}> = ({ isMobile, open, setSelected, glowClassName }) => (
+}> = ({ open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Cyber"
     color="turquoise"
-    isMobile={isMobile}
     website="https://sdc.tf/"
     logo={CyberLogo.src}
     open={open}
@@ -267,11 +250,10 @@ const CyberTitle: React.FC<{
   />
 );
 
-const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
+const HackCommunity: React.FC = () => (
   <CommunityDescription
     org="Hack"
     colorClass={styles.orange}
-    isMobile={isMobile}
     links={[
       {
         src: "https://acmurl.com/hack-discord",
@@ -312,28 +294,25 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 );
 
 const HackTitle: React.FC<{
-  isMobile: boolean;
   open?: boolean;
   setSelected: (org: string) => void;
   glowClassName: string;
-}> = ({ isMobile, open, setSelected, glowClassName }) => (
+}> = ({ open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Hack"
     color="orange"
     website="https://hack.acmucsd.com/"
     logo={HackLogo.src}
-    isMobile={isMobile}
     open={open}
     setSelected={setSelected}
     glowClassName={glowClassName}
   />
 );
 
-const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
+const DesignCommunity: React.FC = () => (
   <CommunityDescription
     org="Design"
     colorClass={styles.pink}
-    isMobile={isMobile}
     links={[]}
     description={
       <p>
@@ -360,17 +339,15 @@ const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 );
 
 const DesignTitle: React.FC<{
-  isMobile: boolean;
   open?: boolean;
   setSelected: (org: string) => void;
   glowClassName: string;
-}> = ({ isMobile, open, setSelected, glowClassName }) => (
+}> = ({ open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Design"
     color="pink"
     website="https://acmucsd.com/"
     logo={DesignLogo.src}
-    isMobile={isMobile}
     open={open}
     setSelected={setSelected}
     glowClassName={glowClassName}
@@ -378,28 +355,25 @@ const DesignTitle: React.FC<{
 );
 
 const BitByteTitle: React.FC<{
-  isMobile: boolean;
   open?: boolean;
   setSelected: (org: string) => void;
   glowClassName: string;
-}> = ({ isMobile, open, setSelected, glowClassName }) => (
+}> = ({ open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Bit Byte"
     color="purple"
     website="https://docs.google.com/presentation/d/1yNQmK_w2JQqOeA3MtSwN2_PQT5Q73VCcnGuW0NwzrjM/edit#slide=id.ga0ada6e7b3_0_50"
     logo={BitByteLogo.src}
-    isMobile={isMobile}
     open={open}
     setSelected={setSelected}
     glowClassName={glowClassName}
   />
 );
 
-const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
+const BitByteDescription: React.FC = () => (
   <CommunityDescription
     org="Bit Byte"
     colorClass={styles.purple}
-    isMobile={isMobile}
     links={[]}
     description={
       <p>
@@ -414,28 +388,25 @@ const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 );
 
 const OutreachTitle: React.FC<{
-  isMobile: boolean;
   open?: boolean;
   setSelected: (org: string) => void;
   glowClassName: string;
-}> = ({ isMobile, open, setSelected, glowClassName }) => (
+}> = ({ open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Reach"
     color="outreachGreen"
     website="https://outreach-website.vercel.app/"
     logo={OutreachLogo.src}
-    isMobile={isMobile}
     open={open}
     setSelected={setSelected}
     glowClassName={glowClassName}
   />
 );
 
-const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
+const OutreachDescription: React.FC = () => (
   <CommunityDescription
     org="Reach"
     colorClass={styles.outreachGreen}
-    isMobile={isMobile}
     links={[]}
     description={
       <p>
@@ -453,28 +424,25 @@ const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 );
 
 const ProjectsTitle: React.FC<{
-  isMobile: boolean;
   open?: boolean;
   setSelected: (org: string) => void;
   glowClassName: string;
-}> = ({ isMobile, open, setSelected, glowClassName }) => (
+}> = ({ open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Projects"
     color="grey"
     website="https://projects.acmucsd.com/"
     logo={ProjectsLogo.src}
-    isMobile={isMobile}
     open={open}
     setSelected={setSelected}
     glowClassName={glowClassName}
   />
 );
 
-const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
+const ProjectsDescription: React.FC = () => (
   <CommunityDescription
     org="Projects"
     colorClass={styles.grey}
-    isMobile={isMobile}
     links={[]}
     description={
       <p>
@@ -488,28 +456,25 @@ const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
 );
 
 const SpaceTitle: React.FC<{
-  isMobile: boolean;
   open?: boolean;
   setSelected: (org: string) => void;
   glowClassName: string;
-}> = ({ isMobile, open, setSelected, glowClassName }) => (
+}> = ({ open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Space"
     color="blue"
     website="https://space.acmucsd.com/"
     logo={SpaceLogo.src}
-    isMobile={isMobile}
     open={open}
     setSelected={setSelected}
     glowClassName={glowClassName}
   />
 );
 
-const SpaceDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
+const SpaceDescription: React.FC = () => (
   <CommunityDescription
     org="Space"
     colorClass={styles.blue}
-    isMobile={isMobile}
     links={[]}
     description={
       <p>
@@ -523,131 +488,71 @@ const SpaceDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
   />
 );
 
-const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
+const CommunitySubOrgs: React.FC = () => {
   const [selected, setSelected] = useState("general");
 
   return (
     <>
-      {isMobile ? (
-        <>
-          <h1 className={styles.header} onClick={() => setSelected("general")}>
-            Communities
-          </h1>
-          <div className={styles.navigation}>
-            <a href="#AI" onClick={() => setSelected("ai")}>
-              <img
-                src={selected === "ai" ? AILogoSelected.src : AILogo.src}
-                alt="AI Logo"
-              />
-            </a>
-            <a href="#Cyber" onClick={() => setSelected("cyber")}>
-              <img
-                src={
-                  selected === "cyber" ? CyberLogoSelected.src : CyberLogo.src
-                }
-                alt="Cyber Logo"
-              />
-            </a>
-            <a href="#Hack" onClick={() => setSelected("hack")}>
-              <img
-                src={selected === "hack" ? HackLogoSelected.src : HackLogo.src}
-                alt="Hack Logo"
-              />
-            </a>
-            <a href="#Design" onClick={() => setSelected("design")}>
-              <img
-                src={
-                  selected === "design"
-                    ? DesignLogoSelected.src
-                    : DesignLogo.src
-                }
-                alt="Design Logo"
-              />
-            </a>
-          </div>
-          <section className={styles.mobile}>
-            <AICommunity isMobile={isMobile} />
-            <CyberCommunity isMobile={isMobile} />
-            <HackCommunity isMobile={isMobile} />
-            <DesignCommunity isMobile={isMobile} />
-            <BitByteDescription isMobile={isMobile} />
-            <OutreachDescription isMobile={isMobile} />
-            <ProjectsDescription isMobile={isMobile} />
-            <SpaceDescription isMobile={isMobile} />
-          </section>
-        </>
-      ) : (
-        <>
-          <CommunityNavbar
-            communities={
-              <>
-                <AITitle
-                  glowClassName=""
-                  isMobile={isMobile}
-                  open={selected.toLocaleLowerCase() === "ai"}
-                  setSelected={setSelected}
-                />
-                <CyberTitle
-                  glowClassName=""
-                  isMobile={isMobile}
-                  open={selected.toLocaleLowerCase() === "cyber"}
-                  setSelected={setSelected}
-                />
-                <HackTitle
-                  glowClassName=""
-                  isMobile={isMobile}
-                  open={selected.toLocaleLowerCase() === "hack"}
-                  setSelected={setSelected}
-                />
-                <DesignTitle
-                  glowClassName=""
-                  isMobile={isMobile}
-                  open={selected.toLocaleLowerCase() === "design"}
-                  setSelected={setSelected}
-                />
-              </>
-            }
-            initiatives={
-              <>
-                <BitByteTitle
-                  glowClassName={styles.glowOnHover}
-                  isMobile={isMobile}
-                  open={selected.toLocaleLowerCase() === "bit byte"}
-                  setSelected={setSelected}
-                />
-                <OutreachTitle
-                  glowClassName={styles.glowOnHover}
-                  isMobile={isMobile}
-                  open={selected.toLocaleLowerCase() === "reach"}
-                  setSelected={setSelected}
-                />
-                <ProjectsTitle
-                  glowClassName={styles.glowOnHover}
-                  isMobile={isMobile}
-                  open={selected.toLocaleLowerCase() === "projects"}
-                  setSelected={setSelected}
-                />
-                <SpaceTitle
-                  glowClassName={styles.glowOnHover}
-                  isMobile={isMobile}
-                  open={selected.toLocaleLowerCase() === "space"}
-                  setSelected={setSelected}
-                />
-              </>
-            }
-          />
-          <section className={styles.subOrgs}>
-            <AICommunity isMobile={isMobile} />
-            <CyberCommunity isMobile={isMobile} />
-            <HackCommunity isMobile={isMobile} />
-            <DesignCommunity isMobile={isMobile} />
-            <BitByteDescription isMobile={isMobile} />
-            <OutreachDescription isMobile={isMobile} />
-            <ProjectsDescription isMobile={isMobile} />
-            <SpaceDescription isMobile={isMobile} />
-          </section>
-        </>
-      )}
+      <CommunityNavbar
+        communities={
+          <>
+            <AITitle
+              glowClassName=""
+              open={selected.toLocaleLowerCase() === "ai"}
+              setSelected={setSelected}
+            />
+            <CyberTitle
+              glowClassName=""
+              open={selected.toLocaleLowerCase() === "cyber"}
+              setSelected={setSelected}
+            />
+            <HackTitle
+              glowClassName=""
+              open={selected.toLocaleLowerCase() === "hack"}
+              setSelected={setSelected}
+            />
+            <DesignTitle
+              glowClassName=""
+              open={selected.toLocaleLowerCase() === "design"}
+              setSelected={setSelected}
+            />
+          </>
+        }
+        initiatives={
+          <>
+            <BitByteTitle
+              glowClassName={styles.glowOnHover}
+              open={selected.toLocaleLowerCase() === "bit byte"}
+              setSelected={setSelected}
+            />
+            <OutreachTitle
+              glowClassName={styles.glowOnHover}
+              open={selected.toLocaleLowerCase() === "reach"}
+              setSelected={setSelected}
+            />
+            <ProjectsTitle
+              glowClassName={styles.glowOnHover}
+              open={selected.toLocaleLowerCase() === "projects"}
+              setSelected={setSelected}
+            />
+            <SpaceTitle
+              glowClassName={styles.glowOnHover}
+              open={selected.toLocaleLowerCase() === "space"}
+              setSelected={setSelected}
+            />
+          </>
+        }
+      />
+      <section className={styles.subOrgs}>
+        <AICommunity />
+        <CyberCommunity />
+        <HackCommunity />
+        <DesignCommunity />
+        <BitByteDescription />
+        <OutreachDescription />
+        <ProjectsDescription />
+        <SpaceDescription />
+      </section>
     </>
   );
 };

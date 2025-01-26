@@ -66,48 +66,43 @@ import Design4 from "public/assets/communities-images/DesignACM/Design4.jpg";
 
 import Image from "next/image";
 
-
 const CommunityImages: React.FC<{
   srcs: string[];
   alts: string[];
 }> = ({ srcs, alts }) => {
-  return(
+  return (
     <div className="community__image-grid">
       <div className="nextImageHolder pic1">
         <Image
           src={srcs[0] ?? CatLong.src}
           alt={alts[0] ?? `Half Cat 1`}
           layout="fill"
-          />
+        />
       </div>
-      
-      <div className="nextImageHolder pic2"
-      >
+
+      <div className="nextImageHolder pic2">
         <Image
-        src={srcs[1] ?? CatLong.src}
-        alt={alts[1] ?? `Half Cat 2`}
-        layout="fill"
-          />
+          src={srcs[1] ?? CatLong.src}
+          alt={alts[1] ?? `Half Cat 2`}
+          layout="fill"
+        />
       </div>
-      
 
       <div className="nextImageHolder pic3">
         <Image
           src={srcs[2] ?? CatSquare.src}
           alt={alts[2] ?? `Square Cat`}
           layout="fill"
-          />
+        />
       </div>
-      
 
       <div className="nextImageHolder pic4">
         <Image
           src={srcs[3] ?? CatLong.src}
           alt={alts[3] ?? `Super Long Cat`}
           layout="fill"
-          />
+        />
       </div>
-      
     </div>
   );
 };
@@ -121,14 +116,7 @@ const CommunitiesTitle: React.FC<{
   glowClassName: string;
   isMobile: boolean;
   setSelected: (org: string) => void;
-}> = ({
-  open,
-  logo,
-  org,
-  color,
-  setSelected,
-}) => {
-
+}> = ({ open, logo, org, color, setSelected }) => {
   const getFullName = (org: string) => {
     switch (org) {
       case "AI":
@@ -146,44 +134,53 @@ const CommunitiesTitle: React.FC<{
       default:
         return org;
     }
-  }
+  };
 
   const [hover, setHover] = useState(false);
 
   const filterDropShadow = `
-        drop-shadow(0px 0px 1px #FF0000) 
-        drop-shadow(0px 0px 1px #FF7F00)  
-        drop-shadow(0px 0px 1px #FFFF00)  
-        drop-shadow(0px 0px 1px #00FF00)  
-        drop-shadow(0px 0px 1px #0000FF)  
-        drop-shadow(0px 0px 1px #2E2B5F)  
-        drop-shadow(0px 0px 1px #8B00FF) 
-        `; 
+        drop-shadow(0px 0px 1px #FF0000)
+        drop-shadow(0px 0px 1px #FF7F00)
+        drop-shadow(0px 0px 1px #FFFF00)
+        drop-shadow(0px 0px 1px #00FF00)
+        drop-shadow(0px 0px 1px #0000FF)
+        drop-shadow(0px 0px 1px #2E2B5F)
+        drop-shadow(0px 0px 1px #8B00FF)
+        `;
 
   return (
     <>
-      <div className="community__sub-orgs__logo-card" data-open={open} >
-          <img
-            src={logo}
-            alt={`ACM ${org}`}
-            className={`community__sub-orgs__logo-card__logo ${((open || hover)) ? 'glow-on-hover' : ''}`}
-            onClick={() => {
-              setSelected(org);
-              window.location.href = `#${org}`;
-            }
-            }
-            style={{'--shadow-color': color, filter: (open || hover) ? ` ${color=='' ? `` : `drop-shadow(0 0 1rem ${color})`} ` : 'none'} as React.CSSProperties}
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-            data-glow={open || hover}
-          />
-        
-        {open ? ( 
+      <div className="community__sub-orgs__logo-card" data-open={open}>
+        <img
+          src={logo}
+          alt={`ACM ${org}`}
+          className={`community__sub-orgs__logo-card__logo ${
+            open || hover ? "glow-on-hover" : ""
+          }`}
+          onClick={() => {
+            setSelected(org);
+            window.location.href = `#${org}`;
+          }}
+          style={
+            {
+              "--shadow-color": color,
+              filter:
+                open || hover
+                  ? ` ${color == "" ? `` : `drop-shadow(0 0 1rem ${color})`} `
+                  : "none",
+            } as React.CSSProperties
+          }
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+          data-glow={open || hover}
+        />
+
+        {open ? (
           <div className="community__sub-orgs__logo-card__content">
             <h1 className={color}>ACM {org}</h1>
             <h2 className="fullName">{getFullName(org)}</h2>
           </div>
-        ) : null}  
+        ) : null}
       </div>
     </>
   );
@@ -197,22 +194,28 @@ const CommunityComponent: React.FC<{
   description: React.ReactNode; // Input is HTML
   srcs: string[];
   alts: string[];
-  
 }> = ({ isMobile, color, org, links, description, srcs, alts }) => {
   return (
     <div className="community__sub-orgs__community-card" id={org}>
       <div className={`color_slide ${color}bg`} />
-      <div className={`community__sub-orgs__community-card__content${isMobile ? ' mobile':''}`}>
-        {isMobile ? null : (
-          <CommunityImages srcs={srcs} alts={alts}/>
-        )}
+      <div
+        className={`community__sub-orgs__community-card__content${
+          isMobile ? " mobile" : ""
+        }`}
+      >
+        {isMobile ? null : <CommunityImages srcs={srcs} alts={alts} />}
         <div className="community__sub-orgs__community-card__content__desc-holder">
           <div className="community__sub-orgs__community-card__header">
             <h1 className={color}>ACM {org}</h1>
             <div className="community-links">
               {links.map((link, index) => (
                 <a key={`${link}-${index}`} href={link.src}>
-                  <Image src={link.logo} alt={link.alt} layout='fill' objectFit='contain' />
+                  <Image
+                    src={link.logo}
+                    alt={link.alt}
+                    layout="fill"
+                    objectFit="contain"
+                  />
                 </a>
               ))}
             </div>
@@ -220,12 +223,10 @@ const CommunityComponent: React.FC<{
           {description}
         </div>
 
-              
         {
-        // Mobile images go below description
-        isMobile ?  (
-          <CommunityImages srcs={srcs} alts={alts}/>
-        ) : null}
+          // Mobile images go below description
+          isMobile ? <CommunityImages srcs={srcs} alts={alts} /> : null
+        }
       </div>
     </div>
   );
@@ -251,7 +252,7 @@ const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         src: "https://www.instagram.com/acm_ai_ucsd/",
         logo: AIInstagram.src,
         alt: "AI Instagram",
-      }
+      },
     ]}
     description={
       <p>
@@ -269,13 +270,17 @@ const AICommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
         to all the perks and be up to date on AI and the community!
       </p>
     }
-
     srcs={[AI1.src, AI2.src, AI3.src, AI4.src]}
     alts={[]}
   />
 );
 
-const AITitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string }> = ({ isMobile, open, setSelected, glowClassName }) => (
+const AITitle: React.FC<{
+  isMobile: boolean;
+  open?: boolean;
+  setSelected: (org: string) => void;
+  glowClassName: string;
+}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="AI"
     color="red"
@@ -325,11 +330,18 @@ const CyberCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
       </p>
     }
     srcs={[Cyber1.src, Cyber2.src, Cyber3.src, Cyber4.src]}
-    alts={["Picture of Cyber Event, Picture of Cyber Event, Picture of Cyber Event, Picture of Cyber Members Playing Board Games"]}
+    alts={[
+      "Picture of Cyber Event, Picture of Cyber Event, Picture of Cyber Event, Picture of Cyber Members Playing Board Games",
+    ]}
   />
 );
 
-const CyberTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName }) => (
+const CyberTitle: React.FC<{
+  isMobile: boolean;
+  open?: boolean;
+  setSelected: (org: string) => void;
+  glowClassName: string;
+}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Cyber"
     color="turquoise"
@@ -361,23 +373,37 @@ const HackCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
     ]}
     description={
       <p>
-        ACM Hack is a community centered around software engineering and exploring what is possible through code. 
+        ACM Hack is a community centered around software engineering and
+        exploring what is possible through code.
         <br />
         <br />
-        Our name comes from Hackathons – events where software engineers write code to produce innovative projects. 
-        Our goal is to enable and prepare a community of software engineers to build new things and excel in industry. 
-        We do this through technical workshops on industry-relevant tools, bootcamps, and projects.
+        Our name comes from Hackathons – events where software engineers write
+        code to produce innovative projects. Our goal is to enable and prepare a
+        community of software engineers to build new things and excel in
+        industry. We do this through technical workshops on industry-relevant
+        tools, bootcamps, and projects.
         <br />
         <br />
-        Join our Discord to engage with our community, and check out our website to learn more about us!
+        Join our Discord to engage with our community, and check out our website
+        to learn more about us!
       </p>
     }
     srcs={[Hack1.src, Hack2.src, Hack3.src, Hack4.src]}
-    alts={["Picture of Hack Event", "Picture of Hack Event", "Picture of Hack Event", "Picture of Hack Event"]}
+    alts={[
+      "Picture of Hack Event",
+      "Picture of Hack Event",
+      "Picture of Hack Event",
+      "Picture of Hack Event",
+    ]}
   />
 );
 
-const HackTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName}) => (
+const HackTitle: React.FC<{
+  isMobile: boolean;
+  open?: boolean;
+  setSelected: (org: string) => void;
+  glowClassName: string;
+}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Hack"
     color="orange"
@@ -398,18 +424,34 @@ const DesignCommunity: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
     links={[]}
     description={
       <p>
-        ACM Design centers around UI/UX design and exploring what is possible through all parts of design like research, graphic, and product.
+        ACM Design centers around UI/UX design and exploring what is possible
+        through all parts of design like research, graphic, and product.
         <br />
         <br />
-        We uplift new designers and curious developers to learn how to think like a designer. As a growing community, we host events to teach designers to go from mapping out ideas to building innovative prototypes. We strive to allow designers to have better conversations with developers while making developers more conscious of design methods.
+        We uplift new designers and curious developers to learn how to think
+        like a designer. As a growing community, we host events to teach
+        designers to go from mapping out ideas to building innovative
+        prototypes. We strive to allow designers to have better conversations
+        with developers while making developers more conscious of design
+        methods.
       </p>
     }
     srcs={[Design1.src, Design2.src, Design3.src, Design4.src]}
-    alts={["People brainstorming designs on sticky notes", "Design presenter presenting", "Design event wide shot", "Example design project"]}
+    alts={[
+      "People brainstorming designs on sticky notes",
+      "Design presenter presenting",
+      "Design event wide shot",
+      "Example design project",
+    ]}
   />
 );
 
-const DesignTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string,}> = ({ isMobile, open, setSelected, glowClassName}) => (
+const DesignTitle: React.FC<{
+  isMobile: boolean;
+  open?: boolean;
+  setSelected: (org: string) => void;
+  glowClassName: string;
+}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Design"
     color="pink"
@@ -422,7 +464,12 @@ const DesignTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (or
   />
 );
 
-const BitByteTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName }) => (
+const BitByteTitle: React.FC<{
+  isMobile: boolean;
+  open?: boolean;
+  setSelected: (org: string) => void;
+  glowClassName: string;
+}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Bit Byte"
     color="purple"
@@ -443,17 +490,22 @@ const BitByteDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
     links={[]}
     description={
       <p>
-        Join ACM’s Bit-Byte program that pairs students to make lifelong friendships! 
-        Our upperclassmen bigs (bytes) help their littles (bits) grow in their academic, 
-        social, and professional lives.
+        Join ACM’s Bit-Byte program that pairs students to make lifelong
+        friendships! Our upperclassmen bigs (bytes) help their littles (bits)
+        grow in their academic, social, and professional lives.
       </p>
     }
     srcs={[BitByte1.src, BitByte2.src, BitByte4.src, BitByte3.src]}
-    alts={['Bit Byte 1', 'Bit Byte 2', 'Bit Byte 3', 'Bit Byte 4']}
+    alts={["Bit Byte 1", "Bit Byte 2", "Bit Byte 3", "Bit Byte 4"]}
   />
 );
 
-const OutreachTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string}> = ({ isMobile, open, setSelected, glowClassName }) => (
+const OutreachTitle: React.FC<{
+  isMobile: boolean;
+  open?: boolean;
+  setSelected: (org: string) => void;
+  glowClassName: string;
+}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Reach"
     color="outreach-green"
@@ -474,19 +526,25 @@ const OutreachDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
     links={[]}
     description={
       <p>
-        Welcome to ACM Outreach at UCSD, where our mission is to ignite a passion for computing 
-        and STEM among K-12 students, with a special focus on those who are underrepresented 
-        in the computing community. Our goal is to empower students to explore the exciting 
-        world of computing by nurturing their curiosity and enthusiasm for technology. 
-        Join us in inspiring the next generation of innovators and problem solvers!
+        Welcome to ACM Outreach at UCSD, where our mission is to ignite a
+        passion for computing and STEM among K-12 students, with a special focus
+        on those who are underrepresented in the computing community. Our goal
+        is to empower students to explore the exciting world of computing by
+        nurturing their curiosity and enthusiasm for technology. Join us in
+        inspiring the next generation of innovators and problem solvers!
       </p>
     }
     srcs={[Outreach1.src, Outreach2.src, Outreach3.src, Outreach4.src]}
-    alts={['Outreach 1', 'Outreach 2', 'Outreach 3', 'Outreach 4']}
+    alts={["Outreach 1", "Outreach 2", "Outreach 3", "Outreach 4"]}
   />
 );
 
-const ProjectsTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string,}> = ({ isMobile, open, setSelected, glowClassName }) => (
+const ProjectsTitle: React.FC<{
+  isMobile: boolean;
+  open?: boolean;
+  setSelected: (org: string) => void;
+  glowClassName: string;
+}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Projects"
     color="grey"
@@ -507,17 +565,21 @@ const ProjectsDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
     links={[]}
     description={
       <p>
-        Sign up to join a team in our quarter-long projects. 
-        Grow your skills in coding, design, or project management.
+        Sign up to join a team in our quarter-long projects. Grow your skills in
+        coding, design, or project management.
       </p>
     }
-
     srcs={[Project1.src, Project2.src, Project3.src, Project4.src]}
     alts={[]}
   />
 );
 
-const SpaceTitle: React.FC<{ isMobile: boolean, open?:boolean, setSelected: (org: string) => void; glowClassName: string,}> = ({ isMobile, open, setSelected, glowClassName}) => (
+const SpaceTitle: React.FC<{
+  isMobile: boolean;
+  open?: boolean;
+  setSelected: (org: string) => void;
+  glowClassName: string;
+}> = ({ isMobile, open, setSelected, glowClassName }) => (
   <CommunitiesTitle
     org="Space"
     color="blue"
@@ -538,13 +600,13 @@ const SpaceDescription: React.FC<{ isMobile: boolean }> = ({ isMobile }) => (
     links={[]}
     description={
       <p>
-        Through SPACE, students and recruiters can connect and interact with 
-        each other regarding professional opportunities such as internships, 
+        Through SPACE, students and recruiters can connect and interact with
+        each other regarding professional opportunities such as internships,
         full or part-time positions, and student programs.
       </p>
     }
     srcs={[SPACE1.src, SPACE2.src, SPACE3.src, SPACE4.src]}
-    alts={['Space 1', 'Space 2', 'Space 3', 'Space 4']}
+    alts={["Space 1", "Space 2", "Space 3", "Space 4"]}
   />
 );
 
@@ -554,7 +616,7 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
-  }
+  };
 
   const communityComponents = {
     ai: <AICommunity isMobile={isMobile} />,
@@ -572,7 +634,9 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
     ),
   };
 
-  const titleClassName = `link ${activeLink === 'initiatives' ? 'glow-on-hover' : ''}`;
+  const titleClassName = `link ${
+    activeLink === "initiatives" ? "glow-on-hover" : ""
+  }`;
 
   return (
     <>
@@ -585,17 +649,13 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             Communities
           </h1>
           <div className="community__sub-orgs--mobile__navigation">
-            <a 
-              href="#AI"
-              onClick={() => setSelected("ai")}>
+            <a href="#AI" onClick={() => setSelected("ai")}>
               <img
                 src={selected === "ai" ? AILogoSelected.src : AILogo.src}
                 alt="AI Logo"
               />
             </a>
-            <a 
-              href="#Cyber" 
-              onClick={() => setSelected("cyber")}>
+            <a href="#Cyber" onClick={() => setSelected("cyber")}>
               <img
                 src={
                   selected === "cyber" ? CyberLogoSelected.src : CyberLogo.src
@@ -605,17 +665,16 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             </a>
             <a href="#Hack" onClick={() => setSelected("hack")}>
               <img
-                src={
-                  selected === "hack" ? HackLogoSelected.src : HackLogo.src
-                }
+                src={selected === "hack" ? HackLogoSelected.src : HackLogo.src}
                 alt="Hack Logo"
-                
               />
             </a>
-            <a href="#Design" onClick={() =>setSelected("design")}>
+            <a href="#Design" onClick={() => setSelected("design")}>
               <img
                 src={
-                  selected === "design" ? DesignLogoSelected.src : DesignLogo.src
+                  selected === "design"
+                    ? DesignLogoSelected.src
+                    : DesignLogo.src
                 }
                 alt="Design Logo"
               />
@@ -629,58 +688,102 @@ const CommunitySubOrgs: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
             <BitByteDescription isMobile={isMobile} />
             <OutreachDescription isMobile={isMobile} />
             <ProjectsDescription isMobile={isMobile} />
-            <SpaceDescription isMobile={isMobile} /> 
+            <SpaceDescription isMobile={isMobile} />
           </section>
         </>
       ) : (
-      <>
-      <section className="community__hero">
-        <div className="community__hero__toggle">
+        <>
+          <section className="community__hero">
+            <div className="community__hero__toggle">
               <h3>
-                <a className={`${activeLink === 'communities' ? 'active' : ''}`} onClick={() => handleLinkClick("communities")}>
+                <a
+                  className={`${activeLink === "communities" ? "active" : ""}`}
+                  onClick={() => handleLinkClick("communities")}
+                >
                   Communities
                 </a>
               </h3>
               <h3>
-                <a className={`${activeLink === 'initiatives' ? 'active' : ''}`} onClick={() => handleLinkClick("initiatives")}>
+                <a
+                  className={`${activeLink === "initiatives" ? "active" : ""}`}
+                  onClick={() => handleLinkClick("initiatives")}
+                >
                   Initiatives
                 </a>
               </h3>
-          </div>
-          <p>
-            ACM at UCSD is one large community, but it is made up of several
-            smaller communities focused on specific areas of technology.
-          </p>
-          {activeLink === "communities" && (
-          <section className="community__navigator">
-            <AITitle glowClassName="" isMobile={isMobile} open={selected.toLocaleLowerCase() === "ai"} setSelected={setSelected} />
-            <CyberTitle glowClassName="" isMobile={isMobile} open={selected.toLocaleLowerCase() === "cyber"} setSelected={setSelected} />
-            <HackTitle glowClassName="" isMobile={isMobile} open={selected.toLocaleLowerCase() === "hack"} setSelected={setSelected} />
-            <DesignTitle glowClassName="" isMobile={isMobile} open={selected.toLocaleLowerCase() === "design"} setSelected={setSelected} />
+            </div>
+            <p>
+              ACM at UCSD is one large community, but it is made up of several
+              smaller communities focused on specific areas of technology.
+            </p>
+            {activeLink === "communities" && (
+              <section className="community__navigator">
+                <AITitle
+                  glowClassName=""
+                  isMobile={isMobile}
+                  open={selected.toLocaleLowerCase() === "ai"}
+                  setSelected={setSelected}
+                />
+                <CyberTitle
+                  glowClassName=""
+                  isMobile={isMobile}
+                  open={selected.toLocaleLowerCase() === "cyber"}
+                  setSelected={setSelected}
+                />
+                <HackTitle
+                  glowClassName=""
+                  isMobile={isMobile}
+                  open={selected.toLocaleLowerCase() === "hack"}
+                  setSelected={setSelected}
+                />
+                <DesignTitle
+                  glowClassName=""
+                  isMobile={isMobile}
+                  open={selected.toLocaleLowerCase() === "design"}
+                  setSelected={setSelected}
+                />
+              </section>
+            )}
+            {activeLink === "initiatives" && (
+              <section className="community__navigator">
+                <BitByteTitle
+                  glowClassName={titleClassName}
+                  isMobile={isMobile}
+                  open={selected.toLocaleLowerCase() === "bit byte"}
+                  setSelected={setSelected}
+                />
+                <OutreachTitle
+                  glowClassName={titleClassName}
+                  isMobile={isMobile}
+                  open={selected.toLocaleLowerCase() === "reach"}
+                  setSelected={setSelected}
+                />
+                <ProjectsTitle
+                  glowClassName={titleClassName}
+                  isMobile={isMobile}
+                  open={selected.toLocaleLowerCase() === "projects"}
+                  setSelected={setSelected}
+                />
+                <SpaceTitle
+                  glowClassName={titleClassName}
+                  isMobile={isMobile}
+                  open={selected.toLocaleLowerCase() === "space"}
+                  setSelected={setSelected}
+                />
+              </section>
+            )}
           </section>
-          )}
-          {activeLink === "initiatives" && (
-          <section className="community__navigator">
-            <BitByteTitle glowClassName={titleClassName} isMobile={isMobile} open={selected.toLocaleLowerCase() === "bit byte"} setSelected={setSelected} />
-            <OutreachTitle glowClassName={titleClassName} isMobile={isMobile} open={selected.toLocaleLowerCase() === "reach"} setSelected={setSelected} />
-            <ProjectsTitle glowClassName={titleClassName} isMobile={isMobile} open={selected.toLocaleLowerCase() === "projects"} setSelected={setSelected} />
-            <SpaceTitle glowClassName={titleClassName} isMobile={isMobile} open={selected.toLocaleLowerCase() === "space"} setSelected={setSelected} />
+          <section className="community__sub-orgs">
+            <AICommunity isMobile={isMobile} />
+            <CyberCommunity isMobile={isMobile} />
+            <HackCommunity isMobile={isMobile} />
+            <DesignCommunity isMobile={isMobile} />
+            <BitByteDescription isMobile={isMobile} />
+            <OutreachDescription isMobile={isMobile} />
+            <ProjectsDescription isMobile={isMobile} />
+            <SpaceDescription isMobile={isMobile} />
           </section>
-          )}
-      </section>
-      <section className="community__sub-orgs">
-        
-        <AICommunity isMobile={isMobile} />
-        <CyberCommunity isMobile={isMobile} />
-        <HackCommunity isMobile={isMobile} />
-        <DesignCommunity isMobile={isMobile} />
-        <BitByteDescription isMobile={isMobile} />
-        <OutreachDescription isMobile={isMobile} />
-        <ProjectsDescription isMobile={isMobile} />
-        <SpaceDescription isMobile={isMobile} /> 
-      </section>
-      </>
-        
+        </>
       )}
     </>
   );

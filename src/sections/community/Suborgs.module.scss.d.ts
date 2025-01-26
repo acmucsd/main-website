@@ -17,6 +17,7 @@ declare namespace SuborgsModuleScssNamespace {
     sectionNav: string;
     spaceBlue: string;
     subOrgNav: string;
+    tagLine: string;
     title: string;
     turquoise: string;
     yellow: string;

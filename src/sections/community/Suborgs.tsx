@@ -9,6 +9,10 @@ import CyberHome from "public/assets/communities-links/cyber-home.svg";
 import SDCTFIcon from "public/assets/communities-links/sdctf.svg";
 import HackDiscord from "public/assets/communities-links/hack-discord.svg";
 import HackHome from "public/assets/communities-links/hack-home.svg";
+import OutreachDiscord from "public/assets/communities-links/outreach-discord.svg";
+import OutreachHome from "public/assets/communities-links/outreach-home.svg";
+import ProjectsHome from "public/assets/communities-links/projects-home.svg";
+import SpaceHome from "public/assets/communities-links/space-home.svg";
 import AILogoSelected from "public/assets/communities-navigation/ai-selected.svg";
 import CyberLogoSelected from "public/assets/communities-navigation/cyber-selected.svg";
 import HackLogoSelected from "public/assets/communities-navigation/hack-selected.svg";
@@ -92,17 +96,17 @@ const AICommunity: React.FC = () => (
       {
         src: "https://acmurl.com/ai-disc",
         logo: AIDiscord.src,
-        alt: "AI Discord",
+        alt: "ACM AI Discord",
       },
       {
         src: "https://ai.acmucsd.com/",
         logo: AIHome.src,
-        alt: "AI Home",
+        alt: "ACM AI Website",
       },
       {
         src: "https://www.instagram.com/acm_ai_ucsd/",
         logo: AIInstagram.src,
-        alt: "AI Instagram",
+        alt: "ACM AI Instagram",
       },
     ]}
     description={
@@ -114,17 +118,22 @@ const AICommunity: React.FC = () => (
         <p>
           We strive to keep AI fun and accessible to all. We want to help you
           navigate your path around the complex world of AI through workshops,
-          fun hands on competitions, mentor guided projects, networking events
+          fun hands on competitions, mentor-guided projects, networking events
           and more!
         </p>
         <p>
-          Join our discord and signup for an account on our website to get
+          Join our Discord and sign up for an account on our website to get
           access to all the perks and be up to date on AI and the community!
         </p>
       </>
     }
     srcs={[AI1.src, AI2.src, AI3.src, AI4.src]}
-    alts={[]}
+    alts={[
+      "members sitting at a table smiling",
+      "three people, one holding a massive water jug, hiking by the sea",
+      "a bunch of people sitting and smiling at a table",
+      "people masked outside the elevators at Nobel Drive Station",
+    ]}
   />
 );
 
@@ -138,17 +147,17 @@ const CyberCommunity: React.FC = () => (
       {
         src: "https://acmurl.com/cyberdiscord",
         logo: CyberDiscord.src,
-        alt: "Cyber Discord",
+        alt: "ACM Cyber Discord",
       },
       {
         src: "https://cyber.acmucsd.com/",
         logo: CyberHome.src,
-        alt: "Cyber Home",
+        alt: "ACM Cyber Website",
       },
       {
         src: "https://sdc.tf/",
         logo: SDCTFIcon.src,
-        alt: "Cyber Home",
+        alt: "SDCTF",
       },
     ]}
     description={
@@ -159,17 +168,20 @@ const CyberCommunity: React.FC = () => (
           thrive.
         </p>
         <p>
-          With over 300 members currently registered, we are one of the fastest
+          With over 700 members currently registered, we are one of the fastest
           growing organizations on campus. We host hands-on workshops, industry
           panels, competitive CTF training, and mentorship opportunities for our
           members. Our largest event of the year is San Diego CTF (Capture the
-          Flag), a 48 hour jeopardy style hacking game.
+          Flag), a 48 hour jeopardy-style hacking game.
         </p>
       </>
     }
     srcs={[Cyber1.src, Cyber2.src, Cyber3.src, Cyber4.src]}
     alts={[
-      "Picture of Cyber Event, Picture of Cyber Event, Picture of Cyber Event, Picture of Cyber Members Playing Board Games",
+      'ACM Cyber Board stands in front of a UCSD kiosk set to display "Cyber"',
+      "members picking locks at Lockpicking 102",
+      "ACM Cyber president Nick helps members pick a lock",
+      "Cyber Members Playing Board Games",
     ]}
   />
 );
@@ -184,12 +196,12 @@ const HackCommunity: React.FC = () => (
       {
         src: "https://acmurl.com/hack-discord",
         logo: HackDiscord.src,
-        alt: "Hack Discord",
+        alt: "ACM Hack Discord",
       },
       {
         src: "https://hack.acmucsd.com/",
         logo: HackHome.src,
-        alt: "Hack Home",
+        alt: "ACM Hack Website",
       },
     ]}
     description={
@@ -199,7 +211,7 @@ const HackCommunity: React.FC = () => (
           exploring what is possible through code.
         </p>
         <p>
-          Our name comes from Hackathons—events where software engineers write
+          Our name comes from hackathons—events where software engineers write
           code to produce innovative projects. Our goal is to enable and prepare
           a community of software engineers to build new things and excel in
           industry. We do this through technical workshops on industry-relevant
@@ -213,10 +225,10 @@ const HackCommunity: React.FC = () => (
     }
     srcs={[Hack1.src, Hack2.src, Hack3.src, Hack4.src]}
     alts={[
-      "Picture of Hack Event",
-      "Picture of Hack Event",
-      "Picture of Hack Event",
-      "Picture of Hack Event",
+      "members locking in at a Hack workshop",
+      "members watch presentation at a Hack Event",
+      "ACM Hack president Nikhil helps someone at a Hack Event",
+      "members consider what their project responsibilities and technologies are at a Hack Event",
     ]}
   />
 );
@@ -257,19 +269,24 @@ const DesignCommunity: React.FC = () => (
 const BitByteDescription: React.FC = () => (
   <CommunityDescription
     id="bitbyte"
-    name="ACM Bit Byte"
+    name="ACM Bit–Byte"
     subtitle="Big–Little Program"
     colorClass={styles.purple}
     links={[]}
     description={
       <p>
-        Join ACM’s Bit-Byte program that pairs students to make lifelong
+        Join ACM’s Bit–Byte program that pairs students to make lifelong
         friendships! Our upperclassmen bigs (bytes) help their littles (bits)
         grow in their academic, social, and professional lives.
       </p>
     }
     srcs={[BitByte1.src, BitByte2.src, BitByte4.src, BitByte3.src]}
-    alts={["Bit Byte 1", "Bit Byte 2", "Bit Byte 3", "Bit Byte 4"]}
+    alts={[
+      "one or two trees in the bit byte program",
+      "VP Membership Tony presents tips for success for the bit byte program",
+      'members talk over some tapioca express "boba"',
+      "members at bit byte allocation",
+    ]}
   />
 );
 
@@ -279,7 +296,18 @@ const OutreachDescription: React.FC = () => (
     name="ACM Outreach"
     subtitle="Community Outreach"
     colorClass={styles.outreachGreen}
-    links={[]}
+    links={[
+      {
+        src: "https://acmurl.com/outreach-discord",
+        logo: OutreachDiscord.src,
+        alt: "ACM Outreach Discord",
+      },
+      {
+        src: "https://outreach.acmucsd.com/",
+        logo: OutreachHome.src,
+        alt: "ACM Outreach Website",
+      },
+    ]}
     description={
       <p>
         Welcome to ACM Outreach at UCSD, where our mission is to ignite a
@@ -291,7 +319,12 @@ const OutreachDescription: React.FC = () => (
       </p>
     }
     srcs={[Outreach1.src, Outreach2.src, Outreach3.src, Outreach4.src]}
-    alts={["Outreach 1", "Outreach 2", "Outreach 3", "Outreach 4"]}
+    alts={[
+      "Boy Scouts and Outreach volunteers make diamond signs with their hands in front of the Warren Bear",
+      "Outreach volunteers help out Boy Scouts with their Scratch projects",
+      "a child studiously considers whether to leave Scratch with their project changes unsaved",
+      "Boy Scouts and Outreach volunteers share their favorite video games",
+    ]}
   />
 );
 
@@ -301,7 +334,13 @@ const ProjectsDescription: React.FC = () => (
     name="ACM Projects"
     subtitle="Quarterly Projects"
     colorClass={styles.blue}
-    links={[]}
+    links={[
+      {
+        src: "https://projects.acmucsd.com/",
+        logo: ProjectsHome.src,
+        alt: "ACM Projects Website",
+      },
+    ]}
     description={
       <p>
         Sign up to join a team in our quarter-long projects. Grow your skills in
@@ -309,17 +348,28 @@ const ProjectsDescription: React.FC = () => (
       </p>
     }
     srcs={[Project1.src, Project2.src, Project3.src, Project4.src]}
-    alts={[]}
+    alts={[
+      "members check out projects at project showcase",
+      "a project team makes diamond signs with their hands at project showcase, celebrating the completion of their project over the course of a quarter",
+      "a team hangs out at a social to take a break from their project",
+      "a project team",
+    ]}
   />
 );
 
 const SpaceDescription: React.FC = () => (
   <CommunityDescription
     id="space"
-    name="Space"
+    name="SPACE"
     subtitle="Career Fair"
     colorClass={styles.spaceBlue}
-    links={[]}
+    links={[
+      {
+        src: "https://space.acmucsd.com/",
+        logo: SpaceHome.src,
+        alt: "SPACE Website",
+      },
+    ]}
     description={
       <p>
         Through SPACE, students and recruiters can connect and interact with
@@ -328,7 +378,12 @@ const SpaceDescription: React.FC = () => (
       </p>
     }
     srcs={[SPACE1.src, SPACE2.src, SPACE3.src, SPACE4.src]}
-    alts={["Space 1", "Space 2", "Space 3", "Space 4"]}
+    alts={[
+      "students talk to a company at SPACE",
+      "students talk to a recruiter at SPACE",
+      "LPL financial is hiring! recruiters give a thumbs-up",
+      "students excitedly await their turn to present themselves to companies",
+    ]}
   />
 );
 
@@ -373,6 +428,10 @@ const CommunitySubOrgs: React.FC = () => {
       <h1 className={styles.title}>
         Explore <strong>ACM</strong>
       </h1>
+      <p className={styles.tagLine}>
+        ACM at UCSD is one large community, but it is made up of several smaller
+        communities focused on specific areas of technology.
+      </p>
       <nav className={styles.sectionNav}>
         <a
           href="#communities"
@@ -444,7 +503,7 @@ const CommunitySubOrgs: React.FC = () => {
           <CommunitiesTitle
             selected={selected}
             id="space"
-            label="Space"
+            label="SPACE"
             logo={SpaceLogo}
           />
         </nav>

@@ -7,8 +7,8 @@ declare namespace CommunityDescriptionModuleScssNamespace {
     communityLinks: string;
     content: string;
     descHolder: string;
-    header: string;
-    logo: string;
+    subtitle: string;
+    title: string;
   }
 }
 

@@ -7,10 +7,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  scroll-snap-type: y mandatory;
-}
-
 body {
   color: #222;
   font-size: 1rem;

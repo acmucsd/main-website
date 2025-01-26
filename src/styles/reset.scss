@@ -5,10 +5,8 @@ html {
   box-sizing: border-box;
   overflow-y: scroll;
   scroll-behavior: smooth;
-}
-
-* {
-  scroll-margin-top: 88px;
+  scroll-padding-top: 5.275rem;
+  scroll-snap-type: y proximity;
 }
 
 body {

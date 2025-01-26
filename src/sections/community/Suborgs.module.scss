@@ -11,10 +11,11 @@
   position: sticky;
   top: 5.275rem;
   height: 4rem;
-  margin-bottom: -8rem;
-  z-index: 2;
+  margin-bottom: 4rem;
+  z-index: 3;
   display: flex;
   justify-content: center;
+  background-image: linear-gradient(to bottom, white 75%, transparent 100%);
 
   a {
     display: flex;
@@ -26,10 +27,24 @@
   }
 }
 
+.sectionHeading {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
 .subOrgNav {
   position: sticky;
   top: 5.275rem;
-  margin: 4rem 0;
+  margin-top: -4rem;
   padding-top: 4rem;
   background-image: linear-gradient(to bottom, white 75%, transparent 100%);
   z-index: 1;
@@ -61,16 +76,6 @@
       opacity: 1;
     }
   }
-}
-
-.scrollDown {
-  position: sticky;
-  bottom: 0.25rem;
-  font-weight: 500;
-  // font-style: italic;
-  color: white;
-  // text-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 2px 9px rgba(0, 0, 0, 0.14);
-  text-align: center;
 }
 
 .fullName {
@@ -105,6 +110,9 @@
 }
 .grey {
   --main-color: #{colors.$dark-grey};
+}
+.spaceBlue {
+  --main-color: #053561;
 }
 
 .spacer80px {

@@ -80,7 +80,9 @@ const CommunitiesTitle: React.FC<{
 
 const AICommunity: React.FC = () => (
   <CommunityDescription
-    org="AI"
+    id="ai"
+    name="ACM AI"
+    subtitle="Artificial Intelligence"
     colorClass={styles.red}
     links={[
       {
@@ -100,20 +102,22 @@ const AICommunity: React.FC = () => (
       },
     ]}
     description={
-      <p>
-        Our goals are to help build a community of AI enthusiasts at UCSD and
-        connect that community to the broader AI network.
-        <br />
-        <br />
-        We strive to keep AI fun and accessible to all. We want to help you
-        navigate your path around the complex world of AI through workshops, fun
-        hands on competitions, mentor guided projects, networking events and
-        more!
-        <br />
-        <br />
-        Join our discord and signup for an account on our website to get access
-        to all the perks and be up to date on AI and the community!
-      </p>
+      <>
+        <p>
+          Our goals are to help build a community of AI enthusiasts at UCSD and
+          connect that community to the broader AI network.
+        </p>
+        <p>
+          We strive to keep AI fun and accessible to all. We want to help you
+          navigate your path around the complex world of AI through workshops,
+          fun hands on competitions, mentor guided projects, networking events
+          and more!
+        </p>
+        <p>
+          Join our discord and signup for an account on our website to get
+          access to all the perks and be up to date on AI and the community!
+        </p>
+      </>
     }
     srcs={[AI1.src, AI2.src, AI3.src, AI4.src]}
     alts={[]}
@@ -122,7 +126,9 @@ const AICommunity: React.FC = () => (
 
 const CyberCommunity: React.FC = () => (
   <CommunityDescription
-    org="Cyber"
+    id="cyber"
+    name="ACM Cyber"
+    subtitle="Cybersecurity"
     colorClass={styles.turquoise}
     links={[
       {
@@ -142,18 +148,20 @@ const CyberCommunity: React.FC = () => (
       },
     ]}
     description={
-      <p>
-        ACM Cyber aims to provide member-first opportunities to learn, teach,
-        and practice critical cybersecurity skills to help the UCSD community
-        thrive.
-        <br />
-        <br />
-        With over 300 members currently registered, we are one of the fastest
-        growing organizations on campus. We host hands-on workshops, industry
-        panels, competitive CTF training, and mentorship opportunities for our
-        members. Our largest event of the year is San Diego CTF (Capture the
-        Flag), a 48 hour jeopardy style hacking game.
-      </p>
+      <>
+        <p>
+          ACM Cyber aims to provide member-first opportunities to learn, teach,
+          and practice critical cybersecurity skills to help the UCSD community
+          thrive.
+        </p>
+        <p>
+          With over 300 members currently registered, we are one of the fastest
+          growing organizations on campus. We host hands-on workshops, industry
+          panels, competitive CTF training, and mentorship opportunities for our
+          members. Our largest event of the year is San Diego CTF (Capture the
+          Flag), a 48 hour jeopardy style hacking game.
+        </p>
+      </>
     }
     srcs={[Cyber1.src, Cyber2.src, Cyber3.src, Cyber4.src]}
     alts={[
@@ -164,7 +172,9 @@ const CyberCommunity: React.FC = () => (
 
 const HackCommunity: React.FC = () => (
   <CommunityDescription
-    org="Hack"
+    id="hack"
+    name="ACM Hack"
+    subtitle="Software Engineering"
     colorClass={styles.orange}
     links={[
       {
@@ -179,21 +189,23 @@ const HackCommunity: React.FC = () => (
       },
     ]}
     description={
-      <p>
-        ACM Hack is a community centered around software engineering and
-        exploring what is possible through code.
-        <br />
-        <br />
-        Our name comes from Hackathons – events where software engineers write
-        code to produce innovative projects. Our goal is to enable and prepare a
-        community of software engineers to build new things and excel in
-        industry. We do this through technical workshops on industry-relevant
-        tools, bootcamps, and projects.
-        <br />
-        <br />
-        Join our Discord to engage with our community, and check out our website
-        to learn more about us!
-      </p>
+      <>
+        <p>
+          ACM Hack is a community centered around software engineering and
+          exploring what is possible through code.
+        </p>
+        <p>
+          Our name comes from Hackathons—events where software engineers write
+          code to produce innovative projects. Our goal is to enable and prepare
+          a community of software engineers to build new things and excel in
+          industry. We do this through technical workshops on industry-relevant
+          tools, bootcamps, and projects.
+        </p>
+        <p>
+          Join our Discord to engage with our community, and check out our
+          website to learn more about us!
+        </p>
+      </>
     }
     srcs={[Hack1.src, Hack2.src, Hack3.src, Hack4.src]}
     alts={[
@@ -207,22 +219,26 @@ const HackCommunity: React.FC = () => (
 
 const DesignCommunity: React.FC = () => (
   <CommunityDescription
-    org="Design"
+    id="design"
+    name="ACM Design"
+    subtitle="UI/UX Design"
     colorClass={styles.pink}
     links={[]}
     description={
-      <p>
-        ACM Design centers around UI/UX design and exploring what is possible
-        through all parts of design like research, graphic, and product.
-        <br />
-        <br />
-        We uplift new designers and curious developers to learn how to think
-        like a designer. As a growing community, we host events to teach
-        designers to go from mapping out ideas to building innovative
-        prototypes. We strive to allow designers to have better conversations
-        with developers while making developers more conscious of design
-        methods.
-      </p>
+      <>
+        <p>
+          ACM Design centers around UI/UX design and exploring what is possible
+          through all parts of design like research, graphic, and product.
+        </p>
+        <p>
+          We uplift new designers and curious developers to learn how to think
+          like a designer. As a growing community, we host events to teach
+          designers to go from mapping out ideas to building innovative
+          prototypes. We strive to allow designers to have better conversations
+          with developers while making developers more conscious of design
+          methods.
+        </p>
+      </>
     }
     srcs={[Design1.src, Design2.src, Design3.src, Design4.src]}
     alts={[
@@ -236,7 +252,9 @@ const DesignCommunity: React.FC = () => (
 
 const BitByteDescription: React.FC = () => (
   <CommunityDescription
-    org="Bit Byte"
+    id="bitbyte"
+    name="ACM Bit Byte"
+    subtitle="Big–Little Program"
     colorClass={styles.purple}
     links={[]}
     description={
@@ -253,7 +271,9 @@ const BitByteDescription: React.FC = () => (
 
 const OutreachDescription: React.FC = () => (
   <CommunityDescription
-    org="Reach"
+    id="outreach"
+    name="ACM Outreach"
+    subtitle="Community Outreach"
     colorClass={styles.outreachGreen}
     links={[]}
     description={
@@ -273,8 +293,10 @@ const OutreachDescription: React.FC = () => (
 
 const ProjectsDescription: React.FC = () => (
   <CommunityDescription
-    org="Projects"
-    colorClass={styles.grey}
+    id="projects"
+    name="ACM Projects"
+    subtitle="Quarterly Projects"
+    colorClass={styles.blue}
     links={[]}
     description={
       <p>
@@ -289,8 +311,10 @@ const ProjectsDescription: React.FC = () => (
 
 const SpaceDescription: React.FC = () => (
   <CommunityDescription
-    org="Space"
-    colorClass={styles.blue}
+    id="space"
+    name="Space"
+    subtitle="Career Fair"
+    colorClass={styles.spaceBlue}
     links={[]}
     description={
       <p>
@@ -317,6 +341,7 @@ const CommunitySubOrgs: React.FC = () => {
         <a href="#initiatives">Initiatives</a>
       </nav>
       <section id="communities">
+        <h2 className={styles.sectionHeading}>Communities</h2>
         <nav className={styles.subOrgNav}>
           <CommunitiesTitle id="ai" label="ACM AI" logo={AILogo} />
           <CommunitiesTitle id="cyber" label="ACM Cyber" logo={CyberLogo} />
@@ -329,6 +354,7 @@ const CommunitySubOrgs: React.FC = () => {
         <DesignCommunity />
       </section>
       <section id="initiatives">
+        <h2 className={styles.sectionHeading}>Initiatives</h2>
         <nav className={styles.subOrgNav}>
           <CommunitiesTitle id="bitbyte" label="Bit Byte" logo={BitByteLogo} />
           <CommunitiesTitle
@@ -348,7 +374,6 @@ const CommunitySubOrgs: React.FC = () => {
         <ProjectsDescription />
         <SpaceDescription />
       </section>
-      <p className={styles.scrollDown}>Scroll down for more</p>
     </>
   );
 };

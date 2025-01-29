@@ -1,0 +1,153 @@
+@use "src/styles/colors.scss" as colors;
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 4rem;
+}
+
+.tagLine {
+  text-align: center;
+  padding: 0 1rem;
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+.sectionNav {
+  position: sticky;
+  top: 5.275rem;
+  height: 4rem;
+  margin-bottom: 4rem;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, white 75%, transparent 100%);
+
+  a {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 1.2rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.5rem;
+      right: 0.5rem;
+      bottom: 0.8rem;
+      height: 3px;
+      background: linear-gradient(
+        to right,
+        #ff6d6d,
+        #fda44e,
+        #ffdc24,
+        #38cf6b,
+        #62b0ff,
+        #816dff,
+        #ff6d6d
+      );
+      clip-path: xywh(50% 0 0 100%);
+      transition: clip-path 0.2s;
+    }
+
+    &.active::after {
+      clip-path: xywh(0 0 100% 100%);
+    }
+  }
+}
+
+.sectionHeading {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.subOrgNav {
+  position: sticky;
+  top: 5.275rem;
+  margin-top: -4rem;
+  padding-top: 4rem;
+  background-image: linear-gradient(to bottom, white 75%, transparent 100%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  .logoCard {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+
+    .logo,
+    .logoHover {
+      width: 100%;
+      height: 100%;
+    }
+    .logoHover {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      filter: blur(0.5rem);
+      transition: opacity 0.2s;
+      z-index: -1;
+    }
+    &:hover,
+    &.active {
+      .logoHover {
+        opacity: 1;
+      }
+    }
+
+    &.spaceLogo {
+      .logo,
+      .logoHover {
+        transform: scale(1.32);
+      }
+    }
+  }
+}
+
+.red {
+  --main-color: #{colors.$red};
+}
+.orange {
+  --main-color: #{colors.$orange};
+}
+.turquoise {
+  --main-color: #{colors.$turquoise};
+}
+.yellow {
+  --main-color: #{colors.$orange};
+}
+.purple {
+  --main-color: #{colors.$purple};
+}
+.pink {
+  --main-color: #{colors.$pink};
+}
+.outreachGreen {
+  --main-color: #{colors.$outreach-green};
+}
+.blue {
+  --main-color: #{colors.$blue};
+}
+.grey {
+  --main-color: #{colors.$dark-grey};
+}
+.spaceBlue {
+  --main-color: #053561;
+}

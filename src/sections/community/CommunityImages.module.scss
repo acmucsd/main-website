@@ -1,0 +1,77 @@
+.imageGrid {
+  flex: 1 0 0;
+  display: grid;
+  height: 350px;
+  width: 100%;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  @media only screen and (max-width: 812px) {
+    flex: none;
+  }
+
+  // For some reason if the grid-template-columns are set to
+  // auto 17% auto auto auto auto; right side doesn't expand
+  // if all are auto nothing expands
+  // Code reviewer if you know please explain
+  grid-template-rows: 1fr 1fr;
+  overflow: hidden;
+  transition: 300ms;
+
+  &:has(.pic1:hover) {
+    grid-template-columns: 1fr 1fr 1fr 0fr 0fr 0fr;
+    grid-template-rows: 1fr 0fr;
+    gap: 0rem;
+  }
+
+  &:has(.pic2:hover) {
+    grid-template-columns: 0fr 0fr 0fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0fr;
+    gap: 0rem;
+  }
+
+  &:has(.pic3:hover) {
+    grid-template-columns: 1fr 1fr 0fr 0fr 0fr 0fr;
+    grid-template-rows: 0fr 1fr;
+    gap: 0rem;
+  }
+
+  &:has(.pic4:hover) {
+    grid-template-columns: 0fr 0fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0fr 1fr;
+    gap: 0rem;
+  }
+
+  .nextImageHolder {
+    overflow: hidden;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    position: relative;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .pic1 {
+    grid-column: 1 / 4;
+    grid-row: 1;
+  }
+
+  .pic2 {
+    grid-column: 4 / -1;
+    grid-row: 1;
+  }
+
+  .pic3 {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+
+  .pic4 {
+    grid-column: 3 / -1;
+    grid-row: 2;
+  }
+}

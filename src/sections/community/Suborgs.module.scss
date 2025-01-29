@@ -111,6 +111,13 @@
         opacity: 1;
       }
     }
+
+    &.spaceLogo {
+      .logo,
+      .logoHover {
+        transform: scale(1.32);
+      }
+    }
   }
 }
 

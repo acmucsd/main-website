@@ -13,17 +13,12 @@ import OutreachDiscord from "public/assets/communities-links/outreach-discord.sv
 import OutreachHome from "public/assets/communities-links/outreach-home.svg";
 import ProjectsHome from "public/assets/communities-links/projects-home.svg";
 import SpaceHome from "public/assets/communities-links/space-home.svg";
-import AILogoSelected from "public/assets/communities-navigation/ai-selected.svg";
-import CyberLogoSelected from "public/assets/communities-navigation/cyber-selected.svg";
-import HackLogoSelected from "public/assets/communities-navigation/hack-selected.svg";
-import DesignLogoSelected from "public/assets/communities-navigation/design-selected.svg";
 import AILogo from "public/assets/logos/acm-ai.svg";
 import CyberLogo from "public/assets/logos/acm-cyber.svg";
 import HackLogo from "public/assets/logos/acm-hack.svg";
 import DesignLogo from "public/assets/logos/acm-design.svg";
-import BitByteLogo from "public/assets/logos/bitbyte.svg";
-import HackathonLogo from "public/assets/logos/hackathon.svg";
-import OutreachLogo from "public/assets/logos/reach.png";
+import BitByteLogo from "public/assets/logos/bitbyte.png";
+import OutreachLogo from "public/assets/logos/acm-outreach.svg";
 import ProjectsLogo from "public/assets/logos/projects.png";
 import SpaceLogo from "public/assets/logos/space.svg";
 
@@ -74,11 +69,14 @@ const CommunitiesTitle: React.FC<{
   logo: StaticImageData;
   label: string;
   id: string;
-}> = ({ selected, logo, label, id }) => {
+  spaceLogo?: boolean;
+}> = ({ selected, logo, label, id, spaceLogo }) => {
   return (
     <a
       href={`#${id}`}
-      className={`${styles.logoCard} ${selected === id ? styles.active : ""}`}
+      className={`${styles.logoCard} ${selected === id ? styles.active : ""} ${
+        spaceLogo ? styles.spaceLogo : ""
+      }`}
     >
       <img src={logo.src} alt="" aria-hidden className={styles.logoHover} />
       <img src={logo.src} alt={label} className={styles.logo} />
@@ -505,6 +503,7 @@ const CommunitySubOrgs: React.FC = () => {
             id="space"
             label="SPACE"
             logo={SpaceLogo}
+            spaceLogo
           />
         </nav>
         <BitByteDescription />

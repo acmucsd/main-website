@@ -6,6 +6,7 @@ export interface BoardMemberProps {
   profile_image: string;
   personal_link?: string;
   linkedin_link?: string;
+  discord?: string;
 }
 
 export interface SponsorProps {

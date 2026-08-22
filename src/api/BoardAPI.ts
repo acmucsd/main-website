@@ -52,6 +52,7 @@ export const getBoardData = async () => {
         email: row["ACM Email"] || null,
         personal_link: row["Website"] || null,
         linkedin_link: formatLinkedIn(row["LinkedIn"] || null),
+        discord: row["Discord"] || null,
       };
       return boardMemberData;
     })

@@ -47,6 +47,7 @@ export const getBoardData = async () => {
       const boardMemberData: BoardMemberProps = {
         name: row["Name"],
         org: row["Team"]?.toLowerCase(),
+        subteam: row["Subteam"]?.toLowerCase() || null,
         title: row["Position"],
         profile_image: row["Profile Picture"] || "",
         email: row["ACM Email"] || null,

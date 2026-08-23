@@ -41,9 +41,22 @@ export default async function handler(
                 (member) => member.org === team || member.subteam === team
             );
 
+            // if no team members found, team doesn't exist
+            if (teamMembers.length === 0) {
+                return res.status(404).json({
+                    error: "Route does not exist"
+                });
+            }
+
             return res.status(200).json({
-                // return all board members if query is invalid
-                board: teamMembers.length !== 0 ? teamMembers : boardData
+                board: teamMembers
+            });
+        }
+
+        // prevents invalid query parameters from accessing data
+        if (Object.keys(req.query).length > 0) {
+            return res.status(404).json({
+                error: "Route does not exist"
             });
         }
 

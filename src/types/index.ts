@@ -1,11 +1,13 @@
 export interface BoardMemberProps {
   name: string;
   org: string;
+  subteam?: string;
   title: string;
   email?: string;
   profile_image: string;
   personal_link?: string;
   linkedin_link?: string;
+  discord?: string;
 }
 
 export interface SponsorProps {

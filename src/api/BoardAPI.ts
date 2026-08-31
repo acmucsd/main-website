@@ -47,11 +47,13 @@ export const getBoardData = async () => {
       const boardMemberData: BoardMemberProps = {
         name: row["Name"],
         org: row["Team"]?.toLowerCase(),
+        subteam: row["Subteam"]?.toLowerCase() || null,
         title: row["Position"],
         profile_image: row["Profile Picture"] || "",
         email: row["ACM Email"] || null,
         personal_link: row["Website"] || null,
         linkedin_link: formatLinkedIn(row["LinkedIn"] || null),
+        discord: row["Discord"] || null,
       };
       return boardMemberData;
     })

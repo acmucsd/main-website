@@ -9,6 +9,7 @@ const allowedOrigins = [
     "https://hack.acmucsd.com",
     "https://outreach.acmucsd.com",
     "https://diamondhacks.acmucsd.com",
+    "https://diamondhacks.acmatucsd.org",
     "https://portal.diamondhacks.acmucsd.com"
 ];
 

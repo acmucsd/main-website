@@ -1,17 +1,24 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getBoardData } from "src/api/BoardAPI";
 
-// list of origins allowed to use this route
-const allowedOrigins = [
-    "https://projects.acmucsd.com",
-    "https://ai.acmucsd.com",
-    "https://cyber.acmucsd.com",
-    "https://hack.acmucsd.com",
-    "https://outreach.acmucsd.com",
-    "https://diamondhacks.acmucsd.com",
-    "https://diamondhacks.acmatucsd.org",
-    "https://portal.diamondhacks.acmucsd.com"
+// list of subdomains allowed to use this route
+const allowedSubdomains = [
+    "projects",
+    "ai",
+    "cyber",
+    "hack",
+    "outreach",
+    "diamondhacks",
+    "portal.diamondhacks"
 ];
+
+// generate list of origins allowed to use this route
+const allowedOrigins = allowedSubdomains.flatMap((subdomain) => {
+    const protocolSubdomain = "https://" + subdomain + ".";
+    const domains = ["acmucsd.com", "acmatucsd.org"];
+
+    return domains.map((domain) => protocolSubdomain + domain);
+});
 
 export default async function handler(
     req: NextApiRequest,

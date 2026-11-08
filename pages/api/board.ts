@@ -31,22 +31,45 @@ export default async function handler(
         // acmucsd.com/api/board -> to get all board members
         // or
         // acmucsd.com/api/board?team=... -> to get board members from a specified team
+        // or
+        // acmucsd.com/api/board?team=...&team=... -> to get board members from multiple specified teams
         const { team } = req.query;
+        const teams = Array.isArray(team) ? team : null;
+        const foundTeams = new Set();
 
         const boardData = await getBoardData();
 
-        if (team) {
+        // if team is the only query key used, filter board members by team(s)
+        if (Object.keys(req.query).length === 1 && team) {
             const teamMembers = boardData.filter(
                 // either org (as in General, AI, Design, etc.) or subteam (Dev, Hackathon, Outreach, etc.) work
-                (member) => member.org === team || member.subteam === team
+                (member) => {
+                    if (member.org === team || teams?.includes(member.org)) {
+                        foundTeams.add(member.org);
+                    }
+                    if (member.subteam === team || teams?.includes(member.subteam)) {
+                        foundTeams.add(member.subteam);
+                    }
+
+                    return foundTeams.has(member.org) || foundTeams.has(member.subteam);
+                }
             );
 
-            // if no team members found, team doesn't exist
+            // if no team members found, team(s) doesn't exist
             if (teamMembers.length === 0) {
                 return res.status(404).json({
                     error: "Route does not exist"
                 });
             }
+
+            // if a team wasn't found, team doesn't exist
+            for (const t of teams ?? []) {
+                if (!foundTeams.has(t)) {
+                    return res.status(404).json({
+                        error: "Route does not exist"
+                    });
+                }
+            };
 
             return res.status(200).json({
                 board: teamMembers
